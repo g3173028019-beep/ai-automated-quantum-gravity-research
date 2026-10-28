@@ -1,0 +1,303 @@
+% !TEX program = pdflatex
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1.02in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,microtype}
+\usepackage{xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+
+\title{\textbf{Generic Sign Rigidity of Real Projection Kernels from Two-Point Data}}
+\author{}
+\date{Working draft -- 28 October 2026}
+\hypersetup{pdfauthor={}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $K$ be a real symmetric orthogonal projection. Its diagonal and the moduli of its
+off-diagonal entries are exactly the data contained in its principal minors of orders one
+and two, but they do not display the signs of $K_{ij}$.  We prove that this apparent loss is
+generically repaired by idempotency.  For every $N\ge5$ and $2\le r\le N-2$, almost every
+rank-$r$ projection is determined, up to conjugation by a diagonal sign matrix, by
+$\{K_{ii},|K_{ij}|\}$.  The proof separates $K^2=K$ into a diagonal modulus identity and a
+linear system for gauge-invariant triangle holonomies.  A zero-subset-sum condition on the
+signed wedge weights is a finite certificate of uniqueness.  We show that every forbidden
+subset sum is a nonzero real-analytic function on $\Gr(r,N)$; its zero locus has measure
+zero, and a finite union argument gives the theorem.  We also give a certified reconstruction
+procedure: solve the finite holonomy system, test the certificate, fix a spanning-tree gauge,
+and recover all signs.  The result is a theorem about finite real projection kernels.  Its
+use for determinantal boundary data is only a dictionary: in a finite real pure
+determinantal completion, one- and two-boundary data generically fix the higher principal
+minors.  No continuum, Hermitian, or quantum-gravity completeness claim is made.
+\end{abstract}
+
+\section{Introduction}
+
+For a real determinantal point process, inclusion probabilities are principal minors of a
+symmetric contraction $K$ \citep{HKPV2006,KuleszaTaskar2012}.  The order-one and order-two
+minors give
+\begin{equation}
+ d_i=K_{ii},\qquad \det K_{\{i,j\}}=d_id_j-K_{ij}^2,
+ \label{eq:minors}
+\end{equation}
+and hence determine $m_{ij}=|K_{ij}|$.  They do not determine the signs.  General
+principal-minor recovery therefore uses cycle data, normally supplied by minors of order at
+least three \citep{UrschelEtAl2017,Brunel2018,BrunelUrschel2024}.  All principal minors are
+invariant under
+\begin{equation}
+ K\longmapsto D K D,\qquad D=\diag(\epsilon_1,\ldots,\epsilon_N),\quad
+ \epsilon_i\in\{\pm1\},
+ \label{eq:gauge}
+\end{equation}
+so recovery can never be sharper than this diagonal-sign gauge.
+
+We add one hypothesis: $K$ is an orthogonal projection.  Projection kernels are basic
+extreme determinantal kernels \citep{Lyons2003,HKPV2006}; algebraically, the added input is
+simply $K^2=K$.  The question is whether this quadratic identity replaces missing cycle
+minors.  Our answer is affirmative on a full-measure subset of every interior real
+Grassmannian covered below.
+
+\begin{theorem}[Generic projection sign rigidity]\label{thm:main}
+Fix $N\ge5$ and $2\le r\le N-2$.  For almost every $K\in\Gr(r,N)$, if $K'$ is a real
+symmetric projection satisfying
+\[
+ K'_{ii}=K_{ii},\qquad |K'_{ij}|=|K_{ij}|\quad(i\ne j),
+\]
+then $K'=DKD$ for a diagonal sign matrix $D$.
+\end{theorem}
+
+Here ``almost every'' refers to the natural smooth measure class on $\Gr(r,N)$.  The
+theorem includes generic full off-diagonal support; it is not a claim for every projection.
+The uniform statement is deliberately scoped to $N\ge5$ and $2\le r\le N-2$.  Sparse
+supports, exceptional subset-sum loci, complex Hermitian projections, and continuum kernels
+require separate analyses.
+
+The key observation is that the off-diagonal part of idempotency becomes \emph{linear} after
+passing from edge signs to triangle holonomies.  Sign rigidity is then a finite lattice
+intersection problem.  This differs from the established principal-minor results: those
+recover cycle signs from higher minors, whereas here only orders one and two are given and
+idempotency supplies the extra equations.
+
+\section{Gauge-invariant form of idempotency}
+
+Let $K=K^\top=K^2\in\R^{N\times N}$ have rank $r$.  Put
+\begin{equation}
+ d_i=K_{ii},\qquad m_{ij}=|K_{ij}|,
+ \qquad \sigma_{ij}=\sgn K_{ij}\quad(m_{ij}>0).
+\end{equation}
+For the main theorem the support is generically complete.  On a complete support graph,
+define the triangle holonomy
+\begin{equation}
+ h_{ikj}=\sigma_{ik}\sigma_{kj}\sigma_{ji}\in\{\pm1\}.
+ \label{eq:h}
+\end{equation}
+It is invariant under \eqref{eq:gauge}.  Conversely, a valid holonomy field determines the
+edge signs up to gauge: set the signs on a spanning tree, then use triangles to obtain every
+remaining edge.  Valid fields obey the usual cocycle relations; not every arbitrary
+$\{\pm1\}$ assignment to triangles is valid.
+
+\begin{proposition}[Idempotency split]\label{prop:split}
+For full off-diagonal support, $K^2=K$ is equivalent to
+\begin{align}
+ \sum_{k\ne i}m_{ik}^2&=d_i(1-d_i), && i=1,\ldots,N, \label{eq:E2}\\
+ \sum_{k\ne i,j}m_{ik}m_{kj}h_{ikj}
+ &=m_{ij}(1-d_i-d_j), && 1\le i<j\le N. \label{eq:E1}
+\end{align}
+The first system contains only two-point data; the second is linear in $h$.
+\end{proposition}
+
+\begin{proof}
+The diagonal equation $K_{ii}=\sum_kK_{ik}^2$ gives \eqref{eq:E2}.  For $i\ne j$,
+separating the $k=i,j$ terms in $K_{ij}=\sum_kK_{ik}K_{kj}$ gives
+\[
+ K_{ij}(1-d_i-d_j)=\sum_{k\ne i,j}K_{ik}K_{kj}.
+\]
+Divide by $\sigma_{ij}$ and use $\sigma_{ij}^{-1}=\sigma_{ji}$ to obtain
+\eqref{eq:E1}.  Reversing these steps recovers all entries of $K^2=K$.
+\end{proof}
+
+Write \eqref{eq:E1} as $Ah=R$, where
+\begin{equation}
+ A_{(ij),(ikj)}=m_{ik}m_{kj}\ge0,
+ \qquad R_{ij}=m_{ij}(1-d_i-d_j).
+ \label{eq:linear}
+\end{equation}
+If two sign fields give projections with the same $(d,m)$, their valid holonomies $h,h'$
+satisfy $A(h-h')=0$.  Thus the exact uniqueness condition is
+\begin{equation}
+ \ker A\cap\{h-h':h,h'\text{ valid holonomy fields}\}=\{0\}.
+ \label{eq:lattice}
+\end{equation}
+
+\section{A finite uniqueness certificate}
+
+For a fixed projection, define the signed wedge weights in row $(i,j)$ by
+\begin{equation}
+ w_k^{(ij)}=m_{ik}m_{kj}h_{ikj}=K_{ik}K_{kj}\sigma_{ij},\qquad k\ne i,j.
+ \label{eq:w}
+\end{equation}
+
+\begin{lemma}[Zero-subset-sum certificate]\label{lem:zss}
+Suppose $K$ has full off-diagonal support and, for every edge $(i,j)$, no nonempty subset
+of $\{w_k^{(ij)}:k\ne i,j\}$ has sum zero.  Then every projection with the same diagonal
+and entrywise moduli is gauge-equivalent to $K$.
+\end{lemma}
+
+\begin{proof}
+Compare $K$ with a rival sign field.  Let $S$ be the set of flipped edges.  A triangle is
+flipped exactly when it contains an odd number of edges of $S$.  Subtracting the two copies
+of \eqref{eq:E1} gives, in each row,
+\[
+ \sum_{k:\,(i,k,j)\text{ is flipped}}w_k^{(ij)}=0.
+\]
+The hypothesis makes every such subset empty, so no triangle is flipped.  In the complete
+graph, triangles span the cycle space over $\mathbb F_2$.  An edge set meeting every
+triangle evenly is therefore in the cut space.  Hence $S$ is a vertex cut, precisely the
+gauge transformation \eqref{eq:gauge}.
+\end{proof}
+
+This certificate is sufficient, not necessary.  It can be checked exactly using
+meet-in-the-middle subset sums in $O(N^2 2^N)$ arithmetic operations.  It is a
+\emph{post-recovery} certificate: the weights use a candidate holonomy field.  The data-only
+problem remains finite because one can solve \eqref{eq:linear} over valid cocycles (or
+enumerate a gauge-fixed edge-sign field), and then apply the certificate to each survivor.
+
+\section{Proof of generic rigidity}
+
+We now show that the certificate holds almost everywhere.  For an edge $(i,j)$ and a
+nonempty $T\subseteq[N]\setminus\{i,j\}$, define
+\begin{equation}
+ F_{ij,T}(K)=\sum_{k\in T}K_{ik}K_{kj}.
+ \label{eq:F}
+\end{equation}
+Up to the common nonzero factor $\sigma_{ij}$, this is exactly the corresponding subset sum
+of \eqref{eq:w}.
+
+\begin{lemma}[Nonvanishing]\label{lem:nv}
+For $N\ge5$ and $2\le r\le N-2$, no function $F_{ij,T}$ is identically zero on
+$\Gr(r,N)$.
+\end{lemma}
+
+\begin{proof}
+Choose $k\in T$ and set $u=(e_i+e_j+e_k)/\sqrt3$.  Since $r-1\le N-3$, choose distinct
+indices $a_1,\ldots,a_{r-1}$ outside $\{i,j,k\}$.  Let $K$ be the orthogonal projection
+onto
+\[
+ \operatorname{span}\{u,e_{a_1},\ldots,e_{a_{r-1}}\}.
+\]
+Then $K_{ik}=K_{kj}=1/3$, while $K_{i\ell}K_{\ell j}=0$ for every $\ell\ne k$.
+Consequently $F_{ij,T}(K)=1/9$.  The witness need not have full support; it only proves
+that the analytic function is nonzero.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The entries $K_{ab}$ and the finitely many functions $F_{ij,T}$ are real analytic on the
+connected analytic manifold $\Gr(r,N)$.  Each entry is not identically zero, so the union
+of all zero-entry loci has measure zero; outside it, $K$ has full support.  By
+Lemma~\ref{lem:nv}, every $F_{ij,T}$ is nonzero as an analytic function.  The zero set of a
+nonzero real-analytic function has measure zero.  There are finitely many triples
+$(i,j,T)$, hence almost every $K$ is simultaneously full-support and free of zero subset
+sums.  Lemma~\ref{lem:zss} then gives uniqueness up to gauge.
+\end{proof}
+
+The proof is qualitative but constructive enough to yield exact rational witnesses.  If
+$V\in\mathbb Q^{r\times N}$ has full row rank, then
+$K=V^\top(VV^\top)^{-1}V$ is rational.  Clearing denominators turns every certificate row
+into an integer subset-sum test.  Such checks verify instances; the analytic argument above,
+not the finite sample, proves the almost-everywhere statement.
+
+\section{Certified reconstruction}
+
+Given exact $(d,m)$ and the information that a real rank-$r$ projection exists, a complete
+finite procedure is:
+\begin{enumerate}
+\item Check $\sum_i d_i=r$ and the modulus equations \eqref{eq:E2}.
+\item Fix a spanning-tree gauge (for complete support, take $\sigma_{1i}=+1$).
+\item Solve \eqref{eq:E1} over valid $\mathbb Z_2$ cocycles.  In the chosen gauge,
+      $\sigma_{ij}=h_{1ij}$ for $i,j>1$.
+\item Reconstruct $K_{ii}=d_i$ and $K_{ij}=\sigma_{ij}m_{ij}$, then verify $K^2=K$ exactly.
+\item Apply Lemma~\ref{lem:zss}.  If it passes, the recovered gauge orbit is the unique one.
+\end{enumerate}
+The method is exponential in its most direct form; Theorem~\ref{thm:main} is an
+identifiability result, not a polynomial-time learning theorem.  A useful local certificate
+can nevertheless decode one edge.  If known legs give an anchored sum $a$ and the sum of
+the absolute weights of all unknown legs is $u$, then $|a|>u$ fixes the sign of the full
+row.  This dominance test certifies a warm-started solution but need not start from a tree
+gauge by itself.
+
+\section{Relation to principal-minor and boundary data}
+
+General symmetric-kernel recovery from principal minors is governed by signed cycles and
+principal-minor assignment \citep{HoltzSturmfels2007,GriffinTsatsomeros2006,
+UrschelEtAl2017,Brunel2018,BrunelUrschel2024}.  Those results explain why two-point data do
+not determine a generic symmetric kernel.  Theorem~\ref{thm:main} is compatible with them:
+it restricts the matrix to the projection variety, where idempotency supplies the missing
+cycle equations.  Our proof does not establish stability under noisy data, sparse-support
+recovery, or the Hermitian phase analogue.
+
+A subsequent related preprint by \citet{Villacis2026} uses corresponding principal
+minors of all orders for complex orthogonal projections to determine the coordinatewise
+absolute-value image of their ranges. The present theorem assumes only order-one and
+order-two data and restricts recovery to generic real projections up to diagonal-sign
+gauge. The different data requirements, domains, and recovery targets should be retained
+in any novelty comparison; this observation does not establish priority.
+
+There is a limited gravitational application.  In a finite real determinantal model, the
+$n$-point correlation function is the determinant of the $n\times n$ kernel restriction.
+Laplace-transformed one- and two-boundary data therefore determine $d_i$ and $m_{ij}$ in a
+finite discretisation.  If the completion is also known to be a real projection, the
+theorem says that, generically, these data fix the kernel up to a gauge that leaves all
+principal minors unchanged.  Higher correlators then follow.  This is only a dictionary
+for a finite real pure determinantal completion.  It does not prove that a gravitational
+path integral has such a completion, nor does it settle Airy-kernel continuum limits,
+complex phases, interactions, or ultraviolet completion.
+
+\section{Limitations and conclusion}
+
+The exceptional set is explicit but not classified: it is contained in the union of the
+entry-zero and subset-sum-zero analytic loci.  Failure of the sufficient certificate does
+not imply a rival projection.  Hermitian kernels replace $\mathbb Z_2$ holonomies by
+$U(1)$ phases, so the discrete subset-sum proof does not transfer.  Continuum kernels
+require analytic control of nodal domains and integral, rather than finite, wedge sums.
+
+Within its declared scope, the result is complete.  The diagonal and entrywise moduli of a
+generic interior real projection determine its signs up to diagonal gauge.  The proof
+reduces purity to a holonomy-linear system, supplies a finite certificate, and establishes
+that the certificate fails only on a measure-zero set.
+
+\section*{AI-assisted workflow and unresolved attribution}
+The following statement is supplied by the repository operator:
+\begin{quote}
+I genuinely do not know how authorship, intellectual credit, or ownership should be
+attributed for these results. My workflow was to ask AI systems to conduct literature
+research, autonomously select open problems, and attempt to solve them. The principal
+research work was carried out mainly by Fable 5. DeepSeek and several GPT models
+participated in cross-review, checking, and manuscript preparation and organization.
+These manuscripts and their scientific claims have not yet undergone human expert review.
+\end{quote}
+This describes the overall workflow reported by the operator; a complete per-model,
+per-manuscript allocation of contributions is unavailable. Author and affiliation fields
+are intentionally blank. Automated checks and AI internal reviews are not human peer
+review. This working draft makes no claim of journal acceptance or settled publication
+priority. Historical source dates are recorded separately in the repository history.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

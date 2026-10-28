@@ -1,0 +1,410 @@
+% !TEX program = pdflatex
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1.02in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,microtype}
+\usepackage{xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Pp}{\mathbb{P}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+
+\title{\textbf{Half-Wormholes as Wiener Chaos:\ Correlated-Replica Spectroscopy, Exact Pfaffian Sectors, and Boundary Moment Indeterminacy}}
+\author{}
+\date{Working draft -- 28 October 2026}
+\hypersetup{pdfauthor={}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The fixed-coupling partition function of one-time-point SYK is a homogeneous multilinear
+polynomial of degree $n=N/q$ in independent Gaussian couplings.  Its square therefore has
+a canonical Wiener--It\^o chaos decomposition.  This is a probabilistic refinement of the
+exact half-wormhole expansion already constructed by Mukhametzhanov, not a replacement of
+that prior result.  We derive five consequences of the canonical grading.  First, two
+replicas with coupling correlation $\rho$ obey
+$\E[z(J)z(J')]=\rho^n\E[z^2]$; scanning $\rho$ diagonalises and measures the chaos-sector
+norms of $z^2$.  Second, for $q=2$ we reduce the previously known general variance sum to the closed formula
+$\E[W_{2k}^2]=(2n)!\binom{2(n-k)}{n-k}4^{-(n-k)}$.  It yields an explicit correlated
+determinant formula for two Gaussian antisymmetric matrices.  Third, the same profile gives
+$\E[z^4]/\E[z^2]^2=2n+1$ and quantifies the failure of a wormhole-plus-Wick-square
+truncation at $q=2$.  Fourth, Gaussian hypercontractivity supplies non-asymptotic,
+single-draw reconstruction bounds sector by sector.  Fifth, the boundary moment problem for
+the law of $z$ is determinate for $n\le2$ and indeterminate for every $n\ge3$.  We prove the
+latter by a conditional-Gaussian density lower bound and Krein's criterion.  The result is a
+complete statement for the zero-dimensional model.  It does not establish a dynamical bulk
+geometry or a complete theory of quantum gravity.
+\end{abstract}
+
+\section{Introduction}
+
+In the one-time-point SYK model, fixed-coupling factorisation is represented by a finite
+polynomial identity.  Saad, Shenker, Stanford and Yao identified the wormhole and
+coupling-sensitive half-wormhole saddles \citep{SaadEtAl2024}.  Mukhametzhanov subsequently
+constructed an exact finite expansion of $z^2$, including orthogonality, closed sector
+variances and the normal-ordered-square interpretation of the leading half-wormhole
+\citep{Mukhametzhanov2022}.  Related graded and Hermite structures appear in
+\citet{TianYang2022}.  Those results are prior art and are used here as such.
+After matching conventions, Mukhametzhanov's term $\Phi_{n-k}$ is precisely the chaos
+projection $W_{2k}$ below.  Thus neither the finite sector decomposition nor its general
+variance sum is claimed as new; the $q=2$ binomial form is a closed reduction supplied with
+an independent generating-function proof.
+
+Our starting point is narrower: over the Gaussian coupling ensemble, $z^2$ has a unique
+decomposition into eigenspaces of the Ornstein--Uhlenbeck (OU) semigroup.  Identifying this
+canonical grading makes the correlated-replica kernel, Gaussian hypercontractivity and the
+Hamburger moment problem available without introducing new saddles. A targeted search
+recorded in the July 2026 source project found no substantive duplicate of the combined
+results in the half-wormhole, random-matrix and moment-problem literature. That historical
+search is bounded and has not been replaced by a comprehensive current novelty audit for
+this repository edition.
+
+The exact contributions are:
+\begin{enumerate}
+\item the $\rho^n$ two-replica identity and OU sector spectroscopy;
+\item a closed $q=2$ reduction of the known sector-variance sum, an independent enumeration,
+and the correlated antisymmetric-determinant corollary;
+\item an explicit fourth-moment and truncation diagnosis, together with single-draw bounds;
+\item the sharp determinacy dichotomy at chaos degree $n=2/3$ and its spectral consequences.
+\end{enumerate}
+We separate exact finite-$N$ theorems from asymptotic interpretations.  In particular, the
+standard Nualart--Peccati fourth-moment equivalence applies directly to sequences in a
+\emph{fixed} Wiener chaos \citep{NualartPeccati2005,NourdinPeccati2012}.  In the conventional
+SYK scaling with fixed $q$ and $N\to\infty$, the chaos order $n=N/q$ grows; fourth moments
+alone are then not advertised here as a central-limit proof.  The $L^2$ truncation statements
+we use instead follow from the exact sector variances.
+
+\section{Model and canonical grading}
+
+Let $q\ge2$ be even, $N=qn$, and let $A$ run over the $q$-subsets of $[N]$.  The couplings
+$J_A$ are independent standard normal variables.  Berezin integration gives, up to an
+irrelevant global phase,
+\begin{equation}
+ z(J)=\sum_{P\in\operatorname{Part}_q(N)}\epsilon(P)\prod_{A\in P}J_A,
+ \label{eq:z}
+\end{equation}
+where $P$ partitions $[N]$ into $n$ blocks of size $q$ and $\epsilon(P)=\pm1$ is the
+Grassmann sign.  For $q=2$, $z(J)=\operatorname{Pf}J$ for the antisymmetric matrix with
+upper-triangular entries $J_{ij}$.
+
+Let $L^2(\gamma)=\bigoplus_{d\ge0}\Ccal_d$ be the Wiener--It\^o decomposition of the
+Gaussian coupling space \citep{Ito1951,Janson1997}.  The OU operator is
+\begin{equation}
+ (T_\rho F)(J)=\E_K F\!\left(\rho J+\sqrt{1-\rho^2}K\right),
+ \qquad -1\le\rho\le1,
+ \label{eq:OU}
+\end{equation}
+and acts on $\Ccal_d$ by multiplication by $\rho^d$.
+
+\begin{proposition}[Purity and symmetry]\label{prop:purity}
+$z\in\Ccal_n$, $\E[z^2]=|\operatorname{Part}_q(N)|$, and the law of $z$ is symmetric.
+\end{proposition}
+
+\begin{proof}
+Every monomial in \eqref{eq:z} is a product of $n$ distinct first Hermite polynomials, hence
+belongs to $\Ccal_n$.  Distinct partitions give distinct monomials, so orthogonality gives
+the second statement.  Fix a vertex, say $1$, and change the sign of every coupling $J_A$
+with $1\in A$.  Every partition contains exactly one such block, so $z\mapsto-z$, whereas
+the joint Gaussian law is unchanged.  Thus all odd moments vanish and the law is symmetric.
+\end{proof}
+
+\begin{theorem}[Correlated-replica identity]\label{thm:replica}
+Let $J'=\rho J+\sqrt{1-\rho^2}K$ with $K$ an independent coupling draw.  Then
+\begin{equation}
+ \E[z(J)z(J')]=\rho^n\E[z^2].
+ \label{eq:replica}
+\end{equation}
+More generally, if $X=\sum_dX_d$ and $Y=\sum_dY_d$ are their chaos decompositions, then
+\begin{equation}
+ \E[X(J)Y(J')]=\sum_d\rho^d\E[X_dY_d].
+ \label{eq:mehler}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Equation \eqref{eq:mehler} is Mehler's identity
+$\E[X(J)Y(J')]=\langle X,T_\rho Y\rangle$.  Proposition~\ref{prop:purity} then gives
+\eqref{eq:replica}.
+\end{proof}
+
+Define the canonical half-wormhole sectors by
+\begin{equation}
+ z^2=\sum_{k=0}^{n}W_{2k},\qquad W_{2k}\in\Ccal_{2k},\qquad
+ \E[W_{2k}W_{2\ell}]=0\quad(k\ne\ell).
+ \label{eq:sectors}
+\end{equation}
+Thus $W_0=\E[z^2]$, while $W_{2n}=:\!z^2\!:$ is the Wick square.  This decomposition is
+canonical because the $\Ccal_d$ are the distinct OU eigenspaces.  It need not coincide
+term-by-term with an arbitrary orthogonal expansion once $n\ge3$.  For the normal-ordered
+expansion of \citet{Mukhametzhanov2022}, however, homogeneity gives the exact identification
+$\Phi_{n-k}=W_{2k}$ after matching the coupling normalisation.
+
+Applying \eqref{eq:mehler} to $z^2$ gives
+\begin{equation}
+ \E[z^2(J)z^2(J')]=\sum_{k=0}^{n}\rho^{2k}\E[W_{2k}^2].
+ \label{eq:spectroscopy}
+\end{equation}
+Hence correlation in coupling space is a sector spectrometer: the coefficients of the
+polynomial in $\rho^2$ are precisely the sector norms.
+
+\section{Exact Pfaffian sector spectrum}
+
+For $q=2$, ordered pairs of perfect matchings provide a closed enumeration.
+
+\begin{theorem}[$q=2$ sector profile]\label{thm:profile}
+For $z=\operatorname{Pf}J$ with $J$ a $2n\times2n$ Gaussian antisymmetric matrix,
+\begin{equation}
+ \boxed{\quad\E[W_{2k}^2]=(2n)!\binom{2m}{m}4^{-m},\qquad m=n-k,\quad0\le k\le n.\quad}
+ \label{eq:profile}
+\end{equation}
+Equivalently,
+\begin{equation}
+ \sum_{n\ge0}\sum_{k=0}^{n}\E[W_{2k}^2]x^{2k}\frac{y^{2n}}{(2n)!}
+ =\frac{1}{(1-x^2y^2)\sqrt{1-y^2}}.
+ \label{eq:GF}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Expand $z^2$ over ordered perfect matchings $(P,Q)$.  Their symmetric difference is a
+vertex-disjoint union $U$ of alternating even cycles of length at least four; shared edges
+contribute $J_e^2=H_2(J_e)+1$.  A chaos monomial is therefore labelled by a set $T$ of
+excited shared edges and by $U$, with order $2|T|+|E(U)|$.  Each alternating cycle has two
+splittings into $(P,Q)$, and the unused vertices carry an arbitrary common matching.  Upon
+squaring a coefficient, the two common matchings form another union of doubled edges and
+alternating cycles.  Sign coherence holds because matching edges have even block size.
+
+The squared norm is thus the exponential generating function of labelled components of four
+types: an excited doubled edge of weight $2x^2$, a first-family cycle of length $2j\ge4$
+of weight $4x^{2j}$, an unexcited doubled edge of weight $1$, and a second-family cycle of
+length $2j\ge4$ of weight $2$.  Since the number of undirected alternating cycles on $2j$
+labelled vertices supplies the standard $1/(2j)$ exponential weight, the exponential formula
+gives
+\[
+ \exp\!\left[x^2y^2+\sum_{j\ge2}\frac{(xy)^{2j}}{j}
+ +\frac{y^2}{2}+\sum_{j\ge2}\frac{y^{2j}}{2j}\right]
+ =\frac{1}{(1-x^2y^2)\sqrt{1-y^2}}.
+\]
+Extracting $x^{2k}y^{2n}$ and using
+$[u^m](1-u)^{-1/2}=\binom{2m}{m}4^{-m}$ proves \eqref{eq:profile}.
+\end{proof}
+
+Equation~\eqref{eq:profile} is the $q=2$ evaluation of the general finite variance sum in
+\citet{Mukhametzhanov2022}, not a priority claim for the sector variances.  The proof above is
+an independent labelled-component derivation that exposes the rational generating function
+used in the following consequences.
+
+Two checks are immediate.  At $k=0$, \eqref{eq:profile} equals
+$\E[z^2]^2=((2n-1)!!)^2$.  Summing over $k$ and using
+\begin{equation}
+ \sum_{m=0}^{n}\binom{2m}{m}4^{-m}
+ =(2n+1)\binom{2n}{n}4^{-n}
+\end{equation}
+gives
+\begin{equation}
+ \frac{\E[z^4]}{\E[z^2]^2}=2n+1.
+ \label{eq:fourthq2}
+\end{equation}
+
+\begin{corollary}[Correlated antisymmetric determinants]\label{cor:det}
+If $J'=\rho J+\sqrt{1-\rho^2}K$ with $J,K$ independent Gaussian antisymmetric
+$2n\times2n$ matrices, then
+\begin{equation}
+ \E[\det J\,\det J']
+ =(2n)!\sum_{m=0}^{n}\binom{2m}{m}4^{-m}\rho^{2(n-m)}.
+ \label{eq:det}
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+$\det J=\operatorname{Pf}(J)^2=z^2$.  Combine \eqref{eq:spectroscopy} with
+Theorem~\ref{thm:profile}.
+\end{proof}
+
+Formula \eqref{eq:det} is distinct from the general characteristic-polynomial averages
+treated in random-matrix theory \citep{deBruijn1955,MehtaNormand2001}.  We have not found
+this correlated antisymmetric specialisation stated in the searched literature.  This
+negative search is recorded as evidence, not as a mathematical proof of priority.
+
+\section{Truncation and single-draw control}
+
+At $q=2$, the fraction of the total $L^2$ norm in sector $k$ is proportional to
+$\binom{2(n-k)}{n-k}4^{-(n-k)}$.  The Wick-square fraction is
+\begin{equation}
+ \frac{\E[W_{2n}^2]}{\E[z^4]}
+ =\frac{1}{(2n+1)\binom{2n}{n}4^{-n}}
+ \sim\frac{\sqrt{\pi}}{2\sqrt n}.
+ \label{eq:topfrac}
+\end{equation}
+Thus no top sector dominates, and the wormhole-plus-Wick-square truncation fails in relative
+$L^2$ as $n\to\infty$.  Equation \eqref{eq:fourthq2} also shows divergence of the
+normalised fourth moment.  This rules out Gaussian convergence in fourth moment; we do not
+infer a general weak-limit theorem from this fact alone.
+
+For any sector, hypercontractivity converts its exact norm into a single-draw bound.
+
+\begin{lemma}[Chaos tail envelope]\label{lem:tail}
+If $X\in\Ccal_d$, then for $t>0$
+\begin{equation}
+ \Pp(|X|\ge t\norm{X}_2)
+ \le B_d(t):=\inf_{p\ge2}(p-1)^{pd/2}t^{-p}.
+ \label{eq:B}
+\end{equation}
+In particular $B_d(t)\le t^{-2}$, and for $t\ge(2e)^{d/2}$,
+$B_d(t)\le\exp[-(d/2e)t^{2/d}]$.
+\end{lemma}
+
+\begin{proof}
+Gaussian hypercontractivity gives
+$\norm{X}_p\le(p-1)^{d/2}\norm{X}_2$ \citep{Nelson1973,Janson1997}.  Markov's inequality
+gives \eqref{eq:B}.  The two displayed bounds follow from $p=2$ and from the admissible
+choice $p=t^{2/d}/e$, respectively.
+\end{proof}
+
+Put $f_k=\E[W_{2k}^2]/\E[z^2]^2$ and
+$E_{\rm tr}=z^2-\E[z^2]-W_{2n}=\sum_{k=1}^{n-1}W_{2k}$.
+
+\begin{theorem}[Single-draw reconstruction]\label{thm:single}
+For any $\varepsilon_k>0$ with $\sum_{k=1}^{n-1}\varepsilon_k=\varepsilon$,
+\begin{equation}
+ \Pp\!\left(|E_{\rm tr}|\ge\varepsilon\E[z^2]\right)
+ \le\min\left\{\frac{\sum_{k=1}^{n-1}f_k}{\varepsilon^2},
+ \sum_{k=1}^{n-1}B_{2k}\!\left(\frac{\varepsilon_k}{\sqrt{f_k}}\right)\right\}.
+ \label{eq:single}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Orthogonality gives $\E[E_{\rm tr}^2]/\E[z^2]^2=\sum_{k=1}^{n-1}f_k$, hence the first bound.
+For the second, if $|\sum W_{2k}|\ge\sum\varepsilon_k\E[z^2]$, at least one sector exceeds
+its threshold.  Apply Lemma~\ref{lem:tail} and the union bound.
+\end{proof}
+
+Theorem~\ref{thm:single} is non-asymptotic and valid for one fixed coupling draw.  It does
+not assert that its dimension-free constants are optimal.  When prior exact sector estimates
+show $\sum_{k=1}^{n-1}f_k\to0$ in a specified large-$N$ regime \citep{Mukhametzhanov2022}, the
+first term already proves relative $L^2$ reconstruction; the tail term refines atypical
+events sector by sector.
+
+\section{Boundary moment determinacy}
+
+Let $\mu$ be the law of $z$.  In the baby-universe/GNS dictionary, the moments
+$\mu_j=\E[z^j]$ are multi-boundary data, and multiplication by $z$ acts on the closure of
+polynomials in $L^2(\mu)$ \citep{MarolfMaxfield2020,JanssenEtAl2021}.  Whether all moments
+determine $\mu$ is exactly the Hamburger moment problem.
+
+\begin{theorem}[Determinacy dichotomy]\label{thm:moment}
+For the one-time-point model \eqref{eq:z}:
+\begin{enumerate}
+\item if $n\le2$, the law $\mu$ is Hamburger determinate;
+\item if $n\ge3$, the law $\mu$ is Hamburger indeterminate.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+For $n\le2$, hypercontractivity applied to $z\in\Ccal_n$ gives
+\[
+ \mu_{2m}^{1/(2m)}=\norm{z}_{2m}
+ \le(2m-1)^{n/2}\norm{z}_2.
+\]
+Therefore $\sum_m\mu_{2m}^{-1/(2m)}$ dominates a constant multiple of
+$\sum_m m^{-n/2}$ and diverges.  Carleman's criterion implies determinacy
+\citep{Akhiezer1965,Simon1998}.
+
+Now let $n\ge3$.  Expand along blocks containing vertex $1$:
+\begin{equation}
+ z=\sum_{A\ni1}\epsilon_AJ_A C_A,
+ \label{eq:cofactor}
+\end{equation}
+where every cofactor $C_A$ uses only couplings on subsets not containing $1$ and is
+independent of the family $\{J_A:A\ni1\}$.  Conditionally on the cofactors,
+$z\sim\mathcal N(0,S^2)$ with $S^2=\sum_{A\ni1}C_A^2$.  Since the cofactor vector is not
+identically zero and its common zero set is algebraic of Gaussian measure zero, $S>0$
+almost surely.  Thus $\mu$ has a strictly positive Gaussian-mixture density
+\begin{equation}
+ f(t)=\E\left[(2\pi S^2)^{-1/2}\exp\!\left(-\frac{t^2}{2S^2}\right)\right].
+ \label{eq:density}
+\end{equation}
+
+We need a lower tail bound on $f$.  Fix a partition
+$\{A_0,B_2,\ldots,B_n\}$ with $1\in A_0$.  On the event that
+$J_{B_j}\in[a,a+1]$ for $j=2,\ldots,n$ and all other couplings not containing $1$ have
+absolute value at most one, the leading monomial of $C_{A_0}$ has degree $n-1$.  All its
+other monomials, and every $C_A$ with $A\ne A_0$, contain at most $n-2$ of the selected
+large variables.  Hence, for $a$ above a model-dependent constant,
+\[
+ c a^{n-1}\le S\le C a^{n-1},\qquad
+ \Pp(E_a)\ge c_1e^{-c_2a^2}.
+\]
+Insert this event into \eqref{eq:density} and choose $a=t^{1/n}$.  For sufficiently large
+$t$,
+\begin{equation}
+ f(t)\ge c_3t^{-(n-1)/n}\exp[-c_4t^{2/n}].
+ \label{eq:lower}
+\end{equation}
+Because $2/n<1$, \eqref{eq:lower} implies
+\[
+ \int_{\R}\frac{-\log f(t)}{1+t^2}\,dt<\infty
+\]
+up to an irrelevant finite contribution on compact intervals.  Krein's criterion therefore
+implies Hamburger indeterminacy \citep{Krein1945,Stoyanov2000}.  This proves the dichotomy.
+\end{proof}
+
+For $n\ge3$, the symmetric Jacobi operator associated with the boundary moments is not
+essentially self-adjoint on polynomials; its canonical self-adjoint extensions form the
+Nevanlinna family and have discrete extremal spectral measures \citep{Akhiezer1965,Simon1998}.
+The physical coupling law \eqref{eq:density} is continuous and non-extremal, so polynomials
+are not dense in its full $L^2$ space.  This does not make the GNS construction inconsistent.
+It says only that one-time boundary moments do not select the microscopic coupling measure
+uniquely once one boundary amplitude is a Gaussian polynomial of degree at least three.
+
+\section{Scope and conclusion}
+
+The exact half-wormhole expansion, its identification with the chaos projections, and its
+general sector-variance sum are not new.  Our contribution is the correlated-replica use of
+the OU grading and the additional consequences developed here.  Equations \eqref{eq:replica} and
+\eqref{eq:spectroscopy} turn correlated replicas into a sector probe.  Theorem
+\ref{thm:profile} gives a closed Pfaffian reduction and independent proof, while
+Corollary~\ref{cor:det} gives the correlated-determinant consequence.  Theorem~\ref{thm:single} is a finite single-draw statement.
+Theorem~\ref{thm:moment} sharply separates determinate and indeterminate boundary laws.
+
+The limitations are equally sharp.  The model is zero-dimensional; ``wormhole'' labels the
+ensemble-connected term, not a derived spacetime geometry.  Gaussianity is essential to the
+OU and hypercontractive form used here.  A thermal partition function has an infinite chaos
+expansion.  Finally, when the chaos order grows with $N$, the fixed-chaos fourth-moment
+theorem cannot by itself prove a central limit.  These boundaries prevent the manuscript
+from being read as a construction of complete quantum gravity; it is a rigorous result about
+a solvable factorisation model.
+
+\section*{AI-assisted workflow and unresolved attribution}
+The following statement is supplied by the repository operator:
+\begin{quote}
+I genuinely do not know how authorship, intellectual credit, or ownership should be
+attributed for these results. My workflow was to ask AI systems to conduct literature
+research, autonomously select open problems, and attempt to solve them. The principal
+research work was carried out mainly by Fable 5. DeepSeek and several GPT models
+participated in cross-review, checking, and manuscript preparation and organization.
+These manuscripts and their scientific claims have not yet undergone human expert review.
+\end{quote}
+This describes the overall workflow reported by the operator; a complete per-model,
+per-manuscript allocation of contributions is unavailable. Author and affiliation fields
+are intentionally blank. Automated checks and AI internal reviews are not human peer
+review. This working draft makes no claim of journal acceptance or settled publication
+priority. Historical source dates are recorded separately in the repository history.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

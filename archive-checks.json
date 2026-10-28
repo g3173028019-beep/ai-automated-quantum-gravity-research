@@ -1,0 +1,514 @@
+{
+  "checked_at_utc": "2026-10-28T08:13:04.689937+00:00",
+  "kind": "English manuscript build and archive checks",
+  "human_expert_review": false,
+  "historical_Wolfram_scripts_rerun": false,
+  "papers": [
+    {
+      "paper": "01-projection-sign-rigidity",
+      "pages": 5,
+      "pdf_author": "",
+      "citation_count": 9
+    },
+    {
+      "paper": "02-half-wormholes-wiener-chaos",
+      "pages": 7,
+      "pdf_author": "",
+      "citation_count": 16
+    }
+  ],
+  "checks": [
+    {
+      "check": "01-projection-sign-rigidity: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01-projection-sign-rigidity: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "01-projection-sign-rigidity: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "01-projection-sign-rigidity: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01-projection-sign-rigidity: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "01-projection-sign-rigidity: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01-projection-sign-rigidity: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01-projection-sign-rigidity: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01-projection-sign-rigidity: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01-projection-sign-rigidity: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01-projection-sign-rigidity: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01-projection-sign-rigidity: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01-projection-sign-rigidity: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "01-projection-sign-rigidity: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "02-half-wormholes-wiener-chaos: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": ".gitattributes: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": ".gitattributes: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": ".gitattributes: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": ".gitignore: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": ".gitignore: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": ".gitignore: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DECLARATIONS.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DECLARATIONS.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "DECLARATIONS.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "HISTORY.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "HISTORY.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "HISTORY.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/verification/legacy_checks.wls: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/verification/legacy_checks.wls: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/verification/legacy_checks.wls: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/legacy_checks.wls: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/legacy_checks.wls: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/legacy_checks.wls: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tools/build.ps1: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tools/build.ps1: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tools/build.ps1: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tools/check_archive.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tools/check_archive.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tools/check_archive.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tools/render_review.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tools/render_review.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "tools/render_review.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 157,
+      "sha256": "58804e2980e60c903f17031672d588788a07c8742e0b5826eb66a1972eaea673"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 94,
+      "sha256": "7c03dc13032d66b9c364f16c73ab64193d89a94a0f178b52427ef41d7294cb98"
+    },
+    {
+      "path": "DECLARATIONS.md",
+      "bytes": 2776,
+      "sha256": "8583f64be978faf6ce123a8d391d54118140ed762c79e7a9cb274dc6f367f0bd"
+    },
+    {
+      "path": "HISTORY.md",
+      "bytes": 1988,
+      "sha256": "2438aeae163b70627bafc7bc599fcde70c2af9f2f9bd120e3ee1f9f28348d771"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/main.tex",
+      "bytes": 15188,
+      "sha256": "65b605f3c0631ed0e8a5a7845013ed01b02051e579badbb3be7454279f1ddb90"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/manuscript.pdf",
+      "bytes": 230416,
+      "sha256": "a65e2bcd7502359c63a90e79eb44be0404a67662524faafd1103cd0118397612"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/README.md",
+      "bytes": 1526,
+      "sha256": "02c55f21a0344707aed40213d56b6e2dfa75c642fb789c11d3f01518575dbee2"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/references.bib",
+      "bytes": 2998,
+      "sha256": "fd44a897263eb99e0b25b7ff3e5e417c7ffc0f44395cc18553d56fb4941f66e9"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/verification/legacy_checks.wls",
+      "bytes": 4221,
+      "sha256": "869de6a4245ccd3056008766b019efa480e2949c5b73e7ccfa1a6bc992c993bc"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/main.tex",
+      "bytes": 19689,
+      "sha256": "1b11c94d47e768b845b72071617fd2e0e625f3a31f8ce36cc594c704c8dffdc4"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/manuscript.pdf",
+      "bytes": 240158,
+      "sha256": "cd9720ce99ccb6726e3208a5d7a5986ac9952838915c37215c847082b57a94ed"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/README.md",
+      "bytes": 1594,
+      "sha256": "5b80cfb6558dbadb990d8b95f6ace8631db4028f9489391947e05c9c8ccc2016"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/references.bib",
+      "bytes": 4829,
+      "sha256": "dc12e7e8f328df8c7f92ddb783bb35643b1080e600841548c70add605a22b936"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/verification/legacy_checks.wls",
+      "bytes": 6186,
+      "sha256": "5dca2abdcce33efdcee1c6dff42187458c643d53bc79751f57b1129791840a4e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2275,
+      "sha256": "0e8e5ea47265778d274e5bbd0656c2a8f4cb8053351f2e97dc489b6f876e3bd1"
+    },
+    {
+      "path": "tools/build.ps1",
+      "bytes": 567,
+      "sha256": "2504c77db6591eb30cdd0e2efc1e1af28f32102d2b493ff632d254a020a6a0e9"
+    },
+    {
+      "path": "tools/check_archive.py",
+      "bytes": 4147,
+      "sha256": "e27be56b7f7c7d617b0d222a9c8e4d689be947dbf0b80a148dee2ece1c0a9770"
+    },
+    {
+      "path": "tools/render_review.py",
+      "bytes": 1199,
+      "sha256": "da6a1aaf368c743941ec486b49a727f21c40f81a49787c794bf94479d81ee77e"
+    },
+    {
+      "path": "VERIFICATION.md",
+      "bytes": 2397,
+      "sha256": "902d2a6d71af9ce38352805205b2873414b7470fcc39f5a4d51f29aac7d03971"
+    }
+  ]
+}

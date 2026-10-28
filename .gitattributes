@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.md text eol=lf
+*.tex text eol=lf
+*.bib text eol=lf
+*.py text eol=lf
+*.ps1 text eol=lf
+*.wls text eol=lf
+*.json text eol=lf
+*.pdf binary
