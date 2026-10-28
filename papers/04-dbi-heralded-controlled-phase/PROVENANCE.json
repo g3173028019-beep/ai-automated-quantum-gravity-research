@@ -1,0 +1,25 @@
+{
+  "schema": "dbi-heralded-gate-packet-v1",
+  "delivery_date": "2026-10-29",
+  "inherited_source_date": "2026-09-19",
+  "source_identifiers": [
+    "TOE3.0 epoch20 compact_model/THETA1-CONTINUUM-PROOF.md",
+    "TOE3.0 epoch20 compact_model/continuum-trial.json",
+    "TOE3.0 epoch20 compact_model/residual-partition-{00,01,11}.json",
+    "Research continuation portfolio-round-02 DBI return gate and targeted independent check"
+  ],
+  "retained_file_sha256": {
+    "inputs/continuum-trial.json": "8b44e99a6fb5ff655b9508b6aa945244dd080b153dcdb1eac37c0cb530b82e6e",
+    "inputs/residual-partition-00.json": "f51ab1a010246c53ebc9117675a4d01116c651d0bd2ca3ac31726b36db27ff2c",
+    "inputs/residual-partition-01.json": "6c81c4218408f6778e6b215b29fb723ba2fbc94ccfab8e11026a9725624f229e",
+    "inputs/residual-partition-11.json": "d7499cd9bf027631d828b78f6700f91b2aed66a7be55ec384565a29c031c24f6",
+    "reference/certify_trial_residual.py": "ec23b232e2e4dbac30766b61eec77fb9a1f80245a70350969a62aa76819a552b"
+  },
+  "evidence_scope": "Inherited complete half-line residual cells and analytic tails; freshly replayed exact sums, initial mismatch, frozen-time amplitudes, operator errors and sharper conditional fidelity. Original continuum producer is supplied only as an unmodified algorithm reference; default replay does not run it.",
+  "chronology": "Earlier work was Fable 5-led; July 2026 onward results were predominantly produced by GPT models, as reported by the operator. DeepSeek and multiple GPT models also contributed cross-review and manuscript preparation. This is reported chronology, not a per-result authorship allocation.",
+  "human_authors": [],
+  "human_affiliations": [],
+  "human_expert_review": false,
+  "ownership_quote": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "priority_scope": "Historical source dates, delivery date, and demonstrable public disclosure are distinct; a private commit does not establish public priority."
+}

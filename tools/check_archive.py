@@ -11,9 +11,9 @@ from pypdf import PdfReader
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PAPERS = ("01-projection-sign-rigidity", "02-half-wormholes-wiener-chaos")
+PAPERS = tuple(path.name for path in sorted((ROOT / "papers").iterdir()) if (path / "main.tex").is_file())
 SKIP = {".git", "build", "tmp", "__pycache__"}
-TEXT_SUFFIXES = {".md", ".tex", ".bib", ".wls", ".ps1", ".py", ".json"}
+TEXT_SUFFIXES = {".md", ".tex", ".bib", ".wls", ".ps1", ".py", ".json", ".txt"}
 checks = []
 
 
@@ -42,8 +42,10 @@ for slug in PAPERS:
     text = re.sub(r"\s+", " ", text)
     author = str((reader.metadata or {}).get("/Author", "")).strip()
     require(f"{slug}: blank PDF author", not author, repr(author))
+    # PDF text extraction can omit visually present interword spacing.
+    compact_text = re.sub(r"\s+", "", text)
     for phrase in ("I genuinely do not know", "Fable 5", "DeepSeek", "GPT", "human expert review"):
-        require(f"{slug}: disclosure '{phrase}'", phrase in text)
+        require(f"{slug}: disclosure '{phrase}'", phrase.replace(" ", "") in compact_text)
     require(f"{slug}: no unresolved PDF references", "??" not in text)
     require(f"{slug}: no placeholder byline", "name(s) to be supplied" not in text)
     require(f"{slug}: English PDF", re.search(r"[\u3400-\u9fff]", text) is None)

@@ -1,0 +1,63 @@
+{
+  "packet": "03-jt-energy-weighted-recovery",
+  "delivery_date": "2026-10-29",
+  "generated_utc": "2026-10-28T18:09:15.740114+00:00",
+  "source_manifest": [
+    {
+      "source_identifier": "sealed-E13/notes/CLASSICAL-GRAVITY-QUANTUM-MATTER-LIMIT.md",
+      "sha256": "10ae74c7b72d2e6cd23f5613c93d3dcd409c5483edc080f28b26e273a5d2488e",
+      "runtime_dependency": false
+    },
+    {
+      "source_identifier": "sealed-E13/notes/OPERATOR-DOMAINS-AND-PHYSICAL-CLOSURE.md",
+      "sha256": "b25b6fec79e1c74ccf86d5fd4cbca0e303a46fc47afc1aa408b872e720853121",
+      "runtime_dependency": false
+    },
+    {
+      "source_identifier": "sealed-E13/notes/MEAN-ENERGY-CHANNEL-RECOVERY-PROOF.md",
+      "sha256": "392b897b28ee703c4d8e893381ab2e34d0f3b0a50377b5cca0449fcc4c221fce",
+      "runtime_dependency": false
+    },
+    {
+      "source_identifier": "portfolio-round-01/lines/jt/RESULT.md",
+      "sha256": "083dd7e088d3386eff27c9ad757d4f66cd209b3922a1486d21b960c5f6d3b03a",
+      "runtime_dependency": false
+    },
+    {
+      "source_identifier": "portfolio-round-01/lines/jt/scripts/weighted_recovery.py",
+      "sha256": "e203d32c582b846a827b0b05badb8872221bd8af3c1da5ea6c3004043dc26547",
+      "runtime_dependency": false
+    }
+  ],
+  "adaptation": "Portable derivative of round-one script; removed absolute executable metadata and unrelated toy-optimality example, added focused exact Gaussian residual/stability checks. All numerical theorem values reproduced locally. No old-project input file is required.",
+  "input_files_required": [],
+  "artifact_hashes": {
+    "main.tex": "6f77b6ba77f6ea86d1211de91d1a58b1ee1e08f2de1d40c6a5cc593d12c06722",
+    "references.bib": "19a81dbabf3f0b6bf92393b31563650cc7785171f47017057a994b2877bcb140",
+    "code/reproduce.py": "c38ea314a42377b3b4b6eba957f3da43839d4f99f9831dd52dd411d5c04d06ac",
+    "requirements.txt": "b42d575212560450c79d9bd3f1786b6dfa6e7d312735c56ad4b9eefb0791d55a",
+    "manuscript.pdf": "6fb0a5af8010a4ce00166e86652515ca2cf326dce4669f26dba2f32fd7321344"
+  },
+  "primary_references": [
+    {
+      "identifier": "arXiv:2301.07257v3",
+      "url": "https://arxiv.org/abs/2301.07257v3",
+      "role": "Prior canonical physical Hilbert space and Hamiltonians, Eqs.41-45",
+      "metadata_checked": "2026-10-29"
+    },
+    {
+      "identifier": "arXiv:2107.08754v3; doi:10.1063/5.0117631",
+      "url": "https://arxiv.org/abs/2107.08754v3",
+      "role": "Prior scalar representation and boundary branch",
+      "metadata_checked": "2026-10-29"
+    }
+  ],
+  "chronology": "Earlier work was Fable 5-led; July 2026 onward results were predominantly produced by GPT models, as reported by the operator. DeepSeek and multiple GPT models also contributed cross-review and manuscript preparation. This is reported chronology, not a per-result authorship allocation.",
+  "authorship_statement": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "human_authors": [],
+  "human_affiliations": [],
+  "human_expert_review": false,
+  "public_priority_claim": false,
+  "date_distinction": "Historical source dates, present delivery, and demonstrable public disclosure are distinct; a private commit does not establish public priority.",
+  "status": "complete_research_note_and_portable_reproduction"
+}

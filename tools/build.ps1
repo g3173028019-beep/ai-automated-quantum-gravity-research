@@ -1,6 +1,11 @@
+param([string[]]$Paper)
 $ErrorActionPreference = 'Stop'
 $repoRoot = Split-Path -Parent $PSScriptRoot
-$papers = @('01-projection-sign-rigidity', '02-half-wormholes-wiener-chaos')
+$papers = if ($Paper) { $Paper } else {
+    Get-ChildItem -LiteralPath (Join-Path $repoRoot 'papers') -Directory |
+        Where-Object { Test-Path -LiteralPath (Join-Path $_.FullName 'main.tex') } |
+        Sort-Object Name | Select-Object -ExpandProperty Name
+}
 foreach ($paper in $papers) {
     $paperDir = Join-Path $repoRoot ('papers/' + $paper)
     Push-Location $paperDir

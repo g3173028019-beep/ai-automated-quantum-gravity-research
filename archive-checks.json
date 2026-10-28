@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-28T08:13:04.689937+00:00",
+  "checked_at_utc": "2026-10-28T18:28:12.077790+00:00",
   "kind": "English manuscript build and archive checks",
   "human_expert_review": false,
   "historical_Wolfram_scripts_rerun": false,
@@ -15,6 +15,24 @@
       "pages": 7,
       "pdf_author": "",
       "citation_count": 16
+    },
+    {
+      "paper": "03-jt-energy-weighted-recovery",
+      "pages": 6,
+      "pdf_author": "",
+      "citation_count": 2
+    },
+    {
+      "paper": "04-dbi-heralded-controlled-phase",
+      "pages": 6,
+      "pdf_author": "",
+      "citation_count": 3
+    },
+    {
+      "paper": "05-integer-flux-families",
+      "pages": 6,
+      "pdf_author": "",
+      "citation_count": 3
     }
   ],
   "checks": [
@@ -155,6 +173,216 @@
     },
     {
       "check": "02-half-wormholes-wiener-chaos: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "03-jt-energy-weighted-recovery: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "04-dbi-heralded-controlled-phase: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05-integer-flux-families: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05-integer-flux-families: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "05-integer-flux-families: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "05-integer-flux-families: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05-integer-flux-families: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "05-integer-flux-families: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05-integer-flux-families: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05-integer-flux-families: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05-integer-flux-families: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05-integer-flux-families: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05-integer-flux-families: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05-integer-flux-families: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05-integer-flux-families: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "05-integer-flux-families: clean final LaTeX log",
       "passed": true,
       "detail": ""
     },
@@ -339,6 +567,486 @@
       "detail": ""
     },
     {
+      "check": "papers/03-jt-energy-weighted-recovery/code/reproduce.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/code/reproduce.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/code/reproduce.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/results/reproduction.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/results/reproduction.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/results/reproduction.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/03-jt-energy-weighted-recovery/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/.gitignore: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/.gitignore: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/.gitignore: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/inputs/continuum-trial.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/inputs/continuum-trial.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/inputs/continuum-trial.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/inputs/residual-partition-00.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/inputs/residual-partition-00.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/inputs/residual-partition-00.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/inputs/residual-partition-01.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/inputs/residual-partition-01.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/inputs/residual-partition-01.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/inputs/residual-partition-11.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/inputs/residual-partition-11.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/inputs/residual-partition-11.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/reference/certify_trial_residual.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/reference/certify_trial_residual.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/reference/certify_trial_residual.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/replay.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/replay.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/replay.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/results/gate.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/results/gate.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/results/gate.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/04-dbi-heralded-controlled-phase/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/.gitignore: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/.gitignore: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/.gitignore: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/reproduce.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/reproduce.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/reproduce.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/results/construction_certificate.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/results/construction_certificate.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/results/construction_certificate.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/results/divisor_assignments.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/results/divisor_assignments.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/results/divisor_assignments.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/05-integer-flux-families/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "README.md: English text",
       "passed": true,
       "detail": ""
@@ -417,8 +1125,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 157,
-      "sha256": "58804e2980e60c903f17031672d588788a07c8742e0b5826eb66a1972eaea673"
+      "bytes": 418,
+      "sha256": "c22a8b33fa047324e7365e4fdc52cb4e86078d3b8bf4bd8a3f830e153c4935db"
     },
     {
       "path": ".gitignore",
@@ -427,13 +1135,13 @@
     },
     {
       "path": "DECLARATIONS.md",
-      "bytes": 2776,
-      "sha256": "8583f64be978faf6ce123a8d391d54118140ed762c79e7a9cb274dc6f367f0bd"
+      "bytes": 3529,
+      "sha256": "f50891879b65d2b841f965c7ecd68c80b2f97dffa0a179d4e269a5d9249b528b"
     },
     {
       "path": "HISTORY.md",
-      "bytes": 1988,
-      "sha256": "2438aeae163b70627bafc7bc599fcde70c2af9f2f9bd120e3ee1f9f28348d771"
+      "bytes": 4049,
+      "sha256": "bdfa24be9f3c7855aa70d4d1fa50507dba5fea069467963e9f78ac44f5e1fbaa"
     },
     {
       "path": "papers/01-projection-sign-rigidity/main.tex",
@@ -486,29 +1194,204 @@
       "sha256": "5dca2abdcce33efdcee1c6dff42187458c643d53bc79751f57b1129791840a4e"
     },
     {
+      "path": "papers/03-jt-energy-weighted-recovery/code/reproduce.py",
+      "bytes": 8478,
+      "sha256": "c38ea314a42377b3b4b6eba957f3da43839d4f99f9831dd52dd411d5c04d06ac"
+    },
+    {
+      "path": "papers/03-jt-energy-weighted-recovery/main.tex",
+      "bytes": 17742,
+      "sha256": "6f77b6ba77f6ea86d1211de91d1a58b1ee1e08f2de1d40c6a5cc593d12c06722"
+    },
+    {
+      "path": "papers/03-jt-energy-weighted-recovery/manuscript.pdf",
+      "bytes": 337247,
+      "sha256": "6fb0a5af8010a4ce00166e86652515ca2cf326dce4669f26dba2f32fd7321344"
+    },
+    {
+      "path": "papers/03-jt-energy-weighted-recovery/PROVENANCE.json",
+      "bytes": 3374,
+      "sha256": "0215607a00a5566ed2732795b55c4afceebfb361cb5444a52ce6b0b1ffb7cf2e"
+    },
+    {
+      "path": "papers/03-jt-energy-weighted-recovery/README.md",
+      "bytes": 2990,
+      "sha256": "9f4c19f7bb8ea7676e9015edbfaa45f13d8a5a648d548e67509f03a5268d9841"
+    },
+    {
+      "path": "papers/03-jt-energy-weighted-recovery/references.bib",
+      "bytes": 704,
+      "sha256": "19a81dbabf3f0b6bf92393b31563650cc7785171f47017057a994b2877bcb140"
+    },
+    {
+      "path": "papers/03-jt-energy-weighted-recovery/requirements.txt",
+      "bytes": 41,
+      "sha256": "b42d575212560450c79d9bd3f1786b6dfa6e7d312735c56ad4b9eefb0791d55a"
+    },
+    {
+      "path": "papers/03-jt-energy-weighted-recovery/results/reproduction.json",
+      "bytes": 30842,
+      "sha256": "10c341cf4cd5180a6cf805d7b1ac26d4015ca874aa8bdbadf50c57784c0797eb"
+    },
+    {
+      "path": "papers/03-jt-energy-weighted-recovery/VERIFICATION.md",
+      "bytes": 2339,
+      "sha256": "3d23031b63b10ca99994146bbcab90e023a8ae4320693c42d9b8f39155da62b1"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/.gitignore",
+      "bytes": 20,
+      "sha256": "c7cd0fc55d4b88bc4ed87b1cdc33670d9046174ab762188a0f2ce10290bb56e0"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/inputs/continuum-trial.json",
+      "bytes": 16723,
+      "sha256": "8b44e99a6fb5ff655b9508b6aa945244dd080b153dcdb1eac37c0cb530b82e6e"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/inputs/residual-partition-00.json",
+      "bytes": 241571,
+      "sha256": "f51ab1a010246c53ebc9117675a4d01116c651d0bd2ca3ac31726b36db27ff2c"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/inputs/residual-partition-01.json",
+      "bytes": 258468,
+      "sha256": "6c81c4218408f6778e6b215b29fb723ba2fbc94ccfab8e11026a9725624f229e"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/inputs/residual-partition-11.json",
+      "bytes": 269481,
+      "sha256": "d7499cd9bf027631d828b78f6700f91b2aed66a7be55ec384565a29c031c24f6"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/main.tex",
+      "bytes": 17115,
+      "sha256": "158adacf068161da8285532bc5fb2b85f4f333ff127a07c3339ad226d888ba0f"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/manuscript.pdf",
+      "bytes": 303004,
+      "sha256": "2d14ad335667611155977ad6defcb21133819639fd36dd7a74cc441d784522b5"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/PROVENANCE.json",
+      "bytes": 2048,
+      "sha256": "18f48e40886a2f1590dc7d5d7035a5833bb72ec7d48b5d5de84a3326646af72c"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/README.md",
+      "bytes": 4131,
+      "sha256": "acae1062f76468539415fb6b3fc5664f925b66df946a0f47abfc3209ae4bc851"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/reference/certify_trial_residual.py",
+      "bytes": 5888,
+      "sha256": "ec23b232e2e4dbac30766b61eec77fb9a1f80245a70350969a62aa76819a552b"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/references.bib",
+      "bytes": 1087,
+      "sha256": "e58534bd372259d5231f8fd77f44df8ad179de6945d7133c5b6b60dcea598bfb"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/replay.py",
+      "bytes": 5269,
+      "sha256": "0ec93aef346fe9930b694a64c5b072cb9762772ea35dccf32c9e7b026c22ee03"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/requirements.txt",
+      "bytes": 28,
+      "sha256": "96464f405b58137236b9c10c698be08a780ff7d062dd918ac40c0460f1b0831f"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/results/gate.json",
+      "bytes": 2995,
+      "sha256": "054a42e77a019c84c8cb8f42a2130c6b3c7f5d87e913ee573e7d71c7344e0e3c"
+    },
+    {
+      "path": "papers/04-dbi-heralded-controlled-phase/VERIFICATION.md",
+      "bytes": 3206,
+      "sha256": "654db294a96c52bf343e10134c4ffe24fac97f16029c480324ae25ce0a38e398"
+    },
+    {
+      "path": "papers/05-integer-flux-families/.gitignore",
+      "bytes": 20,
+      "sha256": "c7cd0fc55d4b88bc4ed87b1cdc33670d9046174ab762188a0f2ce10290bb56e0"
+    },
+    {
+      "path": "papers/05-integer-flux-families/main.tex",
+      "bytes": 15964,
+      "sha256": "250a90a0e0e79bbba7a5c9d831bc8071b9113bb540e286d6c2115c4b74d00319"
+    },
+    {
+      "path": "papers/05-integer-flux-families/manuscript.pdf",
+      "bytes": 311043,
+      "sha256": "309a348219638b3fe3ef54823d2e891fe98745ea82b266bca406d756f14d7773"
+    },
+    {
+      "path": "papers/05-integer-flux-families/PROVENANCE.json",
+      "bytes": 3131,
+      "sha256": "dca9cd3212be5380477c3d2b3949106ccbc0b7c451475ba6d2f432ec8cf8915a"
+    },
+    {
+      "path": "papers/05-integer-flux-families/README.md",
+      "bytes": 2910,
+      "sha256": "38e2a071a605553fa839e06b8a2f22bc1372a60726cad1a277be9468f53d597c"
+    },
+    {
+      "path": "papers/05-integer-flux-families/references.bib",
+      "bytes": 1194,
+      "sha256": "6b01f9e5ac41e83814cc3779b12856f868428e37f77da1d22d080cc87d0ca959"
+    },
+    {
+      "path": "papers/05-integer-flux-families/reproduce.py",
+      "bytes": 10472,
+      "sha256": "495d7c1cdc337908eded73deded2c2176fdd73b4e3515de9c07af60166f54ece"
+    },
+    {
+      "path": "papers/05-integer-flux-families/requirements.txt",
+      "bytes": 15,
+      "sha256": "92b624b3acd276481f084c401d2515225422ef0e9fa5488de7e58530483a1997"
+    },
+    {
+      "path": "papers/05-integer-flux-families/results/construction_certificate.json",
+      "bytes": 40209,
+      "sha256": "ad3abeadde3df37c38f5d6979dc3dce77ad913b4d38f3651b0537675590790a5"
+    },
+    {
+      "path": "papers/05-integer-flux-families/results/divisor_assignments.json",
+      "bytes": 28503,
+      "sha256": "fc77567af479b95d8acbaa84d9341af375997a5d002c77794ee5047b66bb1a34"
+    },
+    {
+      "path": "papers/05-integer-flux-families/VERIFICATION.md",
+      "bytes": 4812,
+      "sha256": "2c382c1af4ace4e1603bd0099e630515de2a7064f0eee75e51fe8256fe684e22"
+    },
+    {
       "path": "README.md",
-      "bytes": 2275,
-      "sha256": "0e8e5ea47265778d274e5bbd0656c2a8f4cb8053351f2e97dc489b6f876e3bd1"
+      "bytes": 3651,
+      "sha256": "339562853a56475512602577ec2a415e64613a3464769dbe4c8534153ffb21bd"
     },
     {
       "path": "tools/build.ps1",
-      "bytes": 567,
-      "sha256": "2504c77db6591eb30cdd0e2efc1e1af28f32102d2b493ff632d254a020a6a0e9"
+      "bytes": 778,
+      "sha256": "34d53ee406fe9d193ab89ebe5ebe19e4153215fe2f73e73c01d62d3beb76ab1b"
     },
     {
       "path": "tools/check_archive.py",
-      "bytes": 4147,
-      "sha256": "e27be56b7f7c7d617b0d222a9c8e4d689be947dbf0b80a148dee2ece1c0a9770"
+      "bytes": 4327,
+      "sha256": "405b3efed2498be97798580e124ad3e0d17f1103acfec32d7066399d43c901c7"
     },
     {
       "path": "tools/render_review.py",
-      "bytes": 1199,
-      "sha256": "da6a1aaf368c743941ec486b49a727f21c40f81a49787c794bf94479d81ee77e"
+      "bytes": 1266,
+      "sha256": "cf9e2a1d59171d4640368dee9f161e524404d9ee8ffb126d3abd0cb75916d98a"
     },
     {
       "path": "VERIFICATION.md",
-      "bytes": 2397,
-      "sha256": "902d2a6d71af9ce38352805205b2873414b7470fcc39f5a4d51f29aac7d03971"
+      "bytes": 4997,
+      "sha256": "d29b5ef8c103b27c156063bdd278257e7af4f6c1c48efcc21c4cd6cd4f07a3f3"
     }
   ]
 }

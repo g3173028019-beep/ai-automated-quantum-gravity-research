@@ -1,0 +1,81 @@
+{
+  "status": "PASS_FROZEN_HERALDED_GATE_SHARP_FIDELITY",
+  "frozen_time": "107.61733846478977",
+  "phi0": "0.9177158589349711",
+  "phi1": "0.69393706341036732",
+  "correction": "diag(1,exp(-i delta)) on each logical qubit; delta=phi1-phi0; standard Rz angle -delta",
+  "sharp_lemma_exact_algebra": "PASS",
+  "input_hashes": "PASS",
+  "inherited_residual_sums_and_initial_mismatch": "PASS",
+  "interval_digits": 110,
+  "branch_certificates": [
+    {
+      "branch": "00",
+      "amplitude_real": [
+        0.6075618060071935,
+        0.6075618060071937
+      ],
+      "amplitude_imag": [
+        0.7941189989786072,
+        0.7941189989786074
+      ],
+      "residual_slope_upper": 0.0015295849558461668,
+      "Duhamel_error_upper": 0.16469738387537072,
+      "distance_upper": 0.1648192249692427
+    },
+    {
+      "branch": "01",
+      "amplitude_real": [
+        0.7636249212850901,
+        0.7636249212850903
+      ],
+      "amplitude_imag": [
+        0.6353180873191958,
+        0.635318087319196
+      ],
+      "residual_slope_upper": 0.0014950962602760477,
+      "Duhamel_error_upper": 0.16097403078977887,
+      "distance_upper": 0.16762006946351435
+    },
+    {
+      "branch": "11",
+      "amplitude_real": [
+        -0.8684490084889295,
+        -0.8684490084889293
+      ],
+      "amplitude_imag": [
+        -0.44131540672625014,
+        -0.44131540672625
+      ],
+      "residual_slope_upper": 0.0015223015596966766,
+      "Duhamel_error_upper": 0.16386786313695578,
+      "distance_upper": 0.1897205598201729
+    }
+  ],
+  "nominal": {
+    "operator_distance_upper": 0.18972055982017294,
+    "all_input_success_lower": 0.6565527711781338,
+    "all_reference_conditional_squared_fidelity_lower": 0.96400610918152,
+    "conditional_Bell_negativity_lower": 0.4640061091815201,
+    "successful_subnormalized_diamond_distance_upper": 0.3794411196403459
+  },
+  "robust": {
+    "operator_distance_upper": 0.20304819175570848,
+    "all_input_success_lower": 0.6351321846638459,
+    "all_reference_conditional_squared_fidelity_lower": 0.9587714318247369,
+    "conditional_Bell_negativity_lower": 0.45877143182473695,
+    "successful_subnormalized_diamond_distance_upper": 0.40609638351141697
+  },
+  "nominal_distance_bound_decimal": "0.18972055982017294",
+  "robust_distance_bound_decimal": "0.20304819175570846",
+  "M1_upper": 11.127631935535533,
+  "extra_operator_error_upper": 0.013327631935535532,
+  "robust_box": {
+    "source_normalized_pure_vector_norm": ".001",
+    "readout_normalized_pure_vector_norm": ".001",
+    "absolute_time_error": ".001",
+    "each_local_phase_error": ".0001"
+  },
+  "scope": "Common radial psi5 tensor arbitrary logical/reference input, exact invariant code and nominal Hamiltonians; complete P/Q instrument with failure flag.",
+  "not_regenerated": "Old residual cellwise integrand and analytic-tail enclosures are retained certificates, not fresh continuum refinements."
+}

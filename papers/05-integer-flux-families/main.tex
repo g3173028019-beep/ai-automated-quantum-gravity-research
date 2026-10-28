@@ -1,0 +1,363 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\hypersetup{pdfauthor={},pdftitle={Integer STU flux families: positive masses and tadpole-controlled coupling}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Imn}{\operatorname{Im}}
+\newcommand{\diag}{\operatorname{diag}}
+\author{}
+\date{29 October 2026}
+\title{Integer STU flux families:\\positive masses and tadpole-controlled coupling}
+\begin{document}
+\maketitle
+\begin{abstract}
+An exact even integral STU flux lattice admits a positive-divisor family of
+no-scale complex-structure/axiodilaton critical points. With $A_IB_I=k$, its
+charge is $Q=8k$, its full real F-term Jacobian has determinant $-4096k^4$,
+and its eight canonical masses squared are $k$ times a fixed positive
+spectrum. An integral modular image gives $S=\ii k^2$, $U_i=\ii k$, hence
+$g_s=k^{-2}$. At inherited quotient tadpole capacity $L=28$, the construction
+reaches $g_s=1/9$ with $Q=24$ and contains nine distinct reduced moduli point
+types. We also prove exact pointwise charge minima at those points using
+primitive complementary-monomial pairs and a scaling obstruction. The
+results are theorems of the stated period/lattice model. Its global
+orientifold interpretation is inherited, and the nonzero superpotential,
+unstabilized K\"ahler sector and common volume factor remain explicit.
+\end{abstract}
+
+\section{The exact model and its interpretation}
+Flux stabilization and its source-charge budget are related but distinct
+parts of the no-scale compactification problem
+\citep{GKP,DenefEtAl,BenaEtAl}. Here we solve a specified low-dimensional
+integral period problem; no general tadpole conjecture is proved or refuted.
+Write $z=(S,U_1,U_2,U_3)$, with $y_A=\Imn z_A>0$, and take
+\begin{align}
+\Pi&=(1,U_1,U_2,U_3,U_1U_2U_3,-U_2U_3,-U_1U_3,-U_1U_2)^T,\label{period}\\
+P(n)&=n_0+\sum_i n_iU_i-n^0U_1U_2U_3
+       +n^1U_2U_3+n^2U_1U_3+n^3U_1U_2,\\
+W&=P(f)-SP(h),\qquad K=-\sum_{A=0}^3\log(2y_A).
+\end{align}
+The flux ordering is $(f^I,f_I;h^I,h_I)$, $I=0,1,2,3$, with
+$(f,h)\in(2\Z)^{16}$. Fix the quotient normalization
+\begin{equation}
+Q=\frac12\sum_I(f_Ih^I-f^Ih_I),\qquad N_{\rm cover}=2Q.
+\label{charge}
+\end{equation}
+All results below use this precise sign and factor of two.
+
+The geometric motivation is the exact untwisted three-complex-structure
+period sector of the resolved toroidal model associated with
+\citet{DenefEtAl}. The smooth orientifold realization, the interpretation of
+this even sublattice as a conservative non-exotic O3-minus sector, and the
+source budgets $L=28$ and $L=4$ are inherited from the preceding source
+calculations. This note does not independently establish those global
+geometric or admissibility assertions. Its algebraic claims hold for
+\eqref{period}--\eqref{charge} whether or not one inserts either capacity.
+
+An F-term zero means $D_AW=0$ for these four complex variables. We use the
+eight-by-eight real Jacobian $J_F$ of $(\Re D_AW,\Im D_AW)$, in interleaved
+real coordinates $(\Re z_0,\Im z_0,\ldots,\Re z_3,\Im z_3)$. This is the
+rank relevant to the no-scale potential; a holomorphic Hessian alone is
+insufficient when $W\ne0$.
+
+\section{An integral divisor family}
+\begin{theorem}[Construction and masses]\label{family}
+Let $k>0$ and $A_I,B_I$ be positive integers satisfying $A_IB_I=k$ for every
+$I$. Set $f^I=h_I=0$, $f_I=-2A_I$, $h^I=-2B_I$. Then
+\begin{equation}
+ U_i=\ii\frac{A_0}{A_i},\qquad
+ S=\ii\frac{A_1A_2A_3}{A_0k}
+ \label{divisorpoint}
+\end{equation}
+is an F-term zero with $Q=8k$ and $\det J_F=-4096k^4$. With the common
+K\"ahler-sector factor $e^{K_K}$ set to one, its canonical masses squared are
+\begin{equation}
+k\{28-12\sqrt5,\ 28+12\sqrt5,\
+ (12-4\sqrt5)^{[3]},\ (12+4\sqrt5)^{[3]}\}.
+\label{spectrum}
+\end{equation}
+The superscript $[3]$ denotes multiplicity three. All masses squared are
+strictly positive.
+\end{theorem}
+
+\begin{proof}
+The unit seed has $f_I=h^I=-2$, other entries zero, and
+\begin{equation}
+W_0=-2(1+U_1+U_2+U_3)
+ -2S(U_1U_2U_3-U_1U_2-U_1U_3-U_2U_3).
+\end{equation}
+At $z_A=\ii$, $W_0=-4-12\ii$ and every holomorphic first derivative equals
+$-6+2\ii$. Since $K_A=\ii/2$ there, all four F-terms vanish. Direct real
+differentiation gives the seed Jacobian in Appendix~\ref{seed}, with
+determinant $-4096$.
+
+For $c=A_0$ and the positive imaginary parts $y_A$ in
+\eqref{divisorpoint}, coefficient matching gives
+\begin{equation}
+W(z)=cW_0(z_0/y_0,z_1/y_1,z_2/y_2,z_3/y_3),\qquad
+\prod_Ay_A=A_0^2/k.
+\label{covariance}
+\end{equation}
+The logarithmic K\"ahler derivatives imply
+$D_AW=(c/y_A)(D_AW_0)(z/y)$. Thus the rescaled seed is a zero. The divisor
+conditions ensure that all flux entries were integers before performing
+this construction; no continuous flux is rounded. Equation~\eqref{charge}
+gives $Q=\frac12\sum_I4A_IB_I=8k$.
+
+Rows and columns of the real Jacobian scale separately, so
+\begin{equation}
+\det J_F=\frac{c^8}{(\prod_Ay_A)^4}\det J_{F,0}=-4096k^4.
+\end{equation}
+At an F-term zero the real potential Hessian and kinetic metric are
+\begin{align}
+H_{\rm real}&=2e^KJ_F^T\diag(4y_0^2,4y_0^2,\ldots,4y_3^2,4y_3^2)J_F,
+\label{hessian}\\
+G_{\rm real}&=\diag(1/(2y_0^2),1/(2y_0^2),\ldots,1/(2y_3^2),1/(2y_3^2)).
+\end{align}
+Here $\mathcal L_{\rm kin}=-\frac12G_{ab}\partial\phi^a\partial\phi^b$.
+Canonical normalization of \eqref{hessian} and \eqref{covariance} gives
+\begin{equation}
+H_{\rm can}=\frac{c^2}{\prod_Ay_A}H_0=kH_0
+\end{equation}
+in aligned frames. At the unit seed,
+$H_0=J_{F,0}^TJ_{F,0}$ and
+\begin{equation}
+\det(tI-H_0)=(t^2-56t+64)(t^2-24t+64)^3.
+\end{equation}
+Its roots give \eqref{spectrum}. Positivity follows, for example, from
+$28^2>144\cdot5$ and $12^2>16\cdot5$.
+\end{proof}
+
+The simple subfamily $A_I=m$, $B_I=n$, $k=mn$ gives
+$S=\ii m/n$, $U_i=\ii$, $Q=8mn$. A common integer multiple of $(m,n)$
+changes the charge while leaving the moduli point fixed; it is not a new
+moduli point. More generally \eqref{covariance} is a map between different
+integral models after the divisor condition is imposed. It is not a
+continuous family of fixed-flux isolated vacua or an assumed integral
+duality.
+
+\section{A weak-coupling branch and modular point types}
+Choosing $A_0=1$, $A_i=k$ in Theorem~\ref{family}, then inverting all three
+torus moduli, gives the explicit even flux
+\begin{equation}
+\begin{split}
+ f^I&=(2,2k,2k,2k),\quad f_I=h^I=(0,0,0,0),\\
+ h_I&=(-2k,-2,-2,-2),\qquad S=\ii k^2,\quad U_i=\ii k.
+\end{split}
+\label{weak}
+\end{equation}
+It can also be checked directly in
+\begin{equation}
+W=-2U_1U_2U_3+2k\sum_{i<j}U_iU_j+2S(k+U_1+U_2+U_3).
+\end{equation}
+At \eqref{weak},
+\begin{equation}
+W=4k^3(-3+\ii),\qquad Q=8k,\qquad g_s=k^{-2}.
+\end{equation}
+The determinant and spectrum remain those in Theorem~\ref{family}.
+Capacity imposes $k\le\lfloor L/8\rfloor$ on this branch. Thus $L=28$
+permits $k=1,2,3$, with respective couplings $1,1/4,1/9$ and residual
+quotient D3 charges $20,12,4$. At $k=3$ the flux is
+$(2,6,6,6;0^4;0^4;-6,-2,-2,-2)$, $N_{\rm cover}=48$, and $Q=24$.
+Comparing 48 directly to capacity 28 would use inconsistent normalizations.
+
+Along this branch $g_s=(8/Q)^2$. The weaker coupling at finite allowed
+charge is a useful construction, but a parametrically weak-coupling limit
+requires increasing capacity. Within the whole positive divisor family,
+$k^{-2}\le\Imn S\le k^2$, so modular reduction cannot improve on
+$g_s=1/k^2$ in that branch. Optimality over other even integral fluxes is
+not established.
+For $L\ge8$, the attainable branch minimum is precisely
+$g_s=\lfloor L/8\rfloor^{-2}$, realized by its largest allowed integer $k$.
+
+For clarity, separate new moduli points from their modular images. With
+$\gamma=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)\in
+SL(2,\Z)$,
+\begin{equation}
+S'=\frac{aS+b}{cS+d},\quad f'=af+bh,\quad h'=cf+dh,\quad
+W'=\frac{W}{cS+d}.
+\end{equation}
+These images preserve $Q$, even integrality, F-term zeros and masses, and
+are not counted again. Torus inversion is the actual integer polynomial
+map $W'(U_j')=U_j'W(-1/U_j')$; torus permutations relabel the $U_i$.
+
+For $k=1,2,3$ there are $1+16+16=33$ divisor assignments. Reducing each
+pure imaginary modulus by inversion and sorting the three torus factors
+gives the nine point types in Table~\ref{points}. A pure imaginary value
+$\ii y$, $y\ge1$, is in the usual modular fundamental domain and has a
+unique such imaginary representative. The listed tuples are therefore
+distinct under separate modular factors and torus permutations. This does
+not classify all flux multiplicities at a fixed point or extra string
+dualities mixing $S$ and $U$.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{c l c}
+\toprule
+$k$ & $(\Imn S;\Imn U_1,\Imn U_2,\Imn U_3)$ & $Q_{\min}$ at each point\\
+\midrule
+1 & $(1;1,1,1)$ & 8\\
+2 & $(2;1,1,1)$, $(1;1,1,2)$ & 16\\
+  & $(2;1,2,2)$, $(4;2,2,2)$ & 16\\
+3 & $(3;1,1,1)$, $(1;1,1,3)$ & 24\\
+  & $(3;1,3,3)$, $(9;3,3,3)$ & 24\\
+\bottomrule
+\end{tabular}
+\caption{Nine reduced moduli point types attained within capacity 28.
+The minima are over the full stated even lattice at each point, before
+imposing capacity. They are not total landscape counts.}
+\label{points}
+\end{table}
+
+\section{Exact pointwise minima}
+Let $C_e$ be the real coefficients of the 16 multiaffine monomials of $W$,
+with exponent vectors $e\in\{0,1\}^4$. The map from flux to $C$ is a signed
+permutation, so $C\in(2\Z)^{16}$. Define
+\begin{equation}
+\mathcal A(x,y)=\frac1y\begin{pmatrix}1&x\\x&x^2+y^2\end{pmatrix},\quad
+\mathcal J=\begin{pmatrix}0&-1\\1&0\end{pmatrix}.
+\end{equation}
+Direct tensor algebra gives the normalized positive identity
+\begin{align}
+E&=\tfrac14 C^T\bigotimes_A\mathcal A(\Re z_A,y_A)C,
+\quad Q=\tfrac14C^T\mathcal J^{\otimes4}C,\\
+E-Q&=e^K\sum_A4y_A^2|D_AW|^2.
+\label{energy}
+\end{align}
+One derivation uses $u=(1,z)^T$ and
+$uu^\dagger+\bar u u^T=2y\mathcal A$,
+$uu^\dagger-\bar u u^T=2\ii y\mathcal J$. The total and alternating sums
+of $|W|^2$ over the 16 patterns of conjugating individual variables produce
+the two quadratic forms in \eqref{energy}. Because $C$ is real,
+three-variable flips are conjugate to complementary one-variable flips;
+finally $2y_AD_AW=\ii W(z_A\mapsto\bar z_A)$ establishes the last equality.
+
+At a pure imaginary point, let $\bar e=\mathbf1-e$ and
+$w_e=\prod_Ay_A^{2e_A-1}$. The contribution of each complementary pair to
+$E-Q$ is
+\begin{equation}
+\frac14\left(\sqrt{w_e}C_e-epsilon_eC_{\bar e}/\sqrt{w_e}\right)^2,
+\qquad\epsilon_e=(-1)^{\sum_Ae_A}.
+\end{equation}
+For $w_e=u/v>0$ in lowest terms, an F-term zero must therefore have
+\begin{equation}
+(C_e,C_{\bar e})=2r(v,\epsilon_eu),\quad r\in\Z,
+\qquad Q_e=2uvr^2.
+\label{pair}
+\end{equation}
+This is a saturated pairwise integral parametrization, not a flux scan.
+
+\begin{lemma}[Necessary number of complementary pairs]
+At a pure imaginary F-term zero, full real rank requires at least four
+nonzero complementary monomial pairs in $W$.
+\end{lemma}
+\begin{proof}
+If there are $r\le3$ pairs, choose real scaling weights $\ell_A$ satisfying
+$(2e_j-\mathbf1)\cdot\ell=0$ for each supported pair. There are at least
+$4-r$ independent choices. Every supported monomial has weight
+$w=\frac12\sum_A\ell_A$, so under $z_A\mapsto e^{t\ell_A}z_A$,
+\begin{equation}
+W\mapsto e^{tw}W,\qquad D_AW\mapsto e^{t(w-\ell_A)}D_AW.
+\end{equation}
+The upper half-planes are preserved and the same fixed-flux zero has a
+continuous orbit. Its independent tangent vectors $\delta z_A=\ell_Az_A$
+lie in the real Jacobian kernel. Discrete modular identifications do not
+remove these infinitesimal directions.
+\end{proof}
+
+\begin{proposition}
+For every integer $k>1$, the four point types
+\begin{equation}
+(k;1,1,1),\quad(1;1,1,k),\quad(k;1,k,k),\quad(k^2;k,k,k)
+\end{equation}
+have exact pointwise minimum $Q_{\min}=8k$ in the stated even lattice.
+At $(1;1,1,1)$ the minimum is eight.
+\end{proposition}
+\begin{proof}
+At the unit point each primitive nonzero pair in \eqref{pair} costs two.
+At any of the four other types, $w_e$ is an odd integral power of $k$;
+hence $2uv\ge2k$. Four supported pairs therefore cost at least $8k$.
+For example at $(k^2;k,k,k)$ their primitive costs are $2k^5$ once,
+$2k^3$ three times and $2k$ four times. The divisor witnesses and their
+integral modular images attain the bound with full rank, proving equality.
+\end{proof}
+
+The positivity and integral-pair analysis apply to the entire even lattice
+at each specified point, not only to the positive divisor branch. They do
+not give a global lower bound over all moduli. In particular capacity four
+fails at these points, but a global no-vacuum theorem at capacity four is
+not inferred.
+
+\section{Scope and reproducibility}
+All masses in \eqref{spectrum} acquire the common positive factor
+$e^{K_K}$ when the unstabilized K\"ahler sector is restored. In the displayed
+normalization $m_{3/2}^2=10k$; the mass ratios are fixed, with no claimed
+tunable hierarchy. Since $W\ne0$, these are no-scale CS/axiodilaton critical
+points, not fully supersymmetric four-dimensional Minkowski vacua.
+For example $m_{\min}^2/m_{3/2}^2=(28-12\sqrt5)/10$ is independent of the
+common volume factor.
+
+The exact periods avoid a large-complex-structure truncation in this model.
+The $g_s=1/9$ construction improves the coupling relative to the earlier
+$S=2\ii$ anchor, but establishes neither corrected K\"ahler stabilization nor
+a localized warped ten-dimensional solution. Open-string fields, loop and
+alpha-prime corrections are not stabilized or bounded here. The reference
+to inherited geometric capacity 28 is conditional; no new geometric audit,
+global coupling optimum or universal tadpole statement is supplied.
+
+The packet command \texttt{python reproduce.py} runs without network or old
+project paths. It verifies the symbolic two-integer and weak-coupling
+families, all 33 divisor assignments, the nine reduced point types, their
+72 primitive pair costs, and a nontrivial modular image counted as the same
+orbit. It recomputes the signs, charge normalization, full real Jacobians
+and canonical spectra. Source hashes identify earlier completed results;
+the new portable output is distinguished from those inherited records.
+
+\appendix
+\section{Seed calculation}\label{seed}
+In the interleaved ordering defined above, the real seed Jacobian is
+\begin{equation}
+J_{F,0}=\begin{pmatrix}
+-1&-3& 1&-1& 1&-1& 1&-1\\
+-3& 1& 1& 1& 1& 1& 1& 1\\
+ 1&-1&-1&-3& 1& 1& 1& 1\\
+ 1& 1&-3& 1&-1& 1&-1& 1\\
+ 1&-1& 1& 1&-1&-3& 1& 1\\
+ 1& 1&-1& 1&-3& 1&-1& 1\\
+ 1&-1& 1& 1& 1& 1&-1&-3\\
+ 1& 1&-1& 1&-1& 1&-3& 1
+\end{pmatrix}.
+\end{equation}
+It follows from
+$\partial_{x_B}F_A=W_{AB}+\ii W_B/(2y_A)$ and
+$\partial_{y_B}F_A=\ii\partial_{x_B}F_A
+-\delta_{AB}\ii W/(2y_A^2)$. At $y_A=1$, \eqref{hessian} gives
+$H_0=J_{F,0}^TJ_{F,0}$. The script records both matrices and the factored
+characteristic polynomial.
+
+\section*{Chronology and attribution disclosure}
+Earlier work was Fable 5-led; July 2026 onward results were predominantly
+produced by GPT models, as reported by the operator. DeepSeek and multiple
+GPT models also contributed cross-review and manuscript preparation. This
+is reported chronology, not a per-result authorship allocation. This note
+and its closure calculation are GPT-produced. Human author and affiliation
+fields are blank, and human expert review has not occurred. Historical
+source dates, the present delivery date of 29 October 2026, and demonstrable
+public disclosure are distinct; a private commit does not establish public
+priority.
+\begin{quote}
+``I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.''
+\end{quote}
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+\end{document}

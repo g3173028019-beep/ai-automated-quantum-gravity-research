@@ -4,11 +4,13 @@
 
 > I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.
 >
-> My workflow was to ask AI systems to conduct literature research, autonomously select open problems, and attempt to solve them. The principal research work was carried out mainly by Fable 5. DeepSeek and several GPT models participated in cross-review, checking, and manuscript preparation and organization.
+> My workflow was to ask AI systems to conduct literature research, autonomously select open problems, and attempt to solve them.
 >
 > These manuscripts and their scientific claims have not yet undergone human expert review.
 
-This is the operator's description of the overall workflow. A complete, audited allocation of individual contributions by model and manuscript is not available. **Fable 5** follows the operator's designation; this archive does not infer an alternative model identity.
+The operator's corrected chronological account is that **the earlier work was led mainly by Fable 5**, while **results from July 2026 onward were predominantly produced by GPT models**. DeepSeek and multiple GPT models also participated in cross-review, checking, and manuscript preparation and organization. This describes production as well as review; it is not a complete audited allocation of individual contributions. **Fable 5** follows the operator's designation; this archive does not infer an alternative model identity.
+
+This corrected account replaces the earlier blanket archive-wide attribution. The first two PDFs are preserved as their original archival edition and still contain that earlier wording; this declaration supplies the current account. A later manuscript date does not reattribute an older proof. Human authorship, intellectual credit and ownership remain unresolved.
 
 ## Authorship
 
@@ -20,15 +22,15 @@ Git commit attribution records archive maintenance, not scientific authorship. R
 
 The source projects contain automated symbolic checks, numerical tests and AI-generated internal reviews. These activities are reported as automated or internal checks, not independent human peer review. Historical labels such as "reviewed" or "hostile review" must be read in that sense.
 
-This batch contains English working drafts and build/packaging checks. Those checks do not establish every theorem, physical interpretation or originality claim. Manuscript-specific assumptions and limits remain part of each result.
+The archive contains English research notes, their source, and scoped verification material. Build checks are distinct from analytical derivations, symbolic identities, numerical evidence and inherited inputs. Those checks do not establish every physical interpretation or global originality claim. Manuscript-specific assumptions and limits remain part of each result.
 
 ## Scientific scope
 
-The projection paper concerns finite, real, generic orthogonal projections. The half-wormhole paper concerns a zero-dimensional Gaussian-coupling model and credits the established half-wormhole expansion and general sector-variance formula. Neither paper establishes complete quantum gravity or ultraviolet completeness.
+The first two papers concern finite real projection recovery and a zero-dimensional Gaussian-coupling model. The 29 October delivery adds weighted recovery in a specified JT model, a heralded gate in a continuous reduced DBI model, and integer flux constructions in a fixed STU/lattice system. Their model, input, instrument and geometric assumptions are explicit. No paper establishes complete quantum gravity or ultraviolet completeness.
 
 ## Dates and priority
 
-Historical dates are dates recorded in retained source documents. The present batch date is 28 October 2026. Local dated records and hashes document provenance; they are not presented as proof of earlier public disclosure or settled publication priority.
+Historical dates are dates recorded in retained source documents. The first batch was packaged on 28 October 2026; the current delivery is dated 29 October 2026. Local dated records, hashes and private commits document provenance; they are not proof of public disclosure or settled publication priority.
 
 ## Rights and third-party material
 

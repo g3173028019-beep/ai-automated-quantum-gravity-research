@@ -21,4 +21,16 @@ The October edition leaves authorship blank, adds the workflow declaration, make
 
 ## Verification material
 
-The original scripts `e20_w3.wls` and `d11_theorem.wls` are copied as `verification/legacy_checks.wls` within each paper. Header wording identifies them as historical checks and avoids presenting credited prior formulas as new claims. They were not rerun for this batch. Current checks are described in [VERIFICATION.md](VERIFICATION.md).
+The original scripts `e20_w3.wls` and `d11_theorem.wls` are copied as `verification/legacy_checks.wls` within each of the first two papers. Header wording identifies them as historical checks and avoids presenting credited prior formulas as new claims. They were not rerun for this batch. Current checks are described in [VERIFICATION.md](VERIFICATION.md).
+
+## Delivery of 29 October 2026
+
+Three six-page English manuscripts close selected completed results. Each has blank human authorship, a bibliography, portable reproduction material, saved outputs, a scoped verification record and source hashes in `PROVENANCE.json`.
+
+- **JT recovery:** the round-one mean-energy theorem is made self-contained, including the Gaussian comparison, charge bounds, coherent-tail estimate and form-domain argument. The leading bound is proportional to `sqrt(nu) C^(-1/4)` for the stated common input class. The separately retained geometry-assisted research is outside this packet.
+- **DBI gate:** the round-two heralded protocol reuses the retained September continuum residual certificate at its frozen gate time. A short sharp contraction estimate improves the conditional squared-fidelity guarantee to `1-eta^2`: at least 0.96400610918152 nominally and 0.9587714318247369 in the stated error box. The protocol and success bounds are unchanged. Saved cell bounds are replayed, not freshly integrated.
+- **Integer STU flux:** the completed divisor construction, positive CS/axiodilaton spectra and pointwise charge minima are presented with exact portable calculations. The weak-coupling branch gives the immediate within-family capacity bound `g_s,min=floor(L/8)^(-2)` for `L>=8`; no global landscape optimum is asserted.
+
+The first two paper directories are preserved byte for byte against the pre-delivery hash manifest. The completed audit, research rounds and twistor milestone remain in their original locations and were not rewritten. The corrected chronological attribution is recorded in [DECLARATIONS.md](DECLARATIONS.md) and the new manuscripts: earlier work was Fable 5-led, while July 2026 onward results were predominantly produced by GPT models according to the operator. The old PDFs retain their original declaration as an archival edition.
+
+These are local source and delivery dates. A commit to this private repository is not demonstrable public disclosure or a claim of publication priority.

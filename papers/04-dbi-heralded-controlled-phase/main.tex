@@ -1,0 +1,294 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\hypersetup{pdfauthor={}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ket}[1]{\lvert#1\rangle}
+\newcommand{\bra}[1]{\langle#1\rvert}
+\newcommand{\CZ}{\mathrm{CZ}}
+\author{}
+\date{29 October 2026}
+\title{A heralded controlled-phase gate from radial return\\in an independent-field DBI model}
+\hypersetup{pdftitle={A heralded controlled-phase gate from radial return in an independent-field DBI model}}
+\begin{document}
+\maketitle
+\begin{abstract}
+A common radial source, finite autonomous evolution and a rank-one radial herald define a controlled-phase gate in a specified independent-field Dirac--Born--Infeld (DBI) half-line model.
+At the frozen dimensionless time $107.61733846478977$, a diagonal successful Kraus operator lies within $0.18972055982017294$ of a unitary locally equivalent to controlled-$Z$.
+Retained full-half-line residual certificates give success probability at least $0.6565527711781338$ for every logical input and conditional squared fidelity at least $0.96400610918152$, including arbitrary reference systems.
+A stated source, readout, timing and local-phase error box retains success at least $0.6351321846638459$ and conditional squared fidelity at least $0.9587714318247369$.
+The calculation uses a complete success/failure instrument and an elementary sharp norm-to-conditional-fidelity inequality.
+The protocol assumes exact code preservation and access to the specified radial preparation, herald and local phase gates; their apparatus costs are not certified.
+\end{abstract}
+
+\section{The fixed model and the gate construction}
+We adopt the dimensionless independent-field DBI radial model and invariant four-state logical code of the retained continuum calculation~\cite{continuumproof,trialdata}.
+Its matter prescription is a sum of independent field Lagrangians, $\sum_jP(X_j)$; it is not the cross-coupled prescription $P(\sum_jX_j)$.
+The model describes specified global zero-mode sectors, not spatially separated laboratory systems.
+The present result is a new return-herald protocol within this fixed quantization, rather than a claim that this quantization is uniquely implied by a gravitational action.
+
+Let $\mathcal H_r=L^2((0,\infty),dy)$ and $s=y^2$.
+On the self-adjoint half-line realization inherited from the reference oscillator, define
+\begin{align}
+ A_{20}&=-\partial_y^2+y^2+20y^{-2},\label{eq:osc}\\
+ A_b&=A_{20}-F_b(y^2),\qquad
+ F_b(s)=\sum_{q\in\mathcal Q_b}\bigl(\sqrt{s^2+2q}-s\bigr),\label{eq:model}\\
+ q_{\rm bg}&=\frac{121}{729},\quad q_{\rm lo}=\frac{121}{1458},\quad q_{\rm hi}=\frac{4741}{1458},\nonumber\\
+ \mathcal Q_{00}&=(q_{\rm bg},q_{\rm lo},q_{\rm lo}),\quad
+ \mathcal Q_{01}=\mathcal Q_{10}=(q_{\rm bg},q_{\rm lo},q_{\rm hi}),\nonumber\\
+ \mathcal Q_{11}&=(q_{\rm bg},q_{\rm hi},q_{\rm hi}).\nonumber
+\end{align}
+All fields are at the fixed finite nonlinear parameter $\theta=1$.
+For $s\geq0$, $0\leq F_b(s)\leq\sum_{q\in\mathcal Q_b}\sqrt{2q}$, so $F_b$ is bounded and $D(A_b)=D(A_{20})$.
+Our dust-time convention is explicitly $U_b(\tau)=e^{+iA_b\tau}$.
+Changing this sign would change the frozen phases; it is not a free convention within the certificate.
+
+The normalized common radial source is
+\begin{equation}
+ \psi_5(y)=\sqrt{\frac{2}{\Gamma(11/2)}}\,y^5e^{-y^2/2},
+ \qquad A_{20}\psi_5=11\psi_5.\label{eq:source}
+\end{equation}
+Prepare it independently of an arbitrary two-qubit logical state, possibly entangled with an arbitrary reference.
+Evolve with $\sum_b\ket b\bra b\otimes U_b(\tau)$, then measure the radial outcomes
+\begin{equation}
+ P=\ket{\psi_5}\bra{\psi_5},\qquad Q=I-P,
+\end{equation}
+keeping a flag for both outcomes.
+The successful outcome resets the radial state exactly and induces the contraction
+\begin{equation}
+ K=\operatorname{diag}(k_{00},k_{01},k_{01},k_{11}),\qquad
+ k_b=\bra{\psi_5}U_b(\tau)\ket{\psi_5}.\label{eq:K}
+\end{equation}
+The time and target phases are frozen decimal numbers,
+\begin{align}
+ \tau_*&=107.61733846478977,\label{eq:time}\\
+ \phi_0&=0.9177158589349711,\qquad \phi_1=0.69393706341036732,\nonumber
+\end{align}
+and the target is the exactly unitary matrix
+\begin{equation}
+ D=\operatorname{diag}\bigl(e^{i\phi_0},e^{i\phi_1},e^{i\phi_1},
+                         -e^{i(2\phi_1-\phi_0)}\bigr).\label{eq:D}
+\end{equation}
+Let $\delta=\phi_1-\phi_0=-0.22377879552460378$.
+Apply $C=\operatorname{diag}(1,e^{-i\delta})$ separately to each qubit on success.
+Then
+\begin{equation}
+ (C\otimes C)D=e^{i\phi_0}\CZ.\label{eq:phase}
+\end{equation}
+In the convention $R_z(\alpha)=\operatorname{diag}(e^{-i\alpha/2},e^{i\alpha/2})$, the corrective angle is $-\delta$, up to global phase.
+Equation~\eqref{eq:phase} is algebraic: locating a transcendental root exactly is unnecessary.
+The time was selected using finite-trial diagnostic return phases, then certified at that exact decimal time.
+No global optimality of this time is claimed.
+
+\section{Full-half-line residual control at the new time}
+The supplied trial data~\cite{trialdata} are exact archived binary64 coefficients, not exact continuous eigenpairs.
+The normalized basis is $\varphi_n=\psi_5p_n(s)$, with
+\begin{equation}
+ d\mu(s)=\frac{s^{9/2}e^{-s}}{\Gamma(11/2)}\,ds,\qquad
+ A_{20}\varphi_n=(4n+11)\varphi_n.
+\end{equation}
+The polynomials are orthonormal for $d\mu$ and obey $p_0=1$ and
+\begin{equation}
+ \sqrt{(n+1)(n+11/2)}p_{n+1}
+ =(s-2n-11/2)p_n-\sqrt{n(n+9/2)}p_{n-1},\label{eq:recurrence}
+\end{equation}
+where the last term is absent at $n=0$.
+For each branch take eight trial functions in the first sixteen basis vectors:
+\begin{equation}
+ f_{bj}=\sum_{n=0}^{15}v_{bnj}\varphi_n,\qquad
+ \widehat\psi_b(t)=\sum_{j=0}^{7}c_{bj}e^{i\lambda_{bj}t}f_{bj}.\label{eq:trial}
+\end{equation}
+All $v,c,\lambda$ are in the supplied JSON; exact orthogonality of the trial eigenvectors is unnecessary.
+For $p_{bj}=\sum_nv_{bnj}p_n$ and $h_{bj}=\sum_n(4n+11-\lambda_{bj})v_{bnj}p_n$, the true residual norm is
+\begin{equation}
+ r_{bj}^2=\norm{(A_b-\lambda_{bj})f_{bj}}^2
+ =\int_0^\infty|h_{bj}(s)-F_b(s)p_{bj}(s)|^2d\mu(s).\label{eq:residual}
+\end{equation}
+The retained certificates~\cite{residualdata} bound this entire integral; the half-line operator is not replaced by a spectral cutoff.
+
+Their enclosure algorithm uses interval Taylor bounds on cells in $[0,128]$.
+Writing $r(s)=h(s)-F(s)p(s)$, a cell of midpoint $m$ and half-width $h_c$ satisfies
+\begin{equation}
+ \sup_{\rm cell}|r|\leq |r(m)|+h_c|r'(m)|+
+                \tfrac12h_c^2\sup_{\rm cell}|r''|.\label{eq:cell}
+\end{equation}
+The square times the cell width and the maximum gamma density bounds its integral.
+The density maximum is checked at the endpoints and its sole stationary point $s=9/2$; derivatives use the actual square roots in~\eqref{eq:model}.
+For the tail choose a nonnegative-coefficient polynomial $P_+$ bounding $|h|+F_{\max}|p|$, with degree $d\leq15$.
+For $s\geq R=128$, $P_+(s)\leq P_+(R)(s/R)^d$.
+Together with $\log(s/R)\leq(s-R)/R$, this yields
+\begin{equation}
+ \int_R^\infty |r|^2d\mu
+ \leq\frac{R^{9/2}e^{-R}P_+(R)^2}
+ {\Gamma(11/2)[1-(9/2+2d)/R]}.\label{eq:tail}
+\end{equation}
+The denominator is positive.
+Saved cell and tail bounds were rounded upward to binary64; replay treats them as exact rational upper bounds.
+The original interval producer is included unchanged as an algorithm reference; default replay recombines its saved results without regenerating cells.
+
+Let $\epsilon_{0b}=\norm{\psi_5-\sum_jc_{bj}f_{bj}}$, evaluated from all sixteen exact basis coefficients rather than set to zero by truncation.
+The spectral theorem and Duhamel's formula give, for every real $t$,
+\begin{equation}
+ \norm{U_b(t)\psi_5-\widehat\psi_b(t)}
+ \leq\epsilon_{0b}+|t|\sum_j|c_{bj}|r_{bj}=: \epsilon_b(t).\label{eq:duhamel}
+\end{equation}
+Thus the residual norms remain usable at the new time~\eqref{eq:time}; an old finite-time error or parameter box cannot simply be copied to that time.
+Projecting onto normalized $\psi_5$ gives
+\begin{equation}
+ |k_b-\widehat k_b|\leq\epsilon_b(\tau_*),\qquad
+ \widehat k_b=\sum_jv_{b0j}c_{bj}e^{i\lambda_{bj}\tau_*}.\label{eq:amplitude}
+\end{equation}
+Table~\ref{tab:branches} displays the branch calculations; replay uses full interval values rather than their abbreviated printed forms.
+Comparison with~\eqref{eq:D} yields
+\begin{equation}
+ \norm{K-D}=\max_b|k_b-D_{bb}|\leq
+ \eta_{\rm nom}=0.18972055982017294.\label{eq:eta}
+\end{equation}
+\begin{table}[htbp]
+\centering
+\caption{Residual slopes and propagated errors at $\tau_*$, rounded for display.}
+\label{tab:branches}
+\begin{tabular}{lrrr}
+\toprule
+Branch & $\sum_j|c_j|r_j$ & $\epsilon_b(\tau_*)$ & $|\widehat k_b-D_{bb}|+\epsilon_b$\\
+\midrule
+$00$ & $0.001529585$ & $0.164697384$ & $0.164819225$\\
+$01/10$ & $0.001495096$ & $0.160974031$ & $0.167620070$\\
+$11$ & $0.001522302$ & $0.163867864$ & $0.189720560$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Sharp conditional fidelity and the complete instrument}
+We use squared fidelity: for a pure target $\ket v$, $F_{\rm sq}(\rho,\ket v)=\bra v\rho\ket v$; for mixed targets it is squared Uhlmann fidelity.
+The following elementary geometric estimate is proved here, not presented as new general mathematics.
+\begin{lemma}\label{lem:sharp}
+Let $D$ be unitary and $\norm{K-D}\leq\eta<1$.
+For every normalized system--reference vector $\Psi$, successful application of $K$ has probability at least $(1-\eta)^2$ and conditional squared fidelity with $(D\otimes I)\Psi$ at least $1-\eta^2$.
+The fidelity constant is sharp, including for contractions $K$.
+\end{lemma}
+\begin{proof}
+Put $v=(D\otimes I)\Psi$, $x=(K\otimes I)\Psi$ and $t=\norm x$.
+Then $\norm{x-v}\leq\eta$ and $t\geq1-\eta>0$.
+Expanding the squared distance gives
+\begin{equation}
+ \Re\langle v,x\rangle\geq\frac{1+t^2-\eta^2}{2}
+ \geq t\sqrt{1-\eta^2},\label{eq:tangent}
+\end{equation}
+where the second inequality is $(t-\sqrt{1-\eta^2})^2\geq0$.
+Dividing by $t$ and squaring proves the claim.
+For sharpness let $a=1-\eta^2$ and take
+\begin{equation}
+ K=\begin{pmatrix}a&-\eta\sqrt a\\\eta\sqrt a&a\end{pmatrix},\qquad D=I.
+\end{equation}
+Then $(K-I)^\dagger(K-I)=\eta^2I$, $K^\dagger K=aI$, and the conditional squared fidelity for either coordinate vector is $a$.
+\end{proof}
+For a mixed logical/reference input, apply the lemma to a purification and discard the purifying system.
+Monotonicity of squared fidelity gives the same bound for the normalized conditional mixed state.
+The common radial source must initially be independent of that input; arbitrary radial/logical correlations are outside this preparation class.
+
+To specify all outcomes, let $V\ket b=\ket b\otimes U_b(\tau_*)\ket{\psi_5}$.
+The successful and failed operators $(I\otimes P)V$ and $(I\otimes Q)V$ have adjoint products summing to $V^\dagger V=I$.
+Tracing radial outputs therefore defines a trace-preserving flagged instrument with completely positive branches.
+The successful branch, including local correction, is
+\begin{equation}
+ \mathcal S(\rho)=(C\otimes C)K\rho K^\dagger(C\otimes C)^\dagger.
+\end{equation}
+Its probability is the trace of this linear map; normalization is the explicitly conditional step.
+No failures are omitted from the physical instrument.
+Since $K$ is a contraction, its successful subnormalized map satisfies
+\begin{equation}
+ \norm{\mathcal S-\mathcal U_{\CZ}}_\diamond\leq2\eta.\label{eq:diamond}
+\end{equation}
+This bounds the successful branch, not a deterministic CZ on every run.
+For input $\ket{++}$, $\CZ\ket{++}$ is maximally entangled.
+The conditional logical output obeys
+\begin{equation}
+ \mathcal N(\rho_+)\geq F_{\rm sq}(\rho_+,\CZ\ket{++})-\tfrac12
+ \geq\tfrac12-\eta^2,\label{eq:neg}
+\end{equation}
+Indeed, with $H=(\ket\Phi\bra\Phi)^{T_B}$ for the maximally entangled target, $\norm H_\infty=1/2$ gives
+$F_{\rm sq}=\operatorname{Tr}(H\rho_+^{T_B})\leq\norm{\rho_+^{T_B}}_1/2=1/2+\mathcal N(\rho_+)$.
+Here $\mathcal N(\rho)=(\norm{\rho^{T_B}}_1-1)/2$; the argument also covers mixed conditional outputs.
+
+\section{A bounded instrument error box}
+Let the actual normalized radial source and normalized rank-one readout mode each differ from $\psi_5$ by Hilbert norm at most $10^{-3}$.
+Allow absolute timing error $|\Delta\tau|\leq10^{-3}$ and angle error at most $10^{-4}$ on each local phase gate.
+The Hamiltonian parameters and exact invariant code are unchanged.
+These are explicit control assumptions, not an inferred apparatus specification.
+For the nominal source, $F_b(s)\leq Q_{\max}/s$ and
+\begin{equation}
+ Q_{\max}=q_{\rm bg}+2q_{\rm hi}=\frac{4862}{729},\qquad
+ \langle y^{-4}\rangle_{\psi_5}=\frac4{63}.
+\end{equation}
+Using $A_b\psi_5=(11-F_b)\psi_5$ and $F_b\geq0$ gives
+\begin{equation}
+ \norm{A_b\psi_5}\leq M_1=
+ \sqrt{121+\left(\frac{4862}{729}\right)^2\frac4{63}}
+ <11.127631935535533.\label{eq:M1}
+\end{equation}
+Unitarity and the spectral theorem imply $\norm{[U_b(\Delta\tau)-I]\psi_5}\leq M_1|\Delta\tau|$.
+A telescoping decomposition compares timing on the nominal source and handles source and readout changes separately by their norms.
+Thus no graph-norm bound on an arbitrary norm-close perturbed source is needed for this bounded gate estimate.
+Two local phase errors add at most twice their individual angle bound in operator norm, giving
+\begin{equation}
+ \Delta\eta\leq10^{-3}+10^{-3}+10^{-3}M_1+2\times10^{-4}
+ <0.013327631935535532.\label{eq:extra}
+\end{equation}
+Adding this to the certified branch bound before its final display rounding yields
+\begin{equation}
+ \eta_{\rm rob}=0.20304819175570846<1.\label{eq:rob}
+\end{equation}
+Replay checks this comparison directly and tests positivity before applying success and fidelity formulas.
+Table~\ref{tab:gate} gives the conservative lower bounds.
+Lemma~\ref{lem:sharp} removes an unnecessary denominator $(1-\eta)^2$ from a cruder infidelity estimate; success is unchanged.
+These norm-error assumptions do not transfer unbounded-density or density-RMS guarantees to arbitrary perturbed radial states.
+\begin{table}[htbp]
+\centering
+\caption{Certified successful-branch guarantees; failures retain their own flag.}
+\label{tab:gate}
+\begin{tabular}{lrr}
+\toprule
+ & Nominal & Bounded error box\\
+\midrule
+Success & $\geq0.6565527711781338$ & $\geq0.6351321846638459$\\
+Conditional $F_{\rm sq}$, any reference & $\geq0.96400610918152$ & $\geq0.9587714318247369$\\
+Conditional $\mathcal N$, input $++$ & $\geq0.4640061091815201$ & $\geq0.45877143182473695$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Reproduction, scope and provenance}
+The packet supplies the exact archived trial and three complete residual partitions with hashes.
+Running \texttt{python replay.py} requires only local Python packages and packet files, with no network or old project paths.
+It verifies the tangent identity and sharp contraction algebra, input hashes, exact rational sums of saved residual cells and analytic tails, and the initial mismatch from all sixteen basis coefficients.
+It then recomputes the frozen-time amplitudes, operator errors, robust box and sharper guarantees with 110-digit outward interval arithmetic.
+The unchanged interval producer is included only as a minimal algorithm reference.
+The underlying cellwise integrand bounds remain inherited certificates, not newly regenerated evidence.
+This boundary between retained continuum control and freshly replayed consequences is part of the claim.
+
+The protocol is a heralded entangling operation in the specified invariant model.
+It does not establish a deterministic gate, universal loading/readout interface, spatial locality, a nonhomogeneous truncation theorem, global time optimality or a quantum-gravity completion.
+Radial preparation/readout and local phases remain idealized controls with unquantified implementation costs.
+The general lemma is an elementary geometric estimate; the scoped protocol and its continuum-supported frozen parameters are the construction reported here.
+
+The retained source certificates are dated 19 September 2026; the present delivery date is 29 October 2026.
+Earlier work was Fable 5-led; July 2026 onward results were predominantly produced by GPT models, as reported by the operator.
+DeepSeek and multiple GPT models also contributed cross-review and manuscript preparation.
+This is reported chronology, not a per-result authorship allocation.
+Human names and affiliations are blank, and human expert review has not occurred.
+Historical source dates, the present delivery date and demonstrable public disclosure are distinct; a private commit does not establish public priority.
+The operator's statement is preserved verbatim:
+\begin{quote}
+I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.
+\end{quote}
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+\end{document}

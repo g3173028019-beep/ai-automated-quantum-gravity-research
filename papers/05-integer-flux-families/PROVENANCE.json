@@ -1,0 +1,59 @@
+{
+  "packet": "05-integer-flux-families",
+  "delivery_date": "2026-10-29",
+  "language": "English",
+  "scope": "Compact mathematical-physics note and portable exact STU calculation; inherited orientifold geometry not re-audited.",
+  "original_sources": [
+    {
+      "identifier": "portfolio-round-02/lines/flux/scripts/construct_families.py",
+      "sha256": "c78930f094298cc5588e9f2978fc7fba1fcca92cc21a92dd6df8d89a82d6c1c5",
+      "role": "inherited completed calculation/derivation; original left unchanged"
+    },
+    {
+      "identifier": "portfolio-round-02/lines/flux/results/construction_certificate.json",
+      "sha256": "4289e7dc53f6598f0c8528a8d3597bf08237972ed372dab4b6fdef288884c92f",
+      "role": "inherited completed calculation/derivation; original left unchanged"
+    },
+    {
+      "identifier": "portfolio-round-02/lines/flux/results/divisor_assignments.json",
+      "sha256": "fc77567af479b95d8acbaa84d9341af375997a5d002c77794ee5047b66bb1a34",
+      "role": "inherited completed calculation/derivation; original left unchanged"
+    },
+    {
+      "identifier": "portfolio-round-02/lines/flux/RESULT.md",
+      "sha256": "13f31106f0c595ed0b1c7b51e692025809515a1f7424615237922d4efe7e5965",
+      "role": "inherited completed calculation/derivation; original left unchanged"
+    },
+    {
+      "identifier": "portfolio-round-01/lines/flux/RESULT.md",
+      "sha256": "2bb1ba9648641d7d3c74133d3d891671f62ac41d685102a797ab61cab969f9e7",
+      "role": "inherited completed calculation/derivation; original left unchanged"
+    },
+    {
+      "identifier": "QG-New/research/landscape-swampland-flux-capacity/output/period_certificate.json",
+      "sha256": "e24f10c4e44648dce037302736c183e30bd227550bb41852c83e4cbc523128ef",
+      "role": "inherited exact integral period convention; not bundled or re-audited"
+    }
+  ],
+  "reported_chronology": "Earlier work was Fable 5-led; July 2026 onward results were predominantly produced by GPT models, as reported by the operator. DeepSeek and multiple GPT models also contributed cross-review and manuscript preparation. This is reported chronology, not a per-result authorship allocation.",
+  "uncertainty_quote": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "human_author_fields": "blank",
+  "human_expert_review": false,
+  "public_priority_claim": false,
+  "reproduction": "reproduce.py uses only this packet and installed SymPy; no network or legacy project access.",
+  "adaptation": "Copied completed round02 construction script, changed root/output/provenance handling for portability, omitted optional unit-neighbourhood extension, added exact unit-Jacobian/characteristic-polynomial closure assertions.",
+  "primary_references": [
+    {
+      "arxiv": "hep-th/0105097v2",
+      "role": "no-scale flux compactification context"
+    },
+    {
+      "arxiv": "hep-th/0503124v2",
+      "role": "resolved toroidal geometric baseline"
+    },
+    {
+      "arxiv": "2010.10519v3",
+      "role": "tadpole/stabilization context"
+    }
+  ]
+}

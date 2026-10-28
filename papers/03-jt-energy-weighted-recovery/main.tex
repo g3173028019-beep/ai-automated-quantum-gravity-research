@@ -1,0 +1,384 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\hypersetup{pdftitle={Energy-weighted channel recovery in a fixed-topology JT model},pdfauthor={}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\author{}
+\date{29 October 2026}
+\title{Energy-weighted channel recovery\\in a fixed-topology JT model}
+\begin{document}
+\maketitle
+\begin{abstract}
+We prove an energy-constrained classical-gravity recovery estimate for a
+specified one-particle scalar sector of a fixed-topology Jackiw--Teitelboim
+model. For the same initial gravitational Gaussian and every scalar input
+with mean mode excitation at most $\nu>0$, including coherent infinite tails
+and arbitrary reference systems, the reduced channel approaches its scalar
+clock unitary at a sufficient rate $C^{-1/4}$. An explicit upper coefficient
+is $4.531256535935\sqrt\nu$. The proof keeps the energy budget inside a
+Gaussian Duhamel residual, including the direct charge-square term, before
+truncating the tail. A bounded second excitation moment gives a separate
+$C^{-1/2}$ estimate. The Hamiltonian, Gaussian moments, weighted charge
+inequalities, and domain argument are specified here; portable code checks
+the algebra and evaluates the bounds. No optimality, ADM-energy uniformity,
+or global novelty claim is made.
+\end{abstract}
+
+\section{Specified model and result}
+Set the AdS radius and $\hbar$ to one. We use the fixed-topology canonical
+JT reduction with a free massless scalar and reflecting Dirichlet boundary
+conditions. The prior canonical framework is the physical Hilbert space
+and boundary generators of Penington and Witten~\citep{PeningtonWitten},
+in particular their Eqs.~(41)--(45). The scalar representation follows the
+positive-frequency Dirichlet branch~\citep{Higuchi2022}. On its one-particle
+sector, with orthonormal modes $|n\rangle$, $n\ge0$, the charges are
+\begin{align}
+ K_0|n\rangle&=(n+1)|n\rangle,&
+ K_+|n\rangle&=\sqrt{(n+1)(n+2)}|n+1\rangle,\notag\\
+ K_-&=K_+^\dagger,& K_2&=(K_+-K_-)/(2i). \label{eq:charges}
+\end{align}
+The modes are $\sin[(n+1)x]e^{-i(n+1)T}/\sqrt{\pi(n+1)}$ on global
+AdS$_2$, $0<x<\pi$, with metric $(-dT^2+dx^2)/\sin^2x$. The charges
+preserve particle number. Restricting to this sector does not truncate
+its infinite mode ladder.
+
+Write $C=\phi_b>0$, $\chi=\log(2C)+q$, and $p=-i\partial_q$.
+Our physical simultaneous-boundary time generator is
+\begin{equation}
+ H_C={p^2\over8C}+2Ce^{2q}+e^qK_0+{K_2^2\over8C}
+ \quad\text{on }L^2(\mathbb R)\otimes\ell^2(\mathbb N_0).
+ \label{eq:H}
+\end{equation}
+The cited boundary sum is
+$2C(H_L+H_R)=p_\chi^2/4+K_2^2/4+e^\chi K_0+e^{2\chi}$,
+with $J_1=-K_0$, $J_3=-K_2$; hence~\eqref{eq:H} is $H_L+H_R$
+after this shift. It is not a modified decoupled Hamiltonian.
+We use the positive self-adjoint realization specified in Section~\ref{sec:domains}.
+
+The normalized initial gravity wavefunction and reference scalar clock are
+\begin{equation}
+ G_C(q,0)=\left({4C\over\pi}\right)^{1/4}e^{-2Cq^2},\qquad
+ U_{\rm cl}(t)=e^{-i\theta(t)K_0},\quad\theta(t)=\arctan(\sinh t).
+ \label{eq:initial}
+\end{equation}
+Let $\Phi_C(t)$ adjoin this gravity state, evolve with $H_C$, and trace
+gravity, and let $\Phi_{\rm cl}(t)=\operatorname{Ad}_{U_{\rm cl}(t)}$.
+Define the unhalved energy-constrained distance
+\begin{equation}
+ d_\nu(C,T)=\sup_{\substack{0\le t\le T,\ R,\ \rho_{mR}\ge0\\
+ \tr\rho_{mR}=1,\ \tr(n\rho_m)\le\nu}}
+ \norm{[(\Phi_C(t)-\Phi_{\rm cl}(t))\otimes\operatorname{Id}_R]
+ (\rho_{mR})}_1,\quad n=K_0-1. \label{eq:distance}
+\end{equation}
+Here $R$ ranges over reference systems. No diagonality, finite second
+moment, or finite ADM mean is assumed.
+
+Put
+\begin{align}
+ M(v)&=e^{8v}-2e^{2v}(1+6v+8v^2)+1+8v+12v^2,\notag\\
+ F(v)&=e^{2v}-2e^{v/2}+1,\qquad g_C=2C\sqrt{M(1/(8C))}.\label{eq:MF}
+\end{align}
+For integer $n\ge0$ define the nonnegative coefficient polynomials
+\begin{equation}
+ u(n)={(n+1)(n+2)^2(n+3)\over16},\quad
+ d(n)={(n+1)^4\over4},\quad
+ \ell(n)={n^2(n^2-1)\over16},\label{eq:polynomials}
+\end{equation}
+and, for $N\ge1$,
+\begin{equation}
+ B_N(\nu)=\sqrt{{3\over4}+{u(N)-3/4\over N}\nu}
+ +\sqrt{{1\over4}+{d(N)-1/4\over N}\nu}
+ +\sqrt{{\ell(N)\over N}\nu}.\label{eq:B}
+\end{equation}
+
+\begin{theorem}\label{thm:main}
+For every integer $N\ge1$, $C>0$, $\nu\ge0$, and $0\le T\le1$,
+\begin{align}
+ d_\nu(C,T)\le\min\Bigg\{2,\;&
+ 2T\left[g_C+\sqrt{1+(N+2)\nu}\sqrt{F(1/(8C))}
+             +{B_N(\nu)\over8C}\right]\notag\\
+ &+4\sqrt{{\nu\over N+1}}\Bigg\}.\label{eq:finite}
+\end{align}
+For each fixed $\nu>0$, choosing
+$N=\lfloor(4\sqrt2/3)\sqrt C\rfloor$ gives
+\begin{equation}
+ d_\nu(C,1)\le {14\,2^{3/4}\sqrt3\over9}\sqrt\nu\,C^{-1/4}
+                    +O_\nu(C^{-1/2}).\label{eq:rate}
+\end{equation}
+For $\nu=0$, the input is the ground mode and
+$d_0(C,T)\le2T[g_C+\sqrt{F(1/(8C))}+1/(8C)]=O(C^{-1/2})$.
+\end{theorem}
+
+\section{Normalized Gaussian reference and its residual}
+The reference gravitational path and stability solution are
+\begin{equation}
+ q_c=-\log\cosh t,\quad p_c=-4C\tanh t,\quad
+ z(t)=1-t\tanh t+i\tanh t. \label{eq:path}
+\end{equation}
+They obey $\dot q_c=p_c/(4C)$, $\dot p_c=-4Ce^{2q_c}$,
+$z''+2\sech^2(t)z=0$, $z(0)=1$, and $z'(0)=i$.
+With $\xi=q-q_c(t)$ and $S_C(t)=2C[t-2\tanh t]$, the Gaussian
+\begin{equation}
+ G_C(q,t)=\left({4C\over\pi}\right)^{1/4}z(t)^{-1/2}
+ \exp\left(i\left[S_C+p_c\xi+2C{z'\over z}\xi^2\right]\right)
+ \label{eq:gaussian}
+\end{equation}
+uses the square root continuous from $z(0)=1$. The Wronskian gives
+$\operatorname{Im}(z'/z)=|z|^{-2}$; thus it is normalized and its position
+variance is $v_C(t)=|z(t)|^2/(8C)$. Substitution shows that it solves
+\begin{equation}
+ H_g^{(2)}(t)={p^2\over8C}+2Ce^{2q_c(t)}(1+2\xi+2\xi^2).
+ \label{eq:Hquad}
+\end{equation}
+The phase in~\eqref{eq:gaussian} includes the constant term of this
+quadratic Taylor Hamiltonian. Writing $y=\tanh t$ gives
+$|z|^2-1=y[(1+t^2)y-2t]\le0$ on $[0,1]$, since $y\le t$ and
+$1+t^2\le2$.
+
+For a finite-sequence scalar/reference vector $f$, set
+$f(t)=(U_{\rm cl}(t)\otimes I)f$. The product
+$\Psi_{\rm app}=G_C(t)\otimes f(t)$ has exact residual
+\begin{align}
+ (H_C-i\partial_t)\Psi_{\rm app}={}&
+ 2Ce^{2q_c}(e^{2\xi}-1-2\xi-2\xi^2)G_C\otimes f(t)\notag\\
+ &+e^{q_c}(e^\xi-1)G_C\otimes K_0f(t)
+ +G_C\otimes {K_2^2f(t)\over8C}.\label{eq:residual}
+\end{align}
+All three terms are retained. In particular the direct charge-square term
+is not replaced by a scalar expectation value.
+
+For a centered normal variable $X$ of variance $v$,
+$\mathbb E e^{aX}=e^{a^2v/2}$. Differentiating this identity gives
+\begin{align}
+ \mathbb E[e^{2X}(1+2X+2X^2)]&=e^{2v}(1+6v+8v^2),\notag\\
+ \mathbb E(1+2X+2X^2)^2&=1+8v+12v^2.
+\end{align}
+Consequently the two squared residual norms are exactly
+\begin{equation}
+ \mathbb E(e^{2X}-1-2X-2X^2)^2=M(v),\qquad
+ \mathbb E(e^X-1)^2=F(v).\label{eq:momentderivation}
+\end{equation}
+Both functions increase for $v\ge0$. All nonconstant coefficients of
+$F$ are positive; those of $M$ vanish below degree three and at degree
+$k\ge3$ equal $2^k[4^k-2(2k^2+k+1)]/k!>0$. Their leading terms are
+$M(v)=(80/3)v^3+O(v^4)$ and $F(v)=v+O(v^2)$.
+Since $e^{q_c},e^{2q_c}\le1$, Duhamel's identity bounds the vector error,
+uniformly for $t\le T\le1$, by
+\begin{equation}
+ T\left[g_C\norm f+\sqrt{F(1/(8C))}\norm{K_0f}
+                  +{\sup_{s\le T}\norm{K_2^2f(s)}\over8C}\right].
+ \label{eq:duhamel}
+\end{equation}
+This compares exact and reference evolutions from the same initial vector.
+The scalar phase preserves mode probabilities and $\norm{K_0f}$.
+
+\section{Energy-weighted charge bound and coherent tail}
+Purify an input of~\eqref{eq:distance}, enlarging its reference if needed.
+Let $P_N=\sum_{n=0}^N|n\rangle\langle n|$ and $f=(P_N\otimes I)\psi$.
+Then $\norm f\le1$ and, with reference-valued coefficients $f_n$,
+\begin{equation}
+ \sum_{n=0}^N n\norm{f_n}^2\le\nu,\qquad
+ \norm{K_0f}^2\le1+(N+2)\nu.\label{eq:weightedK0}
+\end{equation}
+The second inequality uses $(n+1)^2=1+n(n+2)$ and $n\le N$.
+Squaring the \emph{infinite} charge in~\eqref{eq:charges} gives
+\begin{align}
+ K_2^2|n\rangle={}&-{(n+2)\sqrt{(n+1)(n+3)}\over4}|n+2\rangle
+               +{(n+1)^2\over2}|n\rangle\notag\\
+ &-{n\sqrt{(n-1)(n+1)}\over4}|n-2\rangle,\label{eq:K2square}
+\end{align}
+where the downward term is zero at $n=0,1$. Its three squared coefficients
+are~\eqref{eq:polynomials}. Input through mode $N$ can produce output
+$N+2$; squaring a truncated charge would omit this contribution.
+
+\begin{lemma}\label{lem:charge}
+If $\norm f\le1$, $f\in\operatorname{Ran}(P_N\otimes I)$, and
+$\sum n\norm{f_n}^2\le\nu$, then $\norm{K_2^2f}\le B_N(\nu)$.
+\end{lemma}
+\begin{proof}
+For integer $0\le n\le N$,
+\begin{align}
+ u(n)&\le\tfrac34+{n\over N}[u(N)-\tfrac34],&
+ d(n)&\le\tfrac14+{n\over N}[d(N)-\tfrac14],&
+ \ell(n)&\le{n\over N}\ell(N).\label{eq:chords}
+\end{align}
+The first two quotients after subtracting constants are
+\begin{equation}
+ {u(n)-3/4\over n}={n^3\over16}+{n^2\over2}+{23n\over16}+{7\over4},
+ \qquad {d(n)-1/4\over n}={n^3\over4}+n^2+{3n\over2}+1,
+\end{equation}
+increasing for $n\ge0$. The last is $(n^3-n)/16$, increasing at integers
+$n\ge1$, and $\ell(0)=0$. Each of the three shifts in~\eqref{eq:K2square}
+has squared norm equal to its coefficient polynomial averaged against
+$\norm{f_n}^2$. Apply~\eqref{eq:chords}, then the triangle inequality
+between shifts. This gives~\eqref{eq:B} for reference-valued coefficients.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Equation~\eqref{eq:duhamel}, \eqref{eq:weightedK0}, and
+Lemma~\ref{lem:charge} bound the projected vector error by the bracket
+in~\eqref{eq:finite} times $T$. These bounds hold at all reference times
+because phases preserve mode probabilities. Both Stinespring vectors have
+norm $\norm f\le1$, so their reduced subnormalized density matrices
+differ in trace norm by at most twice their vector distance.
+
+The omitted probability obeys
+$p=\norm{(1-P_N)\psi}^2\le\nu/(N+1)$. In the span of the retained and
+omitted components, the pure-state density minus its subnormalized
+projection has trace norm
+\begin{equation}
+ \norm{|\psi\rangle\langle\psi|-|f\rangle\langle f|}_1
+       =\sqrt{4p-3p^2}\le2\sqrt p.\label{eq:tail}
+\end{equation}
+Partial tracing preserves the upper bound. Both channels contract Hermitian
+trace norm; their difference contributes at most $4\sqrt p$ on the omitted
+part. This proves~\eqref{eq:finite}, uniformly over references, without
+differentiating an infinite-tail vector.
+
+For fixed $\nu>0$, $B_N(\nu)=\sqrt\nu N^{3/2}+O_\nu(N^{1/2})$.
+With $N=\lfloor a\sqrt C\rfloor$, the leading coefficient is
+\begin{equation}
+ \sqrt\nu\left(\sqrt{a/2}+{a^{3/2}\over4}+{4\over\sqrt a}\right)C^{-1/4}.
+\end{equation}
+The gravity term is only $2g_C=\sqrt{5/6}\,C^{-1/2}+O(C^{-3/2})$.
+The leading coefficient is stationary at
+$1/\sqrt2+3a/4-4/a=0$, with positive solution $a=4\sqrt2/3$.
+This proves~\eqref{eq:rate}. For $\nu=0$ the input class is exactly
+the ground mode and $\norm{K_0|0\rangle}=\norm{K_2^2|0\rangle}=1$.
+\end{proof}
+
+\section{Bounded second moment: a separate input class}
+If $\tr(n^2\rho_m)\le\mu$, the projected vector satisfies
+$\mathbb E n\le\sqrt\mu$ and $\mathbb E n^j\le N^{j-2}\mu$
+for $j=2,3,4$. Thus $\norm{K_0f}\le1+\sqrt\mu$ and
+\begin{align}
+ B_N^{(2)}(\mu)={}&\sqrt{\tfrac34+\tfrac74\sqrt\mu+
+                    (N^2/16+N/2+23/16)\mu}\notag\\
+ &+\sqrt{\tfrac14+\sqrt\mu+(N^2/4+N+3/2)\mu}
+                    +\tfrac14N\sqrt\mu\label{eq:B2}
+\end{align}
+bounds $\norm{K_2^2f}$. Expand $u,d,\ell$ and use the same shift
+triangle inequality to obtain this expression. The tail probability
+is now at most $\mu/(N+1)^2$.
+
+\begin{corollary}
+For the distance with the stronger constraint $\tr(n^2\rho_m)\le\mu$,
+make the following replacements in~\eqref{eq:finite}:
+\[
+ \sqrt{1+(N+2)\nu}\mapsto1+\sqrt\mu,\quad
+ B_N(\nu)\mapsto B_N^{(2)}(\mu),\quad
+ 4\sqrt{\nu/(N+1)}\mapsto {4\sqrt\mu\over N+1}.
+\]
+Taking $N=\lfloor4\sqrt C\rfloor$ gives
+\begin{equation}
+ d_{\mu;2}(C,1)\le
+ \left[\sqrt{5/6}+{1+\sqrt\mu\over\sqrt2}+2\sqrt\mu\right]C^{-1/2}
+       +O_\mu(C^{-1}).\label{eq:second}
+\end{equation}
+\end{corollary}
+No fourth moment of the full input is required: only its finite projection
+enters Duhamel, and bounded exact channels act on the tail.
+
+\section{Domains, quantitative consequences, and limits}\label{sec:domains}
+The realization of~\eqref{eq:H} is associated with the closed nonnegative form
+\begin{equation}
+ \mathfrak h_C[\psi]={\norm{p\psi}^2+\norm{K_2\psi}^2\over8C}
+     +2C\norm{e^q\psi}^2+\norm{e^{q/2}K_0^{1/2}\psi}^2.\label{eq:form}
+\end{equation}
+Its domain is the intersection of the four indicated operator domains.
+The Jacobi charge has its standard self-adjoint closure; its linearly
+growing coefficients satisfy the divergent reciprocal-coefficient
+criterion. The finite sum of closed nonnegative forms on this dense
+intersection is closed. Smooth compact geometry functions times finite
+scalar sequences form a common form core. To see this, first use smooth
+scalar cutoffs $f(n/N)$: the commutator $[K_2,f(n/N)]$ is uniformly bounded
+and supported in a moving tail, hence tends strongly to zero on every
+vector. These cutoffs converge in the $K_2$ graph norm and commute with
+$K_0$ and geometry operators. Smooth compact geometry cutoffs then have
+vanishing derivative commutators; smoothing on compact support completes
+the approximation. This does not assume sharp scalar projections converge
+in an unbounded graph norm.
+
+For the finite scalar inputs used in Duhamel, applying the differential
+expression to the Gaussian reference produces finite sums of Gaussian
+polynomials times exponentials and finite scalar sequences. Every derivative
+and exponential multiple in~\eqref{eq:form} is square integrable.
+Integration by parts against the common form core therefore puts these
+trial vectors in the operator domain, with action~\eqref{eq:residual}.
+Their time dependence is continuously differentiable on the compact
+interval, so Duhamel's identity is valid. General energy-constrained inputs
+enter through the trace-norm tail step; they need not be in
+$\operatorname{Dom}H_C$.
+
+Table~\ref{tab:bounds} gives outward-rounded 150-decimal interval bounds.
+The earlier worst-code projection argument substitutes $N+1$ and
+$(N+1)(N+2)$ for the weighted norms; $N=\lfloor(8\nu C)^{1/3}\rfloor$
+then gives $3\sqrt2\nu^{1/3}C^{-1/6}+O(C^{-1/3})$.
+The new bound retains the mean budget inside the residual, rather than
+re-optimizing the same worst-code estimate. At $N\asymp\sqrt C$ its
+constrained vector error vanishes although the worst-code operator
+estimate need not. For fixed $\nu$, the sufficient small-error resource
+scaling becomes $C=O(\nu^2\delta^{-4})$, compared with
+$O(\nu^2\delta^{-6})$ from that earlier argument. These are sufficient
+asymptotics, not necessary thresholds.
+
+\begin{table}[htbp]
+\centering
+\caption{Unhalved channel-distance upper bounds at $\nu=1$, $T=1$;
+every displayed value is rounded upward.}\label{tab:bounds}
+\begin{tabular}{@{}rrr@{}}\toprule
+$C$ & Energy-weighted bound & Worst-code projection bound\\\midrule
+$10^6$ & $0.144226$ & $0.435331$\\
+$10^{12}$ & $0.004532171$ & $0.042528$\\
+$10^{18}$ & $0.000143292$ & $0.004244$\\
+$10^{24}$ & $0.000004531258$ & $0.000424275$\\\bottomrule
+\end{tabular}
+\end{table}
+
+The portable script checks exact charge and Gaussian-moment identities,
+the stability equation and Wronskian, and charge columns retaining two
+upper-edge raising steps. Its 180 coherent matter/reference samples support
+the inequalities; arbitrary-reference coverage follows from the proof.
+As a hostile tail check,
+$\sqrt{1-1/N}|0\rangle+\sqrt{1/N}|N\rangle$ has mean excitation one,
+but $\norm{K_0\psi}^2=N+3$ and projection error $\sqrt{4/N-3/N^2}$.
+A mean-as-norm substitution or probability-only coherent-tail bound fails.
+
+The constraint is scalar global-mode excitation, not total ADM energy;
+finite mean $K_0$ alone need not imply finite $K_2$ form energy.
+This is leading scalar-clock recovery, distinct from a quantum-corrected
+finite-code channel expansion. No optimal exponent, arbitrary-time,
+topology-changing, general-Fock, boundary-instrument, or four-dimensional
+GR conclusion follows. The computation evaluates explicit bounds and
+finite coefficient checks; it does not simulate the full JT propagator.
+
+\section*{Provenance and disclosure}
+The canonical JT framework cited above is prior work. The Gaussian
+comparison was inherited from an internal September 2026 calculation;
+the energy-weighted improvement was derived on 28 October 2026 and is
+packaged here on 29 October 2026. Historical source dates, this delivery,
+and demonstrable public disclosure are distinct: a private commit does
+not establish public priority. No global novelty certification is claimed.
+
+Earlier work was Fable 5-led; July 2026 onward results were predominantly
+produced by GPT models, as reported by the operator. DeepSeek and multiple
+GPT models also contributed cross-review and manuscript preparation.
+This is reported chronology, not a per-result authorship allocation.
+Human names and affiliations are blank, and human expert review has not
+occurred. The supplied statement is preserved verbatim:
+\begin{quote}
+``I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.''
+\end{quote}
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+\end{document}

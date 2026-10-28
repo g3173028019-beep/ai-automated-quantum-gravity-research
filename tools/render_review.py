@@ -2,10 +2,12 @@
 
 from pathlib import Path
 import subprocess
+import sys
 from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
-for slug in ("01-projection-sign-rigidity", "02-half-wormholes-wiener-chaos"):
+papers = sys.argv[1:] or [p.name for p in sorted((ROOT / "papers").iterdir()) if (p / "manuscript.pdf").is_file()]
+for slug in papers:
     output = ROOT / "tmp" / slug
     output.mkdir(parents=True, exist_ok=True)
     subprocess.run(["pdftoppm", "-r", "90", "-png", str(ROOT / "papers" / slug / "manuscript.pdf"), str(output / "page")], check=True)

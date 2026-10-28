@@ -1,0 +1,2154 @@
+{
+  "status": "PASS",
+  "sympy_version": "1.14.0",
+  "unit_W": "-4 - 12*I",
+  "unit_real_J_det": "-4096",
+  "unit_real_Jacobian": [
+    [
+      "-1",
+      "-3",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-1"
+    ],
+    [
+      "-3",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    [
+      "1",
+      "-1",
+      "-1",
+      "-3",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    [
+      "1",
+      "1",
+      "-3",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1"
+    ],
+    [
+      "1",
+      "-1",
+      "1",
+      "1",
+      "-1",
+      "-3",
+      "1",
+      "1"
+    ],
+    [
+      "1",
+      "1",
+      "-1",
+      "1",
+      "-3",
+      "1",
+      "-1",
+      "1"
+    ],
+    [
+      "1",
+      "-1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "-1",
+      "-3"
+    ],
+    [
+      "1",
+      "1",
+      "-1",
+      "1",
+      "-1",
+      "1",
+      "-3",
+      "1"
+    ]
+  ],
+  "unit_canonical_characteristic_polynomial": "(x**2 - 56*x + 64)*(x**2 - 24*x + 64)**3",
+  "unit_canonical_Hessian": [
+    [
+      "16",
+      "0",
+      "-8",
+      "0",
+      "-8",
+      "0",
+      "-8",
+      "0"
+    ],
+    [
+      "0",
+      "16",
+      "-8",
+      "8",
+      "-8",
+      "8",
+      "-8",
+      "8"
+    ],
+    [
+      "-8",
+      "-8",
+      "16",
+      "0",
+      "8",
+      "-8",
+      "8",
+      "-8"
+    ],
+    [
+      "0",
+      "8",
+      "0",
+      "16",
+      "-8",
+      "0",
+      "-8",
+      "0"
+    ],
+    [
+      "-8",
+      "-8",
+      "8",
+      "-8",
+      "16",
+      "0",
+      "8",
+      "-8"
+    ],
+    [
+      "0",
+      "8",
+      "-8",
+      "0",
+      "0",
+      "16",
+      "-8",
+      "0"
+    ],
+    [
+      "-8",
+      "-8",
+      "8",
+      "-8",
+      "8",
+      "-8",
+      "16",
+      "0"
+    ],
+    [
+      "0",
+      "8",
+      "-8",
+      "0",
+      "-8",
+      "0",
+      "0",
+      "16"
+    ]
+  ],
+  "unit_mass_squared_exact": {
+    "28 - 12*sqrt(5)": 1,
+    "12*sqrt(5) + 28": 1,
+    "12 - 4*sqrt(5)": 3,
+    "4*sqrt(5) + 12": 3
+  },
+  "mn_family": {
+    "Q": "8*m*n",
+    "point": [
+      "I*m/n",
+      "I",
+      "I",
+      "I"
+    ],
+    "W": "m*(-4 - 12*I)",
+    "real_J_det": "-4096*m**4*n**4",
+    "canonical_Hessian": "m*n times unit canonical Hessian"
+  },
+  "divisor_assignments_count": 33,
+  "distinct_reduced_point_types": 9,
+  "point_records": [
+    {
+      "k": 1,
+      "fundamental_imaginary_tuple": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "point": [
+        "I",
+        "I",
+        "I",
+        "I"
+      ],
+      "flux": [
+        0,
+        0,
+        0,
+        0,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "Qmin_exact": 8,
+      "Q": 8,
+      "gs": "1",
+      "remaining_D3_capacity28": 20,
+      "W": "-4 - 12*I",
+      "real_J_rank": 8,
+      "real_J_det": "-4096",
+      "primitive_pair_data": [
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "energy_weight": "1",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "2"
+          ],
+          "primitive_pair_Q": 2
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "energy_weight": "1",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "2"
+          ],
+          "primitive_pair_Q": 2
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "energy_weight": "1",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "2"
+          ],
+          "primitive_pair_Q": 2
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "energy_weight": "1",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "2"
+          ],
+          "primitive_pair_Q": 2
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "energy_weight": "1",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "2"
+          ],
+          "primitive_pair_Q": 2
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "energy_weight": "1",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "2"
+          ],
+          "primitive_pair_Q": 2
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "energy_weight": "1",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "2"
+          ],
+          "primitive_pair_Q": 2
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "energy_weight": "1",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "2"
+          ],
+          "primitive_pair_Q": 2
+        }
+      ],
+      "mass_squared_exact": {
+        "28 - 12*sqrt(5)": 1,
+        "12*sqrt(5) + 28": 1,
+        "12 - 4*sqrt(5)": 3,
+        "4*sqrt(5) + 12": 3
+      }
+    },
+    {
+      "k": 2,
+      "fundamental_imaginary_tuple": [
+        "2",
+        "1",
+        "1",
+        "1"
+      ],
+      "point": [
+        "2*I",
+        "I",
+        "I",
+        "I"
+      ],
+      "flux": [
+        -4,
+        -4,
+        -4,
+        -4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "Qmin_exact": 16,
+      "Q": 16,
+      "gs": "1/2",
+      "remaining_D3_capacity28": 12,
+      "W": "24 - 8*I",
+      "real_J_rank": 8,
+      "real_J_det": "-65536",
+      "primitive_pair_data": [
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        }
+      ],
+      "mass_squared_exact": {
+        "56 - 24*sqrt(5)": 1,
+        "24*sqrt(5) + 56": 1,
+        "24 - 8*sqrt(5)": 3,
+        "8*sqrt(5) + 24": 3
+      }
+    },
+    {
+      "k": 2,
+      "fundamental_imaginary_tuple": [
+        "1",
+        "1",
+        "1",
+        "2"
+      ],
+      "point": [
+        "I",
+        "I",
+        "I",
+        "2*I"
+      ],
+      "flux": [
+        0,
+        -2,
+        -2,
+        0,
+        4,
+        0,
+        0,
+        -2,
+        2,
+        0,
+        0,
+        -4,
+        0,
+        4,
+        4,
+        0
+      ],
+      "Qmin_exact": 16,
+      "Q": 16,
+      "gs": "1",
+      "remaining_D3_capacity28": 12,
+      "W": "24 - 8*I",
+      "real_J_rank": 8,
+      "real_J_det": "-65536",
+      "primitive_pair_data": [
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "energy_weight": "2",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "4"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "energy_weight": "2",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "4"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "energy_weight": "2",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "4"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "energy_weight": "2",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "4"
+          ],
+          "primitive_pair_Q": 4
+        }
+      ],
+      "mass_squared_exact": {
+        "56 - 24*sqrt(5)": 1,
+        "24*sqrt(5) + 56": 1,
+        "24 - 8*sqrt(5)": 3,
+        "8*sqrt(5) + 24": 3
+      }
+    },
+    {
+      "k": 2,
+      "fundamental_imaginary_tuple": [
+        "2",
+        "1",
+        "2",
+        "2"
+      ],
+      "point": [
+        "2*I",
+        "I",
+        "2*I",
+        "2*I"
+      ],
+      "flux": [
+        2,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        4,
+        4,
+        0,
+        0,
+        2,
+        2,
+        -4,
+        4,
+        0,
+        0
+      ],
+      "Qmin_exact": 16,
+      "Q": 16,
+      "gs": "1/2",
+      "remaining_D3_capacity28": 12,
+      "W": "16 + 48*I",
+      "real_J_rank": 8,
+      "real_J_det": "-65536",
+      "primitive_pair_data": [
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "energy_weight": "1/8",
+          "primitive_even_coefficient_magnitudes": [
+            "16",
+            "2"
+          ],
+          "primitive_pair_Q": 16
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "energy_weight": "2",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "4"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "energy_weight": "1/8",
+          "primitive_even_coefficient_magnitudes": [
+            "16",
+            "2"
+          ],
+          "primitive_pair_Q": 16
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "energy_weight": "2",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "4"
+          ],
+          "primitive_pair_Q": 4
+        }
+      ],
+      "mass_squared_exact": {
+        "56 - 24*sqrt(5)": 1,
+        "24*sqrt(5) + 56": 1,
+        "24 - 8*sqrt(5)": 3,
+        "8*sqrt(5) + 24": 3
+      }
+    },
+    {
+      "k": 2,
+      "fundamental_imaginary_tuple": [
+        "4",
+        "2",
+        "2",
+        "2"
+      ],
+      "point": [
+        "4*I",
+        "2*I",
+        "2*I",
+        "2*I"
+      ],
+      "flux": [
+        2,
+        4,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -4,
+        -2,
+        -2,
+        -2
+      ],
+      "Qmin_exact": 16,
+      "Q": 16,
+      "gs": "1/4",
+      "remaining_D3_capacity28": 12,
+      "W": "-96 + 32*I",
+      "real_J_rank": 8,
+      "real_J_det": "-65536",
+      "primitive_pair_data": [
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "energy_weight": "1/32",
+          "primitive_even_coefficient_magnitudes": [
+            "64",
+            "2"
+          ],
+          "primitive_pair_Q": 64
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "energy_weight": "1/8",
+          "primitive_even_coefficient_magnitudes": [
+            "16",
+            "2"
+          ],
+          "primitive_pair_Q": 16
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "energy_weight": "1/8",
+          "primitive_even_coefficient_magnitudes": [
+            "16",
+            "2"
+          ],
+          "primitive_pair_Q": 16
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "energy_weight": "1/8",
+          "primitive_even_coefficient_magnitudes": [
+            "16",
+            "2"
+          ],
+          "primitive_pair_Q": 16
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "energy_weight": "1/2",
+          "primitive_even_coefficient_magnitudes": [
+            "4",
+            "2"
+          ],
+          "primitive_pair_Q": 4
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "energy_weight": "2",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "4"
+          ],
+          "primitive_pair_Q": 4
+        }
+      ],
+      "mass_squared_exact": {
+        "56 - 24*sqrt(5)": 1,
+        "24*sqrt(5) + 56": 1,
+        "24 - 8*sqrt(5)": 3,
+        "8*sqrt(5) + 24": 3
+      }
+    },
+    {
+      "k": 3,
+      "fundamental_imaginary_tuple": [
+        "3",
+        "1",
+        "1",
+        "1"
+      ],
+      "point": [
+        "3*I",
+        "I",
+        "I",
+        "I"
+      ],
+      "flux": [
+        -6,
+        -6,
+        -6,
+        -6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "Qmin_exact": 24,
+      "Q": 24,
+      "gs": "1/3",
+      "remaining_D3_capacity28": 4,
+      "W": "36 - 12*I",
+      "real_J_rank": 8,
+      "real_J_det": "-331776",
+      "primitive_pair_data": [
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        }
+      ],
+      "mass_squared_exact": {
+        "84 - 36*sqrt(5)": 1,
+        "36*sqrt(5) + 84": 1,
+        "36 - 12*sqrt(5)": 3,
+        "12*sqrt(5) + 36": 3
+      }
+    },
+    {
+      "k": 3,
+      "fundamental_imaginary_tuple": [
+        "1",
+        "1",
+        "1",
+        "3"
+      ],
+      "point": [
+        "I",
+        "I",
+        "I",
+        "3*I"
+      ],
+      "flux": [
+        0,
+        -2,
+        -2,
+        0,
+        6,
+        0,
+        0,
+        -2,
+        2,
+        0,
+        0,
+        -6,
+        0,
+        6,
+        6,
+        0
+      ],
+      "Qmin_exact": 24,
+      "Q": 24,
+      "gs": "1",
+      "remaining_D3_capacity28": 4,
+      "W": "36 - 12*I",
+      "real_J_rank": 8,
+      "real_J_det": "-331776",
+      "primitive_pair_data": [
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "energy_weight": "3",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "6"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "energy_weight": "3",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "6"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "energy_weight": "3",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "6"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "energy_weight": "3",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "6"
+          ],
+          "primitive_pair_Q": 6
+        }
+      ],
+      "mass_squared_exact": {
+        "84 - 36*sqrt(5)": 1,
+        "36*sqrt(5) + 84": 1,
+        "36 - 12*sqrt(5)": 3,
+        "12*sqrt(5) + 36": 3
+      }
+    },
+    {
+      "k": 3,
+      "fundamental_imaginary_tuple": [
+        "3",
+        "1",
+        "3",
+        "3"
+      ],
+      "point": [
+        "3*I",
+        "I",
+        "3*I",
+        "3*I"
+      ],
+      "flux": [
+        2,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        6,
+        6,
+        0,
+        0,
+        2,
+        2,
+        -6,
+        6,
+        0,
+        0
+      ],
+      "Qmin_exact": 24,
+      "Q": 24,
+      "gs": "1/3",
+      "remaining_D3_capacity28": 4,
+      "W": "36 + 108*I",
+      "real_J_rank": 8,
+      "real_J_det": "-331776",
+      "primitive_pair_data": [
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "energy_weight": "1/27",
+          "primitive_even_coefficient_magnitudes": [
+            "54",
+            "2"
+          ],
+          "primitive_pair_Q": 54
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "energy_weight": "3",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "6"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "energy_weight": "1/27",
+          "primitive_even_coefficient_magnitudes": [
+            "54",
+            "2"
+          ],
+          "primitive_pair_Q": 54
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "energy_weight": "3",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "6"
+          ],
+          "primitive_pair_Q": 6
+        }
+      ],
+      "mass_squared_exact": {
+        "84 - 36*sqrt(5)": 1,
+        "36*sqrt(5) + 84": 1,
+        "36 - 12*sqrt(5)": 3,
+        "12*sqrt(5) + 36": 3
+      }
+    },
+    {
+      "k": 3,
+      "fundamental_imaginary_tuple": [
+        "9",
+        "3",
+        "3",
+        "3"
+      ],
+      "point": [
+        "9*I",
+        "3*I",
+        "3*I",
+        "3*I"
+      ],
+      "flux": [
+        2,
+        6,
+        6,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -6,
+        -2,
+        -2,
+        -2
+      ],
+      "Qmin_exact": 24,
+      "Q": 24,
+      "gs": "1/9",
+      "remaining_D3_capacity28": 4,
+      "W": "-324 + 108*I",
+      "real_J_rank": 8,
+      "real_J_det": "-331776",
+      "primitive_pair_data": [
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "energy_weight": "1/243",
+          "primitive_even_coefficient_magnitudes": [
+            "486",
+            "2"
+          ],
+          "primitive_pair_Q": 486
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "energy_weight": "1/27",
+          "primitive_even_coefficient_magnitudes": [
+            "54",
+            "2"
+          ],
+          "primitive_pair_Q": 54
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "energy_weight": "1/27",
+          "primitive_even_coefficient_magnitudes": [
+            "54",
+            "2"
+          ],
+          "primitive_pair_Q": 54
+        },
+        {
+          "exponent": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "energy_weight": "1/27",
+          "primitive_even_coefficient_magnitudes": [
+            "54",
+            "2"
+          ],
+          "primitive_pair_Q": 54
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "energy_weight": "1/3",
+          "primitive_even_coefficient_magnitudes": [
+            "6",
+            "2"
+          ],
+          "primitive_pair_Q": 6
+        },
+        {
+          "exponent": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "complement": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "energy_weight": "3",
+          "primitive_even_coefficient_magnitudes": [
+            "2",
+            "6"
+          ],
+          "primitive_pair_Q": 6
+        }
+      ],
+      "mass_squared_exact": {
+        "84 - 36*sqrt(5)": 1,
+        "36*sqrt(5) + 84": 1,
+        "36 - 12*sqrt(5)": 3,
+        "12*sqrt(5) + 36": 3
+      }
+    }
+  ],
+  "weak_coupling_family": {
+    "flux": [
+      "2",
+      "2*k",
+      "2*k",
+      "2*k",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-2*k",
+      "-2",
+      "-2",
+      "-2"
+    ],
+    "point": [
+      "I*k**2",
+      "I*k",
+      "I*k",
+      "I*k"
+    ],
+    "Q": "8*k",
+    "gs": "1/k**2",
+    "W": "4*k**3*(-3 + I)",
+    "real_J_det": "-4096*k**4",
+    "mass_squared": "k times unit spectrum",
+    "capacity28_k": [
+      1,
+      2,
+      3
+    ]
+  },
+  "duality_control": {
+    "gamma": [
+      [
+        2,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "base_point": [
+      "9*I",
+      "3*I",
+      "3*I",
+      "3*I"
+    ],
+    "image_point": [
+      "163/82 + 9*I/82",
+      "3*I",
+      "3*I",
+      "3*I"
+    ],
+    "image_flux": [
+      4,
+      12,
+      12,
+      12,
+      -6,
+      -2,
+      -2,
+      -2,
+      2,
+      6,
+      6,
+      6,
+      -6,
+      -2,
+      -2,
+      -2
+    ],
+    "Q": 24,
+    "F_terms": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "mass_spectrum_invariant": true,
+    "new_point_type_counted": false
+  },
+  "provenance_sha256": "dca9cd3212be5380477c3d2b3949106ccbc0b7c451475ba6d2f432ec8cf8915a",
+  "script_sha256": "495d7c1cdc337908eded73deded2c2176fdd73b4e3515de9c07af60166f54ece"
+}

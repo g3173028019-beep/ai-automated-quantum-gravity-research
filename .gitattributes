@@ -7,3 +7,8 @@
 *.wls text eol=lf
 *.json text eol=lf
 *.pdf binary
+# These packets include byte-hashed inputs and reproduction outputs.
+# Preserve their delivered bytes across Git checkouts.
+papers/03-jt-energy-weighted-recovery/** -text
+papers/04-dbi-heralded-controlled-phase/** -text
+papers/05-integer-flux-families/** -text
