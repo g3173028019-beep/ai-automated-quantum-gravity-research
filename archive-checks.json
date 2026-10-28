@@ -1140,8 +1140,8 @@
     },
     {
       "path": "HISTORY.md",
-      "bytes": 4049,
-      "sha256": "bdfa24be9f3c7855aa70d4d1fa50507dba5fea069467963e9f78ac44f5e1fbaa"
+      "bytes": 4086,
+      "sha256": "7af166b74baad092bcbc1cd397b66171d3c8daa3fdfb95672ed3ef20c1d8e1ba"
     },
     {
       "path": "papers/01-projection-sign-rigidity/main.tex",
@@ -1370,8 +1370,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3651,
-      "sha256": "339562853a56475512602577ec2a415e64613a3464769dbe4c8534153ffb21bd"
+      "bytes": 3696,
+      "sha256": "3975fdc6e408fd05fcefd7140a9f55ee8e3b771bf5f5a1bb54f14a4a3ada950b"
     },
     {
       "path": "tools/build.ps1",
@@ -1393,5 +1393,13 @@
       "bytes": 4997,
       "sha256": "d29b5ef8c103b27c156063bdd278257e7af4f6c1c48efcc21c4cd6cd4f07a3f3"
     }
-  ]
+  ],
+  "documentation_update": {
+    "at_utc": "2026-10-28T18:55:56.739660+00:00",
+    "files": [
+      "HISTORY.md",
+      "README.md"
+    ],
+    "verification": "Repository Markdown descriptions use descriptive scientific names; affected staged-file hashes updated. Existing scientific checks were not rerun."
+  }
 }

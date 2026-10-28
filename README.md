@@ -1,6 +1,6 @@
 # AI-Automated Quantum Gravity Research
 
-English working manuscripts and verification material from an AI-led research project, beginning with TOE-Fable.
+English working manuscripts and reproducible calculations from an AI-led research programme in quantum gravity, quantum information and mathematical physics.
 
 The archive contains scoped mathematical and model-physics manuscripts with minimal reproduction material. Human author and affiliation fields are blank. The current chronological contribution disclosure and unresolved attribution statement are in [DECLARATIONS.md](DECLARATIONS.md).
 
