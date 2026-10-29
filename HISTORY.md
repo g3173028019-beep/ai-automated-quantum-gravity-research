@@ -34,3 +34,11 @@ Three six-page English manuscripts close selected completed results. Each has bl
 The first two paper directories are preserved byte for byte against the pre-delivery hash manifest. The completed audit, research rounds and twistor milestone remain in their original locations and were not rewritten. The corrected chronological attribution is recorded in [DECLARATIONS.md](DECLARATIONS.md) and the new manuscripts: earlier work was Fable 5-led, while July 2026 onward results were predominantly produced by GPT models according to the operator. The old PDFs retain their original declaration as an archival edition.
 
 These are local source and delivery dates. A commit to this private repository is not demonstrable public disclosure or a claim of publication priority.
+
+## Priority manuscripts, 29 October 2026
+
+Three completed manuscripts are added without changing their inspected PDFs or LaTeX: an eleven-page autonomous Maxwell-control paper, an eleven-page clock-foliated reference-model paper, and a ten-page Einstein–scalar mixed-quartic/backreaction paper. Their main constructions were completed in a separate research continuation before this delivery.
+
+The new packets include portable calculations and saved outputs. Maxwell bundles only the accepted phase coefficient and two switching fractions needed by its replay, with the original input hash; all other bound coefficients are reconstructed. The reference-model and Einstein–scalar scripts reconstruct their inputs algebraically. The packaging pass changes paths and documentation, not scientific claims. The earlier five paper directories remain byte-for-byte unchanged.
+
+The earlier delivery choice did not dispose of other retained work. A separate manuscript-level recovery assessment follows this upload; it will distinguish independent results, overlapping versions, supporting methods, concrete errors and unreviewed material.

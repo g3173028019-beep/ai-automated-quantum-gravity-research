@@ -28,7 +28,20 @@ The archive contains scoped mathematical and model-physics manuscripts with mini
    - [LaTeX source](papers/05-integer-flux-families/main.tex)
    - [Reproduction and verification](papers/05-integer-flux-families/README.md)
 
-The 29 October packet is selected for closed, reproducible claims. JT concerns the same-mean-energy leading recovery theorem, distinct from the separately retained geometry-assisted protocol. The DBI paper includes a sharper conditional-fidelity bound for its complete heralded instrument. The flux paper gives exact integer families and positive CS/axiodilaton mass spectra in its stated model. The broader research programme is not included merely to enlarge this archive. Selection does not certify global originality or human validation.
+6. **Positive-Energy Local Clocks for a Weighted Maxwell Geometry-Mediated Gate**
+   - [English PDF](papers/06-maxwell-local-clocks/manuscript.pdf)
+   - [LaTeX source](papers/06-maxwell-local-clocks/main.tex)
+   - [Reproduction and verification](papers/06-maxwell-local-clocks/README.md)
+7. **A Local Clock-Foliated Repair of the Inhomogeneous Spectrum of a Rotating Einstein-Static Scalar Reference**
+   - [English PDF](papers/07-clock-foliated-reference/manuscript.pdf)
+   - [LaTeX source](papers/07-clock-foliated-reference/main.tex)
+   - [Reproduction and verification](papers/07-clock-foliated-reference/README.md)
+8. **Native Mixed Quartic Interactions on an Einstein–Scalar Relative Carrier and an Exact Matter-Supported Walker Geometry**
+   - [English PDF](papers/08-einstein-scalar-mixed-quartic/manuscript.pdf)
+   - [LaTeX source](papers/08-einstein-scalar-mixed-quartic/main.tex)
+   - [Reproduction and verification](papers/08-einstein-scalar-mixed-quartic/README.md)
+
+The first 29 October packet contains JT mean-energy recovery, a DBI heralded gate and exact integer flux families. The subsequent priority packet adds local autonomous Maxwell control, a clock-foliated effective reference model with positive inhomogeneous quadratic energy, and native Einstein–scalar quartic/backreaction constructions. Each paper states its model and assumptions. Delivery order is not a ranking of the broader research, a complete corpus inventory, or certification of global originality or human validation.
 
 ## Status
 

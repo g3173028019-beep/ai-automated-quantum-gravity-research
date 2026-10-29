@@ -26,7 +26,7 @@ The archive contains English research notes, their source, and scoped verificati
 
 ## Scientific scope
 
-The first two papers concern finite real projection recovery and a zero-dimensional Gaussian-coupling model. The 29 October delivery adds weighted recovery in a specified JT model, a heralded gate in a continuous reduced DBI model, and integer flux constructions in a fixed STU/lattice system. Their model, input, instrument and geometric assumptions are explicit. No paper establishes complete quantum gravity or ultraviolet completeness.
+The first two papers concern finite real projection recovery and a zero-dimensional Gaussian-coupling model. The 29 October deliveries add weighted JT recovery, a reduced DBI heralded gate, integer STU flux constructions, local autonomous Maxwell control, a clock-foliated effective reference model, and native Einstein–scalar quartic/backreaction constructions. Their input, apparatus, geometric, signature and effective-theory assumptions are explicit. In particular, the modified reference model does not inherit the canonical continuum Hadamard theorem, and the finite Walker solution is not a Lorentzian Real completion. No paper establishes complete quantum gravity or ultraviolet completeness.
 
 ## Dates and priority
 

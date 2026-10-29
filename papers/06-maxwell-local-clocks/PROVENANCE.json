@@ -1,0 +1,43 @@
+{
+  "delivery_date": "2026-10-29",
+  "source_edition": "deferred-priority-20261029/maxwell",
+  "source_sha256": {
+    "paper/main.tex": "158a5f40511634a75de3509a2b61263e8ace889c1bd0f4c81ff89098d4e2a90f",
+    "paper/references.bib": "99a7080f9a713a67332ef410d073efb1cec2df284c48d123e12c4719fc1765aa",
+    "paper/manuscript.pdf": "b0394abd44d0273c8ea64a0f5f8632283a24f218ccf32ff7314ec0a04a1bfe68",
+    "scripts/construct_local_clocks.py": "6f068a5cd1354a4c03ccbd854243cae5a209443198d6eece81072d40a9da8d6a",
+    "results/local-clocks.json": "70acb0b5a85605cb22b8d4f4339fb7eb622fa905e69940f8501a0fdffddf88c5",
+    "DERIVATION.md": "bd275ee0959f4263548d63dcfb3ff0eb2e8c7bd98cb0c32a7791c86c27a6facb",
+    "VERIFICATION.md": "101625e8bdf53580186134bc886ef7953afe5906b360cc9827e887272bbffa95"
+  },
+  "adaptations": [
+    "PDF, LaTeX and bibliography copied byte for byte.",
+    "Default scientific scripts use only this package and installed dependencies.",
+    "Repository documentation uses portable paths; original verification coverage is retained.",
+    "Maxwell input reduced to the two actually used reference fields, with the original JSON SHA-256; input path changed to inputs/echo-reference.json."
+  ],
+  "pdf_pages": 11,
+  "pdf_visual_review": {
+    "all_pages_contact_sheet": true,
+    "readable_full_pages": [
+      5,
+      9
+    ],
+    "finding": "No clipping, overlap, missing glyphs or unresolved references observed."
+  },
+  "human_authors": [],
+  "human_affiliations": [],
+  "human_expert_review": false,
+  "public_priority_claim": false,
+  "scope": "Four positive-energy local autonomous clocks retain reduced-matter negativity above 0.459, with paid rest energies and exact positive-dust support for the enlarged Hamiltonian. The initial joint spectral resource, exact quadratic clock dispersion and very large resource scales remain explicit assumptions.",
+  "portable_replay": {
+    "exit_code": 0,
+    "date_beijing": "2026-10-29",
+    "external_project_access_required": false,
+    "network_required": false
+  },
+  "packaged_code_sha256": {
+    "scripts/construct_local_clocks.py": "0900064a318f226188848443e69da1ec57b8270a8be380db0c8805af24e37bd1"
+  },
+  "bundled_input_sha256": "2ec07aae09c83620f74d669a6e8f879e6a4b3f3e5665a00f0b5e92f88a8e4e02"
+}

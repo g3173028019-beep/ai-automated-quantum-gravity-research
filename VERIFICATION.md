@@ -1,5 +1,13 @@
 # Verification record
 
+## Priority manuscript delivery, 29 October 2026
+
+The three added PDFs are byte-identical to the completed research editions: Maxwell 11 pages, clock-foliated reference model 11 pages, and Einstein–scalar 10 pages. Both terminal LaTeX and the desktop compiler had succeeded, and all 32 pages were visually inspected, with selected proof, matrix and resource pages inspected at readable resolution. This delivery reuses that unaffected evidence instead of rebuilding the papers.
+
+Each compact package is replayed from its final repository location. Maxwell uses a bundled extraction of its two accepted reference fields; the remaining inputs are algebraic. The checks cover 23 clock/resource assertions, exact reference-model constraints and harmonic positivity with covariance/evolution checks, 42 mixed-quartic checks, and 14 finite-backreaction identities. These are portability replays of completed calculations, not new independent scientific review. See each packet's VERIFICATION.md for the inherited assumptions and exact coverage.
+
+The previous five paper directories are compared with their pre-delivery SHA-256 manifest. New packet text, PDF metadata, cross-references and bibliography coverage are included in archive-checks.json. Byte-preserving Git attributes retain the packaged input and output hashes. No human expert review or comprehensive novelty certification is asserted.
+
 ## Delivery of 29 October 2026
 
 The three new manuscripts compiled with pdfLaTeX, BibTeX and latexmk to six pages each. Their final logs contain no unresolved references, citations or overfull boxes. The integrated review inspected all 18 rendered pages in contact sheets and selected equation, table and disclosure pages at readable resolution. No clipping, overlap or unresolved-reference markers were found. Human bylines and PDF author metadata are empty.

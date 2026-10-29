@@ -1,0 +1,575 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage{microtype}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Positive-energy local clocks for a weighted Maxwell geometry-mediated gate},pdfauthor={}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\Hil}{\mathcal H}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\sd}{\operatorname{sd}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\Lip}{\operatorname{Lip}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\Id}{\mathbf 1}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\title{Positive-energy local clocks for a weighted\\Maxwell geometry-mediated gate}
+\author{}
+\date{29 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We construct an autonomous local apparatus for an entangling echo in a completed Einstein--Maxwell/Bianchi reduced model.
+Two weighted logical echoes close the conditional geometric displacement and retain a nonzero Magnus phase.
+We implement each party's pulses with independent positive-energy quadratic clocks, each prepared to focus at one event.
+All apparatus interactions are local to one logical party and its own clock, independent of geometry, and time independent.
+A full interacting Duhamel comparison bounds timing uncertainty, dispersion, finite pulses and clock backreaction.
+A single explicitly charged initial total-energy spectral resource gives exact positive-dust support thereafter.
+At a finite point including all four clock rest energies, the reduced original matter qubits obey $D(\rho_{AB},\rho_{\mathrm{Bell}})<0.04014$ and negativity $N(\rho_{AB})>0.459$, with a total dust-energy gap above $0.459E_0$.
+The apparatus costs $0.08E_0$ in rest energy and approximately $4\times10^{-6}E_0$ in kinetic energy, but requires very large volume, propagation time and correlated incoming packets.
+The result assumes exact Newtonian clock dispersion and a specified enlarged reduced Hamiltonian; a covariant apparatus stress tensor, a local initial preparation instrument and a laboratory realization are not established.
+\end{abstract}
+
+\section{Result and physical scope}
+
+A closed conditional displacement loop can leave an entangling phase while eliminating the final dependence on a mediator's initial state.
+This general mechanism is established in quantum control, including motion-mediated trapped-ion gates~\cite{SorensenMolmer1999}.
+For an expanding geometry the force is time dependent, and an equal-quarter echo fails to close the relevant loop.
+A separate problem is energetic: a local pulse changing matter energy need not preserve the exact negative spectral support required by a positive-dust convention.
+Compressing every pulse by a joint energy projector resolves that mathematical support problem, but produces a geometry-dependent joint control.
+
+The present construction removes that projector from the control Hamiltonian.
+Four independent clocks, one per party per pulse, generate local interactions under one time-independent Hamiltonian.
+Their energies are quadratic and positive, and the main example pays all four rest energies as well.
+Each packet focuses only at the event it must resolve.
+This uses broad, correlated incoming states rather than assuming that a free packet stays narrow throughout the gate.
+Quantum-clock accuracy, preparation and energy are longstanding physical issues~\cite{SaleckerWigner1958}; the particular finite-time bound used here is derived below.
+
+We use $\hbar=1$ and the inherited reduced-model units, with trace distance $D(\rho,\sigma)=\frac12\norm{\rho-\sigma}_1$ and negativity $N(\rho)=(\norm{\rho^{T_B}}_1-1)/2$~\cite{VidalWerner2002}.
+The main finite conclusion is as follows.
+
+\begin{theorem}[Rest-energy-inclusive autonomous local gate]\label{thm:main}
+For the completed model, specific source and autonomous apparatus of Sections~\ref{sec:model}--\ref{sec:filter}, choose
+\[
+ A=\tfrac12,\quad B_{\rm sh}=\tfrac29,\quad\delta=.03,\quad
+ \nu=10^{-42},\quad\alpha=10^{-6},\quad
+ \epsilon=.001,\quad c=10^{14},\quad v=.01c_{\rm light}.
+\]
+Include $Mc_{\rm light}^2$ in each apparatus Hamiltonian and use the initial joint spectral resource in Eq.~\eqref{eq:filter}.
+At time $T$, after tracing out geometry and all clocks, the original matter qubits satisfy
+\begin{equation}
+ D(\rho_{AB},\rho_{\rm Bell\ orbit})<.04014,
+ \qquad N(\rho_{AB})>.459.\label{eq:mainclaim}
+\end{equation}
+The exact evolving support has $-\Hil>.459E_0$ at every time.
+All four complete apparatus Hamiltonians are nonnegative, with total rest energy $.08E_0$.
+\end{theorem}
+
+This is a specified-source theorem in an enlarged reduced model.
+The initial spectral preparation is still a joint resource and is included in the output error.
+It is not a deterministic preparation channel for arbitrary unknown qubits.
+Locality means locality in the logical-party tensor factors; a spacetime-local physical instrument for manipulating the underlying flux code is not supplied.
+The clocks assume exact quadratic dispersion.
+Adding rest energy does not establish a uniformly small relativistic-dispersion error over the extremely long propagation interval.
+
+\section{Completed model and explicit seed}\label{sec:model}
+
+\subsection{Geometry, finite code and self-adjoint completion}
+
+The diagonal Bianchi-I geometry has $q=a_F^{3/2}>0$ and two shape coordinates $\beta=(\beta_+,\beta_-)$, with
+\[
+ \beta_1=\beta_++\sqrt3\beta_-,\quad
+ \beta_2=\beta_+-\sqrt3\beta_-,\quad\beta_3=-2\beta_+.
+\]
+Each matter party is a two-state equal-triplet electric-flux code.
+The projectors $F_A,F_B$ have eigenvalues $0,1$ and commute.
+The excited logical state has equal flux on the three marked spatial axes.
+Logical flips are stipulated operators satisfying $X_jF_jX_j=1-F_j$.
+No additional photon modes or leakage sectors are introduced.
+
+The trusted-region Hamiltonian on flattened measure $dq\,d^2\beta$ is
+\begin{align}
+ H={}&-Ap_q^2+B_{\rm sh}q^{-2}P_\beta^2
+ +\delta(F_A+F_B)q^{-2/3}S(\beta)+\zeta q^{-2},\label{eq:Htrusted}\\
+ S(\beta)={}&\tfrac13\left[e^{2(\beta_++\sqrt3\beta_-)}
+ +e^{2(\beta_+-\sqrt3\beta_-)}+e^{-4\beta_+}\right],\quad
+ P_\beta^2=p_+^2+p_-^2.\label{eq:shape}
+\end{align}
+Fix $A=1/2$, $B_{\rm sh}=2/9$, $\delta=.03$, $C_{\max}=2\delta=.06$, $|\zeta|\le10$, and a Dirichlet radial endpoint.
+The negative gravitational kinetic term is retained.
+The dust-time constraint is $P_T+\Hil=0$; positive dust energy requires negative total spectral support, rather than only negative mean energy.
+
+For each finite $Q$, choose a smooth positive $r_Q$ equal to $q$ above $Q/4$, constant $Q/8$ below $Q/8$, and bounded below by $Q/8$.
+Replace inverse radial powers by powers of $r_Q$.
+Choose a smooth $\widetilde S$ equal to $S$ for $|\beta|\le1/8$, equal to $1$ for $|\beta|\ge1/4$, and bounded by $0<\widetilde S\le3$.
+A smooth convex interpolation satisfies the last condition because each exponential in the transition region is below $e<3$.
+The completed operator agrees with Eq.~\eqref{eq:Htrusted} on the full cutoff comparison path and has the finite-code norm bound
+\begin{equation}
+ \norm{V_m}\le V_*:=12C_{\max}Q^{-2/3}.\label{eq:Vstar}
+\end{equation}
+
+The gravity/shear part is defined by Fourier transformation in $\beta$.
+At each finite shape momentum it is the Dirichlet negative free-particle generator plus a bounded real radial potential.
+The resulting measurable direct integral is self-adjoint; completed matter and ordering terms are bounded perturbations on the finite code.
+This specifies the self-adjoint $H$.
+It is an operator-level reduced completion, not a derivation from a covariant ultraviolet action.
+The completion depends on $Q$, so the result is a resource-dependent family rather than one fixed completed Hamiltonian for every $\nu$.
+
+\subsection{Radial and genuine quantum shape source}
+
+Let $\bar q(t)=Q(1+t/T)$ and $p_q^{(0)}=-Q/(2AT)$.
+The uncut pure radial Gaussian has mean $(Q,p_q^{(0)})$ and covariance
+\begin{equation}
+ \Sigma_q(0)=\begin{pmatrix}AT&1/2\\1/2&1/(2AT)\end{pmatrix},
+ \qquad\det\Sigma_q=1/4.\label{eq:radialcov}
+\end{equation}
+An explicit wavefunction is
+\[
+ G(q,0)=(2\pi AT)^{-1/4}
+ \exp\left[-\frac{(q-Q)^2}{4AT}
+ +\ii p_q^{(0)}(q-Q)+\frac{\ii(q-Q)^2}{4AT}\right].
+\]
+Multiply by a real $C^2$ cutoff $\chi_q$, zero below $Q/4$ and one above $Q/2$, and normalize.
+For instance use $10u^3-15u^4+6u^5$, $u=4q/Q-1$, on the transition interval.
+It has $|\chi_q'|\le8/Q$ and $|\chi_q''|\le100/Q^2$.
+The cutoff is a source and comparison function, not a new physical wall at $Q/4$.
+
+Each shape coordinate has the normalized compact wavefunction
+\begin{equation}
+ \chi_w(b)=\frac2{\sqrt{3w}}\cos^2\left(\frac{\pi b}{2w}\right)\Id_{|b|\le w},
+ \qquad\chi_\beta=\chi_w(\beta_+)\chi_w(\beta_-).\label{eq:shapechi}
+\end{equation}
+It and its first derivative vanish at the endpoints, so the zero extension is in $H^2$ without delta functions in its weak second derivative.
+The matter seed is $|++\rangle$, with $|+\rangle=(|0\rangle+|1\rangle)/\sqrt2$.
+Their tensor product with the normalized radial seed is denoted $\psi_s$.
+
+Exact reference norms needed below are
+\begin{align}
+ \norm{P_\beta^2\chi_\beta}&=D_p/w^2,&D_p&=2\sqrt2\pi^2/3,\label{eq:shapemom}\\
+ \norm{|\beta|^2\chi_\beta}&=\sqrt{2m_4+2m_2^2}\,w^2<.22w^2,\nonumber\\
+ m_2&=\tfrac13-\tfrac5{2\pi^2},&
+ m_4&=\tfrac15-\tfrac5{\pi^2}+\tfrac{63}{2\pi^4}.
+\end{align}
+The exponent vectors of $S$ have length four, sum zero and averaged outer product $8I$.
+Consequently $S\ge1$ and, on the compact shape support,
+\begin{equation}
+ S-1\le4e^{4\sqrt2w}|\beta|^2.\label{eq:hessian}
+\end{equation}
+The shape state has finite width and nonzero momentum uncertainty.
+Only the reference path holds it fixed; true shape evolution is charged as a residual.
+
+\section{Weighted echo and nonzero mixed phase}\label{sec:echo}
+
+Define $Q_c=F_A+F_B-1$ and $G=X_AX_B$, so $GQ_cG=-Q_c$.
+Two product pulses give the toggling coefficient
+\begin{equation}
+ C_y(t)=\delta[1+y(t)Q_c],\qquad y=+1,-1,+1,\label{eq:Ctoggle}
+\end{equation}
+with switches $t_j=x_jT$.
+Physical branch coefficients remain $0,\delta,2\delta$.
+There is no independently available negative Maxwell coupling.
+The identity coefficient $\delta$ drives common recoil and remains in all estimates.
+
+In the free gravitational interaction picture,
+\begin{equation}
+ \xi(t)=\xi-2Atp_q,\quad [\xi(t),\xi(s)]=2\ii A(t-s),\quad
+ f_q(t)=-\tfrac23Q^{-5/3}(1+t/T)^{-5/3}.\label{eq:linearforce}
+\end{equation}
+The conditional linear force is $\delta y(t)Q_cf_q(t)\xi(t)$.
+Closure requires both weighted moments
+\begin{equation}
+ \int_0^Tf_q(t)y(t)\,dt=0,\qquad
+ \int_0^Ttf_q(t)y(t)\,dt=0.\label{eq:closure}
+\end{equation}
+They cancel the conditional displacement as an operator and hence remove linear-reference mediator dephasing for arbitrary initial mediator states where the propagator is defined.
+
+Set $x=t/T$, $g_0(x)=(1+x)^{-5/3}$, $h=2^{1/3}$, $z_j=(1+x_j)^{1/3}$.
+The middle interval must contain half of both weighted moments.
+Their primitives give
+\begin{equation}
+ z_2-z_1=\frac{h-1}{2},\qquad
+ z_1^{-2}-z_2^{-2}=\frac{1-h^{-2}}2.\label{eq:switchroots}
+\end{equation}
+After eliminating $z_2$, the remaining positive-root equation is strictly decreasing and has a unique admissible solution.
+It gives
+\begin{equation}
+ x_1=.1826174653426328\ldots,\qquad x_2=.6744044056359246\ldots.\label{eq:switches}
+\end{equation}
+Equal quarter switches instead leave moments about $.035574$ and $-.022933$.
+
+Let $H_y(x)=\int_0^xg_0(u)y(u)\,du$.
+The signed Magnus integral obeys
+\begin{align}
+ J_y&=\int_{0<s<t<1}(t-s)g_0(t)y(t)g_0(s)y(s)\,ds\,dt\nonumber\\
+ &=-\int_0^1H_y(x)^2\,dx=-I_y<0.\label{eq:Magnus}
+\end{align}
+Integration by parts uses $H_y(1)=0$ and fixes the phase sign without a numerical fit.
+On each interval $H_y=C+D/z^2$, and an antiderivative of its square is $C^2z^3+6CDz-3D^2/z$.
+Thus
+\begin{equation}
+ I_y=.00620146629819\ldots,\qquad
+ b=\tfrac89I_y=.00551241448728\ldots,\qquad
+ \Phi_{\rm echo}=-bA\delta^2T^3/Q^{10/3}.\label{eq:phase}
+\end{equation}
+The identity force leaves a common mediator displacement and global or party-local phases.
+The nonlocal curvature survives because $Q_c^2=1-F_A-F_B+2F_AF_B$.
+As an independent check, the complete branch double integrals for $Q_c=-1,0,1$ are approximately $.02505554,.04977946,.06210045$, with second difference $-2I_y$.
+At $|\Phi_{\rm echo}|=\pi$, removing only local and global phases leaves branch phases $(\pi/2,0,\pi/2)$ and gives a Bell orbit from $|++\rangle$.
+
+Choose
+\begin{equation}
+ \nu=AT/Q^2,\quad Q=\left[\frac{\pi A^2}{b\delta^2\nu^3}\right]^{3/8},\quad
+ T=\nu Q^2/A,\quad w=\nu^{3/8},\quad E_0=\frac1{4\nu T}.\label{eq:scales}
+\end{equation}
+Exact arbitrary-source closure is a statement about the linear reference.
+The nonlinear comparison uses the specific Gaussian/compact-shape seed above.
+
+\section{Nonlinear and source graph estimates}\label{sec:nonlinear}
+
+We state the full analytic constants needed for joining the apparatus and describe their derivation.
+Put
+\begin{equation}
+ k=2\sqrt{\pi/b},\quad M_q=\tfrac23k,\quad
+ R_2=\sqrt{M_q^4+6M_q^2+3},\quad R_0=10+50k.\label{eq:constants}
+\end{equation}
+The recoil coefficient $M_q$ is distinct from the clock mass $M$.
+Numerically $k\simeq47.746$, $R_2\simeq1016.175$ and $R_0\simeq2397.284$.
+Take $0<\nu\le10^{-12}$ in this section.
+
+\begin{proposition}[Specific-seed continuum comparison]\label{prop:nonlinear}
+For the instantaneous weighted echo on the completed model, the vector-norm comparison with the linear-reference gate is at most
+\begin{equation}
+ \eta_{\rm dyn}\le K_\beta\nu^{1/4}+K_r\sqrt\nu+640\nu,\label{eq:dyn}
+\end{equation}
+where
+\begin{align}
+ K_\beta&=2\frac{B_{\rm sh}}A16D_p
+  +2\,4^{2/3}4(1.001)(.22)k<344.301,\label{eq:Kbeta}\\
+ K_r&=2\tfrac59\,4^{8/3}kR_2+1<2173469.\label{eq:Kr}
+\end{align}
+The initial seed obeys
+\begin{equation}
+ \norm{(H+E_0)\psi_s}/E_0\le R_0\sqrt\nu.\label{eq:seedgraph}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For every flux branch, including the identity force, $0\le C_y\le C_{\max}$ and the forced free-radial Gaussian satisfies
+\[
+ |\mu_q(t)-\bar q(t)|\le M_q\sqrt\nu Q,\qquad\sigma_q(t)\le\sqrt\nu Q.
+\]
+The mean bound follows by twice integrating the bounded linear force with gravitational response $2A(t-s)$.
+The fourth Gaussian moment then gives $\norm{\xi^2G_c(t)}\le R_2\nu Q^2$.
+Taylor's theorem on the cutoff support gives
+\[
+ |q^{-2/3}-\bar q^{-2/3}-f_q(t)\xi|
+ \le\tfrac59\,4^{8/3}Q^{-8/3}\xi^2.
+\]
+Time integration, $C_{\max}=2\delta$, Eq.~\eqref{eq:scales}, and a factor at most two for cutoff normalization yield the first term in $K_r\sqrt\nu$.
+The full physical coefficient is used, not only its signed centered part.
+
+On this same path, $q^{-2}\le16Q^{-2}$ and $q^{-2/3}\le4^{2/3}Q^{-2/3}$.
+Equations~\eqref{eq:shapemom}--\eqref{eq:hessian}, $w^2=\nu^{3/4}$ and $e^{4\sqrt2w}<1.001$ give the two contributions in $K_\beta\nu^{1/4}$.
+The first is actual shear evolution; the second bounds the complete shape potential, including higher powers through its Hessian bound.
+The integrated ordering residual is at most $640\nu$.
+
+The reference mean stays above $.999Q$, while the cutoff transition ends at $Q/2$.
+Its Gaussian tail norm is at most $e^{-1/(20\nu)}$, with momentum-weighted tail at most $6|p_q^{(0)}|e^{-1/(40\nu)}$.
+The cutoff commutator and endpoint normalization costs together are below $200e^{-1/(40\nu)}$.
+The elementary inequality $e^{-1/(40\nu)}\le16!(40\nu)^{16}$ makes this smaller than the coefficient-one $\sqrt\nu$ allowance in $K_r$ over the full stated interval.
+All cutoff-path derivatives lie in the region where the completed operator matches the trusted expression.
+Duhamel's residual formula proves Eq.~\eqref{eq:dyn}.
+
+For the source graph, the free-radial Gaussian contribution divided by $E_0$ is at most $2\sqrt2\sqrt\nu+2\sqrt3\nu$.
+Cutoff normalization and its source commutator are bounded by
+\[
+ 2\left[2\sqrt2\sqrt\nu+2\sqrt3\nu
+       +32\nu+64\nu^{3/2}+400\nu^2\right].
+\]
+The global completed matter bound contributes $48k\sqrt\nu$.
+The remaining seed shear and ordering contributions are at most $265\nu^{5/4}+1280\nu^2$.
+Their sum is below $(10+50k)\sqrt\nu$ for $\nu\le10^{-12}$.
+\end{proof}
+
+These estimates apply to a continuum comparison rather than a discretized trajectory.
+They include genuine quantum shape dynamics and retain the common identity force.
+They provide no actual inverse-volume, separate kinetic-energy or curvature-moment bound from trace closeness.
+Arbitrary higher-derivative corrections acting on the same path would require new assumptions.
+
+\section{Positive-energy local autonomous apparatus}\label{sec:clocks}
+
+\subsection{Hamiltonian and initial energy}
+
+For $r=(j,l)$, $j=A,B$, $l=1,2$, introduce independent canonical clock coordinates $(Q_r,P_r)$ on the full real line.
+They are internal apparatus coordinates, not the radial geometry $q$.
+Choose $M>0$, $p_c>0$, $E_c=p_c^2/(2M)=\alpha E_0$ and $v=p_c/M$.
+Let
+\begin{align}
+ f(s)&=\begin{cases}1+\cos(2\pi s),&|s|\le1/2,\\0,&|s|>1/2,\end{cases}\nonumber\\
+ g(Q)&=\frac\pi{2\tau}f\left(\frac Q{v\tau}\right),\quad
+ g_{\max}=\frac\pi\tau,\quad c=E_0\tau.\label{eq:pulse}
+\end{align}
+Then $\int f=1$, $0\le f\le2$ and $\Lip(f)=2\pi$.
+The rest-energy-inclusive apparatus and total Hamiltonians are
+\begin{equation}
+ h_r=Mc_{\rm light}^2+\frac{P_r^2}{2M}+g(Q_r)X_j+g_{\max}I,
+ \qquad\Hil=H+\sum_{r=1}^4h_r.\label{eq:autonomous}
+\end{equation}
+Since the logical $X_j$ has eigenvalues $\pm1$,
+\begin{equation}
+ h_r\ge Mc_{\rm light}^2+P_r^2/(2M)+g_{\max}-g(Q_r)\ge0.\label{eq:apppos}
+\end{equation}
+The offset is explicitly charged, rather than hidden in the choice of energy zero.
+There is no unbounded-sign linear-momentum clock.
+Each interaction acts only on its own party and clock, contains no geometry operator, has no A--B control term and no time argument.
+The tensor sum of $H$ and the free kinetic operators is self-adjoint by its spectral construction, and the bounded control terms preserve self-adjointness.
+
+\subsection{Independently focused one-shot packets}
+
+Let $\sigma_p=\epsilon p_c$.
+An incoming packet focusing at $t_l=x_lT$ is specified in momentum space by
+\begin{equation}
+ \widetilde\chi_l(p,0)=(2\pi\sigma_p^2)^{-1/4}
+ e^{-(p-p_c)^2/(4\sigma_p^2)}e^{+\ii p^2t_l/(2M)}.\label{eq:clockpacket}
+\end{equation}
+Free propagation cancels the positive chirp at the event.
+At that time the packet is centered at $Q=0$, with minimum-uncertainty width $\sigma_*=1/(2\epsilon p_c)$.
+The parties receive independent copies.
+For free propagation,
+\begin{align}
+ \bar Q(t)&=v(t-t_l),\nonumber\\
+ \sigma_Q(t)^2&=\sigma_*^2+\sigma_p^2(t-t_l)^2/M^2,
+ &\Cov(Q,P)_{t=0}&=-t_l\sigma_p^2/M.\label{eq:clockspread}
+\end{align}
+The initially broad correlated state is not assumed dispersion free.
+Its exact kinetic moments are
+\begin{equation}
+ \langle K_r\rangle=\alpha E_0(1+\epsilon^2),\qquad
+ \sd(K_r)=\alpha E_0\sqrt{4\epsilon^2+2\epsilon^4}.\label{eq:clockenergy}
+\end{equation}
+With $s=(t-t_l)/\tau$, the free rescaled position has distribution
+\begin{equation}
+ Q(t)/(v\tau)\sim N(s,d(s)^2),\quad
+ d(s)^2=a^2+\epsilon^2s^2,\quad a=\frac1{4\epsilon\alpha c}.\label{eq:scaledspread}
+\end{equation}
+The focus timing width is $a\tau$, and the window-edge width is $\tau\sqrt{a^2+\epsilon^2/4}$.
+Using a different clock at each event avoids requiring one free packet to stay narrow over the two-event separation.
+The required initial position coherence and chirp are part of the resource specification.
+
+\section{Full interacting clock comparison}\label{sec:clockerror}
+
+\begin{proposition}[Finite-time autonomous error]\label{prop:clock}
+For $a\le\epsilon$ and $T/\tau\ge1$, the product-seed autonomous evolution differs in vector norm from the reference with freely evolved clocks and deterministic controls $g(v(t-t_l))X_j$ by at most
+\begin{equation}
+ \delta_{\rm clock}\le4\pi^2(2a+\epsilon)
+ +16\pi(2\pi)^{-1/4}\epsilon^{-1/2}\sqrt{T/\tau}
+ e^{-1/(32\epsilon^2)}.\label{eq:clockbound}
+\end{equation}
+The bound holds at every time up to $T$.
+\end{proposition}
+
+\begin{proof}
+Include the common rest and offset constants in both evolutions.
+The reference remains a tensor product of driven geometry/matter and free clocks.
+The Hamiltonian difference is $\sum_r[g(Q_r)-g(v(t-t_l))]X_j$.
+Duhamel's formula and $\norm{X_j}=1$ give
+\begin{equation}
+ \delta_{\rm clock}\le\sum_{r=1}^4\frac\pi2\int e(s)\,ds,
+ \quad e(s)=\left\{\mathbb E[f(s+d(s)Z)-f(s)]^2\right\}^{1/2},
+ \quad Z\sim N(0,1).\label{eq:exactclockintegral}
+\end{equation}
+For $|s|\le1$, Lipschitz continuity gives $e(s)\le2\pi d(s)$.
+Using $d(s)\le a+\epsilon|s|$ bounds its integral by $2\pi(2a+\epsilon)$.
+For $|s|\ge1$ the reference window vanishes and $\epsilon|s|\le d(s)\le\sqrt2\epsilon|s|$.
+The Gaussian density on the support $[-1/2,1/2]$ therefore gives
+\[
+ \Pr(|s+d(s)Z|\le1/2)
+ \le\frac{e^{-1/(16\epsilon^2)}}{\sqrt{2\pi}\epsilon|s|},
+\]
+and hence $e(s)\le2(2\pi)^{-1/4}\epsilon^{-1/2}|s|^{-1/2}e^{-1/(32\epsilon^2)}$.
+Every actual integration range lies in $[-T/\tau,T/\tau]$.
+Integrating both outer tails and multiplying by the four $\pi/2$ factors proves the bound.
+\end{proof}
+
+This compares the full interacting autonomous Hamiltonian with the reference.
+It already includes timing spread, pulse-area errors, packet distortion, clock feedback and reflected amplitude.
+Free propagation is used in the comparison state, not assumed for the exact interacting clock.
+The outer term is a finite-$T$ tail; no uniform infinite-time scattering theorem is claimed.
+
+The deterministic pulse has area $\pi/2$ and implements $-\ii X_j$ without drift.
+It is even about the event, placing its half-angle at the specified switching center.
+In its local toggling frame the geometry Hamiltonian is unchanged, while the difference between the rotated matter potential and the instantaneous-echo potential is bounded by $V_*$ within each duration-$\tau$ window.
+Thus the finite-pulse comparison is
+\begin{equation}
+ \delta_{\rm finite}\le2\tau V_*=96ck\sqrt\nu,
+ \qquad V_*/E_0=48k\sqrt\nu.\label{eq:finitepulse}
+\end{equation}
+No small-drift assumption concerning the unbounded geometry Hamiltonian is used here.
+The new construction can enlarge $c$ to resolve the positive-energy clocks and decrease $\nu$ to pay the finite-pulse cost.
+
+\section{One initial spectral resource and exact dust support}\label{sec:filter}
+
+Let $\Psi_s$ be the product of $\psi_s$ with all four packets.
+Define the full rest cost and two energy parameters by
+\begin{align}
+ \rho_{\rm rest}&=4Mc_{\rm light}^2/E_0,\nonumber\\
+ \beta_0&=1-4\alpha(1+\epsilon^2)-4\pi/c-\rho_{\rm rest}>0,\label{eq:beta}\\
+ r_0&=R_0\sqrt\nu+2\alpha\sqrt{4\epsilon^2+2\epsilon^4}+4\pi/c.\label{eq:r}
+\end{align}
+The four independent kinetic fluctuations add in quadrature, while their means and all positive constants are charged in $\beta_0$.
+The initial interaction norm is at most $4\pi E_0/c$, without requiring its Gaussian tails to vanish.
+Equation~\eqref{eq:seedgraph} implies
+\begin{equation}
+ \norm{(\Hil+\beta_0E_0)\Psi_s}\le r_0E_0.\label{eq:totalgraph}
+\end{equation}
+
+Specify the prepared resource as
+\begin{equation}
+ P_{\rm aut}=\Id_{(-\infty,-\beta_0E_0/2]}(\Hil),\qquad
+ \Psi_0=\frac{P_{\rm aut}\Psi_s}{\norm{P_{\rm aut}\Psi_s}}.\label{eq:filter}
+\end{equation}
+On its complementary spectrum $|\Hil+\beta_0E_0|\ge\beta_0E_0/2$.
+The spectral theorem gives
+\begin{equation}
+ D_{\rm src}:=D(|\Psi_0\rangle\langle\Psi_0|,|\Psi_s\rangle\langle\Psi_s|)
+ =\norm{(1-P_{\rm aut})\Psi_s}\le2r_0/\beta_0,
+ \qquad p_{\rm fail}\le(2r_0/\beta_0)^2.\label{eq:sourcebound}
+\end{equation}
+The pure-state trace distance is exactly the discarded amplitude; no extra normalization factor belongs in this formula.
+The corresponding vector distance is at most $\sqrt2D_{\rm src}$.
+
+Time independence implies $[\Hil,P_{\rm aut}]=0$, hence
+\begin{equation}
+ -\Hil\ge\beta_0E_0/2>0\quad\text{on the actual evolving support}.\label{eq:dustgap}
+\end{equation}
+No projector is used in subsequent control or propagation and there is no repeated postselection.
+This is exact spectral support, not an inference from a negative mean or norm approximation.
+The conserved full-Hamiltonian root mean square is bounded directly by
+\begin{equation}
+ \norm{\Hil\Psi_0}\le
+ \frac{(\beta_0+r_0)E_0}{\sqrt{1-(2r_0/\beta_0)^2}}.\label{eq:fullrms}
+\end{equation}
+
+The preparation can correlate geometry, matter and clocks.
+Its possible contribution to output entanglement is nevertheless charged by $D_{\rm src}$.
+It is still a joint instrument assumption, not a local source factory.
+If only the product seed is used, the gate comparison drops this source charge but exact positive-dust support is replaced by the spectral failure-probability bound.
+
+For an additional bounded diagnostic, the free reference probability of any negative clock momentum is at most $p_-=4e^{-1/(2\epsilon^2)}$.
+Applying the corresponding projector to the vector comparison shows that, at every fixed time through the gate,
+\begin{equation}
+ \Pr_{\rm actual}(\exists r:P_r<0)
+ \le\left(\sqrt{p_-}+\sqrt2D_{\rm src}+\delta_{\rm clock}\right)^2.\label{eq:reflection}
+\end{equation}
+This includes initial preparation and interaction-induced reflected or negative-momentum amplitude.
+It is not an asymptotic reflection coefficient or an unbounded kinetic-energy moment inferred from trace closeness.
+
+\section{Finite error and energy ledger}\label{sec:numerics}
+
+The nonlinear echo, local finite pulses and exact autonomous clock comparisons combine with source contractivity and partial trace to give
+\begin{equation}
+ D(\rho_{AB},\rho_{\rm Bell\ orbit})
+ \le\eta_{\rm dyn}+\delta_{\rm finite}+\delta_{\rm clock}+D_{\rm src}
+ =:\Delta.\label{eq:totalerror}
+\end{equation}
+The clocks are discarded, not retained as part of the output parties.
+Let $W$ be the partial transpose of the projector onto a negative eigenvector of the ideal Bell-orbit partial transpose.
+It has spectral range one and ideal expectation $-1/2$.
+Its actual expectation is at most $-1/2+\Delta$, and negativity bounds the magnitude of this negative witness expectation.
+Therefore
+\begin{equation}
+ N(\rho_{AB})\ge\tfrac12-\Delta.\label{eq:negativity}
+\end{equation}
+
+At the point of Theorem~\ref{thm:main}, put $c_{\rm light}=1$ and $M=2\alpha E_0/v^2$.
+Then $\rho_{\rm rest}=8\alpha/v^2=.08$ and the finite scales are
+\begin{align}
+ Q&\simeq1.58\times10^{49},&T&\simeq5.02\times10^{56},&E_0&\simeq4.98\times10^{-16},\nonumber\\
+ \tau&\simeq2.01\times10^{29},&\tau/T&=4\times10^{-28},&M&\simeq9.96\times10^{-18}.\label{eq:resources}
+\end{align}
+The four mean kinetic energies total $4.000004\times10^{-6}E_0$.
+Positive offsets total less than $1.26\times10^{-13}E_0$.
+We obtain $\beta_0\simeq.919996$, $r_0\simeq4.00\times10^{-9}$, failure probability below $7.57\times10^{-17}$, exact dust gap above $.459E_0$, and conserved total-Hamiltonian root mean square below $.921E_0$.
+
+Table~\ref{tab:errors} lists all output charges.
+The positive outer clock tail has natural logarithm below $-31211$ and remains in the analytic bound even when its machine exponential underflows.
+The conservatively rounded total is below $.04014$.
+Equation~\eqref{eq:negativity} proves Theorem~\ref{thm:main}.
+
+\begin{table}[htbp]
+\centering
+\caption{Analytic trace-distance charges at the rest-energy-inclusive point.}
+\label{tab:errors}
+\begin{tabular}{@{}lr@{}}
+\toprule
+Contribution&Upper evaluated bound\\
+\midrule
+Genuine shape and shear&$1.089\times10^{-8}$\\
+Radial nonlinearity and cutoff&$2.174\times10^{-15}$\\
+Ordering&$6.4\times10^{-40}$\\
+Initial total spectral resource&$8.696\times10^{-9}$\\
+Finite local pulses&$.000458359$\\
+Clock timing, dispersion and backreaction&$.039675810$\\
+\midrule
+Total&$<.04014$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Each clock has $p_c\simeq9.96\times10^{-20}$, $\sigma_p\simeq9.96\times10^{-23}$ and focused position width $\sigma_*\simeq5.02\times10^{21}$.
+The focused timing width is $2.5\times10^{-6}\tau$, rising to less than $.00050001\tau$ at a window edge.
+The two event families have initial position means about $-9.17\times10^{53}$ and $-3.39\times10^{54}$, with widths about $9.17\times10^{50}$ and $3.39\times10^{51}$.
+Their correlations are fixed by Eq.~\eqref{eq:clockspread}.
+The initial coherence resources are large even though their energetic fractions are small.
+The single-clock peak ratio is $g_{\max}/E_c=\pi/(\alpha c)\simeq3.14\times10^{-8}$.
+The rigorous negative-momentum bound in Eq.~\eqref{eq:reflection} is below $.001575$; no frozen-$X$ classical barrier approximation is used in the theorem.
+
+A second, shorter purely reduced-kinetic point is kept separately in the calculation, without an assigned physical rest-mass term: $\nu=10^{-28}$, $\alpha=.05$, $\epsilon=.001$, $c=10^8$, $M=1$.
+For that distinct energy convention, $\Delta<.04855$, $N>.451$ and the dust gap exceeds $.399E_0$, with $Q\simeq2.82\times10^{33}$, $T\simeq1.59\times10^{39}$.
+The rest-inclusive theorem is not obtained by treating that $M=1$ rest energy as free; both its mass and its resource point are changed explicitly.
+
+\section{Verification, interpretation and limitations}
+
+The accompanying executable evaluates all error and energy formulas, Gaussian moments, pulse areas and local unitary endpoints, positive reserve and tail regimes, applicability of the nonlinear comparison and the output entanglement margin.
+Twenty-three checks pass using Python 3.11.15, NumPy 2.4.3 and SciPy 1.17.1.
+For the shorter point, Hermite quadrature of Eq.~\eqref{eq:exactclockintegral} at orders 64 and 128 gives single-clock integrated errors $.00102610224930$ and $.00102610224942$.
+The corresponding four-clock diagnostic is about $.00645$, below that point's analytic $.04343$ bound.
+The theorem keeps the conservative analytic result rather than substituting the quadrature estimate.
+Displayed margins use conservative decimal rounding of double-precision evaluations, not a new outward-interval or formal proof-assistant certificate.
+
+The dynamical control compression has been replaced by explicit positive-energy local clocks.
+The replacement costs independent event-focused states, longer pulses and much larger geometry and incoming coherence resources.
+The remaining initial joint spectral preparation is fully charged, but not implemented operationally.
+Exact positivity concerns the enlarged $\Hil$, not separate negative spectral support of the old background $H$ during energy exchange.
+
+The complete apparatus model is reduced and assumes exact Newtonian dispersion, even when rest energies are paid.
+A small $v/c_{\rm light}$ alone does not control the accumulated difference from relativistic propagation over the enormous $T$ in Eq.~\eqref{eq:resources}.
+No uniform relativistic approximation or fully covariant clock stress tensor is asserted.
+The fixed local potentials are ideal closed-system interactions; a microscopic substrate, concurrent bath and flux-control implementation have not been supplied.
+The initial source is specified, not generated by a local factory, and the theorem is not an unknown-input quantum channel.
+The model is not full photon quantum field theory, and neither a laboratory feasibility verdict nor a universal originality claim follows.
+
+Within these explicit assumptions, Eqs.~\eqref{eq:apppos}, \eqref{eq:clockbound}, \eqref{eq:dustgap} and \eqref{eq:totalerror} establish a finite autonomous construction with positive apparatus energy, exact total dust support and useful entanglement in the original matter qubits.
+
+\section*{Provenance and attribution}
+
+This paper assembles retained analytic work and the local continuation completed on 29 October 2026, Beijing time.
+This is the manuscript assembly and continuation date, separate from earlier historical work and public disclosure.
+No public submission is asserted.
+The operator reports that earlier work was Fable 5-led and that results from July 2026 onward were predominantly produced by GPT models, with DeepSeek and multiple GPT models participating in cross-review and preparation.
+The present construction and manuscript are GPT-led, including a separate Astra design derivation and computational self-verification.
+No human expert review has occurred.
+Human author names, affiliations and PDF author metadata are intentionally blank.
+The operator's uncertainty is preserved verbatim:
+\begin{quote}
+``I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.''
+\end{quote}
+
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+\end{document}

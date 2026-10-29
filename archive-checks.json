@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-28T18:28:12.077790+00:00",
+  "checked_at_utc": "2026-10-29T00:18:54.216806+00:00",
   "kind": "English manuscript build and archive checks",
   "human_expert_review": false,
   "historical_Wolfram_scripts_rerun": false,
@@ -33,6 +33,24 @@
       "pages": 6,
       "pdf_author": "",
       "citation_count": 3
+    },
+    {
+      "paper": "06-maxwell-local-clocks",
+      "pages": 11,
+      "pdf_author": "",
+      "citation_count": 3
+    },
+    {
+      "paper": "07-clock-foliated-reference",
+      "pages": 11,
+      "pdf_author": "",
+      "citation_count": 3
+    },
+    {
+      "paper": "08-einstein-scalar-mixed-quartic",
+      "pages": 10,
+      "pdf_author": "",
+      "citation_count": 2
     }
   ],
   "checks": [
@@ -383,6 +401,216 @@
     },
     {
       "check": "05-integer-flux-families: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06-maxwell-local-clocks: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06-maxwell-local-clocks: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "06-maxwell-local-clocks: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "06-maxwell-local-clocks: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06-maxwell-local-clocks: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "06-maxwell-local-clocks: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06-maxwell-local-clocks: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06-maxwell-local-clocks: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06-maxwell-local-clocks: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06-maxwell-local-clocks: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06-maxwell-local-clocks: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06-maxwell-local-clocks: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06-maxwell-local-clocks: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "06-maxwell-local-clocks: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07-clock-foliated-reference: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07-clock-foliated-reference: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "07-clock-foliated-reference: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "07-clock-foliated-reference: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07-clock-foliated-reference: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "07-clock-foliated-reference: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07-clock-foliated-reference: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07-clock-foliated-reference: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07-clock-foliated-reference: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07-clock-foliated-reference: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07-clock-foliated-reference: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07-clock-foliated-reference: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07-clock-foliated-reference: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "07-clock-foliated-reference: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "08-einstein-scalar-mixed-quartic: clean final LaTeX log",
       "passed": true,
       "detail": ""
     },
@@ -1047,6 +1275,471 @@
       "detail": ""
     },
     {
+      "check": "papers/06-maxwell-local-clocks/DERIVATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/DERIVATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/DERIVATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/inputs/echo-reference.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/inputs/echo-reference.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/inputs/echo-reference.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/results/local-clocks.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/results/local-clocks.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/results/local-clocks.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/scripts/construct_local_clocks.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/scripts/construct_local_clocks.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/scripts/construct_local_clocks.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/06-maxwell-local-clocks/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/DERIVATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/DERIVATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/DERIVATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/results/construction.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/results/construction.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/results/construction.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/results/quadratic_action.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/results/quadratic_action.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/results/quadratic_action.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/scripts/construct_inhomogeneous.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/scripts/construct_inhomogeneous.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/scripts/construct_inhomogeneous.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/07-clock-foliated-reference/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/code/finite_backreaction.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/code/finite_backreaction.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/code/finite_backreaction.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/code/native_mixed_quartic.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/code/native_mixed_quartic.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/code/native_mixed_quartic.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/DERIVATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/DERIVATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/DERIVATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/results/finite-backreaction.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/results/finite-backreaction.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/results/finite-backreaction.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/results/native-mixed-quartic.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/results/native-mixed-quartic.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/results/native-mixed-quartic.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/08-einstein-scalar-mixed-quartic/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "README.md: English text",
       "passed": true,
       "detail": ""
@@ -1125,8 +1818,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 418,
-      "sha256": "c22a8b33fa047324e7365e4fdc52cb4e86078d3b8bf4bd8a3f830e153c4935db"
+      "bytes": 551,
+      "sha256": "cc7a3b843baa380797f7cb50f3a4f7a51c08aef6d96bfd5f2b6a312966ae8258"
     },
     {
       "path": ".gitignore",
@@ -1135,13 +1828,13 @@
     },
     {
       "path": "DECLARATIONS.md",
-      "bytes": 3529,
-      "sha256": "f50891879b65d2b841f965c7ecd68c80b2f97dffa0a179d4e269a5d9249b528b"
+      "bytes": 3792,
+      "sha256": "0123baa1a0fb9411148d24af2dceb53bed08e6b0315596a5129df5f485c3f417"
     },
     {
       "path": "HISTORY.md",
-      "bytes": 4086,
-      "sha256": "7af166b74baad092bcbc1cd397b66171d3c8daa3fdfb95672ed3ef20c1d8e1ba"
+      "bytes": 5222,
+      "sha256": "45907fa20fa8eb7d660cdbd0f6d73e4cc069a1d75b99eb7aa96faa8b445f9040"
     },
     {
       "path": "papers/01-projection-sign-rigidity/main.tex",
@@ -1369,9 +2062,184 @@
       "sha256": "2c382c1af4ace4e1603bd0099e630515de2a7064f0eee75e51fe8256fe684e22"
     },
     {
+      "path": "papers/06-maxwell-local-clocks/DERIVATION.md",
+      "bytes": 17379,
+      "sha256": "bd275ee0959f4263548d63dcfb3ff0eb2e8c7bd98cb0c32a7791c86c27a6facb"
+    },
+    {
+      "path": "papers/06-maxwell-local-clocks/inputs/echo-reference.json",
+      "bytes": 437,
+      "sha256": "2ec07aae09c83620f74d669a6e8f879e6a4b3f3e5665a00f0b5e92f88a8e4e02"
+    },
+    {
+      "path": "papers/06-maxwell-local-clocks/main.tex",
+      "bytes": 32759,
+      "sha256": "158a5f40511634a75de3509a2b61263e8ace889c1bd0f4c81ff89098d4e2a90f"
+    },
+    {
+      "path": "papers/06-maxwell-local-clocks/manuscript.pdf",
+      "bytes": 376942,
+      "sha256": "b0394abd44d0273c8ea64a0f5f8632283a24f218ccf32ff7314ec0a04a1bfe68"
+    },
+    {
+      "path": "papers/06-maxwell-local-clocks/PROVENANCE.json",
+      "bytes": 2266,
+      "sha256": "67459229fa3dad658bf555390d8b0222e7936513f656dd2fa7a03945afe699e6"
+    },
+    {
+      "path": "papers/06-maxwell-local-clocks/README.md",
+      "bytes": 1976,
+      "sha256": "c16b3bdc2dd73b28ca98659912c9f192edc49cc3e5d01915ca002b0860a9f242"
+    },
+    {
+      "path": "papers/06-maxwell-local-clocks/references.bib",
+      "bytes": 916,
+      "sha256": "99a7080f9a713a67332ef410d073efb1cec2df284c48d123e12c4719fc1765aa"
+    },
+    {
+      "path": "papers/06-maxwell-local-clocks/requirements.txt",
+      "bytes": 27,
+      "sha256": "e7795fa6c435ab86b906a51554efdfc9eb8b94a6ff0f01d8e03cfdd16bb4b120"
+    },
+    {
+      "path": "papers/06-maxwell-local-clocks/results/local-clocks.json",
+      "bytes": 8231,
+      "sha256": "3d29c304461a34becb3f274c6f5e9a6ce9be5276812935695f84ac19984495fc"
+    },
+    {
+      "path": "papers/06-maxwell-local-clocks/scripts/construct_local_clocks.py",
+      "bytes": 8741,
+      "sha256": "0900064a318f226188848443e69da1ec57b8270a8be380db0c8805af24e37bd1"
+    },
+    {
+      "path": "papers/06-maxwell-local-clocks/VERIFICATION.md",
+      "bytes": 6811,
+      "sha256": "5d9c3337334a59ef9dc2cf553100fd65eadcd28aa1265f248340d17d341025e4"
+    },
+    {
+      "path": "papers/07-clock-foliated-reference/DERIVATION.md",
+      "bytes": 9767,
+      "sha256": "4ecd04600677a8e274775d87ea28ca2319b5b7c609e4b4de2be06c2a715a6490"
+    },
+    {
+      "path": "papers/07-clock-foliated-reference/main.tex",
+      "bytes": 30020,
+      "sha256": "6d9de1005cca6286f155f7992e4d4eb1762824fe2c2b85ac02db2ef4783b4ae6"
+    },
+    {
+      "path": "papers/07-clock-foliated-reference/manuscript.pdf",
+      "bytes": 340415,
+      "sha256": "4cc30123f9d738da4630d14da8ffd24fc14ab8530413b6dbeed45c4b1c070562"
+    },
+    {
+      "path": "papers/07-clock-foliated-reference/PROVENANCE.json",
+      "bytes": 2239,
+      "sha256": "33b1edb7e957b19044102a794a24fadd50072c6c97d857dc53723b86b2baadb7"
+    },
+    {
+      "path": "papers/07-clock-foliated-reference/README.md",
+      "bytes": 2014,
+      "sha256": "dfdca6694a2967e4b89dfaede0def549b73b9664139f910850afc512abf8e555"
+    },
+    {
+      "path": "papers/07-clock-foliated-reference/references.bib",
+      "bytes": 804,
+      "sha256": "4e2f6728a78cbd3660ce16ef0e9d5734449f1a29e2eecc3a6efb7d94b461f40d"
+    },
+    {
+      "path": "papers/07-clock-foliated-reference/requirements.txt",
+      "bytes": 41,
+      "sha256": "d2202766efc4faf44f5b4d01128eeb8da1891884729c7f0678ccc568f02528ae"
+    },
+    {
+      "path": "papers/07-clock-foliated-reference/results/construction.json",
+      "bytes": 29037,
+      "sha256": "ae104dd2865dc78ad9df933b4cdf7c9b9f3a5cf352ee0629b58e0b2ae9cd6d5d"
+    },
+    {
+      "path": "papers/07-clock-foliated-reference/results/controlled_ell1_evolution.csv",
+      "bytes": 306363,
+      "sha256": "d6903ad75c23da585897f72552dc7d2141aef28a5fa0fc6720257ebb13a1be9d"
+    },
+    {
+      "path": "papers/07-clock-foliated-reference/results/quadratic_action.txt",
+      "bytes": 3628,
+      "sha256": "a61c151544a9ac8c23efa3ad8707e79bc22d816b402511908e8087349729c5fa"
+    },
+    {
+      "path": "papers/07-clock-foliated-reference/scripts/construct_inhomogeneous.py",
+      "bytes": 11836,
+      "sha256": "6c9ca214b1393f34d0887d8ff2ded700114dbccd26580c6d9d9e202109b21397"
+    },
+    {
+      "path": "papers/07-clock-foliated-reference/VERIFICATION.md",
+      "bytes": 7543,
+      "sha256": "b9c2792525f811a81bcf5d7dd112026e8e5e5313122baf89d09a428814ef9aea"
+    },
+    {
+      "path": "papers/08-einstein-scalar-mixed-quartic/code/finite_backreaction.py",
+      "bytes": 4977,
+      "sha256": "cedbfd6b8846b74be2cb22a8db5f1e219344ae318178adfb688b39388dd318e4"
+    },
+    {
+      "path": "papers/08-einstein-scalar-mixed-quartic/code/native_mixed_quartic.py",
+      "bytes": 10326,
+      "sha256": "702bcb29e61194be335f81343677321cc5e47f3c829c290f9e0cc41053acd83f"
+    },
+    {
+      "path": "papers/08-einstein-scalar-mixed-quartic/DERIVATION.md",
+      "bytes": 14559,
+      "sha256": "2a6a9feef06324cf20eed38b5718afd869a113a3a45cab286b7f028c7761b3ec"
+    },
+    {
+      "path": "papers/08-einstein-scalar-mixed-quartic/main.tex",
+      "bytes": 28622,
+      "sha256": "353783016a9d50ca93f8ddc327e6af38f8590a1ae21a0813683e5fe6699d7853"
+    },
+    {
+      "path": "papers/08-einstein-scalar-mixed-quartic/manuscript.pdf",
+      "bytes": 304606,
+      "sha256": "84d4ab4eb62a58497cef348637c769375291f2005970fcc64261b9eb1f994795"
+    },
+    {
+      "path": "papers/08-einstein-scalar-mixed-quartic/PROVENANCE.json",
+      "bytes": 2316,
+      "sha256": "b9d304fe9a37495d2bfdee6f83c8c2b36dac9d625caecb94da7d990097c05b50"
+    },
+    {
+      "path": "papers/08-einstein-scalar-mixed-quartic/README.md",
+      "bytes": 2036,
+      "sha256": "fefddad0d05d6a3558bda0a829381ca70b9d5e1a5d2cdeadc9df2f5b007873d0"
+    },
+    {
+      "path": "papers/08-einstein-scalar-mixed-quartic/references.bib",
+      "bytes": 878,
+      "sha256": "4f80f9139cc323944a6aed3c77b6ea6297f0e8992c8cc5eadfe3a461a6d1fe4e"
+    },
+    {
+      "path": "papers/08-einstein-scalar-mixed-quartic/requirements.txt",
+      "bytes": 14,
+      "sha256": "25f9f1fb1988b230147a1d3092d34e09c069eb7a6c6d6df46b3973b9f2d36efc"
+    },
+    {
+      "path": "papers/08-einstein-scalar-mixed-quartic/results/finite-backreaction.json",
+      "bytes": 3059,
+      "sha256": "ef84963b9b809b8256622d75c83eb4299244a57e5394a12eeef67e74de0fe60c"
+    },
+    {
+      "path": "papers/08-einstein-scalar-mixed-quartic/results/native-mixed-quartic.json",
+      "bytes": 8342,
+      "sha256": "33774dcbc66bded76b0236a80447cb784a0acf7b35f06c1db9f4b3e2ca315d6d"
+    },
+    {
+      "path": "papers/08-einstein-scalar-mixed-quartic/VERIFICATION.md",
+      "bytes": 6736,
+      "sha256": "eaafd7c66ea8780980964400b98e6b6c42a4abb910d7ec0a239eda64aae42b14"
+    },
+    {
       "path": "README.md",
-      "bytes": 3696,
-      "sha256": "3975fdc6e408fd05fcefd7140a9f55ee8e3b771bf5f5a1bb54f14a4a3ada950b"
+      "bytes": 4666,
+      "sha256": "ee8f34c550790e0c9ca839ad6c77166042f1e591e87a00f7a732d1a006344e8f"
     },
     {
       "path": "tools/build.ps1",
@@ -1390,16 +2258,8 @@
     },
     {
       "path": "VERIFICATION.md",
-      "bytes": 4997,
-      "sha256": "d29b5ef8c103b27c156063bdd278257e7af4f6c1c48efcc21c4cd6cd4f07a3f3"
+      "bytes": 6393,
+      "sha256": "d13efad49f5a3da22d0ba989dbc68c1b96554acd033860016d9c884da3993bb3"
     }
-  ],
-  "documentation_update": {
-    "at_utc": "2026-10-28T18:55:56.739660+00:00",
-    "files": [
-      "HISTORY.md",
-      "README.md"
-    ],
-    "verification": "Repository Markdown descriptions use descriptive scientific names; affected staged-file hashes updated. Existing scientific checks were not rerun."
-  }
+  ]
 }

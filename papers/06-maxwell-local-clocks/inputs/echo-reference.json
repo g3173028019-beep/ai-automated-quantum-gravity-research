@@ -1,0 +1,12 @@
+{
+  "reference": {
+    "phase_coefficient_magnitude": 0.005512414487283133,
+    "switches": [
+      0.1826174653426328,
+      0.6744044056359246
+    ]
+  },
+  "source_identifier": "portfolio-round-02/lines/maxwell/results/echo-construction.json",
+  "source_sha256": "eb74679d9583936014f91e9a443c21eaeee0a84d87fd1c0c2ccff1cce732e380",
+  "role": "Accepted phase and switching constants; all other bounds are reconstructed by the script."
+}

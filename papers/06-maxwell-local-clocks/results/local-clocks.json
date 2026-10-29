@@ -1,0 +1,270 @@
+{
+  "status": "PASS",
+  "construction": "four positive-energy party-local pre-focused autonomous clocks",
+  "runtime": {
+    "python": "3.11.15",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1"
+  },
+  "accepted_input_sha256": "2ec07aae09c83620f74d669a6e8f879e6a4b3f3e5665a00f0b5e92f88a8e4e02",
+  "point": {
+    "nu": 1e-28,
+    "alpha": 0.05,
+    "relative_momentum_width": 0.001,
+    "c": 100000000.0,
+    "Q": 2.817179794969108e+33,
+    "T": 1.5873003994364373e+39,
+    "E0": 1.575001178660077e-12,
+    "w": 3.1622776601683794e-11,
+    "tau": 6.34920159774575e+19,
+    "tau_over_T": 4.0000000000000004e-20,
+    "switches": [
+      0.1826174653426328,
+      0.6744044056359246
+    ],
+    "clock_count": 4,
+    "clock_mass": 1.0,
+    "clock_p0": 3.968628451568725e-07,
+    "clock_velocity": 3.968628451568725e-07,
+    "clock_sigma_p": 3.968628451568725e-10,
+    "clock_sigma_Q_at_focus": 1259881105.2779691,
+    "apparatus_rest_energy_included": false,
+    "apparatus_total_rest_energy_over_E0": 0.0,
+    "clock_sigma_time_at_focus": 3174600798872874.0,
+    "scaled_focus_width_a": 4.999999999999998e-05,
+    "clock_sigma_time_at_window_edge_over_tau": 0.0005024937810560445,
+    "clock_sigma_Q_initial": [
+      1.1503814703946874e+29,
+      4.2483468398846035e+29
+    ],
+    "clock_cov_QP_initial": [
+      -4.565436633565821e+19,
+      -1.686011014089812e+20
+    ],
+    "clock_initial_mean_Q": [
+      -1.1503814703946874e+32,
+      -4.248346839884604e+32
+    ],
+    "apparatus_mean_kinetic_over_E0": 0.2000002,
+    "positive_offsets_over_E0": 1.2566370614359172e-07,
+    "one_clock_peak_potential_over_central_kinetic": 6.283185307179586e-07,
+    "beta_negative_seed_center_over_E0": 0.7999996743362939,
+    "source_graph_residual_over_E0": 0.00020012573767897273,
+    "source_filter_failure_probability_bound": 2.503146468056537e-07,
+    "exact_dust_gap_over_E0": 0.39999983716814697,
+    "full_total_H_RMS_bound_over_E0": 0.800199900224857,
+    "error_components": {
+      "genuine_shape_and_shear": 3.4430002206539246e-05,
+      "radial_nonlinearity_and_cutoff": 2.1734680314195738e-08,
+      "ordering": 6.4e-26,
+      "initial_total_spectral_resource": 0.0005003145478652941,
+      "finite_local_pulses": 0.004583584396629095,
+      "clock_timing_dispersion_backreaction": 0.04342625936479318
+    },
+    "total_trace_bound": 0.04854461004617442,
+    "guaranteed_reduced_matter_negativity": 0.45145538995382556,
+    "clock_outer_tail_log_bound": -31220.75556926964,
+    "any_negative_clock_momentum_probability_bound": 0.0019477932719570374,
+    "free_negative_momentum_union_log_bound": -499998.61370563885,
+    "coefficients": {
+      "k": 47.74567079821974,
+      "R0": 2397.283539910987,
+      "Kbeta": 344.30002206539245,
+      "Kr": 2173468.031419574,
+      "Vratio": 2291.7921983145475
+    }
+  },
+  "rest_energy_inclusive_point": {
+    "nu": 1e-42,
+    "alpha": 1e-06,
+    "relative_momentum_width": 0.001,
+    "c": 100000000000000.0,
+    "Q": 1.5842166192024041e+49,
+    "T": 5.0194845931141905e+56,
+    "E0": 4.980591042015628e-16,
+    "w": 1.7782794100389228e-16,
+    "tau": 2.0077938372456764e+29,
+    "tau_over_T": 4.0000000000000003e-28,
+    "switches": [
+      0.1826174653426328,
+      0.6744044056359246
+    ],
+    "clock_count": 4,
+    "clock_mass": 9.961182084031256e-18,
+    "clock_p0": 9.961182084031255e-20,
+    "clock_velocity": 0.01,
+    "clock_sigma_p": 9.961182084031255e-23,
+    "clock_sigma_Q_at_focus": 5.019484593114192e+21,
+    "apparatus_rest_energy_included": true,
+    "apparatus_total_rest_energy_over_E0": 0.07999999999999999,
+    "clock_sigma_time_at_focus": 5.019484593114192e+23,
+    "scaled_focus_width_a": 2.5e-06,
+    "clock_sigma_time_at_window_edge_over_tau": 0.000500006249960938,
+    "clock_sigma_Q_initial": [
+      9.166455537209097e+50,
+      3.3851625236178564e+51
+    ],
+    "clock_cov_QP_initial": [
+      -9.130873267131637e+28,
+      -3.372022028179622e+29
+    ],
+    "clock_initial_mean_Q": [
+      -9.166455537209099e+53,
+      -3.3851625236178566e+54
+    ],
+    "apparatus_mean_kinetic_over_E0": 4.000003999999999e-06,
+    "positive_offsets_over_E0": 1.2566370614359174e-13,
+    "one_clock_peak_potential_over_central_kinetic": 3.141592653589793e-08,
+    "beta_negative_seed_center_over_E0": 0.9199959999958743,
+    "source_graph_residual_over_E0": 4.000126666103302e-09,
+    "source_filter_failure_probability_bound": 7.561981325693827e-17,
+    "exact_dust_gap_over_E0": 0.45999799999793717,
+    "full_total_H_RMS_bound_over_E0": 0.9199960039960011,
+    "error_components": {
+      "genuine_shape_and_shear": 1.0887722681728706e-08,
+      "radial_nonlinearity_and_cutoff": 2.173468031419574e-15,
+      "ordering": 6.4e-40,
+      "initial_total_spectral_resource": 8.695965343591146e-09,
+      "finite_local_pulses": 0.00045835843966290956,
+      "clock_timing_dispersion_backreaction": 0.03967580969237922
+    },
+    "total_trace_bound": 0.04013418771573233,
+    "guaranteed_reduced_matter_negativity": 0.45986581228426765,
+    "clock_outer_tail_log_bound": -31211.545228897667,
+    "any_negative_clock_momentum_probability_bound": 0.0015741708506084608,
+    "free_negative_momentum_union_log_bound": -499998.61370563885,
+    "coefficients": {
+      "k": 47.74567079821974,
+      "R0": 2397.283539910987,
+      "Kbeta": 344.30002206539245,
+      "Kr": 2173468.031419574,
+      "Vratio": 2291.7921983145475
+    }
+  },
+  "gaussian_integral_diagnostic": {
+    "order64": 0.001026102249295211,
+    "order128": 0.0010261022494166883,
+    "four_clock_state_vector_error_estimate": 0.006447190577198859,
+    "proof_uses_analytic_bound": true
+  },
+  "checks": [
+    {
+      "name": "accepted_phase_constant",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "pulse_area",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "pulse_half_areas",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "two_echo_windows_disjoint",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "positive_kinetic_clock",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "positive_reserve_margin",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "tail_proof_regime",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "old_nonlinear_comparison_regime",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "minimum_uncertainty_focused_packet",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "focus_width_formula",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "four_clock_energy_variance",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "joint_source_failure_small",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "reduced_AB_entanglement",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "backreaction_included_and_reflection_bounded",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "outer_tail_negligible",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "gaussian_quadrature_resolution",
+      "passed": true,
+      "value": [
+        0.001026102249295211,
+        0.0010261022494166883
+      ]
+    },
+    {
+      "name": "gaussian_error_below_analytic_bound",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "complete_apparatus_potential_nonnegative",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "local_pulse_endpoint",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "rest_inclusive_dust_gap",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "rest_inclusive_entanglement",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "rest_energy_explicitly_charged",
+      "passed": true,
+      "value": null
+    },
+    {
+      "name": "rest_inclusive_tail_proof_regime",
+      "passed": true,
+      "value": null
+    }
+  ]
+}

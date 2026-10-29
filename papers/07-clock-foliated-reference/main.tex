@@ -1,0 +1,574 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage{hyperref}
+\hypersetup{hidelinks,pdftitle={},pdfauthor={},pdfsubject={},pdfkeywords={},pdfcreator={},pdfproducer={}}
+\pdfinfoomitdate=1
+\pdftrailerid{}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\HH}{\mathsf H}
+\numberwithin{equation}{section}
+\title{A local clock-foliated repair of the inhomogeneous spectrum\\of a rotating Einstein-static scalar reference}
+\author{}
+\date{29 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An exact rotating eight-scalar configuration on the Einstein cylinder, supplemented by a ninth scalar clock, supplies a proper global spacetime reference map.
+A radial potential can make its fixed-charge homogeneous modes elliptic, but this does not control its inhomogeneous degrees of freedom.
+We reduce the coupled scalar and vector harmonics, including the metric constraints and exceptional low harmonics.
+The canonical model has an oscillatory instability in the lowest scalar harmonic and a growing mode in the third harmonic; the latter persists throughout its homogeneous elliptic parameter window.
+We construct a local preferred-clock effective action containing traceless spatial strain, curvature-calibrated compression, and a nonnegative target-alignment potential.
+All additions vanish with their first variations on the complete homogeneous ansatz.
+At explicit rational parameters, exact principal-minor certificates prove positive kinetic and stiffness forms for every physical inhomogeneous scalar and vector harmonic, with a positive tensor correction.
+A stationary pure Gaussian is constructed for a finite scalar band of 141 canonical oscillators, together with a bounded coupled linear metric--matter evolution.
+The modified principal cones, cutoff assumption and unchanged homogeneous nonlinear limitations are explicit; neither a continuum Hadamard theorem nor nonlinear stability is asserted.
+\end{abstract}
+
+\section{Problem and construction}
+
+An exact reference-field solution, linear spectral stability, positive quadratic energy and nonlinear stability impose different requirements.
+This article addresses the inhomogeneous degrees of freedom of a rotating scalar reference on a compact three-sphere.
+The exact reference and its radial homogeneous stabilization are starting constructions, rederived here to fix conventions.
+The new results are the constrained harmonic reduction, an obstruction to radial repair, and a local effective action that removes the inhomogeneous instabilities while preserving the homogeneous equations.
+
+The target-radial and target-tangent gradient components mix within a scalar representation of the diagonal spatial--target rotation group.
+Metric lapse and shift must be eliminated before counting physical modes.
+The first scalar harmonic has a residual spatial diffeomorphism, whereas an internal-symmetry zero in the next harmonic is physical.
+The sphere-harmonic conventions agree with Ref.~\cite{harmonics}; all embedding identities needed for the reduction are derived below.
+
+The repair uses a timelike clock to define local spatial operators.
+Preferred-foliation higher-spatial-derivative theories provide broader context~\cite{horava}, but no ultraviolet-completion or renormalizability result from that literature is assumed.
+Our claim concerns a specified local effective action and its constrained quadratic theory.
+The central positive statement is Theorem~\ref{thm:positive}.
+
+\section{Canonical reference and homogeneous sector}
+\label{sec:background}
+
+Use signature $(-+++)$, $\hbar=c_{\rm light}=1$, $\kappa=8\pi G>0$, eight real canonical scalars $\Phi=(X^A,Z^A)$, $A=1,\ldots,4$, and a canonical clock $\chi$.
+Set
+\begin{equation}
+ s=|X|^2+|Z|^2,\quad b=\frac{2-\alpha}{4},\quad
+ V_0(s)=\frac1{\kappa a_0^2}\left[\frac{m}{8b}(\kappa s-b)^2+g_4(\kappa s-b)^4\right].
+ \label{eq:potential}
+\end{equation}
+The action is
+\begin{equation}
+ S_0=\int\sqrt{-g}\left[\frac{R-2\Lambda}{2\kappa}
+ -\frac12\sum_{I=1}^{8}\nabla_\mu\Phi^I\nabla^\mu\Phi^I
+ -\frac12\nabla_\mu\chi\nabla^\mu\chi-V_0(s)\right]\dd^4x.
+ \label{eq:canonical}
+\end{equation}
+For $g_4>0$, $V_0$ is bounded below even when $m<0$.
+Let $Y:S^3\to\mathbb R^4$ be the unit-sphere embedding, satisfying
+\begin{equation}
+ Y\cdot Y=1,\quad Y\cdot\dd Y=0,\quad \dd Y\cdot\dd Y=\gamma,
+ \quad\nabla_i\nabla_jY=-\gamma_{ij}Y.
+\end{equation}
+The reference is
+\begin{align}
+ g_0&=-\dd t^2+a_0^2\gamma,& X+iZ&=r_0e^{i\omega_0t}Y,&\chi&=ct,\label{eq:bg}\\
+ r_0^2&=b/\kappa,&\omega_0^2&=3/a_0^2,&
+ c^2&=\frac\alpha{\kappa a_0^2},\qquad
+ \Lambda=\frac{6+\alpha}{4a_0^2},\quad0<\alpha<2.
+\end{align}
+At $s_0=r_0^2$, $V_0(s_0)=V_0'(s_0)=0$ and $4a_0^2r_0^2V_0''(s_0)=m$.
+Since $\Delta_\gamma Y=-3Y$, every scalar solves its background field equation.
+The stress density and pressure are
+\begin{equation}
+ \rho_0=\frac{6-\alpha}{4\kappa a_0^2},\qquad
+ p_0=\frac{2+\alpha}{4\kappa a_0^2},
+\end{equation}
+and solve the two independent Einstein equations.
+The cylinder is complete with compact Cauchy surface.
+The nine-field map is a proper global embedding: recover $t=\chi/c$ and
+\begin{equation}
+ Y=\frac{\cos(\omega_0t)X+\sin(\omega_0t)Z}{r_0}.
+\end{equation}
+Bounded $\chi$ bounds $t$ and the sphere is compact, proving properness.
+The dimensions are $[a_0]=L$, $[\kappa]=L^2$, $[\Phi]=L^{-1}$ and $[V_0]=L^{-4}$.
+
+For the homogeneous ansatz $X+iZ=r(t)e^{i\theta(t)}Y$, the conserved charges are $Q_\theta=a^3r^2\dot\theta$ and $S_\chi=a^3\dot\chi$.
+At fixed charges, with $u_a=\delta a/a_0$, $v_r=\delta r/r_0$ and $\tau=t/a_0$, the linear equations are
+\begin{equation}
+ \begin{pmatrix}u_a\\v_r\end{pmatrix}''=
+ \begin{pmatrix}3+\alpha/2&1-\alpha/2\\-12&-12-m\end{pmatrix}
+ \begin{pmatrix}u_a\\v_r\end{pmatrix}.
+\end{equation}
+Two distinct elliptic modes occur for
+\begin{gather}
+ 0<\alpha<4\sqrt{21}-18,\label{eq:windowa}\\
+ -15-\alpha/2+\sqrt{24(2-\alpha)}<m<-
+ \frac{24(2+\alpha)}{6+\alpha}.\label{eq:windowm}
+\end{gather}
+The point used here is
+\begin{equation}
+ \alpha=\tfrac1{10},\quad m=-\tfrac{207}{25},\quad g_4=10,
+ \qquad b=\tfrac{19}{40}.
+ \label{eq:radialpoint}
+\end{equation}
+Its homogeneous frequencies are $0.3061068927/a_0$ and $0.7591433134/a_0$.
+Their energy signs are opposite because the reduced kinetic form is $\diag(-6,b)$.
+Nonlinear boundedness does not follow.
+The repair below preserves this entire homogeneous model, including its previously observed nonlinear escape trajectories.
+
+\section{The constrained diagonal scalar representation}
+\label{sec:scalar}
+
+Use dimensionless time $\tau$ and divide the action by $a_0^2/\kappa$.
+Let $f$ be a real unit-normalized scalar harmonic:
+\begin{equation}
+ \Delta f=-Lf,\quad L=\ell(\ell+2),\quad
+ \int_{S^3}f^2\dd V_\gamma=1,\qquad\omega=\sqrt3.
+\end{equation}
+The closed scalar representation is
+\begin{equation}
+ \frac{\delta(X+iZ)}{r_0}=e^{i\omega\tau}
+ \{vfY+u\dd Y(\nabla f)+i[zfY+q\dd Y(\nabla f)]\}.
+ \label{eq:basis}
+\end{equation}
+Direct differentiation of the embedding gives
+\begin{align}
+ \Delta(fY)&=-(L+3)fY+2\dd Y(\nabla f),\\
+ \Delta[\dd Y(\nabla f)]&=2LfY-(L-1)\dd Y(\nabla f).
+\end{align}
+Thus independent scalar-field copies with a common scalar harmonic would not form the correct closed representation.
+The integrated Bochner identity with $\operatorname{Ric}_\gamma=2\gamma$ gives
+\begin{equation}
+ \int|\nabla f|^2=L,\qquad \int|\nabla\nabla f|^2=L(L-2).
+ \label{eq:bochner}
+\end{equation}
+Use clock gauge $\delta\chi=0$ and, for $\ell\ge2$, spatial gauge with zero scalar metric shear:
+\begin{equation}
+ h_{ij}=a_0^2e^{2\psi f}\gamma_{ij},\qquad N=e^{Af},\qquad N^i=B\nabla^if.
+\end{equation}
+Put $x=(v,u,z,q,\psi)^T$.
+In dimensionless units the complete integrated quadratic Lagrangian is $\mathcal L_g+\mathcal L_k+\mathcal L_s$, where
+\begin{align}
+ \mathcal L_g={}&-3\psi'^2-2L\psi'B-LB^2+\tfrac32(A+\psi)^2
+ +2L\psi(A+\psi)-L\psi^2-\tfrac\Lambda2(A+3\psi)^2,\label{eq:Lg}\\
+ \mathcal L_k={}&\tfrac b2\{(v'-\omega z)^2+(z'+\omega v)^2
+ +L[(u'-\omega q-B)^2+(q'+\omega u)^2]-2\omega BL(z-q)\}\nonumber\\
+ &+b\omega(3\psi-A)(z'+\omega v)+\tfrac{3b+\alpha}{4}(3\psi-A)^2,\label{eq:Lk}\\
+ \mathcal L_s={}&-\tfrac b2\{(L+3)(v^2+z^2)-4L(vu+zq)+L(L-1)(u^2+q^2)\}
+ \nonumber\\&-b(A+\psi)(3v-Lu)-\tfrac{3b}{4}(A+\psi)^2-\tfrac{bm}{2}v^2.
+ \label{eq:Ls}
+\end{align}
+Here $\Lambda=(6+\alpha)/4$.
+The last term of~\eqref{eq:Lk} includes the clock kinetic density.
+The shift term $-2\omega BL(z-q)$ is essential to the physical momentum constraint.
+Variation of $A,B$ gives
+\begin{align}
+ A&=-\frac{L(2-\alpha)u+(8L-3\alpha-18)\psi+\sqrt3(\alpha-2)z'+6(\alpha-2)v}{\alpha+6},\label{eq:A}\\
+ B&=\frac{(\alpha-2)u'-2\sqrt3(\alpha-2)q+\sqrt3(\alpha-2)z-8\psi'}{\alpha+6}.
+ \label{eq:B}
+\end{align}
+Substitution yields
+\begin{equation}
+ \mathcal L_{\rm red}=\tfrac12x'^TKx'+x'^TDx-\tfrac12x^THx,
+ \qquad Kx''+Gx'+Hx=0,\quad G=D-D^T.
+ \label{eq:reduced}
+\end{equation}
+The explicit kinetic form is
+\begin{equation}
+ K=\begin{pmatrix}
+ b&0&0&0&0\\0&cL&0&0&cL\\0&0&e&0&0\\0&0&0&bL&0\\
+ 0&cL&0&0&2(8L-3\alpha-18)/(\alpha+6)
+ \end{pmatrix},\quad
+ c=\frac{2(2-\alpha)}{\alpha+6},\quad e=\frac{\alpha(2-\alpha)}{\alpha+6}.
+ \label{eq:K}
+\end{equation}
+Equations~\eqref{eq:Lg}--\eqref{eq:B} give an explicit algebraic recipe for all entries; Appendix~\ref{app:matrices} also lists $G,H$.
+
+\subsection{Direct field equations and exceptional gauge reduction}
+
+Direct covariant scalar variation gives
+\begin{align}
+ 0&=v''-2\omega z'+(L+m)v-2Lu-6(\psi-A),\label{eq:KGv}\\
+ 0&=u''-2\omega q'+(L-4)u-2v-B'-A-\psi,\label{eq:KGu}\\
+ 0&=z''+2\omega v'+Lz-2Lq-\omega(A'-3\psi'-LB),\label{eq:KGz}\\
+ 0&=q''+2\omega u'+(L-4)q-2z-2\omega B.\label{eq:KGq}
+\end{align}
+The omitted clock equation is $A'-3\psi'-LB=0$.
+Substitution of~\eqref{eq:A}, \eqref{eq:B} and $x''=-K^{-1}(Gx'+Hx)$ gives five exact symbolic zeros.
+This checks the coupled physical equations rather than a test-field model.
+
+For $\ell=1$, $L=3$ and $\nabla_i\nabla_jf=-f\gamma_{ij}$, so scalar metric shear is identically absent.
+The residual spatial diffeomorphism acts as $u\mapsto u-\xi$, $\psi\mapsto\psi+\xi$.
+Its vector $n=(0,-1,0,0,1)^T$ satisfies $Kn=Gn=Hn=0$.
+Fix $\psi=0$ and use the four physical coordinates $(v,u,z,q)$ with the principal four-by-four matrices.
+Their four accelerations substituted into all five reduced equations give exact zero, including the omitted fifth equation.
+No singular kinetic matrix is inverted or physical equation discarded.
+
+The generic physical count is five scalar degrees, four transverse-vector degrees and two tensor degrees: eleven, agreeing with nine scalars and two gravitational polarizations.
+Exceptional low harmonics have smaller representation spaces and are treated explicitly.
+
+\section{Instabilities and a radial-potential obstruction}
+\label{sec:obstruction}
+
+At~\eqref{eq:radialpoint}, the original $\ell=1$ sector has an unstable quartet
+\begin{equation}
+ \sigma=\pm1.1175696556\pm1.4428277436i
+\end{equation}
+and elliptic frequencies $1.7028084808$, $4.0130865119$ in dimensionless time.
+At $\ell=3$ it has a real growing/decaying pair $\sigma=\pm0.1975187692$ and four elliptic pairs.
+Physical exponents are divided by $a_0$.
+Exact Sturm counts of the polynomials in Appendix~\ref{app:roots} establish their root types.
+The $\ell=2$ sector has four elliptic pairs and an exact zero vector
+\begin{equation}
+ x_0=(0,0,1,1/2,0)^T,\qquad Hx_0=0.
+\end{equation}
+This is a physical internal $U(4)$ orientation variation: an imaginary symmetric traceless target generator produces $\delta\Phi=iS\Phi_0$ with precisely this radial/tangent ratio.
+It is not a diffeomorphism.
+The stiffness has rank four and the zero characteristic root has multiplicity two, so the unrestricted theory has a secular conjugate direction.
+For $\ell\ge4$, exact leading minors expanded at $L=24+t$ prove $K,H>0$ in the original model.
+
+\begin{proposition}
+Every parameter pair in~\eqref{eq:windowa}--\eqref{eq:windowm} has a growing physical $\ell=3$ scalar mode in the canonical model.
+\end{proposition}
+\begin{proof}
+The exact stiffness determinant is
+\begin{align}
+ \det H={}&\frac{L^3\alpha(L-8)(L-3)(\alpha-2)^4(2L-\alpha-6)}{16(\alpha+6)^2}\mathcal F(L),\\
+ \mathcal F(L)={}&2L^2-L\alpha+2Lm-14L-\alpha m+24\alpha-6m-48.
+\end{align}
+At $L=15$ every prefactor is positive, whereas
+\begin{equation}
+ \mathcal F(15)=192+9\alpha+(24-\alpha)m
+ <\frac{3\alpha(11\alpha-94)}{6+\alpha}<0.
+\end{equation}
+The first inequality uses~\eqref{eq:windowm} and $24-\alpha>0$.
+Since $K>0$ for $L>3$, the real continuous determinant $\det(\sigma^2K+\sigma G+H)$ is negative at zero and positive for large positive $\sigma$.
+It has a positive zero, proving a growing solution.
+\end{proof}
+
+A new radial mass scan cannot solve this obstruction.
+Positive target alignment alone changes only the imaginary tangent stiffness and leaves the negative real-block determinant at $\ell=3$ unchanged; it also destabilizes the gyroscopically protected $\ell=2$ sector when used alone.
+Traceless spatial strain alone misses $\ell=1$.
+These failures motivate the combined action below.
+
+\section{A local preferred-clock repair}
+
+On the timelike-clock patch define
+\begin{equation}
+ n_\mu=-\frac{\partial_\mu\chi}{\sqrt{-\nabla_\rho\chi\nabla^\rho\chi}},\qquad
+ h_{\mu\nu}=g_{\mu\nu}+n_\mu n_\nu.
+\end{equation}
+Let $R_3$ be the intrinsic curvature of a clock leaf and define real field-space contractions
+\begin{align}
+ \mathcal B_{\mu\nu}&=h_\mu{}^\rho h_\nu{}^\sigma\sum_I\partial_\rho\Phi^I\partial_\sigma\Phi^I,
+ &\mathcal T&=h^{\mu\nu}\mathcal B_{\mu\nu},\\
+ \mathcal E_{\mu\nu}&=\mathcal B_{\mu\nu}-\tfrac13\mathcal T h_{\mu\nu},
+ &\mathcal Q&=\mathcal T-\tfrac12sR_3,\\
+ \mathcal D&=|X|^2|Z|^2-(X\cdot Z)^2.&&
+\end{align}
+The repaired action is
+\begin{equation}
+ S=S_0-\int\sqrt{-g}\left[\lambda\mathcal E_{\mu\nu}\mathcal E^{\mu\nu}
+ +\zeta\mathcal Q^2+\frac{h_*}{2a_0^2r_0^2}\mathcal D\right]\dd^4x.
+ \label{eq:newaction}
+\end{equation}
+Here $[\lambda]=[\zeta]=L^4$, $h_*$ is dimensionless, and the chosen coefficients are
+\begin{equation}
+ \bar\lambda=\frac\lambda{\kappa a_0^2}=\tfrac1{10},\qquad
+ \bar\zeta=\frac\zeta{\kappa a_0^2}=1,\qquad h_*=6.
+ \label{eq:repairpoint}
+\end{equation}
+These values define the model; no naturalness or ultraviolet matching is assumed.
+The Gram determinant $\mathcal D$ is nonnegative, preserving the bounded-below scalar potential.
+
+For every homogeneous ansatz $g=-N^2\dd t^2+a^2\gamma$, $X+iZ=re^{i\theta}Y$, with homogeneous timelike clock,
+\begin{equation}
+ \mathcal B_{ij}=r^2\gamma_{ij},\quad \mathcal T=3r^2/a^2,\quad R_3=6/a^2,
+ \qquad\mathcal E=\mathcal Q=\mathcal D=0.
+\end{equation}
+All additions and their first variations vanish, preserving the exact background, embedding and full homogeneous action.
+This preserves the homogeneous limitations as well.
+
+In the scalar gauge, geometric variation gives
+\begin{align}
+ \delta\mathcal B_{ij}&=2b[vf\gamma_{ij}+u\nabla_i\nabla_jf],&\delta s&=2bvf,\\
+ \delta\mathcal T&=2b(3v-Lu-3\psi)f,&\delta R_3&=4(L-3)\psi f.
+\end{align}
+Thus
+\begin{equation}
+ \mathcal E^{(1)}_{ij}=2bu(\nabla_i\nabla_jf-\gamma_{ij}\Delta f/3),\qquad
+ \mathcal Q^{(1)}=-2bL(u+\psi)f.
+\end{equation}
+The added quadratic potential is
+\begin{equation}
+ W=\frac83\bar\lambda b^2L(L-3)u^2+4\bar\zeta b^2L^2(u+\psi)^2+\tfrac12bLh_*q^2.
+ \label{eq:W}
+\end{equation}
+The factor in the strain term follows from~\eqref{eq:bochner}.
+No lapse or shift appears, so $A,B,K,G$ are unchanged and $H_{\rm r}=H+\nabla_x\nabla_xW$.
+The new $u,q$ equations acquire $\partial_uW/(bL)$ and $\partial_qW/(bL)$, respectively; the radial equations retain their displayed form.
+All four direct repaired scalar residuals and the omitted clock equation again vanish identically.
+The residual gauge null vector at $L=3$ is preserved because $u+\psi$ is invariant and $L(L-3)=0$; its dropped equation remains an exact consequence of the four physical equations.
+
+\section{All-harmonic positive energy}
+\label{sec:positive}
+
+\begin{theorem}
+\label{thm:positive}
+At~\eqref{eq:radialpoint}, \eqref{eq:repairpoint}, every physical inhomogeneous scalar and transverse-vector harmonic has strictly positive quadratic kinetic and stiffness forms after constraint elimination and gauge reduction.
+The tensor correction is positive.
+Every such harmonic has nonzero real normal frequencies and bounded linear motion in its positive energy norm.
+This does not claim positive energy or nonlinear stability for the unchanged homogeneous sector.
+\end{theorem}
+
+\subsection{Exact scalar proof}
+
+For $L\ge8$, the five leading kinetic minors are
+\begin{equation}
+ \frac{19}{40},\quad\frac{361L}{1220},\quad\frac{6859L}{744200},\quad
+ \frac{130321L^2}{29768000},\quad\frac{130321L^2(L-3)}{14884000}.
+\end{equation}
+They are positive.
+The repaired stiffness splits into real $(v,u,\psi)$ and imaginary $(z,q)$ blocks.
+The leading real-block minors are
+\begin{align}
+ R_1&=\frac{19(1525L+4473)}{61000},\\
+ R_2&=\frac{361L(613600L^2-456633L-1596861)}{183000000},\\
+ R_3&=\frac{361L(L-3)}{36600000000}
+ (259509975L^3-1960056193L^2\nonumber\\
+ &\hspace{40mm}+3767182800L-534407580).
+\end{align}
+For the imaginary block,
+\begin{equation}
+ I_1=\frac{19L}{610},\qquad I_2=\frac{361L^2(L-2)}{24400}.
+\end{equation}
+Every displayed minor has positive coefficients and a positive constant term after expansion in $t=L-8$.
+This exact rational coefficient certificate proves positivity for every $L\ge8$, not just finitely many harmonics.
+The executable saves all expanded coefficients.
+At exceptional $L=3$, the four physical stiffness minors are
+\begin{equation}
+ \frac{21489}{7625},\quad\frac{23064651}{1525000},\quad
+ \frac{1314685107}{930250000},\quad\frac{74937051099}{37210000000},
+\end{equation}
+and the kinetic minors are
+\begin{equation}
+ \frac{19}{40},\quad\frac{1083}{1220},\quad\frac{20577}{744200},\quad
+ \frac{1172889}{29768000}.
+\end{equation}
+Sylvester's criterion completes the scalar proof.
+The conserved positive energy is
+\begin{equation}
+ E_2=\tfrac12x'^TKx'+\tfrac12x^TH_{\rm r}x,\qquad
+ E_2'=-x'^TGx'=0.
+ \label{eq:energy}
+\end{equation}
+Selected frequencies are listed in Table~\ref{tab:freq}.
+
+\begin{table}[htbp]
+\centering
+\caption{Repaired positive scalar frequencies in units $a_0^{-1}$.}
+\label{tab:freq}
+\begin{tabular}{cl}\toprule
+$\ell$&$a_0\omega_j$\\\midrule
+1&0.35222722, 1.66575944, 2.34696391, 5.19186305\\
+2&1.15713293, 2.07161365, 2.82603344, 3.60667197, 7.04429409\\
+3&2.35771272, 3.25096940, 3.90010792, 4.73791706, 8.91721306\\\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Transverse vectors and exceptional Killing harmonics}
+
+For a unit divergence-free harmonic $T_i$ with rough Laplace eigenvalue $1-n(n+2)$, write $\delta\Phi/r_0=e^{i\omega\tau}\dd Y[(V+iZ)T]$.
+Fix the spatial vector metric and retain transverse shift $BT$.
+With $d=n(n+2)-3$, the original quadratic Lagrangian is
+\begin{equation}
+ \mathcal L_V=\frac b2[V'^2+Z'^2+2\omega(VZ'-ZV')-d(V^2+Z^2)]
+ -bB(V'-2\omega Z)+\frac12(b+d/2)B^2.
+\end{equation}
+The gravitational contribution is $dB^2/4$, since $\int|\nabla_{(i}T_{j)}|^2=d/2$.
+The shift is $B=2b(V'-2\omega Z)/(d+2b)$.
+The repair adds $-2\bar\lambda b^2dV^2-bh_*Z^2/2$; compression has zero transverse first variation.
+With $f_d=d/(d+2b)$, the reduced matrices are
+\begin{align}
+ K_V&=b\diag(f_d,1),&G_V&=\begin{pmatrix}0&-2b\sqrt3f_d\\2b\sqrt3f_d&0\end{pmatrix},\\
+ H_V&=b\diag\left(d(1+4\bar\lambda b),\ d+\frac{24b}{d+2b}+h_*\right).
+\end{align}
+These kinetic and stiffness entries are positive for every $n\ge2$.
+At $n=1$, $V$ is a spatial Killing diffeomorphism and disappears from the action; the remaining relative-rotation oscillator has frequency $\sqrt{12+h_*}/a_0=\sqrt{18}/a_0$.
+Thus internal target directions are explicitly distinguished from gauge directions.
+
+\subsection{Tensor correction}
+
+For a unit-normalized transverse-traceless metric amplitude, the original closed sector has $\delta\Phi=0$ and
+\begin{equation}
+ \mathcal L_T=\tfrac18[h_T'^2-(n(n+2)+2b)h_T^2],\qquad n\ge2.
+\end{equation}
+The tensor rough Laplace eigenvalue is $2-n(n+2)$~\cite{harmonics}.
+Although $\delta\mathcal B_{ij}=0$, metric trace removal gives $\mathcal E^{(1)}_{ij}=-bh_{T,ij}$.
+The compression and alignment variations vanish.
+Therefore $-\bar\lambda b^2h_T^2$ adds $8\bar\lambda b^2=0.1805$ to the squared frequency:
+\begin{equation}
+ \omega_{T,n}^2=\frac{n(n+2)+2b+8\bar\lambda b^2}{a_0^2}
+ =\frac{n(n+2)+2261/2000}{a_0^2}>0.
+\end{equation}
+Its scalar source vanishes by the tensor trace and divergence identities, so this remains a closed sector.
+This completes Theorem~\ref{thm:positive}.
+
+\section{A finite-band stationary state and coupled evolution}
+
+Choose scalar harmonics $\ell=1,2,3$ with all degeneracies $(\ell+1)^2$.
+The band contains $4\times4+5\times9+5\times16=141$ canonical oscillators.
+It is a finite truncation of the quadratic theory.
+Its physical effective-theory interpretation assumes its wavelengths and frequencies are below a suitable cutoff and omitted operators are small; no ultraviolet matching or truncation-error bound is available.
+
+Drop a total derivative to set $D=G/2$, giving $p=Kx'+Dx$ and positive canonical Hamiltonian matrix
+\begin{equation}
+ \HH=\begin{pmatrix}H_{\rm r}+D^TK^{-1}D&-D^TK^{-1}\\-K^{-1}D&K^{-1}\end{pmatrix}.
+\end{equation}
+The normalized physical coordinates are
+\begin{equation}
+ Q=\frac{a_0}{\sqrt\kappa}x,\qquad
+ P=\frac{a_0}{\sqrt\kappa}(Kx'+Gx/2),\qquad [Q_i,P_j]=i\delta_{ij}.
+ \label{eq:normalization}
+\end{equation}
+There is no sphere-volume factor because harmonics have unit $L^2$ norm.
+For the standard symplectic matrix $J$, a centered pure ground-state covariance is
+\begin{equation}
+ C=\tfrac12\HH^{-1/2}
+ \sqrt{-(\HH^{1/2}J\HH^{1/2})^2}\,\HH^{-1/2}.
+ \label{eq:cov}
+\end{equation}
+Principal positive square roots are used.
+The finite-dimensional symplectic normal-form construction~\cite{williamson}, or directly diagonalizing the real antisymmetric matrix $\HH^{1/2}J\HH^{1/2}$, proves
+\begin{equation}
+ C+iJ/2\ge0,\qquad CJC=J/4,\qquad (J\HH)C+C(J\HH)^T=0.
+\end{equation}
+The product over harmonic degeneracies is a stationary pure Gaussian.
+Its physical coordinate covariance is $(\kappa/a_0^2)C_{QQ}$, so the dimensionless root-mean-square amplitudes scale as $\sqrt\kappa/a_0$.
+No nonlinear containment follows from that scaling.
+
+Actual canonical matrices for each multiplet are supplied with the calculation.
+Their ordering is all $Q$ coordinates followed by all $P$ coordinates, with $d=4$ for $\ell=1$ and $d=5$ for $\ell=2,3$.
+Their stationarity residual norms are $7.15\times10^{-14}$, $2.44\times10^{-13}$ and $4.94\times10^{-13}$.
+For $\ell=1$, purity residual is $4.32\times10^{-15}$; the smallest uncertainty eigenvalue is $-2.94\times10^{-15}$, consistent with exact zero uncertainty eigenvalues and numerical roundoff.
+Analytic formula~\eqref{eq:cov} establishes positivity, rather than a roundoff threshold.
+Finite-band kernels are smooth and lack continuum ultraviolet singularities; they are not called continuum Hadamard states.
+
+For a coupled evolution, take one $\ell=1$ harmonic with $x(0)=(10^{-4},0,0,0)$ and $x'(0)=0$ on the $\psi=0$ gauge slice.
+Matrix exponentials propagate the constrained linear system on $0\le\tau\le100$, and~\eqref{eq:A}--\eqref{eq:B} reconstruct the metric.
+One obtains
+\begin{equation}
+ E_2(0)=1.4091147541\times10^{-8},\qquad
+ \max\frac{|E_2(\tau)-E_2(0)|}{E_2(0)}=1.32\times10^{-12}.
+\end{equation}
+Positive energy gives the analytic all-time bound $\|(x,x')\|\le9.51210\times10^{-4}$; the maximum sampled norm is $7.76142\times10^{-4}$.
+The maximum reconstructed lapse and shift harmonic amplitudes are $3.50155\times10^{-4}$ and $2.11911\times10^{-4}$.
+The metric responds even though spatial scalar metric amplitude is gauge-fixed.
+This is a coupled linear metric--matter evolution, not finite-amplitude nonlinear constraint-solving or nonlinear partial-differential-equation evolution.
+
+\section{Principal cones and effective-theory limitations}
+
+The compression term contains $R_3^2$ and fourth spatial derivatives.
+In clock gauge, the new operators depend on spatial geometry and spatial matter derivatives; lapse is multiplicative and shift absent from their quadratic potential.
+No extra time derivatives occur at this order.
+Covariantly, derivatives of the clock enter the foliation geometry; the verified local clock-gauge derivative count is not a global nonlinear Hamiltonian-degeneracy theorem or a result across a null clock gradient.
+
+The constrained high-frequency symbol is more informative than unreduced derivative counting.
+The $(u,\psi)$ kinetic block grows as $L$ while its stiffness grows as $L^2$.
+The asymptotic matrices are
+\begin{equation}
+ K_\infty=\begin{pmatrix}c&c\\c&c+2\end{pmatrix},\qquad
+ H_\infty=K_\infty+\tfrac{16}{3}\bar\lambda b^2\begin{pmatrix}1&0\\0&0\end{pmatrix}
+ +8\bar\zeta b^2\begin{pmatrix}1&1\\1&1\end{pmatrix}.
+\end{equation}
+Three scalar speeds tend to one.
+For the other two, $z=c_s^2$ obeys
+\begin{equation}
+ 2400000z^2-12362000z+10380399=0,
+ \qquad z=\frac{6181}{2400}\pm\frac{19\sqrt{920485}}{12000}.
+\end{equation}
+Thus $c_{s,1}=1.0277822886$ and $c_{s,2}=2.0234863233$.
+The reduced dispersion is $\omega^2\sim c_s^2L/a_0^2$, rather than a demonstrated $L^2/a_0^2$ frequency law.
+The real vector branch tends to $\sqrt{1+4\bar\lambda b}=\sqrt{1.19}$ and the imaginary branch to one.
+The preferred-clock cones differ from the metric null cone; energy positivity does not prove metric microcausality or a Lorentz-invariant ultraviolet completion.
+
+All-harmonic positivity is a mathematical property of the specified quadratic model, not permission to extrapolate an effective theory to arbitrary physical momentum.
+An inherited physical Hadamard construction for the original canonical normally hyperbolic system remains a result for that original system.
+It is not transferred to~\eqref{eq:newaction}, whose principal symbol changes.
+Continuum preferred-clock states and renormalization need separate analysis.
+The finite-band state and bounded linear evolution are usable within their stated cutoff and perturbative assumptions.
+Interactions with the unchanged homogeneous opposite-energy modes remain the main dynamical limitation: cubic couplings, nonlinear constraints and energy-transfer time bounds are the next substantive calculations.
+
+\section*{Computation, chronology and attribution}
+
+The accompanying executable \texttt{construct\_inhomogeneous.py} supplies the full quadratic forms, exact positivity coefficients, low-mode Sturm certificates, numerical covariance matrices and the reconstructed linear trajectory.
+It uses local Python with SymPy 1.14.0 and SciPy 1.17.1.
+Symbolic identities establish the sign and constraint claims; numerical work supplies displayed frequencies, covariances and trajectory samples.
+The canonical reference and radial homogeneous construction precede this inhomogeneous calculation, performed on 29 October 2026 Beijing time.
+Historical work, this local research date and any public-disclosure date are distinct.
+
+This is AI-assisted work without human expert review.
+As reported by the operator, earlier work was Fable 5-led; from July 2026 onward results were predominantly produced by GPT models, with DeepSeek and multiple GPT models also participating in cross-review and preparation.
+Human authors and affiliations are blank.
+No global novelty or priority determination is made.
+The attribution uncertainty is retained explicitly:
+\begin{quote}
+``I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.''
+\end{quote}
+
+\appendix
+\section{Explicit reduced matrices}
+\label{app:matrices}
+
+The only nonzero upper-triangular gyroscopic entries are
+\begin{equation}
+ G_{13}=\frac{2\sqrt3\alpha(\alpha-2)}{\alpha+6},\quad
+ G_{24}=\frac{4\sqrt3L(\alpha-2)}{\alpha+6},\quad
+ G_{45}=\frac{4\sqrt3L(2-\alpha)}{\alpha+6}.
+\end{equation}
+Antisymmetry supplies the lower triangle.
+Set $d_0=\alpha+6$.
+The original symmetric stiffness has entries
+\begin{align}
+ H_{11}={}&[-L\alpha^2/4-L\alpha+3L-\alpha^2m/4+9\alpha^2
+ -\alpha m-36\alpha+3m+36]/d_0,\\
+ H_{12}={}&L(-\alpha^2+8\alpha-12)/d_0,\\
+ H_{15}={}&3(4L\alpha-8L-\alpha^2-4\alpha+12)/d_0,\\
+ H_{22}={}&L(-2L\alpha+4L+\alpha^2+4\alpha-12)/d_0,\\
+ H_{25}={}&H_{22},\\
+ H_{55}={}&(16L^2-14L\alpha-84L+3\alpha^2+36\alpha+108)/d_0,\\
+ H_{33}={}&L\alpha(2-\alpha)/d_0,\\
+ H_{34}={}&2L\alpha(\alpha-2)/d_0,\\
+ H_{44}={}&L(-L\alpha^2-4L\alpha+12L-8\alpha^2+64\alpha-96)/(4d_0).
+\end{align}
+Symmetry supplies opposite entries and all unlisted entries vanish.
+The repair adds
+\begin{align}
+ \Delta H_{22}&=\tfrac{16}{3}\bar\lambda b^2L(L-3)+8\bar\zeta b^2L^2,\\
+ \Delta H_{25}&=\Delta H_{52}=\Delta H_{55}=8\bar\zeta b^2L^2,\\
+ \Delta H_{44}&=bLh_*.
+\end{align}
+At $L=3$ delete the fifth row and column after the residual gauge fixing.
+At $L\ge8$ retain all five variables.
+
+\section{Exact original low-mode root certificates}
+\label{app:roots}
+
+For $w=\omega^2$, the monic characteristic polynomials of the physical original sectors at~\eqref{eq:radialpoint} are
+\begin{align}
+ p_1(w)={}&w^4-\tfrac{2067}{100}w^3+\tfrac{22361}{250}w^2
+ -\tfrac{144303}{500}w+\tfrac{12951}{25},\\
+ p_2(w)={}&w^5-\tfrac{2281}{50}w^4+\tfrac{1181621}{2000}w^3
+ -\tfrac{26396913}{10000}w^2+\tfrac{3263619}{1250}w,\\
+ p_3(w)={}&w^5-\tfrac{4031}{50}w^4+\tfrac{4268341}{2000}w^3
+ -\tfrac{112729759}{5000}w^2\nonumber\\
+ &+\tfrac{793930209}{10000}w+\tfrac{391482}{125}.
+\end{align}
+Exact Sturm counts give two positive real roots and a nonreal pair for $p_1$, four positive roots and one zero for $p_2$, and four positive roots and one negative root for $p_3$.
+The associated unstable exponents are therefore physical constrained modes.
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}

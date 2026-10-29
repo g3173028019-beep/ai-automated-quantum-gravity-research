@@ -1,0 +1,44 @@
+{
+  "delivery_date": "2026-10-29",
+  "source_edition": "deferred-priority-20261029/twistor",
+  "source_sha256": {
+    "paper/main.tex": "353783016a9d50ca93f8ddc327e6af38f8590a1ae21a0813683e5fe6699d7853",
+    "paper/references.bib": "4f80f9139cc323944a6aed3c77b6ea6297f0e8992c8cc5eadfe3a461a6d1fe4e",
+    "paper/manuscript.pdf": "84d4ab4eb62a58497cef348637c769375291f2005970fcc64261b9eb1f994795",
+    "code/native_mixed_quartic.py": "702bcb29e61194be335f81343677321cc5e47f3c829c290f9e0cc41053acd83f",
+    "code/finite_backreaction.py": "cedbfd6b8846b74be2cb22a8db5f1e219344ae318178adfb688b39388dd318e4",
+    "results/native-mixed-quartic.json": "c335a7c7073c13881998dcfa13e655ff91d3ccb65164c016a4165b5f8662f679",
+    "results/finite-backreaction.json": "1800e6d605781cec320fc388ccdc0c8bdf40dedfccc1adf6a311d652f5c99430",
+    "DERIVATION.md": "9e508c28dd69665c7bf395871daa8f033d548d9ad88a8e6e12a017f550fd01b6",
+    "VERIFICATION.md": "3db52db7d3b481b37886a22c9650d5252ecd1394a41253b2f5b437771d99a89d"
+  },
+  "adaptations": [
+    "PDF, LaTeX and bibliography copied byte for byte.",
+    "Default scientific scripts use only this package and installed dependencies.",
+    "Repository documentation uses portable paths; original verification coverage is retained."
+  ],
+  "pdf_pages": 10,
+  "pdf_visual_review": {
+    "all_pages_contact_sheet": true,
+    "readable_full_pages": [
+      5,
+      8
+    ],
+    "finding": "No clipping, overlap, missing glyphs or unresolved references observed."
+  },
+  "human_authors": [],
+  "human_affiliations": [],
+  "human_expert_review": false,
+  "public_priority_claim": false,
+  "scope": "The paper constructs the native off-shell mixed quartic with actual Einstein auxiliary feedback and a separate exact finite backreaction family. The finite metric has split signature and zero-longitudinal background data; a Lorentzian Real lift and full quartic chart descent are not claimed.",
+  "portable_replay": {
+    "exit_code": 0,
+    "date_beijing": "2026-10-29",
+    "external_project_access_required": false,
+    "network_required": false
+  },
+  "packaged_code_sha256": {
+    "code/finite_backreaction.py": "cedbfd6b8846b74be2cb22a8db5f1e219344ae318178adfb688b39388dd318e4",
+    "code/native_mixed_quartic.py": "702bcb29e61194be335f81343677321cc5e47f3c829c290f9e0cc41053acd83f"
+  }
+}

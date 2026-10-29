@@ -1,0 +1,43 @@
+{
+  "delivery_date": "2026-10-29",
+  "source_edition": "deferred-priority-20261029/ekg",
+  "source_sha256": {
+    "paper/main.tex": "6d9de1005cca6286f155f7992e4d4eb1762824fe2c2b85ac02db2ef4783b4ae6",
+    "paper/references.bib": "4e2f6728a78cbd3660ce16ef0e9d5734449f1a29e2eecc3a6efb7d94b461f40d",
+    "paper/manuscript.pdf": "4cc30123f9d738da4630d14da8ffd24fc14ab8530413b6dbeed45c4b1c070562",
+    "scripts/construct_inhomogeneous.py": "6c9ca214b1393f34d0887d8ff2ded700114dbccd26580c6d9d9e202109b21397",
+    "results/construction.json": "ae104dd2865dc78ad9df933b4cdf7c9b9f3a5cf352ee0629b58e0b2ae9cd6d5d",
+    "results/quadratic_action.txt": "a61c151544a9ac8c23efa3ad8707e79bc22d816b402511908e8087349729c5fa",
+    "results/controlled_ell1_evolution.csv": "d6903ad75c23da585897f72552dc7d2141aef28a5fa0fc6720257ebb13a1be9d",
+    "DERIVATION.md": "4ecd04600677a8e274775d87ea28ca2319b5b7c609e4b4de2be06c2a715a6490",
+    "VERIFICATION.md": "2b043a13f072e1d3088629f22fd68c0f4253258912027c6617edd05cfd754f8a"
+  },
+  "adaptations": [
+    "PDF, LaTeX and bibliography copied byte for byte.",
+    "Default scientific scripts use only this package and installed dependencies.",
+    "Repository documentation uses portable paths; original verification coverage is retained."
+  ],
+  "pdf_pages": 11,
+  "pdf_visual_review": {
+    "all_pages_contact_sheet": true,
+    "readable_full_pages": [
+      6,
+      10
+    ],
+    "finding": "No clipping, overlap, missing glyphs or unresolved references observed."
+  },
+  "human_authors": [],
+  "human_affiliations": [],
+  "human_expert_review": false,
+  "public_priority_claim": false,
+  "scope": "The specified effective action preserves the exact reference and homogeneous action while making every physical inhomogeneous quadratic sector positive. It constructs a 141-oscillator finite-band Gaussian. Nonlinear stability and a continuum Hadamard state for the modified characteristic cones are not claimed.",
+  "portable_replay": {
+    "exit_code": 0,
+    "date_beijing": "2026-10-29",
+    "external_project_access_required": false,
+    "network_required": false
+  },
+  "packaged_code_sha256": {
+    "scripts/construct_inhomogeneous.py": "6c9ca214b1393f34d0887d8ff2ded700114dbccd26580c6d9d9e202109b21397"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "status": "PASS",
+  "sympy_version": "1.14.0",
+  "checks": [
+    "exact nonlinear Hessian determinant",
+    "exact sourced heavenly equation",
+    "constant nondegenerate determinant",
+    "exact finite inverse",
+    "direct four-dimensional Einstein equation, all 16 components",
+    "scalar gradient exactly null",
+    "direct finite Klein--Gordon equation",
+    "Ricci scalar vanishes",
+    "non-pp rank-two scalar Hessian minor",
+    "scalar Hessian uu normalization",
+    "null gradient congruence is geodesic",
+    "exact quadratic scalar backreaction, no hidden higher orders",
+    "real cubic square-source sign obstruction",
+    "Walker inclusion nilpotence is exact"
+  ],
+  "elapsed_seconds": 1.4883573055267334,
+  "coordinates": [
+    "u",
+    "v",
+    "z",
+    "w"
+  ],
+  "H": "alpha*w + beta",
+  "theta": "epsilon**2*kappa*(alpha*w**5/20 + beta*w**4/12) + v**2/(2*alpha*w + 2*beta)",
+  "Psi": "epsilon*u",
+  "metric": [
+    [
+      "(alpha**4*epsilon**2*kappa*w**6 + 4*alpha**3*beta*epsilon**2*kappa*w**5 + 6*alpha**2*beta**2*epsilon**2*kappa*w**4 + alpha**2*v**2 + 4*alpha*beta**3*epsilon**2*kappa*w**3 + beta**4*epsilon**2*kappa*w**2)/(alpha**3*w**3 + 3*alpha**2*beta*w**2 + 3*alpha*beta**2*w + beta**3)",
+      "-1",
+      "-alpha*v/(alpha**2*w**2 + 2*alpha*beta*w + beta**2)",
+      "0"
+    ],
+    [
+      "-1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-alpha*v/(alpha**2*w**2 + 2*alpha*beta*w + beta**2)",
+      "0",
+      "1/(alpha*w + beta)",
+      "1"
+    ],
+    [
+      "0",
+      "0",
+      "1",
+      "0"
+    ]
+  ],
+  "Ricci": [
+    [
+      "epsilon**2*kappa",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "scalar_Hessian": [
+    [
+      "-alpha**2*epsilon*v/(alpha**3*w**3 + 3*alpha**2*beta*w**2 + 3*alpha*beta**2*w + beta**3)",
+      "0",
+      "alpha*epsilon/(2*alpha**2*w**2 + 4*alpha*beta*w + 2*beta**2)",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "alpha*epsilon/(2*alpha**2*w**2 + 4*alpha*beta*w + 2*beta**2)",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "rank_two_minor": "-alpha**2*epsilon**2/(4*alpha**4*w**4 + 16*alpha**3*beta*w**3 + 24*alpha**2*beta**2*w**2 + 16*alpha*beta**3*w + 4*beta**4)",
+  "exact_scalar_backreaction": "epsilon**2*kappa*w**2*(alpha*w + beta)",
+  "domain": "H=alpha*w+beta !=0; kappa>0, epsilon!=0, alpha!=0 for non-pp witness. Real coordinates give signature (2,2). Complex analytic continuation is allowed; a Lorentzian Real completion is not constructed.",
+  "interpretation": "Exact finite Einstein--massless-scalar family beyond aligned-scalar pp waves. Algebraic coordinate patch, not asymptotic scattering, positive-energy Lorentzian spacetime, a global twistor geometry or interacting BV theory."
+}
