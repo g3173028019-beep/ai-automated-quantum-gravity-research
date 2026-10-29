@@ -1,0 +1,283 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype,xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Hj}{\mathcal H_j}
+\title{Half-Turn Covariance of a Tangential Fuzzy-Sphere Oscillator\\and Its Sector-Resolved Planar Limit}
+\author{}
+\date{29 October 2026}
+\hypersetup{pdfauthor={},pdftitle={Half-Turn Covariance of a Tangential Fuzzy-Sphere Oscillator and Its Sector-Resolved Planar Limit}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study a positive oscillator operator on the complex matrix algebra of a spin-$j$ representation, using only the two components tangent to a chosen polar axis.
+Its self-dual spectrum and parameter-inversion covariance follow from elementary left--right multiplication identities.
+We give the exact curvature defect on each fixed polar occupation window, distinguish this statement from the full low-energy spectrum, and prove that the full self-dual heat trace converges to four copies of the planar oscillator heat trace.
+Two cross-pole matrix units remain exact finite-energy eigenvectors for every oscillator parameter, so global spectral decoupling cannot be inferred from a selected-pole contraction.
+We also derive the Weyl-symbol formula for right multiplication by parity: with the stated convention it is an involutive scaled symplectic Fourier transform.
+A comparison with the earlier fuzzy harmonic regulator identifies the extra axial commutator term and prevents a broad novelty claim for fuzzy Grosse--Wulkenhaar actions.
+The results concern a finite kinetic family and its explicit spectral limits; they do not assert interacting renormalization or operator-topology convergence.
+\end{abstract}
+
+\section{The finite question and its context}
+Coordinate--momentum covariance is a defining feature of the noncommutative oscillator models associated with Langmann--Szabo duality and Grosse--Wulkenhaar renormalization~\citep{LangmannSzabo2002,GrosseWulkenhaar2005}.
+Finite fuzzy-sphere regularizations and their planar limits are established tools~\citep{ChuMadoreSteinacker2001}.
+In particular, Ydri constructed a fuzzy harmonic regulator and quartic action before the finite family considered here~\citep[Sec.~4.2]{Ydri2014}.
+The useful question is therefore specific: what exact covariance and spectral information follow when the commutator and anticommutator terms are both restricted to two tangential components?
+
+The answer has two parts.
+The finite identities are exact and need no limiting argument.
+The planar interpretation, however, must retain the multiplicity of the polar sectors and distinguish an ordinary Fourier transform from a scaled symplectic one.
+We prove those statements directly and give portable exact checks of the finite conventions.
+The contribution is the explicit analysis of this tangential specialization and its limits, rather than a new construction of fuzzy geometry or a first fuzzy oscillator action.
+
+\section{Definition and positivity}
+Let $j\in\{\tfrac12,1,\tfrac32,\ldots\}$, let $V_j$ be the spin-$j$ irreducible representation, and let $J_a$ be its Hermitian generators:
+\begin{equation}
+ [J_a,J_b]=i\epsilon_{abc}J_c,\qquad
+ \sum_{a=1}^3J_a^2=j(j+1)I.
+\end{equation}
+The Hilbert space is $\Hj=\End(V_j)$ with inner product $\langle X,Y\rangle=\Tr(X^\dagger Y)$.
+Define left and right multiplication by
+\begin{equation}
+ L_aX=J_aX,\qquad R_aX=XJ_a,\qquad
+ A_a=L_a-R_a,\qquad S_a=L_a+R_a.
+\end{equation}
+All four operators are self-adjoint on $\Hj$, and left multiplication commutes with right multiplication.
+Right multiplication has the opposite Lie-bracket convention, a fact that is harmless here because the calculations use explicit compositions.
+
+For $\theta>0$ and $\Omega>0$, put
+\begin{equation}\label{eq:H}
+ H_j(\Omega)=\frac{1}{\theta j}\sum_{a=1}^2
+ \big(A_a^2+\Omega^2S_a^2\big).
+\end{equation}
+It is positive because
+\begin{equation}
+ \langle X,H_j(\Omega)X\rangle
+ =\frac{1}{\theta j}\sum_{a=1}^2
+ \big(\|A_aX\|_{\rm HS}^2+\Omega^2\|S_aX\|_{\rm HS}^2\big)\ge0.
+\end{equation}
+We fix an axis once and for all; the index restriction $a=1,2$ is part of the model.
+When $\theta$ is an area, $H_j$ has dimensions of inverse area and a heat parameter $t$ has dimensions of area.
+
+The complex domain matters.
+Although $H_j$ preserves Hermitian matrices, the right multiplication used below generally does not.
+Its covariance is a unitary equivalence on the complex Hilbert space $\Hj$ and does not by itself define a symmetry of a real Hermitian field configuration space.
+
+\section{Exact spectrum and covariance}
+\begin{theorem}[Self-dual spectrum]\label{thm:spectrum}
+Let $E_{m_Lm_R}=|m_L\rangle\langle m_R|$ with $m_L,m_R=-j,-j+1,\ldots,j$.
+Then
+\begin{equation}\label{eq:energy}
+ H_j(1)E_{m_Lm_R}
+ =\frac{2}{\theta j}\big(2j(j+1)-m_L^2-m_R^2\big)E_{m_Lm_R}.
+\end{equation}
+Equivalently, for $n_L=j-m_L$ and $n_R=j-m_R$,
+\begin{equation}\label{eq:occupation}
+ E_j(n_L,n_R)=\frac4\theta(n_L+n_R+1)
+ -\frac2{\theta j}(n_L^2+n_R^2),\qquad 0\le n_L,n_R\le2j.
+\end{equation}
+\end{theorem}
+\begin{proof}
+For each $a$, $(L_a-R_a)^2+(L_a+R_a)^2=2(L_a^2+R_a^2)$.
+The Casimir identity gives
+\begin{equation}
+ H_j(1)=\frac2{\theta j}
+ \big(2j(j+1)I-L_3^2-R_3^2\big).
+\end{equation}
+The matrix units diagonalize $L_3$ and $R_3$.
+Substituting $m=j-n$ yields~\eqref{eq:occupation}.
+\end{proof}
+
+\begin{theorem}[Finite parameter inversion]\label{thm:covariance}
+Let $U_j=e^{i\pi J_3}$ and $\mathcal P_jX=XU_j$.
+Then $\mathcal P_j$ is unitary,
+\begin{equation}\label{eq:inversion}
+ \mathcal P_jH_j(\Omega)\mathcal P_j^{-1}
+ =\Omega^2H_j(\Omega^{-1}),\qquad
+ \mathcal P_j^2=(-1)^{2j}I.
+\end{equation}
+\end{theorem}
+\begin{proof}
+The Hilbert--Schmidt norm is invariant under right multiplication by $U_j$.
+Left multiplication is unchanged under conjugation by $\mathcal P_j$, whereas
+\begin{equation}
+ \mathcal P_jR_a\mathcal P_j^{-1}X
+ =XU_j^{-1}J_aU_j=-R_aX,\qquad a=1,2.
+\end{equation}
+Thus $A_a$ and $S_a$ are exchanged, proving~\eqref{eq:inversion}.
+Finally, $U_j^2=e^{2\pi iJ_3}=(-1)^{2j}I$.
+\end{proof}
+
+The spectrum at parameter $\Omega$ is therefore exactly $\Omega^2$ times the spectrum at $\Omega^{-1}$, including multiplicities.
+A floating-point residual between these two spectra tests numerical accuracy, not a physical $1/j$ defect.
+The curvature defect occurs in~\eqref{eq:occupation}, which compares a finite polar spectrum to a planar one.
+
+\section{Polar windows and the full heat trace}
+\begin{corollary}[Uniform fixed-window estimate]\label{cor:window}
+Fix an integer $M\ge0$ and restrict $H_j(1)$ to the matrix units with $0\le n_L,n_R\le M$, for $2j\ge M$.
+This subspace is invariant and its eigenvalues satisfy
+\begin{equation}
+ \left|E_j(n_L,n_R)-\frac4\theta(n_L+n_R+1)\right|
+ \le\frac{4M^2}{\theta j}.
+\end{equation}
+\end{corollary}
+\begin{proof}
+The invariance follows from diagonalization and the bound follows from~\eqref{eq:occupation}.
+\end{proof}
+
+This estimate selects one corner of the occupation square.
+The full spectrum contains other corners at the same energy scale.
+For example, its ground energy is $4/\theta$ and its ground multiplicity is four for every $j>0$, whereas one planar oscillator has ground multiplicity one.
+
+\begin{theorem}[Four-copy heat-trace limit]\label{thm:heat}
+For every $t>0$,
+\begin{equation}\label{eq:heatlimit}
+ \lim_{j\to\infty}\Tr_{\Hj}e^{-tH_j(1)}
+ =\frac{4e^{-4t/\theta}}{(1-e^{-4t/\theta})^2}.
+\end{equation}
+The limit holds through integer and half-integer spins.
+\end{theorem}
+\begin{proof}
+For a magnetic number $m$, let $k=j-|m|$.
+The possible $k$ are nonnegative integers up to $\lfloor j\rfloor$.
+Their multiplicity $c_j(k)$ is two, except that $c_j(j)=1$ at the integer-spin midpoint.
+Thus~\eqref{eq:energy} becomes
+\begin{equation}
+ E_j(k,l)=\frac4\theta+\frac4\theta(k+l)
+ -\frac2{\theta j}(k^2+l^2).
+\end{equation}
+Since $0\le k,l\le j$, this energy is at least $4/\theta+2(k+l)/\theta$.
+Extend $c_j(k)$ by zero outside its range.
+The heat trace is the double sum of $c_j(k)c_j(l)e^{-tE_j(k,l)}$, dominated by the summable sequence
+\begin{equation}
+ 4e^{-4t/\theta}e^{-2t(k+l)/\theta}.
+\end{equation}
+For every fixed $k,l$, $c_j(k)c_j(l)\to4$ and $E_j(k,l)\to4(k+l+1)/\theta$.
+Dominated convergence and two geometric sums give~\eqref{eq:heatlimit}.
+\end{proof}
+
+The right-hand side is four times the heat trace of the planar self-dual matrix oscillator with occupation energies $4(n_L+n_R+1)/\theta$.
+The factor four records the independent north/south choices on the ket and bra factors.
+It is not removed by sending the matrix size to infinity.
+
+\begin{proposition}[Persistent cross-pole states]\label{prop:crosspole}
+For every $j>0$ and $\Omega>0$, the two matrix units $|j\rangle\langle-j|$ and $|-j\rangle\langle j|$ are eigenvectors with energy
+\begin{equation}\label{eq:crosspole}
+ \frac{2(1+\Omega^2)}{\theta}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Expanding~\eqref{eq:H} gives
+\begin{equation}
+ \theta jH_j(\Omega)
+ =(1+\Omega^2)\sum_{a=1}^2(L_a^2+R_a^2)
+ +2(\Omega^2-1)\sum_{a=1}^2L_aR_a.
+\end{equation}
+On either cross-pole unit, the first sum is $2j$ times the identity.
+The second sum vanishes because
+\begin{equation}
+ \sum_{a=1}^2J_aXJ_a=\tfrac12(J_+XJ_-+J_-XJ_+)
+\end{equation}
+and each term contains an annihilated extremal ket or bra.
+\end{proof}
+
+Consequently, these states do not decouple by moving to infinite energy.
+A single-pole continuum description may still be appropriate after selecting a sector or observable class, but that is additional structure.
+Neither Theorem~\ref{thm:heat} nor Corollary~\ref{cor:window} defines embeddings between the varying matrix Hilbert spaces, so neither is an assertion of strong-, norm-, or resolvent convergence.
+
+\section{Right parity and the symplectic Fourier convention}
+The order of a transform is not enough to identify its action.
+In particular, the ordinary Fourier transform and a Fourier transform composed with a symplectic rotation have different squares.
+We give the relevant formula rather than importing an order-four analogy.
+
+Let $A$ initially have a Schwartz integral kernel on $L^2(\mathbb R)$ and let $\Pi\psi(q)=\psi(-q)$.
+Use the Weyl symbol
+\begin{equation}\label{eq:weyl}
+ a_A(q,p)=\int_{\mathbb R}e^{-ipy/\hbar}
+ \langle q+y/2|A|q-y/2\rangle\,dy,\qquad\hbar>0.
+\end{equation}
+\begin{proposition}[Symbol of right parity]\label{prop:weyl}
+In the convention~\eqref{eq:weyl},
+\begin{equation}\label{eq:symplectic}
+ a_{A\Pi}(q,p)=\frac1{\pi\hbar}\int_{\mathbb R^2}
+ e^{2i(qp'-pq')/\hbar}a_A(q',p')\,dq'\,dp'.
+\end{equation}
+The transform in~\eqref{eq:symplectic} is unitary and involutive on $L^2(\mathbb R^2)$.
+\end{proposition}
+\begin{proof}
+The inverse symbol formula is
+\begin{equation}
+ \langle u|A|v\rangle=\frac1{2\pi\hbar}
+ \int e^{ip'(u-v)/\hbar}a_A((u+v)/2,p')\,dp'.
+\end{equation}
+Since $\langle u|A\Pi|v\rangle=\langle u|A|-v\rangle$, substituting $u=q+y/2$, $v=q-y/2$ gives center $y/2$ and separation $2q$.
+The change of variable $q'=y/2$ proves~\eqref{eq:symplectic}.
+Composing the skew kernel twice produces the delta distribution at the original $(q,p)$; equivalently it is a rescaled ordinary Fourier transform followed by the area-preserving symplectic rotation.
+Plancherel gives unitarity with the displayed normalization.
+The Schwartz identity extends by density to Hilbert--Schmidt operators and their $L^2$ symbols.
+\end{proof}
+
+In oscillator number states, $\Pi=(-1)^{\hat n}$.
+On a fixed north-pole window,
+\begin{equation}
+ e^{i\pi J_3}|j-n\rangle=e^{i\pi j}(-1)^n|j-n\rangle.
+\end{equation}
+After removing the constant phase, the finite right half-turn therefore has exactly the right-parity action on these labels.
+Proposition~\ref{prop:weyl} explains the appropriate planar Fourier interpretation of that action.
+It also agrees with the involutive scaled Fourier duality in the original Langmann--Szabo convention~\citep[Prop.~1]{LangmannSzabo2002}.
+This does not construct a preferred-axis-independent fuzzy-sphere Fourier transform, and it does not turn label agreement into an operator-topology contraction theorem.
+
+\section{Comparison with the earlier fuzzy harmonic regulator}
+The prior harmonic regulator must be compared at the operator level.
+After choosing a common positive kinetic normalization, the squashed fuzzy-sphere operator of Ydri~\citep[Sec.~4.2]{Ydri2014} has dimensionless generator form
+\begin{equation}
+ Q_Y(\Omega)=\sum_{a=1}^3A_a^2+\Omega^2A_3^2
+ +\Omega^2\sum_{a=1}^2S_a^2.
+\end{equation}
+The dimensionless numerator $Q_T=\theta jH_j$ of~\eqref{eq:H} instead satisfies
+\begin{equation}\label{eq:prior}
+ Q_Y(\Omega)-Q_T(\Omega)=(1+\Omega^2)A_3^2.
+\end{equation}
+Thus the two families differ by a positive axial commutator term.
+They agree on the $A_3=0$ sector, but are not identical finite kinetic operators.
+For example, the added term on $E_{m_Lm_R}$ is $(1+\Omega^2)(m_L-m_R)^2$.
+The extra term changes the role of cross-pole states and cannot be discarded in a global spectral comparison.
+
+Equation~\eqref{eq:prior} identifies a precise specialization worth studying while acknowledging the earlier fuzzy harmonic and quartic constructions.
+No claim of a first fuzzy Grosse--Wulkenhaar action, interacting continuum renormalization, or publication priority is made.
+The standard fuzzy-sphere and planar oscillator literature supplies the surrounding framework~\citep{ChuMadoreSteinacker2001,GrosseWulkenhaar2005}; the proofs here state the exact content of the tangential finite family.
+
+\section{Reproducibility and interpretation}
+The accompanying Python script constructs the spin generators independently using exact SymPy radicals.
+It checks the complete self-dual superoperator, symbolic-$\Omega$ covariance, projective square, cross-pole eigenvectors, and~\eqref{eq:prior} for spins $1/2,1,3/2,2$.
+It also records heat-trace sums approaching~\eqref{eq:heatlimit}.
+Those decimals illustrate the limit; the proof is the summable domination above.
+No Monte Carlo data, fitted spectrum or external project directory is needed to reproduce these checks.
+
+The finite model is positive, explicitly solvable at its self-dual point, and exactly covariant under parameter inversion.
+Its compact geometry leaves four polar sectors in the full thermal limit.
+The useful continuum statement is therefore sector-resolved spectral convergence together with the all-sector heat-trace limit, rather than an unqualified identification of the full finite spectrum with one planar oscillator.
+
+\section*{AI-assisted workflow and unresolved attribution}
+The repository operator states:
+\begin{quote}
+I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.
+\end{quote}
+The operator reports that earlier work was led mainly by Fable 5, whereas results from July 2026 onward were predominantly produced by GPT models.
+DeepSeek and multiple GPT models also participated in cross-review, checking, and manuscript preparation.
+This is a reported chronology rather than an audited allocation of each individual contribution.
+A later revision does not reattribute an earlier derivation.
+Human author names and affiliations are intentionally blank, and the scientific claims have not undergone human expert review.
+Historical research dates, the present edition date, private upload dates, and demonstrated public disclosure are distinct; no settled authorship, ownership, priority, or journal-acceptance claim is made.
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

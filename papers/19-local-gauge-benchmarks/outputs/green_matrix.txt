@@ -1,0 +1,22 @@
+the boundary programme local benchmark Green matrix full-matrix symbolic audit
+scope=exact formal Schur-block algebra and lambda coefficient only
+nonclaims=no PDE Green-hyperbolicity proof; no causal-support proof; no Hadamard state; no BRST positivity
+field_order_even=(H,b), H=(h,phi)
+field_order_odd=(c,cbar)
+source_quadratic_sign=S_H^(2)=S_H-(1/2)<Theta,P_bar Theta>
+LB_sign_map=P_0_LB=-(4/kappa^2)A^*P_bar A
+formula_P_lambda=P_0-lambda^(-1)F^*F
+frozen_lambda=1/2
+eliminated_gauge_square_coefficient=-1
+hessian_FstarF_shift_coefficient=-2
+auxiliary_solution_b_over_F=-2
+full_matrix_lambda_zero_status=SUPPORTED_BY_NONSCHUR_C2_THEOREM_NOT_THIS_EXECUTABLE
+identity_term_support=LOCAL_SUBSET_OF_BOTH_CAUSAL_SUPPORTS
+causal_difference_identity_term=CANCELS_BETWEEN_ADVANCED_AND_RETARDED
+check_even_left_inverse=PASS
+check_even_right_inverse=PASS
+check_odd_left_inverse=PASS
+check_odd_right_inverse=PASS
+check_lambda_plus_half_match=PASS
+invalid_lambda_zero_rejected=PASS
+overall=PASS_BLOCK_ALGEBRA_ONLY

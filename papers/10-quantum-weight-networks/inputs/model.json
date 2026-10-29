@@ -1,0 +1,52 @@
+{
+  "pauli_order": "weight then logical",
+  "weight_family": "aI+bZ; a>|b|>0",
+  "rational_weight": [
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "controls": [
+    "G tensor X",
+    "G tensor Y",
+    "X tensor I"
+  ],
+  "counterexample_update": "(X+Z) tensor I",
+  "local_basis": [
+    "IX",
+    "ZX",
+    "IY",
+    "ZY",
+    "XI",
+    "IZ",
+    "ZZ",
+    "YX",
+    "YY",
+    "YZ"
+  ],
+  "gamma": [
+    "YI",
+    "XX",
+    "XY",
+    "XZ",
+    "ZI"
+  ],
+  "S": "ZI",
+  "C": "YZ",
+  "finite_chain_sizes": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "edge_types": [
+    "S tensor S",
+    "C tensor C"
+  ],
+  "product_state": "(I+nu S+mu C)/4; mu>0; nu^2+mu^2<=1"
+}

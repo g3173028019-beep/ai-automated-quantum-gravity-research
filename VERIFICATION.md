@@ -1,5 +1,14 @@
 # Verification record
 
+## Recovered-paper delivery and current revisions
+
+Eleven new papers and two revised papers are delivered with 155 compiled pages. Terminal builds and the desktop compiler confirmed success. All pages were inspected in rendered contact sheets, with selected dense proofs, tables and the reported paper 18 diagram inspected at readable scale. The diagram was corrected in native TikZ and the final PDF reinspected for line/text collisions and page clipping.
+
+Each packet's default portable calculation was executed in its standalone package, including clean/unrelated-working-directory checks where documented. The final repository files preserve those code/input bytes. Expensive unchanged producers were not repeated merely for delivery: retained evidence is explicitly distinguished from the bounded default replay. The source-specific verification records state exact analytic, symbolic, numerical and inherited coverage.
+
+Prior paper01/02 editions are preserved byte for byte with an edition manifest. Papers 03--09 remain unchanged. Metadata identifiers may be JSON-escaped without changing decoded values. The archive checker includes all top-level TeX parts and case-insensitive disclosure matching. These packaging checks are not human peer review or formal proof certification.
+
+
 ## Canonical coupled-state theorem delivery
 
 The independent fourteen-page paper received focused operator and Fredholm/microlocal analytic scrutiny, followed by common-normalization manuscript integration. The proof includes kernel and cokernel obstructions, residual gauge removal, physical-charge finite-rank CCR repair, compact-test/Cauchy equivalence and neutral real-field averaging. Standard pseudodifferential, elliptic, normally hyperbolic and propagation/lift results are explicitly cited mathematical inputs, not certified by the finite algebra script.

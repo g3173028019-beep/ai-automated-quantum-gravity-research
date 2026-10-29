@@ -1,0 +1,135 @@
+\appendix
+\section{Explicit finite certificate definitions}
+\label{app:certificates}
+
+The companion program \texttt{code/verify.py} constructs every matrix from
+the definitions below and writes the compact \texttt{data/results.json}.
+It needs Python, SymPy and NumPy, with no historical paths or network access.
+No large stored matrix archive is needed for reproduction.
+
+\subsection{The invariant constraint and its exact rank}
+
+Let $p_1,\ldots,p_{10}$ enumerate the pairs $0\leq A<B\leq4$
+lexicographically.
+Use the basis $e_A$ of the vector representation and the 55 commutative
+products $p_ap_b$, $a\leq b$, of its bivector basis.
+For each generator $J$, define its bivector action by the Leibniz rule
+\begin{equation}
+ J(v\wedge w)=(Jv)\wedge w+v\wedge(Jw),
+\end{equation}
+and its symmetric-square action by
+$J(p_ap_b)=(Jp_a)p_b+p_a(Jp_b)$.
+The integer action on the 275-dimensional tensor space is
+\begin{equation}
+ M_J=J\otimes I_{55}+I_5\otimes J_{\mathrm{Sym}^2}.
+\end{equation}
+Stacking the ten $M_J$ gives an integer $2750\times275$ matrix $M$.
+In the stated basis an invariant vector has coefficients proportional to
+\begin{equation}
+ v_{A,(a,b)}=\epsilon_{A\,p_a^{(1)}p_a^{(2)}p_b^{(1)}p_b^{(2)}} .
+ \label{eq:epsilon-null}
+\end{equation}
+All its nonzero entries involve distinct pairs and receive the same
+irrelevant symmetric-product normalization.
+The code verifies $Mv=0$ over the integers with $v\ne0$.
+It also performs exact modular Gaussian elimination modulo the prime 1009,
+obtaining rank 274 for each real form.
+A nonzero modular minor implies rational rank at least 274, while
+\eqref{eq:epsilon-null} gives rational rank at most 274.
+Thus the rational rank is exactly 274.
+The invariant coefficient problem is dual to this representation through its
+nondegenerate invariant pairing and has the same invariant dimension.
+This is an exact argument, independent of singular-value thresholds.
+
+\subsection{Torsion and coframe maps}
+
+Set $e^I=dx^I$ at one point.
+Index the torsion columns by $(L,bc)$ with $b<c$, and its components by
+$T^L=\frac12 T^L_{bc}dx^b\wedge dx^c$.
+The connection-equation rows are $(IJ,abc)$ with $I<J$ and $a<b<c$.
+Their entries are
+\begin{equation}
+ (\mathcal T T)_{IJ,abc}
+ =\sum_{K,L}\epsilon_{IJKL}
+ \bigl(\delta^K_aT^L_{bc}
+      +\delta^K_bT^L_{ca}
+      +\delta^K_cT^L_{ab}\bigr).
+ \label{eq:torsion-matrix}
+\end{equation}
+The resulting $24\times24$ integer matrix has exact rank 24 and determinant
+16 in these lexicographic conventions.
+The determinant is a basis-dependent check, whereas invertibility is the
+geometric statement.
+
+For the coframe certificate, begin in a Euclidean orthonormal reference
+basis.
+An algebraic curvature is a symmetric $6\times6$ matrix indexed by
+unordered bivector pairs, giving 21 components before the first Bianchi
+identity.
+In four dimensions that identity is the single independent condition
+\begin{equation}
+ R_{01,23}-R_{02,13}+R_{03,12}=0.
+\end{equation}
+The code obtains its 20-dimensional kernel by exact rational elimination,
+not singular-value decomposition.
+On this kernel the reference-signature coframe map is
+\begin{equation}
+ (\mathcal E R)_{I,abc}
+ =\sum_{J,K,L}\epsilon_{IJKL}
+ \bigl(\delta^J_aR_{KL,bc}
+      +\delta^J_bR_{KL,ca}
+      +\delta^J_cR_{KL,ab}\bigr).
+ \label{eq:coframe-matrix}
+\end{equation}
+It has rank ten and kernel dimension ten.
+
+Equation~\eqref{eq:coframe-matrix} is explicitly a reference-signature
+certificate, rather than an array advertised as Lorentz components with
+metric-raising signs omitted.
+Complexifying the actual covariant tensor spaces identifies all
+nondegenerate metric signatures by invertible complex coframe changes.
+The epsilon tensor changes only by a nonzero determinant factor.
+Therefore these maps have the same complex rank, and a real matrix has the
+same rank over the reals as over its complexification.
+The rank result consequently transfers to Lorentz signature.
+The identification of the Lorentzian kernel with Weyl curvature is the
+separate analytic Einstein-contraction argument in the main text.
+
+\subsection{Clifford and selector checks}
+
+The program checks all Clifford anticommutators, all spin-generator
+commutators, every component of the epsilon trace, contact Hermiticity,
+contact covariance, and the determinant identity as exact symbolic
+equalities.
+At unit contact length its spectrum is exactly $\{1,1,-1,-1\}$.
+The common Lorentz-fixed matrix space has complex dimension two; the
+Hermitian fixed-space classification and its positivity conclusion are
+proved in Theorem~\ref{thm:boundary-selector}.
+
+\section{Evidence level and chronology}
+
+The analytic proofs and rational/modular checks establish finite algebraic
+claims.
+They do not test a global bundle reduction, a global Spin lift, a quantum
+measure, a continuum limit or a dynamical selection of the contact field.
+The original private records used floating rank and singular-value
+calculations for the invariant and variational matrices despite some
+exact-certificate wording.
+This edition supplies the exact portable reconstruction above rather than
+inheriting those labels.
+
+The local representation/action records are dated 13 July 2026.
+The present English edition, the exact rank reconstruction, and the explicit
+positive-boundary selector corollary were prepared on 29 October 2026.
+Private dates do not establish public priority.
+The operator reports that earlier work was led by Fable~5, while results from
+July 2026 onward were predominantly GPT-produced; DeepSeek and multiple GPT
+models also contributed review and preparation.
+Human authors and affiliations remain blank.
+Human expert review has not occurred and no global novelty certificate is
+claimed.
+The operator's attribution statement is retained verbatim:
+\begin{quote}
+I genuinely do not know how authorship, intellectual credit, or ownership
+should be attributed for these results.
+\end{quote}

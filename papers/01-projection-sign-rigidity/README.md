@@ -1,13 +1,21 @@
-# Generic Sign Rigidity of Real Projection Kernels from Two-Point Data
+# Generic sign rigidity of real projection kernels from two-point data
 
-[English manuscript](manuscript.pdf)
+Revised edition: **29 October 2026**, 6 pages. [Manuscript](manuscript.pdf), [LaTeX source](main.tex), [revision record](REVISION.md).
 
-For `N>=5` and `2<=r<=N-2`, almost every real symmetric rank-r orthogonal projection is determined by its diagonal and entrywise moduli, up to diagonal-sign conjugation. A zero-subset-sum condition certifies uniqueness; analytic nonvanishing gives the generic theorem.
+For N>=5 and 2<=r<=N-2, almost every real rank-r projection is determined by its diagonal and entrywise moduli up to diagonal-sign gauge. The generic theorem and its analytic proof are retained. The revised fixed-data criterion uses the observed feasible holonomy fiber; an exact full-support rank-one example explains why uniform injectivity is stronger. Sparse/complex/continuum, stable recovery and polynomial-time learning remain outside the theorem.
 
-The data equal principal minors of orders one and two. The scope is exact, finite, real projections on a generic full-support set. Stability, efficient general reconstruction, exceptional strata, complex phases and continuum kernels require further work.
+Run the portable exact revision check with Python >=3.10:
 
-The October edition discusses [Villacis, Principal Minors and Absolute Values](https://arxiv.org/abs/2609.25499): that paper assumes all orders of principal minors for complex projections and determines the coordinatewise absolute-value image of their ranges. Its main statement and this real generic low-order recovery statement have different assumptions and conclusions. This is not a completed novelty/priority audit.
+```powershell
+python verification/check_revision.py
+```
 
-`main.tex` and `references.bib` are the self-contained English source. `verification/legacy_checks.wls` contains historical exact/symbolic example checks and was not rerun for this batch.
+It uses the standard library, enumerates 1024 star-gauge assignments and writes `verification/revision-checks.json`. Build the paper with TeX Live and latexmk/BibTeX:
 
-Source notes record June 2026; the input English paper is dated July 2026. See [HISTORY.md](../../HISTORY.md). The requested workflow statement appears in [DECLARATIONS.md](../../DECLARATIONS.md) and the PDF. Authorship is blank; human expert review has not yet been performed.
+```powershell
+./build.ps1
+```
+
+The source and bibliography are self-contained. `verification/legacy_checks.wls` is the unchanged historical supplement and is optional; its Wolfram checks were not rerun. Default reproduction needs no historical project directory or network.
+
+Human authors and affiliations are blank; PDF Author is blank. Human expert review has not occurred. Targeted prior-source comparisons do not establish comprehensive novelty or public priority. Source history, present revision and demonstrable public disclosure are distinct; [provenance](PROVENANCE.json) pins the input edition.

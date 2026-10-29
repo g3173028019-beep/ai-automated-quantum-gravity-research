@@ -1,0 +1,11 @@
+{
+  "portable_check": "passed from isolated package-local copy",
+  "python": "3.11.15 (main, Jun 23 2026, 15:20:37) [MSC v.1944 64 bit (AMD64)]",
+  "output_byte_equal_saved": true,
+  "output_sha256": "ff80506f7610d22a8749d9c74cd4342d1f60d7ed096900f7398be48017382758",
+  "unique_labels": 48,
+  "all_references_resolved": true,
+  "cited_bibliography_entries": 6,
+  "final_tex_log_issues": [],
+  "scientific_boundary": "Finite formula checks and analytic proof review; no physical realization or human expert review."
+}

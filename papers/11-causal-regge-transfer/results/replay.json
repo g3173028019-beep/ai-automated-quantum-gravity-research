@@ -1,0 +1,143 @@
+{
+  "status": "pass",
+  "mode": "exact algebra + independent geometry + verification of frozen numerical evidence, not full Hessian replay",
+  "frozen_hashes_verified": 20,
+  "commutant_C6": "{(x3, -x2, x2, x3)}",
+  "commutant_D6": "{(x3, 0, 0, x3)}",
+  "endpoint_counterexample": {
+    "old_trace": 0,
+    "new_trace": 3
+  },
+  "structural_rank_bound": "at most two from unique internal E2 pair and zero direct cap cross support",
+  "geometry": [
+    {
+      "level": 1,
+      "simplices": 30,
+      "counts": {
+        "past_spacelike": 12,
+        "future_spacelike": 12,
+        "timelike_side": 6
+      },
+      "negative_gram_margin": 0.1323278038667604,
+      "positive_gram_margin": 0.4999999999999998,
+      "fixed_transverse_edge": 1
+    },
+    {
+      "level": 2,
+      "simplices": 42,
+      "counts": {
+        "past_spacelike": 18,
+        "future_spacelike": 18,
+        "timelike_side": 6
+      },
+      "negative_gram_margin": 0.02528167803446013,
+      "positive_gram_margin": 0.4999999999999998,
+      "fixed_transverse_edge": 1
+    },
+    {
+      "level": 3,
+      "simplices": 54,
+      "counts": {
+        "past_spacelike": 24,
+        "future_spacelike": 24,
+        "timelike_side": 6
+      },
+      "negative_gram_margin": 0.010013881282008086,
+      "positive_gram_margin": 0.4999999999999998,
+      "fixed_transverse_edge": 1
+    },
+    {
+      "level": 4,
+      "simplices": 66,
+      "counts": {
+        "past_spacelike": 30,
+        "future_spacelike": 30,
+        "timelike_side": 6
+      },
+      "negative_gram_margin": 0.005306817102311956,
+      "positive_gram_margin": 0.4999999999999998,
+      "fixed_transverse_edge": 1
+    },
+    {
+      "level": 5,
+      "simplices": 78,
+      "counts": {
+        "past_spacelike": 36,
+        "future_spacelike": 36,
+        "timelike_side": 6
+      },
+      "negative_gram_margin": 0.0032757827852385457,
+      "positive_gram_margin": 0.413005842897356,
+      "fixed_transverse_edge": 1
+    }
+  ],
+  "saved_numerics": [
+    {
+      "level": 1,
+      "eigenvalues": [
+        [
+          0.6858428591884366,
+          -0.7277498885687217
+        ],
+        [
+          0.6858431986942409,
+          -0.7277496352694837
+        ],
+        [
+          0.6858426343612949,
+          0.7277496500039764
+        ],
+        [
+          0.685842907327589,
+          0.7277493260997268
+        ]
+      ],
+      "symplectic_residual": 3.330669073875512e-16,
+      "frozen_spectrum_distance": 0.0,
+      "original_full_producer_seconds": 12.703061700000035
+    },
+    {
+      "level": 5,
+      "eigenvalues": [
+        [
+          1.2902426569083183,
+          -1.1637129612024344e-06
+        ],
+        [
+          1.2902480901549418,
+          -8.441258914483694e-07
+        ],
+        [
+          0.7750480071674178,
+          6.990416931844947e-07
+        ],
+        [
+          0.775044743433401,
+          5.070616573104257e-07
+        ]
+      ],
+      "symplectic_residual": 1.7648709716964733e-16,
+      "frozen_spectrum_distance": 0.0,
+      "original_full_producer_seconds": 423.370821
+    }
+  ],
+  "real_scalar_calibrations": [
+    {
+      "level": 1,
+      "a": -0.5761100336310075,
+      "b": 0.8400029127967517,
+      "chi": 0.6858428998929007,
+      "delta_a": -2.1970542096738654e-07,
+      "dilation": 1.0000000519065142
+    },
+    {
+      "level": 5,
+      "a": -0.49563313524313946,
+      "b": 0.4799642815824481,
+      "chi": 1.032645874415969,
+      "delta_a": 0.16645291498144332,
+      "dilation": 1.322927240460913
+    }
+  ],
+  "human_expert_review": false
+}

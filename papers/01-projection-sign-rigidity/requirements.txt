@@ -1,0 +1,2 @@
+# Python >=3.10 standard library only for the default revision check.
+# Historical optional .wls supplement requires Wolfram Language and is not run by default.

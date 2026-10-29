@@ -1,0 +1,90 @@
+{
+  "schema": "versioned-manuscript-revision-v1",
+  "edition_date_beijing": "2026-10-29",
+  "prior_repository_commit": "8858ba8bd7d47e08fb5e9d5961553febfd2704cf",
+  "historical_source_date": "July 14, 2026 English input paper; earlier June 2026 research records are a separate provenance fact, not a public priority date.",
+  "prior_tracked_edition_date": "2026-10-28",
+  "source_history_policy": "Integrator preserves exact prior tracked editions before applying this versioned revision. This worker wrote delivery packets only.",
+  "inputs": [
+    {
+      "path": "E:/Research-Publications/ai-automated-quantum-gravity-research/papers/01-projection-sign-rigidity/main.tex",
+      "sha256": "65b605f3c0631ed0e8a5a7845013ed01b02051e579badbb3be7454279f1ddb90",
+      "role": "prior tracked edition input; preserved separately by integrator"
+    },
+    {
+      "path": "E:/Research-Publications/ai-automated-quantum-gravity-research/papers/01-projection-sign-rigidity/references.bib",
+      "sha256": "fd44a897263eb99e0b25b7ff3e5e417c7ffc0f44395cc18553d56fb4941f66e9",
+      "role": "prior tracked edition input; preserved separately by integrator"
+    },
+    {
+      "path": "E:/Research-Publications/ai-automated-quantum-gravity-research/papers/01-projection-sign-rigidity/manuscript.pdf",
+      "sha256": "a65e2bcd7502359c63a90e79eb44be0404a67662524faafd1103cd0118397612",
+      "role": "prior tracked edition input; preserved separately by integrator"
+    },
+    {
+      "path": "E:/Research-Publications/ai-automated-quantum-gravity-research/papers/01-projection-sign-rigidity/verification/legacy_checks.wls",
+      "sha256": "869de6a4245ccd3056008766b019efa480e2949c5b73e7ccfa1a6bc992c993bc",
+      "role": "unchanged historical supplementary script; not run in this revision"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-results-audit-20261028/staging/00-existing-drafts/CORRECTIONS.md",
+      "sha256": "b19f0004b8c54e0a680230d3d61a87bdd1af47e75d470daa4429575e3954a63a",
+      "role": "completed audit correction source"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/inventory/version-map.json",
+      "sha256": "711b420052e020756f67c11a7ded5b2dbdb843cb0e62bdbfb260581600c29bbd",
+      "role": "completed correction application-state inventory"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/inventory/PROPOSED-UPLOADED-01-CORRECTION.tex",
+      "sha256": "ecfff39b0e79c33d7e85fa2f8f937d0d0058fe2b4f2478db49452aa866e347de",
+      "role": "exact completed fixed-fiber replacement"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/fuzzy_projection/DERIVATIONS.md",
+      "sha256": "63806436c7a4b17a5479c4fd86c3bd95aaf961c0dae585d713e7e6083af4d9d5",
+      "role": "analytic actual-projection counterexample"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/fuzzy_projection/verify_exact.py",
+      "sha256": "4fc835cf41abb17cdd56e5d2b661b751de5feda05f85cbeda34de83da21ae400",
+      "role": "completed exact recovery check; portable revision check extracts only relevant mathematics"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/fuzzy_projection/exact-output.json",
+      "sha256": "852b846ee54f31e7046b221267baf6456ac4cb05211144c2c04fd89078449269",
+      "role": "completed recovery evidence; no whole-file scientific claims imported"
+    }
+  ],
+  "human_authors": [],
+  "affiliations": [],
+  "human_expert_review": false,
+  "authorship_uncertainty": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "revision_changes": [
+    "fixed observed feasible fiber versus uniform injectivity",
+    "actual rank-one counterexample with exact enumeration",
+    "correct chronological disclosure and revised edition date"
+  ],
+  "pages": 6,
+  "default_reproduction": "python verification/check_revision.py",
+  "output_files": {
+    "main.tex": "dc6204cde925d51e2d332ef16dbd38ac69114de60e2af91a343155ab1bcde7be",
+    "references.bib": "fd44a897263eb99e0b25b7ff3e5e417c7ffc0f44395cc18553d56fb4941f66e9",
+    "manuscript.pdf": "b8911e0e7ba67edf9864b7cbbd2df406fdcb53ea92ace2de9a21b1903b4e6fb7",
+    "verification/check_revision.py": "fa3e1aacec841cf939b58ea4171711e3728ee3cd84d5b0593abef69f5eac8a8b",
+    "verification/revision-checks.json": "2ffbc95ecdb73f3cf1662c11cc9be9644187da5ef62c2787fe5a2f97171a9868",
+    "verification/legacy_checks.wls": "869de6a4245ccd3056008766b019efa480e2949c5b73e7ccfa1a6bc992c993bc",
+    "README.md": "24a5e24eb5a4e6bd57a6239b3c44aa0a6b95cbc13122f53523260e2da2a5e541",
+    "REVISION.md": "fd454f1d3940adf1aa0980cb3e0772379887bb9f6248ab9650d62b27e8e1bd3c",
+    "VERIFICATION.md": "028c35bcd240dbb946208023bc26b823489168d30acdf9546ae3474c34b5037a",
+    "requirements.txt": "313defa0684ad6815ddc3f2b008213b97947915b3fb2fd537216dae9d603c21a",
+    "build.ps1": "fb08635ce447dc1f2d6e4750b33f6fef44ea26951c1c8894929d954a755d7b1a"
+  },
+  "static_checks": {
+    "labels_unique": true,
+    "refs_and_citations_resolve": true,
+    "blank_pdf_author": true,
+    "final_log_issues": []
+  }
+}

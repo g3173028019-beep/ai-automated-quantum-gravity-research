@@ -1,0 +1,32 @@
+[
+  {
+    "relative_path": "papers/P0-synthesis/main.pdf",
+    "pages": 25,
+    "sha256": "3d4b641c903cb2e9a9c7a7ef6ca3d7a790e99113af9f7baa67c2d22ceae6dbb5",
+    "manifest_hash": "3d4b641c903cb2e9a9c7a7ef6ca3d7a790e99113af9f7baa67c2d22ceae6dbb5"
+  },
+  {
+    "relative_path": "papers/P1-jt-moment/main.pdf",
+    "pages": 21,
+    "sha256": "91bad683fbe88522b28626fefad070bc9a71a252bdcec8952c6a87b0586ede1e",
+    "manifest_hash": "91bad683fbe88522b28626fefad070bc9a71a252bdcec8952c6a87b0586ede1e"
+  },
+  {
+    "relative_path": "papers/P2-holonomy/main.pdf",
+    "pages": 14,
+    "sha256": "f525ede07a9e7c45dbcf36912ac020b67bc101633613607bcf08486379250d59",
+    "manifest_hash": "f525ede07a9e7c45dbcf36912ac020b67bc101633613607bcf08486379250d59"
+  },
+  {
+    "relative_path": "papers/P3-4d-blackholes/main.pdf",
+    "pages": 12,
+    "sha256": "a2eb69929291cfb68afca5de2c84664837c927f27ed5da00b99c9df4fa0147e7",
+    "manifest_hash": "a2eb69929291cfb68afca5de2c84664837c927f27ed5da00b99c9df4fa0147e7"
+  },
+  {
+    "relative_path": "trackD-factorization-chaos/paper/main.pdf",
+    "pages": 13,
+    "sha256": "1f4912c91039c1f98b793363f0aa110101a97adfeefeb231457ddfb0c9912de8",
+    "manifest_hash": "1f4912c91039c1f98b793363f0aa110101a97adfeefeb231457ddfb0c9912de8"
+  }
+]

@@ -1,0 +1,130 @@
+{
+  "schema": "mathematical-methods-article-provenance-1",
+  "packet": "12-complexity-moment-corona",
+  "date_beijing": "2026-10-29",
+  "title": "Complexity-Weighted Moments, Critical Mass Escape, and Selected Corona States",
+  "human_authors": [],
+  "human_affiliations": [],
+  "human_expert_review": false,
+  "version_merge": {
+    "sources": "C5 and P6 are byte-identical English source versions, one manuscript question",
+    "source_sha256": "293e293008dd5200f68b9657c1c74e93b3a7ff6253f914f7bab6d1951e3a1e76",
+    "pdf_equality": "Historical PDFs differ in bytes; the present PDF is newly compiled from the corrected article."
+  },
+  "chronology": "Earlier work was Fable 5-led; July 2026 onward results were predominantly produced by GPT models as reported by the operator. DeepSeek and multiple GPT models also participated in review/preparation.",
+  "operator_quote": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "contribution_status": "Classical mathematical-methods synthesis with explicit support/quotient repairs and constructive Abel examples; no unsupported new general theorem or physical gravitational realization.",
+  "reproduction_dependencies": {
+    "python": "Python >=3.8 standard library",
+    "external_inputs": [],
+    "network_required": false,
+    "historical_paths_required": false,
+    "tex": "latexmk/pdfLaTeX/BibTeX and packages declared in main.tex"
+  },
+  "copied_bytes_preserved": [
+    "saved-output/calculation-output.json"
+  ],
+  "code_adaptation": "Recovered calculation code copied, with only its output directory made package-relative; analytic construction and numerical formulas unchanged.",
+  "proof_addition": "Convergent residual-profile normalization/moment constants and exponential scaling law proved by Riemann sums; two-sided bounds alone remain Theta.",
+  "build": {
+    "pages": 11,
+    "pdf_author": "",
+    "final_log_issues": [],
+    "visual_qa": "Root integrated visual QA pending",
+    "batch_marker": "Already run by root; not repeated"
+  },
+  "source_evidence": [
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/post-SCG-core-series/C5-complexity-corona/en/main.tex",
+      "bytes": 79954,
+      "sha256": "293e293008dd5200f68b9657c1c74e93b3a7ff6253f914f7bab6d1951e3a1e76"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/P6-complexity-moment-gip/en/main.tex",
+      "bytes": 79954,
+      "sha256": "293e293008dd5200f68b9657c1c74e93b3a7ff6253f914f7bab6d1951e3a1e76"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/complexity/RESULT.md",
+      "bytes": 8967,
+      "sha256": "68ef05947ccd38cd619c7742d1674dd4a23da65ed70b145c028e5be66d0280f5"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/complexity/CONSTRUCTIVE-REPAIR.md",
+      "bytes": 7197,
+      "sha256": "aff6453cbb51c0109cdd858d7e68ee8d92042b1ffef2d1c0485b98ad2fc66c6b"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/complexity/VERIFICATION.md",
+      "bytes": 6562,
+      "sha256": "80359869893cf9ada7a9c716b35b81e57b860cbc105aa302bf5ad1946762eeb5"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/complexity/verify_constructive.py",
+      "bytes": 2292,
+      "sha256": "b03b2ee936cbfd471e7bd54e4e92d7c5fb2dd336641fa32cbaa0e456fe5fad5c"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/complexity/calculation-output.json",
+      "bytes": 3621,
+      "sha256": "ff80506f7610d22a8749d9c74cd4342d1f60d7ed096900f7398be48017382758"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/complexity/source-hashes.json",
+      "bytes": 10461,
+      "sha256": "074183c4520233a108accca1555d651447f8e96bb13dd8375032f5cf45f148a9"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "main.tex",
+      "bytes": 36330,
+      "sha256": "dcb58e8348f09a856c67fffe01bf6d90653a77bcfc13c2f5f166d9878dfba029"
+    },
+    {
+      "path": "references.bib",
+      "bytes": 1431,
+      "sha256": "bac6c6dba18faa57a45b1efbee38b420d47fc70a3eed4ba149d2e636e909aad1"
+    },
+    {
+      "path": "manuscript.pdf",
+      "bytes": 355527,
+      "sha256": "f36cf736cdac7142c31613e844bff1d98fde386c55e23e45841f6d8951dc7ec7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3104,
+      "sha256": "86c2543987446f1d6807c96c73694290a35ed896aa147693183d2bf72bb3458c"
+    },
+    {
+      "path": "VERIFICATION.md",
+      "bytes": 7260,
+      "sha256": "5c55ceec8cc3959b929f9ecaac617fc8d407326f8fbab0a4d7967152a094ed87"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 136,
+      "sha256": "9b3e2ffa29db98b25e0d93bc580f46c7dbfd919d7005e6ac67c7cedaad64ef7c"
+    },
+    {
+      "path": "code/verify_constructive.py",
+      "bytes": 2343,
+      "sha256": "111eea349a024d3634c643959899c689eb3688edb597857cc475efcb0949f9d8"
+    },
+    {
+      "path": "saved-output/calculation-output.json",
+      "bytes": 3621,
+      "sha256": "ff80506f7610d22a8749d9c74cd4342d1f60d7ed096900f7398be48017382758"
+    },
+    {
+      "path": "saved-output/package-check.json",
+      "bytes": 526,
+      "sha256": "3ad8f9560c567fb5ced0e8e7b9c7bb50ac36ffe5347dceceb6514e6f3aa16102"
+    },
+    {
+      "path": "reproduced-output/calculation-output.json",
+      "bytes": 3621,
+      "sha256": "ff80506f7610d22a8749d9c74cd4342d1f60d7ed096900f7398be48017382758"
+    }
+  ]
+}

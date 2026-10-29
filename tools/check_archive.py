@@ -45,7 +45,7 @@ for slug in PAPERS:
     # PDF text extraction can omit visually present interword spacing.
     compact_text = re.sub(r"\s+", "", text)
     for phrase in ("I genuinely do not know", "Fable 5", "DeepSeek", "GPT", "human expert review"):
-        require(f"{slug}: disclosure '{phrase}'", phrase.replace(" ", "") in compact_text)
+        require(f"{slug}: disclosure '{phrase}'", phrase.replace(" ", "").casefold() in compact_text.casefold())
     require(f"{slug}: no unresolved PDF references", "??" not in text)
     require(f"{slug}: no placeholder byline", "name(s) to be supplied" not in text)
     require(f"{slug}: English PDF", re.search(r"[\u3400-\u9fff]", text) is None)

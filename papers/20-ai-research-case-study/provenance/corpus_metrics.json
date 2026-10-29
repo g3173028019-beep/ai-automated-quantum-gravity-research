@@ -1,0 +1,84 @@
+{
+    "cutoff":  "2026-07-11T20:37:59.0000000",
+    "baseline":  {
+                     "root":  "E:\\TOE-Fable",
+                     "files":  216,
+                     "bytes":  6864474,
+                     "markdown_files":  23,
+                     "markdown_lines":  4462,
+                     "python_files":  3,
+                     "wolfram_files":  116,
+                     "tex_files":  6,
+                     "pdf_files":  7
+                 },
+    "continuation":  {
+                         "root":  "X:",
+                         "files":  796,
+                         "bytes":  16731631,
+                         "markdown_files":  358,
+                         "markdown_lines":  85298,
+                         "python_files":  40,
+                         "wolfram_files":  116,
+                         "tex_files":  23,
+                         "pdf_files":  42
+                     },
+    "path_comparison":  {
+                            "identical":  208,
+                            "modified":  8,
+                            "missing":  0,
+                            "new":  580,
+                            "modified_paths":  [
+                                                   "FINAL-REPORT.md",
+                                                   "papers/P2-holonomy/main.aux",
+                                                   "papers/P2-holonomy/main.fdb_latexmk",
+                                                   "papers/P2-holonomy/main.fls",
+                                                   "papers/P2-holonomy/main.log",
+                                                   "papers/P2-holonomy/main.pdf",
+                                                   "papers/P2-holonomy/main.tex",
+                                                   "THEORY.md"
+                                               ]
+                        },
+    "new_markdown":  {
+                         "files":  335,
+                         "lines":  80807
+                     },
+    "new_root_markdown":  {
+                              "files":  315,
+                              "lines":  77375,
+                              "deterministic_filename_heuristic":  {
+                                                                       "rule":  "control_or_future_target iff filename matches one or more published terms",
+                                                                       "terms":  [
+                                                                                     "AUDIT",
+                                                                                     "CHECKPOINT",
+                                                                                     "LEDGER",
+                                                                                     "MATRIX",
+                                                                                     "ROADMAP",
+                                                                                     "READINESS",
+                                                                                     "MAINLINE",
+                                                                                     "CONSTITUTION",
+                                                                                     "SUMMARY",
+                                                                                     "HANDOFF",
+                                                                                     "WORK-SESSION",
+                                                                                     "CONTINUATION-LOG",
+                                                                                     "NIGHT-RUN",
+                                                                                     "FILE-MAP",
+                                                                                     "DEPENDENCY-GRAPH",
+                                                                                     "MATURITY",
+                                                                                     "SANITY-CHECK",
+                                                                                     "CRITERION",
+                                                                                     "TARGET",
+                                                                                     "OBLIGATION",
+                                                                                     "GATE",
+                                                                                     "CANDIDATE",
+                                                                                     "PROTOCOL",
+                                                                                     "POLICY",
+                                                                                     "PROGRAM",
+                                                                                     "SCHEMA"
+                                                                                 ],
+                                                                       "files":  162,
+                                                                       "lines":  43603,
+                                                                       "file_fraction":  0.51428571428571423,
+                                                                       "line_fraction":  0.56352827140549278
+                                                                   }
+                          }
+}

@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "sympy": "1.14.0",
+  "bernoulli_cumulants": [
+    "p",
+    "-p**2 + p",
+    "2*p**3 - 3*p**2 + p",
+    "-6*p**4 + 12*p**3 - 7*p**2 + p"
+  ],
+  "unordered_clock_counterexample": {
+    "lhs": "121/4",
+    "rhs": "10"
+  },
+  "rank_one_projection_block": "symbolic idempotency and trace1 PASS",
+  "pure_projection_condensation_diagnostics": [
+    {
+      "beta": 10,
+      "projection_two_channel_ratio": 0.0268358754615908,
+      "Phi2": 0.9731641245384092,
+      "terms": 3999
+    },
+    {
+      "beta": 100,
+      "projection_two_channel_ratio": 3.436928663676221e-05,
+      "Phi2": 0.9999656307133632,
+      "terms": 3999
+    },
+    {
+      "beta": 1000,
+      "projection_two_channel_ratio": 2.3870705770381926e-14,
+      "Phi2": 0.9999999999999761,
+      "terms": 3999
+    },
+    {
+      "beta": 10000,
+      "projection_two_channel_ratio": 2.588280899089863e-43,
+      "Phi2": 1.0,
+      "terms": 3999
+    }
+  ],
+  "bernoulli_GNS_Gram_determinant": "1/4",
+  "scope": "Diagnostics illustrate the channel limit; the analytic proof establishes it. No full point-process reconstruction is inferred from a finite sample."
+}

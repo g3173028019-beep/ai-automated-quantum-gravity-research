@@ -1,0 +1,333 @@
+{
+  "schema": "scientific-paper-provenance-v1",
+  "title": "Finite causal spin-two transfer and partial refinement in Lorentzian Regge calculus",
+  "assembled_beijing_date": "2026-10-29",
+  "human_authors": [],
+  "human_affiliations": [],
+  "human_expert_review": false,
+  "chronology": "Earlier work was Fable 5-led; July 2026 onward results were predominantly produced by GPT models, as reported by the operator. DeepSeek and multiple GPT models also participated in review/preparation. This is reported chronology, not individual authorship allocation.",
+  "attribution_quote": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "original_manuscript": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/cross-framework-bilingual-series/P04-causal-spin-two-refinement/en/main.tex",
+  "controlling_original_reports": [
+    "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A28-CAUSAL-SPIN-TWO-VERDICT.md",
+    "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A29-NESTED-REFINEMENT-FLOW-VERDICT.md",
+    "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A30-FIFTH-REFINEMENT-HYPERBOLIC-TRANSITION.md"
+  ],
+  "recovery_source": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/causal",
+  "frozen_files": [
+    {
+      "path": "data/level-1-reproduction.json",
+      "sha256": "2df2591d1747a545f51fefe83d8a354b2bb4e06a5ab75ad2134f64a0fecd1524",
+      "original_path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/causal/level-1-reproduction.json",
+      "role": "unchanged completed-recovery output; producer replay on 29 October 2026, not rerun for this paper"
+    },
+    {
+      "path": "data/level-5-reproduction.json",
+      "sha256": "df43b7af69cf8f19ad8aa46abfd8f6e7b7c6ac66e3ae833fc50d8444e62b576f",
+      "original_path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/causal/level-5-reproduction.json",
+      "role": "unchanged completed-recovery output; producer replay on 29 October 2026, not rerun for this paper"
+    },
+    {
+      "path": "data/bounded-checks.json",
+      "sha256": "72d426d1e5c49e3fdda4bfbe2e7d26ab5349a4c93e1f228c91b691598df6d6d8",
+      "original_path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/causal/bounded-checks.json",
+      "role": "unchanged completed-recovery output; producer replay on 29 October 2026, not rerun for this paper"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/multilevel_causal_spin2.py",
+      "sha256": "2ebf5e650c38d97a8706b77994e424fd215b42688ee5aff24603a28bf8ccecd2",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/multilevel_causal_spin2.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/refined_causal_spin2.py",
+      "sha256": "5d616962d02bbfd51c706448275a567be7068188da650036b8990933f063963b",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/refined_causal_spin2.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/causal_join_star_transfer.py",
+      "sha256": "aa861805c0134f696ead84a5e1e95196c9de165f422efdc873855da8f132ae4f",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/causal_join_star_transfer.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/complex_lorentzian_regge.py",
+      "sha256": "450e9622e9119d3e0517da8e8b1adec1b82772a3dd0c26762aa65a93f2bd4574",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/complex_lorentzian_regge.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/lorentzian_weyl_star.py",
+      "sha256": "c108892de3f52f1104d56f81123b48ad0877d45077420d8961f744701a368728",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/lorentzian_weyl_star.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/lorentzian_weighted_weyl_star.py",
+      "sha256": "3d7d19e66184ba601fd9b53cde88ff9f67f4fac65bf65bf46b1a8e90c4cf115e",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/lorentzian_weighted_weyl_star.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/lorentzian_vertex_hybrid_audit.py",
+      "sha256": "13e3e5dc18682afe00aa9d9dd77db4de45bf1cc1893b519e51b81b5785b862c0",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/lorentzian_vertex_hybrid_audit.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/lorentzian_three_three_curvature.py",
+      "sha256": "5bb884c5a139ad0972919c18abe7cd5d70dee7abd1b1e8521330601c531ee7bd",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/lorentzian_three_three_curvature.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/lorentzian_refoliation_geometry.py",
+      "sha256": "778214dc44dadebe3ee13d10c7069a6b223e687261fddb5a367355925652a468",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/lorentzian_refoliation_geometry.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/refoliation_graviton_history.py",
+      "sha256": "9e98bce5dd93a9621c6141ef78788162df245f992e1d263a8e1de2ae9ab4e937",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/refoliation_graviton_history.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/first_order_angle_measure.py",
+      "sha256": "8887e68164bea06677fe09a057a08c7d0b9187a023059fbf28b75596d8d02c28",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/first_order_angle_measure.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/regge_four_two_action.py",
+      "sha256": "ad6e3824a50a9d0a9556f92d2c38fc2b1bfa1358aa55649b69a1bf7aaef8fc3a",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/regge_four_two_action.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/sourced_regge_dynamics.py",
+      "sha256": "fb957e6e779d59852f72c28136bfaa2111ab13bfc9d2b5e78ed535275ed8227f",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/sourced_regge_dynamics.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/frozen_producer/scripts/algebraic_regge_wave_target.py",
+      "sha256": "842f508dad12fc61f1b3ebf455012391513fcd335481a184de852ab0c396b93b",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/algebraic_regge_wave_target.py",
+      "role": "unchanged original producer or transitive import dependency; optional expensive replay"
+    },
+    {
+      "path": "provenance/reports/A28-CAUSAL-SPIN-TWO-VERDICT.md",
+      "sha256": "63f3d7ea5773f64ef36ec7daaf630caeef8fe21dac962002b73533b977bb27a0",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A28-CAUSAL-SPIN-TWO-VERDICT.md",
+      "role": "unchanged connected report; retained numerical table and latest qualification"
+    },
+    {
+      "path": "provenance/reports/A29-NESTED-REFINEMENT-FLOW-VERDICT.md",
+      "sha256": "df21c0ac58d34e21ba0c11ecd9be350837da0dc8b7ee301d1a805be288720877",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A29-NESTED-REFINEMENT-FLOW-VERDICT.md",
+      "role": "unchanged connected report; retained numerical table and latest qualification"
+    },
+    {
+      "path": "provenance/reports/A30-FIFTH-REFINEMENT-HYPERBOLIC-TRANSITION.md",
+      "sha256": "6320c9f14dc3e35d10a0b5826e4d641ddfe5de80d8a4dbfcf9e546139942119e",
+      "original_path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A30-FIFTH-REFINEMENT-HYPERBOLIC-TRANSITION.md",
+      "role": "unchanged connected report; retained numerical table and latest qualification"
+    }
+  ],
+  "default_replay": "reproduce.py verifies exact algebra, geometric construction and frozen numerical matrices; does not recompute the full Regge Hessian",
+  "optional_replay": "run_full.py requires --level 1 or --level 5 and reconstructs the original complete-action Hessian; level5 was not rerun for paper delivery",
+  "source_snapshot_hashes": [
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/cross-framework-bilingual-series/P04-causal-spin-two-refinement/en/main.tex",
+      "sha256": "180436e589f9ca6d3ae40988b0a18ccbc383467e2a9fb31a1cc2a9ce395a065c",
+      "role": "full primary manuscript"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/cross-framework-bilingual-series/P04-causal-spin-two-refinement/zh/main.tex",
+      "sha256": "d64f9c856b04e5a94e454bde7f0002ca95ee220eb6d801582395fcbfbeadf4ce",
+      "role": "bilingual companion; hash only"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/cross-framework-bilingual-series/P04-causal-spin-two-refinement/EVIDENCE.md",
+      "sha256": "ca28653342c566d8d923099366a89cb422dc1e5c4033086ba657e802cfc372d7",
+      "role": "full evidence ledger"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/cross-framework-bilingual-series/P04-causal-spin-two-refinement/REVIEW.md",
+      "sha256": "43d67c4a4a96542c0c6e8ed0342b46a27845a3bb84c16d5efd7f44098cdb9a1b",
+      "role": "historical AI review record"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/cross-framework-bilingual-series/P04-causal-spin-two-refinement/STATUS.md",
+      "sha256": "dd305402a799c1e59437ad9988fef873233be0678c92f200ae98935bf48878cc",
+      "role": "historical maturity statement"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/cross-framework-bilingual-series/P04-causal-spin-two-refinement/references.bib",
+      "sha256": "3c40a750bc33c59eb22a8f415b0cd703448e5caf94c41b30ab0f0b3749b4e0f6",
+      "role": "bibliography checked against primary metadata"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A20-LORENTZIAN-CAUSAL-GEOMETRY-GATE.md",
+      "sha256": "5032ab727ed9393559e3fbd4c8f1b862f5cf45fdf3f5941e53caa89853fd9b2e",
+      "role": "connected report; A28-A30 and A20/A22 detailed; A21/A23-A27 targeted claim trace"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A21-OFF-FLAT-LORENTZIAN-ACTION-AND-CURVATURE-VERTEX.md",
+      "sha256": "137ec60db61232015e6fd7830a4153114bf54377ac2b8c80174dbe74984bf4af",
+      "role": "connected report; A28-A30 and A20/A22 detailed; A21/A23-A27 targeted claim trace"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A22-CAUSAL-THREE-THREE-CURVATURE-HISTORY.md",
+      "sha256": "ea281b1f250ace61bf45a83ccaa1e40a1f2cb08b122bcaa5cb6fce3f0ee42133",
+      "role": "connected report; A28-A30 and A20/A22 detailed; A21/A23-A27 targeted claim trace"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A23-LORENTZIAN-FIRST-ORDER-CURVATURE-CLOSURE.md",
+      "sha256": "ccde7ffd1d1127bbc86bf34658237771483ba8fa778c21ef9fa9de1a276f79f0",
+      "role": "connected report; A28-A30 and A20/A22 detailed; A21/A23-A27 targeted claim trace"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A24-TWO-MODE-LORENTZIAN-CURVATURE-TRANSFER.md",
+      "sha256": "e7b3028f41784510551e3fec31aa36cf6fbd27463509c6856c630cd852878b17",
+      "role": "connected report; A28-A30 and A20/A22 detailed; A21/A23-A27 targeted claim trace"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A25-ALGEBRAIC-REGGE-WAVE-TARGET.md",
+      "sha256": "75b475f8e4e2cc749c0c51bccf8dc0c8945a93205161061b3aa02c252e06e4f1",
+      "role": "connected report; A28-A30 and A20/A22 detailed; A21/A23-A27 targeted claim trace"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A26-CONNECTED-WEYL-STAR-AND-VACUUM-CANDIDATES.md",
+      "sha256": "f71ea8a36dcc33b1c9bb3ddeb3bd3ce710d8254232100200613f5c37e447130e",
+      "role": "connected report; A28-A30 and A20/A22 detailed; A21/A23-A27 targeted claim trace"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A27-DUAL-WEIGHT-ROBUST-TWO-MODE-WEYL-STAR.md",
+      "sha256": "362ed3835f3f4236029b7d57a7d7e4c6af1445f0a4fdc5d70777ffb8916fab19",
+      "role": "connected report; A28-A30 and A20/A22 detailed; A21/A23-A27 targeted claim trace"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A28-CAUSAL-SPIN-TWO-VERDICT.md",
+      "sha256": "63f3d7ea5773f64ef36ec7daaf630caeef8fe21dac962002b73533b977bb27a0",
+      "role": "connected report; A28-A30 and A20/A22 detailed; A21/A23-A27 targeted claim trace"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A29-NESTED-REFINEMENT-FLOW-VERDICT.md",
+      "sha256": "df21c0ac58d34e21ba0c11ecd9be350837da0dc8b7ee301d1a805be288720877",
+      "role": "connected report; A28-A30 and A20/A22 detailed; A21/A23-A27 targeted claim trace"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/A30-FIFTH-REFINEMENT-HYPERBOLIC-TRANSITION.md",
+      "sha256": "6320c9f14dc3e35d10a0b5826e4d641ddfe5de80d8a4dbfcf9e546139942119e",
+      "role": "connected report; A28-A30 and A20/A22 detailed; A21/A23-A27 targeted claim trace"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/README.md",
+      "sha256": "09725b8505f63b11550d04c44e13e3aca3d277ad028ba37c2d0a284a08dd1b52",
+      "role": "latest summary/correction trace"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/REVIEW.md",
+      "sha256": "d16b5a3d4caf5a26ff3137037b765eef0006a66eb00f2830f8e5b658a45f1920",
+      "role": "latest summary/correction trace"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/multilevel_causal_spin2.py",
+      "sha256": "2ebf5e650c38d97a8706b77994e424fd215b42688ee5aff24603a28bf8ccecd2",
+      "role": "producer/import provenance; execution/read coverage in VERIFICATION.md"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/refined_causal_spin2.py",
+      "sha256": "5d616962d02bbfd51c706448275a567be7068188da650036b8990933f063963b",
+      "role": "producer/import provenance; execution/read coverage in VERIFICATION.md"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/causal_join_star_transfer.py",
+      "sha256": "aa861805c0134f696ead84a5e1e95196c9de165f422efdc873855da8f132ae4f",
+      "role": "producer/import provenance; execution/read coverage in VERIFICATION.md"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/complex_lorentzian_regge.py",
+      "sha256": "450e9622e9119d3e0517da8e8b1adec1b82772a3dd0c26762aa65a93f2bd4574",
+      "role": "producer/import provenance; execution/read coverage in VERIFICATION.md"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/lorentzian_weyl_star.py",
+      "sha256": "c108892de3f52f1104d56f81123b48ad0877d45077420d8961f744701a368728",
+      "role": "producer/import provenance; execution/read coverage in VERIFICATION.md"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/lorentzian_weighted_weyl_star.py",
+      "sha256": "3d7d19e66184ba601fd9b53cde88ff9f67f4fac65bf65bf46b1a8e90c4cf115e",
+      "role": "producer/import provenance; execution/read coverage in VERIFICATION.md"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/lorentzian_vertex_hybrid_audit.py",
+      "sha256": "13e3e5dc18682afe00aa9d9dd77db4de45bf1cc1893b519e51b81b5785b862c0",
+      "role": "producer/import provenance; execution/read coverage in VERIFICATION.md"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/lorentzian_three_three_curvature.py",
+      "sha256": "5bb884c5a139ad0972919c18abe7cd5d70dee7abd1b1e8521330601c531ee7bd",
+      "role": "producer/import provenance; execution/read coverage in VERIFICATION.md"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/lorentzian_refoliation_geometry.py",
+      "sha256": "778214dc44dadebe3ee13d10c7069a6b223e687261fddb5a367355925652a468",
+      "role": "producer/import provenance; execution/read coverage in VERIFICATION.md"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/verify_causal_spin2.wl",
+      "sha256": "8180acdabfc39c5233b1ee5a9d1180ad98bb4743a104453803fd5b089fd3b7e3",
+      "role": "producer/import provenance; execution/read coverage in VERIFICATION.md"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/verify_fifth_refinement_transition.wl",
+      "sha256": "f27bcd9d1437ab15d31ead2cbea65f41c38d42b0b66aa66446ae7e6d06bb4adc",
+      "role": "producer/import provenance; execution/read coverage in VERIFICATION.md"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-results-audit-20261028/RESULT-CATALOGUE.json",
+      "sha256": "6a1f5cf03532d2acbbbb56ef036df1a1285aeeb61ae4fc51f9d3e22d2d544356",
+      "role": "baseline only"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-results-audit-20261028/catalogue/fable.md",
+      "sha256": "8c8f6464827ae233f0114d57f70c9222264554303966eaad6f0d5f5309479a96",
+      "role": "baseline only"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/CONTRACT.md",
+      "sha256": "dd0656e85ec5e833c9260ed3da3762b02c1793ed0c638a9c51551305f5407498",
+      "role": "recovery task contract"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/refoliation_graviton_history.py",
+      "sha256": "9e98bce5dd93a9621c6141ef78788162df245f992e1d263a8e1de2ae9ab4e937",
+      "role": "transitive producer dependency; hashed/import provenance, not full scientific review"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/first_order_angle_measure.py",
+      "sha256": "8887e68164bea06677fe09a057a08c7d0b9187a023059fbf28b75596d8d02c28",
+      "role": "transitive producer dependency; hashed/import provenance, not full scientific review"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/regge_four_two_action.py",
+      "sha256": "ad6e3824a50a9d0a9556f92d2c38fc2b1bfa1358aa55649b69a1bf7aaef8fc3a",
+      "role": "transitive producer dependency; hashed/import provenance, not full scientific review"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/sourced_regge_dynamics.py",
+      "sha256": "fb957e6e779d59852f72c28136bfaa2111ab13bfc9d2b5e78ed535275ed8227f",
+      "role": "transitive producer dependency; hashed/import provenance, not full scientific review"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/phase-first-cartan-corner-gravity/scripts/algebraic_regge_wave_target.py",
+      "sha256": "842f508dad12fc61f1b3ebf455012391513fcd335481a184de852ab0c396b93b",
+      "role": "transitive producer dependency; hashed/import provenance, not full scientific review"
+    }
+  ]
+}

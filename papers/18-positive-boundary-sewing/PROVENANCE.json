@@ -1,0 +1,60 @@
+{
+  "packet": "18-positive-boundary-sewing",
+  "prepared_beijing": "2026-10-29",
+  "human_authors": "",
+  "affiliations": "",
+  "pdf_author": "",
+  "human_expert_review": false,
+  "historical_cutoff": null,
+  "contribution_history": "Earlier work was Fable 5-led; July 2026 onward results were predominantly GPT-produced, as reported by the operator. DeepSeek and multiple GPT models also participated in review/preparation.",
+  "attribution_statement": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "source_files": [
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/P5-positive-boundary-completion/en/main.tex",
+      "sha256": "bfd72de00e0295f04fc4965c7ec7de772b80e18b005326ca3bcb00f9bbed37a5",
+      "role": "Historical source; transformed into current bounded article"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/P7-cp-sewing-calibration/en/main.tex",
+      "sha256": "a10cf18ac4c684c910e8833684280c00cc0cde9d4a9e96dd88cbd1a8efa51058",
+      "role": "Historical source; transformed into current bounded article"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/P5-positive-boundary-completion/references.bib",
+      "sha256": "6f801129f714038711c9e4b7054725d413b91b1d62b0c36a560a0f92b2dbd66a",
+      "role": "Historical source; transformed into current bounded article"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/P7-cp-sewing-calibration/references.bib",
+      "sha256": "9f47f773303cfbf14031920e641a2ff3d8871c4de54105dbdf84274f30c50edc",
+      "role": "Historical source; transformed into current bounded article"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/boundary_methods/RESULT.md",
+      "sha256": "2f2faa0c4ec2e390964f5bbe99f44c76f85cdee20bf147c9d46a8e1ff595beb5",
+      "role": "Completed claim-level recovery"
+    }
+  ],
+  "copied_or_reduced_inputs": [],
+  "scientific_scope": "Printed finite proofs and standard framework lemmas; exact-small/seeded producers distinguished; no sourced continuum or gravitational promotion.",
+  "original_sources_modified": false,
+  "raw_conversations_included": false,
+  "secrets_included": false,
+  "third_party_full_papers_included": false,
+  "default_reproduction": "python reproduce.py",
+  "runtime_requires_original_source_paths": false,
+  "network_required": false,
+  "manuscript_sha256": "4762529a3d71c3952c264b2e73175cc1ca82df578325dcfe98aa3424f7e57497",
+  "pages": 27,
+  "portable_source_sha256": "8c3a2bff9963780af7621277a81b42a63c2a71bd978fe156762371edca3dae9b",
+  "layout_revision": {
+    "date_utc": "2026-10-29T02:01:18.302749+00:00",
+    "reason": "User-reported graphical-abstract connector/text collision and fragmented bottom-box wrapping",
+    "previous_pdf_sha256": "cb4018aa3f20498c712c1cdc15807c20fba68ed059684b2966149416064f3b12",
+    "current_pdf_sha256": "4762529a3d71c3952c264b2e73175cc1ca82df578325dcfe98aa3424f7e57497",
+    "main_tex_sha256": "1bcbc88106ffce49ed65c2a375736f46099b2c80ee99d1e075dcc3df7b5fb987",
+    "pages": 27,
+    "scientific_content_unchanged": true,
+    "original_pdf_page3_inspected_at_dpi": 160
+  }
+}

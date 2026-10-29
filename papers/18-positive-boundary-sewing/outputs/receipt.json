@@ -1,0 +1,17 @@
+[
+  {
+    "file": "doubled_instrument.py",
+    "exit_code": 0,
+    "pass_rows": 19
+  },
+  {
+    "file": "weyl_charge_cut.py",
+    "exit_code": 0,
+    "pass_rows": 25
+  },
+  {
+    "file": "diagnostic.py",
+    "exit_code": 0,
+    "pass_rows": 5
+  }
+]

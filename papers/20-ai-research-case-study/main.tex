@@ -1,0 +1,480 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=27mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb,booktabs,longtable,tabularx,array}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=green!35!black,urlcolor=blue!55!black]{hyperref}
+\hypersetup{pdfauthor={},pdftitle={Claim Correction and Artifact Growth in AI-Assisted Theoretical Research}}
+\setlength{\parskip}{0.18em}
+\emergencystretch=1em
+\title{Claim Correction and Artifact Growth in AI-Assisted Theoretical Research:\\ A Descriptive Longitudinal Case Study}
+\author{}
+\date{29 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study two preserved artifact states of an AI-assisted foundational-physics
+project: an initial scalar boundary-moment programme and a continuation that
+inherited its manuscripts, calculations, errors and feedback. The later state
+adds 580 relative paths. A saved hash comparison records 208 identical and eight
+modified baseline paths, with none missing. Five baseline project manuscripts
+total 85 pages. The continuation introduced positive noncommutative boundary
+algebras, exact finite operational calibrations, source-specialized local gauge
+benchmarks and explicit correction records. These are heterogeneous scientific
+outputs and cannot be measured by file growth alone.
+We reproduce the published filename classification on 315 new root Markdown
+files: its selected fraction is 51.43\% of files and 56.35\% of lines. Removing
+the ambiguous term MATRIX changes the file fraction to 49.84\% and the line
+fraction to 54.84\%. Thus a majority-of-files interpretation is not robust to
+one plausible rule change. We reconstruct representative mathematical and
+encoding corrections, distinguish computation from analytic and physical
+claims, and propose a compact evidence-routing protocol. The study is
+descriptive: inherited context, unequal durations, changing tools and human
+feedback prevent causal attribution to a model family or audit policy.
+The released metadata and offline script reproduce the numerical summaries
+without access to private conversations, model providers or the original
+research directories.
+\end{abstract}
+
+\section{Research question and contribution}
+Long theoretical projects produce more than equations. They produce conjectures,
+code, source comparisons, rejected arguments, manuscripts and records of their
+own status. Language-model agents can accelerate all of these activities.
+Consequently, a growing archive can contain genuine local progress and growing
+maintenance burden at the same time. The relevant empirical question is what
+the retained artifacts support, rather than whether their volume sounds like
+a successful research programme.
+
+This paper asks three descriptive questions. How much of a later corpus is
+inherited from an earlier state? Which concrete corrections changed the
+scientific claim boundary? How sensitive is a simple quantitative description
+of control-related prose to its classification rule? The unit of observation
+is an artifact or claim, not a model invocation. We do not estimate the causal
+effect of an audit intervention or rank foundation models.
+
+The scientific setting is a boundary-completion approach to quantum gravity.
+Its early primitive was a commuting family of thermal quantities $Z(\beta)$
+and their positive moments. The continuation broadened this to noncommutative
+boundary algebras, physical reductions, reflection structures and completely
+positive operations. This background makes the distinction between a local
+mathematical result and an integrated physical theory especially consequential.
+It also provides unusually explicit examples of corrections: an incorrect
+quotient type, an insufficient positivity test, an overinterpreted finite
+model and a mismatch between a mathematical projection and its code encoder.
+
+Our quantitative contribution is a reproducible reaggregation and sensitivity
+calculation on preserved metadata. Our qualitative contribution is a claim-level
+case reconstruction, with each example tied to an actual mathematical
+distinction. The resulting protocol is a research-method proposal. It is not
+an empirically validated optimization algorithm for science.
+
+\section{Materials and chronology}
+\subsection{Two artifact states}
+The initial state contains 216 files and the continuation state 796 at the
+declared operational cutoff, 11 July 2026 at 20:37:59 Beijing time. The saved
+manifest was generated on 12 July by selecting files using mutable filesystem
+modification times. It is therefore a reconstructed historical dataset, not
+a cryptographically frozen log created at the cutoff. Hashes identify the
+included bytes but cannot establish when those bytes were first produced.
+The present paper and its portability calculation were prepared on 29 October.
+
+The continuation inherited the initial manuscripts, code, literature,
+conjectures, failed routes and human criticism. It ran for a different duration
+with different tools and task decomposition. These are major design
+confounders, not small statistical adjustments. There is no randomized or
+matched comparison, no no-audit counterfactual and no complete transcript-level
+allocation of work to model versions.
+
+\begin{table}[htbp]
+\centering
+\caption{Preserved corpus aggregates. Counts refer to the declared reconstructed
+states and are not an estimate of scientific correctness.}
+\label{tab:corpus}
+\begin{tabular}{lrr}
+\toprule
+Quantity & Initial state & Continuation\\
+\midrule
+Files &216&796\\
+Bytes &6,864,474&16,731,631\\
+Markdown files &23&358\\
+Markdown lines &4,462&85,298\\
+Python sources &3&40\\
+Wolfram-language sources &116&116\\
+TeX sources &6&23\\
+PDF files &7&42\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The baseline has five project manuscripts, with page counts 25, 21, 14, 12
+and 13, totaling 85. They concern a synthesis, thermal moments, projection
+kernels, near-extremal black holes and Gaussian chaos. The fifth PDF is in a
+track-specific paper directory, rather than a fifth numbered paper folder.
+This corrects a path description in the earlier evidence map without changing
+the manuscript count. Two other PDFs in the initial total are external
+literature, so the seven-PDF count is not seven original project papers.
+The page counts were checked against the current preserved files with hashes
+matching the saved manifest during the preceding recovery. The portable
+metadata records that check; it does not redistribute those PDFs or re-run a
+page parser on unavailable source files.
+
+\subsection{Released evidence and excluded material}
+The package contains the byte-preserved 315-row root-filename classification
+table, aggregate counts, a reduced path/hash relation table, the five manuscript
+page-count records and an offline reproduction script. Internal source names
+are confined to provenance metadata. The reduced relation table replaces each
+relative path by its SHA-256 identifier and retains baseline and continuation
+content hashes and their relation. It permits independent recounting of the
+saved comparison while avoiding redistribution of source contents.
+
+Private conversations, browser data, credentials, model-provider records and
+third-party full papers are excluded. This limits fine-grained attribution
+and behavioral inference. It does not prevent reaggregation of the released
+tables or inspection of the mathematical distinctions below. Reproducible
+computation and broader scientific replicability are distinct obligations
+\cite{Peng2011,NASEM2019}.
+
+\section{Methods}
+\subsection{Relative-path and content comparison}
+Let $B$ and $C$ be the included relative-path sets for the initial and later
+states, and let $h_B(p),h_C(p)$ be their content hashes. We count
+\begin{align}
+N_{=}&=\#\{p\in B\cap C:h_B(p)=h_C(p)\},\\
+N_{\ne}&=\#\{p\in B\cap C:h_B(p)\ne h_C(p)\},\\
+N_{-}&=\#(B\setminus C),\qquad N_{+}=\#(C\setminus B).
+\end{align}
+The saved comparison gives $(N_=,N_{\ne},N_-,N_+)=(208,8,0,580)$.
+The eight changes comprise two root Markdown files and six source/PDF/build
+artifacts of the projection-kernel paper. Thus the later state is largely
+additive at the path level. This does not establish independent rediscovery,
+semantic improvement of every unchanged file, or attribution of each addition.
+
+\subsection{Filename-rule classification}
+The published rule selects a new root Markdown file if its filename contains
+at least one declared token, case-insensitively. The tokens are AUDIT,
+CHECKPOINT, LEDGER, MATRIX, ROADMAP, READINESS, MAINLINE, CONSTITUTION,
+SUMMARY, HANDOFF, WORK-SESSION, CONTINUATION-LOG, NIGHT-RUN, FILE-MAP,
+DEPENDENCY-GRAPH, MATURITY, SANITY-CHECK, CRITERION, TARGET, OBLIGATION,
+GATE, CANDIDATE, PROTOCOL, POLICY, PROGRAM and SCHEMA. Matches are substring
+matches, not a semantic annotation of document contents.
+
+For file $i$, let $\ell_i$ be its preserved line count and $s_i(T)$ the
+indicator that its filename matches token set $T$. We report
+\begin{equation}
+f(T)=\frac{\sum_i s_i(T)}{315},\qquad
+g(T)=\frac{\sum_i\ell_i s_i(T)}{77,375}.
+\label{eq:fractions}
+\end{equation}
+The denominator is fixed across variants. These are deterministic population
+summaries of the preserved table. Sampling confidence intervals would not
+address their principal uncertainty, which is semantic validity of the rule.
+
+We prespecify two transparent sensitivity variants for this reanalysis: remove
+MATRIX alone; then also remove MAINLINE and CONSTITUTION. MATRIX can name an
+actual matrix theorem as readily as a control matrix. The second variant
+tests a broader group of content-bearing labels. Neither is offered as a
+ground-truth classification. Removing ambiguous tokens can remove real control
+documents as well as substantive mathematics.
+
+\subsection{Claim-level reconstruction}
+For each qualitative example we distinguish five things: the object actually
+constructed, the assumptions, the evidence channel, the claimed extension and
+the correction. Direct algebra can decide a sign or finite counterexample;
+it cannot decide an unencoded analytic premise. A source theorem contributes
+only under its hypotheses and convention map. An AI critic's agreement is a
+record of further AI review, not human expert review.
+
+The examples were chosen because the retained record contains concrete
+artifacts and identifiable corrections, rather than sampled randomly from
+all research tasks. This is purposive case selection. It supports explanation
+of possible failure mechanisms, not an estimate of their frequency across AI
+research projects.
+
+\section{Quantitative results}
+\subsection{Inheritance and growth}
+There are 335 new Markdown files containing 80,807 lines. Of these, 315 files
+and 77,375 lines occur at root level. The remaining 20 new Markdown files
+contain 3,432 lines. The Python source count increases by 37 while the
+Wolfram-source count is unchanged. These numbers describe artifact allocation
+and inherited structure. A source count is not a count of correct calculations:
+one program may contain many identities, and multiple programs may test the
+same identity.
+
+\subsection{Sensitivity of the majority headline}
+Table~\ref{tab:sensitivity} gives the reproduced results.
+\begin{table}[htbp]
+\centering\small
+\caption{Sensitivity on the same 315-row preserved table. The original
+rule-selected majority of files disappears when MATRIX alone is removed.}
+\label{tab:sensitivity}
+\begin{tabular}{p{0.35\textwidth}rrrr}
+\toprule
+Rule & Files & File \% & Lines & Line \%\\
+\midrule
+Original tokens &162&51.43&43,603&56.35\\
+Without MATRIX &157&49.84&42,433&54.84\\
+Also without MAINLINE, CONSTITUTION &154&48.89&39,981&51.67\\
+\bottomrule
+\end{tabular}
+\end{table}
+Five filenames match only MATRIX, accounting for 1,170 lines. They include
+a full nonminimal Green-matrix theorem and a finite regulator matrix-sector
+theorem as well as control/selection matrices. The original arithmetic is
+correct; its interpretation as the fraction of control-only material is not
+secured by that arithmetic. In particular, it would be false to call 51.43\%
+an estimated waste fraction. The larger line fraction also does not establish
+that control activity caused weaker research output.
+
+The conclusion is bounded and useful: report the exact rule-selected subset
+and its sensitivity, rather than relying on a binary majority headline.
+Determining actual semantic allocation would require a versioned annotation
+scheme, independent document-level coding and an agreement analysis. Those
+data are not present, and no such coding was invented for this study.
+
+\section{Mathematical and encoding corrections}
+\subsection{A commuting observable family is not a full boundary algebra}
+An initial thermal family gives mixed moments
+\begin{equation}
+M_n(\beta_1,\ldots,\beta_n)
+=\omega\bigl(Z(\beta_1)\cdots Z(\beta_n)\bigr).
+\end{equation}
+Even all such moments concern the commutative algebra generated by those
+observables. They do not supply ordered insertions outside that algebra,
+constraint reduction or sewing operations. The continuation's noncommutative
+boundary formulation is therefore a substantive correction of the scope of
+the primitive, not merely a new name.
+
+A minimal example makes the limitation concrete. The qubit states
+$\rho_\pm=|\pm\rangle\langle\pm|$ agree on every diagonal observable, but
+\begin{equation}
+\operatorname{Tr}((\rho_+-\rho_-)X)=2,
+\qquad \tfrac12\|\rho_+-\rho_-\|_1=1.
+\end{equation}
+Restricted ambiguity can disappear when the measurement algebra is enlarged.
+To interpret it physically one must also show that both states satisfy the
+same constraints, dynamics and limit conditions. The continuation consequently
+rephrased completion ambiguity as noninjectivity of restriction on a declared
+physical state set. This is a framework clarification, not a construction of
+a gravitational landscape.
+
+\subsection{Scalar sewing positivity is weaker than complete positivity}
+For a positive map $\Phi:A\to B$ and positive scalar functional $\rho$,
+\begin{equation}
+\sum_{ij}\bar c_i c_j\rho(\Phi(a_i^*a_j))
+=\rho\bigl(\Phi(x^*x)\bigr)\geq0,\qquad x=\sum_jc_ja_j.
+\end{equation}
+Thus every scalar sewing Gram is positive without assuming complete
+positivity. Even all such scalar tests do not certify CP: transposition on
+$M_2$ passes them but has a Choi matrix with spectrum $(-1,1,1,1)$.
+The correct stronger test uses operator-valued matrices
+$[\Phi(a_i^*a_j)]\geq0$ at every size, or an equivalent finite Choi/Kraus
+certificate where applicable \cite{Stinespring1955,Choi1975}.
+This correction is methodologically instructive because adding more tests
+of the wrong scalar kind cannot close the missing ancillary condition.
+
+The finite operational constructions in the corpus do use actual Kraus and
+isometry arguments. Their CP claims survive this clarification. What changes
+is the interpretation of a weaker diagnostic, not every positive result
+associated with it. Earlier positive boundary quantum formalisms remain
+relevant prior art \cite{Oeckl2013}.
+
+\subsection{Two distinguishability questions}
+A two-outcome finite instrument yields common-fiber posterior densities
+$\rho_0,\rho_1$ with trace distance $|2\lambda-1|$ in its selected example.
+If the classical outcome record is retained, the conditioned states live in
+different summands of a direct-sum algebra and have distance 1. Forgetting
+the record and identifying the quantum fibers is a separate channel.
+The earlier correction changed a statement about the operational object,
+not the numerical tolerance. This is a case where a correct decimal value
+was attached to the wrong comparison space.
+
+\subsection{Compression needs its declared algebra}
+Compression $E(a)=V^*aV$ by an isometry is UCP. It need not be multiplicative.
+For compression of $M_2$ onto its first coordinate,
+\begin{equation}
+E(e_{12})E(e_{21})=0,\qquad E(e_{12}e_{21})=E(e_{11})=1.
+\end{equation}
+The finite matched-charge construction is a star quotient because its
+observable algebra is a block-diagonal direct sum and compression deletes
+whole unmatched summands. Broadening that algebra to arbitrary cross-charge
+operators invalidates the quotient conclusion. A theorem on one declared
+algebra is not automatically a theorem on a larger, more physically suggestive
+one.
+
+\subsection{Code can verify the wrong projection}
+An interaction analysis attempted to bound source degrees after removing a
+nonminimal BRST quartet. The intended gauge-fixed minimal projection has
+the conjugated form
+\begin{equation}
+\Pi_{\mathrm{gf}}=C_{\mathrm{gf}}\,\iota\pi\,C_{\mathrm{gf}}^{-1}.
+\label{eq:projection}
+\end{equation}
+It is not generally naive deletion of nonminimal variables. An enumerator
+using deletion rules can be correct for its encoded monomials while failing
+to establish a degree bound under \eqref{eq:projection}. Repeating that
+enumeration cannot repair the model-to-code mismatch. The corrected benchmark
+therefore excludes the proposed source-filtration result and leaves the
+actual anomaly-map image uncomputed.
+
+The valid general quartet contraction is established BRST mathematics
+\cite{BBH2000}. The useful project increment lies in its restricted,
+support/normalization-aware specialization and explicit candidate primitives,
+not an unsupported declaration that an interacting anomaly vanishes.
+
+\subsection{A sourced benchmark does not derive its input dynamics}
+The local gauge construction starts from an Einstein--scalar action and
+derives compatible free Green matrices, normalization maps and BRST algebraic
+conditions. These can be real technical achievements even though the target
+action is supplied. They answer a compatibility question. They do not show
+that a boundary-completion principle generated Einstein gravity.
+
+The physical-state existence theorem also must be distinguished from the
+surrounding functional algebra. A positive physical Hadamard state does not
+by itself imply a normalized boundary instrument, descent of an ordinary
+dagger to the same BRST complex, all-equicausal time ordering or an interacting
+quantum master equation. The later benchmark preserves these separate limits.
+This is an example of successful scope correction with a substantial retained
+technical module.
+
+\subsection{Decaying correlations do not prove information destruction}
+One historical synthesis associated continuous spectral dephasing with
+information loss. On $L^2([0,1],dx)$, however,
+\begin{equation}
+(U_tf)(x)=e^{-itx}f(x)
+\end{equation}
+is a strongly continuous unitary group, while the constant-vector correlation
+is $(1-e^{-it})/(it)$ and tends to zero. A spectral recurrence distinction
+is not a distinction between unitary and nonunitary dynamics. Neither this
+counterexample nor a finite Page-shaped spectral-form-factor proxy decides
+black-hole radiation entropy. The correction removes a physical inference
+without invalidating the elementary spectral calculations.
+
+\section{What can be concluded about the workflow?}
+The record supports a mixed account. The continuation produced concrete
+scope corrections, exact finite calibrations and local sourced benchmarks.
+It also produced many mirrored status and obligation documents. The latter
+can increase synchronization burden: if every claim is copied into every
+manual mirror, a simple bookkeeping model has cost proportional to
+$|\mathcal C||\mathcal M|$. This is a conditional cost model, not a fitted
+law or measured runtime effect.
+
+We use \emph{audit inflation} as an interpretive hypothesis: control artifacts
+may grow without a comparable increase in independently closed claims.
+The case provides examples of duplication and repeated deferral. It does
+not provide a validated measure of closed scientific content at each time,
+nor the counterfactual output under a different audit policy. Therefore it
+does not establish that auditing reduced productivity. Audits also detected
+real errors; the same examples can support beneficial error correction and
+costly maintenance simultaneously.
+
+An agent dialogue can reveal a sign error or hidden assumption, but role
+separation is not evidential independence. Models may share project context
+and the same unexamined premise. A fresh implementation, primary-source
+passage, proof-assistant kernel or external observation changes the evidence
+channel. These channels have different scopes: formal verification certifies
+the formal statement, not its physical interpretation.
+
+The comparison is likewise insufficient for model-capability ranking. Later
+artifacts benefited from inherited work and corrective feedback; earlier
+artifacts were produced under different circumstances. Statements that one
+stage is better in a specified artifact property can be supported. A generic
+claim that its model family is better at foundational physics cannot.
+
+\section{Relation to other AI research systems}
+Program-search systems such as FunSearch combine generated programs with an
+executable evaluator \cite{FunSearch2024}; theorem-proving systems can obtain
+kernel-level feedback \cite{Polu2021}. End-to-end research systems automate
+larger portions of ideation, experimentation and writing
+\cite{AIScientist2026}, while Co-Scientist studies a hypothesis-generation
+and refinement workflow \cite{CoScientist2026}. These are useful contrasts in
+the available feedback channels. Their reported results do not estimate the
+effect of the workflow studied here.
+
+For the historical literature context we pin the December 2025 first version
+of PhysMaster \cite{PhysMasterV1}. Its later August version changes the
+author list and evaluation description. Substituting current metadata into
+a July-cutoff narrative would conflate versions. The June 2026 physical-science
+multi-agent benchmark also predates the cutoff \cite{PhysicsAgents2026}.
+This is an illustrative primary-source comparison, not a systematic review,
+performance replication or common-benchmark ranking.
+
+\section{A compact evidence-routing protocol}
+The cases motivate a small release structure. First state the central
+scientific question and the strongest claim that answers it. Give each
+claim a type---definition, standard input, derived theorem, finite computation,
+conditional application, conjecture or refuted implication---and record its
+exact object and assumptions. A finite calibration and a physical continuum
+construction should not share an unqualified verification label.
+
+Second, identify the encoding bridge. For a program, state which mathematical
+objects become arrays or monomials and why the encoded operations represent
+the intended map. For a source theorem, state the hypotheses and convention
+transport. A correct program or citation cannot compensate for a missing
+bridge. The scalar-versus-amplified positivity example shows why test strength
+must be specified, not merely the number of successful tests.
+
+Third, preserve one current machine-readable claim table and versioned
+history, rather than manually copying status across many active mirrors.
+One short release report should state the strongest retained result, the
+strongest withdrawn claim, evidence actually rerun and material gaps. This
+proposal follows the observed failure modes; its productivity benefit has
+not been measured in this case.
+
+Finally, choose the next research operation by its scientific consequence.
+A bounded proof or counterexample can resolve a question. Another criterion
+document is useful only if it changes an acceptance decision or executable
+test. A failed parent programme can still leave an independent framework,
+method, benchmark or mathematical result. Requiring complete quantum gravity
+before recognizing those outputs would discard the very distinctions this
+case makes observable.
+
+\section{Limitations and conclusion}
+The study has one project, two reconstructed artifact states, purposively
+selected qualitative cases and incomplete production provenance. File
+timestamps are mutable, filename categories are semantic proxies, and the
+technical modules have received AI review rather than human expert review.
+Some analytic proof chains remain source-specialized and have not received
+a fresh complete independent audit in this paper. No intervention effect,
+general model ranking, waste percentage or comprehensive originality
+certificate follows.
+
+Within those limits, the numerical findings are exact properties of released
+metadata: substantial inheritance, 580 additional paths, five baseline
+project manuscripts totaling 85 pages, and a majority-of-files interpretation
+that changes under removal of MATRIX. The mathematical cases identify
+concrete ways fluent research can outgrow its evidence and ways correction
+can preserve useful results. The resulting lesson is to align a claim with
+its actual object, evidence channel and promotion boundary. Volume and
+polish do not perform that alignment automatically.
+
+\section*{Workflow and unresolved attribution}
+The operator reports that earlier work was led mainly by Fable 5, whereas
+results from July 2026 onward were predominantly produced by GPT models.
+DeepSeek and multiple GPT models also participated in review, checking and
+manuscript preparation and organization. This is a reported chronological
+history, not a complete audited allocation of individual contributions.
+An earlier result is not reattributed merely because it was revised or
+packaged later. Human author names and affiliations are intentionally blank.
+The results have not undergone human expert review. Automated checks and AI
+reviews are further AI review, not human peer review. Historical source dates,
+this preparation date and demonstrable public disclosure dates are distinct.
+No authorship, ownership, publication-priority or journal-acceptance decision
+is made. The operator states:
+\begin{quote}
+I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.
+\end{quote}
+
+\section*{Data and code availability}
+The accompanying packet includes the reduced corpus metadata and
+\path{reproduce.py}. The default calculation needs only Python's standard
+library and local files. It reproduces the hash-relation counts, line totals
+and token sensitivities; it does not claim to recover historical model
+sessions or reconstruct the old filesystem from present modification times.
+No raw conversations, secrets or third-party full papers are required.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

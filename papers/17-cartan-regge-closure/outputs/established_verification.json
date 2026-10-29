@@ -1,0 +1,67 @@
+{
+  "blocks": [
+    {
+      "omitted": 2,
+      "multiplier": "4374981/10000",
+      "determinant": "-13495977/12743055769600",
+      "schur": "-15232/61875"
+    },
+    {
+      "omitted": 3,
+      "multiplier": "62101/10000",
+      "determinant": "473946957/26047047270400",
+      "schur": "43232/556875"
+    },
+    {
+      "omitted": 4,
+      "multiplier": "62101/10000",
+      "determinant": "473946957/26047047270400",
+      "schur": "43232/556875"
+    },
+    {
+      "omitted": 5,
+      "multiplier": "62101/10000",
+      "determinant": "473946957/26047047270400",
+      "schur": "43232/556875"
+    }
+  ],
+  "hessian": "-224/16875",
+  "D": "-1/3200",
+  "source_target": "1792/16875",
+  "ratio": "-1/8",
+  "source": 1e-06,
+  "saddles": [
+    {
+      "q_01": 2.2500252370920344,
+      "hessian": -0.013141993222212508,
+      "equation_residual": -1.1274876736725673e-16,
+      "regge_internal_curvature": -0.0003392102172873422,
+      "cartan_internal_curvature": -0.0003392102172869998,
+      "deficits": {
+        "(0, 1, 2)": -8.704040793006129e-05,
+        "(0, 1, 3)": -0.0001666717229964476,
+        "(0, 1, 4)": -0.0001666717229973358,
+        "(0, 1, 5)": -0.0001666717229973358
+      }
+    },
+    {
+      "q_01": 2.255001222506141,
+      "hessian": 0.013254294642132272,
+      "equation_residual": 5.4258177744031903e-17,
+      "regge_internal_curvature": -0.068167916854132,
+      "cartan_internal_curvature": -0.06816791685413051,
+      "deficits": {
+        "(0, 1, 2)": -0.017450800486090046,
+        "(0, 1, 3)": -0.03350148447068868,
+        "(0, 1, 4)": -0.03350148447068868,
+        "(0, 1, 5)": -0.03350148447068868
+      }
+    }
+  ],
+  "fold": {
+    "q_critical": 2.25251922313574,
+    "source_critical": 5.028351131077464e-05,
+    "equation_hessian": 6.859746776904468e-08
+  },
+  "coverage": "Existing exact Hessian producer replay and numerical nonlinear main-claim witnesses; not a fresh independent first-order derivation or a global fold proof."
+}

@@ -1,0 +1,57 @@
+{
+  "coordinates": [
+    [
+      "7/10",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    [
+      "-4/5",
+      "1/4",
+      "1/4",
+      "1/4"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "1"
+    ]
+  ],
+  "initial_omitted_vertices": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "final_omitted_vertices": [
+    0,
+    1
+  ],
+  "internal_edge": [
+    0,
+    1
+  ],
+  "boundary": "all fourteen remaining squared lengths fixed",
+  "source": "1e-6",
+  "exact_q0": "9/4"
+}

@@ -1,0 +1,154 @@
+{
+  "segment_count": 1,
+  "q_cycle_vertex_count": 5,
+  "simplex_count": 30,
+  "boundary_classification": {
+    "counts": {
+      "past_spacelike": 12,
+      "future_spacelike": 12,
+      "timelike_side": 6
+    },
+    "minimum_normal_margin": 0.36633537596662413
+  },
+  "cap_relative_edge_count": 8,
+  "cap_tangent_rank": 4,
+  "cap_physical_mode_count": 4,
+  "spin_sample_count": 2,
+  "initial_spin_projection_residual": 4.3630282815566297e-16,
+  "final_spin_projection_residual": 4.3630282815566297e-16,
+  "initial_tangent_singular_values": [
+    4.454097115122819,
+    3.464101615137755,
+    3.4641016151377544,
+    2.138996353622327
+  ],
+  "final_tangent_singular_values": [
+    4.454097115122819,
+    3.464101615137755,
+    3.4641016151377544,
+    2.138996353622327
+  ],
+  "central_gauge_singular_values": [
+    4.7245691167682144,
+    3.464101615137755,
+    3.4641016151377544,
+    2.4247653381754666
+  ],
+  "physical_internal_hessian_singular_values": [
+    4.669999953626669,
+    3.844231905540063,
+    3.731700418227488,
+    2.853233218908461,
+    2.562821468667337,
+    2.562821415141779,
+    0.4699765517081014
+  ],
+  "spin_transfer_singular_values": [
+    0.8400030019465283,
+    0.8400028236469999
+  ],
+  "spin_transfer_rank": 2,
+  "coarse_injection_initial_overlap_singular_values": [
+    1.0,
+    0.9999999999999999
+  ],
+  "coarse_injection_final_overlap_singular_values": [
+    1.0000000000000002,
+    1.0
+  ],
+  "initial_survivor_constraint_leakage": 0.0,
+  "final_survivor_constraint_leakage": 0.0,
+  "surviving_initial_self": [
+    [
+      {
+        "real": -0.576110017741126,
+        "imag": 1.5382639959413282e-07
+      },
+      {
+        "real": 8.721512309575399e-10,
+        "imag": 1.5760360253082022e-07
+      }
+    ],
+    [
+      {
+        "real": 8.72151256456417e-10,
+        "imag": 1.5760360253082022e-07
+      },
+      {
+        "real": -0.5761100375932686,
+        "imag": 1.0131285837601603e-07
+      }
+    ]
+  ],
+  "surviving_transfer": [
+    [
+      {
+        "real": 0.840003001946522,
+        "imag": 9.954476463356172e-08
+      },
+      {
+        "real": 1.4037057473556e-14,
+        "imag": -3.179549438580669e-08
+      }
+    ],
+    [
+      {
+        "real": -3.3798112672620608e-15,
+        "imag": -3.179559503029919e-08
+      },
+      {
+        "real": 0.8400028236469814,
+        "imag": 1.7337427602899687e-07
+      }
+    ]
+  ],
+  "surviving_final_self": [
+    [
+      {
+        "real": -0.576109937094967,
+        "imag": -1.225537065266243e-07
+      },
+      {
+        "real": -1.3106155222975925e-07,
+        "imag": -1.6759243689944526e-07
+      }
+    ],
+    [
+      {
+        "real": -1.3106155224807494e-07,
+        "imag": -1.6759243689944526e-07
+      },
+      {
+        "real": -0.5761101420946686,
+        "imag": -4.684617101699681e-08
+      }
+    ]
+  ],
+  "surviving_canonical_eigenvalues": [
+    {
+      "real": 0.6858428591884366,
+      "imag": -0.7277498885687217
+    },
+    {
+      "real": 0.6858431986942409,
+      "imag": -0.7277496352694837
+    },
+    {
+      "real": 0.6858426343612949,
+      "imag": 0.7277496500039764
+    },
+    {
+      "real": 0.685842907327589,
+      "imag": 0.7277493260997268
+    }
+  ],
+  "surviving_positive_oscillation_phases": [
+    0.8150348208584206,
+    0.8150352416570478
+  ],
+  "surviving_unit_circle_residual": 2.1241498471269438e-07,
+  "surviving_symplectic_residual": 3.330669073875512e-16,
+  "minimum_negative_simplex_eigenvalue_magnitude": 0.1323278038667604,
+  "minimum_positive_simplex_eigenvalue": 0.4999999999999998,
+  "elapsed_seconds": 12.703061700000035
+}

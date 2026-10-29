@@ -1,0 +1,45 @@
+{
+  "packet": "19-local-gauge-benchmarks",
+  "prepared_beijing": "2026-10-29",
+  "human_authors": "",
+  "affiliations": "",
+  "pdf_author": "",
+  "human_expert_review": false,
+  "historical_cutoff": null,
+  "contribution_history": "Earlier work was Fable 5-led; July 2026 onward results were predominantly GPT-produced, as reported by the operator. DeepSeek and multiple GPT models also participated in review/preparation.",
+  "attribution_statement": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "source_files": [
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/P8-lane-b-benchmark/en/main.tex",
+      "sha256": "432fc180cf8de07193d642be0b5bba4cd08922c58b8094f3d8bb8625b28b4360",
+      "role": "Historical source; transformed into current bounded article"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/P8-lane-b-benchmark/references.bib",
+      "sha256": "42c5911c52df5ddfae0e4cd7d822f42fbb97699074571bda052a9792127a58b8",
+      "role": "Historical source; transformed into current bounded article"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/canonical-ekg-hadamard-20261029/paper/main.tex",
+      "sha256": "2c8f8f079d38cfa0edf26072e3c8312f1ec34d6116c1a2f6d161267ae458c83b",
+      "role": "Companion physical-state theorem cited, not republished"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/boundary_methods/RESULT.md",
+      "sha256": "2f2faa0c4ec2e390964f5bbe99f44c76f85cdee20bf147c9d46a8e1ff595beb5",
+      "role": "Completed claim-level recovery"
+    }
+  ],
+  "copied_or_reduced_inputs": [],
+  "scientific_scope": "Printed block/normalization/graded algebra under declared analytic source inputs; imported physical-state theorem cited; no complete fresh PDE audit or interacting QME.",
+  "original_sources_modified": false,
+  "raw_conversations_included": false,
+  "secrets_included": false,
+  "third_party_full_papers_included": false,
+  "default_reproduction": "python reproduce.py",
+  "runtime_requires_original_source_paths": false,
+  "network_required": false,
+  "manuscript_sha256": "67a55e7609b7a9b596fa1a3ead574d463eb1077de0019a1f796ae6e8b773427a",
+  "pages": 27,
+  "portable_source_sha256": "681e1e99e712acca70cab97a2647db60d62d265d27afa9079ca40c8ed5648bf2"
+}

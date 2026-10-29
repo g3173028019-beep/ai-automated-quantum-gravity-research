@@ -1,0 +1,22 @@
+[
+  {
+    "file": "green_matrix.py",
+    "exit_code": 0,
+    "pass_rows": 7
+  },
+  {
+    "file": "ward_transport.py",
+    "exit_code": 0,
+    "pass_rows": 15
+  },
+  {
+    "file": "graded_algebra.py",
+    "exit_code": 0,
+    "pass_rows": 17
+  },
+  {
+    "file": "matter_vertex.py",
+    "exit_code": 0,
+    "pass_rows": 10
+  }
+]

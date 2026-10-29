@@ -1,0 +1,32 @@
+the boundary programme local benchmark graded algebra equicausal BRST-star symbolic audit
+scope=finite graded covariance/Ward/sign/normalization identities only
+analytic_input=equicausal closure and Hadamard wavefront estimates are source-specialized
+nonclaims=no unrestricted microcausal closure; no physical faithfulness; no time-slice; no interactions/QME
+source_order=(Theta,beta,eta,bar_eta)
+bare_ward=gamma*lambda_plus=lambda_plus*gamma_star=M
+two_argument_ward=Pi*gamma*lambda_plus+lambda_plus*gamma_star*Pi=0
+crossing_kernel=W_graded-algebra=(W_plus+tau_gr(W_minus_signed))/2
+kernel_adjoint=conjugate_tau_0_not_conjugate_tau_gr
+peierls_derivative_order=right derivative on first factor; left derivative on second
+star_derivative_order=left derivative on first factor; right derivative on second
+functional_sign=s_0_ell=(-1)^|ell| ell*gamma
+normalization=hbar_LB*(c0*W_H)=hbar_H*W_H exactly once
+operator_placeholders=noncommuting
+causal_difference=lambda_plus-(-1)^gh*lambda_minus=i*G
+check_exact_plus_covariance_ward=PASS
+check_rejzner_two_argument_ward_with_Pi=PASS
+check_schur_minus_ward=PASS
+check_bare_minus_rejected=PASS
+check_q2_odd_form_ordinary_hermitian=PASS
+check_invalid_graded_kernel_dagger_rejected=PASS
+check_q3_odd_form_ordinary_hermitian=PASS
+check_two_odd_generator_star_anti_involution=PASS
+check_invalid_odd_sign_rejected=PASS
+check_graded_dual_field_sign_and_nilpotence=PASS
+check_scalar_direct_sum_ward=PASS
+check_equation_ideal_brst_stability=PASS
+check_linear_star_commutator_kernel=PASS
+check_q2_pair_crossing_symmetrization=PASS
+check_single_hbar_transport=PASS
+check_invalid_double_c0_rejected=PASS
+overall=PASS_ALGEBRA_ONLY

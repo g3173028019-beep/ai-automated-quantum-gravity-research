@@ -1,0 +1,389 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,bm,booktabs,array}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdfauthor={}}
+\usepackage{microtype}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\diag}{\operatorname{diag}}
+
+\title{First-Order Cartan--Regge Schur Closure of a Four-Dimensional $4$--$2$ Pachner Cell}
+\author{}
+\date{29 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give a fixed-boundary, first-order calculation on the four-dimensional $4$--$2$ Pachner cell.  Tetrahedral metric matching and the fourteen common-boundary squared lengths leave one initial bulk metric coordinate, $q=s_{01}$, and no final bulk metric coordinate.  On the matched geometric sector, the dual Levi-Civita holonomy obeys the exact triangle identity
+$\frac12\langle\star B_h,\log\mathrm{Hol}_h\rangle=A_h\epsilon_h$ up to the declared orientation sign.  We then specialize the independent-angle first-order Regge action to the four initial simplices.  Its four bordered angle--Gram Hessian blocks are exactly nonsingular on a rational calibration geometry.  Eliminating forty angles and four Gram multipliers yields
+$h_{\rm phys}=-224/16875$.  An independently evaluated affine-circuit/Regge target is $1792/16875$, and therefore $h_{\rm phys}/H_D=-1/8$ exactly.  Twelve further nondegenerate Radon configurations reproduce the identity numerically.  The full determinant factorizes into simplex-local auxiliary determinants and the single shared radial Schur complement; each auxiliary determinant scales as $L^{18}$ under $x\mapsto Lx$.  Hence the nonfactorizing four-dimensional $D$ dependence resides in the physical bulk metric mode rather than in a bare incidence determinant or an auxiliary torsion determinant.  Adding a signed worldline source gives a nonlinear finite-cell Einstein--Regge equation, nonzero deficit/holonomy curvature, and a computed Euclidean fold.  These results establish a reproducible classical and one-loop finite-complex closure.  They do not provide an independently gauge-fixed Cartan connection path integral, a Lorentzian contour, a continuum limit, or a complete theory of quantum gravity.
+\end{abstract}
+
+\section{Introduction}
+
+Regge calculus replaces a smooth metric by squared edge lengths and concentrates curvature on codimension-two hinges \cite{Regge1961}.  In four dimensions, the elementary Pachner moves provide unusually sharp tests of a proposed first-order or quantum discretization: the boundary data are finite, the internal variables can be enumerated exactly, and the one-loop Hessian exhibits the geometry-dependent factor usually denoted by $D$ \cite{DittrichSteinhaus2012,BorissovaDittrich2023}.  A successful first-order description should reproduce that factor by eliminating its auxiliary variables, without inserting it as an external measure.
+
+Independent dihedral angles and their simplex Gram constraints give a gauge-reduced first-order form of Regge calculus \cite{Barrett1994,DittrichSpeziale2008}.  What is not automatic is the complete finite-cell calculation: which metric mode survives fixed boundary data, whether the angle blocks are actually invertible, where the $D$ dependence enters the block determinant, and which part remains a measure problem.  The distinction matters.  Bare cellular incidence matrices are geometry independent, whereas $D$ varies continuously with the six-vertex configuration and may change sign.  Calling the latter ``torsion'' without displaying the metric-dependent reduction hides rather than solves the problem.
+
+This paper carries out that reduction for one four-dimensional $4$--$2$ cell.  The principal results are:
+\begin{enumerate}
+\item the common-boundary problem has exactly one initial off-shell metric mode, $\delta s_{01}$;
+\item the geometric Cartan holonomy reproduces the Regge hinge term triangle by triangle;
+\item the independent-angle action reduces to the complete fixed-boundary Regge action;
+\item the physical Schur complement agrees exactly with an independent $D$ target, with ratio $-1/8$ in the stated conventions;
+\item the auxiliary determinant is simplex local and has an exact scale law, while the nonlocal $D$ dependence is carried by the shared radial integration;
+\item a signed worldline source turns the same mode into a nonlinear, curvature-producing finite-cell equation and exhibits two Euclidean stationary branches meeting at a fold.
+\end{enumerate}
+The first-order formalism and the general Regge Hessian structure are established prior work.  The contribution here is the explicit conjunction of the relative-complex count, holonomy identity, exact bordered-block calculation, independent $D$ normalization, and nonlinear source response on one fixed complex.  We use ``Cartan--Regge'' only for this geometric and gauge-reduced bridge.  A group-valued Cartan connection measure, Lorentz gauge fixing, ghosts, simplicity Jacobians, and a boundary BFV construction are not supplied.
+
+\section{The relative \texorpdfstring{$4$--$2$}{4--2} complex}
+
+Label the six vertices by $0,\ldots,5$, and denote by $\bar\sigma_k$ the four-simplex obtained by omitting vertex $k$.  The two triangulations are
+\begin{equation}
+ K_i=\{\bar\sigma_2,\bar\sigma_3,\bar\sigma_4,\bar\sigma_5\},
+ \qquad K_f=\{\bar\sigma_0,\bar\sigma_1\}.
+ \label{eq:complexes}
+\end{equation}
+They have the same boundary.  Relative to that boundary, the cell counts in dimensions $0$ through $4$ are
+\begin{equation}
+ C_{\rm rel}(K_i):(0,1,4,6,4),\qquad
+ C_{\rm rel}(K_f):(0,0,0,1,2).
+ \label{eq:relativecounts}
+\end{equation}
+The initial interior cells are edge $(01)$, the four triangles $(01k)$, six tetrahedra containing $(01)$, and four four-simplices.  The final side contains one interior tetrahedron $(2345)$ and two four-simplices.  In canonical oriented cellular bases the nonzero relative coboundary ranks are
+\begin{equation}
+ K_i:\quad \rank d_1=1,\quad\rank d_2=3,\quad\rank d_3=3,
+ \qquad
+ K_f:\quad\rank d_3=1.
+ \label{eq:incidenceranks}
+\end{equation}
+All lower relative cohomology vanishes and $H^4(K_{i,f},\partial K)\simeq\mathbb R$.
+
+\begin{proposition}[Bare-incidence exclusion]
+With canonical cellular bases and a gauge-trivial flat local system, the relative incidence complex in Eq.~\eqref{eq:relativecounts} cannot generate the continuously varying Regge factor $D$.
+\end{proposition}
+\begin{proof}
+Every relative differential has entries $0,\pm1$ fixed by orientations and incidences.  Since the move region is contractible, a flat local system is gauge equivalent to a trivial one.  Its combinatorial determinant or torsion data, after fixing a cohomology basis, is independent of the vertex coordinates.  The affine-circuit quantity $D$ depends continuously on those coordinates and can cross zero.  The two functions therefore cannot coincide.  Metric-dependent basis normalizations may introduce geometry, but then the dependence is a measure or reduction Jacobian rather than bare incidence data.
+\end{proof}
+
+To identify the metric carrier, assign an independent constant metric perturbation $h_\sigma$ to each four-simplex and demand equality of the induced perturbations on every common tetrahedron.  A simplex metric is equivalent to its ten edge-length variations.  Tetrahedral matching has rank $25$ in the initial forty-dimensional space and rank $6$ in the final twenty-dimensional space.  Appending the fourteen fixed boundary squared lengths raises these ranks to $39$ and $20$, respectively.  Exact rational row reduction gives the following statement.
+
+\begin{proposition}[One-mode fixed-boundary reduction]
+For a generic nondegenerate $4$--$2$ configuration, tetrahedral induced-metric matching together with fixed common-boundary edge lengths leaves precisely one initial metric variation and no final one.  The initial kernel changes $s_{01}$ and may be normalized by $\delta s_{01}=1$.
+\end{proposition}
+
+The surviving direction is not a displacement of all six vertices within one flat ambient four-space.  It is the off-shell Regge variation that changes the four simplex metrics coherently, preserves each shared tetrahedral metric, and permits nonzero deficit around the four internal triangles.  We henceforth write its coordinate as
+\begin{equation}
+ q=s_{01}.
+ \label{eq:qdef}
+\end{equation}
+
+\section{Fixed-boundary Regge dynamics and the affine-circuit target}
+
+For each triangle $h$, let $A_h$ be its area and $\theta_{h\sigma}$ the interior dihedral angle in simplex $\sigma$.  Define the internal deficits and boundary exterior angles by
+\begin{equation}
+ \epsilon_h=2\pi-\sum_{\sigma\supset h}\theta_{h\sigma},\qquad
+ \psi_h=\pi-\sum_{\sigma\supset h}\theta_{h\sigma}.
+\end{equation}
+The complete fixed-boundary action is
+\begin{equation}
+ S_R(q)=\sum_{h\ {
+m int}}A_h(q)\epsilon_h(q)
+       +\sum_{h\subset\partial K}A_h(q)\psi_h(q).
+ \label{eq:reggeaction}
+\end{equation}
+The boundary term cannot be dropped: boundary lengths are fixed, but boundary exterior angles vary with $q$.  The simplex Schl\"afli identities cancel all angle variations and give
+\begin{equation}
+ \frac{\dd S_R}{\dd q}
+ =\sum_{k=2}^{5}\frac{\dd A_{01k}}{\dd q}\epsilon_{01k}.
+ \label{eq:reggeeom}
+\end{equation}
+At a flat Radon background the four deficits vanish.  The radial Hessian is therefore
+\begin{equation}
+ H_R=\left.\frac{\dd^2 S_R}{\dd q^2}\right|_{q_0}
+ =\left.\sum_{k=2}^{5}\frac{\dd A_{01k}}{\dd q}
+              \frac{\dd\epsilon_{01k}}{\dd q}\right|_{q_0}.
+ \label{eq:reggehessian}
+\end{equation}
+
+Let $c_k$ be the oriented affine-circuit coefficients of the six points $x_k$.  The coordinate convention used in our independent target is
+\begin{equation}
+ D_{\rm aff}=2\sum_{k=0}^{5}c_k\,x_k\mathbin{\cdot}x_k.
+ \label{eq:Daff}
+\end{equation}
+It equals eight times the $D$ convention in the source-normalized Lorentzian Pachner Hessian.  In Euclidean signature the remaining sign in the comparison below is the action-sign convention.  A direct reconstruction on twenty-five generic configurations, including both Hessian signs, yields
+\begin{equation}
+ \frac{H_R}{H_D}=-\frac18,
+ \label{eq:eighthnumeric}
+\end{equation}
+with relative numerical error below $10^{-5}$.  Here $H_D$ denotes the independently evaluated affine-circuit/omitted-volume target.  The ratio is not fitted separately for each geometry.
+
+\section{Calibration geometry and local geometric branch}
+The exact calibration vertices, in a common Euclidean coordinate frame, are
+\begin{align}
+ x_0&=(7/10,1/4,1/4,1/4),&x_1&=(-4/5,1/4,1/4,1/4),\\
+ x_2&=(0,0,0,0),&x_3&=(0,1,0,0),\\
+ x_4&=(0,0,1,0),&x_5&=(0,0,0,1).
+\end{align}
+Thus $q_0=9/4$ and all squared lengths are rational.
+The four initial simplices are obtained by omitting $k=2,3,4,5$.
+For each simplex, form the affine matrix with columns $(1,x_i)^T$.
+Its inverse gives the barycentric gradients; their negative normalized directions are outward face normals $n_i$.
+The angle data are recovered by $\cos\theta_{ij}=-n_i\cdot n_j$ with positive sines on the Euclidean geometric branch.
+Triangle areas are the square roots of the corresponding $2\times2$ edge Gram determinants divided by two.
+Substituting these exact sine and cosine values into derivatives of $F=\det G$ constructs the bordered matrices without numerical inverse trigonometric differentiation.
+The local geometric component is understood throughout: $G$ is positive semidefinite of rank four with the appropriate positive face-volume kernel.
+The condition $\det G=0$ alone, away from this component, does not select every aspect of a nondegenerate Euclidean simplex.
+Nonsingularity of the bordered block establishes the local implicit solution at the calibration point; no global uniqueness of area coordinates is assumed.
+
+For the target used below, the affine coefficients are the signed omitted-simplex volumes, $c_k=(-1)^k\det[(1,x_i)^T]_{i\ne k}/24$, with the overall sign chosen so that $c_0>0$.
+Writing $V_k=|c_k|$, the independently evaluated coordinate target is
+\begin{equation}
+ H_D=-\frac{D_{\rm aff}}{48}\frac{V_0V_1}{V_2V_3V_4V_5}.
+\end{equation}
+This fixes the target before comparison with the angle elimination.
+The generic tetrahedral matching-rank certificate uses a separate rational geometry, listed in the portable code, because that rank follows from the simplex metric-to-edge isomorphism rather than from these particular distances.
+
+\section{Geometric Cartan holonomy}
+
+Give every oriented simplex its own orthonormal coframe.  Across a shared tetrahedron, matching determines the unique orientation-preserving transport that identifies all tangent vectors and sends the source outward normal to minus the target outward normal.  The ordered product around the dual face of an internal triangle is $\mathrm{Hol}_h$.  It fixes the triangle plane and rotates the normal plane by the deficit angle modulo $2\pi$.
+We work on the connected near-flat branch with $|\epsilon_h|<\pi$, where the principal logarithm recovers that deficit.
+
+Let $B_h=u\wedge v$ be the oriented triangle bivector.  With the trace pairing used below, $\star B_h$ is twice the triangle area times the unit generator of rotations in the normal plane.  Thus
+\begin{equation}
+ (-1)^{r(h)}\frac12\langle\star B_h,\log\mathrm{Hol}_h\rangle
+ =A_h\epsilon_h,
+ \label{eq:cartanregge}
+\end{equation}
+where $r(h)$ records the fixed primal/dual orientation convention.  Equation~\eqref{eq:cartanregge} is geometric and exact on the stated branch, not a small-curvature expansion.
+A general unwrapped deficit requires a continuous logarithm lift: for $\epsilon=3\pi/2$, the principal logarithm gives $-\pi/2$ and the pairing differs from $A\epsilon$ by $-2\pi A$.  The implementation verifies orthogonality, unit determinant, the dual-face product, and the identity triangle by triangle at five nearby values of $q$ for every calibration configuration.
+
+This identity does not introduce a new connection action.  It shows that, after choosing the Levi-Civita connection of the matched coframes, the internal Cartan pairing agrees with the Regge hinge action.  Independent variation and integration of a group-valued connection remain separate tasks.
+
+\section{Independent-angle first-order action}
+
+For one four-simplex, label its ten interior dihedral angles by complementary vertex pairs $(ij)$ and form the angle Gram matrix
+\begin{equation}
+ G_{ii}=1,\qquad G_{ij}=-\cos\theta_{ij},\qquad
+ F_\sigma(\theta)=\det G_\sigma(\theta).
+ \label{eq:anglegram}
+\end{equation}
+Specializing the first-order construction of Barrett \cite{Barrett1994} to the initial cluster gives
+\begin{equation}
+ S_1(q,\theta,\mu)=
+ \sum_h\kappa_h A_h(q)
+ -\sum_\sigma\sum_{(ij)} A_{(ij),\sigma}(q)\theta_{(ij),\sigma}
+ +\sum_\sigma\mu_\sigma F_\sigma(\theta_\sigma),
+ \label{eq:firstorder}
+\end{equation}
+where $\kappa_h=2\pi$ for an internal triangle and $\kappa_h=\pi$ for a boundary triangle.  There are ten angles and one multiplier in each of four simplices.
+
+Writing $g_\sigma=\nabla F_\sigma$ and $K_\sigma=\nabla^2F_\sigma$, the auxiliary equations are
+\begin{equation}
+ F_\sigma=0,
+ \qquad
+ A_{(ij),\sigma}=\mu_\sigma(g_\sigma)_{(ij)}.
+ \label{eq:saddleeq}
+\end{equation}
+Exact barycentric face normals establish Eq.~\eqref{eq:saddleeq} on the rational calibration geometry.  At the saddle the multiplier term vanishes, and direct summation gives
+\begin{equation}
+ S_1(q,\theta(q),\mu(q))=S_R(q),
+ \label{eq:actionequivalence}
+\end{equation}
+including the exterior-angle boundary term.  The two sides are implemented independently.
+
+At fixed areas the bordered auxiliary Hessian is
+\begin{equation}
+ C_\sigma=
+ \begin{pmatrix}
+   \mu_\sigma K_\sigma & g_\sigma\\
+   g_\sigma^{T}&0
+ \end{pmatrix},
+ \qquad C=\bigoplus_\sigma C_\sigma.
+ \label{eq:Cblock}
+\end{equation}
+The exact multipliers and determinants are displayed in Table~\ref{tab:determinants}.  The certificate is important because some sliver samples have condition numbers near $10^{20}$ and look singular in an unqualified floating-point rank test.
+
+\begin{table}[t]
+\centering
+\caption{Exact local auxiliary data on the rational calibration geometry.}
+\label{tab:determinants}
+\begin{tabular}{ccc}
+\toprule
+omitted vertex & $\mu_\sigma$ & $\det C_\sigma$\\
+\midrule
+$2$ & $4374981/10000$ & $-13495977/12743055769600$\\
+$3$ & $62101/10000$ & $473946957/26047047270400$\\
+$4$ & $62101/10000$ & $473946957/26047047270400$\\
+$5$ & $62101/10000$ & $473946957/26047047270400$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{The Schur closure and the location of \texorpdfstring{$D$}{D}}
+
+Let $B_\sigma$ be the mixed $q$--auxiliary row.  Since only areas depend on $q$,
+\begin{equation}
+ B_\sigma=\left(-\partial_q A_{(ij),\sigma},0\right).
+\end{equation}
+At the flat saddle the fixed-angle $q$--$q$ entry vanishes.  The one-dimensional non-auxiliary Hessian is consequently
+\begin{equation}
+ h_{\rm phys}=-\sum_\sigma B_\sigma C_\sigma^{-1}B_\sigma^T.
+ \label{eq:schur}
+\end{equation}
+For omitted vertices $2,3,4,5$, the exact contributions are
+\begin{equation}
+ -\frac{15232}{61875},\qquad
+ \frac{43232}{556875},\qquad
+ \frac{43232}{556875},\qquad
+ \frac{43232}{556875}.
+\end{equation}
+Their cancellation leaves
+\begin{equation}
+ h_{\rm phys}=-\frac{224}{16875}.
+ \label{eq:hphys}
+\end{equation}
+Independently, the affine circuit, its scalar, and the omitted-simplex volumes are
+\begin{align}
+ c&=\left(\frac1{30},\frac7{240},-\frac1{64},-\frac1{64},-\frac1{64},-\frac1{64}\right),\\
+ D&=-\frac1{3200},\\
+ (V_0,\ldots,V_5)&=\left(\frac1{30},\frac7{240},\frac1{64},\frac1{64},\frac1{64},\frac1{64}\right),\\
+ H_D&=\frac{1792}{16875}.
+\end{align}
+Hence
+\begin{theorem}[Exact one-mode closure]
+On the rational calibration geometry, eliminating the forty independent angles and four Gram multipliers from Eq.~\eqref{eq:firstorder} gives the fixed-boundary Regge radial Hessian and satisfies
+\begin{equation}
+ h_{\rm phys}=H_R=-\frac18H_D
+\end{equation}
+exactly.
+\end{theorem}
+
+A floating implementation repeats the calculation on twelve additional nondegenerate Radon geometries.  In all thirteen cases $h_{\rm phys}=H_R$ and $h_{\rm phys}/H_D=-1/8$ within the recorded conditioning and finite-difference tolerances.  The exact point removes numerical ambiguity; the ensemble check rejects the simplest symmetry accident.
+
+The full Hessian has the block form
+\begin{equation}
+ H_1=\begin{pmatrix}0&B\\B^T&C\end{pmatrix},
+ \qquad
+ \det H_1=\left(\prod_\sigma\det C_\sigma\right)h_{\rm phys}.
+ \label{eq:blockdet}
+\end{equation}
+Stationary integration therefore separates a product of simplex-local auxiliary factors from the shared bulk-metric factor $|h_{\rm phys}|^{-1/2}$.  The continuously varying nonfactorizing $D$ dependence occurs in the latter.  It is neither present in the bare relative incidence algebra nor required to arise from an auxiliary torsion determinant.
+
+Under $x\mapsto Lx$, angles, $g_\sigma$, and $K_\sigma$ remain invariant, while areas and $\mu_\sigma$ scale as $L^2$.  Every nonzero determinant monomial in Eq.~\eqref{eq:Cblock} contains two gradient entries and nine entries from $\mu K$.  Therefore
+\begin{equation}
+ \det C_\sigma(L^2q)=L^{18}\det C_\sigma(q).
+ \label{eq:scalelaw}
+\end{equation}
+The scale law is exact.  It is also a warning: the auxiliary Gaussian is not yet a complete quantum measure.  A connection-derived density must still account for multiplier normalization, gauge volume, ghosts, boundary polarization, and Morse phases without duplicating or cancelling the physical $D$ factor.
+
+\section{Nonlinear sourced finite-cell dynamics}
+
+The same one-dimensional carrier supports an elementary nonlinear gravitational response.  Since only the internal triangles $(01k)$ depend on $q$, Eq.~\eqref{eq:reggeeom} is the exact vacuum equation $E_R(q)=0$.  For squared lengths,
+\begin{equation}
+ \frac{\dd A_{01k}}{\dd q}=
+ \frac{s_{0k}+s_{1k}-q}
+ {4\sqrt{2(qs_{0k}+qs_{1k}+s_{0k}s_{1k})-q^2-s_{0k}^2-s_{1k}^2}}.
+\end{equation}
+Add a signed worldline segment on the internal edge,
+\begin{equation}
+ I(q;j)=S_R(q)+j\sqrt q,
+ \qquad
+ E_R(q)+\frac{j}{2\sqrt q}=0.
+ \label{eq:sourced}
+\end{equation}
+Here $j=8\pi G\eta m$ and $\eta$ records the Euclidean/Lorentzian sign convention.  The calculation does not determine $\eta$.
+
+At the flat point $q_0=9/4$,
+\begin{equation}
+ E_R'(q_0)=-\frac{224}{16875},\qquad
+ \delta q=\frac{5625}{224}j+O(j^2).
+ \label{eq:linearresponse}
+\end{equation}
+Thus the source acts on the same shared metric mode that carries $D$.  It does not source an angle or Gram-constraint mode.  The four sourced deficits are nonzero, and the holonomy identity \eqref{eq:cartanregge} agrees with the Regge curvature sum within $3\times10^{-9}$ on the computed saddles.
+
+Define the response curve $j(q)=-2\sqrt q\,E_R(q)$.  For $j=10^{-6}$ there are two nearby Euclidean stationary points:
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+branch & $q$ & $I''(q)$ & $\epsilon_{012}$\\
+\midrule
+near flat & $2.250025237092$ & $-0.01314199323$ & $-8.70404\times10^{-5}$\\
+companion & $2.255001222506$ & $+0.01325429463$ & $-1.745080\times10^{-2}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The equal remaining three deficits are $-1.666717\times10^{-4}$ and $-3.350148\times10^{-2}$, respectively.  The branches meet where $\dd j/\dd q=0$:
+\begin{equation}
+ q_c=2.252519223136,\qquad j_c=5.02835113108\times10^{-5}.
+\end{equation}
+This fold is a property of the Euclidean one-cell equation.  It is not interpreted as a maximum physical mass; such an interpretation would require a Lorentzian causal complex and a controlled contour.
+
+\section{Relation to prior work and scope}
+
+The first-order use of independent dihedral angles is due to Barrett \cite{Barrett1994}; local area-angle constraints were developed further in Ref.~\cite{DittrichSpeziale2008}.  The gravitational meaning and gauge structure of Regge Hessians are established in Ref.~\cite{DittrichFreidelSpeziale2008}.  Four-dimensional Pachner one-loop calculations and their measure obstruction are treated in Refs.~\cite{DittrichSteinhaus2012,BorissovaDittrich2023}.  Connection formulations and Regge measures also precede this work \cite{Khatsymovsky2001,Khatsymovsky2015}.
+
+Against that background, the novel claim is deliberately finite and reproducible: on the declared $4$--$2$ cell, the fixed-boundary metric quotient, Cartan holonomy pairing, independent angle--Gram stationarity, exact bordered-block Schur complement, $D$ normalization, scale law, and nonlinear source response have been evaluated in one common convention.  A focused source search found no published presentation of this exact combined certificate.  That statement is not a priority proof.
+
+The word ``physical'' in $h_{\rm phys}$ means non-auxiliary fixed-boundary metric integration.  In a tent-move slicing, $q$ is a constraint or normal-deformation variable; the one-cell calculation alone does not establish propagation of two helicities.  Nor does a one-loop determinant define a quantum theory.  Specifically absent are an independently integrated $SO(1,3)$ connection, its Haar and simplicity Jacobians, Lorentz gauge fixing and ghosts, boundary BFV half-densities, a global Lorentzian integration cycle, interacting refinement identities, and a continuum limit.
+
+\section{Conclusion}
+
+The four-dimensional $4$--$2$ cell admits an exact first-order closure that cleanly separates geometry, dynamics, and measure.  Fixed boundary data leave one shared metric coordinate.  The geometric Cartan holonomy produces the Regge hinge action.  Independent dihedral angles and Gram multipliers eliminate to the complete Regge action, and their exact Schur complement reproduces the independently calculated $D$-carrying Hessian with ratio $-1/8$.  Local auxiliary determinants remain local and scale as $L^{18}$ per simplex; the nonfactorizing $D$ dependence is carried by the unique radial integration.  A worldline source then produces nonlinear deficit and holonomy curvature on that same mode.
+
+This is a finite-complex gravitational result, not a completion of quantum gravity.  Its main use is diagnostic: any proposed Cartan connection path integral reducing to this quotient must reproduce the displayed physical Schur factor while deriving, rather than choosing, the remaining measure and boundary data.
+
+\appendix
+\section{Gaussian phase and convention map}
+
+For real nonzero $h$,
+\begin{equation}
+ \int_{\mathbb R}\dd\lambda\,e^{ih\lambda^2/2}
+ =e^{i\,\mathrm{sgn}(h)\pi/4}\sqrt{\frac{2\pi}{|h|}}
+\end{equation}
+on the standard steepest-descent prescription.  The source-normalized Lorentzian $4$--$2$ Hessian has the form
+\begin{equation}
+ H_{0101}^{(4-2)}=-\frac{D_{\rm source}}{48}
+ \frac{|V_0V_1|}{|V_2V_3V_4V_5|},
+\end{equation}
+while Eq.~\eqref{eq:Daff} obeys $D_{\rm aff}=8D_{\rm source}$.  The Euclidean sign convention used in Eqs.~\eqref{eq:reggeaction}--\eqref{eq:hphys} supplies the remaining minus sign.  No unexplained fitted factor is left in the comparison.
+
+\section{Portable reproduction and verification scope}
+The supplementary files contain the exact rational coordinates and the minimal numerical and symbolic implementations.
+Run \texttt{python code/replay.py} from the packet directory.
+The default replay imports only bundled modules and needs neither a historical project path nor network access.
+It rebuilds the four bordered blocks, their exact determinants and Schur contributions, checks the matching ranks, evaluates both nonlinear saddles at $j=10^{-6}$ and recomputes the fold.
+The saved output records $q=2.2500252370920344$ and $q=2.255001222506141$ for the two saddles, with equation residuals below $1.2\times10^{-16}$.
+Their Regge and Cartan internal curvature sums agree to approximately $1.5\times10^{-15}$ on the selected branch.
+The fold computation yields $q_c=2.25251922313574$, $j_c=5.028351131077464\times10^{-5}$, with a finite-difference Hessian residual $6.86\times10^{-8}$.
+The scalar optimizer and sign-change root search produce numerical witnesses, not a certified global classification of all stationary branches.
+
+The exact producer was replayed through construction of the full four bordered blocks, rather than merely re-adding recorded fractions.
+This is an inspected producer replay, not a second independent implementation of the complete geometric action.
+The thirteen-geometry first-order sweep and twenty-five-geometry Regge-target sweep are inherited numerical evidence from the source calculation and were not repeated for this delivery.
+The full historical test suite is not counted as passed; an earlier monolithic run exceeded its recorded time bound.
+No connection-measure, ghost, contour or continuum computation is hidden in these finite checks.
+
+\section*{Contribution history and authorship status}
+Human author names and affiliations are intentionally blank, and human expert review has not occurred.
+Earlier work was Fable 5-led; results from July 2026 onward were predominantly produced by GPT models, as reported by the operator.
+DeepSeek and multiple GPT models also participated in review and preparation.
+This article presents the finite metric quotient, geometric holonomy bridge, exact independent-angle elimination and nonlinear source calibration, and makes the logarithm-branch condition explicit.
+The first-order Regge formalism, Schur-complement identity and general four-dimensional measure obstruction remain credited prior mathematics.
+The model chronology does not settle authorship or ownership:
+\begin{quote}
+I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.
+\end{quote}
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}

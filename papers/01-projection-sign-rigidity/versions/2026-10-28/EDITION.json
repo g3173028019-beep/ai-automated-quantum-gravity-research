@@ -1,0 +1,12 @@
+{
+  "edition": "2026-10-28",
+  "preserved_before_revision": "2026-10-29T01:25:53.000081+00:00",
+  "repository_commit": "8858ba8bd7d47e08fb5e9d5961553febfd2704cf",
+  "files": {
+    "README.md": "02c55f21a0344707aed40213d56b6e2dfa75c642fb789c11d3f01518575dbee2",
+    "main.tex": "65b605f3c0631ed0e8a5a7845013ed01b02051e579badbb3be7454279f1ddb90",
+    "manuscript.pdf": "a65e2bcd7502359c63a90e79eb44be0404a67662524faafd1103cd0118397612",
+    "references.bib": "fd44a897263eb99e0b25b7ff3e5e417c7ffc0f44395cc18553d56fb4941f66e9",
+    "verification/legacy_checks.wls": "869de6a4245ccd3056008766b019efa480e2949c5b73e7ccfa1a6bc992c993bc"
+  }
+}

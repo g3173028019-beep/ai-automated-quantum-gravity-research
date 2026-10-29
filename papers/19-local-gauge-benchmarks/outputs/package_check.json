@@ -1,0 +1,16 @@
+{
+  "packet": "19-local-gauge-benchmarks",
+  "pages": 27,
+  "pdf_author": "",
+  "log_issues": {
+    "Overfull": 0,
+    "undefined": 0,
+    "multiply defined": 0,
+    "LaTeX Error": 0,
+    "Missing character": 0,
+    "Underfull": 10
+  },
+  "labels": 75,
+  "undefined_references": [],
+  "pdf_sha256": "67a55e7609b7a9b596fa1a3ead574d463eb1077de0019a1f796ae6e8b773427a"
+}

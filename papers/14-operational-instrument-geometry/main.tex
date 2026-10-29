@@ -1,0 +1,490 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,microtype}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{booktabs,enumitem,array}
+\setlist{nosep,leftmargin=*,topsep=2pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Herm}{\operatorname{Herm}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\id}{\mathbf 1}
+\newcommand{\CP}{\mathrm{CP}}
+\newcommand{\cL}{\mathcal L}
+\title{Operational Lorentz Geometry from Resolved Quantum Instruments\\[0.4em]\large Normalization, coherent refinement, and spectral references}
+\author{}
+\date{29 October 2026}
+
+\hypersetup{pdfauthor={},pdftitle={Operational Lorentz Geometry from Resolved Quantum Instruments}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Resolved quantum instruments expose information that is lost when a selected
+filter is treated as a deterministic geometric transport.
+Starting from the established qubit--Lorentz cone correspondence, we give an
+endpoint-order-unit normalization that is covariant under independent passive
+spin-frame changes, identify a relative phase fibre invisible to diagonal
+instrument data, and distinguish nonmultiplicative maximal postselection from
+an exactly refinable complete dephasing tree.
+A second identifiability obstruction concerns spectral references: an
+assignment on positive matrices in all finite dimensions that respects unitary
+conjugation and direct sums and forgets scalar spectral shifts must be
+constant.
+The familiar spectral-floor centering violates disconnected-component
+consistency, while retaining an absolute generator or supplying a calibrated
+reference admits an explicit positive absorbing completion.
+All principal statements are finite-dimensional and have analytic proofs;
+portable symbolic checks reproduce the decisive identities and a finite
+endpoint-covariance example.
+The paper supplies operational constructions and limits on reconstruction,
+without deriving a spacetime coframe, gravitational action or continuum
+quantum dynamics.
+\end{abstract}
+
+\section{Problem and scope}
+
+Cartan gravity distinguishes a Lorentz connection from a solder form and, after a
+$G/H$ reduction, packages both into a de Sitter, anti-de Sitter, or Poincar\'e connection
+\cite{MacDowellMansouri,StelleWest,Wise}.  Quantum instruments distinguish a selected
+operation from the complete record of mutually exclusive outcomes
+\cite{DaviesLewis,ChiribellaNetworks}.  The two distinctions become entangled if a
+non-trace-preserving qubit filter is used to represent a local Lorentz boost: the
+noncompact transformation is visible only before state normalization, while the physical
+instrument must also include the rejected outcome.
+
+The qubit--Lorentz correspondence itself is standard
+\cite{ArrighiPatricotCone,ArrighiPatricotLorentz,VerstraeteLorentz,FullwoodLorentz}.
+Our question concerns normalization, coherent composition and missing references.
+The generic Lorentz measurement lift is already known; our use of it retains the
+resolved rejection cost and separates that fact from endpoint covariance.
+The same earlier work observes that transformed effects need not sum to a fixed
+identity~\cite{ArrighiPatricotLorentz}.
+Our question is narrower and operational.  Which parts of a Lorentz/Cartan reading remain
+well defined after probabilities, endpoint frames, coherent phases, and refinement are
+included?  The answer is a mixture of constructions and obstructions.  Table
+\ref{tab:claims} states the evidence boundary.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.24\linewidth}>{\raggedright\arraybackslash}p{.34\linewidth}>{\raggedright\arraybackslash}p{.32\linewidth}@{}}
+\toprule
+Statement & Status & Not established \\
+\midrule
+$\Herm(2)_+$ is the future cone & background theorem & spacetime soldering \\
+resolved filter lift & analytic construction & gravitational transport law \\
+moving-order-unit covariance & analytic theorem and finite check & microscopic clock selection \\
+Kraus-phase blindness & analytic no-go & superselection of the phase \\
+complete-tree refinement & exact special channel & cellulation independence \\
+\bottomrule
+\end{tabular}
+\caption{Claim boundary.  ``Background'' is not an originality claim.}
+\label{tab:claims}
+\end{table}
+
+We work in finite dimensions.  Effects and unnormalised states are positive Hermitian
+matrices.  The Schr\"odinger branch is $\rho\mapsto K\rho K^\dagger$; with a local order
+unit $u>0$, its Heisenberg normalization is $K^\dagger u_{\rm out}K\leq u_{\rm in}$.
+No continuum limit or causal signaling theorem is assumed.
+
+\section{The qubit order cone and the Lorentz metric}
+
+Let $J=\Herm(2)$ as a four-dimensional real vector space.  In a Pauli frame,
+\begin{equation}
+ X=x^0\id+x^i\sigma_i,
+ \qquad q(X)=\det X=(x^0)^2-\bm x^2 .
+ \label{eq:minkowski-determinant}
+\end{equation}
+Polarization gives
+\begin{equation}
+ \eta(X,Y)=\frac12\{q(X+Y)-q(X)-q(Y)\}
+ =\frac12\bigl(\Tr X\Tr Y-\Tr(XY)\bigr).
+ \label{eq:det-polarization}
+\end{equation}
+
+\begin{proposition}[Order cone]
+\label{prop:order-cone}
+The positive cone is
+\begin{equation}
+ J_+=\{X\geq0\}=\{X:q(X)\geq0,\ \Tr X\geq0\}.
+ \label{eq:future-cone}
+\end{equation}
+Rank-one positive matrices are future null and positive-definite matrices are future
+timelike.
+\end{proposition}
+
+\begin{proof}
+The eigenvalues are $x^0\pm|\bm x|$.  Simultaneous nonnegativity is therefore
+$x^0\geq|\bm x|$, while their product is \eqref{eq:minkowski-determinant}.
+\end{proof}
+
+For $S\in SL(2,\mathbb C)$, $X\mapsto SXS^\dagger$ preserves the cone and determinant.
+Modulo $\{\pm\id\}$ this is the standard spin cover of $SO^+(1,3)$.  The singlet
+correlation also reads out \eqref{eq:det-polarization}:
+\begin{equation}
+ \langle\psi_-|X\otimes Y|\psi_-\rangle
+ =x^0y^0-\bm x\cdot\bm y=\eta(X,Y).
+ \label{eq:singlet-metric}
+\end{equation}
+This last observation overlaps the explicit analysis of Ref.~\cite{FullwoodLorentz}; we
+use it only as a basis-independent readout.  It does not identify $J$ with a tangent
+space.
+
+There is a useful negative statement.  If $\rho:M\to\mathcal S_2^+$ is a faithful
+trace-one state field and $G$ is any positive monotone quantum-information metric, then
+$G_\rho(d\rho(v),d\rho(v))\geq0$.  No real change of coordinates turns its nondegenerate
+pullback into a Lorentz metric.  This follows directly from positivity and Sylvester
+inertia and applies, for example, to the Petz family \cite{PetzMonotone}.  The indefinite
+form in \eqref{eq:det-polarization} lives on unnormalised observables, not on the tangent
+space of normalized states.
+
+\subsection{Representability is not derivation}
+
+Any four Hermitian matrices $\Theta_\mu$ can be encoded in four independently selected
+binary settings,
+\begin{equation}
+ E_{\mu,\pm}(a)=\frac12\id\pm a\Theta_\mu,
+ \qquad
+ \Theta_\mu=\frac{E_{\mu,+}-E_{\mu,-}}{2a},
+ \label{eq:balanced-effects}
+\end{equation}
+provided $|a|\|\Theta_\mu\|_{\rm op}\leq1/2$.  If a microscopic law independently
+supplies a four-dimensional deformation space $W_x$ and a linear full-rank response
+$\Theta_x:W_x\to J$, then
+\begin{equation}
+ g_x(v,w)=\eta(\Theta_xv,\Theta_xw)
+ \label{eq:solder-pullback}
+\end{equation}
+is Lorentzian.  Equation \eqref{eq:balanced-effects} proves encodability only.  Because an
+arbitrary coframe can be inserted, it cannot explain its rank, scale, anholonomy, or
+dynamics.
+
+\begin{lemma}[Operational future cone]
+\label{lem:activation}
+For $X\in J$, $X\geq0$ if and only if there is an $\epsilon>0$ such that
+$\{aX,\id-aX\}$ is a binary POVM for every $0\leq a\leq\epsilon$.
+\end{lemma}
+
+\begin{proof}
+If the pair is positive for any $a>0$, then $X\geq0$.  Conversely choose
+$\epsilon\leq\|X\|_{\rm op}^{-1}$ for positive nonzero $X$.
+\end{proof}
+
+Thus, conditional on a valid solder response, the future cone consists exactly of
+directions that can activate a previously absent outcome to first order.  This is a local
+order-theoretic orientation, not yet a domain-of-dependence statement.
+
+\section{Resolved filters and the cost of boosts}
+
+The scaled measurement realization below is established in Proposition~3 of Ref.~\cite{ArrighiPatricotLorentz}; we include the proof to fix its completion and normalization conventions.
+
+\begin{theorem}[Filter factorization and completion]
+\label{thm:filter-lift}
+Let $G\in SL(2,\mathbb C)$.  For every
+$0<r\leq\|G\|_{\rm op}^{-1}$, $K=rG$ is a trace-nonincreasing single-Kraus branch and
+\begin{equation}
+ L=(\id-K^\dagger K)^{1/2}
+ \label{eq:complement-kraus}
+\end{equation}
+completes it to a two-outcome trace-preserving instrument.  Conversely, every invertible
+$K$ factorizes locally as $K=cG$, with $G\in SL(2,\mathbb C)$ and
+$c=(\det K)^{1/2}$, up to the spin-cover sign.
+\end{theorem}
+
+\begin{proof}
+The norm bound gives $K^\dagger K\leq\id$, so \eqref{eq:complement-kraus} is positive and
+$K^\dagger K+L^\dagger L=\id$.  The converse follows from
+$G=c^{-1}K$ and $\det G=1$ on any continuous square-root branch.
+\end{proof}
+
+The scalar $r^2$ is not the branch probability.  For a normalized input,
+\begin{equation}
+ p_K(\rho)=r^2\Tr(G^\dagger G\rho),
+ \qquad q(KXK^\dagger)=r^4q(X).
+ \label{eq:filter-probability}
+\end{equation}
+The input dependence is precisely why discarding the rejected outcome erases operational
+information.
+
+Let the singular values of $G$ be $s,s^{-1}$ with $s\geq1$.  The two contractions
+\begin{equation}
+ K_+=s^{-1}G,\qquad K_-=s^{-1}G^{-1}
+ \label{eq:two-way-filters}
+\end{equation}
+obey $K_-K_+=K_+K_-=s^{-2}\id$.  Projectively the selected branches are inverse Lorentz
+maps, but their unnormalised round trip is the central loss $X\mapsto s^{-4}X$.
+
+\begin{corollary}[Null rejected outcome for a pure boost]
+\label{cor:null-failure}
+For
+$G_\chi=\exp[(\chi/2)\bm n\cdot\bm\sigma]$, $\chi>0$, the maximally scaled branch
+$K=e^{-\chi/2}G_\chi$ has
+\begin{equation}
+ \operatorname{spec}(K^\dagger K)=\{1,e^{-2\chi}\},\qquad
+ \id-K^\dagger K=(1-e^{-2\chi})P_-,
+ \label{eq:null-failure}
+\end{equation}
+where $P_-$ is rank one.  The rejected effect is therefore a future-null element of
+$J_+$.
+\end{corollary}
+
+The result relates rapidity to an exact survival cost, but it does not identify boost loss
+with gravitational redshift.  That interpretation requires endpoint clocks and a
+refinement law.
+
+\section{Moving order units and passive covariance}
+
+Using a fixed $\id$ as the order unit at every endpoint confuses a passive nonunitary
+change of spin frame with a physical filter.  Starting with an identity edge and applying
+different $S_x,S_y\in SL(2,\mathbb C)$ gives $G'=S_yS_x^{-1}$; normalizing by the fixed
+operator norm generally creates a nonzero complement.  Outcome probabilities then depend
+on a gauge choice.
+
+Assign instead an independently reconstructed $u_x>0$ to each endpoint.  Effects satisfy
+$0\leq E\leq u_x$, and dual states obey $\Tr(\tau_xu_x)=1$.  Under a passive frame change,
+\begin{equation}
+ E\mapsto S_xES_x^\dagger,\quad
+ u_x\mapsto S_xu_xS_x^\dagger,\quad
+ \tau_x\mapsto S_x^{-\dagger}\tau_xS_x^{-1}.
+ \label{eq:order-unit-frame}
+\end{equation}
+Both the order interval and probability pairing are invariant.
+
+\begin{theorem}[Order-unit covariant resolved instrument]
+\label{thm:order-unit-instrument}
+For an invertible edge matrix $G_{xy}$ and positive endpoint units, define
+\begin{align}
+ A_{xy}&=u_x^{-1/2}G_{xy}^{-1}u_yG_{xy}^{-\dagger}u_x^{-1/2},\nonumber\\
+ c_{xy}&=\lambda_{\max}(A_{xy})^{-1/2},\qquad
+ K_{g,xy}=c_{xy}G_{xy}^{-\dagger}.
+ \label{eq:covariant-normalization}
+\end{align}
+Then
+\begin{equation}
+ K_{g,xy}^\dagger u_yK_{g,xy}\leq u_x,
+ \qquad E_n=u_x-K_{g,xy}^\dagger u_yK_{g,xy}\geq0.
+ \label{eq:order-unit-complement}
+\end{equation}
+Under independent endpoint changes
+$G'_{xy}=S_yG_{xy}S_x^{-1}$ and $u'_z=S_zu_zS_z^\dagger$, the selected and rejected
+effects transform by source congruence and all paired probabilities are invariant.
+\end{theorem}
+
+\begin{proof}
+The largest-eigenvalue choice makes $c_{xy}^2A_{xy}\leq\id$, which is congruent to the
+first inequality in \eqref{eq:order-unit-complement}.  Generalized eigenvalues are
+unchanged by the simultaneous endpoint congruences.  Direct substitution gives
+$K'_g=S_y^{-\dagger}K_gS_x^\dagger$, so
+$K_g'^\dagger u_y'K_g'=S_x(K_g^\dagger u_yK_g)S_x^\dagger$ and the same holds for
+$E_n$.
+\end{proof}
+
+In standardized fibers, $L_g=u_y^{1/2}K_gu_x^{-1/2}$ transforms as
+$L'_g=R_yL_gR_x^\dagger$ for unitary Wigner-frame matrices $R_x,R_y$.  Its singular
+values are therefore frame-independent mismatch data.  A local Kraus completion always
+exists, for example $K_n=u_y^{-1/2}E_n^{1/2}$, but the effect $E_n$ does not determine the
+output partial isometry or coherent phase of $K_n$.
+
+A deterministic special case deserves care.  If an independent measurement verifies
+\begin{equation}
+ u_y=G_{xy}u_xG_{xy}^\dagger,
+ \label{eq:moving-unit-lock}
+\end{equation}
+then $U_{xy}=u_y^{-1/2}G_{xy}u_x^{1/2}$ is unitary.  Noncompact information is stored in
+the change of endpoint unit, while standardized transport is compact.  Defining $u_y$ by
+\eqref{eq:moving-unit-lock} after measuring $G$ would make the statement tautological.
+Moreover, imposing it around every loop forces holonomy into the compact stabilizer of
+$u_x$, excluding generic Lorentz curvature.  It is therefore a calibrated subfamily, not
+a universal gravitational law.
+
+\section{Coherent phase is not instrument data}
+
+Let a labeled instrument have one nonzero Kraus operator in each outcome,
+\begin{equation}
+ \mathcal I_a(\rho)=K_a\rho K_a^\dagger,\qquad
+ \sum_aK_a^\dagger K_a=\id.
+ \label{eq:labeled-instrument}
+\end{equation}
+
+\begin{theorem}[Diagonal phase blindness]
+\label{thm:phase-blindness}
+The transformations $K_a\mapsto e^{i\theta_a}K_a$ leave every labeled CP branch, branch
+probability, conditioned output, and observable diagonal in the record basis invariant.
+After a common phase is removed, an $m$-outcome single-Kraus instrument has an
+unidentified $U(1)^{m-1}$ phase fiber whenever all outcomes remain labeled.
+\end{theorem}
+
+\begin{proof}
+The phase cancels in $K_a\rho K_a^\dagger$.  For the Stinespring isometry
+$V=\sum_a|a\rangle\otimes K_a$ and $D=\sum_ad_a|a\rangle\langle a|$,
+\begin{equation}
+ V^\dagger(D\otimes O)V=\sum_ad_aK_a^\dagger OK_a,
+ \label{eq:diagonal-record}
+\end{equation}
+which contains no cross term.  A simultaneous rephasing of all $K_a$ is global.
+\end{proof}
+
+The phase is not superselected.  An off-diagonal record observable gives
+\begin{equation}
+ V^\dagger(|a\rangle\langle b|\otimes O)V=K_a^\dagger OK_b,
+ \label{eq:coherent-record}
+\end{equation}
+which acquires $e^{i(\theta_b-\theta_a)}$.  A coherent recombiner can therefore measure a
+relative phase if the matrix element is nonzero.  The theorem says that diagonal
+instrument tomography cannot select which coherent dilation nature uses.
+
+This distinction matters for gravity: classical equations are invariant under an overall
+rescaling $S\mapsto cS$ of the action, while $\exp(iS/\hbar)$ is not.  Even a finite record
+that verifies Einstein--Cartan stationary equations would not by itself determine Newton's
+constant or the phase accumulated between alternative geometries.
+
+\section{Refinement: selected branches versus complete trees}
+\label{sec:refinement}
+
+Suppose a Hermitian mismatch $X$ determines the locally maximized selected contraction
+rate
+\begin{equation}
+ R=\lambda_{\max}(X)\id-X\geq0,\qquad
+ K_0(dt)=\id-\tfrac12R\,dt+O(dt^2).
+ \label{eq:selected-rate}
+\end{equation}
+If each subedge is independently maximized, the normalization depends nonlinearly on the
+subedge data.  In general the product of fine selected branches is not the maximized coarse
+branch.  This is a functoriality obstruction for postselection, not a failure of CP
+composition.
+
+The correct normalized object is the complete process.  Adding $J=\sqrt R$ gives
+\begin{equation}
+ \cL(\rho)=J\rho J^\dagger-	frac12\{J^\dagger J,\rho\}
+ \label{eq:gksl-generator}
+\end{equation}
+up to an optional Hamiltonian commutator.  For the rank-one pure-boost mismatch
+$R=2bP_+$ with $b\geq0$, an exact two-Kraus channel is
+\begin{equation}
+ K_0(t)=e^{-bt}P_++P_-,\qquad
+ K_1(t)=\sqrt{1-e^{-2bt}}\,P_+.
+ \label{eq:exact-channel}
+\end{equation}
+
+\begin{theorem}[Exact complete-tree refinement]
+\label{thm:tree-refinement}
+For $t_1,t_2\geq0$, the four fine histories generated by
+\eqref{eq:exact-channel} can be unitarily recombined in record space into the two coarse
+Kraus operators at $t_1+t_2$.  Repeating the construction with positive real time-bin
+coefficients gives an associative record isometry for any finite ordered subdivision.
+\end{theorem}
+
+\begin{proof}
+Write $s_i=e^{-bt_i}$ and $j_i=\sqrt{1-s_i^2}$.  The four histories are
+\begin{align}
+ K_{00}&=s_1s_2P_++P_-,&K_{01}&=s_2j_1P_+,\nonumber\\
+ K_{10}&=s_1j_2P_+,&K_{11}&=j_1j_2P_+.
+ \label{eq:fine-histories}
+\end{align}
+The three jump histories are collinear, and their squared coefficients sum to
+\begin{equation}
+ s_2^2j_1^2+s_1^2j_2^2+j_1^2j_2^2=1-s_1^2s_2^2.
+ \label{eq:jump-norm}
+\end{equation}
+A unitary record change therefore compresses them to $K_1(t_1+t_2)$, while $K_{00}$ is
+already $K_0(t_1+t_2)$.  For more intervals, the vector of nonzero jump-history
+coefficients has norm $\sqrt{1-e^{-2b\sum_it_i}}$.  Normalizing this vector defines the
+record isometry independently of parenthesization, proving associativity in the declared
+positive time-bin gauge whenever the total jump weight is nonzero.
+If all jump weights vanish, only the deterministic no-jump record is supported; its
+embedding is the all-zero history and the unused zero-amplitude record can be omitted.
+\end{proof}
+
+The channel does not select that gauge.  Rephasing one fine jump history leaves the CP map
+unchanged but changes a fixed coherent recombiner, exactly as Theorem
+\ref{thm:phase-blindness} predicts.  Nor does one-dimensional chain refinement imply
+equivalence of competing spacetime cellulations, constraint closure, or a continuum
+amplitude.
+
+\input{spectral-references}
+
+\section{Cartan-geometric interpretation and falsifiers}
+
+The results support a disciplined operational dictionary:
+\begin{enumerate}
+\item $\Herm(2)_+$ supplies an internal causal cone and Lorentz bilinear form.
+\item A separately derived full-rank response is required to solder this
+internal space to spacetime; curved geometries generally require anholonomic coframes.
+\item Resolved filters can tomographically infer noncompact transport, but passive frame
+covariance requires moving endpoint order units.
+\item Rejected outcomes carry noncompact survival data; they cannot be silently removed.
+\item Quantum composition requires a coherent record structure beyond diagonal CP data.
+\end{enumerate}
+
+Each item has a direct falsifier.  Failure of response linearity or rank kills the coframe
+reading.  Frame-dependent generalized singular values kill passive covariance.  A coarse
+instrument not obtainable from the complete fine tree kills the proposed refinement.  An
+interference experiment inconsistent with the declared record isometry kills its coherent
+lift.  None of these tests presupposes the Einstein equations.
+
+Several tempting promotions are excluded.  Gradients of one four-component coordinate
+field, $e^I=du^I$, give a flat metric when full rank and a degenerate metric otherwise; a
+curved coframe must be generally anholonomic.  Derivatives of normalized qubit probabilities
+span at most the three traceless directions, so the trace/time component requires an
+independently registered rate or scale.  Finally, a finite-dimensional unitary
+representation of the connected noncompact simple group $SL(2,\mathbb C)$ is trivial at
+the Lie-algebra level; adding a finite record register cannot turn the whole Lorentz gauge
+group into unitary transformations inside one fixed fiber.
+
+\section{Conclusion}
+
+The standard qubit Lorentz cone becomes operationally consistent only when the full
+instrument, its endpoint order units, and its coherent record are kept distinct.  The
+selected filter carries the projective Lorentz map; the rejected branch carries its
+survival cost; moving order units separate passive frame changes from physical loss; and a
+declared coherent record isometry, not diagonal channel data, carries refinement phases.
+This supplies finite Lorentz--Cartan kinematics and no-go theorems about identifiability.
+Theorem~\ref{thm:reference} adds a separate boundary on spectral reconstruction: a
+nontrivial direct-sum-covariant record cannot forget every absolute scalar reference.
+The calibrated completion in Proposition~\ref{prop:absorbing} is an existence construction,
+not a deduction of a physical generator.
+The missing steps are substantive: a microscopic full-rank coframe, a dynamical
+Lorentz/Cartan connection, a gravitational amplitude with constraints, and a controlled
+continuum limit.  We therefore make no claim of emergent Einstein dynamics or quantum
+gravity.
+
+\appendix
+\section{Portable verification and provenance}
+The companion program \texttt{code/verify.py} runs without any historical project
+path or network access.
+SymPy checks the boost complement, the opposite-boost composition defect, the
+jump-history polynomial identity, a coherent recombiner with probabilities one
+and zero for identical diagonal instruments, and the exact rational
+spectral-floor witness.
+A finite NumPy example with noncommuting endpoint data checks the scale,
+selected and rejected effects, and probability covariance; its largest
+residual is below $3\times10^{-16}$.
+Small negative rejected-effect eigenvalues of order $10^{-16}$ in this example
+are roundoff, not an analytic positivity proof.
+The proofs in the body establish the general claims.
+No continuum, gravitational field-equation, or all-input numerical-stability
+claim is inferred from these finite checks.
+
+The underlying local research records are dated 12--13 July 2026; this
+English edition and the spectral-reference strengthening were prepared on
+29 October 2026.
+Private source dates do not establish public disclosure or priority.
+The operator reports that earlier work was led by Fable~5, while results from
+July 2026 onward were predominantly GPT-produced; DeepSeek and multiple GPT
+models also contributed review and preparation.
+Human authors and affiliations are left blank.
+Human expert review has not occurred, and no global novelty certificate is
+claimed.
+The operator's attribution statement is retained verbatim:
+\begin{quote}
+I genuinely do not know how authorship, intellectual credit, or ownership
+should be attributed for these results.
+\end{quote}
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}

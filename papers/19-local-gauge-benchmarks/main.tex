@@ -1,0 +1,1634 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{setspace}
+\setstretch{1.08}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,longtable,array,tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage[numbers,sort&compress]{natbib}
+
+\hypersetup{pdfauthor={},
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  citecolor=green!35!black,
+  urlcolor=blue!55!black,
+  pdftitle={A Local Einstein--Scalar BV/BRST Benchmark for Boundary Reconstruction Programs}
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\U}{U_{F}}
+\newcommand{\M}{M_{\Gamma}}
+\newcommand{\gbar}{\bar g}
+\newcommand{\phibar}{\bar\phi}
+\newcommand{\cbar}{\bar c}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Ran}{\operatorname{Ran}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\gh}{\operatorname{gh}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\cE}{\mathcal E}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cF}{\mathcal F}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\cL}{\mathcal L}
+\newcommand{\hbarLB}{\hbar_{\mathrm{b}}}
+\newcommand{\kappaLB}{\kappa}
+\newcommand{\status}[1]{\textsc{#1}}
+
+\title{A Local Einstein--Scalar BV/BRST Benchmark\\
+for Boundary Reconstruction Programs}
+\author{}
+\date{29 October 2026}
+
+\setlist[itemize]{nosep,topsep=3pt}
+\setlist[enumerate]{nosep,topsep=3pt}
+\emergencystretch=1em
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Boundary and reconstruction approaches to quantum gravity often formulate strong
+requirements---positivity, gauge reduction, causal propagation, sewing, state
+selection, and semiclassical recovery---without exhibiting a single continuum sector
+in which the requirements can be checked with compatible domains and conventions.
+This paper constructs a deliberately narrower benchmark.  We start from the
+Einstein--scalar action with negative cosmological constant, expand about the
+zero-scalar AdS$_4$ background, and work on a causally convex globally hyperbolic
+interior double cone whose closure is disjoint from the timelike conformal boundary.
+The classical nonminimal BV datum, its gauge-fixed tangent complex, and the exact
+de Donder ghost operator are fixed explicitly.  Using source-specialized results on
+linearized Einstein--Klein--Gordon theory and a derived block inversion, we obtain a
+full advanced/retarded Green matrix for $(h,\phi,c,\bar c,b)$ for every real auxiliary
+gauge parameter, including the nonschur value zero.
+
+For a refined double cone we embed the local geometry into a spatially compact
+Fuchsian locally-AdS host.  Published Hadamard existence theorems, a Fredholm
+left-inverse construction, and an explicit normalization transport then yield a
+five-field BRST-compatible Hadamard system and a positive, no-extra-null
+ghost-number-zero one-particle space.  The free functional algebra is built on the
+equicausal, rather than unrestricted microcausal, domain.  It satisfies the exact
+graded Ward identity, Einstein causality, and a fixed-ambient time-slice property.
+We also prove a sharp limitation: the ordinary field-algebra dagger does not descend
+to the same BRST cohomology in the frozen nonminimal reality convention.  Finally, the
+first $h\phi\phi$ matter deformation and its scalar-antifield completion form an exact
+classical first-order BV subcocycle; a conserved renormalized one-insertion stress
+normalization is available, while the associated local AMWI/QME obstruction class is
+typed but not computed.
+
+The construction is a benchmark, not a derivation of gravity.  It assumes the
+Einstein--scalar action.  It supplies neither global reflecting AdS boundary
+conditions, a full interacting quantum master equation, an operational boundary
+instrument, a regulator-removal theorem, nor an emergent infrared bridge.  The paper
+separates source-specialized inputs from project-level compositions throughout and
+states an exact stop line for further promotion.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+
+\subsection{Why a benchmark is needed}
+
+The phrase ``boundary reconstruction'' covers programs with rather different
+ontologies.  Some begin with amplitudes assigned to codimension-one boundaries, some
+with nets of observables, some with constraint complexes, and some with positive
+functionals or moment data.  Despite these differences, a mature continuum sector has
+to make several structures coexist: a gauge-reduced classical phase space, causal
+propagation, a quantum algebra, an admissible state, a physical positivity statement,
+and sufficiently controlled interactions.  It is easy to verify each item in a
+different model or convention.  It is much harder to exhibit them on one domain and
+to state precisely which step fails when one attempts to pass from a local effective
+field theory to a gravitational boundary theory.
+
+The purpose of this paper is to provide such a controlled test object.  We call it the
+\emph{local gauge benchmark}.  It is local, perturbative, and effective.  Its starting point
+is not an unknown microscopic boundary amplitude but the familiar Einstein--scalar
+action.  Consequently, success of the benchmark demonstrates compatibility of a
+reconstruction architecture with a standard local gravitational sector; it cannot be
+used to claim that Einstein gravity has been derived from that architecture.
+
+The main technical issue is not writing the classical BV action.  The difficulty is
+to keep the following chain typed and normalized:
+\begin{equation}
+ \begin{aligned}
+ \text{BV datum}&\longrightarrow \text{Green matrix}
+ \longrightarrow \text{Hadamard pair}
+ \longrightarrow \text{equicausal star algebra}\\
+ &\longrightarrow \text{BRST reduction}
+ \longrightarrow \text{time slice}
+ \longrightarrow \text{first interaction test}.
+ \end{aligned}
+ \label{eq:chain}
+\end{equation}
+Gauge fields, ghosts, antighosts, the Nakanishi--Lautrup field, source pairings,
+left/right derivatives, and the rescaling between geometric and source conventions all
+matter.  A missing sign or an unjustified restriction of a covariance can break the
+Ward identity or the physical inner product.
+
+\subsection{Relation to established work}
+
+The classical functional BV framework and its locally covariant gravity
+specialization are due to Fredenhagen, Rejzner, Brunetti and collaborators
+\cite{FredenhagenRejzner2012,BrunettiFredenhagenRejzner2016}.  Gauge-invariant
+quantization of linearized Einstein--Klein--Gordon systems and linearized gravity on
+globally hyperbolic backgrounds was developed in
+\cite{Hack2014,FewsterHunt2013,HackSchenkel2013}.  Green-hyperbolic operators and
+their restriction properties are treated systematically in \cite{Baer2015}.
+The BRST phase-space and Hadamard criteria used below come from
+\cite{WrochnaZahn2015}; the nontrivial gravity-state input is G\'erard's existence
+theorem on Einstein spacetimes with compact Cauchy surfaces \cite{Gerard2023}.
+
+Two corrections to older pAQFT shorthand are essential.  First, the traditional
+unrestricted class of microcausal functionals is not closed under the Peierls bracket.
+The equicausal domain introduced by Hawkins, Rejzner, and Visser repairs this defect and
+supports the star product and time-slice homotopy \cite{HawkinsRejznerVisser2023}.
+Second, a positive state on the reduced bosonic algebra is not by itself a full
+nonminimal BRST state.  We therefore construct the tensor/vector Ward pair on a host,
+transport it through the full five-field Green matrix, and prove the local
+no-extra-null statement separately.
+
+\subsection{Results and provenance vocabulary}
+
+We use four provenance descriptions.
+\begin{center}
+\begin{tabularx}{0.94\textwidth}{>{\bfseries}l X}
+\toprule
+standard & A definition or immediate formal consequence, not an originality claim.\\
+source-specialized & A published theorem is applied after its hypotheses and convention map are printed.\\
+derived & A project-level block inversion, compatibility proof, or obstruction argument is supplied here.\\
+open & A stated target whose required proof or construction is absent.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The principal derived contributions are the explicit full nonminimal Green matrix,
+the compact-host Fredholm/Ward completion adapted to the selected reduced state, the
+normalization map into the five-field local benchmark presentation, the local zero-extension
+injectivity argument, the dagger-descent counterexample, and the first matter BV
+subcocycle.  The general BV, Green-hyperbolic, Hadamard, equicausal, and
+Epstein--Glaser mechanisms remain source results.
+
+\paragraph{Scope ceiling.}
+Every theorem below concerns a formal perturbative expansion on an interior globally
+hyperbolic region.  There is no claim of a global AdS Hilbert space, a nonperturbative
+or ultraviolet-complete theory, an independently functorial physical net, or an
+observable boundary readout.  The strongest interacting statement is a first classical
+matter subcocycle plus a typed but uncomputed quantum anomaly class.
+
+\section{Local geometric and dynamical datum}
+
+\subsection{The interior domain}
+
+Let $(\widetilde{\mathrm{AdS}}_4,\gbar)$ be the universal cover of four-dimensional
+anti-de Sitter spacetime with radius $L$ and mostly-plus signature.  In global
+coordinates,
+\begin{equation}
+ \dd s^2_{\gbar}=\frac{L^2}{\cos^2\rho}
+ \left(-\dd t^2+\dd\rho^2+\sin^2\rho\,\dd\Omega_2^2\right),
+ \qquad
+ \bar R_{\mu\nu}=-\frac{3}{L^2}\gbar_{\mu\nu},
+ \label{eq:adsmetric}
+\end{equation}
+so that $\bar R=-12/L^2$, $\bar C_{\mu\nu\rho\sigma}=0$, and
+$\Lambda=-3/L^2$.
+
+Global AdS has a timelike conformal boundary and is not globally hyperbolic without a
+boundary prescription.  We therefore choose a connected, causally convex, globally
+hyperbolic double cone $\U$ with compact closure contained in the interior of
+$\widetilde{\mathrm{AdS}}_4$.  The closure is disjoint from the conformal boundary.
+All proper gauge parameters, test sections, switching functions, and functional
+derivatives used in integrations by parts have compact support in $\U$.
+
+This restriction is structural, not cosmetic.  It makes the standard advanced and
+retarded problem meaningful and removes conformal-boundary terms, but it also means
+that no conclusion below is a theorem about reflecting global AdS.
+
+\subsection{Einstein--scalar action and background}
+
+Fix
+\begin{equation}
+ \kappa^2=32\pi G,
+ \qquad m^2L^2=-2,
+ \qquad \bar\phi=0,
+ \label{eq:params}
+\end{equation}
+and use the standard-quantization label $\Delta_+=2$ for later comparison with an AdS
+boundary problem.  The mass lies above the AdS$_4$ Breitenlohner--Freedman bound
+$m^2L^2\geq-9/4$ \cite{BreitenlohnerFreedman1982}.  On the local interior domain the
+label $\Delta_+$ does not impose a boundary condition.
+
+The classical action is
+\begin{align}
+ S_{\mathrm{cl}}[g,\phi]
+ &=\frac{2}{\kappa^2}\int_{\U}(R(g)-2\Lambda)\,\dd\mu_g \notag\\
+ &\quad-\frac12\int_{\U}
+ \left(g^{\mu\nu}\nabla_\mu\phi\nabla_\nu\phi+m^2\phi^2\right)\dd\mu_g.
+ \label{eq:classicalaction}
+\end{align}
+Compactly supported variation gives
+\begin{equation}
+ G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{\kappa^2}{4}T_{\mu\nu},
+ \qquad (\Box_g-m^2)\phi=0,
+ \label{eq:eom}
+\end{equation}
+where
+\begin{equation}
+ T_{\mu\nu}=\nabla_\mu\phi\nabla_\nu\phi
+ -\frac12g_{\mu\nu}\bigl((\nabla\phi)^2+m^2\phi^2\bigr).
+\end{equation}
+The background $(\gbar,0)$ solves \cref{eq:eom}.
+
+Write
+\begin{equation}
+ g=\gbar+\kappa h.
+ \label{eq:split}
+\end{equation}
+At free order the scalar block is
+\begin{equation}
+ P_\phi=\bar\Box-m^2=\bar\Box+\frac{2}{L^2}.
+ \label{eq:scalarP}
+\end{equation}
+The normalization in \cref{eq:split} is retained throughout: a canonical graviton
+backreaction of order $\kappa\hbar$ corresponds to a physical metric shift of order
+$\kappa^2\hbar$.
+
+\section{Classical BV complex and free tangent theory}
+
+\subsection{Nonminimal fields and antibracket}
+
+The nonminimal field multiplet is
+\begin{equation}
+ \Phi=(g_{\mu\nu},\phi,c^\mu,\cbar_\mu,b_\mu),
+\end{equation}
+with ghost numbers $0,0,1,-1,0$ and parities even, even, odd, odd, even.  For every
+field $\Phi^A$ introduce a density-valued antifield $\Phi_A^\ddagger$ of ghost number
+$-1-\gh(\Phi^A)$ and opposite parity.  Our antibracket is
+\begin{equation}
+ (F,G)=\sum_A\int_{\U}\left(
+ \frac{\delta_rF}{\delta\Phi^A}\frac{\delta_lG}{\delta\Phi_A^\ddagger}
+ -\frac{\delta_rF}{\delta\Phi_A^\ddagger}\frac{\delta_lG}{\delta\Phi^A}
+ \right).
+ \label{eq:antibracket}
+\end{equation}
+The BRST differential acts from the right Hamiltonian convention,
+$sF=(F,S_{\mathrm{BV}})$.
+
+Freeze
+\begin{equation}
+ sg=\mathcal L_cg,
+ \quad s\phi=\mathcal L_c\phi,
+ \quad sc=\frac12[c,c]_{\mathrm{gr}},
+ \quad s\cbar=b,
+ \quad sb=0,
+ \label{eq:brstfull}
+\end{equation}
+where $[c,c]^\mu_{\mathrm{gr}}=2c^\nu\nabla_\nu c^\mu$.  The nonminimal master action is
+\begin{align}
+ S_{\mathrm{BV}}=S_{\mathrm{cl}}+
+ \int_{\U}\bigl(&g^{\ddagger\mu\nu}\mathcal L_cg_{\mu\nu}
+ +\phi^\ddagger\mathcal L_c\phi
+ +\tfrac12c^\ddagger_\mu[c,c]^\mu_{\mathrm{gr}}
+ +\cbar^{\ddagger\mu}b_\mu\bigr).
+ \label{eq:bvaction}
+\end{align}
+
+\begin{theorem}[Classical master equation; source-specialized]
+Under the compact-support convention on $\U$,
+\begin{equation}
+ (S_{\mathrm{BV}},S_{\mathrm{BV}})=0,
+ \qquad s^2=0.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Diffeomorphism invariance of \cref{eq:classicalaction} holds without a boundary term for
+compactly supported gauge parameters.  Lie derivatives close under the graded
+vector-field bracket, whose graded Jacobi identity proves nilpotence on $g,\phi,c$.
+The pair $(\cbar,b)$ is contractible.  In the canonical antibracket these statements
+are equivalent to the classical master equation.  This is the standard BV implication
+\cite{BatalinVilkovisky1981,FredenhagenRejzner2012} specialized to the present action.
+\end{proof}
+
+\subsection{Gauge fixing and tangent complex}
+
+Rescale the full ghost by $c_{\mathrm{full}}=\kappa c$ and the corresponding antifields
+canonically.  The free differential is
+\begin{equation}
+ s_0h_{\mu\nu}=2\bar\nabla_{(\mu}c_{\nu)},
+ \qquad s_0\phi=0,
+ \qquad s_0c=0,
+ \qquad s_0\cbar=b,
+ \qquad s_0b=0.
+ \label{eq:s0}
+\end{equation}
+Let
+\begin{equation}
+ F_\mu(h)=\bar\nabla^\nu h_{\mu\nu}-\frac12\bar\nabla_\mu h,
+ \qquad
+ \Psi=\int_{\U}\cbar^\mu\left(F_\mu(h)+\frac{\lambda}{2}b_\mu\right)\dd\mu_{\gbar},
+ \label{eq:gaugefermion}
+\end{equation}
+with real constant $\lambda$.  If $P_0$ is the ungauge-fixed Euler--Lagrange Hessian
+and
+\begin{equation}
+ K\xi=(2\bar\nabla_{(\mu}\xi_{\nu)},0),
+\end{equation}
+then the compactly supported tangent complex is
+\begin{equation}
+ \Gamma_c(T\U)\xrightarrow{K}
+ \Gamma_c(S^2T^*\U\oplus\mathbb R)
+ \xrightarrow{P_0}
+ \Gamma_c(S^2T^*\U\oplus\mathbb R)^*
+ \xrightarrow{K^*}\Gamma_c(T\U)^*.
+ \label{eq:tangentcomplex}
+\end{equation}
+Gauge invariance gives $P_0K=0$ and $K^*P_0=0$.
+
+With $[\nabla_\mu,\nabla_\nu]V^\rho=R^\rho{}_{\sigma\mu\nu}V^\sigma$, the de
+Donder ghost block is
+\begin{equation}
+ (P_{\mathrm{gh}}c)_\mu=\bar\Box c_\mu+\bar R_\mu{}^\nu c_\nu
+ =\left(\bar\Box-\frac{3}{L^2}\right)c_\mu.
+ \label{eq:ghostP}
+\end{equation}
+At the principal-symbol level, $F(k)K(k)c=k^2c$.  This identity checks gauge fixing
+of pure-gauge directions; it is not a derivation of the complete lower-order graviton
+Hessian.
+
+\subsection{Free cocycles and their limited meaning}
+
+Because the background Weyl tensor and scalar vanish,
+\begin{equation}
+ s_0C^{(1)}[h]=0,
+ \qquad s_0\phi=0.
+\end{equation}
+Indeed, the gauge change of a linearized natural tensor is the Lie derivative of its
+background value.  Compactly smeared linearized Weyl and scalar observables therefore
+give free ghost-number-zero cocycles.  They do not classify all cohomology classes.
+Nor do they make the point fields $h_{\mu\nu}(x)$ or $\phi(x)$ nonlinear gravitational
+observables.  A nonlinear relational dressing is a later, absent construction.
+
+\section{The full nonminimal Green matrix}
+
+\subsection{Source variables and convention map}
+
+The normally hyperbolic source formulation of the linearized Einstein--Klein--Gordon
+system in \cite{Hack2014} is particularly convenient.  Let
+$\Theta=(\theta,\zeta)$ denote the trace-reversed source variables and define
+\begin{equation}
+ \cA(h,\phi)=\left(\frac{\kappa}{4}
+ \left(h_{\mu\nu}-\frac12\gbar_{\mu\nu}h\right),\frac{\kappa}{2}\phi\right).
+ \label{eq:Amap}
+\end{equation}
+Write $\bar K$ for the source gauge generator and $D=\bar K^\dagger$.  On the
+zero-scalar Einstein background set
+\begin{equation}
+ R=D\bar K=-\frac12(\bar\Box+\mathrm{Ric}),
+ \qquad Q=2R,
+ \qquad \widetilde P=\bar P+2\bar K D.
+ \label{eq:sourceops}
+\end{equation}
+Both $\widetilde P$ and $R$ are normally hyperbolic up to the nonzero scalar factor in
+$R$.  Let $E_\pm$ and $C_\pm$ be their retarded/advanced Green operators, with the
+sign convention $\supp G_\pm f\subset J^\pm(\supp f)$.
+
+The source and local benchmark quadratic actions obey
+\begin{equation}
+ P_{0,\mathrm{b}}=-\frac{4}{\kappa^2}\cA^\dagger\bar P\cA.
+ \label{eq:signmap}
+\end{equation}
+The minus sign is forced by the source action convention and reconciles the scalar
+equation $\bar\Box-m^2$ with the source block $-\bar\Box+m^2$.
+
+\subsection{Euler matrix}
+
+In field and Euler-row order $(H,c,\cbar,b)$, with $H=(h,\phi)$, the gauge-fixed free
+operator is
+\begin{equation}
+ P_{\mathrm{nm},\lambda}^{\mathrm{b}}=
+ \begin{pmatrix}
+ P_0&0&0&F^\dagger\\
+ 0&0&M^\dagger&0\\
+ 0&-M&0&0\\
+ F&0&0&\lambda I
+ \end{pmatrix},
+ \qquad M=FK=\bar\Box+\mathrm{Ric}.
+ \label{eq:PnmLB}
+\end{equation}
+In grouped source variables $(\Theta,\beta;\eta,\bar\eta)$ the even and odd blocks are
+\begin{equation}
+ B_\lambda=
+ \begin{pmatrix}-\bar P&\bar K\\D&\lambda I\end{pmatrix},
+ \qquad
+ O=\begin{pmatrix}0&-R^\dagger\\R&0\end{pmatrix}.
+ \label{eq:sourceblocks}
+\end{equation}
+The full matrix is graded formally self-adjoint.  Antifields generate the BV
+differential but are not additional propagating rows of this field Hessian.
+
+To define a supported square, let $C_{+,c}$ be the retarded map on compact sources and
+$C_{+,pc}$ its canonical extension to past-compact sections; similarly use
+$C_{-,c}$ and $C_{-,fc}$.  Put
+\begin{equation}
+ C_+^2=C_{+,pc}C_{+,c},
+ \qquad C_-^2=C_{-,fc}C_{-,c}.
+ \label{eq:C2}
+\end{equation}
+Then $RC_\pm^2=C_\pm$ and $C_\pm^2R=C_\pm$ on compact sections, and the causal
+support orientation is preserved \cite{Baer2015}.
+
+\begin{theorem}[Full Green matrix for every real $\lambda$; derived]
+The even Green operators are
+\begin{equation}
+ G_\pm^{(B_\lambda)}=
+ \begin{pmatrix}
+ -E_\pm+\dfrac{1-2\lambda}{2}\bar K C_\pm^2D&\bar K C_\pm\\[2mm]
+ C_\pm D&0
+ \end{pmatrix},
+ \label{eq:evenGreen}
+\end{equation}
+and the odd Green operators are
+\begin{equation}
+ G_\pm^{(O)}=
+ \begin{pmatrix}0&C_\pm\\-C_\pm&0\end{pmatrix}.
+ \label{eq:oddGreen}
+\end{equation}
+Together they are two-sided advanced/retarded Green operators for the source matrix.
+No division by $\lambda$ occurs, so the statement includes $\lambda=0$.
+\end{theorem}
+
+\begin{proof}
+The gauge identities imply
+\begin{equation}
+ \widetilde P\bar K=2\bar K R,
+ \qquad D\widetilde P=2RD.
+\end{equation}
+Uniqueness of supported Green solutions therefore gives
+\begin{equation}
+ E_\pm\bar K=\frac12\bar K C_\pm,
+ \qquad DE_\pm=\frac12C_\pm D,
+ \qquad
+ \bar P E_\pm=E_\pm\bar P=1-\bar K C_\pm D.
+ \label{eq:intertwine}
+\end{equation}
+To solve $B_\lambda(\Theta,\beta)=(f,g)$, apply $D$ to the first row.  One obtains
+$R\beta=Df$, hence $\beta=C_\pm Df$.  The second row gives
+$D\Theta=g-\lambda\beta$, and substitution yields
+\begin{equation}
+ \widetilde P\Theta=-f+2\bar K g+(1-2\lambda)\bar K\beta.
+\end{equation}
+Applying $E_\pm$ and \cref{eq:intertwine} produces \cref{eq:evenGreen}.  Direct
+left and right multiplication uses $RC_\pm^2=C_\pm=C_\pm^2R$; the residual
+off-diagonal coefficient is
+$-\tfrac12+\tfrac{1-2\lambda}{2}+\lambda=0$.
+Locality of $D,\bar K$ and transitivity of causal futures/pasts prove the support
+estimate.  Equation \cref{eq:oddGreen} is the direct inverse of the off-diagonal
+normally hyperbolic block.
+\end{proof}
+
+Let
+\begin{equation}
+ J_{\mathrm{nm}}=\operatorname{diag}
+ \left(\cA,\kappa,\frac{\kappa}{2},-\frac{\kappa}{2}\right).
+\end{equation}
+The local benchmark Green maps are
+\begin{equation}
+ G_\pm^{(P_{\mathrm{nm},\lambda}^{\mathrm{b}})}
+ =\frac{\kappa^2}{4}J_{\mathrm{nm}}^{-1}
+ G_\pm^{(P_{\mathrm{nm},\lambda}^{H})}(J_{\mathrm{nm}}^\dagger)^{-1}.
+ \label{eq:LBGreenpull}
+\end{equation}
+At $\lambda=1/2$ the $C_\pm^2$ term vanishes.  For $\lambda\neq0$ one may eliminate
+$b$ and obtain the equation operator
+\begin{equation}
+ \bar P_\lambda=\bar P+\lambda^{-1}\bar K D,
+ \qquad
+ G_\pm^{(\bar P_\lambda)}=E_\pm+\frac{2\lambda-1}{2}\bar K C_\pm^2D.
+\end{equation}
+At $\lambda=0$ the Schur complement does not exist, although the full block Green
+operator remains well defined.
+
+\begin{remark}[Source boundary]
+Normal hyperbolicity of $\widetilde P$ and $R$, together with their source convention,
+is specialized from \cite{Hack2014}.  The four-by-four nonminimal matrix,
+\cref{eq:evenGreen,eq:oddGreen}, its $\lambda=0$ treatment, and the exact local benchmark pullback
+are the derived composition.  The result proves propagation only.  It does not produce
+a state or a physical representation.
+\end{remark}
+
+\section{Reduced phase space and the Fuchsian Hadamard host}
+
+\subsection{Gauge-invariant test quotient}
+
+Use the source pairing
+\begin{equation}
+ \langle(\theta,\zeta),(\theta',\zeta')\rangle_F
+ =\int_{\U}\left(4\theta^{\mu\nu}\theta'_{\mu\nu}
+ -2\operatorname{tr}\theta\operatorname{tr}\theta'+\zeta\zeta'\right)
+ \dd\mu_{\gbar}.
+ \label{eq:sourcepair}
+\end{equation}
+The compact-test quotient is
+\begin{equation}
+ \cE^H_{\U}=\frac{\Ker(D:\Gamma_c(\cV)\to\Gamma_c(T\U))}
+ {\bar P\Gamma_c(\cV)},
+ \label{eq:testquotient}
+\end{equation}
+where $\cV=S^2T^*\U\oplus\mathbb R$.  At $\bar\phi=0$ it splits algebraically into
+graviton and scalar summands.  If $G=G_+-G_-$ is the reduced causal propagator,
+\begin{equation}
+ \sigma_H([f],[g])=\langle f,Gg\rangle_F
+ \label{eq:sigmaH}
+\end{equation}
+is a well-defined presymplectic form.  The local benchmark form is
+\begin{equation}
+ \sigma_{\mathrm{b}}(f,g)=\frac{\kappa^2}{4}
+ \sigma_H(J^\vee f,J^\vee g),
+ \qquad J^\vee=(J^*)^{-1}.
+ \label{eq:sigmaLB}
+\end{equation}
+Equivalently, the identified commutators use
+$\hbar_H=(\kappa^2/4)\hbarLB$.
+
+The quotient defines both a polynomial CCR algebra and, separately, the Weyl
+$C^*$-algebra
+\begin{equation}
+ W(f)W(g)=e^{-\frac{i}{2}\hbarLB\sigma_{\mathrm{b}}(f,g)}W(f+g),
+ \qquad W(f)^*=W(-f).
+ \label{eq:weyl}
+\end{equation}
+Degeneracy of $\sigma$ produces central Weyl elements but does not obstruct the
+universal construction.  Causal support yields Einstein commutativity for disjoint
+compact representatives.  Standard Green-hyperbolic deformation gives a
+fixed-ambient time-slice statement.  These are source-specialized consequences of
+\cite{Hack2014,HackSchenkel2013,FewsterHunt2013}, not new general CCR theorems.
+
+\subsection{A compact-Cauchy locally-AdS host}
+
+The positive state is constructed on a refined domain.  A Fuchsian AdS region has
+the form
+\begin{equation}
+ E_v\simeq(-\pi/2,\pi/2)\times\mathbb H^3,
+ \qquad
+ g_E=-L^2\dd\tau^2+\cos^2\tau\,h_{\mathbb H^3,L}.
+ \label{eq:fuchsian}
+\end{equation}
+Choose $\U$ with compact closure $K\Subset E_v$.  Let $\Gamma_0$ be a torsion-free
+cocompact lattice in $SO_0(1,3)$.  Only finitely many nonidentity translates
+$\gamma K$ can be causally related to $K$.  Residual finiteness permits passage to a
+finite-index normal subgroup $\Gamma$ excluding this finite bad set.  The quotient
+\begin{equation}
+ \M=\Gamma\backslash E_v
+ \label{eq:host}
+\end{equation}
+is a four-dimensional globally hyperbolic Einstein spacetime with compact Cauchy
+surface $\Gamma\backslash\mathbb H^3$, and the quotient map restricts to a causally
+convex isometric embedding $i:\U\hookrightarrow\M$.  The geometric input belongs to
+the Fuchsian AdS theory surveyed in \cite{Barbot2013}; the finite bad-set refinement is
+the derived host-selection argument.
+
+\subsection{Reduced positive Hadamard state}
+
+G\'erard's theorem applies to $\M$ because it is four-dimensional, globally
+hyperbolic, Einstein, and has compact Cauchy surfaces \cite{Gerard2023}.  Let
+$\Lambda_G^\pm$ be the resulting positive gauge-invariant graviton Hadamard
+covariances.  The source convention uses a constant trace-reversal bridge
+$T_g=2I$.  Its physical pairing is a factor-two homothety, so define
+\begin{equation}
+ \Lambda_{H,g}^\pm(q,r)=\frac12\Lambda_G^\pm(T_gq,T_gr).
+ \label{eq:factorhalf}
+\end{equation}
+Choose scalar Klein--Gordon Hadamard covariances on the same host, whose existence is
+standard \cite{GerardWrochna2014,Radzikowski1996}.  Since the free blocks decouple at
+$\bar\phi=0$, take the direct sum and pull it back by zero extension:
+\begin{equation}
+ \Lambda_{H,\U}^\pm(q,r)=\Lambda_{H,\M}^\pm(i_*q,i_*r).
+ \label{eq:pullstate}
+\end{equation}
+Finally set
+\begin{equation}
+ \Lambda_{\mathrm{b},\U}^\pm(f,g)=
+ \hbar_H\Lambda_{H,\U}^\pm(J^\vee f,J^\vee g).
+ \label{eq:LBcov}
+\end{equation}
+
+\begin{assumption}[Imported physical Hadamard state]
+Use the positive gauge-invariant graviton state on the compact-Cauchy Einstein
+host and a scalar Hadamard state, with the normalization
+\begin{equation}
+\Lambda_{\mathrm{b},\U}^+-\Lambda_{\mathrm{b},\U}^-
+=i\hbarLB\sigma_{\mathrm{b}}.
+\label{eq:reducedcomm}
+\end{equation}
+\end{assumption}
+Existence in the present decoupled Einstein-host setting follows from the cited
+source results and the causal restriction map. A separate companion construction
+proves the coupled canonical Einstein--scalar physical Hadamard theorem for a
+finite fixed positive scalar target on compact Cauchy surfaces, under a vanishing
+potential-gradient condition along the on-shell background image
+\cite{CanonicalPhysical2026}. That theorem is cited rather than re-proved here.
+The formulas above record the normalization required to use its compatible
+reduced state in this benchmark; no claim of a second new state-existence theorem
+is made. In particular, a physical-state theorem alone does not provide the
+nonminimal Ward pair, same-complex dagger or interacting anomaly calculation.
+
+Restriction need not preserve purity or faithfulness on central Weyl elements.  A
+full nonminimal BRST covariance requires more than this theorem; that construction is
+the subject of the next section.
+
+\section{Conditional Ward completion and nonminimal transport}
+The following composition uses the declared compact-host Fredholm and Hadamard
+inputs. Its new content is the explicit left-inverse/Ward-repair and convention
+transport algebra. The general microlocal and compact-test quotient machinery is
+imported from the cited results, including the companion physical-state theorem;
+finite coefficient checks are not proofs of those analytic inputs.
+
+
+\subsection{Cauchy complex and a tame left inverse}
+
+Let $\Sigma_\Gamma$ be a compact Cauchy surface of $\M$.  In G\'erard's adapted
+Sobolev scale write
+\begin{equation}
+ \mathsf H_j^s=H^s(\Sigma_\Gamma;V_j)\oplus
+ H^{s-1}(\Sigma_\Gamma;V_j),
+\end{equation}
+and denote the Cauchy gauge map by
+\begin{equation}
+ k=K_\Sigma:\mathsf H_1^{s+1}\longrightarrow\mathsf H_2^s.
+\end{equation}
+G\'erard's gauge-fixing map gives an operator $R_\Sigma$ such that
+$A=R_\Sigma k$ is Fredholm of index zero and has an elliptic first-order diagonal
+part plus a smoothing remainder \cite{Gerard2023}.  Choose a pseudodifferential
+generalized inverse $G$ with
+\begin{equation}
+ GA=1-\pi_F,
+ \qquad F=\Ker A.
+\end{equation}
+
+For the chosen Fuchsian quotient, $\Ker k=0$.  A global Killing one-form lifts to a
+$\Gamma$-invariant element of $\mathfrak{so}(2,3)$.  Borel density reduces invariance
+to the centralizer of the embedded $\mathfrak{so}(1,3)$, and that centralizer is zero.
+Let $E=kF$, let $k_F:F\to E$ be the resulting isomorphism, and choose a smoothing
+projection $\pi_E$ onto $E$.  Define
+\begin{equation}
+ L=GR_\Sigma+k_F^{-1}\pi_E(1-kGR_\Sigma).
+ \label{eq:leftinverse}
+\end{equation}
+The inverse $k_F^{-1}$ is applied only after $\pi_E$.
+
+\begin{proposition}[Fredholm left inverse; derived]
+The operator \cref{eq:leftinverse} obeys
+\begin{equation}
+ Lk=1,
+ \qquad Q_B=kL,
+ \qquad Q_B^2=Q_B,
+ \qquad \Ran Q_B=\Ran k=:B.
+ \label{eq:projectB}
+\end{equation}
+It is of order $-1$ in the adapted scale up to a finite-rank smoothing term.  Hence
+$B$ is closed and complemented at every Sobolev order, with a compatible smooth
+Fr\'echet splitting.
+\end{proposition}
+
+\begin{proof}
+For $x\in\mathsf H_1^{s+1}$,
+$GR_\Sigma kx=(1-\pi_F)x$, and
+$(1-kGR_\Sigma)kx=k\pi_Fx\in E$.  Substitution into
+\cref{eq:leftinverse} gives $Lkx=x$.  The remaining identities follow immediately.
+Pseudodifferential order and finite-rank smoothness follow from the selected parametrix
+and projections.  The estimates are inherited uniformly through the compatible
+Sobolev scale.
+\end{proof}
+
+Let $q_j$ denote the nondegenerate Cauchy charges, interpreted as dualities
+$\mathsf H_j^s\times\mathsf H_j^{1-s}\to\mathbb C$.  Put
+\begin{equation}
+ C=\Ker k^\dagger,
+ \qquad B=\Ran k\subset C.
+\end{equation}
+The charge adjoint of $Lk=1$ gives $k^\dagger L^\dagger=1$.  Consequently
+\begin{equation}
+ Q_C=1-L^\dagger k^\dagger
+\end{equation}
+projects onto $C$, and its dual-scale adjoint has kernel $B$.  Therefore
+\begin{equation}
+ C^{\perp q_2}=B.
+ \label{eq:coisotropic}
+\end{equation}
+The use of dual Sobolev orders is essential; no same-order adjoint is silently assumed.
+
+\subsection{Retaining the selected physical state}
+
+G\'erard's regular and singular constructions provide a quotient selector $p$ on $C$
+such that
+\begin{equation}
+ pc=c\mod B,
+ \qquad pk=0,
+ \qquad C=B\oplus P,
+ \qquad P=\Ran(p|_C).
+ \label{eq:pselector}
+\end{equation}
+In the singular branch $p$ contains a finite-rank correction and therefore retains,
+rather than discards, the finite-dimensional singular physical sector.
+
+Let $\mu_2^\pm$ and $\mu_1^\pm$ be the unmodified tensor and vector Hadamard
+pseudocovariances.  The desired reduced tensor state and the restriction of $\mu_2$
+to $C/B$ have the same causal difference.  Their common difference $d_C$ is smoothing.
+Extend it to all tensor Cauchy data by
+\begin{equation}
+ a_d(x,y)=d_C(Q_Cx,Q_Cy).
+ \label{eq:dextension}
+\end{equation}
+Adding the evolved bisolution associated with $a_d$ equally to the two tensor signs
+preserves the causal difference and Hadamard wavefront set while making the restriction
+to $C\times C$ exactly the selected reduced state.
+
+The tensor/vector Ward relation may initially hold only modulo a common smoothing
+defect
+\begin{equation}
+ S=k\widehat\lambda_1^\pm-\widehat\lambda_2^{\prime\pm}k.
+\end{equation}
+For every $c\in C$ and $x$ in the vector Cauchy space, $q_2(c,Sx)=0$.  By
+\cref{eq:coisotropic}, $Sx\in B$.  Define
+\begin{equation}
+ F=SL,
+ \qquad A_2=F+F^\dagger,
+ \qquad A_1=0.
+ \label{eq:wardcorrection}
+\end{equation}
+Because $B$ is isotropic, $F^\dagger b=0$ for $b\in B$, and
+\begin{equation}
+ A_2k=S,
+ \qquad q_2(c,A_2d)=0\quad(c,d\in C).
+\end{equation}
+Thus the corrected tensor covariances
+\begin{equation}
+ \widehat\lambda_2^\pm:=\widehat\lambda_2^{\prime\pm}+A_2
+ \qquad\text{satisfy}\qquad
+ k\widehat\lambda_1^\pm-\widehat\lambda_2^\pm k=0.
+\end{equation}
+The common smooth correction is invisible to the physical state and repairs the Ward
+identity exactly.  This direct formula avoids an unproved global Witt normal
+form.  It is a project-level composition of the Fredholm data in \cite{Gerard2023}
+and the abstract subsidiary/BRST mechanism in
+\cite{GerardWrochna2017,WrochnaZahn2015}.
+
+\subsection{Pairing-preserving transport to the five-field matrix}
+
+In grouped orders
+\begin{equation}
+ \text{WZ}: (u,b_W,c,\cbar),
+ \qquad
+ \text{source}: (\Theta,\beta,\eta,\bar\eta),
+\end{equation}
+define configuration and Euler-row maps
+\begin{equation}
+ C_0=\operatorname{diag}(T_g,-1,1,-1),
+ \qquad
+ R_0=\operatorname{diag}(-\tfrac12,\tfrac12,\tfrac12,\tfrac12).
+ \label{eq:CRmaps}
+\end{equation}
+With the declared graded forms $B_{\mathrm{WZ}}$ and $B_Q$, one has
+\begin{equation}
+ P_Q=R_0L_{\mathrm{WZ}}C_0,
+ \qquad
+ B_QR_0=\frac12C_0^*B_{\mathrm{WZ}}.
+ \label{eq:pairduality}
+\end{equation}
+The second identity is the missing pairing statement: $R_0$ is not simply
+$C_0^*$.  If $\lambda_{\mathrm{WZ}}^\pm$ is the exact host tensor/vector BRST pair,
+set
+\begin{equation}
+ \lambda_Q^\pm=C_0^{-1}\lambda_{\mathrm{WZ}}^\pm R_0^{-1}.
+ \label{eq:covtransport}
+\end{equation}
+Then
+\begin{equation}
+ P_Q\lambda_Q^\pm=\lambda_Q^\pm P_Q=0,
+ \qquad
+ \lambda_Q^+-(-1)^{\gh}\lambda_Q^-=iG_Q,
+ \label{eq:q2ids}
+\end{equation}
+and the associated forms are Hermitian and positive on the transported physical
+kernel.  The symbol $(-1)^{\gh}$ denotes the entrywise Schur sign.
+
+The configuration codifferential and its pairing adjoint are
+\begin{equation}
+ \gamma_Q(\Theta,\beta,\eta,\bar\eta)
+ =(\bar K\eta,0,0,\beta),
+ \qquad
+ \gamma_Q^\star(\Theta,\beta,\eta,\bar\eta)
+ =(0,\bar\eta,-D\Theta,0).
+ \label{eq:gammaQ}
+\end{equation}
+Their exact Ward compatibility follows from the repaired tensor/vector pair.  Add the
+scalar covariance as a BRST-inert spectator, restrict to $\U$, permute to
+$(\Theta,\eta,\bar\eta,\beta)$, and transport through $J_{\mathrm{nm}}$.
+
+At unit $\hbarLB$, the local benchmark operator pair is
+\begin{equation}
+ \lambda_{\mathrm{b},1}^\pm
+ =c_0J_{\mathrm{nm}}^{-1}\lambda_H^\pm J_{\mathrm{nm}}^\vee,
+ \qquad c_0=\frac{\kappa^2}{4},
+ \qquad J_{\mathrm{nm}}^\vee=(J_{\mathrm{nm}}^\dagger)^{-1}.
+ \label{eq:unittransport}
+\end{equation}
+Equivalently, the dimensionful form is
+\begin{equation}
+ \Lambda_{\mathrm{b}}^\pm(f,g)=
+ \hbar_H\Lambda_{H,1}^\pm(J_{\mathrm{nm}}^\vee f,J_{\mathrm{nm}}^\vee g),
+ \qquad \hbar_H=c_0\hbarLB.
+ \label{eq:dimtransport}
+\end{equation}
+One uses either \cref{eq:unittransport} followed by $\hbarLB$ or
+\cref{eq:dimtransport}; applying both $c_0$ factors would double count the action
+normalization.
+
+\begin{theorem}[Full free-local BRST Hadamard system]
+At $\lambda=1/2$, the host construction and
+\cref{eq:CRmaps,eq:pairduality,eq:covtransport,eq:unittransport} define a
+Hadamard pair for the complete field multiplet $(h,\phi,c,\cbar,b)$ on $\U$.  It has
+the exact five-field Green-matrix causal difference, obeys both field equations and the
+free BRST Ward identity, and is positive semidefinite on the ghost-number-zero
+physical kernel.
+\end{theorem}
+
+This theorem contains no antifield two-point function.  It also does not yet say that
+the physical form has no extra null class.  That cohomological question is settled in
+\cref{sec:physicalreduction}.
+
+\section{Equicausal free field algebra and time slice}
+
+\subsection{Why the unrestricted microcausal class is not used}
+
+For $n\geq1$, let
+\begin{equation}
+ \Xi_n=(T^*\U^n\setminus0)\setminus
+ (\overline V_+^n\cup\overline V_-^n).
+\end{equation}
+The usual microcausal condition asks
+$\WF(F^{(n)}(\Phi))\subset\Xi_n$ at each configuration.  This pointwise condition is
+insufficient: a Peierls bracket of regular functionals can fail to be smooth, so the
+unrestricted class is not closed \cite{HawkinsRejznerVisser2023}.
+
+We instead use the graded equicausal space $\cF_{\mathrm{ec}}^{\mathrm{gr}}$.  Its
+elements have finite algebraic ghost and antighost degrees, are Bastiani smooth in
+$(h,\phi,b)$, have compactly supported mixed derivatives, obey the same wavefront
+exclusion, and satisfy the equicontinuity condition of
+\cite{HawkinsRejznerVisser2023} uniformly on compact subsets of the even
+configuration space.  At fixed contraction order, the five internal species produce
+only a finite sum of ordinary bundle-component contractions.  Koszul permutations
+alter signs but not wavefront sets.  The source estimates therefore extend
+componentwise to the finite graded multiplet.  This is a source-specialized analytic
+step, not a claim about a completed exterior topology.
+
+\subsection{Contraction kernel and star product}
+
+Let $W^+$ and $W^-$ be the form-level members of the full Hadamard pair, including the
+Schur sign in the minus member.  To avoid silently assuming a crossing identity not
+contained in the state theorem, define
+\begin{equation}
+ W=\frac12\left(W^++\tau_{\mathrm{gr}}W^-\right),
+ \label{eq:Wsym}
+\end{equation}
+where $\tau_{\mathrm{gr}}$ exchanges arguments and inserts the graded species sign.
+Ordinary Hermitian conjugation is complex conjugation followed by ungraded argument
+exchange; reversal of the exterior coefficient product already supplies the odd
+signs.  Then
+\begin{equation}
+ W^\dagger=W,
+ \qquad W-\tau_{\mathrm{gr}}W=iE_G.
+ \label{eq:Wproperties}
+\end{equation}
+The symmetrized kernel is a Hadamard contraction with the correct commutator.  It is
+not asserted to be the selected positive Hadamard covariance.
+
+For homogeneous equicausal functionals define
+\begin{equation}
+ F\star_WG
+ =m_{\mathrm{gr}}\exp(\hbarLB\Gamma_W)(F\otimes G)
+ =\sum_{n\geq0}\frac{\hbarLB^n}{n!}
+ \left\langle F_l^{(n)},W^{\otimes n}G_r^{(n)}\right\rangle_{\mathrm{gr}}.
+ \label{eq:star}
+\end{equation}
+Every coefficient is equicausal, and the product is associative
+\cite{HawkinsRejznerVisser2023}.  Equations \cref{eq:Wproperties,eq:star} give
+\begin{equation}
+ (F\star_WG)^\dagger=G^\dagger\star_WF^\dagger,
+ \qquad
+ [F,G]_{\star,\mathrm{gr}}=i\hbarLB\{F,G\}_0+O(\hbarLB^2).
+ \label{eq:starprops}
+\end{equation}
+For linear functionals the commutator formula is exact.
+
+\subsection{Exact Ward identity and BRST descent}
+
+Let $\Pi$ act as $+1$ on even and $-1$ on odd species.  In grouped source order, the
+Hadamard covariances satisfy
+\begin{equation}
+ \gamma_Q\lambda_Q^+=\lambda_Q^+\gamma_Q^\star=:M,
+ \qquad \Pi M=-M\Pi.
+\end{equation}
+Therefore
+\begin{equation}
+ \Pi\gamma_Q\lambda_Q^++\lambda_Q^+\gamma_Q^\star\Pi=0.
+ \label{eq:ward2arg}
+\end{equation}
+The signed minus member and the symmetrization \cref{eq:Wsym} obey the same
+two-argument identity.  This is precisely the covariance condition needed for the
+unconjugated free BRST differential to be a star derivation
+\cite{Rejzner2013}.
+
+Let $s_0$ act as in \cref{eq:s0}.  It preserves the finite graded equicausal domain and
+\begin{equation}
+ s_0(F\star_WG)=(s_0F)\star_WG+(-1)^{|F|}F\star_W(s_0G).
+ \label{eq:brstderivation}
+\end{equation}
+Let $\delta_P$ be the Koszul differential given by contraction with the linear equation
+section $P_{\mathrm{nm},1/2}^{\mathrm{b}}\Phi$.  The exact covariance relation implies
+\begin{equation}
+ [s_0,\delta_P]_{\mathrm{gr}}=0.
+\end{equation}
+The on-shell algebra is the degree-zero Koszul homology
+\begin{equation}
+ \cA_{\mathrm{ec,on}}(\U)=
+ H_0(\mathcal X_{\mathrm{ec}}^{\mathrm{gr},*}[[\hbarLB]],\delta_P),
+ \label{eq:onshellalg}
+\end{equation}
+not merely a quotient by the algebraic ideal generated by constant linear equations.
+The full Koszul image is a two-sided star ideal.  The free physical product algebra is
+\begin{equation}
+ \cA_{\mathrm{phys,free}}=
+ H^0(\cA_{\mathrm{ec,on}}(\U),s_0).
+ \label{eq:physicalalg}
+\end{equation}
+
+\subsection{Einstein causality and fixed-ambient time slice}
+
+If homogeneous $F,G$ have causally disjoint functional supports, every cross
+contraction with the causal kernel vanishes.  Equation \cref{eq:Wproperties} then
+implies, term by term,
+\begin{equation}
+ F\star_WG=(-1)^{|F||G|}G\star_WF.
+ \label{eq:einsteincausality}
+\end{equation}
+
+Let $N\subset\U$ be open and contain a Cauchy surface of $\U$.  The Green-hyperbolic time-slice
+projection and its chain homotopy preserve equicausality
+\cite{HawkinsRejznerVisser2023}.  Inclusion of the fixed-ambient support subcomplex
+inside $N$ is therefore a quasi-isomorphism and induces
+\begin{equation}
+ \cA_{\mathrm{ec,on}}(N)\simeq\cA_{\mathrm{ec,on}}(\U),
+ \qquad
+ H^0(\cA_{\mathrm{ec,on}}(N),s_0)
+ \simeq H^0(\cA_{\mathrm{ec,on}}(\U),s_0)
+ \label{eq:timeslice}
+\end{equation}
+as star and product algebras, respectively.  The first is compatible with the ordinary
+dagger before BRST cohomology.  The second is deliberately stated only as a product
+isomorphism; the dagger obstruction below prevents a stronger claim in the frozen
+convention.
+
+Renormalized causal factorization is more restricted.  Epstein--Glaser maps exist for
+compactly supported local, fiberwise analytic inputs and their finite multilocal
+products \cite{BrunettiFredenhagen2000,BrunettiFredenhagenRejzner2016,
+GwilliamRejzner2022}.  For causally ordered supports they obey
+\begin{equation}
+ T_n(F_1,\ldots,F_n)=T_k(F_1,\ldots,F_k)\star_W
+ T_{n-k}(F_{k+1},\ldots,F_n).
+ \label{eq:causalfactor}
+\end{equation}
+This source-specialized local/multilocal row does not extend $T_n$ to every equicausal
+functional.  Nor does it by itself descend through the equation ideal or BRST
+cohomology; collision terms and local anomalies remain.
+
+\section{Physical reduction, local injectivity, and the dagger obstruction}
+\label{sec:physicalreduction}
+
+\subsection{Nonminimal contraction}
+
+Before gauge fixing, the nonminimal jets obey
+\begin{equation}
+ s_0\cbar=b,
+ \quad s_0b=0,
+ \quad s_0b^\ddagger=-\cbar^\ddagger,
+ \quad s_0\cbar^\ddagger=0.
+\end{equation}
+Define the odd right derivation $r$ by
+\begin{equation}
+ r(D_Ib)=D_I\cbar,
+ \qquad r(D_I\cbar^\ddagger)=-D_Ib^\ddagger,
+ \qquad r(D_I\cbar)=r(D_Ib^\ddagger)=0.
+\end{equation}
+If $N_{\mathrm{nm}}$ counts nonminimal jets, then
+\begin{equation}
+ s_0r+rs_0=N_{\mathrm{nm}}.
+\end{equation}
+Division by positive homogeneous degree gives a support-preserving contracting homotopy.
+For finite-jet fiberwise analytic germs the equivalent scaling integral is
+\begin{equation}
+ H_{\mathrm{nm}}=r\int_0^1\frac{\dd t}{t}
+ (\sigma_t-\iota\pi),
+ \qquad
+ s_0H_{\mathrm{nm}}+H_{\mathrm{nm}}s_0=1-\iota\pi.
+ \label{eq:nmhomotopy}
+\end{equation}
+Conjugating \cref{eq:nmhomotopy} by the canonical gauge-fixing transformation gives
+the corresponding gauge-fixed contraction.  The transported minimal projection is
+not naive deletion of $\cbar,b$ and their antifields.
+
+At ghost number zero, compact linear BV cohomology is consequently the reduced
+test-space phase \cref{eq:testquotient}.  This exact local contraction is a project
+specialization of the standard nonminimal-doublet mechanism
+\cite{BarnichBrandtHenneaux2000}.
+
+\subsection{No extra null vectors on the host}
+
+The physical gravitational Cauchy space is
+\begin{equation}
+ V_g=C/B,
+ \qquad q_g([c],[d])=q_2(c,d).
+\end{equation}
+Equation \cref{eq:coisotropic} makes $q_g$ weakly nondegenerate.  Add the ordinary
+nondegenerate scalar phase space and write $V_{\M}=V_g\oplus V_\phi$.
+
+Let $\Lambda_{\M}^\pm$ be the induced positive physical two-point forms.  Their sum
+\begin{equation}
+ N_{\M}=\Lambda_{\M}^++\Lambda_{\M}^-
+\end{equation}
+is positive definite.  If $N_{\M}(v,v)=0$, positivity and Cauchy--Schwarz make both
+$\Lambda_{\M}^\pm(w,v)$ vanish for all $w$.  Their causal difference then gives
+$q_{\M}(w,v)=0$ for all $w$, and nondegeneracy implies $v=0$.  Wrochna--Zahn's
+criterion therefore yields a ghost-number-zero pre-Hilbert space with no BRST-closed,
+nonexact zero-norm vector on the host \cite{WrochnaZahn2015}.
+
+\subsection{Injectivity of local zero extension}
+
+The local state is a pullback along the physical map
+\begin{equation}
+ I_{\mathrm{phys}}:V_{\U}\longrightarrow V_{\M},
+ \qquad [f]\longmapsto[i_*f].
+ \label{eq:Iphys}
+\end{equation}
+Its covariance radical is exactly $\Ker I_{\mathrm{phys}}$.  Thus host positivity does
+not by itself prove local faithfulness.
+
+Choose $\U$ to be a standard contractible double cone, diffeomorphic to $\mathbb R^4$.
+For the Calabi complex on a constant-curvature spacetime, causally restricted
+cohomology gives
+\begin{equation}
+ H^1_{\mathrm{Cal},\mathrm{sc}}(\U)
+ \simeq H^2_{\mathrm{Cal},c}(\U)=0
+ \label{eq:calabivanishing}
+\end{equation}
+under the stated topology \cite{Khavkine2014}.  Hence every spacelike-compact
+pure-gauge metric perturbation admits a spacelike-compact gauge parameter on $\U$.
+
+Suppose $[f]\in V_{\U}$ maps to zero.  The host test/solution quotient theorem
+\cite{HackSchenkel2013} gives a spacelike-compact $\epsilon_{\M}$ with
+\begin{equation}
+ G_{\M} i_*f=K_{\M}\epsilon_{\M}.
+\end{equation}
+Restriction of Green operators to a causally compatible region
+\cite{Baer2015} gives
+\begin{equation}
+ G_{\U} f=K_{\U}(i^*\epsilon_{\M}).
+\end{equation}
+The left side is spacelike compact even if $i^*\epsilon_{\M}$ need not be.  By
+\cref{eq:calabivanishing} it equals $K_{\U}\epsilon_{\U}$ for a spacelike-compact local
+parameter.  Injectivity of the local test/solution quotient then implies $[f]=0$.
+Therefore
+\begin{equation}
+ \Ker I_{\mathrm{phys}}=0.
+ \label{eq:Iinjective}
+\end{equation}
+
+\begin{theorem}[Local no-extra-null physical space]
+On the selected standard double cone $\U$, the ghost-number-zero free BRST physical
+form is positive definite at fixed $\hbarLB>0$.  A BRST-closed one-particle vector has
+zero norm if and only if it is BRST exact.
+\end{theorem}
+
+This conclusion is narrower than Peierls nondegeneracy.  A distinct adjoint Calabi
+parametrizability problem retains local Killing data, so the state-independent
+presymplectic radical and an independently functorial net are not promoted here.
+
+\subsection{The ordinary dagger does not descend}
+
+The ordinary dagger is valid on the off-shell and on-shell star algebra.  It fails on
+the same $s_0$ cohomology.  Define the adjoint differential on a homogeneous functional
+by
+\begin{equation}
+ s_\sharp F=(-1)^{|F|}\bigl(s_0(F^\dagger)\bigr)^\dagger.
+\end{equation}
+The minimal and nonminimal pieces satisfy
+\begin{equation}
+ s_\sharp=s_{\min}-s_{\mathrm{nm}},
+\end{equation}
+so dagger is an anti-isomorphism between the $s_0$ and $s_\sharp$ complexes, not an
+involution of the $s_0$ complex.
+
+For an explicit counterexample choose real linear smearings for which the on-shell
+classes $C=s_0H$ and $B=s_0\ell_{\cbar}$ are nonzero and satisfy
+$C\star B\neq0$.  Such choices exist in the nontrivial free ghost--auxiliary
+polynomial sector; this nonvanishing condition is essential and is not asserted for
+arbitrary smearings.  Abbreviate
+\begin{equation}
+ H=\ell_h,
+ \qquad C=s_0H,
+ \qquad B=s_0\ell_{\cbar}.
+\end{equation}
+The ghost-number-minus-one element $A=\ell_{\cbar}\star H$ has boundary
+\begin{equation}
+ F=s_0A=B\star H-\ell_{\cbar}\star C.
+\end{equation}
+Ordinary reversal gives $F^\dagger=H\star B-C\star\ell_{\cbar}$ and hence
+\begin{equation}
+ s_0(F^\dagger)=2C\star B\neq0.
+ \label{eq:daggercounter}
+\end{equation}
+Thus dagger sends an explicit boundary outside the cycle space.
+
+\begin{theorem}[Dagger-descent obstruction; derived]
+In the frozen nonminimal reality convention, the ordinary star-algebra dagger does not
+descend to $H^0(\cA_{\mathrm{ec,on}},s_0)$.
+\end{theorem}
+
+One may seek an adjoint-BRST double-kernel construction or transfer a dagger from a
+reduced physical algebra after nonminimal contraction.  Neither construction is
+provided here.  Accordingly the physical object in \cref{eq:physicalalg} is presently
+a product algebra, while the no-extra-null theorem is a one-particle/pre-Hilbert
+statement.
+
+\section{Matter deformation and the quantum stop line}
+
+\subsection{The exact \texorpdfstring{$h\phi\phi$}{h-phi-phi} vertex}
+
+Expanding the scalar action using
+\begin{equation}
+ g^{\mu\nu}=\gbar^{\mu\nu}-\kappa h^{\mu\nu}+O(\kappa^2),
+ \qquad
+ \dd\mu_g=(1+\tfrac\kappa2h)\dd\mu_{\gbar}+O(\kappa^2),
+\end{equation}
+gives
+\begin{equation}
+ S_m[\gbar+\kappa h,\phi]
+ =S_{\phi,0}+\kappa V_{h\phi\phi}+O(\kappa^2),
+\end{equation}
+where
+\begin{align}
+ V_{h\phi\phi}
+ &=\int_{\U}\left[
+ \frac12h^{\mu\nu}\bar\nabla_\mu\phi\bar\nabla_\nu\phi
+ -\frac14h\bigl((\bar\nabla\phi)^2+m^2\phi^2\bigr)
+ \right]\dd\mu_{\gbar}\notag\\
+ &=\frac12\int_{\U}h_{\mu\nu}T_0^{\mu\nu}[\phi]\dd\mu_{\gbar}.
+ \label{eq:hphiphi}
+\end{align}
+Direct differentiation yields the off-shell identity
+\begin{equation}
+ \bar\nabla^\mu T^0_{\mu\nu}=(P_\phi\phi)\bar\nabla_\nu\phi.
+ \label{eq:stressdiv}
+\end{equation}
+This is exactly the compatibility needed by the linearized Bianchi identity on the free
+scalar shell.
+
+\subsection{Scalar-antifield completion}
+
+The first nonlinear scalar transformation is $s_1\phi=\mathcal L_c\phi$.  Define
+\begin{equation}
+ A_\phi=\int_{\U}\phi^\ddagger c^\mu\bar\nabla_\mu\phi,
+ \qquad
+ S_{1,m}=V_{h\phi\phi}+A_\phi.
+ \label{eq:S1m}
+\end{equation}
+The antifield is density valued, so no second volume density appears.  With the frozen
+left/right derivative convention,
+\begin{equation}
+ \frac{\delta_lA_\phi}{\delta\phi^\ddagger}=+\mathcal L_c\phi,
+ \qquad
+ \frac{\delta_rA_\phi}{\delta\phi^\ddagger}=-\mathcal L_c\phi.
+\end{equation}
+Using \cref{eq:stressdiv} and compact support,
+\begin{equation}
+ (V_{h\phi\phi},S_{\mathrm{BV},0})
+ =-\int(P_\phi\phi)c^\nu\bar\nabla_\nu\phi\,\dd\mu_{\gbar},
+\end{equation}
+whereas
+\begin{equation}
+ (A_\phi,S_{\mathrm{BV},0})
+ =+\int(P_\phi\phi)c^\nu\bar\nabla_\nu\phi\,\dd\mu_{\gbar}.
+\end{equation}
+Therefore
+\begin{equation}
+ (S_{\mathrm{BV},0},S_{1,m})=0.
+ \label{eq:mattercocycle}
+\end{equation}
+
+\begin{theorem}[First matter BV subcocycle; derived]
+The $h\phi\phi$ vertex with coefficient and sign in \cref{eq:hphiphi}, together with
+the scalar-antifield term in \cref{eq:S1m}, is a closed first-order deformation of the
+free BV complex.
+\end{theorem}
+
+At $\bar\phi=0$ the free Hessian is block diagonal and the free BV differential
+preserves scalar field-content degree, so this is a separately closed matter summand.
+It does not audit the $hhh$, metric-antifield, ghost-antifield, or gauge-fixing/ghost
+summands of the full order-$\kappa$ action.  It also says nothing about
+$(S_{1,m},S_{1,m})$ at order $\kappa^2$.
+
+With a compact switching function $f$,
+\begin{equation}
+ (S_{1,m}(f),S_{\mathrm{BV},0})
+ =-\int(\bar\nabla_\mu f)T_0^{\mu\nu}c_\nu\,\dd\mu_{\gbar},
+\end{equation}
+which vanishes in an observation region contained in the plateau $f=1$.
+
+\subsection{One renormalized stress insertion}
+
+Hollands and Wald show that, in dimension greater than two, the time-ordered-product
+axioms can be supplemented so that the renormalized scalar stress tensor is conserved
+\cite{HollandsWald2005}.  Choose such a prescription and define the single factorized
+insertion
+\begin{equation}
+ V_R(f)=\frac12\int f h_{\mu\nu}T_R^{\mu\nu}\dd\mu_{\gbar}.
+ \label{eq:VR}
+\end{equation}
+The free graviton--scalar covariance is block diagonal, so this definition introduces
+no $h$--$\phi$ contraction.  The field-only free BRST differential obeys
+\begin{equation}
+ s_0^{\mathrm{fld}}V_R(f)
+ =-\int(\bar\nabla_\mu f)c_\nu T_R^{\mu\nu}\dd\mu_{\gbar}.
+ \label{eq:stressward}
+\end{equation}
+This is a source-specialized one-insertion, cutoff-plateau Ward statement.  It is not
+the off-shell BV anomalous Master Ward identity.
+
+\subsection{Typed AMWI/QME obstruction}
+
+Enlarge the local input space only for this obstruction problem by treating antifields
+as external sources, with no antifield propagator.  The renormalized BV anomaly map has
+the type \cite{FredenhagenRejzner2013BV,BrunettiDuetschFredenhagenRejzner2022}
+\begin{equation}
+ \Delta_r:\mathcal D_{T,\mathrm{BV}}^{\mathrm{even},0}
+ \longrightarrow
+ \cA_{\mathrm{loc,BV}}^{\mathrm{odd},1}[[\hbarLB]],
+ \qquad \supp\Delta_r(V^T)\subset\supp V^T.
+ \label{eq:anomalymap}
+\end{equation}
+Select a free BRST-compatible normalization at the quadratic base point.  For
+$V_m(f)=\kappa S_{1,m}(f)$, the first possible matter quantum obstruction is the joint
+$\kappa\hbarLB$ coefficient.  Pulling it back through the Wick map defines a local
+four-form representative $a_{1,1}^{(m,4)}$ obeying the consistency condition
+\begin{equation}
+ s_0^{\mathrm{BV}}a_{1,1}^{(m,4)}+\dd_Hb_{1,1}^{(m,3)}=0.
+ \label{eq:localconsistency}
+\end{equation}
+It therefore determines a restricted local cohomology class
+\begin{equation}
+ [a_{1,1}^{(m,4)}]\in
+ H^{1,4}_{\mathrm{loc},\mathcal R}(s_0^{\mathrm{BV}}\mid\dd_H).
+ \label{eq:A1class}
+\end{equation}
+Allowed finite renormalizations shift the representative by an
+$s_0^{\mathrm{BV}}$-exact plus horizontally exact term.  Thus vanishing of
+\cref{eq:A1class} is the precise first matter anomaly-removal gate within the declared
+renormalization class.
+
+The nonminimal quartet can be removed from this raw restricted cohomology by the
+support-preserving analytic homotopy \cref{eq:nmhomotopy}, transported through the
+gauge fermion.  Several minimal orientation-even, antifield-zero candidate slices are
+also ambient-exact.  These reductions do not prove that the actual anomaly-map image
+lands in those slices.
+
+\paragraph{Excluded filtration claim.}
+An attempted finite source-filtration argument proposed an additional bound after the
+nonminimal projection.  In the gauge-fixed variables, however, the canonical minimal
+projection is not naive substitution, and the claimed postprojection degree bound has
+not survived audit.  That argument and its checker are not used anywhere in this
+manuscript.  No conclusion about \cref{eq:A1class} is drawn from it.
+
+The full nonlinear local BRST classifications
+\cite{BarnichBrandtHenneaux1995,BarnichBrandtHenneaux2000} provide strong comparison
+evidence that four-dimensional Einstein gravity with ordinary matter has no local
+diffeomorphism anomaly of the familiar chiral type.  They do not compute
+\cref{eq:A1class}: the latter uses a background-linearized differential, AdS
+reducibility data, a restricted scaling/local-covariance class, and a selected anomaly
+map.  Global and boundary anomalies are also outside those local comparisons.
+
+\section{What the benchmark does and does not establish}
+
+\subsection{Compatibility achievements}
+
+The benchmark establishes a nontrivial same-domain compatibility chain:
+\begin{enumerate}[label=(\roman*)]
+ \item a classical nonminimal BV datum and exact classical master equation;
+ \item a complete five-field Green matrix, including $\lambda=0$;
+ \item a positive reduced graviton--scalar Hadamard state on a selected local domain;
+ \item an exact tensor/vector Ward completion and normalization into the nonminimal
+       BRST matrix;
+ \item a five-field equicausal formal star algebra with the correct commutator;
+ \item a positive no-extra-null ghost-number-zero one-particle space;
+ \item free Einstein causality and fixed-ambient time slice;
+ \item an exact first matter deformation subcocycle and a typed first anomaly class.
+\end{enumerate}
+These items are useful as acceptance tests for boundary reconstruction programs: a
+candidate boundary sector that cannot reproduce this local chain has not yet matched a
+standard perturbative gravity benchmark.
+
+\subsection{The assumed-dynamics limitation}
+
+The Einstein--scalar action \cref{eq:classicalaction} is an input.  The benchmark does
+not derive it from a positive boundary functional, a sewing axiom, a moment problem, or
+a microscopic amplitude.  It does not select $G$, $\Lambda$, $m$, the matter content,
+or the background.  Hence the work is properly called a compatibility benchmark, not
+a new dynamical law of quantum gravity.
+
+\subsection{Why local AdS is not global AdS}
+
+The Fuchsian host is boundaryless and globally hyperbolic.  It is not global AdS with
+reflecting conditions.  A global promotion would require one common domain for
+$(h,\phi,c,\cbar,b)$ satisfying at least:
+\begin{enumerate}[label=\textbf{B\arabic*:},leftmargin=14mm]
+ \item BRST-invariant boundary conditions;
+ \item separation of proper gauge ghosts from asymptotic symmetries and charges;
+ \item advanced/retarded boundary Green operators with the Ward identity;
+ \item vanishing total graviton, scalar, and ghost symplectic flux;
+ \item a positive physical boundary Hadamard state;
+ \item a boundary-compatible causality and time-slice replacement;
+ \item GHY, holographic, gauge-fixing, ghost, and BV--BFV boundary terms in one master
+       equation;
+ \item bulk-plus-boundary renormalization and anomaly control;
+ \item a nonlinear relational or boundary dressing and operational readout.
+\end{enumerate}
+Classical mode analyses \cite{IshibashiWald2004}, scalar AdS states
+\cite{DappiaggiFerreira2017}, and classical BV--BFV gravity
+\cite{CattaneoSchiavina2016} each address important parts.  None supplies the complete
+coupled Lorentzian graviton--scalar--ghost package used by the list.
+
+\subsection{Exact stop line}
+
+The following implications are not licensed by the present results:
+\begin{equation}
+ \boxed{
+ \begin{minipage}{0.88\textwidth}
+ No full order-$\kappa$ classical deformation has been audited.  No interacting
+ quantum master equation, interacting BRST cohomology, or anomaly cancellation
+ theorem has been proved.  No global reflecting AdS boundary theory, operational
+ boundary instrument, continuum regulator path, emergent metric derivation, infrared
+ Einstein recovery theorem, ultraviolet completion, or empirical prediction follows.
+ \end{minipage}}
+ \label{eq:stopline}
+\end{equation}
+
+Even within the free theory, the ordinary dagger is absent on the frozen BRST
+cohomology and the independently functorial net remains open.  These are not minor
+typographical gaps: they delimit the mathematical object that has actually been
+constructed.
+
+\section{Discussion}
+
+\subsection{What is genuinely learned}
+
+The central lesson is that a plausible verbal stack---``BV plus Hadamard plus BRST
+plus pAQFT''---is not a theorem.  Compatibility requires a series of maps.  The
+source-to-benchmark action normalization fixes the sign of the Euler operator.  The
+G\'erard-to-source bridge contributes a single factor one half.  The Wrochna--Zahn
+configuration and Euler-row maps are dual only after the pairing identity
+\cref{eq:pairduality}.  The nonminimal field matrix is Green hyperbolic even when the
+Schur complement is undefined.  Host positivity reaches the local algebra only after
+zero-extension injectivity.  Finally, the same ghost convention that makes the
+covariance and BRST Ward identity work can obstruct descent of the ordinary dagger.
+
+These are modest compared with constructing quantum gravity, but they are not empty
+bookkeeping.  They identify where familiar theorems genuinely compose and where an
+additional physical or analytic input is needed.
+
+\subsection{Why the dagger failure is useful}
+
+The explicit counterexample \cref{eq:daggercounter} prevents a common silent move:
+declaring that because the off-shell star algebra and BRST complex each have reasonable
+reality properties, the cohomology automatically inherits the same adjoint.  It does
+not.  A transferred adjoint may still exist, but it must be constructed together with
+the nonminimal reduction or a physical completion.  For boundary reconstruction this
+matters because positivity and operational interpretation require a specified
+involution, not merely a complex product algebra.
+
+\subsection{Interactions are the decisive next test}
+
+The classical matter subcocycle is a useful first deformation because its cancellation
+directly exposes the stress identity and the antifield sign.  Yet it is only one
+summand.  The next scientifically meaningful step is not another general criterion.
+It is to assemble the full order-$\kappa$ BV deformation in one convention, construct
+renormalized time-ordered maps on its declared domain, and compute the first local
+anomaly class.  Only after that calculation can the free benchmark be promoted to an
+interacting local sector.
+
+\section{Conclusion}
+
+We have assembled a self-contained local Einstein--scalar BV/BRST benchmark on a
+globally hyperbolic interior region of AdS$_4$.  The construction reaches farther than
+a formal classical complex: it includes the full nonminimal Green matrix, a selected
+Hadamard host, exact Ward and normalization transport, an equicausal star algebra,
+local BRST no-extra-null positivity, causality, time slice, and a first matter
+deformation.  It also records one exact obstruction---the ordinary dagger does not
+descend in the frozen nonminimal convention---and one exact stop condition: the first
+quantum matter anomaly class is typed but has not been computed.
+
+The correct interpretation is therefore narrow but useful.  This is a perturbative
+effective-field-theory benchmark for reconstruction architectures.  It shows that a
+substantial compatibility stack can be realized locally once Einstein dynamics is
+assumed.  It does not derive that dynamics, construct global AdS quantum gravity, or
+solve the interacting QME.  The stop line \cref{eq:stopline} is part of the result.
+
+\appendix
+
+\section{Convention dictionary}
+
+\subsection{Curvature and signature}
+
+We use signature $(-,+,+,+)$ and
+\begin{equation}
+ [\nabla_\mu,\nabla_\nu]V^\rho
+ =R^\rho{}_{\sigma\mu\nu}V^\sigma.
+\end{equation}
+On AdS$_4$,
+\begin{equation}
+ R_{\mu\nu\rho\sigma}
+ =-L^{-2}(g_{\mu\rho}g_{\nu\sigma}-g_{\mu\sigma}g_{\nu\rho}),
+ \qquad R_{\mu\nu}=-3L^{-2}g_{\mu\nu}.
+\end{equation}
+The source vector operator is $R=-\tfrac12(\Box+\mathrm{Ric})$, while the local benchmark
+ghost equation is $M=\Box+\mathrm{Ric}=-2R$.  These are convention-related blocks,
+not different dynamics.
+
+\subsection{Field, source, and Planck normalizations}
+
+The canonical perturbation is $g=\gbar+\kappa h$.  Source variables are related by
+\begin{equation}
+ \theta=\frac\kappa4(h-\tfrac12\gbar\,\operatorname{tr}h),
+ \qquad \zeta=\frac\kappa2\phi.
+\end{equation}
+The action Hessian and causal form obey
+\begin{equation}
+ P_{0,\mathrm{b}}=-\frac4{\kappa^2}\cA^\dagger\bar P\cA,
+ \qquad
+ \sigma_{\mathrm{b}}=\frac{\kappa^2}{4}\sigma_H\circ(J^\vee\times J^\vee).
+\end{equation}
+Identified commutators require $\hbar_H=(\kappa^2/4)\hbarLB$.  The factor is applied
+once.
+
+\subsection{BRST configuration versus functional differential}
+
+The transported configuration codifferential has
+\begin{equation}
+ \gamma_{\mathrm{b}}(H,c,\cbar,b)=(Kc,0,-b,0).
+\end{equation}
+For a homogeneous evaluation functional $\ell$ we define the left functional action by
+the supertranspose rule
+\begin{equation}
+ (s_0\ell)(x)=(-1)^{|\ell|}\ell(\gamma_{\mathrm{b}}x).
+\end{equation}
+Thus the configuration component $\gamma\cbar=-b$ produces the functional rule
+$s_0\cbar=+b$.  Flipping one field by hand would also conjugate the Euler matrix and
+covariances and is not an allowed shortcut.
+
+\section{Direct block verification of the Green matrix}
+
+For convenience suppress the advanced/retarded sign and set
+\begin{equation}
+ X=-E+\alpha\bar KC^2D,
+ \quad Y=\bar KC,
+ \quad Z=CD,
+ \quad \alpha=\frac{1-2\lambda}{2}.
+\end{equation}
+Then
+\begin{equation}
+ B_\lambda
+ \begin{pmatrix}X&Y\\Z&0\end{pmatrix}
+ =
+ \begin{pmatrix}
+ -\bar PX+\bar KZ&-\bar PY\\
+ DX+\lambda Z&DY
+ \end{pmatrix}.
+\end{equation}
+Using $\bar PE=1-\bar KCD$, $\bar P\bar K=0$, $D\bar K=R$, $RC=1$ on compact
+sources, and $DE=\tfrac12CD$, the diagonal blocks are identities.  The lower-left
+block is
+\begin{equation}
+ -\frac12CD+\alpha CD+\lambda CD
+ =\left(-\frac12+\frac{1-2\lambda}{2}+\lambda\right)CD=0.
+\end{equation}
+The right inverse is analogous, using $C^2R=C$.  For the odd block,
+\begin{equation}
+ \begin{pmatrix}0&-R\\R&0\end{pmatrix}
+ \begin{pmatrix}0&C\\-C&0\end{pmatrix}=I,
+\end{equation}
+with the same result in the reversed order.  This algebraic verification explains why
+the full matrix exists at $\lambda=0$ although a Schur formula does not.
+
+\section{Relative cohomology interpretation of local injectivity}
+
+Extension by zero is an injective chain map between compact linear BRST complexes,
+\begin{equation}
+ 0\longrightarrow\cL_c(\U)
+ \xrightarrow{i_*}\cL_c(\M)
+ \longrightarrow\cL_c(\M,\U)\longrightarrow0.
+\end{equation}
+The long exact sequence contains
+\begin{equation}
+ H^{-1}(\cL_c(\M,\U))\xrightarrow{\delta_{\mathrm{rel}}}
+ H^0(\cL_c(\U))\xrightarrow{H^0(i_*)}H^0(\cL_c(\M)).
+\end{equation}
+Under the reduced-phase identifications, $H^0(i_*)=I_{\mathrm{phys}}$, so
+\begin{equation}
+ \Ker I_{\mathrm{phys}}=\im\delta_{\mathrm{rel}}.
+\end{equation}
+The proof of \cref{eq:Iinjective} therefore shows that the connecting image vanishes;
+it does not require the relative group itself to vanish.  The nonminimal relative
+summand is contractible, and the scalar summand is injective by the ordinary exact
+Green sequence.  The nontrivial content is the gravitational support-localization
+argument using \cref{eq:calabivanishing}.
+
+\section{Claim and provenance matrix}
+
+\begin{longtable}{p{0.27\textwidth}p{0.18\textwidth}p{0.44\textwidth}}
+\toprule
+Claim & Status & Basis\\
+\midrule
+\endfirsthead
+\toprule
+Claim & Status & Basis\\
+\midrule
+\endhead
+Classical master equation & source-specialized & Standard BV theorem plus compact-support Einstein--scalar specialization.\\
+Full five-field Green matrix & derived & Normal-hyperbolic source blocks plus explicit two-sided block inversion.\\
+Reduced CCR/Weyl algebra & source-specialized & Linear gauge theory and Einstein--Klein--Gordon quotient theorems.\\
+Fuchsian host embedding & mixed & Fuchsian AdS geometry plus finite bad-set and residual-finiteness refinement.\\
+Reduced positive Hadamard state & mixed & G\'erard gravity state, scalar Hadamard state, exact pairing and normalization pullback.\\
+Full nonminimal Hadamard pair & derived composition & Fredholm left inverse, physical-state extension, Ward repair, Wrochna--Zahn matrix transport.\\
+Equicausal star algebra & mixed & Equicausal closure theorem plus finite graded multiplet and exact local benchmark Ward identity.\\
+Local no-extra-null BRST space & mixed & Host coisotropy and positivity plus Calabi zero-extension injectivity.\\
+Ordinary dagger on BRST $H^0$ & excluded & Explicit boundary whose dagger is not a cycle.\\
+First matter subcocycle & derived & Direct expansion, stress divergence, and antifield-sign cancellation.\\
+One-insertion stress Ward row & source-specialized & Hollands--Wald conserved renormalized stress prescription.\\
+$\kappa\hbar$ matter anomaly class & open & Class is typed in restricted local cohomology but not computed.\\
+Full interacting QME & open & Remaining order-$\kappa$ vertices and all collision/anomaly conditions absent.\\
+Global reflecting AdS & open & No common graviton--scalar--ghost boundary theorem.\\
+Emergent gravity or UV completion & not claimed & Einstein dynamics is assumed; no regulator/IR or nonperturbative bridge.\\
+\bottomrule
+\end{longtable}
+
+\section{Portable algebra verification}
+The packet contains four standalone SymPy programs for the block Green matrix,
+pairing-preserving Ward transport, graded functional signs and first matter
+vertex. Running \path{python reproduce.py} verifies respectively 7, 15, 17 and
+10 printed algebra rows. These reproduce the previously checked coefficient
+calculations without depending on the original project. No program is claimed
+to prove Green support, Hadamard wavefront conditions, a Fredholm estimate,
+local-support cohomology, renormalization or an interacting QME. The excluded
+naive source-filtration checker is not bundled or counted as evidence.
+The analytic statements are conditional/source-specialized exactly where their
+PDE, microlocal or cohomological inputs enter. A complete fresh independent
+verification of every nested analytic bridge has not been performed.
+
+\section*{Workflow and unresolved attribution}
+The operator reports that earlier work was led mainly by Fable 5, while results
+from July 2026 onward were predominantly produced by GPT models. DeepSeek and
+multiple GPT models also participated in review, checking, preparation and
+organization. This chronological account is not a complete audited allocation
+of individual contributions, and a later revision does not reattribute an earlier
+result. Human author names and affiliations are intentionally blank. These
+results have not undergone human expert review. Automated checks and AI reviews
+are further AI review, not human peer review. Historical source dates, this
+29 October 2026 preparation date, and public disclosure dates are distinct.
+No authorship, ownership, publication-priority or journal-acceptance decision is
+made. The operator states:
+\begin{quote}
+I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.
+\end{quote}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

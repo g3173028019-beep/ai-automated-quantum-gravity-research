@@ -1,0 +1,167 @@
+\section{Spectral references and disconnected components}
+\label{sec:spectral}
+
+Phase is not the only datum that normalized operational records can forget.
+The maximal mismatch rule of Section~\ref{sec:refinement} assigns a positive rate
+$R=\lambda_{\max}(X)I-X$ to a Hermitian mismatch $X$.
+Given a positive operator $H$, the choice $X=\lambda_{\max}(H)I-H$ yields
+\begin{equation}
+ R=C(H):=H-\lambda_{\min}(H)I.
+ \label{eq:centering}
+\end{equation}
+This is invariant under every admissible shift $H\mapsto H+cI$.
+Here $H$ has rate units, or the readout parameter has been calibrated to supply
+the reciprocal units; the notation alone supplies no physical clock.
+The no-jump amplitude $e^{-tR/2}$ and its survival probabilities therefore cannot
+identify the absolute spectral floor.
+
+\begin{proposition}[Disconnected-spectator obstruction]
+\label{prop:centering}
+For positive matrices $H_1,H_2$ of nonzero dimensions, let
+$\lambda_i=\lambda_{\min}(H_i)$.
+Then
+\begin{equation}
+ C(H_1\oplus H_2)|_i
+ =C(H_i)+\bigl(\lambda_i-\min\{\lambda_1,\lambda_2\}\bigr)I_i.
+ \label{eq:centering-defect}
+\end{equation}
+Consequently $C$ preserves this direct sum if and only if
+$\lambda_1=\lambda_2$.
+\end{proposition}
+\begin{proof}
+The spectrum of a direct sum is the union of its component spectra, so its
+floor is the minimum of their floors.
+Subtracting that common floor from each block gives
+\eqref{eq:centering-defect}; both offsets vanish precisely in the stated case.
+\end{proof}
+
+For example, take
+\begin{equation}
+ H_1=\operatorname{diag}(1/5,11/10),\qquad
+ H_2=\operatorname{diag}(7/10,3/2).
+\end{equation}
+The two results are
+\begin{align}
+ C(H_1)\oplus C(H_2)&=\operatorname{diag}(0,9/10,0,4/5),\nonumber\\
+ C(H_1\oplus H_2)&=\operatorname{diag}(0,9/10,1/2,13/10).
+\end{align}
+The disconnected lower-floor component adds $I/2$ to the rate on the second
+component.
+At a fixed readout time, its survival probability is multiplied by $e^{-t/2}$.
+Thus this defect is observable in a resolved no-jump record; it is not merely
+an overall Hamiltonian phase.
+Direct-sum preservation is the precise disconnected-component requirement here.
+It should not be equated with every notion of relativistic locality or with
+tensor-product composition.
+
+\subsection{A general finite reference theorem}
+
+Changing the scalar statistic in \eqref{eq:centering} cannot preserve all of the
+same requirements while retaining spectral information.
+The following statement makes this obstruction independent of the choice of
+the minimum eigenvalue.
+
+\begin{theorem}[Spectral-reference obstruction]
+\label{thm:reference}
+For every $n\geq1$, let
+$F_n:\Herm(n)_+\to\Herm(n)$.
+Assume unitary covariance, preservation of all finite direct sums, and scalar
+shift invariance:
+\begin{align}
+ F_n(UHU^\dagger)&=UF_n(H)U^\dagger,
+ \label{eq:reference-unitary}\\
+ F_{n+m}(H\oplus K)&=F_n(H)\oplus F_m(K),
+ \label{eq:reference-sum}\\
+ F_n(H+cI)&=F_n(H)
+ \label{eq:reference-shift}
+\end{align}
+whenever the arguments are positive semidefinite.
+There is a real constant $a$, independent of $n,H$, such that
+$F_n(H)=aI_n$.
+If $F_1(0)=0$, every $F_n$ is zero.
+No continuity, linearity, differentiability or spectral nondegeneracy
+assumption is required.
+\end{theorem}
+\begin{proof}
+Write $F_1([\lambda])=[f(\lambda)]$.
+Equation~\eqref{eq:reference-shift} applied to $[0]$ and $[\lambda]$ gives
+$f(\lambda)=f(0)=a$ for every $\lambda\geq0$.
+By repeated use of \eqref{eq:reference-sum},
+\[
+ F_n(\operatorname{diag}(\lambda_1,\ldots,\lambda_n))
+ =\operatorname{diag}(f(\lambda_1),\ldots,f(\lambda_n))=aI_n.
+\]
+The spectral theorem and \eqref{eq:reference-unitary} extend this equality to
+every positive Hermitian $H$.
+The final assertion follows from $a=F_1(0)$.
+\end{proof}
+
+The theorem is deliberately a statement about bare matrices in all finite
+dimensions.
+A model equipped with a preferred component algebra has additional data and
+need not be covariant under every unitary that mixes those components.
+Componentwise centering can then be defined relative to that algebra, but the
+component choice has not been obtained from a shift-blind matrix record.
+Replacing the minimum by a mean or quantile does not evade
+Theorem~\ref{thm:reference} under its hypotheses.
+
+\subsection{Calibrated repairs and a complete positive process}
+
+There are two elementary repairs.
+One may retain $H$ itself and its absolute spectral floor, thereby preserving
+unitary covariance and direct sums while abandoning shift blindness.
+Alternatively supply a reference operator $B$ with $R=H-B\geq0$.
+The assignment
+\begin{equation}
+ R(H,B)=H-B,\qquad
+ R(H+cI,B+cI)=R(H,B)
+ \label{eq:calibrated-reference}
+\end{equation}
+preserves direct sums of pairs and simultaneous unitary transformations.
+It contains an extra calibrated datum; it does not extract an absolute
+generator from the original normalized record.
+
+A complete process can be attached to any chosen $R\geq0$ without imposing a
+two-Kraus chain law on a general spectrum.
+Let $R=\sum_{j=1}^d r_j|j\rangle\langle j|$, introduce an absorbing flag
+$|\varnothing\rangle$ orthogonal to the live space, and define
+\begin{align}
+ A_0(t)&=|\varnothing\rangle\langle\varnothing|
+       +\sum_j e^{-tr_j/2}|j\rangle\langle j|,\nonumber\\
+ A_j(t)&=\sqrt{1-e^{-tr_j}}\,
+           |\varnothing\rangle\langle j|,\qquad j=1,\ldots,d .
+ \label{eq:absorbing-completion}
+\end{align}
+
+\begin{proposition}[Calibrated absorbing completion]
+\label{prop:absorbing}
+The operators \eqref{eq:absorbing-completion} define a trace-preserving
+completely positive semigroup on the live space plus the absorbing flag.
+For a normalized live input $\rho$, its probability of remaining live is
+$\Tr(e^{-tR}\rho)$.
+For the maximally mixed live input this is $d^{-1}\Tr e^{-tR}$.
+\end{proposition}
+\begin{proof}
+The completeness identity follows from
+$e^{-tr_j}+(1-e^{-tr_j})=1$ for each live mode and the unit coefficient on the
+absorbing flag.
+Live matrix elements evolve by
+$\rho_{jk}\mapsto e^{-t(r_j+r_k)/2}\rho_{jk}$, live--flag coherences by
+$\rho_{j\varnothing}\mapsto e^{-tr_j/2}\rho_{j\varnothing}$, and the flag
+population receives $\sum_j(1-e^{-tr_j})\rho_{jj}$.
+These formulas compose at times $t_1,t_2$ by addition of the times.
+Equivalently, the generator has jump operators
+$L_j=\sqrt{r_j}|\varnothing\rangle\langle j|$.
+Taking the trace of the live block gives the asserted probabilities.
+\end{proof}
+
+This construction is a calibrated measurement of a heat trace.
+For a geometric choice $H=D^\dagger D$, convergence to a continuum spectrum
+and the physical meaning of the readout time remain separate questions.
+A protected zero mode anchors the floor only in sectors that contain it.
+It is not universal: on the round $S^4_r$ the untwisted self-adjoint Dirac
+operator has eigenvalues $\pm(k+2)/r$, so $D^2$ has floor $4/r^2$
+\cite{Camporesi}.
+The floor belongs to $D^2$, not to the two-sided Dirac spectrum itself.
+Neither an absorbing completion nor a chosen reference $B$ supplies a
+gravitational action or selects a microscopic clock.

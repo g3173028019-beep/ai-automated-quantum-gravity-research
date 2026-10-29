@@ -1,0 +1,33 @@
+{
+  "scope": "Preserved-metadata arithmetic only; historical PDF counting is inherited, not repeated here",
+  "rows": 315,
+  "lines": 77375,
+  "path_relations": {
+    "identical": 208,
+    "modified": 8,
+    "missing": 0,
+    "new": 580
+  },
+  "filename_sensitivity": {
+    "original": {
+      "files": 162,
+      "lines": 43603,
+      "file_percent": 51.42857142857143,
+      "line_percent": 56.35282714054927
+    },
+    "without_MATRIX": {
+      "files": 157,
+      "lines": 42433,
+      "file_percent": 49.84126984126984,
+      "line_percent": 54.84071082390953
+    },
+    "without_MATRIX_MAINLINE_CONSTITUTION": {
+      "files": 154,
+      "lines": 39981,
+      "file_percent": 48.888888888888886,
+      "line_percent": 51.67172859450727
+    }
+  },
+  "baseline_manuscripts": 5,
+  "recorded_baseline_pages": 85
+}

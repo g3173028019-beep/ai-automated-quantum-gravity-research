@@ -1,0 +1,76 @@
+{
+  "schema": "portable-paper-provenance-v1",
+  "title": "Operational Lorentz Geometry from Resolved Quantum Instruments",
+  "edition_date_beijing": "2026-10-29",
+  "human_authors": [],
+  "human_affiliations": [],
+  "human_expert_review": false,
+  "public_priority_established": false,
+  "global_novelty_certificate": false,
+  "local_source_dates": [
+    "2026-07-12",
+    "2026-07-13"
+  ],
+  "chronology": "The operator reports earlier work was Fable 5-led; July 2026 onward results predominantly GPT-produced. DeepSeek and multiple GPT models also contributed review/preparation. This report does not allocate authorship or ownership.",
+  "attribution_statement": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "sources": [
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/cross-framework-bilingual-series/P01-operational-lorentz-cartan/en/main.tex",
+      "sha256": "71801b9c23eddc287d2ef8465e7b4391a92def1ecf71bbce9f45df07f193b0e4",
+      "role": "read-only source; not needed for portable reproduction"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/cross-framework-bilingual-series/P01-operational-lorentz-cartan/references.bib",
+      "sha256": "73d084e301f189edbcff91bb767f524b9d1cd66158c9003a5bd1fcf751a0ac17",
+      "role": "read-only source; not needed for portable reproduction"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/representation/RESULT.md",
+      "sha256": "49e95128d8cc2492f4bc9274b437fa5d7e6ec1455647759aade000d22e4a4360",
+      "role": "read-only source; not needed for portable reproduction"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/representation/VERIFICATION.md",
+      "sha256": "7061ad960ab614721585a805081e77106259bc6fb64786a49718982e1134a9e4",
+      "role": "read-only source; not needed for portable reproduction"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/representation/claims.json",
+      "sha256": "4f3e6b298824ee3b185952cf0b7ced64a4ad2e78ad932a0d8491e2b19b6a4a91",
+      "role": "read-only source; not needed for portable reproduction"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/representation/verify_representation.py",
+      "sha256": "0f9019ef727e3571610eee3dc05d5b9ffc86aea36f8fb538e97f880080f5c93d",
+      "role": "read-only source; not needed for portable reproduction"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/post-SCG-core-series/C3-operational-cartan-no-go/en/main.tex",
+      "sha256": "cb3b9cdb147456bb6c374c2d1e773aca939ead3a11efbdb006d1c9a25d7aeb63",
+      "role": "phase and spectral-reference precursor"
+    }
+  ],
+  "portable_inputs": "No copied numerical input is required: every example and certificate is constructed from definitions. No third-party full paper is bundled.",
+  "source_changes": "Preserved mathematical results, applied targeted bibliography/claim corrections, expanded complete proofs and supplied exact portable verification. Originals unchanged.",
+  "proof_scope": "Finite analytic results and exact symbolic/rational/modular checks; a floating endpoint example only in operational paper.",
+  "build": {
+    "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex",
+    "pages": 9,
+    "tex_warnings": [],
+    "visual_qa": "Parent integrated QA pending at handoff",
+    "pdf_author": "",
+    "quote_exact_after_whitespace_normalization": true
+  },
+  "deliverable_hashes": {
+    ".gitignore": "be091810b9a0f91199ea4b81d84af819934cdff588c5c41c0e97fb1fbd0a4a9f",
+    "code/verify.py": "e67fd7ccb016f0f934bc5406fba4a59ecb4a5eae61a79d1e19a7e437407040c5",
+    "data/results.json": "7725f927a25e5bb50577f4976a07d290404f0bc0714ae3ce7fd9c0e99a96a98b",
+    "main.tex": "ff9166b81651705d75a598f36d551896c3a17a08f4e53fd96d903cf48bb87c1e",
+    "manuscript.pdf": "beaa8673a728d788fb9e671f6e7eca7fe3d25fb1544e6fb714c6345d2fabed6d",
+    "README.md": "d2774578b5e79a5312e42ef3e3b71171d9e7bbe7f5a4a71cb91ab358febd89ba",
+    "references.bib": "8dd998199327dab1d672a2ab9c0331653badc0bf90e0b055c2f4601b33d35422",
+    "requirements.txt": "cd1074e2234d1bdcc918bd32ca06a52f2e6fc1a998af932f3ecd6e05f306348d",
+    "spectral-references.tex": "21655aa703f87b075850d3232c1f4b73b594189cb5223dc6a76fb74d6572da4b",
+    "VERIFICATION.md": "0b99977cd40236af7a9716cb7ac9ec53daebb4bd0beb2680d2470958636d3055"
+  }
+}

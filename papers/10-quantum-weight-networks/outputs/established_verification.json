@@ -1,0 +1,36 @@
+{
+  "sympy_version": "1.14.0",
+  "one_cell_closure": 10,
+  "noncommuting_update_X_plus_Z_closure": 15,
+  "clifford_and_polarized_trace": "exact_pass",
+  "all_displayed_rotation_clock_signs": "exact_pass",
+  "six_variable_symmetric_covariance": "Matrix([[1, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0], [0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 1]])",
+  "chirality_projectors": {
+    "(-1, 0)": 16,
+    "(1, 1)": 16
+  },
+  "independent_binary_chain_dimensions": {
+    "1": {
+      "ZI": 10,
+      "YZ": 10
+    },
+    "2": {
+      "ZI": 45,
+      "YZ": 255
+    },
+    "3": {
+      "ZI": 4095,
+      "YZ": 4095
+    },
+    "4": {
+      "ZI": 65535,
+      "YZ": 65535
+    }
+  },
+  "finite_N_CCR_residual_state_rms": "sqrt(1-mu^2)/(mu*sqrt(N))",
+  "finite_N_CCR_residual_operator_norm": "1+1/mu (mu>0)",
+  "positive_weight_family": "a>|b|>0 with a transverse X kick: same ten-dimensional span",
+  "mean_field_derivatives": "exact_pass; model is transverse Curie-Weiss with a spectator per site",
+  "all_n_proliferation": "proved in CONSTRUCTIVE-ADDENDUM.md; n=4 checked exactly",
+  "scope": "Finite matrix and Pauli statements only; no mean-field Gibbs fluctuation limit."
+}

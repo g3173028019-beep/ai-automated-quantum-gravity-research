@@ -24,7 +24,7 @@
 
 \title{\textbf{Generic Sign Rigidity of Real Projection Kernels from Two-Point Data}}
 \author{}
-\date{Working draft -- 28 October 2026}
+\date{Revised working draft -- 29 October 2026}
 \hypersetup{pdfauthor={}}
 
 \begin{document}
@@ -139,12 +139,46 @@ Write \eqref{eq:E1} as $Ah=R$, where
  \qquad R_{ij}=m_{ij}(1-d_i-d_j).
  \label{eq:linear}
 \end{equation}
-If two sign fields give projections with the same $(d,m)$, their valid holonomies $h,h'$
-satisfy $A(h-h')=0$.  Thus the exact uniqueness condition is
+Let $\mathcal H$ denote the finite set of valid triangle-holonomy fields and set
+$\mathcal H_R=\{h\in\mathcal H:Ah=R\}$.  The existence assumption makes
+$\mathcal H_R$ nonempty.  Since valid triangle holonomies determine a complete-support
+edge-sign field up to diagonal-sign gauge, uniqueness for the given data is exactly
+$|\mathcal H_R|=1$.  Equivalently, for any fixed $h_0\in\mathcal H_R$,
 \begin{equation}
- \ker A\cap\{h-h':h,h'\text{ valid holonomy fields}\}=\{0\}.
+ \ker A\cap\{h-h_0:h\in\mathcal H\}=\{0\}.
  \label{eq:lattice}
 \end{equation}
+The stronger condition $\ker A\cap(\mathcal H-\mathcal H)=\{0\}$ asserts global
+injectivity on all valid holonomy fields and is sufficient for uniqueness at every
+feasible right-hand side.
+
+\begin{remark}[A unique observed fiber does not imply uniform injectivity]
+The distinction occurs for actual full-support projection data.
+Take vertices $0,\ldots,5$ and $K=\mathbf 1\mathbf 1^\top/6$.
+Then $K^2=K$, its rank is one, and $d_i=m_{ij}=1/6$.
+Every target component is $R_{ij}=4/36$.
+Each row of $Ah$ is a sum of four numbers $\pm1/36$, so feasibility at this $R$
+forces every triangle holonomy to be $+1$; thus $\mathcal H_R$ is a singleton.
+
+Nevertheless $A$ is not injective on all of $\mathcal H$.
+Fix $\sigma_{0i}=+1$ and, among the other ten edges, let the positive edges be
+\[
+ S_1^+=\{13,15,23,24\},\qquad S_2^+=\{13,14,23,25\},
+\]
+with all remaining free-edge signs negative; $ij$ denotes the edge $\{i,j\}$.
+The resulting valid triangle fields $h^{(1)},h^{(2)}$ are distinct but have identical
+edge-row sums. In lexicographic order on all fifteen edges,
+\[
+36Ah^{(1)}=36Ah^{(2)}
+ =\big(0,0,0,-2,-2,0,0,2,2,0,2,2,-2,-2,0\big)^\top.
+\]
+This common right-hand side is not $R$, so the collision gives no rival projection
+for the observed data.
+The example concerns the ancillary full-support characterization at rank one,
+outside the interior-rank range of Theorem~\ref{thm:main}; that generic theorem is unchanged.
+A portable exact check enumerates all $2^{10}$ star-gauge sign assignments and confirms
+both the singleton target fiber and this non-target collision.
+\end{remark}
 
 \section{A finite uniqueness certificate}
 
@@ -283,20 +317,25 @@ reduces purity to a holonomy-linear system, supplies a finite certificate, and e
 that the certificate fails only on a measure-zero set.
 
 \section*{AI-assisted workflow and unresolved attribution}
-The following statement is supplied by the repository operator:
+The repository operator states:
 \begin{quote}
-I genuinely do not know how authorship, intellectual credit, or ownership should be
-attributed for these results. My workflow was to ask AI systems to conduct literature
-research, autonomously select open problems, and attempt to solve them. The principal
-research work was carried out mainly by Fable 5. DeepSeek and several GPT models
-participated in cross-review, checking, and manuscript preparation and organization.
-These manuscripts and their scientific claims have not yet undergone human expert review.
+I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.
 \end{quote}
-This describes the overall workflow reported by the operator; a complete per-model,
-per-manuscript allocation of contributions is unavailable. Author and affiliation fields
-are intentionally blank. Automated checks and AI internal reviews are not human peer
-review. This working draft makes no claim of journal acceptance or settled publication
-priority. Historical source dates are recorded separately in the repository history.
+The reported workflow was to ask AI systems to survey the literature,
+autonomously select open problems, and attempt to solve them. The operator
+reports that the earlier work was led mainly by Fable 5, whereas results from
+July 2026 onward were predominantly produced by GPT models. DeepSeek and
+multiple GPT models also participated in cross-review, checking, and
+manuscript preparation and organization.
+
+This is the operator's reported chronological history, not a complete audited
+allocation of individual contributions. An earlier result is not reattributed
+merely because it was revised or packaged after July. Human author names and
+affiliations are intentionally blank. These results have not undergone human
+expert review; automated checks and AI reviews are further AI review, not human
+peer review. Historical source dates, present packaging dates, and demonstrable
+public-disclosure dates are recorded separately. No authorship, ownership,
+journal acceptance, or publication-priority determination is made here.
 
 \bibliographystyle{plainnat}
 \bibliography{references}

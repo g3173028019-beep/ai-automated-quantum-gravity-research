@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "sympy": "1.14.0",
+  "normalization": "theta=1 for finite checks; general theta is an overall factor",
+  "finite_checks": [
+    {
+      "j": "1/2",
+      "matrix_dimension": 4,
+      "exact_spectrum": "PASS",
+      "symbolic_covariance": "PASS",
+      "projective_square": "PASS",
+      "cross_pole_states": "PASS",
+      "prior_operator_difference": "PASS"
+    },
+    {
+      "j": "1",
+      "matrix_dimension": 9,
+      "exact_spectrum": "PASS",
+      "symbolic_covariance": "PASS",
+      "projective_square": "PASS",
+      "cross_pole_states": "PASS",
+      "prior_operator_difference": "PASS"
+    },
+    {
+      "j": "3/2",
+      "matrix_dimension": 16,
+      "exact_spectrum": "PASS",
+      "symbolic_covariance": "PASS",
+      "projective_square": "PASS",
+      "cross_pole_states": "PASS",
+      "prior_operator_difference": "PASS"
+    },
+    {
+      "j": "2",
+      "matrix_dimension": 25,
+      "exact_spectrum": "PASS",
+      "symbolic_covariance": "PASS",
+      "projective_square": "PASS",
+      "cross_pole_states": "PASS",
+      "prior_operator_difference": "PASS"
+    }
+  ],
+  "heat_trace_diagnostics": [
+    {
+      "j": 5,
+      "heat_trace": 0.07761872331483244,
+      "analytic_limit": 0.0760218298380711
+    },
+    {
+      "j": 20,
+      "heat_trace": 0.07633570110060368,
+      "analytic_limit": 0.0760218298380711
+    },
+    {
+      "j": 100,
+      "heat_trace": 0.07608142501890328,
+      "analytic_limit": 0.0760218298380711
+    },
+    {
+      "j": 500,
+      "heat_trace": 0.07603362961796738,
+      "analytic_limit": 0.0760218298380711
+    }
+  ],
+  "scope": "Finite checks corroborate conventions. Heat-trace convergence and Weyl-symbol transform are analytic proofs, not inferred from decimals."
+}

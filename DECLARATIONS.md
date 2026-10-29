@@ -10,7 +10,7 @@
 
 The operator's corrected chronological account is that **the earlier work was led mainly by Fable 5**, while **results from July 2026 onward were predominantly produced by GPT models**. DeepSeek and multiple GPT models also participated in cross-review, checking, and manuscript preparation and organization. This describes production as well as review; it is not a complete audited allocation of individual contributions. **Fable 5** follows the operator's designation; this archive does not infer an alternative model identity.
 
-This corrected account replaces the earlier blanket archive-wide attribution. The first two PDFs are preserved as their original archival edition and still contain that earlier wording; this declaration supplies the current account. A later manuscript date does not reattribute an older proof. Human authorship, intellectual credit and ownership remain unresolved.
+This corrected account replaces the earlier blanket archive-wide attribution. The earlier editions of the first two papers are preserved in their version folders with the historical wording. Their current revised PDFs and this declaration give the corrected account. A later manuscript date does not reattribute an older proof. Human authorship, intellectual credit and ownership remain unresolved.
 
 ## Authorship
 
@@ -27,6 +27,8 @@ The archive contains English research notes, their source, and scoped verificati
 ## Scientific scope
 
 The first two papers concern finite real projection recovery and a zero-dimensional Gaussian-coupling model. The 29 October deliveries add weighted JT recovery, a reduced DBI heralded gate, integer STU flux constructions, local autonomous Maxwell control, a clock-foliated effective reference model, native Einstein–scalar quartic/backreaction constructions, and an independent canonical coupled-EKG physical Hadamard-state theorem. Their input, apparatus, geometric, signature and effective-theory assumptions are explicit. The modified reference model does not inherit the canonical theorem; the latter has its own proof under compact-Cauchy and critical-potential hypotheses. The finite Walker solution is not a Lorentzian Real completion. No paper establishes complete quantum gravity or ultraviolet completeness.
+
+The recovered-paper delivery adds finite-control, finite-geometry, operator-algebraic, moment-theoretic, benchmark and descriptive research-method articles. Their narrower scientific questions stand independently of a complete-gravity programme. Classical ingredients and cited source theorems remain credited; no model-ranking or causal research-productivity effect is inferred from the descriptive case study.
 
 ## Dates and priority
 

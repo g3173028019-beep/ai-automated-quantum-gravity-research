@@ -1,0 +1,29 @@
+\section{A positive-weight family and an essential control restriction}
+The rational weight above is not an isolated point.
+The following statement identifies which part of the construction survives a change of eigenvalues.
+
+\begin{theorem}[Positive-weight family]\label{thm:family}
+Let $G=aI+bZ$, where $a>|b|>0$, and allow the three controls
+$G\otimes X$, $G\otimes Y$ and $X\otimes I$ independently.
+Their real Hermitian Lie algebra is the same ten-dimensional span as in Eq.~\eqref{w:eq:basis}.
+\end{theorem}
+\begin{proof}
+With $Q=X\otimes I$, direct multiplication gives
+\begin{equation}
+ \Hbr{Q}{\Hbr{Q}{G\otimes X}}=-4b Z\otimes X,
+ \qquad
+ \Hbr{Q}{\Hbr{Q}{G\otimes Y}}=-4b Z\otimes Y.
+\end{equation}
+Since $a,b\ne0$, linear combinations recover $IX,IY,ZX,ZY$.
+Their brackets, together with $XI$, generate $IZ,ZZ,YX,YY,YZ$.
+All three original controls belong to the ten-string span, which is closed under the bracket, so there are neither fewer nor more generators.
+\end{proof}
+
+Positivity does not force this closure for an arbitrary update that fails to commute with $G$.
+For example, keeping $G=\operatorname{diag}(1,2)$ and replacing $XI$ by $(X+Z)\otimes I$ produces dimension $15$, hence all of $\mathfrak{su}(4)$.
+The accompanying exact matrix algorithm starts from those three controls and repeatedly adds a bracket with an original control only when its flattened rank increases.
+It terminates with the full fifteen-dimensional traceless Hermitian space.
+The fixed-point span is invariant under the original controls and therefore, by Jacobi, under their generated algebra; thus termination is an exact finite certificate.
+This counterexample limits the mechanism to the stated transverse-update family.
+The direction $S$ is encoded in the control coefficients, but it is not itself one of the ten Lie generators.
+The state parameter $\nu$ in Eq.~\eqref{w:eq:rho} remains additional information; a direction selected by a weight does not fix a polarization magnitude or an action coefficient.

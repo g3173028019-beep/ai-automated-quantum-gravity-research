@@ -1,0 +1,129 @@
+{
+  "schema": "portable-paper-provenance-v1",
+  "date_beijing": "2026-10-29",
+  "contribution_history": {
+    "human_author_names": [],
+    "affiliations": [],
+    "human_expert_review": false,
+    "earlier_work": "Fable 5-led, as reported by the operator",
+    "july_2026_onward": "Predominantly produced by GPT models, as reported by the operator",
+    "other_review_preparation": [
+      "DeepSeek",
+      "multiple GPT models"
+    ],
+    "attribution_quote": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+    "global_novelty_certificate": false
+  },
+  "sources": [
+    {
+      "identifier": "P03-cartan-regge-schur",
+      "path": "E:\\TOE-Fable - \u526f\u672c\\double-lock-gravity\\papers\\cross-framework-bilingual-series\\P03-cartan-regge-schur\\en\\main.tex",
+      "sha256": "c4d9f4ac12e8383741e5444f59c0107bc7a6a67c4db247ba0bc33a7a9933d670",
+      "role": "Established manuscript input, adapted; source unchanged."
+    },
+    {
+      "path": "E:\\Research-Publications\\TOE-QG-research-continuation-20261028\\candidate-recovery-20261029\\multicell\\RESULT.md",
+      "sha256": "c605e0b2f43c596c29ae89ff094f02b39f983a4abe70ba71d76b08c28ce254f6",
+      "role": "Completed recovery evidence, reused unchanged."
+    },
+    {
+      "path": "E:\\Research-Publications\\TOE-QG-research-continuation-20261028\\candidate-recovery-20261029\\multicell\\CONSTRUCTIVE-ADDENDUM.md",
+      "sha256": "f277e5671a93cabeb2d35557c77f0403121eee48bf73855b2fd3df0e328c723b",
+      "role": "Completed recovery evidence, reused unchanged."
+    },
+    {
+      "path": "E:\\Research-Publications\\TOE-QG-research-continuation-20261028\\candidate-recovery-20261029\\multicell\\claims.json",
+      "sha256": "0d7a1c513856a71c09f0f19a32c1b2803b6ed5334c6d36c9c3aee11116e2f805",
+      "role": "Completed recovery evidence, reused unchanged."
+    },
+    {
+      "path": "E:\\Research-Publications\\TOE-QG-research-continuation-20261028\\candidate-recovery-20261029\\multicell\\sourcehashes.json",
+      "sha256": "d1db9681071f4a66dce61c2b123e4125d266a31a65c9ff2318e5ff9656208a4e",
+      "role": "Completed recovery evidence, reused unchanged."
+    }
+  ],
+  "adapted_modules": {
+    "verify_first_order_angle_exact.py": {
+      "source_path": "E:\\TOE-Fable - \u526f\u672c\\phase-first-cartan-corner-gravity\\scripts\\verify_first_order_angle_exact.py",
+      "source_sha256": "b29ca3b47ae2e30da64faae1642e2d191e8caa2560e5e6742a25b26f0c53be3c",
+      "packet_sha256": "f564243ce0e9b9083098ba98c17522195b21b7e7d9da0607a2b9b8afe150a1a6",
+      "changes": "Descriptive historical labels and encoding only; computational logic retained."
+    },
+    "verify_cartan_regge_ranks.py": {
+      "source_path": "E:\\TOE-Fable - \u526f\u672c\\phase-first-cartan-corner-gravity\\scripts\\verify_cartan_regge_ranks.py",
+      "source_sha256": "75f49f4155b4d4ad2c364bb35f4461198a2e13927603520025f3a50cde95b0b3",
+      "packet_sha256": "0be71c16996ef612703ab678f168ab25880ef974369b6a4227bf81573d7cb959",
+      "changes": "Descriptive historical labels and encoding only; computational logic retained."
+    },
+    "regge_four_two_action.py": {
+      "source_path": "E:\\TOE-Fable - \u526f\u672c\\phase-first-cartan-corner-gravity\\scripts\\regge_four_two_action.py",
+      "source_sha256": "ad6e3824a50a9d0a9556f92d2c38fc2b1bfa1358aa55649b69a1bf7aaef8fc3a",
+      "packet_sha256": "0d25875605b373d5248fcd5f19b58b4594131821651d60a6e9d8ff9f7ab7468f",
+      "changes": "Descriptive historical labels and encoding only; computational logic retained."
+    },
+    "sourced_regge_dynamics.py": {
+      "source_path": "E:\\TOE-Fable - \u526f\u672c\\phase-first-cartan-corner-gravity\\scripts\\sourced_regge_dynamics.py",
+      "source_sha256": "fb957e6e779d59852f72c28136bfaa2111ab13bfc9d2b5e78ed535275ed8227f",
+      "packet_sha256": "4e4852274c40bd011856e9b16e1a288cb51c6a7d244c0be59ee11b6e516f6ab3",
+      "changes": "Historical descriptive labels removed; import made explicitly local. Numerical logic unchanged."
+    }
+  },
+  "saved_output_input": {
+    "copied_from": "E:\\Research-Publications\\TOE-QG-research-continuation-20261028\\candidate-recovery-20261029\\multicell\\p03-verification.json",
+    "sha256": "ec6640e92f44f821a766bb2d6410617a3eca4efa1738b9bbe4ea5b1eb856fdb2",
+    "copied_bytes_unchanged": true
+  },
+  "default_replay": "Local bundled modules only; no historical paths or network required.",
+  "publication_priority": "Not established by private dates or hashes.",
+  "packet_sources": [
+    {
+      "path": "code/regge_four_two_action.py",
+      "sha256": "0d25875605b373d5248fcd5f19b58b4594131821651d60a6e9d8ff9f7ab7468f"
+    },
+    {
+      "path": "code/replay.py",
+      "sha256": "ea479712fc7d4141da59742ce762db1fcff6e4a9f15163f1f19c8c7b5c4d7f31"
+    },
+    {
+      "path": "code/sourced_regge_dynamics.py",
+      "sha256": "4e4852274c40bd011856e9b16e1a288cb51c6a7d244c0be59ee11b6e516f6ab3"
+    },
+    {
+      "path": "code/verify_cartan_regge_ranks.py",
+      "sha256": "0be71c16996ef612703ab678f168ab25880ef974369b6a4227bf81573d7cb959"
+    },
+    {
+      "path": "code/verify_first_order_angle_exact.py",
+      "sha256": "f564243ce0e9b9083098ba98c17522195b21b7e7d9da0607a2b9b8afe150a1a6"
+    },
+    {
+      "path": "inputs/calibration.json",
+      "sha256": "97b21aafdd73f51c0cca44b9b6ca08efb856607eb4be015df1a0111de547aa5d"
+    },
+    {
+      "path": "main.tex",
+      "sha256": "6944fb9b2cac61ed8717d1c29b320d3a9ec90e88d7f1673b48c2e6af8b8db613"
+    },
+    {
+      "path": "references.bib",
+      "sha256": "d18cd34349a6e02ca73dd361e6449c5a5ab637018a62dbb972ebec5fb3d46541"
+    }
+  ],
+  "portability_check": {
+    "command": "python code/replay.py",
+    "execution_working_directory": "An unrelated local workspace, using the absolute script path",
+    "exit_code": 0,
+    "network_required": false,
+    "historical_project_imports": false
+  },
+  "compiled_artifact": {
+    "path": "manuscript.pdf",
+    "pages": 9,
+    "sha256": "d0d5bbb20fde6750af81b68ea2cd50bd9332535f0567bfa79161360af133d817",
+    "pdf_author": "",
+    "latexmk_exit_code": 0,
+    "final_log_issues": [],
+    "visual_qa": "Parent integrated delivery workflow; not claimed by this worker."
+  },
+  "replay_wrapper_changes": "Path-local inputs/output and comparison against unchanged established outputs; all modules shipped."
+}

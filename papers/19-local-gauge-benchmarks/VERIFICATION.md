@@ -1,0 +1,11 @@
+# Verification
+
+The complete 27-page English paper compiles with existing TeX Live 2025 latexmk/pdfLaTeX/BibTeX. Final log: no errors, undefined references/citations, multiply defined labels, missing glyphs or overfull boxes. Ten underfull table/bibliography paragraphs remain. PDF Author is empty; human byline and affiliation are blank. Integrated visual QA belongs to the parent; it has not been substituted by an existence or page-count check.
+
+`python reproduce.py` succeeded with four standalone SymPy programs: Green matrix 7 PASS rows, Ward transport 15, graded algebra 17, first matter vertex 10. All exit codes are zero, no FAIL markers occur, and saved stdout/receipt is bundled. Source-to-portable changes are descriptive labels and output names only. The algebra and parameters are retained, with original/derivative hashes in code provenance.
+
+The actual coverage is finite block multiplication, pairing/field rescalings, graded signs, normalizations and the displayed first matter cocycle coefficients. These scripts do not prove Green support, Fredholm estimates, microlocal wavefront conditions, local-support cohomology, renormalization or an interacting QME. The paper makes the analytic/source dependencies explicit, and a complete fresh independent audit of all nested analytic bridges is not claimed.
+
+The reduced physical Hadamard state is now presented as an imported input and cites the separate canonical critical Einstein–scalar theorem. Its proof is not duplicated here. The all-real auxiliary-parameter Green formula remains distinct from the full free five-field Ward construction at lambda=1/2. Ordinary dagger does not descend to the same frozen BRST cohomology; no transferred replacement is asserted. The first matter subcocycle and field-only stress Ward row do not evaluate the off-shell AMWI anomaly-map image. The naive source-filtration checker is deliberately absent.
+
+The result is a source-specialized local benchmark with complete displayed methods/results at that scope. It does not derive the input Einstein action, supply a global AdS boundary theory, construct an operational CP instrument or close a nonlinear QME/IR bridge. No human expert review or comprehensive novelty certification occurred. Sources, chronology and unresolved attribution are recorded in the manuscript and `PROVENANCE.json`.

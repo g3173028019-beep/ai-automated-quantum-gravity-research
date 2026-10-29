@@ -1,0 +1,106 @@
+{
+  "schema": "portable-paper-provenance-v1",
+  "date_beijing": "2026-10-29",
+  "contribution_history": {
+    "human_author_names": [],
+    "affiliations": [],
+    "human_expert_review": false,
+    "earlier_work": "Fable 5-led, as reported by the operator",
+    "july_2026_onward": "Predominantly produced by GPT models, as reported by the operator",
+    "other_review_preparation": [
+      "DeepSeek",
+      "multiple GPT models"
+    ],
+    "attribution_quote": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+    "global_novelty_certificate": false
+  },
+  "sources": [
+    {
+      "identifier": "P05-quantum-weight-spin",
+      "path": "E:\\TOE-Fable - \u526f\u672c\\double-lock-gravity\\papers\\cross-framework-bilingual-series\\P05-quantum-weight-spin\\en\\main.tex",
+      "sha256": "b98da0950eebc4cd8df10ccaa67ad7b730fcf8c56cfd9dc7a2f697fbf7b5c743",
+      "role": "Established manuscript input, adapted; source unchanged."
+    },
+    {
+      "identifier": "P06-multicell-qclt",
+      "path": "E:\\TOE-Fable - \u526f\u672c\\double-lock-gravity\\papers\\cross-framework-bilingual-series\\P06-multicell-qclt\\en\\main.tex",
+      "sha256": "ea626d986c2b1cebd423124bf2e4e08052b535a2bc33598b9ea0abebae251cce",
+      "role": "Established manuscript input, adapted; source unchanged."
+    },
+    {
+      "path": "E:\\Research-Publications\\TOE-QG-research-continuation-20261028\\candidate-recovery-20261029\\multicell\\RESULT.md",
+      "sha256": "c605e0b2f43c596c29ae89ff094f02b39f983a4abe70ba71d76b08c28ce254f6",
+      "role": "Completed recovery evidence, reused unchanged."
+    },
+    {
+      "path": "E:\\Research-Publications\\TOE-QG-research-continuation-20261028\\candidate-recovery-20261029\\multicell\\CONSTRUCTIVE-ADDENDUM.md",
+      "sha256": "f277e5671a93cabeb2d35557c77f0403121eee48bf73855b2fd3df0e328c723b",
+      "role": "Completed recovery evidence, reused unchanged."
+    },
+    {
+      "path": "E:\\Research-Publications\\TOE-QG-research-continuation-20261028\\candidate-recovery-20261029\\multicell\\claims.json",
+      "sha256": "0d7a1c513856a71c09f0f19a32c1b2803b6ed5334c6d36c9c3aee11116e2f805",
+      "role": "Completed recovery evidence, reused unchanged."
+    },
+    {
+      "path": "E:\\Research-Publications\\TOE-QG-research-continuation-20261028\\candidate-recovery-20261029\\multicell\\sourcehashes.json",
+      "sha256": "d1db9681071f4a66dce61c2b123e4125d266a31a65c9ff2318e5ff9656208a4e",
+      "role": "Completed recovery evidence, reused unchanged."
+    }
+  ],
+  "adapted_modules": {},
+  "saved_output_input": {
+    "copied_from": "E:\\Research-Publications\\TOE-QG-research-continuation-20261028\\candidate-recovery-20261029\\multicell\\verification.json",
+    "sha256": "c081e232e648b7ff79bc70cb87418ee8e772ac8ef47e741207142c5c2af331c1",
+    "copied_bytes_unchanged": true
+  },
+  "default_replay": "Local bundled modules only; no historical paths or network required.",
+  "publication_priority": "Not established by private dates or hashes.",
+  "packet_sources": [
+    {
+      "path": "code/verify.py",
+      "sha256": "a53bf8929013eb8bcb471da2a1fe824ebad52964586c65deb5ea98b2b368712c"
+    },
+    {
+      "path": "family.tex",
+      "sha256": "d05b538e8207d90554d6ac78d7fca16e89cfa30c2c9886e012adb03569f834a5"
+    },
+    {
+      "path": "inputs/model.json",
+      "sha256": "502349154e0beba51a14fa487186d1ae18c090368241640eb03da57282849f18"
+    },
+    {
+      "path": "limits.tex",
+      "sha256": "14ddce2ec650c0b9be3b2216b37de9bd3631da0a04dcde7d2e94a63cb8c75b69"
+    },
+    {
+      "path": "main.tex",
+      "sha256": "3ecc2befc7f82953b9ef6177e23ad948221d84ca1b5b85a3e56f9ae14bde64bd"
+    },
+    {
+      "path": "network.tex",
+      "sha256": "8d88d49e968a32bdf6fe1c28711e605b7014b34641354d7d2e81a88c54df0072"
+    },
+    {
+      "path": "references.bib",
+      "sha256": "40517fd45d7948c3e906fbf594a0cc79da02e8da1b4ef2df238347bf7bcdf923"
+    }
+  ],
+  "portability_check": {
+    "command": "python code/verify.py",
+    "execution_working_directory": "An unrelated local workspace, using the absolute script path",
+    "exit_code": 0,
+    "network_required": false,
+    "historical_project_imports": false
+  },
+  "compiled_artifact": {
+    "path": "manuscript.pdf",
+    "pages": 12,
+    "sha256": "fcbd78bae8fddc96b72c14dd1412532dcb0bb3467a2448e1507c75b42b88354f",
+    "pdf_author": "",
+    "latexmk_exit_code": 0,
+    "final_log_issues": [],
+    "visual_qa": "Parent integrated delivery workflow; not claimed by this worker."
+  },
+  "replay_wrapper_changes": "Path-local inputs/output and comparison against unchanged established outputs; all modules shipped."
+}

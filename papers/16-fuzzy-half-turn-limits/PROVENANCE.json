@@ -1,0 +1,96 @@
+{
+  "edition": "2026-10-29",
+  "title": "Half-Turn Covariance of a Tangential Fuzzy-Sphere Oscillator and Its Sector-Resolved Planar Limit",
+  "human_authors": [],
+  "affiliations": [],
+  "pdf_author": "",
+  "human_expert_review": false,
+  "claim_basis": "Self-contained analytic proofs plus portable exact/numerical convention checks; targeted classical prior-art comparison, no comprehensive novelty certificate.",
+  "source_lineage": [
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/post-SCG-core-series/C1-fuzzy-half-turn/en/main.tex",
+      "sha256": "d00c8287d3fa8ce8abef0f02b211c14a068c53f86309bc903f1f23459177c937",
+      "bytes": 7158,
+      "role": "Earlier concise manuscript; finite definitions and algebra"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/trackB-duality-contraction/REPORT.md",
+      "sha256": "28d123304ce45b2144f89310aaf22c31c1621829e6b0520189b9e9dcc7717ba4",
+      "bytes": 8245,
+      "role": "Original finite construction and four-sector observation; broad novelty claims superseded"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/trackB-duality-contraction/gw_fuzzy2.wls",
+      "sha256": "206714bc0d654a86d41def7f60894da2347222f0ef4658d315c2923b1f447418",
+      "bytes": 5612,
+      "role": "Historical numeric conventions; not a runtime dependency"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/fuzzy_projection/DERIVATIONS.md",
+      "sha256": "63806436c7a4b17a5479c4fd86c3bd95aaf961c0dae585d713e7e6083af4d9d5",
+      "bytes": 11138,
+      "role": "Recovery heat-trace, cross-pole and Weyl-symbol derivations"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/fuzzy_projection/C1-FUZZY-HALF-TURN-BRIEF.md",
+      "sha256": "6b0a6c117bf09d8975050b6c504ab2507a2af5d6777b1acb4c74f695ca0c3ee2",
+      "bytes": 5599,
+      "role": "Recovery article assessment and prior-art comparison"
+    }
+  ],
+  "packet_assets": [
+    {
+      "path": "main.tex",
+      "sha256": "e9ab1f63feed7dc4c9c67218c92601ada484570ccbcb11f9b5fdfd8d555939b2",
+      "bytes": 15961
+    },
+    {
+      "path": "manuscript.pdf",
+      "sha256": "45b913874dd801d866c90b3221697214a72e6a2bee1db01859b974f4354a8abf",
+      "bytes": 233141
+    },
+    {
+      "path": "README.md",
+      "sha256": "27e0d2274c772b336d8d6e999382dbb4f207e8e275615fff6babb75d7c4e77b8",
+      "bytes": 2272
+    },
+    {
+      "path": "references.bib",
+      "sha256": "8cde0099de1bf63275cae7c37c88cab5b08c7f5b97b51bf7f3ec835a77bf2a21",
+      "bytes": 1458
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "21d3d3236fd5a56235fca5743339259461d587d5e309f67e5cbdd2cce59a671d",
+      "bytes": 15
+    },
+    {
+      "path": "verification/check_fuzzy.py",
+      "sha256": "f7681f1390d9d017a6643440206a4b53d0ef8a893947172d6af649c4c6cf2f7e",
+      "bytes": 2353
+    },
+    {
+      "path": "verification/checks.json",
+      "sha256": "13fc9c875da941b70885e525175bf7ab1f2632bec9594593c3dad097184ebf4d",
+      "bytes": 1815
+    },
+    {
+      "path": "VERIFICATION.md",
+      "sha256": "2da7a3bd6fc7b849010f129ea804d7b3fc2f71cb00b4df099e07857bbd0b0dd4",
+      "bytes": 2840
+    }
+  ],
+  "runtime_dependencies": "Only Python packages in requirements.txt and standard TeX tools. Historical source paths are provenance identifiers, never runtime inputs.",
+  "reported_chronology": "Earlier work mainly Fable 5-led; results from July 2026 onward predominantly GPT-produced; DeepSeek and multiple GPT models contributed cross-review, checking and preparation. Later revision does not reattribute earlier work.",
+  "attribution_statement": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "date_policy": "Document/recovery/private-upload/public-disclosure dates are distinct; no settled priority, journal acceptance, authorship or ownership determination.",
+  "build": {
+    "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex",
+    "status": "success",
+    "pages": 6,
+    "final_tex_log_warnings": [],
+    "launcher_note": "Perl locale fallback warning; successful TeX output unaffected."
+  },
+  "reference_verification": "Primary arXiv/publisher metadata; formula-level Langmann-Szabo/Ydri comparison for oscillator; Heyde title/author/volume/issue/pages checked via Crossref API. Bibliography keys resolved.",
+  "integration_boundary": "Parent owns final visual PDF QA and upload. No historical source or publication-checkout mutation by packet worker."
+}

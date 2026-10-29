@@ -1,0 +1,66 @@
+{
+  "python": "3.11.15",
+  "sympy": "1.14.0",
+  "numpy": "2.4.3",
+  "invariant": {
+    "-1": {
+      "shape": [
+        2750,
+        275
+      ],
+      "modulus": 1009,
+      "modular_rank": 274,
+      "exact_integer_null_vector_nonzero": true,
+      "exact_integer_null_residual": 0,
+      "rational_rank": 274,
+      "rational_nullity": 1
+    },
+    "1": {
+      "shape": [
+        2750,
+        275
+      ],
+      "modulus": 1009,
+      "modular_rank": 274,
+      "exact_integer_null_vector_nonzero": true,
+      "exact_integer_null_residual": 0,
+      "rational_rank": 274,
+      "rational_nullity": 1
+    }
+  },
+  "variational": {
+    "torsion_rank": 24,
+    "torsion_determinant": 16,
+    "bianchi_rank": 1,
+    "riemann_dimension": 20,
+    "coframe_rank": 10,
+    "weyl_kernel": 10,
+    "arithmetic": "SymPy rational exact"
+  },
+  "clifford": {
+    "-1": {
+      "contact_eigenvalues": {
+        "-1": 2,
+        "1": 2
+      },
+      "clifford_exact": true,
+      "all_spin_brackets_exact": true,
+      "all_epsilon_trace_components_exact": true,
+      "contact_determinant_identity_exact": true,
+      "all_contact_covariance_exact": true,
+      "lorentz_fixed_complex_matrix_dimension": 2
+    },
+    "1": {
+      "contact_eigenvalues": {
+        "-1": 2,
+        "1": 2
+      },
+      "clifford_exact": true,
+      "all_spin_brackets_exact": true,
+      "all_epsilon_trace_components_exact": true,
+      "contact_determinant_identity_exact": true,
+      "all_contact_covariance_exact": true,
+      "lorentz_fixed_complex_matrix_dimension": 2
+    }
+  }
+}

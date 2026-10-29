@@ -1,0 +1,43 @@
+{
+  "odd_q": {
+    "N": 12,
+    "q": 3,
+    "H2H2": 3696000,
+    "four_J": 13884480,
+    "total": 17580480,
+    "completion_sum_counts": {
+      "-10": 17337,
+      "10": 14523,
+      "-2": 2095,
+      "2": 2225,
+      "-8": 1890,
+      "8": 1890,
+      "-4": 840,
+      "4": 780
+    }
+  },
+  "even_q_reference": {
+    "N": 8,
+    "q": 2,
+    "H2H2": 7560,
+    "four_J": 7560,
+    "total": 15120,
+    "completion_sum_counts": {
+      "-3": 140,
+      "3": 70
+    }
+  },
+  "quadrature": {
+    "p4": "x^4-40x^2+75",
+    "squared_nodes": "20 +/- 5 sqrt(13)",
+    "individual_weights": "1/4 +/- 17/(20 sqrt(13))",
+    "even_moments_0_2_4_6": [
+      "1",
+      "3",
+      "45",
+      "1575"
+    ],
+    "odd_moments_through_7": 0,
+    "all_exact": true
+  }
+}

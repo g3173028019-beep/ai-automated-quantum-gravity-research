@@ -1,0 +1,509 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype,xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prb}{\mathbb P}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Cum}{\operatorname{Cum}}
+\title{Thermal Point-Process Statistics:\\Exponential Bounds, Reconstruction, and Their Limits}
+\author{}
+\date{29 October 2026}
+\hypersetup{pdfauthor={},pdftitle={Thermal Point-Process Statistics: Exponential Bounds, Reconstruction, and Their Limits}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We separate three questions about a random spectrum: determination of a single thermal statistic by its moments, reconstruction of a point-process law from joint temperature data, and purity of a state representing that law.
+For nonnegative bounded weights and factorial-correlation domination, we give a Poisson-type exponential-moment bound and an explicit concentration inequality.
+A lognormal Cox construction shows that a nonnegative spectrum with a fixed ground level can nevertheless have a moment-indeterminate heat statistic when correlation domination is absent.
+Two deterministic two-level spectra show that a determinate single-clock law need not identify the spectrum.
+For determinantal statistics we state the ordered-clock trace inequality and prove that superlinear logarithmic heat-trace growth is sufficient for fixed-order single-channel dominance.
+An exactly pure projection process with linear logarithmic growth disproves the converse.
+Finally, all mixed positive-temperature moments determine the point-process law in a class with factorial domination and finite weighted transforms, but this does not imply a pure state or a one-dimensional GNS representation.
+A conditional semigroup-density lemma isolates what absolute continuity can establish without an unproved stochastic-Airy tail estimate.
+The ingredients are classical generating-functional, trace, and moment methods; the results provide explicit assumptions and counterexamples for their use together.
+\end{abstract}
+
+\section{Three identification problems}
+Let $\xi$ be a random locally finite spectrum and let
+\begin{equation}\label{eq:heat}
+ Z(\beta)=\int e^{-\beta E}\,\xi(dE),\qquad\beta>0,
+\end{equation}
+whenever the integral is finite.
+The moments of $Z(\beta)$ concern a probability law on $[0,\infty)$.
+That law is a coarse image of the random spectrum, while a state on an algebra of observables is a further mathematical object with its own purity question.
+Conflating these levels can turn a valid scalar moment calculation into an unsupported spectral or physical conclusion.
+The distinction is particularly relevant when gravitational amplitudes are interpreted as ensemble moments~\citep{JanssenMirbabayiZograf2021}.
+
+This paper gives a sequence of positive results and explicit boundary examples.
+Sections~\ref{sec:bounded} and~\ref{sec:counter} concern bounded statistics and their assumptions.
+Section~\ref{sec:channels} treats determinantal trace channels and their large-clock behavior.
+Section~\ref{sec:reconstruct} identifies the stronger joint data sufficient for point-process reconstruction.
+Section~\ref{sec:density} explains the limited role of a conditional-density reduction.
+The proofs are included so that the scope of each conclusion can be inspected without relying on a proposed gravity completion.
+
+We use standard point-process and determinantal machinery~\citep{Soshnikov2000,Lyons2003}.
+No new general theory of moment problems or determinantal processes is claimed.
+The useful content is an explicit collection of compatible sufficient conditions, quantitative bounds, and counterexamples to tempting converse implications.
+
+\section{Bounded statistics under correlation domination}\label{sec:bounded}
+Let $X$ be a locally compact second-countable space and $\xi$ a simple locally finite point process.
+Its factorial correlation measures $\rho_k$ are characterized by
+\begin{equation}
+ \E\sum_{x_1,\ldots,x_k\in\xi}^{\ne}F(x_1,\ldots,x_k)
+ =\int F\,d\rho_k
+\end{equation}
+for nonnegative measurable $F$; the sum is over ordered distinct points.
+Assume the measure inequality
+\begin{equation}\label{eq:domination}
+ \rho_k\le\rho_1^{\otimes k},\qquad k\ge1.
+\end{equation}
+For a Hermitian determinantal process with positive-contraction kernel, the Gram determinant inequality gives~\eqref{eq:domination}~\citep{Soshnikov2000,Lyons2003}.
+Merely having a formal non-Hermitian determinantal representation is not the same hypothesis.
+
+\begin{theorem}[Exponential-moment bound]\label{thm:mgf}
+Suppose~\eqref{eq:domination} holds, $0\le f\le b<\infty$, and
+\begin{equation}
+ m=\int_X f\,d\rho_1<\infty.
+\end{equation}
+Then $Z_f=\int f\,d\xi$ is finite almost surely.
+For $b>0$ and $t\ge0$,
+\begin{equation}\label{eq:mgf}
+ \E e^{tZ_f}\le
+ \exp\left[\frac mb(e^{tb}-1)\right].
+\end{equation}
+Its moment generating function extends to an entire function of a complex argument, and its scalar law is determined by its moments.
+If $b=0$ or $m=0$, then $Z_f=0$ almost surely.
+\end{theorem}
+\begin{proof}
+Since $\E Z_f=m$, finiteness follows immediately.
+First restrict $f$ to a compact window $B$.
+Write $g=e^{tf}-1\ge0$ on that window.
+The finite-configuration product expansion and Tonelli's theorem give
+\begin{align}
+ \E e^{tZ_{f1_B}}
+ &=\sum_{k=0}^{\infty}\frac1{k!}\int_{B^k}\prod_{i=1}^k g(x_i)\,d\rho_k\\
+ &\le\exp\left(\int_Bg\,d\rho_1\right).
+\end{align}
+Convexity on $[0,b]$ gives
+\begin{equation}
+ e^{tf}-1\le\frac f b(e^{tb}-1).
+\end{equation}
+An increasing compact exhaustion and monotone convergence prove~\eqref{eq:mgf}.
+For each $R>0$, $|e^{zZ_f}|\le e^{RZ_f}$ on $|z|\le R$ and the right-hand side is integrable.
+Differentiation under the expectation therefore defines an entire function, whose Taylor coefficients are the moments.
+For any competing probability law on $[0,\infty)$ with the same moments, Tonelli's theorem gives the same finite series $\sum_{n\ge0}t^n\E Z_f^n/n!$ for every $t\ge0$.
+Thus both laws have equal moment generating functions near zero and hence equal Laplace transforms; uniqueness of the latter identifies the laws.
+\end{proof}
+
+\begin{corollary}[Explicit upper tail]\label{cor:tail}
+For $m,b>0$ and $x>0$,
+\begin{equation}\label{eq:tail}
+ \Prb(Z_f\ge m+x)
+ \le\exp\left[-\frac{m+x}{b}\log\left(1+\frac xm\right)+\frac xb\right].
+\end{equation}
+\end{corollary}
+\begin{proof}
+Apply Markov's inequality to $e^{tZ_f}$ and~\eqref{eq:mgf}.
+The minimizing value is $t=b^{-1}\log(1+x/m)$.
+\end{proof}
+
+For the heat weight in~\eqref{eq:heat}, a deterministic lower spectral bound $E\ge E_{\min}$ supplies $b=e^{-\beta E_{\min}}$.
+The lower edge need not be zero.
+Correlation domination, a uniform finite lower edge, and a finite heat mean suffice for Theorem~\ref{thm:mgf}.
+A fixed finite protected degeneracy adds a deterministic constant, shifting the statistic without affecting moment determinacy.
+These are hypotheses on a completion, not a construction of one.
+
+\section{Two sharp limits on the interpretation}\label{sec:counter}
+\subsection{A positive spectrum with an indeterminate heat law}
+The lower-edge hypothesis alone cannot replace correlation control.
+We use the classical lognormal moment-indeterminacy mechanism~\citep{Heyde1963} in a simple Cox process.
+
+Let $X$ be Gaussian with mean zero and variance four and set $\Lambda=e^X$.
+For $|\epsilon|\le1$, define a density on $(0,\infty)$ by
+\begin{equation}\label{eq:stieltjes}
+ p_\epsilon(\lambda)=p_0(\lambda)
+ \left[1+\epsilon\sin\left(\frac\pi2\log\lambda\right)\right],
+\end{equation}
+where $p_0$ is the variance-four lognormal density.
+The densities are normalized and nonnegative.
+For every integer $n\ge0$,
+\begin{equation}\label{eq:sinmom}
+ \E[e^{nX}\sin(\pi X/2)]
+ =e^{2n^2-\pi^2/2}\sin(2\pi n)=0.
+\end{equation}
+They are distinct probability laws with the same integer moments.
+
+Conditionally on $\Lambda$, sample a Poisson process with intensity $\Lambda\,dE$ on $[0,1]$ and append one fixed level at $E=0$.
+Every realization is a finite nonnegative spectrum; almost surely the Poisson part has no point at the appended level.
+At $\beta=1$, let
+\begin{equation}
+ Z=1+\sum_i e^{-E_i}.
+\end{equation}
+\begin{proposition}\label{prop:cox}
+All integer moments of $Z$ are finite and independent of $\epsilon$, but its probability law depends on $\epsilon$.
+Consequently each of these heat laws is moment-indeterminate.
+\end{proposition}
+\begin{proof}
+Conditioned moments of the Poisson linear statistic are finite polynomials in $\Lambda$, as follows either by partitioning coincident indices or by differentiating its conditional generating functional.
+Equation~\eqref{eq:sinmom} therefore makes all moments of $Z$ equal.
+For $s>0$, its Laplace transform is
+\begin{equation}\label{eq:coxlap}
+ \E_\epsilon e^{-sZ}=e^{-s}L_\epsilon(c(s)),\quad
+ c(s)=\int_0^1(1-e^{-s e^{-E}})\,dE,
+\end{equation}
+where $L_\epsilon$ is the Laplace transform of $\Lambda$.
+The function $c$ is continuous, strictly increasing, and maps $(0,\infty)$ onto $(0,1)$.
+If two heat laws agreed, their intensity Laplace transforms would agree on $(0,1)$.
+Analyticity on the positive half-plane and Laplace uniqueness would identify the distinct densities~\eqref{eq:stieltjes}, a contradiction.
+\end{proof}
+
+The missing hypothesis is visible on the diffuse Poisson part:
+\begin{equation}
+ \frac{\rho_2}{\rho_1\otimes\rho_1}
+ =\frac{\E\Lambda^2}{(\E\Lambda)^2}=e^4>1.
+\end{equation}
+The fixed ground level does not restore factorial domination.
+This example therefore does not contradict Theorem~\ref{thm:mgf}.
+It shows why a protected lower edge, without a correlation hypothesis, cannot establish the conclusion.
+
+\begin{corollary}\label{cor:coxjoint}
+The processes indexed by $\epsilon$ have the same complete mixed-temperature moment hierarchy, despite their distinct heat and point-process laws.
+\end{corollary}
+\begin{proof}
+Conditionally on $\Lambda$, the coincidence-partition formula for any product $\prod_j Z(\beta_j)$ is a finite polynomial in $\Lambda$.
+A block contributes the finite coefficient $\int_0^1e^{-(\sum_j\beta_j)E}\,dE$, and the appended ground level only adds constants.
+All integer intensity moments agree by~\eqref{eq:sinmom}, whereas Proposition~\ref{prop:cox} already separates the heat laws.
+\end{proof}
+
+Thus even all mixed clocks do not identify an unrestricted point-process law.
+The reconstruction theorem below uses correlation domination as an essential class assumption, not as incidental regularity.
+
+For an illustration, the portable quadrature gives $\E e^{-Z}\simeq0.1922416392$ and $0.2081849296$ for $\epsilon=1/2$ and $-1/2$, respectively.
+These decimals are not needed for the distinct-law proof and are not interval-certified bounds.
+
+\subsection{A determinate clock that does not determine the spectrum}
+Consider deterministic two-level Hamiltonians whose Boltzmann weights at $\beta=1$ are
+\begin{equation}
+ (e^{-E_1},e^{-E_2})=(1/4,3/4),\qquad
+ (e^{-F_1},e^{-F_2})=(1/3,2/3).
+\end{equation}
+Both spectra are positive and have the same dimension.
+Both give $Z(1)=1$, so every single-clock moment is exactly one and its law is determinate.
+At $\beta=2$, however,
+\begin{equation}
+ Z_E(2)=\frac58,\qquad Z_F(2)=\frac59.
+\end{equation}
+Thus even perfect knowledge of a determinate scalar law at one temperature does not reconstruct the spectrum.
+No stochastic or infinite-dimensional subtlety is responsible for this failure.
+
+\section{Determinantal channels and large-clock behavior}\label{sec:channels}
+\subsection{Cumulant expansion and the two-clock inequality}
+For a finite Hermitian positive-contraction kernel $K$ and a nonnegative diagonal weight $f$, the determinantal generating identity is
+\begin{equation}
+ \E e^{u\int f\,d\xi}=\det(I+(e^{uf}-I)K).
+\end{equation}
+Expanding the logarithm gives the standard cumulant formula~\citep{Soshnikov2000}
+\begin{equation}\label{eq:channels}
+ \Cum_k=\sum_{m=1}^k\frac{(-1)^{m+1}}m
+ \sum_{\substack{k_1+\cdots+k_m=k\\k_i\ge1}}
+ \frac{k!}{k_1!\cdots k_m!}
+ \Tr(f^{k_1}K\cdots f^{k_m}K).
+\end{equation}
+The inner sum is over ordered compositions, so no additional cyclic factorial is needed.
+In particular,
+\begin{align}
+ \Cum_2&=\Tr(f^2K)-\Tr(fKfK),\\
+ \Cum_3&=\Tr(f^3K)-3\Tr(f^2KfK)+2\Tr((fK)^3),\\
+ \Cum_4&=\Tr(f^4K)-4\Tr(f^3KfK)-3\Tr(f^2Kf^2K)\nonumber\\
+ &\hspace{8mm}+12\Tr(f^2K(fK)^2)-6\Tr((fK)^4).
+\end{align}
+The order-$k$ factorial correlation is a principal determinant; a connected cumulant is the channel sum~\eqref{eq:channels}, not that single determinant.
+
+These formulas also apply to a locally trace-class DPP with unbounded $f$ at each fixed order for which $K^{1/2}f^jK^{1/2}$ is trace class, $1\le j\le k$.
+To see this, increase bounded compactly supported weights $f_N$ to $f$.
+The factorial expansion bounds the $k$th moments by finite sums of products of $\Tr(f^jK)$, so the moments converge.
+The positive operators $K^{1/2}f_N^jK^{1/2}$ converge in trace norm, and telescoping the finite trace products passes~\eqref{eq:channels} to the limit.
+This finite-order argument does not assume existence of a positive-$u$ moment generating function for an unbounded heat weight.
+
+\begin{proposition}[Similarly ordered clocks]\label{prop:ordered}
+Let $0\le K\le I$ be a finite Hermitian matrix and let $f,g$ be nonnegative diagonal matrices satisfying $(f_i-f_j)(g_i-g_j)\ge0$ for all $i,j$.
+Then
+\begin{equation}\label{eq:ordered}
+ 0\le\Tr(fKgK)\le\Tr(fgK).
+\end{equation}
+\end{proposition}
+\begin{proof}
+The lower bound is $\Tr(fKgK)=\|g^{1/2}Kf^{1/2}\|_F^2$.
+For the upper bound, Hermiticity and symmetrization give
+\begin{align}
+ \Tr(fgK)-\Tr(fKgK)
+ &=\sum_i f_ig_i(K-K^2)_{ii}\nonumber\\
+ &\quad+\frac12\sum_{i,j}|K_{ij}|^2(f_i-f_j)(g_i-g_j)\ge0.
+\end{align}
+\end{proof}
+
+Two positive-temperature clocks increasing in the same spectral coordinate are similarly ordered.
+If the denominator is positive, the normalized two-clock cumulant is therefore
+\begin{equation}
+ 0\le 1-\frac{\Tr(fKgK)}{\Tr(fgK)}\le1.
+\end{equation}
+The ordering condition cannot be dropped.
+With $K$ the $2\times2$ all-ones matrix divided by two, $f=\operatorname{diag}(10,1)$, and $g=\operatorname{diag}(1,10)$, the two traces in~\eqref{eq:ordered} are $121/4$ and $10$, respectively.
+
+\subsection{A sufficient growth criterion}
+Use a common spectral coordinate $a$ and let $f_\beta=e^{\beta a}$.
+Write
+\begin{equation}
+ \omega(\beta)=\Tr(f_\beta K),\qquad
+ \Phi_k(\beta)=\frac{\Cum_k(Z(\beta))}{\omega(k\beta)}.
+\end{equation}
+This uses $a=-E$ relative to~\eqref{eq:heat}.
+The $m=1$ term in~\eqref{eq:channels} is precisely $\omega(k\beta)$.
+
+\begin{theorem}[Superlinear growth is sufficient]\label{thm:condensation}
+Suppose all positive-temperature weighted traces above are finite and nonzero, and
+\begin{equation}\label{eq:growth}
+ \log\omega(\beta)=c\beta^p+o(\beta^p),\qquad c>0,\quad p>1.
+\end{equation}
+Then $\Phi_k(\beta)\to1$ for every fixed $k\ge2$ as $\beta\to\infty$.
+\end{theorem}
+\begin{proof}
+For a nontrivial composition $k=k_1+\cdots+k_m$, $m\ge2$, let
+\begin{equation}
+ B_i=K^{1/2}f_\beta^{k_i}K^{1/2}\ge0.
+\end{equation}
+Schatten H\"older and $\|B_i\|_m\le\|B_i\|_1$ imply
+\begin{equation}
+ |\Tr(B_1\cdots B_m)|\le\prod_i\|B_i\|_m
+ \le\prod_i\omega(k_i\beta).
+\end{equation}
+The logarithm of this upper bound relative to $\omega(k\beta)$ is
+\begin{equation}
+ -c\beta^p\left(k^p-\sum_i k_i^p\right)+o(\beta^p).
+\end{equation}
+Strict superadditivity for $p>1$ makes it tend to minus infinity.
+There are finitely many channels at fixed $k$, proving the result.
+\end{proof}
+
+\subsection{The converse fails even for a projection kernel}
+A non-suppression conclusion cannot be drawn from an upper bound when $p\le1$.
+The following pure determinantal example proves that this is a real limitation.
+
+Let $d_n=2^{-n}$, $x_n=1-1/n$, and $y_n=-n$, for $n\ge1$.
+On the countable paired-label space, define
+\begin{equation}
+ v_n=\begin{pmatrix}\sqrt{d_n}\\\sqrt{1-d_n}\end{pmatrix},\qquad
+ K=\bigoplus_{n\ge1}v_nv_n^*,\qquad
+ f_\beta|_n=\operatorname{diag}(e^{\beta x_n},e^{-\beta n}).
+\end{equation}
+This is an orthogonal projection DPP: independently in each block exactly one point is selected, at $x_n$ with probability $d_n$ and at $y_n$ with probability $1-d_n$.
+All weighted traces at positive temperature are finite.
+The selected $x_n$ near the accumulation point $1$ have finite expected number $\sum_n d_n$, hence almost surely finite number, while the $y_n$ escape to minus infinity.
+Thus the displayed real spectral configuration is locally finite almost surely.
+
+\begin{proposition}\label{prop:p1}
+This projection process satisfies
+\begin{equation}
+ \lim_{\beta\to\infty}\frac{\log\omega(\beta)}\beta=1,
+ \qquad\lim_{\beta\to\infty}\Phi_k(\beta)=1\quad(k\ge2\text{ fixed}).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Here
+\begin{equation}
+ \omega(\beta)=\sum_n\left[d_ne^{\beta x_n}+(1-d_n)e^{-\beta n}\right].
+\end{equation}
+It is bounded above by $e^\beta+\sum_ne^{-\beta n}$ and below by $d_Me^{\beta(1-1/M)}$ for every fixed $M$.
+Taking logarithms, then $\beta\to\infty$ and $M\to\infty$, gives the growth exponent $p=1$.
+
+For a composition of total order $k$, the rank-one block identity gives the channel
+\begin{equation}\label{eq:blockchannel}
+ \sum_n\prod_{i=1}^m\left[d_ne^{k_i\beta x_n}+(1-d_n)e^{-k_i\beta n}\right].
+\end{equation}
+Let $D_k=\sum_n d_ne^{k\beta x_n}$.
+The all-$x$ term divided by $D_k$ is the weighted average of $d_n^{m-1}$ under weights $d_ne^{k\beta x_n}$.
+For any finite initial set the normalized weight tends to zero: a single larger index has strictly greater $x_n$ and eventually dominates that finite set.
+Since $d_n^{m-1}\to0$, splitting the average at a large fixed cutoff proves convergence to zero for $m\ge2$.
+
+Any other term in~\eqref{eq:blockchannel} has total $y$ order $k_Y\ge1$ and $x$ order $k_X=k-k_Y$.
+Dropping the probability factors bounds it by
+\begin{equation}
+ e^{k_X\beta}\sum_{n\ge1}e^{-k_Y\beta n}
+ \le\frac{e^{(k-2)\beta}}{1-e^{-\beta}}.
+\end{equation}
+It is negligible compared with $\omega(k\beta)=e^{(k-o(1))\beta}$.
+All nontrivial channels vanish after normalization, which proves the claim.
+\end{proof}
+
+Thus $p>1$ is sufficient and is not necessary, even with exact projection purity.
+The example is infinite rank with finite weighted traces; a finite fixed spectrum cannot realize the superlinear growth premise~\eqref{eq:growth} in the first place.
+Neither this channel limit nor rapid scalar moment growth establishes moment indeterminacy.
+In fact $f_\beta\le e^\beta$ in this projection example, and its finite mean and determinantal correlation domination put each fixed-$\beta$ law under Theorem~\ref{thm:mgf}.
+Its scalar laws are therefore moment-determinate while its normalized fixed-order cumulants still tend to one.
+
+\section{What all joint clocks determine}\label{sec:reconstruct}
+We now specify the stronger data that recover a spectral process.
+Use the coordinate $a=-E$ and
+\begin{equation}
+ Z(\beta)=\int e^{\beta a}\,\xi(da).
+\end{equation}
+\begin{theorem}[Joint-temperature reconstruction]\label{thm:reconstruction}
+Let $\xi$ be a simple locally finite point process on $\R$ whose first intensity is locally finite and whose factorial correlations satisfy~\eqref{eq:domination}.
+Assume
+\begin{equation}\label{eq:lapfinite}
+ \int_\R e^{\beta a}\,\rho_1(da)<\infty
+ \quad\text{for every }\beta>0.
+\end{equation}
+Within this class, the complete collection
+\begin{equation}\label{eq:jointdata}
+ \left\{\E\prod_{i=1}^k Z(\beta_i):k\ge1,\ \beta_i>0\right\}
+\end{equation}
+determines the point-process law uniquely.
+\end{theorem}
+\begin{proof}
+Partition the indices $1,\ldots,k$ according to which factors use the same point of $\xi$.
+For a partition $\pi$ with blocks $B$, this gives
+\begin{equation}\label{eq:partition}
+ \E\prod_{i=1}^kZ(\beta_i)
+ =\sum_{\pi}\int\prod_{B\in\pi}
+ e^{(\sum_{i\in B}\beta_i)a_B}\,d\rho_{|\pi|}((a_B)_{B\in\pi}).
+\end{equation}
+All terms are finite by~\eqref{eq:domination} and~\eqref{eq:lapfinite}.
+The partition into singletons is the $k$-variable Laplace transform of $\rho_k$.
+All other terms use lower-order correlation measures.
+Induction therefore recovers
+\begin{equation}
+ L_k(\beta_1,\ldots,\beta_k)
+ =\int e^{\sum_i\beta_i a_i}\,d\rho_k
+\end{equation}
+from~\eqref{eq:jointdata}.
+
+Fix $\beta_0>0$ and tilt $\rho_k$ to the finite measure
+\begin{equation}
+ d\mu_k=e^{\beta_0\sum_i a_i}\,d\rho_k.
+\end{equation}
+Its moment generating function is known and finite on the open box $|h_i|<\beta_0$, by evaluating $L_k$ at $\beta_0+h_i$.
+Multivariate Laplace uniqueness determines $\mu_k$, and untilting determines $\rho_k$.
+This step needs no one-sided support assumption.
+
+It remains to identify the process from the recovered correlations.
+For bounded $B$, set $\alpha_B=\rho_1(B)<\infty$.
+Then $\rho_k(B^k)\le\alpha_B^k$.
+For $|h|\le1$ supported in $B$, the factorial generating-functional expansion is absolutely convergent, bounded in absolute sum by $e^{\alpha_B}$:
+\begin{equation}
+ \E\prod_{a\in\xi}(1+h(a))
+ =\sum_{k=0}^{\infty}\frac1{k!}\int\prod_{i=1}^kh(a_i)\,d\rho_k.
+\end{equation}
+Taking $h=e^{-v}-1$ for nonnegative $v$ supported in $B$ gives the local Laplace functional.
+The collection of these functionals determines the locally finite point-process law.
+\end{proof}
+
+The proof uses the complete mixed hierarchy, not independent knowledge of the marginal laws at each temperature.
+An unbounded heat weight can fail to have positive exponential moments even though every finite mixed moment in~\eqref{eq:jointdata} exists.
+The proof does not apply Theorem~\ref{thm:mgf} outside its bounded-weight hypothesis.
+
+Airy spectral coordinates have polynomial intensity growth toward $a\to-\infty$ and rapid decay toward $a\to+\infty$.
+The corresponding heat convention is $e^{+\beta a}$.
+If instead physical energies $E=-a$ are used, both tail directions and the exponential sign must be reversed together.
+Theorem~\ref{thm:reconstruction} is a class-restricted law-identification statement; it does not determine which physical completion supplies its hypotheses.
+
+\subsection{Unique law is not a pure state}
+Take the probability measure $\mu=(\delta_0+\delta_1)/2$ and its polynomial state $\omega(p)=\int p\,d\mu$.
+Its moments uniquely determine $\mu$: any positive representing measure must obey
+\begin{equation}
+ \int(x^2-x)^2\,d\mu=0,
+\end{equation}
+so it is supported on $\{0,1\}$, and its first moment fixes both weights.
+But its GNS Hilbert space is $L^2(\mu)$, of dimension two, and
+\begin{equation}
+ \omega=\tfrac12\operatorname{ev}_0+\tfrac12\operatorname{ev}_1
+\end{equation}
+is not pure.
+Thus a unique representing distribution is not a single spectral point.
+A nondegenerate determinate Gaussian provides the same distinction with an infinite-dimensional $L^2$ representation.
+Joint-temperature reconstruction therefore does not imply a one-dimensional representation, a pure ensemble state, or a conclusion about unitary time evolution.
+
+\section{A conditional density method and its exact ceiling}\label{sec:density}
+Scalar moment questions with an unbounded heat weight may call for information about a density rather than exponential moments.
+The following elementary semigroup method isolates a useful part of that problem.
+
+\begin{lemma}[One Gaussian direction]\label{lem:semigroup}
+Let $H_\perp$ be lower-bounded self-adjoint on $L^2(0,\infty)$.
+Let $u\in L^\infty$ be real, compactly supported, nonpositive, and nonzero on a set of positive measure, and let $c,\beta>0$.
+Assume $H_\tau=H_\perp+c\tau M_u$ has trace-class heat semigroup for all real $\tau$, its diagonal heat kernel is strictly positive almost everywhere on the support of $-u$, and bounded-perturbation differentiation is valid in trace norm.
+Then $g(\tau)=\Tr e^{-\beta H_\tau}$ is continuously differentiable and
+\begin{equation}\label{eq:derivative}
+ 0<g'(\tau)=-\beta c\Tr(M_u e^{-\beta H_\tau})
+ \le\beta c\|u\|_\infty g(\tau).
+\end{equation}
+If $\tau$ is an independent standard Gaussian coordinate, conditionally on the complementary randomness the law of $g(\tau)$ has density on its image
+\begin{equation}\label{eq:conditional}
+ p(z\mid\perp)=\frac{\varphi(\tau_z)}{g'(\tau_z)}
+ \ge\frac{\varphi(\tau_z)}{\beta c\|u\|_\infty z},\qquad g(\tau_z)=z.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Duhamel differentiation gives
+\begin{equation}
+ \frac{d}{d\tau}e^{-\beta H_\tau}
+ =-c\int_0^\beta e^{-(\beta-r)H_\tau}M_u e^{-rH_\tau}\,dr.
+\end{equation}
+Trace cyclicity makes the integrand independent of $r$.
+Positivity of the diagonal and $0\le-u\le\|u\|_\infty$ give~\eqref{eq:derivative}.
+Strict monotonicity permits the one-dimensional change-of-variable formula, proving~\eqref{eq:conditional}.
+Mixtures of these conditional densities remain absolutely continuous.
+\end{proof}
+
+The lemma differentiates the heat trace as a whole and avoids level-by-level eigenfunction derivatives.
+It is useful only with the displayed pathwise and Gaussian-disintegration hypotheses.
+The stochastic Airy operator is an established representation of soft-edge spectra~\citep{RamirezRiderVirag2011}; applying Lemma~\ref{lem:semigroup} to a chosen realization still requires checking those hypotheses.
+
+More substantially,~\eqref{eq:conditional} is not a uniform pointwise tail lower bound.
+At a prescribed large or small $z$, one must control the Gaussian inverse coordinate $\tau_z$ on a quantitatively positive-mass set of complementary slices that all reach that $z$.
+A positive probability of landing somewhere in a broad band does not supply this common incidence estimate.
+An upper derivative bound cannot supply a lower bound on the image length traversed during a fixed parameter interval.
+Spectral control also requires correctly directed bracketing: an inserted internal Dirichlet condition raises the quadratic form and cannot be used as an upper bound on the original heat trace.
+
+If suitable two-ended pointwise density bounds and compact-interval lower bounds were proved, a classical logarithmic Krein criterion could imply moment indeterminacy.
+Neither Lemma~\ref{lem:semigroup}, the growth assumption~\eqref{eq:growth}, nor failure of a sufficient Carleman criterion proves those bounds.
+We make no unconditional fixed-temperature stochastic-Airy indeterminacy assertion.
+
+\section{Interpretation and reproducibility}
+The results distinguish four levels of information.
+Correlation domination and a bounded weight yield an entire scalar moment generating function and a quantitative tail bound.
+Removing domination permits moment-indeterminate heat laws even on positive spectra with a fixed ground level.
+Knowing a determinate single-clock law still need not identify the spectrum, while the full mixed-clock hierarchy identifies a process law in the explicitly bounded correlation class.
+That unique law can remain a nontrivial mixture of spectral realizations.
+
+The accompanying portable scripts verify the lognormal signed-moment identity, the two-level example, finite determinantal exponential bounds, low-order cumulant coefficients, and the unordered-clock counterexample.
+They record the Cox Laplace quadrature and finite channel-ratio illustrations, clearly separated from the analytic proofs.
+They require no archived project path or network access.
+The pure-projection channel limit and the full-clock reconstruction are analytic results; finite decimal sequences do not certify them.
+No stochastic-Airy simulation or gravitational dynamics is supplied by these tests.
+
+The article is a methods synthesis with explicit assumption tests.
+Classical lognormal indeterminacy, determinantal generating functions, and Laplace uniqueness remain credited prior mathematics.
+Its statements neither establish a nonperturbative gravity completion nor decide black-hole information loss.
+
+\section*{AI-assisted workflow and unresolved attribution}
+The repository operator states:
+\begin{quote}
+I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.
+\end{quote}
+The operator reports that earlier work was led mainly by Fable 5, whereas results from July 2026 onward were predominantly produced by GPT models.
+DeepSeek and multiple GPT models also participated in cross-review, checking, and manuscript preparation.
+This is a reported chronology rather than a complete audited allocation of individual contributions.
+A later correction does not reattribute an earlier result.
+Human author names and affiliations are intentionally blank, and these scientific claims have not undergone human expert review.
+Historical research dates, the current edition date, private upload, and demonstrated public disclosure remain distinct; no settled authorship, ownership, publication-priority, or journal-acceptance claim is made.
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

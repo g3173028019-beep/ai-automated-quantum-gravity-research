@@ -1,0 +1,51 @@
+\subsection{The boundary of the cone does not evade the selector obstruction}
+
+The preceding compact-stabilizer argument applies to positive-definite
+matrices in any finite congruence carrier.
+For the particular four-component Dirac carrier, the statement can be
+strengthened to include its positive semidefinite boundary.
+
+\begin{theorem}[All Lorentz-fixed Hermitian selectors]
+\label{thm:boundary-selector}
+In a Weyl basis the connected Lorentz subgroup acts by
+\begin{equation}
+ G(A)=\operatorname{diag}\bigl(A,(A^\dagger)^{-1}\bigr),
+ \qquad A\in SL(2,\mathbb C).
+ \label{eq:weyl-action}
+\end{equation}
+Its fixed Hermitian matrices under $X\mapsto G(A)XG(A)^\dagger$ are exactly
+\begin{equation}
+ X_c=\begin{pmatrix}0&cI_2\\\overline cI_2&0\end{pmatrix},
+ \qquad c\in\mathbb C.
+ \label{eq:fixed-selector}
+\end{equation}
+Every nonzero such matrix has inertia $(2,2,0)$.
+In particular, zero is the only Lorentz-fixed positive semidefinite matrix.
+\end{theorem}
+\begin{proof}
+For $A\in SU(2)$ the two blocks in \eqref{eq:weyl-action} coincide.
+The defining two-dimensional representation is irreducible, so rotation
+invariance forces a Hermitian fixed matrix into the form
+\[
+ X=\begin{pmatrix}aI_2&cI_2\\\overline cI_2&dI_2\end{pmatrix},
+ \qquad a,d\in\mathbb R.
+\]
+Apply the real boost $A_t=\operatorname{diag}(e^{t/2},e^{-t/2})$.
+The diagonal blocks become $aA_t^2$ and $dA_t^{-2}$.
+Invariance for every $t$ forces $a=d=0$.
+Conversely the upper off-diagonal block transforms as
+$A(cI_2)A^{-1}=cI_2$ for every $A\in SL(2,\mathbb C)$, and similarly for
+the lower block, so every \eqref{eq:fixed-selector} is fixed.
+Finally $X_c^2=|c|^2I_4$ and $\Tr X_c=0$, giving two eigenvalues
+$+|c|$ and two eigenvalues $-|c|$ when $c\ne0$.
+\end{proof}
+
+The Lorentz restriction of both Cartan spinor real forms is equivalent to
+\eqref{eq:weyl-action}; the conclusion is therefore the same for both.
+The theorem excludes positive fixed selectors in this carrier, including
+singular ones.
+It does not exclude a relational selection rule, an enlarged representation
+with a trivial summand, a nonlinear action, or independently supplied
+boundary data.
+A signed order parameter is compatible with a positive state space because
+observables and states are different objects.

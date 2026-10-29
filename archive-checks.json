@@ -1,20 +1,20 @@
 {
-  "checked_at_utc": "2026-10-29T00:43:05.975501+00:00",
+  "checked_at_utc": "2026-10-29T02:08:29.278654+00:00",
   "kind": "English manuscript build and archive checks",
   "human_expert_review": false,
   "historical_Wolfram_scripts_rerun": false,
   "papers": [
     {
       "paper": "01-projection-sign-rigidity",
-      "pages": 5,
+      "pages": 6,
       "pdf_author": "",
       "citation_count": 9
     },
     {
       "paper": "02-half-wormholes-wiener-chaos",
-      "pages": 7,
+      "pages": 10,
       "pdf_author": "",
-      "citation_count": 16
+      "citation_count": 18
     },
     {
       "paper": "03-jt-energy-weighted-recovery",
@@ -57,6 +57,72 @@
       "pages": 14,
       "pdf_author": "",
       "citation_count": 9
+    },
+    {
+      "paper": "10-quantum-weight-networks",
+      "pages": 12,
+      "pdf_author": "",
+      "citation_count": 13
+    },
+    {
+      "paper": "11-causal-regge-transfer",
+      "pages": 9,
+      "pdf_author": "",
+      "citation_count": 6
+    },
+    {
+      "paper": "12-complexity-moment-corona",
+      "pages": 11,
+      "pdf_author": "",
+      "citation_count": 6
+    },
+    {
+      "paper": "13-thermal-statistics-reconstruction",
+      "pages": 10,
+      "pdf_author": "",
+      "citation_count": 5
+    },
+    {
+      "paper": "14-operational-instrument-geometry",
+      "pages": 9,
+      "pdf_author": "",
+      "citation_count": 11
+    },
+    {
+      "paper": "15-positive-cartan-carriers",
+      "pages": 10,
+      "pdf_author": "",
+      "citation_count": 10
+    },
+    {
+      "paper": "16-fuzzy-half-turn-limits",
+      "pages": 6,
+      "pdf_author": "",
+      "citation_count": 4
+    },
+    {
+      "paper": "17-cartan-regge-closure",
+      "pages": 9,
+      "pdf_author": "",
+      "citation_count": 8
+    },
+    {
+      "paper": "18-positive-boundary-sewing",
+      "pages": 27,
+      "pdf_author": "",
+      "citation_count": 21
+    },
+    {
+      "paper": "19-local-gauge-benchmarks",
+      "pages": 27,
+      "pdf_author": "",
+      "citation_count": 28
+    },
+    {
+      "paper": "20-ai-research-case-study",
+      "pages": 9,
+      "pdf_author": "",
+      "citation_count": 12
     }
   ],
   "checks": [
@@ -691,6 +757,776 @@
       "detail": ""
     },
     {
+      "check": "10-quantum-weight-networks: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10-quantum-weight-networks: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "10-quantum-weight-networks: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "10-quantum-weight-networks: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10-quantum-weight-networks: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "10-quantum-weight-networks: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10-quantum-weight-networks: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10-quantum-weight-networks: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10-quantum-weight-networks: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10-quantum-weight-networks: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10-quantum-weight-networks: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10-quantum-weight-networks: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10-quantum-weight-networks: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "10-quantum-weight-networks: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11-causal-regge-transfer: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11-causal-regge-transfer: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "11-causal-regge-transfer: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "11-causal-regge-transfer: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11-causal-regge-transfer: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "11-causal-regge-transfer: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11-causal-regge-transfer: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11-causal-regge-transfer: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11-causal-regge-transfer: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11-causal-regge-transfer: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11-causal-regge-transfer: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11-causal-regge-transfer: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11-causal-regge-transfer: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "11-causal-regge-transfer: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12-complexity-moment-corona: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12-complexity-moment-corona: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "12-complexity-moment-corona: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "12-complexity-moment-corona: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12-complexity-moment-corona: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "12-complexity-moment-corona: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12-complexity-moment-corona: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12-complexity-moment-corona: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12-complexity-moment-corona: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12-complexity-moment-corona: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12-complexity-moment-corona: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12-complexity-moment-corona: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12-complexity-moment-corona: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "12-complexity-moment-corona: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "13-thermal-statistics-reconstruction: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14-operational-instrument-geometry: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14-operational-instrument-geometry: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "14-operational-instrument-geometry: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "14-operational-instrument-geometry: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14-operational-instrument-geometry: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "14-operational-instrument-geometry: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14-operational-instrument-geometry: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14-operational-instrument-geometry: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14-operational-instrument-geometry: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14-operational-instrument-geometry: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14-operational-instrument-geometry: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14-operational-instrument-geometry: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14-operational-instrument-geometry: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "14-operational-instrument-geometry: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15-positive-cartan-carriers: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15-positive-cartan-carriers: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "15-positive-cartan-carriers: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "15-positive-cartan-carriers: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15-positive-cartan-carriers: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "15-positive-cartan-carriers: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15-positive-cartan-carriers: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15-positive-cartan-carriers: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15-positive-cartan-carriers: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15-positive-cartan-carriers: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15-positive-cartan-carriers: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15-positive-cartan-carriers: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15-positive-cartan-carriers: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "15-positive-cartan-carriers: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "16-fuzzy-half-turn-limits: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17-cartan-regge-closure: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17-cartan-regge-closure: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "17-cartan-regge-closure: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "17-cartan-regge-closure: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17-cartan-regge-closure: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "17-cartan-regge-closure: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17-cartan-regge-closure: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17-cartan-regge-closure: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17-cartan-regge-closure: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17-cartan-regge-closure: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17-cartan-regge-closure: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17-cartan-regge-closure: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17-cartan-regge-closure: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "17-cartan-regge-closure: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18-positive-boundary-sewing: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18-positive-boundary-sewing: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "18-positive-boundary-sewing: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "18-positive-boundary-sewing: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18-positive-boundary-sewing: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "18-positive-boundary-sewing: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18-positive-boundary-sewing: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18-positive-boundary-sewing: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18-positive-boundary-sewing: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18-positive-boundary-sewing: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18-positive-boundary-sewing: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18-positive-boundary-sewing: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18-positive-boundary-sewing: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "18-positive-boundary-sewing: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19-local-gauge-benchmarks: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19-local-gauge-benchmarks: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "19-local-gauge-benchmarks: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "19-local-gauge-benchmarks: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19-local-gauge-benchmarks: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "19-local-gauge-benchmarks: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19-local-gauge-benchmarks: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19-local-gauge-benchmarks: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19-local-gauge-benchmarks: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19-local-gauge-benchmarks: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19-local-gauge-benchmarks: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19-local-gauge-benchmarks: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19-local-gauge-benchmarks: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "19-local-gauge-benchmarks: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20-ai-research-case-study: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20-ai-research-case-study: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "20-ai-research-case-study: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "20-ai-research-case-study: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20-ai-research-case-study: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "20-ai-research-case-study: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20-ai-research-case-study: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20-ai-research-case-study: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20-ai-research-case-study: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20-ai-research-case-study: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20-ai-research-case-study: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20-ai-research-case-study: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20-ai-research-case-study: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "20-ai-research-case-study: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": ".gitattributes: English text",
       "passed": true,
       "detail": ""
@@ -751,6 +1587,51 @@
       "detail": ""
     },
     {
+      "check": "MANUSCRIPT-STATUS.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "MANUSCRIPT-STATUS.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "MANUSCRIPT-STATUS.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/build.ps1: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/build.ps1: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/build.ps1: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/EDITION-HISTORY.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/EDITION-HISTORY.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/EDITION-HISTORY.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "papers/01-projection-sign-rigidity/main.tex: English text",
       "passed": true,
       "detail": ""
@@ -762,6 +1643,21 @@
     },
     {
       "check": "papers/01-projection-sign-rigidity/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/PROVENANCE.json: no common credential patterns",
       "passed": true,
       "detail": ""
     },
@@ -796,6 +1692,51 @@
       "detail": ""
     },
     {
+      "check": "papers/01-projection-sign-rigidity/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/REVISION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/REVISION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/REVISION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/verification/check_revision.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/verification/check_revision.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/verification/check_revision.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "papers/01-projection-sign-rigidity/verification/legacy_checks.wls: English text",
       "passed": true,
       "detail": ""
@@ -811,6 +1752,141 @@
       "detail": ""
     },
     {
+      "check": "papers/01-projection-sign-rigidity/verification/revision-checks.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/verification/revision-checks.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/verification/revision-checks.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/EDITION.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/EDITION.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/EDITION.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/verification/legacy_checks.wls: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/verification/legacy_checks.wls: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/01-projection-sign-rigidity/versions/2026-10-28/verification/legacy_checks.wls: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/build.ps1: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/build.ps1: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/build.ps1: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/EDITION-HISTORY.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/EDITION-HISTORY.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/EDITION-HISTORY.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "papers/02-half-wormholes-wiener-chaos/main.tex: English text",
       "passed": true,
       "detail": ""
@@ -822,6 +1898,21 @@
     },
     {
       "check": "papers/02-half-wormholes-wiener-chaos/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/PROVENANCE.json: no common credential patterns",
       "passed": true,
       "detail": ""
     },
@@ -856,6 +1947,81 @@
       "detail": ""
     },
     {
+      "check": "papers/02-half-wormholes-wiener-chaos/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/REVISION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/REVISION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/REVISION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/chaos-extras-results.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/chaos-extras-results.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/chaos-extras-results.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/check_chaos_extras.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/check_chaos_extras.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/check_chaos_extras.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/check_revision.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/check_revision.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/check_revision.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "papers/02-half-wormholes-wiener-chaos/verification/legacy_checks.wls: English text",
       "passed": true,
       "detail": ""
@@ -867,6 +2033,111 @@
     },
     {
       "check": "papers/02-half-wormholes-wiener-chaos/verification/legacy_checks.wls: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/revision-checks.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/revision-checks.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/verification/revision-checks.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/EDITION.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/EDITION.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/EDITION.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/verification/legacy_checks.wls: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/verification/legacy_checks.wls: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/verification/legacy_checks.wls: no common credential patterns",
       "passed": true,
       "detail": ""
     },
@@ -1981,6 +3252,2316 @@
       "detail": ""
     },
     {
+      "check": "papers/10-quantum-weight-networks/.gitignore: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/.gitignore: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/.gitignore: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/code/verify.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/code/verify.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/code/verify.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/family.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/family.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/family.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/inputs/model.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/inputs/model.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/inputs/model.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/limits.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/limits.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/limits.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/network.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/network.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/network.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/outputs/established_verification.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/outputs/established_verification.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/outputs/established_verification.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/outputs/verification.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/outputs/verification.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/outputs/verification.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/10-quantum-weight-networks/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/data/bounded-checks.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/data/bounded-checks.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/data/bounded-checks.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/data/level-1-reproduction.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/data/level-1-reproduction.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/data/level-1-reproduction.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/data/level-5-reproduction.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/data/level-5-reproduction.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/data/level-5-reproduction.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/__init__.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/__init__.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/__init__.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/algebraic_regge_wave_target.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/algebraic_regge_wave_target.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/algebraic_regge_wave_target.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/causal_join_star_transfer.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/causal_join_star_transfer.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/causal_join_star_transfer.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/complex_lorentzian_regge.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/complex_lorentzian_regge.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/complex_lorentzian_regge.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/first_order_angle_measure.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/first_order_angle_measure.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/first_order_angle_measure.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_refoliation_geometry.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_refoliation_geometry.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_refoliation_geometry.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_three_three_curvature.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_three_three_curvature.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_three_three_curvature.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_vertex_hybrid_audit.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_vertex_hybrid_audit.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_vertex_hybrid_audit.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_weighted_weyl_star.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_weighted_weyl_star.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_weighted_weyl_star.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_weyl_star.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_weyl_star.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_weyl_star.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/multilevel_causal_spin2.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/multilevel_causal_spin2.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/multilevel_causal_spin2.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/refined_causal_spin2.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/refined_causal_spin2.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/refined_causal_spin2.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/refoliation_graviton_history.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/refoliation_graviton_history.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/refoliation_graviton_history.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/regge_four_two_action.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/regge_four_two_action.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/regge_four_two_action.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/sourced_regge_dynamics.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/sourced_regge_dynamics.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/sourced_regge_dynamics.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/reports/A28-CAUSAL-SPIN-TWO-VERDICT.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/reports/A28-CAUSAL-SPIN-TWO-VERDICT.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/reports/A28-CAUSAL-SPIN-TWO-VERDICT.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/reports/A29-NESTED-REFINEMENT-FLOW-VERDICT.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/reports/A29-NESTED-REFINEMENT-FLOW-VERDICT.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/reports/A29-NESTED-REFINEMENT-FLOW-VERDICT.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/reports/A30-FIFTH-REFINEMENT-HYPERBOLIC-TRANSITION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/reports/A30-FIFTH-REFINEMENT-HYPERBOLIC-TRANSITION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/provenance/reports/A30-FIFTH-REFINEMENT-HYPERBOLIC-TRANSITION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/reproduce.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/reproduce.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/reproduce.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/results/replay.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/results/replay.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/results/replay.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/run_full.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/run_full.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/run_full.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/11-causal-regge-transfer/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/code/verify_constructive.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/code/verify_constructive.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/code/verify_constructive.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/reproduced-output/calculation-output.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/reproduced-output/calculation-output.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/reproduced-output/calculation-output.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/saved-output/calculation-output.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/saved-output/calculation-output.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/saved-output/calculation-output.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/saved-output/package-check.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/saved-output/package-check.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/saved-output/package-check.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/12-complexity-moment-corona/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/channels.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/channels.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/channels.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/check_bounds.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/check_bounds.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/check_bounds.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/check_channels.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/check_channels.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/check_channels.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/checks.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/checks.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/checks.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/reference-bounds.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/reference-bounds.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/verification/reference-bounds.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/13-thermal-statistics-reconstruction/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/.gitignore: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/.gitignore: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/.gitignore: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/code/verify.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/code/verify.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/code/verify.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/data/results.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/data/results.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/data/results.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/spectral-references.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/spectral-references.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/spectral-references.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/14-operational-instrument-geometry/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/.gitignore: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/.gitignore: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/.gitignore: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/certificate-appendix.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/certificate-appendix.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/certificate-appendix.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/code/verify.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/code/verify.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/code/verify.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/data/results.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/data/results.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/data/results.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/selector-and-certificates.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/selector-and-certificates.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/selector-and-certificates.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/15-positive-cartan-carriers/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/verification/check_fuzzy.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/verification/check_fuzzy.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/verification/check_fuzzy.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/verification/checks.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/verification/checks.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/verification/checks.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/16-fuzzy-half-turn-limits/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/.gitignore: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/.gitignore: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/.gitignore: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/regge_four_two_action.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/regge_four_two_action.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/regge_four_two_action.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/replay.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/replay.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/replay.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/sourced_regge_dynamics.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/sourced_regge_dynamics.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/sourced_regge_dynamics.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/verify_cartan_regge_ranks.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/verify_cartan_regge_ranks.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/verify_cartan_regge_ranks.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/verify_first_order_angle_exact.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/verify_first_order_angle_exact.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/code/verify_first_order_angle_exact.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/inputs/calibration.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/inputs/calibration.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/inputs/calibration.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/outputs/established_verification.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/outputs/established_verification.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/outputs/established_verification.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/outputs/verification.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/outputs/verification.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/outputs/verification.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/17-cartan-regge-closure/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/code/diagnostic.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/code/diagnostic.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/code/diagnostic.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/code/doubled_instrument.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/code/doubled_instrument.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/code/doubled_instrument.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/code/weyl_charge_cut.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/code/weyl_charge_cut.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/code/weyl_charge_cut.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/code-provenance.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/code-provenance.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/code-provenance.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/diagnostic.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/diagnostic.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/diagnostic.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/doubled_instrument.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/doubled_instrument.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/doubled_instrument.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/package_check.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/package_check.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/package_check.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/receipt.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/receipt.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/receipt.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/weyl_charge_cut.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/weyl_charge_cut.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/outputs/weyl_charge_cut.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/reproduce.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/reproduce.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/reproduce.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/18-positive-boundary-sewing/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code/graded_algebra.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code/graded_algebra.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code/graded_algebra.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code/green_matrix.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code/green_matrix.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code/green_matrix.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code/matter_vertex.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code/matter_vertex.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code/matter_vertex.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code/ward_transport.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code/ward_transport.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code/ward_transport.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code-provenance.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code-provenance.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/code-provenance.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/graded_algebra.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/graded_algebra.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/graded_algebra.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/green_matrix.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/green_matrix.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/green_matrix.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/matter_vertex.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/matter_vertex.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/matter_vertex.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/package_check.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/package_check.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/package_check.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/receipt.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/receipt.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/receipt.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/ward_transport.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/ward_transport.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/outputs/ward_transport.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/reproduce.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/reproduce.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/reproduce.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/19-local-gauge-benchmarks/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/outputs/package_check.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/outputs/package_check.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/outputs/package_check.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/outputs/results.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/outputs/results.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/outputs/results.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/provenance/baseline_pdf_counts.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/provenance/baseline_pdf_counts.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/provenance/baseline_pdf_counts.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/provenance/corpus_metrics.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/provenance/corpus_metrics.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/provenance/corpus_metrics.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/reproduce.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/reproduce.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/reproduce.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/20-ai-research-case-study/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "README.md: English text",
       "passed": true,
       "detail": ""
@@ -2059,8 +5640,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 605,
-      "sha256": "e282452e84cad6a2173b85c5f71bfe1b72da9f94c219fb173c4fd5a8d44bafa7"
+      "bytes": 1182,
+      "sha256": "f105f657d116d8b02b434eda013e3832d5b26cad86fd33eab18750e48a36c4d6"
     },
     {
       "path": ".gitignore",
@@ -2069,28 +5650,48 @@
     },
     {
       "path": "DECLARATIONS.md",
-      "bytes": 3909,
-      "sha256": "c53dd400603b48932ece3906c5e97441b89a04e713c09908f3ce8e8aafa80ddd"
+      "bytes": 4356,
+      "sha256": "35217408b296fa9743d7af3d59d73d36820de761ea5a36aba2ebda78c5432e95"
     },
     {
       "path": "HISTORY.md",
-      "bytes": 6242,
-      "sha256": "766e18a94a63f6185d67b3eff9e5538b06a8cd5a1de197c7553a8be62c26bca6"
+      "bytes": 7692,
+      "sha256": "c7790f33c4e110be02b6544afa0debdfaa7623be0251e16f7c4a8dc9ef3b7884"
+    },
+    {
+      "path": "MANUSCRIPT-STATUS.md",
+      "bytes": 7317,
+      "sha256": "f6ecbc26acae0a1b3a83bd2068bea4c419d1572eee91ccfcf5e5ce8d83dddfcd"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/build.ps1",
+      "bytes": 389,
+      "sha256": "fb08635ce447dc1f2d6e4750b33f6fef44ea26951c1c8894929d954a755d7b1a"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/EDITION-HISTORY.md",
+      "bytes": 718,
+      "sha256": "ca6d2744c63e0fd75c84d57b94f6c02e800d48d89b8f9c1a2e530beba25bde4c"
     },
     {
       "path": "papers/01-projection-sign-rigidity/main.tex",
-      "bytes": 15188,
-      "sha256": "65b605f3c0631ed0e8a5a7845013ed01b02051e579badbb3be7454279f1ddb90"
+      "bytes": 17516,
+      "sha256": "dc6204cde925d51e2d332ef16dbd38ac69114de60e2af91a343155ab1bcde7be"
     },
     {
       "path": "papers/01-projection-sign-rigidity/manuscript.pdf",
-      "bytes": 230416,
-      "sha256": "a65e2bcd7502359c63a90e79eb44be0404a67662524faafd1103cd0118397612"
+      "bytes": 236309,
+      "sha256": "b8911e0e7ba67edf9864b7cbbd2df406fdcb53ea92ace2de9a21b1903b4e6fb7"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/PROVENANCE.json",
+      "bytes": 5344,
+      "sha256": "d39686a90de0e789d1c59de2686972ba74553506bbf1ce9f77782eef73455f49"
     },
     {
       "path": "papers/01-projection-sign-rigidity/README.md",
-      "bytes": 1526,
-      "sha256": "02c55f21a0344707aed40213d56b6e2dfa75c642fb789c11d3f01518575dbee2"
+      "bytes": 1574,
+      "sha256": "24a5e24eb5a4e6bd57a6239b3c44aa0a6b95cbc13122f53523260e2da2a5e541"
     },
     {
       "path": "papers/01-projection-sign-rigidity/references.bib",
@@ -2098,32 +5699,167 @@
       "sha256": "fd44a897263eb99e0b25b7ff3e5e417c7ffc0f44395cc18553d56fb4941f66e9"
     },
     {
+      "path": "papers/01-projection-sign-rigidity/requirements.txt",
+      "bytes": 163,
+      "sha256": "313defa0684ad6815ddc3f2b008213b97947915b3fb2fd537216dae9d603c21a"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/REVISION.md",
+      "bytes": 1421,
+      "sha256": "fd454f1d3940adf1aa0980cb3e0772379887bb9f6248ab9650d62b27e8e1bd3c"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/verification/check_revision.py",
+      "bytes": 1945,
+      "sha256": "fa3e1aacec841cf939b58ea4171711e3728ee3cd84d5b0593abef69f5eac8a8b"
+    },
+    {
       "path": "papers/01-projection-sign-rigidity/verification/legacy_checks.wls",
       "bytes": 4221,
       "sha256": "869de6a4245ccd3056008766b019efa480e2949c5b73e7ccfa1a6bc992c993bc"
     },
     {
+      "path": "papers/01-projection-sign-rigidity/verification/revision-checks.json",
+      "bytes": 2775,
+      "sha256": "2ffbc95ecdb73f3cf1662c11cc9be9644187da5ef62c2787fe5a2f97171a9868"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/VERIFICATION.md",
+      "bytes": 1636,
+      "sha256": "028c35bcd240dbb946208023bc26b823489168d30acdf9546ae3474c34b5037a"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/versions/2026-10-28/EDITION.json",
+      "bytes": 636,
+      "sha256": "8879d952191b560815dd8d41f8e6e76f0dd9d05590954c2650a402fe6ed46cae"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/versions/2026-10-28/main.tex",
+      "bytes": 15188,
+      "sha256": "65b605f3c0631ed0e8a5a7845013ed01b02051e579badbb3be7454279f1ddb90"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/versions/2026-10-28/manuscript.pdf",
+      "bytes": 230416,
+      "sha256": "a65e2bcd7502359c63a90e79eb44be0404a67662524faafd1103cd0118397612"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/versions/2026-10-28/README.md",
+      "bytes": 1526,
+      "sha256": "02c55f21a0344707aed40213d56b6e2dfa75c642fb789c11d3f01518575dbee2"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/versions/2026-10-28/references.bib",
+      "bytes": 2998,
+      "sha256": "fd44a897263eb99e0b25b7ff3e5e417c7ffc0f44395cc18553d56fb4941f66e9"
+    },
+    {
+      "path": "papers/01-projection-sign-rigidity/versions/2026-10-28/verification/legacy_checks.wls",
+      "bytes": 4221,
+      "sha256": "869de6a4245ccd3056008766b019efa480e2949c5b73e7ccfa1a6bc992c993bc"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/build.ps1",
+      "bytes": 389,
+      "sha256": "fb08635ce447dc1f2d6e4750b33f6fef44ea26951c1c8894929d954a755d7b1a"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/EDITION-HISTORY.md",
+      "bytes": 718,
+      "sha256": "ca6d2744c63e0fd75c84d57b94f6c02e800d48d89b8f9c1a2e530beba25bde4c"
+    },
+    {
       "path": "papers/02-half-wormholes-wiener-chaos/main.tex",
+      "bytes": 28256,
+      "sha256": "9415d86ced3242558766b20b6b30c2488ea4d2ce42b161f4805efbfe76bd3495"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/manuscript.pdf",
+      "bytes": 260881,
+      "sha256": "dac88bb6b2378f24a419468d8670fe527ade6abeb32562306a08df44175dc767"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/PROVENANCE.json",
+      "bytes": 5687,
+      "sha256": "ee91348de005acf970234bddc00c84059be9f571a39b0f582907746ca49d5649"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/README.md",
+      "bytes": 2605,
+      "sha256": "378a4244de115ca15eddf6f8df4be20afe9dd48fc714162d6e5f61d5248d90b9"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/references.bib",
+      "bytes": 5612,
+      "sha256": "986e526006ccc846718cfe5af774d7f8a7ef3c0e78363176ee9d6f81a1192ff9"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/requirements.txt",
+      "bytes": 163,
+      "sha256": "313defa0684ad6815ddc3f2b008213b97947915b3fb2fd537216dae9d603c21a"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/REVISION.md",
+      "bytes": 2931,
+      "sha256": "54e7b034c08da3bdf3f460161a1614262d60d6c80376c4a04a641242211b31e3"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/verification/chaos-extras-results.json",
+      "bytes": 797,
+      "sha256": "27589e1b1f64f79dce1c56eed02b8c483cd69083a3a97d6006f176540ae25c87"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/verification/check_chaos_extras.py",
+      "bytes": 2950,
+      "sha256": "5bc7f1f558b755e7709a4fdf9613fe274b32e74c21281cd302bed0d2bab1c713"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/verification/check_revision.py",
+      "bytes": 3320,
+      "sha256": "6812700b7f6f3b1815f984efaae1cdc341bfd71f50352d4abc8cf38c347eca7d"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/verification/legacy_checks.wls",
+      "bytes": 6186,
+      "sha256": "5dca2abdcce33efdcee1c6dff42187458c643d53bc79751f57b1129791840a4e"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/verification/revision-checks.json",
+      "bytes": 11040,
+      "sha256": "d74e2dd3c05854bc8c0bcbea3b53eeddc906857c393d4c379e8ca8e411972ab2"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/VERIFICATION.md",
+      "bytes": 3268,
+      "sha256": "7eff771fb581577a55ff62bad91bfc28a7147c8bb9ab93fa08630d70b4e467ce"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/EDITION.json",
+      "bytes": 636,
+      "sha256": "b81214c94dfdf4684c7ba7a46c3ae1d696e251c925501b52a206f1f889787719"
+    },
+    {
+      "path": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/main.tex",
       "bytes": 19689,
       "sha256": "1b11c94d47e768b845b72071617fd2e0e625f3a31f8ce36cc594c704c8dffdc4"
     },
     {
-      "path": "papers/02-half-wormholes-wiener-chaos/manuscript.pdf",
+      "path": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/manuscript.pdf",
       "bytes": 240158,
       "sha256": "cd9720ce99ccb6726e3208a5d7a5986ac9952838915c37215c847082b57a94ed"
     },
     {
-      "path": "papers/02-half-wormholes-wiener-chaos/README.md",
+      "path": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/README.md",
       "bytes": 1594,
       "sha256": "5b80cfb6558dbadb990d8b95f6ace8631db4028f9489391947e05c9c8ccc2016"
     },
     {
-      "path": "papers/02-half-wormholes-wiener-chaos/references.bib",
+      "path": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/references.bib",
       "bytes": 4829,
       "sha256": "dc12e7e8f328df8c7f92ddb783bb35643b1080e600841548c70add605a22b936"
     },
     {
-      "path": "papers/02-half-wormholes-wiener-chaos/verification/legacy_checks.wls",
+      "path": "papers/02-half-wormholes-wiener-chaos/versions/2026-10-28/verification/legacy_checks.wls",
       "bytes": 6186,
       "sha256": "5dca2abdcce33efdcee1c6dff42187458c643d53bc79751f57b1129791840a4e"
     },
@@ -2538,9 +6274,844 @@
       "sha256": "28418e432a89fbd6484644e49baa1c2b5a0c2069982d3f25f9b21c1c4a919286"
     },
     {
+      "path": "papers/10-quantum-weight-networks/.gitignore",
+      "bytes": 26,
+      "sha256": "6cf68f361ed9af9c89f8304b81604d87347c3d38348e90f1e5bef55ea8fa99a5"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/code/verify.py",
+      "bytes": 5963,
+      "sha256": "a53bf8929013eb8bcb471da2a1fe824ebad52964586c65deb5ea98b2b368712c"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/family.tex",
+      "bytes": 2009,
+      "sha256": "d05b538e8207d90554d6ac78d7fca16e89cfa30c2c9886e012adb03569f834a5"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/inputs/model.json",
+      "bytes": 728,
+      "sha256": "502349154e0beba51a14fa487186d1ae18c090368241640eb03da57282849f18"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/limits.tex",
+      "bytes": 4154,
+      "sha256": "14ddce2ec650c0b9be3b2216b37de9bd3631da0a04dcde7d2e94a63cb8c75b69"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/main.tex",
+      "bytes": 28263,
+      "sha256": "3ecc2befc7f82953b9ef6177e23ad948221d84ca1b5b85a3e56f9ae14bde64bd"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/manuscript.pdf",
+      "bytes": 286174,
+      "sha256": "fcbd78bae8fddc96b72c14dd1412532dcb0bb3467a2448e1507c75b42b88354f"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/network.tex",
+      "bytes": 4504,
+      "sha256": "8d88d49e968a32bdf6fe1c28711e605b7014b34641354d7d2e81a88c54df0072"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/outputs/established_verification.json",
+      "bytes": 1230,
+      "sha256": "c081e232e648b7ff79bc70cb87418ee8e772ac8ef47e741207142c5c2af331c1"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/outputs/verification.json",
+      "bytes": 1220,
+      "sha256": "3cd57139ad5b8a9e43709b2230eb0ec91ae86f2ab7bb52fbd83a6dc348a34429"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/PROVENANCE.json",
+      "bytes": 4666,
+      "sha256": "de7224e79b94adb6f7faba7edde7734452ccef5a86653c6789a6b722b7d0ef50"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/README.md",
+      "bytes": 2242,
+      "sha256": "95c314874f5cc7e47dcd8dea49267614ad7c60b0227c987ee647e30c1a3c4597"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/references.bib",
+      "bytes": 3923,
+      "sha256": "40517fd45d7948c3e906fbf594a0cc79da02e8da1b4ef2df238347bf7bcdf923"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/requirements.txt",
+      "bytes": 15,
+      "sha256": "92b624b3acd276481f084c401d2515225422ef0e9fa5488de7e58530483a1997"
+    },
+    {
+      "path": "papers/10-quantum-weight-networks/VERIFICATION.md",
+      "bytes": 3089,
+      "sha256": "5735d43d4760ff46f1a925bbd3f83c4beed366c2e3149e13de72a12086b6eb1a"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/data/bounded-checks.json",
+      "bytes": 4847,
+      "sha256": "72d426d1e5c49e3fdda4bfbe2e7d26ab5349a4c93e1f228c91b691598df6d6d8"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/data/level-1-reproduction.json",
+      "bytes": 3715,
+      "sha256": "2df2591d1747a545f51fefe83d8a354b2bb4e06a5ab75ad2134f64a0fecd1524"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/data/level-5-reproduction.json",
+      "bytes": 5007,
+      "sha256": "df43b7af69cf8f19ad8aa46abfd8f6e7b7c6ac66e3ae833fc50d8444e62b576f"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/main.tex",
+      "bytes": 31765,
+      "sha256": "c130cf07dcb5fa0c19a2ad7afd8bae2921b784adbd9ea9d42c5d6c7521265109"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/manuscript.pdf",
+      "bytes": 326563,
+      "sha256": "2022c4b81593c49f563289f668992e446f8e98af9a151e1d2949fa16b35399af"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/algebraic_regge_wave_target.py",
+      "bytes": 9322,
+      "sha256": "842f508dad12fc61f1b3ebf455012391513fcd335481a184de852ab0c396b93b"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/causal_join_star_transfer.py",
+      "bytes": 23703,
+      "sha256": "aa861805c0134f696ead84a5e1e95196c9de165f422efdc873855da8f132ae4f"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/complex_lorentzian_regge.py",
+      "bytes": 24609,
+      "sha256": "450e9622e9119d3e0517da8e8b1adec1b82772a3dd0c26762aa65a93f2bd4574"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/first_order_angle_measure.py",
+      "bytes": 9528,
+      "sha256": "8887e68164bea06677fe09a057a08c7d0b9187a023059fbf28b75596d8d02c28"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_refoliation_geometry.py",
+      "bytes": 15548,
+      "sha256": "778214dc44dadebe3ee13d10c7069a6b223e687261fddb5a367355925652a468"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_three_three_curvature.py",
+      "bytes": 29212,
+      "sha256": "5bb884c5a139ad0972919c18abe7cd5d70dee7abd1b1e8521330601c531ee7bd"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_vertex_hybrid_audit.py",
+      "bytes": 8224,
+      "sha256": "13e3e5dc18682afe00aa9d9dd77db4de45bf1cc1893b519e51b81b5785b862c0"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_weighted_weyl_star.py",
+      "bytes": 15429,
+      "sha256": "3d7d19e66184ba601fd9b53cde88ff9f67f4fac65bf65bf46b1a8e90c4cf115e"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/lorentzian_weyl_star.py",
+      "bytes": 36362,
+      "sha256": "c108892de3f52f1104d56f81123b48ad0877d45077420d8961f744701a368728"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/multilevel_causal_spin2.py",
+      "bytes": 17975,
+      "sha256": "2ebf5e650c38d97a8706b77994e424fd215b42688ee5aff24603a28bf8ccecd2"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/refined_causal_spin2.py",
+      "bytes": 15949,
+      "sha256": "5d616962d02bbfd51c706448275a567be7068188da650036b8990933f063963b"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/refoliation_graviton_history.py",
+      "bytes": 12299,
+      "sha256": "9e98bce5dd93a9621c6141ef78788162df245f992e1d263a8e1de2ae9ab4e937"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/regge_four_two_action.py",
+      "bytes": 14141,
+      "sha256": "ad6e3824a50a9d0a9556f92d2c38fc2b1bfa1358aa55649b69a1bf7aaef8fc3a"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/frozen_producer/scripts/sourced_regge_dynamics.py",
+      "bytes": 9618,
+      "sha256": "fb957e6e779d59852f72c28136bfaa2111ab13bfc9d2b5e78ed535275ed8227f"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/reports/A28-CAUSAL-SPIN-TWO-VERDICT.md",
+      "bytes": 13922,
+      "sha256": "63f3d7ea5773f64ef36ec7daaf630caeef8fe21dac962002b73533b977bb27a0"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/reports/A29-NESTED-REFINEMENT-FLOW-VERDICT.md",
+      "bytes": 10092,
+      "sha256": "df21c0ac58d34e21ba0c11ecd9be350837da0dc8b7ee301d1a805be288720877"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/provenance/reports/A30-FIFTH-REFINEMENT-HYPERBOLIC-TRANSITION.md",
+      "bytes": 6489,
+      "sha256": "6320c9f14dc3e35d10a0b5826e4d641ddfe5de80d8a4dbfcf9e546139942119e"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/PROVENANCE.json",
+      "bytes": 21074,
+      "sha256": "0c5a27d4ec73aec6dc351dafcef734187331491a4f70932ccbc6413abcf266a4"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/README.md",
+      "bytes": 3902,
+      "sha256": "3e051db459edf803b9745309dbd64d73942fd245b78d1b4cadbe827ec12c4e93"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/references.bib",
+      "bytes": 1937,
+      "sha256": "be9f5a83ff90ab86c971ef32f1a3d844ced133f873a64351943fcddad3ae2f00"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/reproduce.py",
+      "bytes": 6055,
+      "sha256": "15f9b40fc7eb3b7bbba354f3d3b7dbe00e4b968522e90d5e0ef0991c79cecac3"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/requirements.txt",
+      "bytes": 36,
+      "sha256": "76c8c4cd182f3b23b03be7cb733bb40874c96710ab52b95c9d33b5fd9aca8e4a"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/results/replay.json",
+      "bytes": 3689,
+      "sha256": "74f787990e25eed2c26eefc03ee66db9b0fa795f1d548d59876ff1bf66204849"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/run_full.py",
+      "bytes": 1206,
+      "sha256": "d41c32ea53097182122d42d41d6d1284899c41edbd2d6d1bfaca9ff0cfef1a8b"
+    },
+    {
+      "path": "papers/11-causal-regge-transfer/VERIFICATION.md",
+      "bytes": 5031,
+      "sha256": "3d8dfe8da965525f076564c6693db9f9cef5e331480d4f9beaf4113b470afda6"
+    },
+    {
+      "path": "papers/12-complexity-moment-corona/code/verify_constructive.py",
+      "bytes": 2343,
+      "sha256": "111eea349a024d3634c643959899c689eb3688edb597857cc475efcb0949f9d8"
+    },
+    {
+      "path": "papers/12-complexity-moment-corona/main.tex",
+      "bytes": 36330,
+      "sha256": "dcb58e8348f09a856c67fffe01bf6d90653a77bcfc13c2f5f166d9878dfba029"
+    },
+    {
+      "path": "papers/12-complexity-moment-corona/manuscript.pdf",
+      "bytes": 355527,
+      "sha256": "f36cf736cdac7142c31613e844bff1d98fde386c55e23e45841f6d8951dc7ec7"
+    },
+    {
+      "path": "papers/12-complexity-moment-corona/PROVENANCE.json",
+      "bytes": 5684,
+      "sha256": "ee764d4e71a6549aa849e6336726317f99bb14cfdf24bdf5ac9cb3d220fa35aa"
+    },
+    {
+      "path": "papers/12-complexity-moment-corona/README.md",
+      "bytes": 3104,
+      "sha256": "86c2543987446f1d6807c96c73694290a35ed896aa147693183d2bf72bb3458c"
+    },
+    {
+      "path": "papers/12-complexity-moment-corona/references.bib",
+      "bytes": 1431,
+      "sha256": "bac6c6dba18faa57a45b1efbee38b420d47fc70a3eed4ba149d2e636e909aad1"
+    },
+    {
+      "path": "papers/12-complexity-moment-corona/reproduced-output/calculation-output.json",
+      "bytes": 3621,
+      "sha256": "ff80506f7610d22a8749d9c74cd4342d1f60d7ed096900f7398be48017382758"
+    },
+    {
+      "path": "papers/12-complexity-moment-corona/requirements.txt",
+      "bytes": 136,
+      "sha256": "9b3e2ffa29db98b25e0d93bc580f46c7dbfd919d7005e6ac67c7cedaad64ef7c"
+    },
+    {
+      "path": "papers/12-complexity-moment-corona/saved-output/calculation-output.json",
+      "bytes": 3621,
+      "sha256": "ff80506f7610d22a8749d9c74cd4342d1f60d7ed096900f7398be48017382758"
+    },
+    {
+      "path": "papers/12-complexity-moment-corona/saved-output/package-check.json",
+      "bytes": 526,
+      "sha256": "3ad8f9560c567fb5ced0e8e7b9c7bb50ac36ffe5347dceceb6514e6f3aa16102"
+    },
+    {
+      "path": "papers/12-complexity-moment-corona/VERIFICATION.md",
+      "bytes": 7260,
+      "sha256": "5c55ceec8cc3959b929f9ecaac617fc8d407326f8fbab0a4d7967152a094ed87"
+    },
+    {
+      "path": "papers/13-thermal-statistics-reconstruction/main.tex",
+      "bytes": 29247,
+      "sha256": "b4cb58c1bbbcb8d64eba6d7031afeff902934b7a589a49655ca1da16c5e3b1fa"
+    },
+    {
+      "path": "papers/13-thermal-statistics-reconstruction/manuscript.pdf",
+      "bytes": 276964,
+      "sha256": "f56ad8272883396a7cd290c1e85b2d2091ce6a603abe55bfa4c5a976436269db"
+    },
+    {
+      "path": "papers/13-thermal-statistics-reconstruction/PROVENANCE.json",
+      "bytes": 6119,
+      "sha256": "800e28996ef821784cc6046a6f8b41ca6ab700cebb0aea8148df752376b4f51b"
+    },
+    {
+      "path": "papers/13-thermal-statistics-reconstruction/README.md",
+      "bytes": 2942,
+      "sha256": "c9bb026c60a72cdab085b1e2faf16e23de369e77215ad588565a3dab887e6b62"
+    },
+    {
+      "path": "papers/13-thermal-statistics-reconstruction/references.bib",
+      "bytes": 1729,
+      "sha256": "f91b068716c1c2bfec58fe72a294c2aa8180c3a7de159a3b92c59d0c085eaf67"
+    },
+    {
+      "path": "papers/13-thermal-statistics-reconstruction/requirements.txt",
+      "bytes": 30,
+      "sha256": "313d9039e41c40608a2f679029ec7356e93a6ca560c6a2deeaed5d72cc773dd5"
+    },
+    {
+      "path": "papers/13-thermal-statistics-reconstruction/verification/channels.json",
+      "bytes": 1189,
+      "sha256": "45de740492e4d0b7d0de1a83f405b7c58d95ee134550e90a5ead40b21544ab91"
+    },
+    {
+      "path": "papers/13-thermal-statistics-reconstruction/verification/check_bounds.py",
+      "bytes": 3233,
+      "sha256": "2c5b508402e2b138a941823318f4ddf5526a8a4f428e26b9487d1de50b88ab90"
+    },
+    {
+      "path": "papers/13-thermal-statistics-reconstruction/verification/check_channels.py",
+      "bytes": 1971,
+      "sha256": "4ae439ac773d46d9f810bdb1fe7906ccc22f1971d311bb20f61727a69254d474"
+    },
+    {
+      "path": "papers/13-thermal-statistics-reconstruction/verification/checks.json",
+      "bytes": 1742,
+      "sha256": "6947b5b7d17408f80ad25a92f850481646d78322c7bc1d84a329c2d6b004ce18"
+    },
+    {
+      "path": "papers/13-thermal-statistics-reconstruction/verification/reference-bounds.json",
+      "bytes": 1724,
+      "sha256": "70f66f3a708328cc1a9ee9088f2e151a586f00557a3a2683870ce9ec2cea4ce2"
+    },
+    {
+      "path": "papers/13-thermal-statistics-reconstruction/VERIFICATION.md",
+      "bytes": 3858,
+      "sha256": "015b49a590f6fa77fcaf624819a5be1a50110207b810d53dac80991b0bdb5b64"
+    },
+    {
+      "path": "papers/14-operational-instrument-geometry/.gitignore",
+      "bytes": 22,
+      "sha256": "be091810b9a0f91199ea4b81d84af819934cdff588c5c41c0e97fb1fbd0a4a9f"
+    },
+    {
+      "path": "papers/14-operational-instrument-geometry/code/verify.py",
+      "bytes": 3827,
+      "sha256": "e67fd7ccb016f0f934bc5406fba4a59ecb4a5eae61a79d1e19a7e437407040c5"
+    },
+    {
+      "path": "papers/14-operational-instrument-geometry/data/results.json",
+      "bytes": 1069,
+      "sha256": "7725f927a25e5bb50577f4976a07d290404f0bc0714ae3ce7fd9c0e99a96a98b"
+    },
+    {
+      "path": "papers/14-operational-instrument-geometry/main.tex",
+      "bytes": 23297,
+      "sha256": "ff9166b81651705d75a598f36d551896c3a17a08f4e53fd96d903cf48bb87c1e"
+    },
+    {
+      "path": "papers/14-operational-instrument-geometry/manuscript.pdf",
+      "bytes": 258980,
+      "sha256": "beaa8673a728d788fb9e671f6e7eca7fe3d25fb1544e6fb714c6345d2fabed6d"
+    },
+    {
+      "path": "papers/14-operational-instrument-geometry/PROVENANCE.json",
+      "bytes": 4668,
+      "sha256": "8e96dd7d2f46a4de28cb9458b17e90f23b60ce92f1988e924651410cce7bca80"
+    },
+    {
+      "path": "papers/14-operational-instrument-geometry/README.md",
+      "bytes": 1908,
+      "sha256": "d2774578b5e79a5312e42ef3e3b71171d9e7bbe7f5a4a71cb91ab358febd89ba"
+    },
+    {
+      "path": "papers/14-operational-instrument-geometry/references.bib",
+      "bytes": 3404,
+      "sha256": "8dd998199327dab1d672a2ab9c0331653badc0bf90e0b055c2f4601b33d35422"
+    },
+    {
+      "path": "papers/14-operational-instrument-geometry/requirements.txt",
+      "bytes": 29,
+      "sha256": "cd1074e2234d1bdcc918bd32ca06a52f2e6fc1a998af932f3ecd6e05f306348d"
+    },
+    {
+      "path": "papers/14-operational-instrument-geometry/spectral-references.tex",
+      "bytes": 7017,
+      "sha256": "21655aa703f87b075850d3232c1f4b73b594189cb5223dc6a76fb74d6572da4b"
+    },
+    {
+      "path": "papers/14-operational-instrument-geometry/VERIFICATION.md",
+      "bytes": 2683,
+      "sha256": "0b99977cd40236af7a9716cb7ac9ec53daebb4bd0beb2680d2470958636d3055"
+    },
+    {
+      "path": "papers/15-positive-cartan-carriers/.gitignore",
+      "bytes": 22,
+      "sha256": "be091810b9a0f91199ea4b81d84af819934cdff588c5c41c0e97fb1fbd0a4a9f"
+    },
+    {
+      "path": "papers/15-positive-cartan-carriers/certificate-appendix.tex",
+      "bytes": 5895,
+      "sha256": "82bc8d1985d126cca3bcdd7ad8c14a9333f7ac178cbf97a243d7b087cf95c50d"
+    },
+    {
+      "path": "papers/15-positive-cartan-carriers/code/verify.py",
+      "bytes": 6944,
+      "sha256": "3f91760b8c8676da79ff81fb0c9024f979855041284bfbc2118f5b71692811e5"
+    },
+    {
+      "path": "papers/15-positive-cartan-carriers/data/results.json",
+      "bytes": 1629,
+      "sha256": "ec375920307c5389f010e6c0f5deef1cfa3d1bfcc3cee9873d5bdeed9c2ca00f"
+    },
+    {
+      "path": "papers/15-positive-cartan-carriers/main.tex",
+      "bytes": 21887,
+      "sha256": "f37d21c380bcccfd41341e9ded180c189504743893651441491155969671519b"
+    },
+    {
+      "path": "papers/15-positive-cartan-carriers/manuscript.pdf",
+      "bytes": 262829,
+      "sha256": "fc0ae4cdc7fa3541f8f486c991ddd039e49515493bd8ba834ca12ca1eec50107"
+    },
+    {
+      "path": "papers/15-positive-cartan-carriers/PROVENANCE.json",
+      "bytes": 4469,
+      "sha256": "1938cf2adead50d5dd370ab91dc82561e9e79e3520eaf90451805d555abee764"
+    },
+    {
+      "path": "papers/15-positive-cartan-carriers/README.md",
+      "bytes": 1720,
+      "sha256": "db3ba18e8467eee962eab0422e7c17cb8295f6798b0ea3a7c3c9212c0131dc40"
+    },
+    {
+      "path": "papers/15-positive-cartan-carriers/references.bib",
+      "bytes": 2678,
+      "sha256": "718cfa496e586af49e3b8d6b080b6253de218988cc820a8e7f0fd684805a5325"
+    },
+    {
+      "path": "papers/15-positive-cartan-carriers/requirements.txt",
+      "bytes": 29,
+      "sha256": "cd1074e2234d1bdcc918bd32ca06a52f2e6fc1a998af932f3ecd6e05f306348d"
+    },
+    {
+      "path": "papers/15-positive-cartan-carriers/selector-and-certificates.tex",
+      "bytes": 2258,
+      "sha256": "460c08bd2993d26e91ca61b1979362c255157c538bef531218d43044e5d69875"
+    },
+    {
+      "path": "papers/15-positive-cartan-carriers/VERIFICATION.md",
+      "bytes": 2966,
+      "sha256": "caa6a642bf5108bfe4979a99d684ffafeb040324bf68b427c7661ea3941e58e7"
+    },
+    {
+      "path": "papers/16-fuzzy-half-turn-limits/main.tex",
+      "bytes": 15961,
+      "sha256": "e9ab1f63feed7dc4c9c67218c92601ada484570ccbcb11f9b5fdfd8d555939b2"
+    },
+    {
+      "path": "papers/16-fuzzy-half-turn-limits/manuscript.pdf",
+      "bytes": 233141,
+      "sha256": "45b913874dd801d866c90b3221697214a72e6a2bee1db01859b974f4354a8abf"
+    },
+    {
+      "path": "papers/16-fuzzy-half-turn-limits/PROVENANCE.json",
+      "bytes": 4626,
+      "sha256": "27293e3c4fe6efb4466c3789141bf29b70b06816e8743ee8a79ae17d67cef61a"
+    },
+    {
+      "path": "papers/16-fuzzy-half-turn-limits/README.md",
+      "bytes": 2272,
+      "sha256": "27e0d2274c772b336d8d6e999382dbb4f207e8e275615fff6babb75d7c4e77b8"
+    },
+    {
+      "path": "papers/16-fuzzy-half-turn-limits/references.bib",
+      "bytes": 1458,
+      "sha256": "8cde0099de1bf63275cae7c37c88cab5b08c7f5b97b51bf7f3ec835a77bf2a21"
+    },
+    {
+      "path": "papers/16-fuzzy-half-turn-limits/requirements.txt",
+      "bytes": 15,
+      "sha256": "21d3d3236fd5a56235fca5743339259461d587d5e309f67e5cbdd2cce59a671d"
+    },
+    {
+      "path": "papers/16-fuzzy-half-turn-limits/verification/check_fuzzy.py",
+      "bytes": 2353,
+      "sha256": "f7681f1390d9d017a6643440206a4b53d0ef8a893947172d6af649c4c6cf2f7e"
+    },
+    {
+      "path": "papers/16-fuzzy-half-turn-limits/verification/checks.json",
+      "bytes": 1815,
+      "sha256": "13fc9c875da941b70885e525175bf7ab1f2632bec9594593c3dad097184ebf4d"
+    },
+    {
+      "path": "papers/16-fuzzy-half-turn-limits/VERIFICATION.md",
+      "bytes": 2840,
+      "sha256": "2da7a3bd6fc7b849010f129ea804d7b3fc2f71cb00b4df099e07857bbd0b0dd4"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/.gitignore",
+      "bytes": 26,
+      "sha256": "6cf68f361ed9af9c89f8304b81604d87347c3d38348e90f1e5bef55ea8fa99a5"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/code/regge_four_two_action.py",
+      "bytes": 14535,
+      "sha256": "0d25875605b373d5248fcd5f19b58b4594131821651d60a6e9d8ff9f7ab7468f"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/code/replay.py",
+      "bytes": 3189,
+      "sha256": "ea479712fc7d4141da59742ce762db1fcff6e4a9f15163f1f19c8c7b5c4d7f31"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/code/sourced_regge_dynamics.py",
+      "bytes": 9301,
+      "sha256": "4e4852274c40bd011856e9b16e1a288cb51c6a7d244c0be59ee11b6e516f6ab3"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/code/verify_cartan_regge_ranks.py",
+      "bytes": 2900,
+      "sha256": "0be71c16996ef612703ab678f168ab25880ef974369b6a4227bf81573d7cb959"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/code/verify_first_order_angle_exact.py",
+      "bytes": 7982,
+      "sha256": "f564243ce0e9b9083098ba98c17522195b21b7e7d9da0607a2b9b8afe150a1a6"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/inputs/calibration.json",
+      "bytes": 691,
+      "sha256": "97b21aafdd73f51c0cca44b9b6ca08efb856607eb4be015df1a0111de547aa5d"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/main.tex",
+      "bytes": 28365,
+      "sha256": "6944fb9b2cac61ed8717d1c29b320d3a9ec90e88d7f1673b48c2e6af8b8db613"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/manuscript.pdf",
+      "bytes": 257368,
+      "sha256": "d0d5bbb20fde6750af81b68ea2cd50bd9332535f0567bfa79161360af133d817"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/outputs/established_verification.json",
+      "bytes": 2041,
+      "sha256": "ec6640e92f44f821a766bb2d6410617a3eca4efa1738b9bbe4ea5b1eb856fdb2"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/outputs/verification.json",
+      "bytes": 2268,
+      "sha256": "70091d5cdb86131a73b5fd3bb552a0ec355c12f11d327f0b2d7e575de6ce200d"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/PROVENANCE.json",
+      "bytes": 6354,
+      "sha256": "3ebeb854079eecd346fb2bc512607c634ac50798e32a291027919cc62c79ad02"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/README.md",
+      "bytes": 2115,
+      "sha256": "bfdbf62beb61dfa557659c1b3582f875e0cf9aae70fccf586ac22b7f0800e873"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/references.bib",
+      "bytes": 3108,
+      "sha256": "d18cd34349a6e02ca73dd361e6449c5a5ab637018a62dbb972ebec5fb3d46541"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/requirements.txt",
+      "bytes": 44,
+      "sha256": "50e9f4868a4eb9c9703cafb9f5eed991f519425779af97647f1943599b4e254c"
+    },
+    {
+      "path": "papers/17-cartan-regge-closure/VERIFICATION.md",
+      "bytes": 3533,
+      "sha256": "b1ed5049c0151a0c9f85cb1a291ae74c5be31e1174d351e71850d6e94d0c877e"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/code/diagnostic.py",
+      "bytes": 1412,
+      "sha256": "f29c729be6678536d1d2131c957c871de6c1b14a9eaf240f12ccc404273f709f"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/code/doubled_instrument.py",
+      "bytes": 11213,
+      "sha256": "92b407d7e660e576da7f19f5ab5b48d101a9cb13098115cf35fcdf4957ba4770"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/code/weyl_charge_cut.py",
+      "bytes": 14677,
+      "sha256": "a5c586e903fb35afa80ebbd24cbf8502084cbeaa587bc5c2eb4e259a66c3b483"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/code-provenance.json",
+      "bytes": 844,
+      "sha256": "70372b65e10462668ff821116b68db086305d81b3ad0eca7a5b2da60f83f58af"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/main.tex",
+      "bytes": 82380,
+      "sha256": "1bcbc88106ffce49ed65c2a375736f46099b2c80ee99d1e075dcc3df7b5fb987"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/manuscript.pdf",
+      "bytes": 560040,
+      "sha256": "4762529a3d71c3952c264b2e73175cc1ca82df578325dcfe98aa3424f7e57497"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/outputs/diagnostic.txt",
+      "bytes": 256,
+      "sha256": "4229ee3c32c6337a9d9d7ba15b1f76a488d066781a832c37378846dbdd981207"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/outputs/doubled_instrument.txt",
+      "bytes": 2206,
+      "sha256": "af4239ff6deabad8d07b196cd3d3adce3c2ccdfa98cf582be86dd472f073a59d"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/outputs/package_check.json",
+      "bytes": 386,
+      "sha256": "4d17428d5b800d56197a5f7de7f89c11077e5aa0c16de29e555ea100bc744ea6"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/outputs/receipt.json",
+      "bytes": 266,
+      "sha256": "b1de2049a06f3f2bea75b09b0593d6026225592c1ba9630546c316e5c415ccf8"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/outputs/weyl_charge_cut.txt",
+      "bytes": 2610,
+      "sha256": "e974668f658c82500f603a44e62c3a669de673419f568ace1e365061edeebdf2"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/PROVENANCE.json",
+      "bytes": 3270,
+      "sha256": "8cc0f5908513fe4372d2795431fbf1f9f51b443c0533a4104984b70b92bd20e8"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/README.md",
+      "bytes": 2009,
+      "sha256": "ab8ac14ec439512a6849cca1638a48efe472441679b443c64ac68fe66959243a"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/references.bib",
+      "bytes": 12286,
+      "sha256": "d4db9ca2c3922bf93d9d5399cbe4e0de29d44a7584398e0cda2d67d1b96fb593"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/reproduce.py",
+      "bytes": 738,
+      "sha256": "3697fd464774a3508d55e48ed14ad684b36980dd391281c6a701aa0bced8eb79"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/requirements.txt",
+      "bytes": 13,
+      "sha256": "10c15aac265c81bc342ff09fc08510682971c81a4f24ff649cc0f7ae4f9bb278"
+    },
+    {
+      "path": "papers/18-positive-boundary-sewing/VERIFICATION.md",
+      "bytes": 2850,
+      "sha256": "e98e53a1204abb51f8696a655f1c59ec5ddc1a44c393ad6c9c243878bdd2b93f"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/code/graded_algebra.py",
+      "bytes": 11725,
+      "sha256": "e2538fa8d482b0081ca35f2be4e1edf461c7c218cdbfe1e4a374fb1a8b376ca5"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/code/green_matrix.py",
+      "bytes": 4864,
+      "sha256": "896f08d801a4000d73e988b31af2e3b910e0be1b972791b2f3ecde1bc3a55494"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/code/matter_vertex.py",
+      "bytes": 3788,
+      "sha256": "4e0277c0d956e8fbed63864c535d33236fa3375467a3e3372ad99aa878f4c854"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/code/ward_transport.py",
+      "bytes": 10201,
+      "sha256": "b3951d849e0f9ce569f9b4336528a2f819e2c0d5bd1ed58e6e25fba8ba35b9b9"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/code-provenance.json",
+      "bytes": 1704,
+      "sha256": "149906a7c8cba9628007b9fb67f991f155b2ee26d8116726f97749f3510acf35"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/main.tex",
+      "bytes": 70082,
+      "sha256": "681e1e99e712acca70cab97a2647db60d62d265d27afa9079ca40c8ed5648bf2"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/manuscript.pdf",
+      "bytes": 478479,
+      "sha256": "67a55e7609b7a9b596fa1a3ead574d463eb1077de0019a1f796ae6e8b773427a"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/outputs/graded_algebra.txt",
+      "bytes": 1692,
+      "sha256": "c190e7b7ac2311c3114903c53c035c15fd5b1d1ff8a65318f68351efef396c1a"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/outputs/green_matrix.txt",
+      "bytes": 1025,
+      "sha256": "0e61c514c9d5c740460f3d4faee2867620a0ff2dc409a41a14b8fb69caf6c254"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/outputs/matter_vertex.txt",
+      "bytes": 659,
+      "sha256": "499503804e1859e7b2b6155b94ec2b1b3276f2cdbdd5e59981a21e29b9f83ac5"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/outputs/package_check.json",
+      "bytes": 384,
+      "sha256": "5aa33bd228b4044b4f23b3eb385e720aa9ab885c1a9174d6009785ce718c548f"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/outputs/receipt.json",
+      "bytes": 349,
+      "sha256": "1eb4fcf46bef009713df1b06237c49b98a96d30d89960498c49f0b7bdcd3a086"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/outputs/ward_transport.txt",
+      "bytes": 1389,
+      "sha256": "9df3452984392375cffa97f9c9f749170f01552291ae3308f3fd3fda66490664"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/PROVENANCE.json",
+      "bytes": 2428,
+      "sha256": "4b361132b380df0098b5c5b5d0d56f3b27b359b9a7d7d0043ea2c9359c92f0c4"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/README.md",
+      "bytes": 1722,
+      "sha256": "1200c9048419322237092d3a860473886f42836062b87601c06157afd45246b3"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/references.bib",
+      "bytes": 10737,
+      "sha256": "a3a8209ba9bd1a08f09e83eff0b4efb9e1c2669cc2203bbced468018fa03115e"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/reproduce.py",
+      "bytes": 755,
+      "sha256": "d0d707137976cda5d1f3905ccb602e7f07e60e0201e2250bf754b0aa6353c12f"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/requirements.txt",
+      "bytes": 13,
+      "sha256": "63bf5af4c276717e916aa0b4bdf3c28ee45a10e49079c55b0c4aa910cad3fbb9"
+    },
+    {
+      "path": "papers/19-local-gauge-benchmarks/VERIFICATION.md",
+      "bytes": 2348,
+      "sha256": "c5dbfe227f4724d66e0c6faef7b37eaeced5eae9abc816630e269fca024edf79"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/main.tex",
+      "bytes": 26527,
+      "sha256": "6ecead4a91603fd9d19a24ccc69c7c89feab17988697f9ee50c3b10b718ac9a9"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/manuscript.pdf",
+      "bytes": 276494,
+      "sha256": "03d1b20fb27c9b016f047e186478eb7bd107bdecde17b8fc6310d1243a91848f"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/outputs/package_check.json",
+      "bytes": 381,
+      "sha256": "edeaffd90e0097531c39fe885ddef8b143d572bd1b264fa90f6a3c335327a92e"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/outputs/results.json",
+      "bytes": 849,
+      "sha256": "f78c6b80046fd77c074f96119b4a6383e9129fcfbde61a5ad16ad94ac1b4d17a"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/provenance/baseline_pdf_counts.json",
+      "bytes": 1296,
+      "sha256": "d6807db92cc48020786c676221e79b6044764dc7b5af0bef48d08932067edfc9"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/provenance/corpus_metrics.json",
+      "bytes": 5621,
+      "sha256": "d7fb2982fe6e9a6c2c8f3bb004eac46630d212fdf4ed12441558015898b4aece"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/provenance/path_hash_relations.csv",
+      "bytes": 123425,
+      "sha256": "f75b72dc1f0b01e6e738c135a2e64421d7665d68f8769d28d4a4098c076aa8e5"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/provenance/root_markdown_classification.csv",
+      "bytes": 26194,
+      "sha256": "848c6f988d5538a93eac3c2fff493fe5d5b5fb628bb511470c90235b4e884179"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/PROVENANCE.json",
+      "bytes": 4210,
+      "sha256": "afd9216272787ef98ab04894c6b517de2fde7c8a7c94d93831fa80f168ecc7f5"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/README.md",
+      "bytes": 1518,
+      "sha256": "78f51680444e65ae678d5573293bacc8606aecacf8fd36e6f244d500f9e0ac51"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/references.bib",
+      "bytes": 3932,
+      "sha256": "fde08076129b985b3b3532005065cd796480c386be65d845405b508419c71b18"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/reproduce.py",
+      "bytes": 2306,
+      "sha256": "ac4b370efcf3c6d0896bdf84370090128e58599556af5e1825d5546e28423637"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/requirements.txt",
+      "bytes": 48,
+      "sha256": "f638b36df03bb3fe41508a5a9b0ec6795c558d536282741355553e0a8c5ddb87"
+    },
+    {
+      "path": "papers/20-ai-research-case-study/VERIFICATION.md",
+      "bytes": 2514,
+      "sha256": "bdd133e5f56c193e5855be09e2cef758042db35276993f771e7d8781e8b65b51"
+    },
+    {
       "path": "README.md",
-      "bytes": 5271,
-      "sha256": "8710408e6aa3c616dc6094f607e39796c7e6044bc935262a5f2b74b3583dac8a"
+      "bytes": 9139,
+      "sha256": "7aca4c2f4ff7fb35bc89c536c76a2532ba1968453d0526aa5579cc21f4ffc1e2"
     },
     {
       "path": "tools/build.ps1",
@@ -2549,8 +7120,8 @@
     },
     {
       "path": "tools/check_archive.py",
-      "bytes": 4362,
-      "sha256": "734b17dbb13fe50e5b160895e627e7bb9d518559187198411f6619816f805693"
+      "bytes": 4384,
+      "sha256": "1a04869ab44f2678e79b9ada326d69bb4a9bd2fd8db9b68b14d86fbb04a3b35a"
     },
     {
       "path": "tools/render_review.py",
@@ -2559,8 +7130,8 @@
     },
     {
       "path": "VERIFICATION.md",
-      "bytes": 7504,
-      "sha256": "34a3c588314c75e7d5fdfeeb6ba7b28a6dd116c0c7e31e0b2b992f69a354a729"
+      "bytes": 8793,
+      "sha256": "21d490a2285ace36157ef75b325162f5bb014411059f8a26b6f8ef6c89f25ead"
     }
   ]
 }

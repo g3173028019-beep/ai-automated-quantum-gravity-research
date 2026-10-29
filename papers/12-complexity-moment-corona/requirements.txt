@@ -1,0 +1,2 @@
+# Python >=3.8, standard library only; no pip packages required.
+# PDF build: TeX Live or equivalent with latexmk, pdfLaTeX and BibTeX.

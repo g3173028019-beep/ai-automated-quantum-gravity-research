@@ -1,0 +1,129 @@
+{
+  "edition": "2026-10-29",
+  "title": "Thermal Point-Process Statistics: Exponential Bounds, Reconstruction, and Their Limits",
+  "human_authors": [],
+  "affiliations": [],
+  "pdf_author": "",
+  "human_expert_review": false,
+  "claim_basis": "Self-contained analytic proofs plus portable exact/numerical convention checks; targeted classical prior-art comparison, no comprehensive novelty certificate.",
+  "source_lineage": [
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/P3-4d-blackholes/main.tex",
+      "sha256": "6d5d17e826fc22db4ad99ad9c34ca18359a718c84ff6a3c7dbab35e40aa3800d",
+      "bytes": 41682,
+      "role": "Earlier bounded-statistic module; physical information-loss inference not retained"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/blackhole_hard_edge/RESULT.md",
+      "sha256": "4c1d2894236c84eb147303e724c8788a2113f9cf00bc3e72c6fbc6d8e9bf4f58",
+      "bytes": 9123,
+      "role": "Recovered exponential bound, Cox and two-level counterexamples"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/blackhole_hard_edge/check_bounds.py",
+      "sha256": "cbd1a59ea5fd1c0a24e1ac4d0db1eb2780151ae142e25de4a0b3133a13aa3b42",
+      "bytes": 3215,
+      "role": "Portable calculation producer; only final report prose pointer adapted"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/blackhole_hard_edge/checks.json",
+      "sha256": "70f66f3a708328cc1a9ee9088f2e151a586f00557a3a2683870ce9ec2cea4ce2",
+      "bytes": 1724,
+      "role": "Saved output bytes copied to verification/reference-bounds.json"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/P1-jt-moment/main.tex",
+      "sha256": "d8e930af8261737f2e8f4c7dd8a54cc51d4cdc2552982bca7e34ae4c57a58bb8",
+      "bytes": 75720,
+      "role": "Earlier full-clock hierarchy; density theorem not retained"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/post-SCG-core-series/C4-projection-holonomy/en/main.tex",
+      "sha256": "70f799f578e85c1acf01731273abca6c1c3f7917af53fb69bb0fa441338f3849",
+      "bytes": 56345,
+      "role": "Cumulants/ordered clocks and corrected growth criterion only; sign-rigidity core excluded"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/FINAL-TECHNICAL-NOTE-SEMIGROUP-DISINTEGRATION.md",
+      "sha256": "3b4ff40b0aea81604b0126c39257967d03e2eed8f8c486337244cba574f8c2cd",
+      "bytes": 7762,
+      "role": "Conditional whole-heat-semigroup density reduction"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/fuzzy_projection/DERIVATIONS.md",
+      "sha256": "63806436c7a4b17a5479c4fd86c3bd95aaf961c0dae585d713e7e6083af4d9d5",
+      "bytes": 11138,
+      "role": "Growth counterexample, full-clock sign/scoping and GNS correction"
+    }
+  ],
+  "packet_assets": [
+    {
+      "path": "main.tex",
+      "sha256": "b4cb58c1bbbcb8d64eba6d7031afeff902934b7a589a49655ca1da16c5e3b1fa",
+      "bytes": 29247
+    },
+    {
+      "path": "manuscript.pdf",
+      "sha256": "f56ad8272883396a7cd290c1e85b2d2091ce6a603abe55bfa4c5a976436269db",
+      "bytes": 276964
+    },
+    {
+      "path": "README.md",
+      "sha256": "c9bb026c60a72cdab085b1e2faf16e23de369e77215ad588565a3dab887e6b62",
+      "bytes": 2942
+    },
+    {
+      "path": "references.bib",
+      "sha256": "f91b068716c1c2bfec58fe72a294c2aa8180c3a7de159a3b92c59d0c085eaf67",
+      "bytes": 1729
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "313d9039e41c40608a2f679029ec7356e93a6ca560c6a2deeaed5d72cc773dd5",
+      "bytes": 30
+    },
+    {
+      "path": "verification/channels.json",
+      "sha256": "45de740492e4d0b7d0de1a83f405b7c58d95ee134550e90a5ead40b21544ab91",
+      "bytes": 1189
+    },
+    {
+      "path": "verification/check_bounds.py",
+      "sha256": "2c5b508402e2b138a941823318f4ddf5526a8a4f428e26b9487d1de50b88ab90",
+      "bytes": 3233
+    },
+    {
+      "path": "verification/check_channels.py",
+      "sha256": "4ae439ac773d46d9f810bdb1fe7906ccc22f1971d311bb20f61727a69254d474",
+      "bytes": 1971
+    },
+    {
+      "path": "verification/checks.json",
+      "sha256": "6947b5b7d17408f80ad25a92f850481646d78322c7bc1d84a329c2d6b004ce18",
+      "bytes": 1742
+    },
+    {
+      "path": "verification/reference-bounds.json",
+      "sha256": "70f66f3a708328cc1a9ee9088f2e151a586f00557a3a2683870ce9ec2cea4ce2",
+      "bytes": 1724
+    },
+    {
+      "path": "VERIFICATION.md",
+      "sha256": "015b49a590f6fa77fcaf624819a5be1a50110207b810d53dac80991b0bdb5b64",
+      "bytes": 3858
+    }
+  ],
+  "runtime_dependencies": "Only Python packages in requirements.txt and standard TeX tools. Historical source paths are provenance identifiers, never runtime inputs.",
+  "reported_chronology": "Earlier work mainly Fable 5-led; results from July 2026 onward predominantly GPT-produced; DeepSeek and multiple GPT models contributed cross-review, checking and preparation. Later revision does not reattribute earlier work.",
+  "attribution_statement": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "date_policy": "Document/recovery/private-upload/public-disclosure dates are distinct; no settled priority, journal acceptance, authorship or ownership determination.",
+  "build": {
+    "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex",
+    "status": "success",
+    "pages": 10,
+    "final_tex_log_warnings": [],
+    "launcher_note": "Perl locale fallback warning; successful TeX output unaffected."
+  },
+  "reference_verification": "Primary arXiv/publisher metadata; formula-level Langmann-Szabo/Ydri comparison for oscillator; Heyde title/author/volume/issue/pages checked via Crossref API. Bibliography keys resolved.",
+  "integration_boundary": "Parent owns final visual PDF QA and upload. No historical source or publication-checkout mutation by packet worker."
+}

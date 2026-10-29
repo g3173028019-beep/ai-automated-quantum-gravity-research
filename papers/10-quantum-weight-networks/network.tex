@@ -1,0 +1,66 @@
+\section{Classification of the specified connected networks}
+The three-cell computation has an exact extension to every larger connected graph.
+Network-controllability arguments and algebraic propagation are established tools~\cite{Burgarth2009}; the point here is to close the extension for the two specified bonds and the restricted local algebra.
+
+\begin{lemma}[Extension of a fully controlled block]\label{lem:extension}
+Suppose a block of $m\geq2$ cells generates $\mathfrak{su}(d)$, where $d=4^m$.
+Append a four-level cell with its independent local $\mathfrak{spin}(5)$ controls.
+If a connecting control is $A_0\otimes\Gamma_5$ or $A_0\otimes\Sigma_{45}$ with $A_0$ a nonzero traceless Hermitian block operator, the enlarged control algebra is $\mathfrak{su}(4d)$.
+\end{lemma}
+\begin{proof}
+Write $V=\operatorname{span}_{\mathbb R}\{\Gamma_i\}$ and $B=\operatorname{span}_{\mathbb R}\{\Sigma_{ij}\}$.
+The real adjoint module of the compact simple algebra $\mathfrak{su}(d)$ is irreducible.
+The local $V$ and $B$ modules are respectively the irreducible vector and adjoint modules of $\mathfrak{spin}(5)$.
+Independent repeated commutation with block and local controls therefore generates all of $\mathfrak{su}(d)\otimes V$ from a vector bond, or all of $\mathfrak{su}(d)\otimes B$ from a bivector bond.
+
+In the vector case choose two commuting block Pauli involutions $A,B_0$ whose product is nonzero and traceless, such as two independent $Z$ strings.
+Then
+\begin{equation}
+ \Hbr{A\otimes\Gamma_1}{B_0\otimes\Gamma_2}
+ =2AB_0\otimes\Sigma_{12}.
+\end{equation}
+Taking the block adjoint span and the local bivector orbit gives $\mathfrak{su}(d)\otimes B$ too.
+Conversely, in the bivector case choose anticommuting block Pauli involutions $A,B_0$ and the commuting local bivectors $\Sigma_{12},\Sigma_{34}$.
+The Clifford volume convention gives $\Sigma_{12}\Sigma_{34}=-\Gamma_5$, hence
+\begin{equation}
+ \Hbr{A\otimes\Sigma_{12}}{B_0\otimes\Sigma_{34}}
+ =-\Hbr{A}{B_0}\otimes\Gamma_5.
+\end{equation}
+This generates the vector module as well.
+
+Choose a traceless block involution $Q$ with $Q^2=I$.
+Since both tensor modules are available,
+\begin{equation}
+ \Hbr{Q\otimes\Sigma_{12}}{Q\otimes\Gamma_1}
+ =2I\otimes\Gamma_2.
+\end{equation}
+Local rotations supply every $I\otimes\Gamma_i$.
+Together with the original $I\otimes B$, these form $I\otimes\mathfrak{su}(4)$, because the five vectors and ten bivectors span all traceless Hermitian $4\times4$ matrices.
+Independent block and full local adjoint actions on any nonzero tensor then supply $\mathfrak{su}(d)\otimes\mathfrak{su}(4)$.
+The three resulting subspaces have total dimension
+\begin{equation}
+ (d^2-1)+15+15(d^2-1)=16d^2-1,
+\end{equation}
+which exhausts $\mathfrak{su}(4d)$.
+\end{proof}
+
+\begin{theorem}[Connected-network control algebra]\label{thm:graph}
+On a finite connected graph, allow independent copies of the ten local generators and independently available nonzero edge controls of type $S_rS_s$ or $C_rC_s$.
+One cell generates $\mathfrak{spin}(5)$.
+Two cells with only an $S$ bond generate $\mathfrak{spin}(10)$; with a $C$ bond present they generate $\mathfrak{su}(16)$.
+Every connected graph of $n\geq3$ cells with these edge types generates $\mathfrak{su}(4^n)$.
+\end{theorem}
+\begin{proof}
+The one-, two- and three-cell bases are the exact Pauli closures in Theorem~\ref{c:thm:proliferation}.
+If a $C$ edge is present, its two endpoints already give a fully controlled $\mathfrak{su}(16)$ block.
+If every edge is of type $S$, a connected graph with at least three vertices contains a three-vertex path, whose controls generate $\mathfrak{su}(64)$.
+In either case grow the controlled block along a spanning tree.
+At each step the block part of the next edge is a nonzero traceless operator, so Lemma~\ref{lem:extension} applies.
+Extra available edges cannot reduce a generated algebra.
+\end{proof}
+
+The assumption of independently available controls matters.
+A single fixed homogeneous Hamiltonian, a diagonal collective control restriction or a projected low-energy model is a different problem.
+The theorem rules out the naive repetition of this pair as a restricted spatial control algebra; it does not rule out every constrained or collective model.
+As a portability check, the integer algorithm also gives $65535=\dim\mathfrak{su}(256)$ for four-cell chains with either uniform bond.
+This check supports the implementation; the analytic induction, rather than an extrapolation of dimensions, proves the all-graph result.

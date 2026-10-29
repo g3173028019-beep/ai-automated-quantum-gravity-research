@@ -1,0 +1,8 @@
+transpose_choi_spectrum=-1,1,1,1
+transpose_ancillary_control=PASS
+observer_restriction_witness=PASS
+full_matrix_compression_defect=1
+compression_invalid_control=PASS
+weyl_dictionary_residual=1.1176282583991611e-15
+weyl_dictionary=PASS
+overall=PASS

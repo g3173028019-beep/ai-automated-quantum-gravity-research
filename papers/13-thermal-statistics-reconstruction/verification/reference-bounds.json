@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "lognormal_signed_integer_moments": "zero for every nonnegative integer n",
+  "same_clock_spectra": {
+    "weights_A": [
+      "1/4",
+      "3/4"
+    ],
+    "weights_B": [
+      "1/3",
+      "2/3"
+    ],
+    "Z_at_beta1": 1,
+    "Z_A_at_beta2": "5/8",
+    "Z_B_at_beta2": "5/9"
+  },
+  "positive_spectrum_Cox_counterexample": [
+    {
+      "s": 0.5,
+      "laplace_plus": 0.3780615604701685,
+      "laplace_minus": 0.38972618103000883,
+      "difference": -0.011664620559840355,
+      "reported_quadrature_error_sum": 1.5501999258252894e-14
+    },
+    {
+      "s": 1.0,
+      "laplace_plus": 0.192241639205891,
+      "laplace_minus": 0.2081849295546046,
+      "difference": -0.015943290348713612,
+      "reported_quadrature_error_sum": 8.145279933981383e-14
+    },
+    {
+      "s": 2.0,
+      "laplace_plus": 0.06024148966412339,
+      "laplace_minus": 0.06775194045189492,
+      "difference": -0.00751045078777153,
+      "reported_quadrature_error_sum": 2.925598681445885e-14
+    }
+  ],
+  "common_heat_mean_including_fixed_ground": 5.670774270471605,
+  "repulsion_failure_ratio_rho2_over_rho1_squared": 54.598150033144236,
+  "bounded_DPP_MGF_examples": [
+    {
+      "t": 0.1,
+      "actual": 1.10317687843672,
+      "bound": 1.1080692299732697
+    },
+    {
+      "t": 0.5,
+      "actual": 1.7180276424847738,
+      "bound": 1.9826371114428667
+    },
+    {
+      "t": 1.0,
+      "actual": 3.385476133399656,
+      "bound": 7.603219468781993
+    },
+    {
+      "t": 2.0,
+      "actual": 19.86781137446399,
+      "bound": 19006.409699680913
+    }
+  ],
+  "scope": "Exact integer-moment identity and finite examples; analytic general proofs in RESULT.md. No black-hole dynamics or Airy density proof."
+}

@@ -1,0 +1,126 @@
+{
+  "status": "passed finite exact-formula checks",
+  "block_rows": [
+    {
+      "k": 1,
+      "epsilon": 0.12500000000000003,
+      "block_value": 1,
+      "block_probability": 0.4711953764760206,
+      "error_bound": 0.5288046235239794,
+      "abel_witness": 0.47119537647603327,
+      "epsilon_Z_for_coefficients_1_plus_x": 1.5650602078119775
+    },
+    {
+      "k": 2,
+      "epsilon": 0.015625000000000007,
+      "block_value": 0,
+      "block_probability": 0.7604851441826708,
+      "error_bound": 0.2395148558173293,
+      "abel_witness": 0.1789279186308051,
+      "epsilon_Z_for_coefficients_1_plus_x": 1.188162278247419
+    },
+    {
+      "k": 3,
+      "epsilon": 0.00024414062500000016,
+      "block_value": 1,
+      "block_probability": 0.9394129502783011,
+      "error_bound": 0.060587049721698934,
+      "abel_witness": 0.9423354949901592,
+      "epsilon_Z_for_coefficients_1_plus_x": 1.9425726061386972
+    },
+    {
+      "k": 4,
+      "epsilon": 5.960464477539072e-08,
+      "block_value": 0,
+      "block_probability": 0.9961013694701175,
+      "error_bound": 0.0038986305298825113,
+      "abel_witness": 0.003884087112545731,
+      "epsilon_Z_for_coefficients_1_plus_x": 1.0038841170306232
+    },
+    {
+      "k": 5,
+      "epsilon": 3.552713678800511e-15,
+      "block_value": 1,
+      "block_probability": 0.9999847413273523,
+      "error_bound": 1.5258672647770297e-05,
+      "abel_witness": 0.999984741559316,
+      "epsilon_Z_for_coefficients_1_plus_x": 1.9999847415593197
+    },
+    {
+      "k": 6,
+      "epsilon": 1.2621774483536262e-29,
+      "block_value": 0,
+      "block_probability": 0.9999999997671694,
+      "error_bound": 2.3283064362676473e-10,
+      "abel_witness": 2.3283064365386963e-10,
+      "epsilon_Z_for_coefficients_1_plus_x": 1.0000000002328306
+    },
+    {
+      "k": 7,
+      "epsilon": 1.5930919111324707e-58,
+      "block_value": 1,
+      "block_probability": 1.0,
+      "error_bound": 5.42101086242753e-20,
+      "abel_witness": 1.0,
+      "epsilon_Z_for_coefficients_1_plus_x": 2.0
+    },
+    {
+      "k": 8,
+      "epsilon": 2.537941837315708e-116,
+      "block_value": 0,
+      "block_probability": 1.0,
+      "error_bound": 2.938735877055727e-39,
+      "abel_witness": 0.0,
+      "epsilon_Z_for_coefficients_1_plus_x": 1.0
+    }
+  ],
+  "parity_rows": [
+    {
+      "epsilon": 1.0,
+      "even_probability": 0.7310585786300049,
+      "shift_functional_norm": 1.2642411176571153
+    },
+    {
+      "epsilon": 0.1,
+      "even_probability": 0.52497918747894,
+      "shift_functional_norm": 0.19032516392808085
+    },
+    {
+      "epsilon": 0.01,
+      "even_probability": 0.5024999791668749,
+      "shift_functional_norm": 0.019900332501663894
+    },
+    {
+      "epsilon": 0.001,
+      "even_probability": 0.5002499999791666,
+      "shift_functional_norm": 0.0019990003332500165
+    }
+  ],
+  "word_ideal_counterexample": [
+    {
+      "gamma": 0,
+      "k": 1,
+      "total_complexity": 1,
+      "lift": 1
+    },
+    {
+      "gamma": 0,
+      "k": 10,
+      "total_complexity": 10,
+      "lift": 1
+    },
+    {
+      "gamma": 0,
+      "k": 100,
+      "total_complexity": 100,
+      "lift": 1
+    },
+    {
+      "gamma": 0,
+      "k": 1000,
+      "total_complexity": 1000,
+      "lift": 1
+    }
+  ],
+  "proof_boundary": "Finite rows illustrate analytic bounds; no finite test proves a weak-star limit or physical admissibility. Block mass and witness round to endpoints in late rows; the separately stable analytic error bound stays positive."
+}

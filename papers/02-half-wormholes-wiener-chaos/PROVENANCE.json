@@ -1,0 +1,97 @@
+{
+  "schema": "versioned-manuscript-revision-v1",
+  "edition_date_beijing": "2026-10-29",
+  "prior_repository_commit": "8858ba8bd7d47e08fb5e9d5961553febfd2704cf",
+  "historical_source_date": "July 14, 2026 English input paper; earlier June 2026 research records are a separate provenance fact, not a public priority date.",
+  "prior_tracked_edition_date": "2026-10-28",
+  "source_history_policy": "Integrator preserves exact prior tracked editions before applying this versioned revision. This worker wrote delivery packets only.",
+  "inputs": [
+    {
+      "path": "E:/Research-Publications/ai-automated-quantum-gravity-research/papers/02-half-wormholes-wiener-chaos/main.tex",
+      "sha256": "1b11c94d47e768b845b72071617fd2e0e625f3a31f8ce36cc594c704c8dffdc4",
+      "role": "prior tracked edition input; preserved separately by integrator"
+    },
+    {
+      "path": "E:/Research-Publications/ai-automated-quantum-gravity-research/papers/02-half-wormholes-wiener-chaos/references.bib",
+      "sha256": "dc12e7e8f328df8c7f92ddb783bb35643b1080e600841548c70add605a22b936",
+      "role": "prior tracked edition input; preserved separately by integrator"
+    },
+    {
+      "path": "E:/Research-Publications/ai-automated-quantum-gravity-research/papers/02-half-wormholes-wiener-chaos/manuscript.pdf",
+      "sha256": "cd9720ce99ccb6726e3208a5d7a5986ac9952838915c37215c847082b57a94ed",
+      "role": "prior tracked edition input; preserved separately by integrator"
+    },
+    {
+      "path": "E:/Research-Publications/ai-automated-quantum-gravity-research/papers/02-half-wormholes-wiener-chaos/verification/legacy_checks.wls",
+      "sha256": "5dca2abdcce33efdcee1c6dff42187458c643d53bc79751f57b1129791840a4e",
+      "role": "unchanged historical supplementary script; not run in this revision"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-results-audit-20261028/staging/00-existing-drafts/CORRECTIONS.md",
+      "sha256": "b19f0004b8c54e0a680230d3d61a87bdd1af47e75d470daa4429575e3954a63a",
+      "role": "completed audit correction source"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/inventory/version-map.json",
+      "sha256": "711b420052e020756f67c11a7ded5b2dbdb843cb0e62bdbfb260581600c29bbd",
+      "role": "completed long/short manuscript version boundaries and correction state"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/paper-delivery-20261029/synthesis/check_chaos_extras.py",
+      "sha256": "5bc7f1f558b755e7709a4fdf9613fe274b32e74c21281cd302bed0d2bab1c713",
+      "role": "completed exact supporting-claim script; copied unchanged"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/paper-delivery-20261029/synthesis/chaos-extras-results.json",
+      "sha256": "27589e1b1f64f79dce1c56eed02b8c483cd69083a3a97d6006f176540ae25c87",
+      "role": "focused supporting-claim outputs; locally reproduced"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-results-audit-20261028/scans/uploaded/checks/exact_checks.py",
+      "sha256": "2f07243b4c4f23965a8bd987cc89722e85745cea676895b4a4df0873327ee746",
+      "role": "prior exact variance-reduction check; compact revision check reuses the mathematics without rerunning unrelated experiments"
+    }
+  ],
+  "human_authors": [],
+  "affiliations": [],
+  "human_expert_review": false,
+  "authorship_uncertainty": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "pages": 10,
+  "revision_changes": [
+    "explicit prior variance reduction and bounded Slud comparison",
+    "compact Gaussian-mixture logarithmic-integral proof",
+    "canonical N-extremal versus full Nevanlinna family",
+    "single-draw scope and n1 zero case",
+    "even-q W4 support with exact sign control",
+    "Gaussian Pfaffian convolution identity",
+    "classical exact finite quadrature calibration",
+    "correct chronological disclosure and historical-edition distinction"
+  ],
+  "default_reproduction": [
+    "python verification/check_revision.py",
+    "python verification/check_chaos_extras.py"
+  ],
+  "output_files": {
+    "main.tex": "9415d86ced3242558766b20b6b30c2488ea4d2ce42b161f4805efbfe76bd3495",
+    "references.bib": "986e526006ccc846718cfe5af774d7f8a7ef3c0e78363176ee9d6f81a1192ff9",
+    "manuscript.pdf": "dac88bb6b2378f24a419468d8670fe527ade6abeb32562306a08df44175dc767",
+    "verification/check_revision.py": "6812700b7f6f3b1815f984efaae1cdc341bfd71f50352d4abc8cf38c347eca7d",
+    "verification/revision-checks.json": "d74e2dd3c05854bc8c0bcbea3b53eeddc906857c393d4c379e8ca8e411972ab2",
+    "verification/check_chaos_extras.py": "5bc7f1f558b755e7709a4fdf9613fe274b32e74c21281cd302bed0d2bab1c713",
+    "verification/chaos-extras-results.json": "27589e1b1f64f79dce1c56eed02b8c483cd69083a3a97d6006f176540ae25c87",
+    "verification/legacy_checks.wls": "5dca2abdcce33efdcee1c6dff42187458c643d53bc79751f57b1129791840a4e",
+    "README.md": "378a4244de115ca15eddf6f8df4be20afe9dd48fc714162d6e5f61d5248d90b9",
+    "REVISION.md": "54e7b034c08da3bdf3f460161a1614262d60d6c80376c4a04a641242211b31e3",
+    "VERIFICATION.md": "7eff771fb581577a55ff62bad91bfc28a7147c8bb9ab93fa08630d70b4e467ce",
+    "requirements.txt": "313defa0684ad6815ddc3f2b008213b97947915b3fb2fd537216dae9d603c21a",
+    "build.ps1": "fb08635ce447dc1f2d6e4750b33f6fef44ea26951c1c8894929d954a755d7b1a"
+  },
+  "static_checks": {
+    "labels_unique": true,
+    "refs_and_citations_resolve": true,
+    "blank_pdf_author": true,
+    "final_log_issues": [],
+    "legacy_script_not_rerun": true,
+    "portable_exact_checks": "passed"
+  }
+}

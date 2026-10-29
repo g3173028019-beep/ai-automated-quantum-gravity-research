@@ -1,0 +1,53 @@
+\section{The topology of the collective limit}
+The state-dependent contraction has a useful exact error estimate.
+It also has a sharp obstruction to an interpretation as microscopic operator convergence.
+
+\begin{proposition}[State error and operator-norm obstruction]\label{prop:error}
+For fixed $\mu>0$ in the positivity disk and the iid product state, let
+\begin{equation}
+ R_N=\Hbr{k_i^{(N)}}{e_i^{(N)}}-I=\frac{C_N}{N\mu}-I.
+\end{equation}
+Then
+\begin{equation}
+ \langle R_N^2\rangle=\frac{1-\mu^2}{N\mu^2},
+ \qquad
+ \|R_N\|=1+\frac1\mu.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The one-cell identities $C^2=I$ and $\langle C\rangle=\mu$, together with independence, give $\operatorname{Var}(C_N)=N(1-\mu^2)$ and $\langle C_N\rangle=N\mu$.
+This proves the first identity.
+The spectrum of $C_N/N$ includes both $-1$ and $+1$ for every $N$.
+Since $0<\mu\leq1$, the largest absolute eigenvalue of $R_N$ is $1+1/\mu$.
+\end{proof}
+
+The product-state root-mean-square error is therefore $\sqrt{1-\mu^2}/(\mu\sqrt N)$, while the full operator norm never tends to zero.
+At $\mu=1$ the state error is zero but the full norm is still two.
+At $\mu=0$ the stated normalization is undefined and the unnormalized $E,K$ fluctuation symplectic form is degenerate.
+For $\mu<0$ one may normalize with $|\mu|$ and reverse one canonical orientation, but a negative variance $1/(2\mu)$ is not admissible.
+If $\mu$ varies with $N$ and tends to zero, even commutator convergence in state root mean square requires $N\mu_N^2\to\infty$; the canonical variances still diverge, so this condition alone does not give the fixed regular Gaussian limit used here.
+
+The product-state hypothesis can be seen directly in the moment proof.
+On expanding a centered product of fluctuation sums, a site appearing only once contributes zero.
+After the $N^{-k/2}$ normalization, only partitions into pairs survive for even $k$; odd moments vanish.
+The ordered two-point functions determine a Gaussian noncommutative state, whose symmetric part is the covariance and whose antisymmetric part is the expected commutator.
+The bounded finite-dimensional one-site observables make all these moments finite.
+The limiting covariance satisfies the CCR positivity condition since $0<\mu\leq1$, and its Gaussian characteristic functions are continuous, giving a regular CCR state.
+This argument also permits nonfaithful one-site states on the positivity-disk boundary when $\mu>0$.
+
+\section{What the phase Hamiltonian does establish}
+The phase model above has an exact reduction to established mean-field physics.
+The two anticommuting involutions $S,C$ generate an associative algebra unitarily equivalent to $M_2(\mathbb C)\otimes I_2$.
+To see this, diagonalize $S$ into two eigenspaces of dimension two; $C$ interchanges them unitarily, and a choice of basis in one eigenspace makes its off-diagonal block the identity.
+A further two-dimensional rotation maps the pair to $Z\otimes I_2,X\otimes I_2$.
+Thus the block Hamiltonian is precisely a transverse-field spin-half Curie--Weiss model with a free two-dimensional spectator at each site.
+The spectator multiplies the partition function by $2^N$ and shifts the free-energy density by $-\log(2)/\beta$.
+This explains the factor $4\cosh$ rather than $2\cosh$ and identifies the critical line with the established $p=2$ result~\cite{Bapst2012}.
+No new mean-field phase boundary is claimed.
+
+The mean-field variational problem supplies an extremal one-site equilibrium with the required polarizations.
+It does not prove that the actual interacting finite-$N$ Gibbs states have the same fluctuation covariance as the iid state.
+Finite Gibbs states preserve the $S\mapsto-S$ symmetry, so selecting one ordered sign requires a symmetry-breaking limit.
+Moreover, correlations invisible in a fixed number of one-site marginals can survive $N^{-1/2}$ fluctuation scaling.
+The product-state CCR theorem and the phase theorem therefore establish compatible one-site data, not a theorem identifying their full collective fluctuation states.
+This distinction is needed before claiming that the Hamiltonian dynamically realizes the exact noise formula.

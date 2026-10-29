@@ -1,0 +1,483 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{booktabs,enumitem}
+\setlist{nosep,leftmargin=*,topsep=2pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Herm}{\operatorname{Herm}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\id}{\mathbf 1}
+\newcommand{\so}{\mathfrak{so}}
+\title{Positive Cartan Carriers and Signed Lorentz Selectors\\[0.4em]\large Minimal spinors and exact restricted-action certificates}
+\author{}
+\date{29 October 2026}
+
+\hypersetup{pdfauthor={},pdftitle={Positive Cartan Carriers and Signed Lorentz Selectors}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A positive carrier for a symmetry need not contain a positive order parameter
+with the desired stabilizer.
+We examine this distinction for the de Sitter and anti-de Sitter Cartan
+algebras in four spacetime dimensions.
+One qubit cone admits no nontrivial reversible linear action of either
+simple ten-generator algebra, while the classical four-component spinor is
+minimal among faithful complex-linear carriers.
+Its congruence action preserves the positive cone, but its Lorentz contact
+orbit is signed.
+More strongly, every nonzero Lorentz-fixed Hermitian matrix in the stated
+Dirac restriction has inertia $(2,2)$, excluding a positive semidefinite
+selector even on the boundary.
+We give explicit Clifford matrices, analytic proofs, and portable exact
+certificates for the one-dimensional contact-linear curvature-square
+invariant, the independent topological quadratic direction, torsion
+invertibility and the Einstein/Weyl rank split.
+The Clifford carrier and restricted Cartan action are established ingredients,
+not new gravity actions; their role here is to locate precisely the
+positive-carrier/selector obstruction and its conditional classical bridge.
+No contact selection law, coupling scale, global Spin lift or quantum measure
+is derived.
+\end{abstract}
+
+\section{Question, conventions, and claim boundary}
+
+MacDowell--Mansouri and Stelle--West gravity use a de Sitter or anti-de Sitter gauge
+connection together with a reduction to the Lorentz subgroup
+\cite{MacDowellMansouri,StelleWest,Wise}.  Modern Cartan-gravity formulations make the
+contact vector explicit and may promote it to a dynamical field
+\cite{WestmanZlosnikMatter,WestmanZlosnikExplore,WestmanZlosnikIntro}.  Here we study a
+more restricted algebraic question: can one finite positive carrier realize the full
+Cartan group and also select its Lorentzian gravitational orbit?
+
+Let
+\begin{equation}
+ \eta_{AB}=\operatorname{diag}(1,-1,-1,-1,s),\qquad
+ (J_{AB})^C{}_D=\delta_A^C\eta_{BD}-\delta_B^C\eta_{AD},
+ \qquad P_I=\ell^{-1}J_{I4},
+ \label{eq:cartan-generators}
+\end{equation}
+where $s=\pm1$, $I=0,\ldots,3$, and $\ell>0$.  Direct multiplication gives
+\begin{equation}
+ [J_{IJ},P_K]=\eta_{JK}P_I-\eta_{IK}P_J,\qquad
+ [P_I,P_J]=-\frac{s}{\ell^2}J_{IJ}.
+ \label{eq:cartan-brackets}
+\end{equation}
+Thus $s=-1$ gives $\so(1,4)$ and $s=+1$ gives $\so(2,3)$ in the displayed internal
+signature.  Physical de Sitter/anti-de Sitter names also depend on the spacetime metric
+sign convention; we do not infer them from $s$ alone.
+
+The main theorems are finite and local.  ``Unique'' below always means within the explicitly
+declared class: oriented four-forms, quadratic in the full Cartan curvature, at most linear
+in the contact field, and containing neither $DV$ nor higher derivatives.  The theorem does
+not classify nonlocal, higher-curvature, fermionic, or boundary actions.
+
+\section{The Cartan deformation is one-parameter}
+
+Let $V$ be the real Lorentz vector representation and
+$\mathfrak h=\so(1,3)\simeq\Lambda^2V$.  A Lorentz-equivariant antisymmetric translation
+bracket is a map $\Lambda^2V\to\mathfrak h$.  Because the Lorentzian Hodge operator on real
+bivectors satisfies $\star^2=-1$, the real commutant is two-dimensional and the most general
+candidate is
+\begin{equation}
+ [P_I,P_J]=\lambda J_{IJ}+\mu(\star J)_{IJ}.
+ \label{eq:dual-bracket}
+\end{equation}
+
+\begin{proposition}[Jacobi removes the dual deformation]
+\label{prop:jacobi}
+The three-translation Jacobi identity for \eqref{eq:dual-bracket} implies $\mu=0$.
+Consequently the nonzero deformation is, up to scale and real form, the standard
+de Sitter/anti-de Sitter bracket.
+\end{proposition}
+
+\begin{proof}
+The ordinary $\lambda$ terms cancel cyclically, while the dual terms give
+\begin{equation}
+ \sum_{\rm cyc}[[P_I,P_J],P_K]=3\mu\,\epsilon_{IJKL}P^L.
+ \label{eq:jacobi-fault}
+\end{equation}
+Linear independence of the $P_L$ forces $\mu=0$.
+\end{proof}
+
+This preliminary result prevents a spurious parity-odd local translation bracket from
+being counted as a second Cartan algebra.  For either simple real form the vector
+representation has $B(X,Y)=3\Tr_5(XY)$ and
+\begin{equation}
+ B(P_I,P_J)=-\frac{6s}{\ell^2}\eta_{IJ}.
+ \label{eq:killing-form}
+\end{equation}
+The $\ell\to\infty$ In\"on\"u--Wigner contraction removes both $[P,P]$ and the translation
+block of the Killing form as $\ell^{-2}$.  This is an algebra contraction, not a spacetime
+continuum limit.
+
+\section{No full simple Cartan action on one qubit cone}
+
+The connected automorphism algebra of the qubit positive cone has dimension
+seven.
+A direct proof avoids assuming a classification for larger matrix cones.
+Identify the qubit cone with $x^0\geq|\boldsymbol x|$ and set
+$q(x)=(x^0)^2-|\boldsymbol x|^2$.
+An invertible real cone automorphism $T$ preserves its boundary, so the
+quadratic polynomial $q(Tx)$ vanishes on every $(1,\boldsymbol n)$ with
+$|\boldsymbol n|=1$.
+Its linear term on the sphere vanishes and its spatial quadratic part is a
+scalar multiple of $|\boldsymbol n|^2$, giving $q(Tx)=a q(x)$.
+Interior preservation implies $a>0$.
+In the identity component $T=\sqrt a\,\Lambda$ with
+$\Lambda\in SO^+(1,3)$, hence dimension $1+6=7$.
+Equivalently, the congruence action of $GL(2,\mathbb C)$ has an imaginary
+scalar kernel and the same effective dimension; its determinant-preserving
+part is the standard Lorentz spin action~\cite{ArrighiPatricotLorentz}.
+
+\begin{theorem}[One-cone obstruction]
+\label{thm:qubit-obstruction}
+There is no nontrivial reversible linear action of $\so(1,4)$ or $\so(2,3)$ on one
+$\Herm(2)_+$ cone.
+\end{theorem}
+
+\begin{proof}
+The kernel of a homomorphism from either ten-dimensional simple algebra is an ideal.  A
+nonzero homomorphism into the seven-dimensional effective cone-automorphism algebra would
+therefore be injective, which is impossible by dimension.
+\end{proof}
+
+The theorem explains a structural split: one qubit cone carries the Lorentz subgroup, but
+the four coset directions cannot all be reversible positive transformations of the same
+qubit.  They may be signed response directions, or the carrier must be enlarged.  The
+statement does not exclude nonlinear, relational, or multi-event actions.
+
+\section{Four complex components are minimal and sufficient}
+
+Any complex-linear representation of either real form extends to the simple complex
+algebra $\so(5,\mathbb C)$ of dimension ten.  A nonzero representation is faithful, and its
+generators are traceless.  It must therefore embed into $\mathfrak{sl}(n,\mathbb C)$.  Since
+\begin{equation}
+ \dim_\mathbb C\mathfrak{sl}(2,\mathbb C)=3,\qquad
+ \dim_\mathbb C\mathfrak{sl}(3,\mathbb C)=8,
+ \label{eq:minimal-dimension}
+\end{equation}
+$n=2,3$ are impossible.
+
+For an explicit construction, let $\sigma_1,\sigma_2,\sigma_3$ be the Pauli
+matrices and define
+\begin{align}
+ E_0&=\sigma_1\otimes I_2,&E_1&=\sigma_2\otimes I_2,\nonumber\\
+ E_2&=\sigma_3\otimes\sigma_1,&E_3&=\sigma_3\otimes\sigma_2,
+ &E_4&=\sigma_3\otimes\sigma_3 .
+ \label{eq:euclidean-gamma}
+\end{align}
+They anticommute and square to $I_4$.
+Set
+\begin{equation}
+ (\Gamma_0,\Gamma_1,\Gamma_2,\Gamma_3,\Gamma_4)
+ =(E_0,iE_1,iE_2,iE_3,\zeta_s E_4),\qquad
+ \zeta_{-1}=i,\quad\zeta_{+1}=1.
+ \label{eq:explicit-gamma}
+\end{equation}
+The resulting $4\times4$ Clifford matrices satisfy
+
+\begin{equation}
+ \{\Gamma_A,\Gamma_B\}=2\eta_{AB}\id_4,\qquad
+ S_{AB}=\frac14[\Gamma_A,\Gamma_B].
+ \label{eq:spin-generators}
+\end{equation}
+They obey
+\begin{equation}
+ [S_{AB},S_{CD}]=\eta_{BC}S_{AD}-\eta_{AC}S_{BD}
+ -\eta_{BD}S_{AC}+\eta_{AD}S_{BC}.
+ \label{eq:spin-bracket}
+\end{equation}
+
+\begin{theorem}[Minimal positive carrier]
+\label{thm:minimal-carrier}
+Four complex components are the smallest faithful complex-linear carrier for either
+Cartan real form.  The spin representation \eqref{eq:spin-generators} realizes all ten
+generators and induces reversible cone automorphisms
+\begin{equation}
+ X\longmapsto GXG^\dagger,\qquad X\in\Herm(4)_+.
+ \label{eq:four-cone-action}
+\end{equation}
+The central spin element $-\id_4$ acts trivially on the cone.
+\end{theorem}
+\begin{proof}
+The preceding complexification argument excludes dimensions two and three;
+a one-dimensional representation is trivial because the algebra is perfect.
+The Clifford anticommutation relations give the displayed spin commutators
+by direct multiplication.
+The representation is nonzero, so simplicity makes its Lie-algebra kernel
+zero; thus its ten generators are independent.
+Congruence by every invertible spin matrix preserves positive
+semidefiniteness in both directions.
+Finally $(-I_4)X(-I_4)^\dagger=X$.
+\end{proof}
+
+Four-component Cartan spinors and their Clifford realization are classical;
+for example, Ref.~\cite{WestmanZlosnikIntro}, Section~5.5.1, explicitly
+contrasts them with the two-component Lorentz representation.
+The point here is the compatibility question between that carrier and a
+positive selector, not a new discovery of the spin representation.
+
+
+This is a symmetry of the unnormalised cone or of a moving-order-unit structure.  A generic
+noncompact $G$ is not unitary and \eqref{eq:four-cone-action} is not a deterministic
+trace-preserving channel on normalized four-level states.
+
+\section{The Lorentz contact orbit is necessarily signed}
+
+The explicit matrices
+\begin{equation}
+ C_{-1}=\Gamma_0,\qquad C_{+1}=i\Gamma_0\Gamma_4,
+ \qquad\alpha_{-1}=1,\quad\alpha_{+1}=i
+ \label{eq:contact-conventions}
+\end{equation}
+satisfy $S_{BC}C_s+C_sS_{BC}^\dagger=0$.
+They give Hermitian contact matrices by
+\begin{equation}
+ Q_A=\alpha_s\Gamma_AC_s=Q_A^\dagger,\qquad Q(V)=V^AQ_A,
+ \label{eq:contact-matrices}
+\end{equation}
+and
+\begin{align}
+ S_{BC}Q_A+Q_AS_{BC}^\dagger
+ &=\eta_{CA}Q_B-\eta_{BA}Q_C,\nonumber\\
+ \det Q(V)&=(V^A\eta_{AB}V^B)^2.
+ \label{eq:contact-covariance}
+\end{align}
+At $V=\ell\delta_4$, the six $S_{IJ}$ stabilize $Q(V)$ and the four $S_{I4}$ span the
+contact orbit.
+
+\begin{theorem}[Positivity--gravity separation]
+\label{thm:signed-contact}
+For both real forms, $Q(\ell\delta_4)$ has inertia $(2,2,0)$ and is not positive or
+negative.  Conversely the stabilizer under congruence of any $X>0$ is conjugate to a
+unitary group and hence compact.  Therefore no interior positive state or order unit can
+have the required noncompact $Spin(1,3)$ stabilizer.
+\end{theorem}
+
+\begin{proof}
+The spectrum of the explicit Clifford carrier gives two positive and two negative
+eigenvalues.  For the converse, the condition $GXG^\dagger=X$ is equivalent to
+$UU^\dagger=I$ for $U=X^{-1/2}GX^{1/2}$.
+Thus the full congruence stabilizer is conjugate to $U(4)$; its closed
+subgroups are compact.
+\end{proof}
+
+Thus positivity can carry the transformations, but the field selecting Lorentzian Cartan
+gravity is a signed Hermitian order parameter.  The theorem is a no-go only for an interior
+positive selector in a linear congruence carrier; it does not forbid a relational or
+boundary selection law.
+
+\input{selector-and-certificates}
+
+\section{Clifford trace and restricted action selection}
+
+The carrier also supplies the all-index trace identity
+\begin{equation}
+ \Tr(\Gamma_ES_{AB}S_{CD})=c_s\epsilon_{EABCD},
+ \qquad c_{-1}=-1,\quad c_{+1}=i,
+ \label{eq:clifford-trace}
+\end{equation}
+up to the displayed representation convention.  Hence
+\begin{equation}
+ S_{\rm MM}[A,V]=\alpha\int\Tr\!\left(\Gamma(V)\,\mathcal F\wedge\mathcal F\right)
+ \label{eq:mm-action}
+\end{equation}
+is the contact-weighted MacDowell--Mansouri density.
+
+\begin{theorem}[Invariant count in the declared class]
+\label{thm:invariant-count}
+Among oriented local four-forms linear in $V$, quadratic in the ten-component Cartan
+curvature, and containing no $DV$, the invariant coefficient space is one-dimensional.
+It is spanned by \eqref{eq:clifford-trace}.
+\end{theorem}
+
+\begin{proof}
+Complexify to $SO(5,\mathbb C)$ and use an orthonormal complex basis.
+An invariant rank-five tensor is fixed by every diagonal sign matrix having
+an even number of minus signs.
+For a nonzero coefficient, the five index multiplicities must therefore
+have the same parity: flipping labels $a,b$ gives the condition
+$m_a+m_b=0\pmod2$.
+Their total is five, so every multiplicity is odd, forcing each of the five
+labels to occur exactly once.
+Determinant-one signed permutation matrices then force the coefficients to
+alternate, leaving only a multiple of $\epsilon_{ABCDE}$.
+This tensor is antisymmetric in each bivector pair and symmetric under
+exchange of the pairs, so it belongs to
+$V\otimes\operatorname{Sym}^2(\Lambda^2V)$ and spans its invariant space.
+The real epsilon tensor gives the corresponding one-dimensional real
+invariant for both real forms.
+\end{proof}
+
+The companion integer constraint has 275 columns and rank 274, verified by
+an exact modular lower bound and an integer epsilon null vector as specified
+in Appendix~\ref{app:certificates}.
+The action-space answer itself is prior content.
+The polynomial family in Ref.~\cite{WestmanZlosnikIntro}, equations
+(82)--(89), contains the coefficients
+$a_1\epsilon_{ABCDE}V^E+a_2V_AV_C\eta_{BD}+a_3\eta_{AC}\eta_{BD}$
+in its curvature-square sector.
+Restricting to degree at most one in $V$ and no $DV$ leaves exactly the
+epsilon-linear term and a constant Killing term.
+This theorem and the finite certificate make that restricted answer
+explicit; they do not introduce a new gravitational action or derive the
+restriction from microscopic physics.
+
+In the contact gauge $V=\ell\delta_4$, write
+\begin{equation}
+ F^{IJ}=R^{IJ}+\lambda e^I\wedge e^J,\qquad
+ F^{I4}=T^I/\ell,\qquad \lambda=-s/\ell^2.
+ \label{eq:curvature-split}
+\end{equation}
+The contact-linear epsilon density contains only $F^{IJ}$ and expands into Euler,
+Einstein--Cartan, and cosmological terms with fixed relative coefficients.
+Explicitly, after absorbing the nonzero Clifford trace constant into a free
+coefficient $\beta$, the reduced action is
+\begin{align}
+ S_\epsilon
+ &=\beta\int\epsilon_{IJKL}F_h^{IJ}\wedge F_h^{KL}\nonumber\\
+ &=\beta\int\epsilon_{IJKL}\bigl(
+ R^{IJ}\wedge R^{KL}
+ +2\lambda e^I\wedge e^J\wedge R^{KL}
+ +\lambda^2 e^I\wedge e^J\wedge e^K\wedge e^L\bigr).
+ \label{eq:explicit-action}
+\end{align}
+For $\lambda\ne0$, the choice $\beta=1/(8\kappa\lambda)$ makes the
+Einstein--Cartan coefficient $1/(4\kappa)$ and gives the internal-convention
+cosmological coefficient $\Lambda=-3\lambda$.
+This identifies coefficients once $\kappa$ is supplied; it does not derive
+Newton's normalization.
+The degree-zero quadratic invariant is unique because the complexified
+adjoint representation of the simple algebra $\mathfrak{so}(5,\mathbb C)$
+has a one-dimensional invariant bilinear space.
+
+There is also the full-Cartan Killing/Chern--Weil density
+\begin{equation}
+ P_G=\sum_{A<B}\eta_{AA}\eta_{BB}F^{AB}\wedge F^{AB}.
+ \label{eq:chern-weil}
+\end{equation}
+Define $H=\sum_{I<J}R_{IJ}\wedge e^I\wedge e^J$,
+$T^2=T_I\wedge T^I$, and $P_H$ analogously for the Lorentz block.  Direct exterior
+algebra gives
+\begin{equation}
+ P_G=P_H+2\lambda H-\lambda T^2
+ =P_H-\lambda N_{\rm NY},\qquad
+ N_{\rm NY}=T^2-2H=d(e_I\wedge T^I).
+ \label{eq:nieh-yan}
+\end{equation}
+This is the Nieh--Yan identity \cite{NiehYan}.  Therefore the apparent Holst-type cross
+term in the strict full-$G$ Killing invariant is tied to torsion square into a topological
+direction.  Combining it with Theorem \ref{thm:invariant-count}, the bulk action space in
+the declared class is one-dimensional modulo topological terms.  This does not constitute
+a universal Immirzi-parameter no-go \cite{Holst,Immirzi}; $DV$, reduced-$H$ projectors,
+fermions, higher powers, and boundaries lie outside the class.
+
+\section{Variational rank and the classical gravity bridge}
+
+Treat the fixed-norm contact reduction as supplied and take compactly supported
+variations of the reduced connection and coframe.
+The contact direction is not varied as an unconstrained extra field.
+In \eqref{eq:explicit-action} the Euler term is locally topological.
+Using $\delta R=D^\omega\delta\omega$ and integrating by parts, the
+connection variation is proportional to
+$\epsilon_{IJKL}e^K\wedge T^L$.
+The coframe variation is
+\begin{equation}
+ \delta_e S_\epsilon
+ =4\beta\lambda\int\epsilon_{IJKL}
+ \delta e^I\wedge e^J\wedge
+ (R^{KL}+\lambda e^K\wedge e^L).
+\end{equation}
+Here $\beta\lambda\ne0$ is assumed.
+For an invertible coframe, variation of \eqref{eq:mm-action} gives the connection equation
+\begin{equation}
+ \epsilon_{IJKL}e^K\wedge T^L=0.
+ \label{eq:torsion-equation}
+\end{equation}
+The Hodge dual on internal bivectors is invertible, so this is equivalent to
+$e^I\wedge T^J-e^J\wedge T^I=0$.
+Let $\iota_J$ denote contraction with the dual frame and set
+$t=\sum_J\iota_JT^J$.
+Contracting the preceding identity and summing over $J$ in four dimensions
+gives $T^I=-e^I\wedge t$.
+A second contraction gives $t=-3t$, hence $t=0$ and $T^I=0$.
+The exact $24\times24$ component map has rank 24 and determinant 16 in the
+appendix basis, providing an independent finite certificate.
+
+The coframe equation is
+\begin{equation}
+ \epsilon_{IJKL}e^J\wedge F_h^{KL}=0,
+ \qquad F_h^{IJ}=R^{IJ}+\lambda e^I\wedge e^J.
+ \label{eq:coframe-equation}
+\end{equation}
+For torsion-free data, $F_h$ is an algebraic curvature tensor.
+The Hodge dual of this equation is proportional to its Einstein contraction.
+In four dimensions, the trace of a vanishing Einstein contraction forces the
+scalar curvature of $F_h$ to vanish, and then its Ricci tensor vanishes.
+Its unrestricted part is exactly Weyl curvature.
+Consequently the linear map on the 20-dimensional residual algebraic
+Riemann space has rank ten and kernel dimension ten.
+The appendix supplies an exact reference-signature component certificate
+and explains why its rank transfers to Lorentz signature.
+In the stated internal convention the condition is
+$\operatorname{Ric}(R)=-3\lambda g$.
+Thus the action imposes Einstein curvature, not $F_h=0$; a constant reversal
+of metric sign changes the scalar curvature label and must be carried
+separately when assigning physical de Sitter names.
+
+For completeness, let $e_x:T_xM\to P\times_H\mathbb R^{1,3}$ be a pointwise isomorphism
+and define
+\begin{equation}
+ g(X,Y)=\eta(e(X),e(Y)),\qquad
+ e(\nabla_XY)=D_X^\omega e(Y).
+ \label{eq:solder-connection}
+\end{equation}
+Then $D^\omega\eta=0$ implies $\nabla g=0$, while
+\begin{equation}
+ e(T^\nabla)=D^\omega e.
+ \label{eq:torsion-lock}
+\end{equation}
+Full-rank soldering plus \eqref{eq:torsion-equation} therefore makes $\nabla$ the unique
+Levi--Civita connection, and the spin curvature becomes the Riemann curvature under the
+solder map.  This is the conditional point where an internal Cartan gauge field becomes
+metric gravity.
+
+\section{What remains open}
+
+The algebra fixes neither a contact direction nor a physical value of $\ell$.  A
+$G$-equivariant selector from no data to $G/H$ cannot exist, because no point of $G/H$ is
+fixed by all of $G$.  The contact field must be an order parameter, state, boundary
+condition, or other new datum.  A minimal norm potential fixes the radial direction but
+does not select its scale dynamically, and the invariant kinetic scalar
+$g^{\mu\nu}D_\mu V^AD_\nu V_A=4$ becomes only a volume term once the same $DV$ defines an
+invertible metric.
+
+The positive carrier also does not supply Born normalization for noncompact congruences,
+the overall coefficient $1/\kappa$, a coherent phase, matter representations and
+couplings, a global Spin lift, a Hamiltonian constraint algebra, or a quantum measure.
+These are not small corrections to Theorems \ref{thm:qubit-obstruction}--
+\ref{thm:invariant-count}; they are the remaining physical theory.
+
+\section{Conclusion}
+
+One qubit positive cone is too small for the simple ten-generator Cartan algebra.  A
+four-component spinor is the minimal faithful linear escape, but its gravitational contact
+orbit is necessarily signed, and every nonzero Lorentz-fixed Hermitian
+selector in this carrier is indefinite even at the positive-cone boundary.
+In the narrow local polynomial class stated above, the same
+carrier selects a unique contact-linear curvature-square density, while the second
+full-Cartan quadratic direction is topological and obeys the Nieh--Yan identity.  Exact
+variational ranks then recover torsion-free Einstein--Cartan equations conditional on a
+supplied full-rank contact reduction.  The result is a coherent representation-theoretic
+and classical-action module; it is not a derivation or quantization of gravity.
+
+\input{certificate-appendix}
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}

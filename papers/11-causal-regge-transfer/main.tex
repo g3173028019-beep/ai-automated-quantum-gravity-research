@@ -1,0 +1,530 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Finite causal spin-two transfer and partial refinement in Lorentzian Regge calculus},pdfauthor={}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Id}{\mathbb I}
+\title{Finite causal spin-two transfer and partial refinement in Lorentzian Regge calculus}
+\author{}
+\date{29 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A finite Lorentzian Regge region can support an angular spin-two transfer channel without defining a continuum graviton.
+We give an explicit cone over a longitudinal polygon joined to a transverse hexagon, specify the complete complex action and its physical radial Schur reduction, and isolate the real two-dimensional angular-weight-two representation of the dihedral group.
+The symmetric coarse witness has two approximately degenerate elliptic transfer phases near $0.815035$.
+An exact representation-and-support argument bounds its cap-to-cap mixed Hessian rank by two at every nondegenerate level of this architecture: only one internal spin-two pair mediates transmission.
+Partial longitudinal subdivisions retain the pair, but the fifth tested level has reciprocal-real multipliers near $1.29025$ and $0.77504$ in the stated reduced endpoint convention.
+We distinguish this finite dependence from an asymptotic obstruction: fixed transverse edges prevent the maximum mesh size from vanishing, and consecutive integer subdivisions are not all nested.
+We also correct a spectral-invariance claim: independent endpoint canonical frames act by left--right equivalence, whereas a tracked endpoint identification defines a conjugacy-invariant return map.
+An explicit scalar counterterm and common dilation match the selected quadratic channel to a chosen target kernel.
+This is a completed finite calibration, not a local perfect Regge action.
+The accompanying portable calculation proves the decisive algebra and verifies frozen complete-action outputs; positive energy, retarded propagation and a full continuum limit remain open.
+\end{abstract}
+
+\section{Question and relation to established results}
+\label{sec:intro}
+Canonical evolution in Regge calculus can change the number of variables on a spatial boundary.
+Hamilton's principal function gives a natural canonical relation, including the pre- and post-constraints associated with this change~\cite{DittrichHoehn2012,Hoehn2014}.
+In linearized four-dimensional gravity, a $2\to3$ spatial Pachner move creates a lattice-graviton variable, while a $3\to2$ move removes one and introduces a nontrivial equation~\cite{Hoehn2015}.
+Neither a finite mode count nor symplecticity alone identifies the two helicities of a continuum massless field.
+
+The contrast between four-dimensional $4$--$2$ and $3$--$3$ bulk moves is likewise established.
+On the flat branch the former eliminates an internal edge, whereas the latter contains a boundary-determined curvature hinge and generally changes the Hamilton--Jacobi function~\cite{BorissovaDittrich2023}.
+Our subject is a larger explicit Lorentzian witness in which causal boundary geometry, an angular representation, complete-action dynamics and partial refinement can be assessed together.
+We do not claim new canonical Pachner theory, a first lattice graviton, or a general failure of Regge calculus.
+
+The concrete questions are whether the finite region transmits a dihedral angular-weight-two pair, what fixes the observed rank, and what a comparison across its subdivisions actually means.
+The answer contains positive finite content and specific limitations.
+The coarse transfer is elliptic to differentiation accuracy, the architecture enforces a rank bound, and the fifth selected transfer is hyperbolic in its stated convention.
+The geometry is only partially refined, however, and a spectrum of a map between distinct endpoint spaces needs an identification before it is coordinate invariant.
+Improved actions and dynamical embedding maps are established tools for addressing the wider problem~\cite{BahrDittrich2009,Dittrich2012}; the reduced calibration below solves only the scalar channel-matching question.
+
+\section{An explicit Lorentzian region}
+\label{sec:geometry}
+All coordinates and the overall action normalization are dimensionless in the numerical witness.
+Use $\eta=\diag(-1,1,1,1)$ in coordinates $(t,x,y,z)$, an internal vertex $o=0$, and five longitudinal points $q_0,\ldots,q_4$ in the $t$--$z$ plane.
+Their nonzero coordinates are
+\begin{equation}
+\begin{array}{c|rr}
+ &t&z\\\hline
+q_0&0&-1.5709397991101974\\
+q_1&0.3762757793700152&-0.42646145218382514\\
+q_2&0.7702937141192545& 1.1723475896580613\\
+q_3&-0.7702937141192545&1.1723475896580613\\
+q_4&-0.3762757793700152&-0.42646145218382514
+\end{array}.
+\label{eq:qpoints}
+\end{equation}
+The transverse points are
+\begin{equation}
+r_j=(0,\cos\phi_j,\sin\phi_j,0),\qquad
+\phi_j=j\pi/3,\quad j=0,\ldots,5.
+\label{eq:rpoints}
+\end{equation}
+The cyclic orders are $q_0q_1q_2q_3q_4q_0$ and $r_0\cdots r_5r_0$.
+Cone their join from $o$: for every longitudinal cycle edge $[q,q']$ and transverse edge $[r_j,r_{j+1}]$, include
+\begin{equation}
+\sigma=[o,q,q',r_j,r_{j+1}].
+\label{eq:simplices}
+\end{equation}
+The join of the two polygonal circles is a three-sphere; its cone is a combinatorial four-ball.
+Its boundary tetrahedra are exactly $[q,q',r_j,r_{j+1}]$.
+
+At subdivision level $m$, insert $(1-j/m)q_0+(j/m)q_1$ on $[q_0,q_1]$ and $(1-j/m)q_4+(j/m)q_0$ on $[q_4,q_0]$, for $j=1,\ldots,m-1$.
+The longitudinal cycle has $2m+3$ vertices, and the bulk has $6(2m+3)$ four-simplices.
+Time reflection exchanges the two subdivided edges and $q_1\leftrightarrow q_4$, $q_2\leftrightarrow q_3$.
+
+For a simplex with base vertex $0$ and signed squared lengths $s_{ab}$, the Gram matrix is
+\begin{equation}
+G_{ab}=\frac{s_{0a}+s_{0b}-s_{ab}}2.
+\label{eq:gram}
+\end{equation}
+Every tested simplex has one negative and three positive eigenvalues.
+For a boundary tetrahedron with outward normal $n$, $n^T\eta n<0$ means it is spacelike, and the sign of $n^0$ distinguishes past from future.
+The remaining boundary strip is timelike.
+Table~\ref{tab:geometry} gives direct checks on the specified coordinates; no normal is null.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Geometry of the partial-subdivision family. The last two columns are minimum Gram eigenvalue margins across the four-simplices, using Eq.~\eqref{eq:gram} based at $o$.}
+\label{tab:geometry}
+\begin{tabular}{rrrrr}
+\toprule
+$m$&simplices&past/future/side&$\min|\lambda_-|$&$\min\lambda_+$\\
+\midrule
+1&30&12/12/6&0.132328&0.500000\\
+2&42&18/18/6&0.0252817&0.500000\\
+3&54&24/24/6&0.0100139&0.500000\\
+4&66&30/30/6&0.00530682&0.500000\\
+5&78&36/36/6&0.00327578&0.413006\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Fix the endpoint cones and side strip.
+The initial cap is the subdivided path from $q_0$ through $q_1$ to $q_2$, joined to the transverse circle; the final cap is its reflected path from $q_3$ through $q_4$ to $q_0$.
+Its free longitudinal vertices are the $m$ non-endpoint sites on each path.
+Relative cap edges comprise its $m+1$ path edges and the $6m$ edges from those sites to the hexagon.
+Thus there are $7m+1$ relative squared lengths per cap.
+The geometry and normals specify a time-oriented boundary region; they do not by themselves prove retarded response.
+
+\section{Complete action, branch and physical quotient}
+\label{sec:action}
+We use the complexified Lorentzian Regge action including all boundary hinges~\cite{BorissovaDittrich2023}.
+For a triangle $h=(a,b,c)$, its signed area square and area are
+\begin{equation}
+V_h=\frac{4s_{ab}s_{ac}-(s_{ab}+s_{ac}-s_{bc})^2}{16},
+\qquad A_h=\sqrt{V_h},
+\label{eq:area}
+\end{equation}
+with the principal square root, positive imaginary on the negative real axis.
+The producer realizes each off-flat simplex locally from Eq.~\eqref{eq:gram} by its spectral decomposition, so no global off-flat coordinate embedding is assumed.
+
+For the two tetrahedral facets meeting at $h$, let $n_1$ be outward and $n_2$ be the negative of the other outward normal.
+Set $d=n_1\cdot n_2$ and $D=(n_1\cdot n_1)(n_2\cdot n_2)-d^2$.
+The branch used by this mixed-facet witness is
+\begin{equation}
+\theta_{\sigma h}=-i\log^-
+\frac{d+\rho_h i\sqrt{D}}{
+\sqrt{n_1\cdot n_1}\sqrt{n_2\cdot n_2}},\qquad
+\rho_h=\begin{cases}+1,&A_h\text{ imaginary},\\-1,&A_h\text{ real}.
+\end{cases}
+\label{eq:angle}
+\end{equation}
+Here $\log^-$ takes argument $-\pi$ on the negative real cut.
+This is the local mixed-causal-sector evaluator of the retained computation, not a prescription for crossing arbitrary branch singularities.
+The recorded producer checks supporting this sheet are inherited; this paper's inexpensive replay does not perform a new interval proof of branch regularity.
+
+Writing $\Theta_h=\sum_{\sigma\supset h}\theta_{\sigma h}$, the implementation selects a locally constant integer
+\begin{equation}
+p_h=\begin{cases}2\pi,&h\text{ internal},\\\pi,&h\text{ boundary},\end{cases}
+\quad k_h=\operatorname{nint}(-\Re\Theta_h/p_h),\quad
+\epsilon_h=k_hp_h+\Theta_h,
+\quad S=-i\sum_h A_h\epsilon_h.
+\label{eq:action}
+\end{equation}
+The branch integer is held effectively constant inside a regular local component; a universal boundary integer must not be substituted.
+The sum includes internal and boundary triangles and uses the declared flat-background sheet.
+
+An embedded displacement acts on squared lengths as
+\begin{equation}
+\delta s_{ab}=2(x_a-x_b)^T\eta(\delta x_a-\delta x_b).
+\label{eq:tangent}
+\end{equation}
+On either cap this tangent has rank $4m$ for the declared moving sites, leaving $3m+1$ quotient directions.
+An orthonormal basis of the left-null complement represents that quotient.
+For the internal radial edges $[o,v]$, remove the four directions generated by moving $o$; their physical complement has dimension $2m+5$.
+These are linearized flat-background quotients, not a claim that every curved Regge configuration has exact vertex-displacement gauge symmetry.
+
+Let $z$ denote these physical internal coordinates and let $x,y$ be cap coordinates.
+Differentiating Eq.~\eqref{eq:action} produces a symmetric, generally complex Hessian $H$.
+If $H_{zz}$ is invertible, the quadratic Hamilton principal function has boundary Hessian
+\begin{equation}
+K=H_{\partial\partial}-H_{\partial z}H_{zz}^{-1}H_{z\partial}.
+\label{eq:schur}
+\end{equation}
+The inverse is taken only after removing the four central displacement directions.
+Equivalently, the physical internal solution is $z=-H_{zz}^{-1}H_{z\partial}(x,y)$.
+The true linearized internal Regge equations are area-moment equations,
+\begin{equation}
+\delta E_e=\sum_{h\supset e}
+\left.\frac{\partial A_h}{\partial s_e}\right|_0
+\delta\epsilon_h=0.
+\label{eq:reggeeq}
+\end{equation}
+An arbitrary tensor-screen nullity is not a substitute for Eq.~\eqref{eq:reggeeq} or for a helicity test.
+
+The retained calculations use central finite differences followed by Richardson extrapolation,
+\begin{equation}
+H^{\mathrm R}(h)=\frac{4H^{\mathrm{cd}}(h)-H^{\mathrm{cd}}(2h)}3,
+\qquad h=1.2\times10^{-4}
+\label{eq:richardson}
+\end{equation}
+in the normalized quotient coordinates for the two freshly reproduced levels.
+Residual imaginary parts and nondegenerate-pair splittings are retained as numerical diagnostics rather than discarded before differentiation.
+
+\section{The angular sector and its rank bound}
+\label{sec:rank}
+At a longitudinal site use raw relative-edge variations proportional to
+\begin{equation}
+u_2(\phi_j)=(\cos 2\phi_j,\sin 2\phi_j)
+\label{eq:e2}
+\end{equation}
+on the edges to $r_j$, and zero on the longitudinal path edges.
+Projection into the cap quotient followed by orthonormalization gives $2m$ spin-two samples per cap.
+The coarse raw samples lie in the quotient to a relative residual below $4.4\times10^{-16}$ in the retained replay.
+
+On a single real pair, the transverse rotation and reflection are
+\begin{equation}
+R=\begin{pmatrix}-1/2&-\sqrt3/2\\\sqrt3/2&-1/2\end{pmatrix},
+\qquad F=\diag(1,-1).
+\label{eq:representation}
+\end{equation}
+Solving $R^TXR=X$ gives $X=\alpha\Id+\beta J_2$, where
+$J_2=\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)$.
+Imposing $F^TXF=X$ gives $X=\alpha\Id$.
+Consequently an exactly invariant Hessian is diagonal between inequivalent angular sectors, and every block between two copies of this real dihedral representation is a scalar times $\Id_2$.
+This is angular weight two modulo six: six angular samples cannot uniquely distinguish it from all continuum weights that alias to the same finite representation.
+
+\begin{theorem}[Single internal angular channel]
+\label{thm:rank}
+For the cone in Eqs.~\eqref{eq:qpoints}--\eqref{eq:simplices}, at any subdivision level on a dihedral-invariant, differentiable branch, assume the physical internal spin-two Hessian is nonsingular.
+The cap-to-cap mixed spin-two Schur block has the form
+\begin{equation}
+B_m=-\frac{uv^T}{k}\otimes\Id_2,
+\label{eq:bottleneck}
+\end{equation}
+for longitudinal coupling vectors $u,v\in\R^m$ and a nonzero scalar $k$ in the real quadratic idealization.
+Its rank is at most two, and is two if both coupling vectors are nonzero.
+The same algebraic rank statement holds over $\mathbb C$ for the analytic complex Hessian.
+\end{theorem}
+\begin{proof}
+Every radial edge from $o$ to a longitudinal vertex is invariant under the transverse dihedral group.
+The six radial edges to the transverse hexagon form its vertex permutation representation.
+Their Fourier decomposition contains precisely one real angular-weight-two pair.
+The four central displacement directions transform as two scalars and one transverse vector pair, so removing them does not remove or add a spin-two copy.
+Thus the complete physical internal spin-two space is one pair.
+Dihedral invariance makes its self block $k\Id_2$ and the couplings to cap multiplicity spaces $u\otimes\Id_2$ and $v\otimes\Id_2$.
+
+No simplex contains a moving longitudinal vertex of each cap: the two cap paths meet only at their fixed endpoint, and the connecting side path has fixed endpoints.
+All spin-two cap-edge variations require a moving longitudinal endpoint.
+Since the action is a sum of hinge-area and incident-simplex angle contributions, its unreduced mixed cap second derivative is therefore zero.
+The integers $k_h$ are locally constant on the assumed branch, so their area terms have the same support and introduce no extra mixed derivative.
+Only elimination of the single internal spin-two pair contributes to that block in Eq.~\eqref{eq:schur}.
+This gives Eq.~\eqref{eq:bottleneck}.
+An outer product has rank one precisely when both vectors are nonzero; tensoring with $\Id_2$ doubles that rank.
+\end{proof}
+
+\begin{remark}
+The theorem explains persistence of a rank-two carrier as an architectural bottleneck.
+The nonzero couplings and the curvature response remain dynamical outputs.
+Adding another internal spin-two copy, breaking the symmetry or introducing nonlocal action terms can change the bound.
+Rank persistence in this cone is not independent evidence for a universal continuum two-helicity theory.
+\end{remark}
+
+\section{Canonical reduction and endpoint identification}
+\label{sec:canonical}
+For a nonsingular scalar mixed block, write the one-polarization principal function as
+\begin{equation}
+S(x,y)=\tfrac12ax^2+bxy+\tfrac12cy^2,
+\quad p=-\partial_xS,\quad P=\partial_yS.
+\label{eq:principal}
+\end{equation}
+Solving for $(y,P)$ gives
+\begin{equation}
+\begin{pmatrix}y\\P\end{pmatrix}
+=M\begin{pmatrix}x\\p\end{pmatrix},\qquad
+M=\begin{pmatrix}-a/b&-1/b\\b-ca/b&-c/b\end{pmatrix}.
+\label{eq:canonical}
+\end{equation}
+For $\Omega=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)$,
+\begin{equation}
+M^T\Omega M=\Omega,\qquad
+\det(\lambda\Id-M)=\lambda^2+\frac{a+c}{b}\lambda+1.
+\label{eq:spectrum}
+\end{equation}
+Each identity holds twice for the two scalar polarization blocks.
+They follow from a nondegenerate quadratic generating function; their gravitational meaning depends on the actual Regge construction in Section~\ref{sec:action}.
+
+At $m>1$, $B_m$ is singular on the full cap space.
+The retained producer selects its two leading singular-vector axes and restricts the self blocks to those axes.
+It does not invert the mixed block on the remaining detail coordinates.
+To state this reduction explicitly, split initial variables into survivor $x$ and detail $d$, and final variables into $y,D$.
+Writing the initial self block as $A$, the initial detail pre-constraint is
+\begin{equation}
+C_d=p_d+A_{ds}x+A_{dd}d=0.
+\label{eq:preconstraint}
+\end{equation}
+The survivor momentum $\pi=p_s+A_{sd}d$ commutes with $C_d$.
+At the final cap, the analogous momentum is $\Pi=P_s-C_{sd}D$.
+The restricted principal relation uses $(x,\pi)$ and $(y,\Pi)$, or equivalently the section $d=D=0$.
+The self-block survivor/detail coupling need not vanish; its norm is about $1.42048$ at the fifth level.
+Further gluing can impose additional constraints, so this reduction does not define a universal propagator for arbitrary future extensions~\cite{Hoehn2014}.
+
+\begin{proposition}[A tracked endpoint identification]
+\label{prop:endpoints}
+Let $M:V_i\to V_f$ be symplectic between two phase spaces.
+Under independent symplectic coordinate changes $C_i,C_f$, its matrix becomes
+\begin{equation}
+M'=C_fMC_i^{-1}.
+\label{eq:left_right}
+\end{equation}
+Its spectrum need not be invariant.
+If a symplectic identification $\mathcal J:V_i\to V_f$ is specified and transformed as
+$\mathcal J'=C_f\mathcal JC_i^{-1}$, then the return map
+\begin{equation}
+\mathcal R=\mathcal J^{-1}M
+\quad\text{satisfies}\quad
+\mathcal R'=C_i\mathcal RC_i^{-1}.
+\label{eq:returnmap}
+\end{equation}
+Its spectrum is invariant.
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:left_right} follows by substituting the two coordinate changes into $z_f=Mz_i$.
+Inserting the transformation of $\mathcal J$ gives Eq.~\eqref{eq:returnmap}.
+For a counterexample to invariance without this identification, take
+\begin{equation}
+M=\begin{pmatrix}0&-1\\1&0\end{pmatrix},\quad
+C_i=\Id,\quad C_f=\begin{pmatrix}1&0\\-3&1\end{pmatrix}.
+\label{eq:counterexample}
+\end{equation}
+These matrices are symplectic, but $\tr M=0$ and $\tr(C_fM)=3$.
+The displayed spectrum changes from elliptic to hyperbolic.
+\end{proof}
+
+For the numerical matrices below, the chosen reduced endpoint coordinates are identified componentwise, $\mathcal J=\Id$.
+Their spectra are properties of this convention.
+A geometric identification motivated by time reflection must include the cotangent and orientation conventions and must be transported through the survivor projections.
+That complete refinement transport has not been independently verified here.
+Only common-frame transformations, or endpoint transformations that also transport $\mathcal J$, license the spectral no-rescue statement.
+Common scalar coordinate dilation likewise leaves $a/b$ unchanged.
+
+For specified coarse-to-fine phase-space maps $I_i,I_f$, a more complete consistency question is
+\begin{equation}
+M_{\mathrm f}I_i=I_fM_{\mathrm c},
+\label{eq:intertwiner}
+\end{equation}
+with the constraint reduction included.
+Vanishing or nonvanishing of its defect is invariant when all maps transform together.
+Its numerical norm additionally needs chosen metrics.
+Matching eigenvalues alone is weaker than verifying Eq.~\eqref{eq:intertwiner}.
+
+\section{Finite dynamics and partial subdivision}
+\label{sec:numerics}
+The coarse time-symmetric retained computation gives, in its normalized pair bases,
+\begin{equation}
+A\simeq-0.57611003\Id_2,\qquad
+B\simeq0.84000291\Id_2,\qquad
+C\simeq-0.57611004\Id_2,
+\label{eq:blocks}
+\end{equation}
+with imaginary and nonscalar differences of order $10^{-7}$.
+The two mixed singular values are $0.84000300195$ and $0.84000282365$.
+Its two positive eigenvalue arguments are $0.81503482086$ and $0.81503524166$, with maximum modulus defect $2.12\times10^{-7}$.
+This is a finite elliptic canonical channel to differentiation accuracy.
+The complete-action replay producing these outputs took $12.70$ seconds in the recovery calculation; this paper's default replay reconstructs the transfer from the saved blocks.
+
+For real time-symmetric scalar blocks put $c=a$ and $\chi=-a/b$.
+Then
+\begin{equation}
+M=\begin{pmatrix}\chi&-1/b\\b(1-\chi^2)&\chi\end{pmatrix},
+\qquad\lambda^2-2\chi\lambda+1=0.
+\label{eq:chi}
+\end{equation}
+Thus $|\chi|<1$ is elliptic, $|\chi|>1$ hyperbolic; equality is the parabolic boundary.
+Table~\ref{tab:flow} combines the retained earlier levels with the completed first- and fifth-level reproductions.
+The rank threshold in the numerical producer is a relative mixed singular-value cutoff $10^{-5}$; the analytic bound is Theorem~\ref{thm:rank}, not a floating-point rank declaration.
+
+\begin{table}[htbp]
+\centering\small
+\caption{The selected partial-refinement channel. Levels 2--4 are retained historical complete-action values, not newly recomputed for this paper. Levels 1 and 5 have retained completed-recovery full-producer outputs. All spectra use the stated reduced endpoint identification.}
+\label{tab:flow}
+\begin{tabular}{rrrrl}
+\toprule
+$m$&leading mixed singular&largest detail singular&coarse overlap&spectrum descriptor\\
+\midrule
+1&0.840003&---&1.000000&$\theta\simeq0.815035$\\
+2&0.672133&$3.4\times10^{-8}$&0.999903&$\theta\simeq0.832011$\\
+3&0.573840&$6.6\times10^{-8}$&0.970068&$\theta\simeq0.634608$\\
+4&0.516755&$8.6\times10^{-8}$&0.931103&$\theta\simeq0.388070$\\
+5&0.479964&$1.85\times10^{-7}$&0.891918&$\lambda\simeq1.29025,0.77504$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The coarse injection used to define the overlap is the piecewise-affine cap sample vector
+\begin{equation}
+I_m^{\mathrm{sample}}=
+\begin{pmatrix}m^{-1}\Id_2\\2m^{-1}\Id_2\\\vdots\\\Id_2\end{pmatrix}.
+\label{eq:injection}
+\end{equation}
+It is transformed into the orthonormal quotient basis and compared by singular values of the overlap between its orthonormal columns and the mixed-block survivor axes.
+This is a configuration-subspace comparison, not the full cotangent intertwiner in Eq.~\eqref{eq:intertwiner}.
+
+At the fifth level the four retained transfer eigenvalues are
+\begin{align}
+1.29024266-1.16\times10^{-6}i,&\quad
+1.29024809-0.84\times10^{-6}i,\notag\\
+0.77504801+0.70\times10^{-6}i,&\quad
+0.77504474+0.51\times10^{-6}i.
+\label{eq:fifth}
+\end{align}
+The departure from the unit circle is approximately $0.290248$, far above the displayed imaginary residuals.
+The reduced symplectic residual is $1.76\times10^{-16}$ and the smallest physical internal Hessian singular value is $0.31048966$.
+This full-producer calculation completed in $423.37$ seconds during the recovery and was not rerun for manuscript delivery.
+An earlier second-step calculation is part of the original report, but the portable package does not claim to regenerate or independently recertify that second step.
+Tiny positive arguments returned by a generic eigenphase field at this level are numerical imaginary contamination on a reciprocal-real spectrum; they are not an oscillation phase.
+
+The finite dependence is a diagnostic of the stated family and convention.
+It cannot establish asymptotic nonconvergence from five values.
+Moreover, every level retains transverse edges of length exactly one, so maximum simplex diameter in the fixed background chart does not approach zero.
+The shrinking Gram margin in Table~\ref{tab:geometry} reflects increasingly thin anisotropic simplices, not a full shape-regular bulk-and-boundary refinement.
+Uniform partition $m'$ contains partition $m$ only when $m$ divides $m'$.
+Thus $1\to2\to4$ is nested, whereas $2\to3$, $3\to4$ and $4\to5$ are not successive nesting steps, although each refines level one.
+The data do not reject other Regge refinement families or a continuum limit.
+
+\section{A positive invariant and a closed reduced calibration}
+\label{sec:repair}
+Two small exact results help interpret the finite output without replacing its open questions by a larger programme.
+
+\begin{proposition}[Definite invariant in the elliptic scalar channel]
+If $b\ne0$ and $|\chi|<1$ are real, the matrix in Eq.~\eqref{eq:chi} preserves
+\begin{equation}
+G=\diag\bigl(b^2(1-\chi^2),1\bigr)>0,
+\qquad M^TGM=G.
+\label{eq:positiveG}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Put $s^2=1-\chi^2>0$.
+Multiplication of $M^T\diag(b^2s^2,1)M$ gives diagonal entries $b^2s^2(\chi^2+s^2)$ and $\chi^2+s^2$, with zero off-diagonal entries.
+These are exactly the entries of $G$.
+\end{proof}
+
+This is a definite conserved finite quadratic norm, not a uniquely selected positive physical Hamiltonian.
+Let $\theta=\arccos\chi\in(0,\pi)$ and $s=\sin\theta$.
+The principal logarithm is $L=(\theta/s)(M-\chi\Id)$, and in the convention $M=\exp(\Omega K)$ its quadratic generator is
+\begin{equation}
+K=-\Omega L=
+\diag\left(-\theta b s,-\frac{\theta}{bs}\right).
+\label{eq:log}
+\end{equation}
+For the positive $b$ in the witness, this branch is negative definite.
+Replacing $\theta$ by $\theta-2\pi$ produces a positive definite generator of the same one-step map.
+The map alone does not choose this branch, an oriented physical time duration, a quantum positive-frequency vacuum or a ghost-free measure.
+
+\begin{theorem}[Matching a selected scalar kernel]
+\label{thm:repair}
+Suppose $S_m$ has real time-symmetric scalar blocks $a_m,b_m$, with $b_m\ne0$.
+Choose target coefficients $a_*=-b_*\cos\theta_*$ with $b_*/b_m>0$.
+There is a unique common self-block correction at fixed $b_m$ that matches the target transfer trace:
+\begin{equation}
+\Delta S_m=\frac{\delta a_m}{2}(|x|^2+|y|^2),
+\qquad\delta a_m=-b_m\cos\theta_*-a_m.
+\label{eq:counterterm}
+\end{equation}
+After the common substitution $x=r_mx_*$, $y=r_my_*$ with $r_m^2=b_*/b_m$, the entire corrected scalar two-polarization kernel equals the target kernel.
+\end{theorem}
+\begin{proof}
+The corrected trace is $-2(a_m+\delta a_m)/b_m$.
+Setting it to $2\cos\theta_*$ gives Eq.~\eqref{eq:counterterm} uniquely.
+The substitution multiplies both coefficients by $r_m^2$.
+It sends $b_m$ to $b_*$ and the corrected $a_m$ to $-b_*\cos\theta_*=a_*$.
+Both self terms and the mixed term therefore agree, for each component.
+\end{proof}
+
+For $\theta_*=0.8150346718577313$ and $b_*=0.840003$, the rounded levels 2--4 in Table~\ref{tab:flow} require
+\begin{equation}
+\delta a_2\simeq-0.00836990,\quad
+\delta a_3\simeq0.06855150,\quad
+\delta a_4\simeq0.12391678.
+\label{eq:repairs}
+\end{equation}
+The real scalar projection of the retained fifth-level blocks, defined by
+$a_5=\Re\tr(A+C)/4$ and $b_5=\Re\tr B/2$, gives
+\begin{align}
+a_5&=-0.49563313524313946,&b_5&=0.4799642815824481,\notag\\
+\chi_5&=1.032645874415969,&\delta a_5&=0.16645291498144332,\notag\\
+r_5&=1.322927240460913.
+\label{eq:repair5}
+\end{align}
+The theorem exactly repairs this real scalar projection, while the original complex numerical block retains its recorded errors.
+
+This construction changes the selected action; it does not contradict the common-coordinate phase invariance or undo the hyperbolic matrix by a conjugacy.
+Here ``kernel'' denotes the quadratic principal function, without an uncomputed quantum prefactor or measure.
+It also shows the limits of a trace-matching condition.
+A projector onto a global survivor can be nonlocal on the fine boundary, and matching this channel supplies no proof of locality, full Regge-constraint preservation, compatible gluing, control of other sectors or a perfect four-dimensional action.
+Those additional requirements cannot be inferred from Theorem~\ref{thm:repair}.
+
+\section{Evidence, reproducibility and limits}
+\label{sec:evidence}
+The article separates exact algebra, computed finite data and physical interpretation.
+The commutant, rank bound under its hypotheses, canonical identities, endpoint-identification proposition, positive invariant and scalar repair have explicit finite proofs.
+The simplex signatures and boundary classifications are numerical checks on explicit input coordinates.
+The first- and fifth-level complete-action outputs were replayed in the preceding recovery; their input/output bytes and producer dependencies are frozen in the package with SHA-256 provenance.
+Levels 2--4 and the original second-step sensitivity checks remain inherited evidence, not new executions for this manuscript.
+No independently implemented complete Regge action has been used to reproduce the numerical Hessian.
+
+The default command \texttt{python reproduce.py} needs only packaged inputs and ordinary Python dependencies.
+It verifies the frozen-file hashes, solves the exact algebra, rebuilds the geometry, checks the architectural support condition, reconstructs the first- and fifth-level transfer matrices from their saved blocks, and verifies their spectra and scalar repairs.
+It does not recompute the Regge Hessian.
+The separate optional \texttt{run\_full.py} executes the frozen original producer on level 1 or 5; there is no hidden default expensive run or dependency on an old local project path.
+
+The finite computations support a causal dihedral angular-weight-two transfer channel, with an elliptic coarse witness and a convention-specific fifth-level hyperbolic transfer.
+The geometry gives a time-oriented region, not a retarded Green function.
+Discrete angular sampling, finite-difference residuals, constrained reduction and endpoint identification all restrict the interpretation.
+A physically selected positive-energy branch, massless pole, continuum lightlike dispersion, nonlinear stability, quantum measure and shape-regular continuum refinement have not been established.
+These gaps do not erase the explicit finite result; they delimit its question.
+
+The integrated causal join-star benchmark is the contribution offered for further assessment.
+The classical ingredients credited above, elementary outer-product and canonical algebra, and the reduced counterterm fit are not claimed as new general theories.
+The primary-source comparison was targeted; it supplies no comprehensive priority certificate.
+
+\section{Conclusion}
+The explicit Lorentzian cone supports a nonzero finite dihedral spin-two transfer pair.
+Its mixed rank is controlled by a single internal angular channel, rather than by an independent continuum helicity count.
+Partial longitudinal subdivision changes the selected finite dynamics and reaches a hyperbolic fifth-level transfer, but leaves large transverse edges and does not test a full continuum limit.
+Endpoint spectra become invariant only after fixing and tracking an identification of the endpoint phase spaces.
+The resulting finite scalar channel admits an explicit calibrated kernel repair whose full-lattice realization remains a separate question.
+
+\section*{Contribution and review disclosure}
+Human authors and affiliations are intentionally blank, and human expert review has not occurred.
+The operator reports that earlier exploratory work was led by Fable 5, while results from July 2026 onward were predominantly produced by GPT models; DeepSeek and multiple GPT models also participated in review and preparation.
+This reported chronology does not allocate individual authorship, intellectual credit or ownership.
+The operator's attribution statement is: ``I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.''
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}

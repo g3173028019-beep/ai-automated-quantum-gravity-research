@@ -1,0 +1,30 @@
+[
+  {
+    "source": "E:/TOE-Fable - \u526f\u672c/trackH-4d/lane_b_q1_full_matrix_symbolic_check.py",
+    "source_sha256": "51bf1c013e1b7303fd91336f23b5e771cb60a72dd034b86dc44b5dd4a7dd979a",
+    "portable": "code/green_matrix.py",
+    "portable_sha256": "896f08d801a4000d73e988b31af2e3b910e0be1b972791b2f3ecde1bc3a55494",
+    "transformation": "Descriptive labels/output filenames only; formulas and parameters retained"
+  },
+  {
+    "source": "E:/TOE-Fable - \u526f\u672c/trackH-4d/lane_b_q2_brst_lift_symbolic_check.py",
+    "source_sha256": "0f2c4ee3d734571b060c3df158b7afb3e2f634e34d23627adfd0e75653aa670c",
+    "portable": "code/ward_transport.py",
+    "portable_sha256": "b3951d849e0f9ce569f9b4336528a2f819e2c0d5bd1ed58e6e25fba8ba35b9b9",
+    "transformation": "Descriptive labels/output filenames only; formulas and parameters retained"
+  },
+  {
+    "source": "E:/TOE-Fable - \u526f\u672c/trackH-4d/lane_b_q3_equicausal_brst_star_symbolic_check.py",
+    "source_sha256": "53044c9dd469963fbc18cd7350070dc288afecacf223cb6ae9ca6f191fad9dab",
+    "portable": "code/graded_algebra.py",
+    "portable_sha256": "e2538fa8d482b0081ca35f2be4e1edf461c7c218cdbfe1e4a374fb1a8b376ca5",
+    "transformation": "Descriptive labels/output filenames only; formulas and parameters retained"
+  },
+  {
+    "source": "E:/TOE-Fable - \u526f\u672c/trackH-4d/lane_b_lb0_matter_vertex_bv_check.py",
+    "source_sha256": "a75fc67e325c89a4964347a6b345a267e6124a3634e3f4ea036d785d89a96d9e",
+    "portable": "code/matter_vertex.py",
+    "portable_sha256": "4e0277c0d956e8fbed63864c535d33236fa3375467a3e3372ad99aa878f4c854",
+    "transformation": "Descriptive labels/output filenames only; formulas and parameters retained"
+  }
+]

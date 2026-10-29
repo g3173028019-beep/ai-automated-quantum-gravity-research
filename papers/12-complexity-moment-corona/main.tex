@@ -1,0 +1,746 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array,xcolor}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!45!black,citecolor=green!35!black,
+urlcolor=blue!55!black,pdfauthor={},
+pdftitle={Complexity-Weighted Moments, Critical Mass Escape, and Selected Corona States}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\N}{\mathbb N_0}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\A}{\mathcal A}
+\newcommand{\K}{\mathcal K}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ind}{\mathbf 1}
+\DeclareMathOperator{\Res}{Res}
+\title{\textbf{Complexity-Weighted Moments, Critical Mass Escape,\\
+and Selected Corona States}}
+\author{}
+\date{29 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A positive sum over graded sectors can have determinate moments at every fixed regulator and still lose all finite-level probability at its critical boundary.
+We give a self-contained mathematical methods treatment of this distinction.
+Exponential counting and intensity bounds imply a finite exponential moment, while a heat-damped principal-series example admits an exact normalizer and a support-safe proof for translated clocks.
+At the true convergence abscissa, finite critical normalization gives total-variation convergence; divergent normalization is equivalent to escape from every bounded complexity set.
+Escape forces divergence of all positive complexity moments, although rates require additional hypotheses.
+Two-sided exponential level bounds give order estimates, and a convergent residual profile gives an exponential scaling law.
+Bounded sector states descend to a vanishing-ideal quotient, but word and combined word/microlocal quotients need not agree.
+We prove a corrected further-quotient construction for word-escaped states.
+Finally, geometric Abel regulators fix parity at one half and exclude ultrafilter characters, whereas explicit long-block observables give two genuinely reachable separating cluster states.
+The contribution is an integrated analysis and corrected set of examples using classical moment, summability and operator-algebraic ingredients.
+It does not assert a new general determinacy theorem or construct a physical gravitational completion.
+\end{abstract}
+
+\section{The question and its classical ingredients}
+
+Three uniqueness questions arise naturally for a regulated positive ensemble.
+Does the entire moment sequence of a nonnegative clock determine its scalar probability law?
+Does the family of normalized laws have a limit when the regulator reaches its convergence boundary?
+If limiting states exist on a larger algebra of bounded observables, do the selected states agree on the observables of interest?
+The answers concern different mathematical objects.
+Neither a divergent moment nor a large ambient state space settles the other questions.
+
+Here a complexity function is a grading or exhaustion, rather than computational, circuit or holographic complexity.
+For nonnegative intensities $a_\gamma$ and integer grading $\ell(\gamma)$, the probabilities are
+\begin{equation}
+ p_t(\gamma)=\frac{e^{-t\ell(\gamma)}a_\gamma}{Z(t)},
+ \qquad Z(t)=\sum_\gamma e^{-t\ell(\gamma)}a_\gamma.
+ \label{eq:sector-start}
+\end{equation}
+At fixed sufficiently large $t$, the clock $\ell$ has a finite exponential moment.
+Near criticality, normalization may remain finite or diverge.
+The latter case produces weak-* states at infinity, depending on the observable algebra and on which states the regulator actually reaches.
+
+The ingredients have established antecedents.
+Carleman's criterion and exponential-moment determinacy belong to classical moment theory; Simon distinguishes the Stieltjes support problem from the Hamburger problem~\cite{Simon1998}.
+Patterson's normalized critical series provide a geometric instance of a divergent denominator concentrating limit measures on a boundary~\cite{Patterson1976}.
+Banach limits and almost convergence, including the unique parity value under shift-invariant positive limits, were studied by Lorentz~\cite{Lorentz1948}.
+Weak-* compactness and quotient-state facts are standard functional analysis~\cite{Alaoglu1940,Murphy1990}.
+The proofs below specialize and combine these ideas; we make no claim that the general ingredients originate here.
+
+The combined treatment concerns the passage from a fixed-regulator moment problem to a selected boundary-state problem.
+Two local distinctions are consequential.
+A positive translation of a Stieltjes clock cannot be justified by an unrestricted inverse translation of competing measures.
+A scalar function vanishing at word infinity need not vanish along a microlocal direction with the word fixed.
+We resolve both issues explicitly.
+
+The heat example uses a spectral density from Virasoro topological quantum field theory~\cite{CollierEberhardtZhang2023}.
+Only the positive one-variable density is imported.
+No physical state selection or gravitational interpretation is inferred from it.
+Thermal point-process statistics are a separate question: the objects here are positive graded sums, critical normalization and corona limits.
+
+\section{Determinacy at a fixed regulator}
+\label{sec:determinacy}
+
+\subsection{Moment conventions and the exponential criterion}
+
+\begin{definition}
+Let $\mu$ be a probability on $[0,\infty)$ with finite moments $m_n=\int x^n\,d\mu(x)$ for all $n\in\N$.
+Its Stieltjes moment problem is determinate if no other positive Borel measure on $[0,\infty)$ has the same entire moment sequence.
+The Hamburger problem permits competitors on all of $\R$.
+\end{definition}
+
+We use the Stieltjes--Carleman sufficient condition
+\begin{equation}
+ \sum_{n=1}^\infty m_n^{-1/(2n)}=\infty.
+ \label{eq:carleman}
+\end{equation}
+A vanishing positive moment forces the measure to be concentrated at zero, so that degenerate case is immediate.
+Failure of~\eqref{eq:carleman} does not establish indeterminacy.
+The classical criterion is reviewed in~\cite[Corollary 4.5]{Simon1998}.
+
+\begin{lemma}[Finite exponential moment]
+\label{lem:mgf}
+If $X\geq0$ and $M_s=\E e^{sX}<\infty$ for some $s>0$, all its moments are finite and its Stieltjes moment problem is determinate.
+\end{lemma}
+\begin{proof}
+The nonnegative exponential series gives
+\begin{equation}
+ x^n\leq n!s^{-n}e^{sx},\qquad x\geq0.
+\end{equation}
+Thus $m_n\leq n!s^{-n}M_s$.
+Stirling's formula implies
+\begin{equation}
+ m_n^{-1/(2n)}\geq
+ s^{1/2}(n!)^{-1/(2n)}M_s^{-1/(2n)}
+ =s^{1/2}e^{1/2}n^{-1/2}(1+o(1)).
+\end{equation}
+The comparison series diverges, so~\eqref{eq:carleman} applies.
+\end{proof}
+
+This proves uniqueness of the scalar law of $X$.
+States on a larger noncommutative algebra can share that law and differ elsewhere.
+No informational completeness of the entire state is asserted.
+
+\subsection{A heat-damped spectral example and translated clocks}
+
+For $b>0$ and $P\geq0$, set
+\begin{equation}
+ \rho_b(P)=4\sqrt2\sinh(2\pi bP)\sinh(2\pi b^{-1}P),
+ \qquad Q=b+b^{-1}.
+ \label{eq:density}
+\end{equation}
+This is the convention of~\cite[Eq.~(2.23)]{CollierEberhardtZhang2023}.
+For $\beta>0$, define
+\begin{equation}
+ Z_\beta=\int_0^\infty e^{-\beta P^2}\rho_b(P)\,dP,
+ \qquad d\mu_\beta=Z_\beta^{-1}e^{-\beta P^2}\rho_b(P)\,dP.
+ \label{eq:heat}
+\end{equation}
+
+\begin{proposition}[Heat normalization and determinacy]
+\label{prop:heat}
+For $b,\beta>0$, $0<Z_\beta<\infty$, with exact value
+\begin{equation}
+ Z_\beta=\sqrt{\frac{2\pi}{\beta}}
+ \left[e^{\pi^2(b+b^{-1})^2/\beta}
+       -e^{\pi^2(b-b^{-1})^2/\beta}\right].
+ \label{eq:normalizer}
+\end{equation}
+Under $\mu_\beta$, each of $P^2$, $P^2+c$ for fixed $c\geq0$, and $\kappa P$ for fixed $\kappa>0$ is Stieltjes determinate.
+For $X=P^2$ and $0<s<\beta$,
+\begin{equation}
+ \E_\beta e^{s(X+c)}=e^{sc}\frac{Z_{\beta-s}}{Z_\beta}.
+ \label{eq:translated-mgf}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Since $\sinh u\leq e^u/2$ for $u\geq0$, one has
+$0\leq\rho_b(P)\leq\sqrt2 e^{2\pi QP}$.
+Completing the square bounds the heat integral by a finite Gaussian integral; positivity holds since the integrand is positive for $P>0$.
+For the exact formula use
+\begin{equation}
+ 2\sinh u\sinh v=\cosh(u+v)-\cosh(u-v),\qquad
+ \int_0^\infty e^{-\beta P^2}\cosh(aP)\,dP
+ =\frac{\sqrt\pi}{2\sqrt\beta}e^{a^2/(4\beta)}.
+\end{equation}
+Substitution gives~\eqref{eq:normalizer}.
+The bracket is strictly positive since
+$(b+b^{-1})^2-(b-b^{-1})^2=4$.
+Equation~\eqref{eq:translated-mgf} follows directly and is finite for $s<\beta$.
+Lemma~\ref{lem:mgf} proves determinacy of $X$ and $X+c$.
+For $L=\kappa P$, all finite positive exponential moments exist since
+$-\beta P^2+(2\pi Q+s\kappa)P$ is Gaussian dominated.
+The same lemma proves the length-clock claim.
+\end{proof}
+
+The translation step requires care.
+An arbitrary competitor $\nu$ for $Y=X+c$ on $[0,\infty)$ may translate into $[-c,\infty)$, with mass below zero.
+Stieltjes uniqueness for $X$ alone does not exclude it.
+General Stieltjes determinacy is not translation invariant; the distinction is explicit in~\cite[Section 3 and Appendix C]{Simon1998}.
+Equation~\eqref{eq:translated-mgf} proves the actual heat-family conclusion without that support gap.
+
+Gaussian domination also gives, for a finite constant $C_\beta$ independent of $n$,
+\begin{equation}
+ \E_\beta P^{2n}\leq C_\beta
+ \left(\frac{2}{\beta}\right)^{n+1/2}
+ \Gamma\!\left(n+\frac12\right).
+\end{equation}
+Indeed $-\beta P^2+2\pi QP\leq-(\beta/2)P^2+(2\pi Q)^2/(2\beta)$, and the remaining integral is evaluated by $u=\beta P^2/2$.
+This supplies the same Carleman divergence.
+The bare density is not a probability, and no conclusion removes the regulator or selects a physical $\beta$.
+
+\subsection{Exponentially bounded sector ensembles}
+
+Let $\Gamma$ be countable, $\ell:\Gamma\to\N$, and
+$N_R=\#\{\gamma:\ell(\gamma)=R\}$.
+Assume finite nonnegative intensities, not all zero, and constants $A,C<\infty$, $h,r\geq0$ such that
+\begin{equation}
+ N_R\leq Ce^{hR},\qquad a_\gamma\leq Ae^{r\ell(\gamma)}.
+ \label{eq:shell-bounds}
+\end{equation}
+
+\begin{theorem}[Supercritical determinacy]
+\label{thm:supercritical}
+Under~\eqref{eq:shell-bounds},~\eqref{eq:sector-start} defines a probability for every $t>h+r$.
+The clock $L=\ell$ has a finite exponential moment and is Stieltjes determinate.
+\end{theorem}
+\begin{proof}
+Grouping by level gives
+\begin{equation}
+ 0<Z(t)\leq CA\sum_{R\geq0}e^{-(t-h-r)R}<\infty.
+\end{equation}
+For $0<s<t-h-r$,
+\begin{equation}
+ \E_t e^{sL}\leq\frac{CA}{Z(t)}
+ \sum_{R\geq0}e^{-(t-h-r-s)R}<\infty.
+\end{equation}
+Apply Lemma~\ref{lem:mgf}.
+\end{proof}
+
+If $a_\gamma=\norm{V_\gamma\eta}^2$ and
+$\norm{V_\gamma\eta}\leq C_\eta e^{r_0\ell(\gamma)}$, the intensity exponent is $r=2r_0$.
+An action satisfying $A_{\mathrm{act}}(\gamma)\geq t\ell(\gamma)-B$ gives the same bound up to $e^B$.
+These are sufficient comparisons, not identities of the action with the grading.
+In particular, $h+r$ need not be the true critical exponent.
+
+\section{Critical normalization, escape and moment rates}
+\label{sec:critical}
+
+Let $B_R\geq0$ be finite, with infinitely many nonzero levels, and define
+\begin{equation}
+ Z(t)=\sum_{R\geq0}e^{-tR}B_R,
+ \qquad
+ \alpha=\limsup_{\substack{R\to\infty\\B_R>0}}
+ \frac{\log B_R}{R}\in\R.
+ \label{eq:abscissa}
+\end{equation}
+The finite-real-$\alpha$ assumption excludes superexponential growth and the case $\alpha=-\infty$ from this critical-boundary analysis.
+Whenever $Z(t)<\infty$, put
+\begin{equation}
+ q_t(R)=Z(t)^{-1}e^{-tR}B_R.
+ \label{eq:level-law}
+\end{equation}
+
+\begin{lemma}[The true abscissa]
+\label{lem:abscissa}
+$Z(t)<\infty$ for $t>\alpha$, and $Z(t)=\infty$ for $t<\alpha$.
+At $t=\alpha$ either behavior is possible.
+Every fixed $t>\alpha$ has a determinate complexity law.
+\end{lemma}
+\begin{proof}
+For $t>\alpha$, choose $\delta>0$ with $\alpha+\delta<t$.
+Eventually $B_R\leq e^{(\alpha+\delta)R}$, giving geometric domination.
+For $t<\alpha$, infinitely many $R$ satisfy $B_R\geq e^{(t+\delta)R}$ for a fixed $\delta>0$.
+Those summands do not tend to zero.
+The profiles $e^{\alpha R}(R+1)^{-2}$ and $e^{\alpha R}(R+1)^{-1}$ give the two critical behaviors.
+Finally, $0<s<t-\alpha$ gives
+$\E_t e^{sL}=Z(t-s)/Z(t)<\infty$, so Lemma~\ref{lem:mgf} applies.
+\end{proof}
+
+\begin{definition}
+A net of probabilities $q_i$ on $\N$ has mass escape if
+\begin{equation}
+ q_i(\{0,\ldots,K\})\longrightarrow0
+ \quad\text{for every finite }K.
+ \label{eq:escape}
+\end{equation}
+\end{definition}
+
+\begin{theorem}[Critical-denominator alternative]
+\label{thm:alternative}
+Precisely one branch holds as $t\downarrow\alpha$:
+\begin{enumerate}
+\item If $Z(\alpha)<\infty$, then $q_t$ tends in total variation to
+$q_\alpha(R)=Z(\alpha)^{-1}e^{-\alpha R}B_R$.
+\item If $Z(\alpha)=\infty$, then $q_t$ has mass escape and has no weak probability limit on the original discrete space $\N$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+In the first branch put $w_t(R)=e^{-tR}B_R$.
+Dominated convergence gives $\norm{w_t-w_\alpha}_1\to0$ and $Z(t)\to Z(\alpha)>0$.
+Then
+\begin{equation}
+ \norm{q_t-q_\alpha}_1\leq
+ \frac{\norm{w_t-w_\alpha}_1}{Z(t)}
+ +Z(\alpha)\left|\frac1{Z(t)}-\frac1{Z(\alpha)}\right|\longrightarrow0.
+\end{equation}
+Our convention is $d_{\mathrm{TV}}(p,q)=\frac12\norm{p-q}_1$.
+In the second branch monotone convergence gives $Z(t)\uparrow\infty$.
+For fixed $K$, the numerator $\sum_{R\leq K}e^{-tR}B_R$ stays bounded, so its ratio to $Z(t)$ vanishes.
+A weak probability limit on the discrete space would give every singleton mass zero, contradicting countable additivity and normalization.
+\end{proof}
+
+\begin{proposition}[Minimal escape criterion]
+\label{prop:minimal}
+Let $t_c\in\R$, every $B_R$ be finite, and $0<Z(t)<\infty$ for $t>t_c$.
+Then $Z(t)\to\infty$ as $t\downarrow t_c$ if and only if $q_t$ has mass escape.
+\end{proposition}
+\begin{proof}
+The forward implication is the bounded finite-level numerator argument.
+For the converse choose $R_0$ with $B_{R_0}>0$, which exists since $Z(t)>0$.
+A bounded subnet of $Z(t)$ as $t\downarrow t_c$ would keep
+$q_t(R_0)=e^{-tR_0}B_{R_0}/Z(t)$ bounded away from zero, contradicting escape.
+\end{proof}
+
+The denominator condition covers sparse and irregular residual weights, if the actual critical series diverges.
+The basic boundary-support mechanism also appears in~\cite[Section 3]{Patterson1976}; its geometric and conformal conclusions are not assumed here.
+
+\begin{proposition}[Every positive moment diverges under escape]
+\label{prop:moment-divergence}
+If~\eqref{eq:escape} holds, then $\E_i L^p\to\infty$ for every $p>0$, with extended-real expectations allowed.
+\end{proposition}
+\begin{proof}
+For every $K>0$, $\E_i L^p\geq K^p q_i(L\geq K)$.
+The probability tends to one, so $\liminf_i\E_i L^p\geq K^p$ for every $K$.
+Let $K\to\infty$.
+\end{proof}
+
+Tail regularity is needed for a rate, not for this divergence.
+Conversely, the finite-denominator profile $(R+1)^{-2}$ defines an ordinary critical probability while its positive integer moments diverge.
+Moment divergence and escape are inequivalent.
+
+\begin{theorem}[Order estimates and a regular-profile limit]
+\label{thm:rates}
+Suppose for all sufficiently large $R$,
+\begin{equation}
+ 0<c_-\leq c_R:=e^{-\alpha R}B_R\leq c_+<\infty.
+ \label{eq:two-sided}
+\end{equation}
+Writing $t=\alpha+\eps$, one has
+\begin{equation}
+ Z(\alpha+\eps)=\Theta(\eps^{-1}),\qquad
+ \E_\eps L^n=\Theta(\eps^{-n})
+ \quad(n\geq1\text{ fixed}).
+ \label{eq:theta}
+\end{equation}
+If in addition $c_R\to c\in(0,\infty)$, then
+\begin{equation}
+ Z(\alpha+\eps)\sim\frac c\eps,
+ \qquad \eps^n\E_\eps L^n\longrightarrow n!,
+ \label{eq:asymptotic}
+\end{equation}
+and $\eps L$ converges in law to a mean-one exponential variable.
+\end{theorem}
+\begin{proof}
+The finite initial part is negligible against
+$\sum e^{-\eps R}=(1-e^{-\eps})^{-1}=\Theta(\eps^{-1})$.
+The moment numerator is compared above and below with $\sum R^n e^{-\eps R}$.
+The Riemann-sum limit
+\begin{equation}
+ \eps^{n+1}\sum_{R\geq0}R^n e^{-\eps R}
+ =\eps\sum_{R\geq0}(\eps R)^n e^{-\eps R}
+ \longrightarrow\int_0^\infty u^n e^{-u}\,du=n!
+ \label{eq:riemann}
+\end{equation}
+then proves~\eqref{eq:theta} after normalization.
+To justify the unbounded interval, first use Riemann sums on a compact interval.
+The remaining tail is uniformly bounded by a constant multiple of the integrable tail of $(1+u)^n e^{-u}$.
+If $c_R\to c$, split at fixed large $K$.
+The finite part vanishes after multiplication by $\eps^{n+1}$.
+Above $K$, replacement of $c_R$ by $c$ has error bounded by
+$\sup_{R>K}|c_R-c|$ times the left side of~\eqref{eq:riemann}.
+Let $\eps\downarrow0$ and then $K\to\infty$, obtaining~\eqref{eq:asymptotic}, including $n=0$ for normalization.
+For $x\geq0$, the same tail Riemann sum gives
+\begin{equation}
+ \Pr_\eps(\eps L>x)=
+ \frac{\sum_{R>x/\eps}c_R e^{-\eps R}}
+ {\sum_{R\geq0}c_R e^{-\eps R}}
+ \longrightarrow\int_x^\infty e^{-u}\,du=e^{-x}.
+\end{equation}
+This proves the distributional limit.
+\end{proof}
+
+Section~\ref{sec:abel} gives a two-sided bounded residual profile with two different subsequential values of $\eps Z$.
+Thus~\eqref{eq:theta} cannot generally be upgraded to a constant equivalent.
+Every fixed regulated law remains determinate by Lemma~\ref{lem:abscissa} even as all positive moments diverge at the critical boundary.
+
+\section{Bounded observable algebras and corona limits}
+\label{sec:corona}
+
+Write $\ell^\infty=\ell^\infty(\N)$ for bounded complex sequences, $c_0$ for sequences tending to zero, and $c$ for convergent sequences.
+The scalar corona is the unital $C^*$-algebra $\ell^\infty/c_0$.
+A state is a positive complex-linear functional $\omega$ with $\omega(1)=1$; it obeys $|\omega(a)|\leq\norm a$.
+Weak-* convergence means convergence on every fixed algebra element.
+State spaces are weak-* compact by Banach--Alaoglu and weak-* closedness of positivity and normalization~\cite{Alaoglu1940,Murphy1990}.
+For nonseparable algebras this supplies subnets, not necessarily convergent subsequences.
+Each probability $q_i$ defines a state
+\begin{equation}
+ \omega_i(x)=\sum_{R\geq0}q_i(R)x_R,\qquad x\in\ell^\infty.
+\end{equation}
+
+\begin{theorem}[Tail values and scalar descent]
+\label{thm:tail}
+Under mass escape, $\omega_i(f)\to0$ for $f\in c_0$, and every weak-* cluster state factors through $\ell^\infty/c_0$.
+If $x_R\to L$, then $\omega_i(x)\to L$.
+All cluster states therefore have the same restriction to $c$, and $c/c_0\simeq\C$ has one state.
+\end{theorem}
+\begin{proof}
+Given $\eta>0$, choose $K$ with $|x_R-L|<\eta$ for $R>K$.
+Then
+\begin{equation}
+ |\omega_i(x)-L|\leq\norm{x-L}_\infty q_i(R\leq K)+\eta.
+\end{equation}
+First take the escape limit, then $\eta\downarrow0$.
+Taking $L=0$ gives annihilation of $c_0$.
+A functional annihilating a closed ideal defines a unique functional on the quotient; positivity and unitality pass to that functional.
+The limit map $c\to\C$ is a surjective unital $*$-homomorphism with kernel $c_0$, proving the final assertion.
+\end{proof}
+
+\begin{proposition}[Ambient tail separation]
+\label{prop:ultrafilter}
+A real nonconvergent $x\in\ell^\infty$ is separated by two states on $\ell^\infty/c_0$ that agree on every convergent tail.
+\end{proposition}
+\begin{proof}
+Choose subsequences tending to distinct cluster values $a<b$ and free ultrafilters containing their index sets.
+The ultralimits $\phi_\mathcal U(y)=\lim_\mathcal U y_R$ are positive, linear and unital, annihilate $c_0$, and give $x$ the values $a,b$.
+Both agree with the ordinary limit on convergent sequences.
+\end{proof}
+
+Free ultrafilters use a corresponding choice principle.
+This argument identifies ambient states, without showing that the regulator selects either one.
+Any unital scalar subalgebra contained in $c/c_0\simeq\C$ has no state-separating observable.
+This conclusion does not exclude separation on other ambient noncommutative observables.
+
+\subsection{Sector products}
+
+Let $\A_\gamma$ be nonzero unital $C^*$-algebras over a countable graded set.
+Define the bounded product and length-vanishing ideal by
+\begin{align}
+ \A&=\{a=(a_\gamma):a_\gamma\in\A_\gamma,
+                     \ \sup_\gamma\norm{a_\gamma}<\infty\},\\
+ I_\ell&=\{a\in\A:
+       \sup_{\ell(\gamma)>K}\norm{a_\gamma}\to0
+       \text{ as }K\to\infty\}.
+ \label{eq:length-ideal}
+\end{align}
+Operations are coordinatewise.
+This is a closed self-adjoint two-sided ideal: uniform convergence preserves the tail condition and multiplication by bounded families preserves vanishing.
+If bounded length balls are finite, $I_\ell$ is the usual $c_0$ direct-sum ideal.
+Otherwise it is a length-based ideal, not silently ordinary coordinatewise $c_0$.
+
+\begin{proposition}[Sector-state descent]
+\label{prop:sector}
+Let $p_i$ be probabilities with $p_i(\ell\leq K)\to0$ for every $K$, and let $\sigma_\gamma$ be sector states.
+Then
+\begin{equation}
+ \Omega_i(a)=\sum_\gamma p_i(\gamma)\sigma_\gamma(a_\gamma)
+\end{equation}
+is a state on $\A$, and every weak-* cluster state annihilates $I_\ell$ and descends to $\A/I_\ell$.
+\end{proposition}
+\begin{proof}
+Absolute convergence follows from $|\sigma_\gamma(a_\gamma)|\leq\norm a$.
+Positivity and normalization hold term by term.
+For $a\in I_\ell$, choose $K$ with $\sup_{\ell(\gamma)>K}\norm{a_\gamma}<\eta$.
+Then $|\Omega_i(a)|\leq\norm a\,p_i(\ell\leq K)+\eta$.
+Take the escape limit and then $\eta\downarrow0$.
+The quotient conclusion follows as in Theorem~\ref{thm:tail}.
+\end{proof}
+
+The bound applies entrywise to finite matrix amplifications.
+It does not prove that an independently specified map $\Phi$ descends: that requires $\Phi(I_\ell)\subseteq I_\ell$.
+Complete positivity of a descended map requires complete positivity of the map being descended.
+Unbounded observables require separately declared domains and graph estimates.
+State descent, operation descent and unbounded-domain control are distinct assertions.
+
+\section{Word and combined escape: a corrected quotient}
+\label{sec:word}
+
+Let $j=(\gamma,k)$, with each countable fiber $K_\gamma$ nonempty.
+Assume $\ell_W:\Gamma\to\N$ has finite bounded balls and
+\begin{equation}
+ \ell_T(\gamma,k)\geq\ell_W(\gamma).
+ \label{eq:projection}
+\end{equation}
+For example, total complexity may be word plus microlocal complexity.
+No physical meaning of $k$ is required.
+On the bounded product $\A=\prod_{\gamma,k}\A_{\gamma,k}$ of nonzero unital factors, define
+\begin{align}
+ I_T&=\{a:\sup_{\ell_T(\gamma,k)>R}\norm{a_{\gamma,k}}\to0\},\\
+ J_W&=\{a:\sup_{\ell_W(\gamma)>R,\ k\in K_\gamma}
+                         \norm{a_{\gamma,k}}\to0\}.
+ \label{eq:two-ideals}
+\end{align}
+Both are closed two-sided ideals.
+
+\begin{example}[A word-vanishing lift can survive total escape]
+\label{ex:ray}
+Take scalar factors on $\Gamma=\N$, $K_\gamma=\N$, with
+$\ell_W(\gamma)=\gamma$ and $\ell_T(\gamma,k)=\gamma+k$.
+Although $f(\gamma)=\ind_{\{0\}}(\gamma)$ belongs to word $c_0$, its lift equals one on $(0,k)$ for every $k$.
+Thus $\widetilde f\notin I_T$, and scalar pullback does not generally define a map from the word corona to $\A/I_T$.
+\end{example}
+
+Inequality~\eqref{eq:projection} says a bounded total ball projects into a bounded word ball.
+It does not bound the microlocal fibers over a fixed word.
+These directions must not be interchanged.
+
+\begin{theorem}[Further quotient for word-escaped states]
+\label{thm:word-quotient}
+Under~\eqref{eq:projection}, $I_T\subseteq J_W$.
+Suppose the normalized states are
+\begin{equation}
+ \Omega_i(a)=\sum_\gamma p_i(\gamma)
+ \sum_{k\in K_\gamma}\nu_i(k\mid\gamma)
+                 \sigma_{\gamma,k}(a_{\gamma,k}),
+ \label{eq:conditional-lift}
+\end{equation}
+where $p_i$ are word-escaped probabilities, $\nu_i(\cdot\mid\gamma)$ are conditional probabilities and $\sigma_{\gamma,k}$ are sector states.
+Every cluster state annihilates $J_W$ and factors through $\A/J_W$, a further quotient of $\A/I_T$.
+Scalar lifting induces a central isometric unital embedding
+\begin{equation}
+ \ell^\infty(\Gamma)/c_0(\Gamma)\lhook\joinrel\longrightarrow\A/J_W.
+ \label{eq:word-embedding}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Word-large implies total-large by~\eqref{eq:projection}, so the word-tail supremum is bounded by the total-tail supremum.
+Thus $I_T\subseteq J_W$.
+For $a\in J_W$, splitting~\eqref{eq:conditional-lift} gives
+\begin{equation}
+ |\Omega_i(a)|\leq\norm a\,p_i(\ell_W\leq R)
+       +\sup_{\ell_W(\gamma)>R,k}\norm{a_{\gamma,k}}.
+\end{equation}
+Take the regulator limit and then $R\to\infty$ to obtain annihilation.
+
+Lift $f$ by $\widetilde f_{\gamma,k}=f(\gamma)1_{\gamma,k}$, a central unital $*$-homomorphism.
+Properness of $\ell_W$ makes a scalar word-$c_0$ lift belong to $J_W$, so it descends.
+Its quotient norm is
+\begin{equation}
+ \norm{\widetilde f+J_W}
+ =\lim_{R\to\infty}\sup_{\ell_W(\gamma)>R}|f(\gamma)|
+ =\norm{f+c_0(\Gamma)}.
+ \label{eq:quotient-norm}
+\end{equation}
+For the upper bound cancel the lift on $\ell_W\leq R$ by an element of $J_W$.
+For the lower bound, every $a\in J_W$ satisfies
+\begin{equation}
+ \norm{\widetilde f+a}\geq
+ \sup_{\ell_W(\gamma)>R}|f(\gamma)|
+ -\sup_{\ell_W(\gamma)>R,k}\norm{a_{\gamma,k}}.
+\end{equation}
+Let $R\to\infty$ and infimize over $a$.
+This proves isometry and injectivity; centrality and unitality pass to the quotient.
+\end{proof}
+
+In Example~\ref{ex:ray}, $I_T\subsetneq J_W$.
+The fixed-word lift survives modulo $I_T$, but every word-escaped state assigns it zero.
+The further quotient records that additional annihilation.
+If word balls are not finite, replace $c_0(\Gamma)$ in~\eqref{eq:word-embedding} by the explicitly length-vanishing scalar ideal.
+
+A stronger geometric condition restores scalar pullback into the total quotient: every fiber over a bounded word ball must have bounded total complexity.
+Then, for $f$ word-$c_0$, choose a word ball outside which $|f|<\eta$.
+Beyond the total bound of its preimage, all remaining lifted values are smaller than $\eta$, proving total vanishing.
+That condition fails in the fixed-word microlocal ray.
+Neither this observation nor Theorem~\ref{thm:word-quotient} proves that sewing or dynamics preserves $J_W$.
+
+\section{Selected Abel limits: a negative and a positive example}
+\label{sec:abel}
+
+For $B_n=e^{\alpha n}$ put $r=e^{-\eps}\in(0,1)$.
+The geometric family is
+\begin{equation}
+ q_r(n)=(1-r)r^n,\qquad
+ A_r(x)=(1-r)\sum_{n\geq0}r^n x_n.
+ \label{eq:abel}
+\end{equation}
+Every fixed law is moment determinate and the family escapes as $r\uparrow1$.
+Its cluster states are more restricted than all scalar-corona states.
+
+\begin{proposition}[Shift invariance and parity]
+\label{prop:abel-shift}
+For $(Sx)_n=x_{n+1}$,
+\begin{equation}
+ \norm{A_r\circ S-A_r}=2(1-r).
+ \label{eq:shift-norm}
+\end{equation}
+Every weak-* cluster state is therefore shift invariant.
+For the even indicator $e_n=\ind_{\{n\text{ even}\}}$,
+\begin{equation}
+ A_r(e)=\frac1{1+r}\longrightarrow\frac12.
+ \label{eq:parity}
+\end{equation}
+No character of $\ell^\infty/c_0$ is a cluster state of the full Abel family.
+\end{proposition}
+\begin{proof}
+The coefficient of $x_0$ in $A_r\circ S-A_r$ is $-(1-r)$; that of $x_m$, $m\geq1$, is $(1-r)^2r^{m-1}$.
+Their absolute sum is $2(1-r)$, attained by $x_0=-1$, $x_m=1$ for $m\geq1$.
+This proves~\eqref{eq:shift-norm} and shift invariance in the limit.
+Summing even powers gives~\eqref{eq:parity}.
+A character takes a projection to zero or one, since $\chi(e)^2=\chi(e)$.
+It cannot give $[e]$ the value one half.
+\end{proof}
+
+The positive normalized shift-invariant functionals are Banach limits.
+The parity conclusion and general almost-convergence theory are classical~\cite[Section 1]{Lorentz1948}.
+The direct Abel calculation shows why choosing two ultrafilters cannot by itself prove reachability.
+
+Now set
+\begin{equation}
+ N_k=2^{2^k},\quad b_k=k\bmod2,\qquad
+ x_n=b_k\ (N_k\leq n<N_{k+1}),\quad x_n=0\ (n<N_0).
+ \label{eq:block-witness}
+\end{equation}
+
+\begin{theorem}[Reachable long-block separation]
+\label{thm:blocks}
+For $\eps_k=(N_kN_{k+1})^{-1/2}$ and $r_k=e^{-\eps_k}$, one has
+$A_{r_k}(x)-b_k\to0$.
+There exist two reachable weak-* cluster states on the scalar corona agreeing on $c/c_0$ and giving $[x]$ the values zero and one.
+\end{theorem}
+\begin{proof}
+The geometric probability of $[a,b)$ is exactly $r^a-r^b$.
+Thus the probability of the $k$th block at the selected scale is
+\begin{equation}
+ M_k=e^{-\sqrt{N_k/N_{k+1}}}
+       -e^{-\sqrt{N_{k+1}/N_k}}\longrightarrow1,
+ \label{eq:block-mass}
+\end{equation}
+because $N_{k+1}/N_k\to\infty$.
+Since $x=b_k$ there and $0\leq x\leq1$ everywhere,
+\begin{equation}
+ |A_{r_k}(x)-b_k|\leq1-M_k\longrightarrow0.
+ \label{eq:block-bound}
+\end{equation}
+For even $k$ the witness tends to zero; for odd $k$ it tends to one.
+Weak-* compactness gives a convergent subnet of each family.
+Theorem~\ref{thm:tail} makes the states descend and agree on convergent tails.
+They give the claimed distinct witness values.
+No sequential compactness of the full nonseparable algebra is presumed.
+\end{proof}
+
+This is a concrete classical summability construction, not a new general theorem about Banach limits.
+It supplies actual selected-state separation rather than merely ambient separation.
+Both cluster states remain shift invariant.
+
+\begin{corollary}[Two-sided bounds do not give a leading constant]
+\label{cor:no-constant}
+For $c_n=1+x_n$ and $B_n=e^{\alpha n}c_n$, one has $1\leq c_n\leq2$, but $\eps Z(\alpha+\eps)$ has subsequential limits one and two.
+\end{corollary}
+\begin{proof}
+Exactly,
+\begin{equation}
+ \eps Z(\alpha+\eps)=\frac{\eps}{1-e^{-\eps}}
+       \bigl(1+A_{e^{-\eps}}(x)\bigr).
+\end{equation}
+The prefactor tends to one, and Theorem~\ref{thm:blocks} gives both subsequential values.
+\end{proof}
+
+\subsection{Finite reproduction of the exact formulas}
+
+The accompanying script evaluates exact geometric block formulas, rather than sampling an ensemble.
+Table~\ref{tab:blocks} shows representative rows.
+The complement bound $1-M_k$ is evaluated with $\operatorname{expm1}$ to avoid cancellation near one.
+The code also checks the parity formula and fixed-word ray.
+
+\begin{table}[htbp]
+\centering
+\caption{Finite exact-formula evaluations of the long-block example.
+The error column bounds $|A_{r_k}(x)-b_k|$ analytically; the decimals are illustrative floating-point values.}
+\label{tab:blocks}
+\begin{tabular}{rrrrr}
+\toprule
+$k$ & $b_k$ & $\eps_k$ & $A_{r_k}(x)$ & $1-M_k$\\
+\midrule
+3 & 1 & $2.44140625\,10^{-4}$ & $0.9423354950$ & $0.06058704972$\\
+4 & 0 & $5.96046448\,10^{-8}$ & $0.003884087113$ & $0.003898630530$\\
+5 & 1 & $3.55271368\,10^{-15}$ & $0.9999847416$ & $1.525867265\,10^{-5}$\\
+6 & 0 & $1.26217745\,10^{-29}$ & $2.328306437\,10^{-10}$ & $2.328306436\,10^{-10}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Last rounded digits may differ because witness and bound use different floating-point expressions.
+The proof is~\eqref{eq:block-bound}, not an inference from finite rows.
+Late saved witness values round to endpoints while the stable complement bound remains positive.
+No exact finite endpoint equality or physical admissibility is inferred numerically.
+
+\section{What a selected boundary-state conclusion requires}
+
+For a unital observable algebra $\A_\partial$, define the reachable set
+\begin{equation}
+ \K_{\mathrm{reg}}=
+ \{\Omega:\omega_{t_i}\xrightarrow{w^*}\Omega
+       \text{ for a net }t_i\downarrow t_c\}.
+\end{equation}
+Let $\K_{\mathrm{adm}}$ impose independently stated admissibility conditions and put
+$\K_{\mathrm{sel}}=\K_{\mathrm{reg}}\cap\K_{\mathrm{adm}}$.
+For a unital data subalgebra $\mathcal R\subseteq\A_\partial$, ambiguity relative to those data is noninjectivity of
+\begin{equation}
+ \Res_{\mathcal R}:\K_{\mathrm{sel}}\to\mathsf S(\mathcal R),
+ \qquad \Omega\mapsto\Omega|_{\mathcal R}.
+\end{equation}
+Distinct states are separated by an algebra element, but an application may require a gauge-invariant, sewing-compatible or operationally measurable witness.
+Those requirements restrict the state and witness sets; scalar positivity does not supply them.
+
+Theorem~\ref{thm:blocks} gives a noninjective selected restriction map when the scalar corona is the ambient algebra, no extra admissibility is imposed, and $\mathcal R=c/c_0$.
+Parity cannot distinguish those selected states because its boundary value is fixed.
+If the data algebra contains $[x]$, the constructed pair is distinguished by the data.
+The conclusion therefore depends on what is held fixed.
+
+Standard positive Hahn--Banach extension extends states from a unital $C^*$-subalgebra to its ambient unital algebra~\cite{Murphy1990}.
+It preserves a difference on that subalgebra, but arbitrary extensions need not agree on other data.
+If a unital positive conditional expectation $E:\A_\partial\to\mathcal Z$ exists, then $\Omega_\phi=\phi\circ E$ is a state.
+Scalar states agreeing on $E(\mathcal R)$ yield ambient states agreeing on $\mathcal R$ and retain differences on witnesses in $\mathcal Z$ because $E(z)=z$.
+This is conditional; the expectation is extra structure.
+
+Only bounded weak-* closed identities automatically pass to cluster states.
+A fixed identity $\omega(a)=\omega(b)$ passes by evaluation continuity, and positivity of a fixed finite matrix passes under entrywise limits.
+Unbounded dynamical identities require common domains and estimates beyond weak-* compactness.
+The state and operation quotients must also agree; Section~\ref{sec:word} shows why a silent change of ideal is consequential.
+
+For an application to Virasoro topological quantum field theory, the density~\eqref{eq:density} is a source input, but actual weighted critical asymptotics, a selected packet algebra, ideal-preserving sewing and reflection maps, common dynamical domains, a physical witness and two admissible reachable states on a declared data fiber have not been constructed here.
+The fixed-topology framework~\cite{CollierEberhardtZhang2023} does not prove those extra statements.
+The analysis supplies tests and counterexamples, without asserting a physical gravitational completion.
+
+\section{Concluding interpretation}
+
+Finite exponential moments determine each regulated scalar clock.
+At the actual convergence abscissa, the denominator decides whether probability remains ordinary or escapes.
+Escape alone diverges every positive complexity moment; regular residual profiles control rates and, with a residual limit, give an exponential scaling law.
+
+Coronas provide a precise home for escaping bounded states, but ambient multiplicity differs from regulator reachability.
+Abel averaging gives both a uniquely averaged parity observable and long-block observables separating reachable states.
+The word/total distinction requires a precise ideal: the further word quotient repairs the scalar-state construction without replacing proofs of operation preservation.
+These are methods and explicit examples built from classical tools on a definite mathematical question.
+They neither promote the ingredients to new general theorems nor interpret every corona state as a physical completion.
+
+\section*{Reproducibility and authorship disclosure}
+
+The package contains source, bibliography, standard-library Python code and saved formula evaluations.
+Default reproduction needs no network, historical project path or provider service.
+The central results are analytic proofs; finite output illustrates the block bounds and does not certify physical premises.
+Human author and affiliation fields are intentionally blank, including PDF metadata.
+Earlier work was Fable 5-led; from July 2026 onward, results were predominantly produced by GPT models, as reported by the operator.
+DeepSeek and multiple GPT models also participated in review and preparation.
+Human expert review has not occurred.
+The operator states: ``I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.''
+No publication-priority or journal-acceptance claim is made.
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

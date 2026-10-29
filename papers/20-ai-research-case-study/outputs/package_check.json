@@ -1,0 +1,16 @@
+{
+  "packet": "20-ai-research-case-study",
+  "pages": 9,
+  "pdf_author": "",
+  "log_issues": {
+    "Overfull": 0,
+    "undefined": 0,
+    "multiply defined": 0,
+    "LaTeX Error": 0,
+    "Missing character": 0,
+    "Underfull": 0
+  },
+  "labels": 4,
+  "undefined_references": [],
+  "pdf_sha256": "03d1b20fb27c9b016f047e186478eb7bd107bdecde17b8fc6310d1243a91848f"
+}

@@ -1,0 +1,29 @@
+the boundary programme local benchmark Ward transport BRST-lift symbolic audit
+scope=exact finite pairing/normalization maps, covariance blocks, causal matrix, and free BRST identities
+nonclaims=no host Hadamard construction; no Fredholm proof; no BRST faithfulness; no Wick algebra
+wz_field_order=(u,b,c,cbar)
+source_reordered_field_order=(Theta,beta,eta,bar_eta)
+S_cfg=diag(2,-1,1,-1)
+S_row=diag(-1/2,1/2,1/2,1/2)
+pairing_identity=B_Q*S_row=(1/2)*S_cfg^T*B_WZ
+covariance_transport=lambda_Q=S_cfg^(-1)*lambda_WZ*S_row^(-1)
+form_transport=Lambda_Q=(1/2)*(S_row^(-1))^*Lambda_WZ*S_row^(-1)
+rho_plusminus=2*lambda_1_plusminus
+source_relations_used=P*K=0,D*P=0,D*K=R
+operator_placeholders=noncommuting
+causal_difference=lambda_plus-(-1)^gh*lambda_minus=i*G
+check_operator_row_field_map=PASS
+check_pairing_duality_with_single_half=PASS
+check_pairing_duality_invalid_no_half_rejected=PASS
+check_covariance_plus_transport=PASS
+check_covariance_minus_transport=PASS
+check_covariance_form_half_pullback=PASS
+check_invalid_same_side_covariance_transport_rejected=PASS
+check_exact_q1_half_green_matrix=PASS
+check_graded_causal_difference=PASS
+check_gamma_configuration_map=PASS
+check_gamma_star_row_transport=PASS
+check_gamma_nilpotent=PASS
+check_gamma_star_L_equals_L_gamma_all_lambda=PASS
+check_compact_ghost_minus_one_pair_contractible=PASS
+overall=PASS_ALGEBRA_ONLY

@@ -1,0 +1,41 @@
+{
+  "python": "3.11.15",
+  "sympy": "1.14.0",
+  "numpy": "2.4.3",
+  "operational": {
+    "boost_complement": "Matrix([[0, 0], [0, 1 - exp(-2*chi)]])",
+    "opposite_boost_product": "exp(-chi) I",
+    "coarse_maximal_filter": "I",
+    "jump_history_norm_identity": true,
+    "identical_diagonal_instrument_recombiner_probability": [
+      1,
+      0
+    ]
+  },
+  "centering": {
+    "separate_diagonal": [
+      "0",
+      "9/10",
+      "0",
+      "4/5"
+    ],
+    "global_diagonal": [
+      "0",
+      "9/10",
+      "1/2",
+      "13/10"
+    ],
+    "spectator_shift": "1/2",
+    "scalar_shift_blind": true,
+    "stronger_no_go": "Unitary covariance + all finite direct sums + scalar shift invariance implies F_n(H)=a I_n; analytic proof in manuscript Section 7"
+  },
+  "endpoint_covariance": {
+    "residuals": {
+      "scale": 0.0,
+      "selected": 2.6822711804886186e-16,
+      "rejected": 2.0041941715913827e-16,
+      "probability": 2.2215299868541707e-16
+    },
+    "rejected_minimum_eigenvalue": -6.106226635438361e-16
+  }
+}

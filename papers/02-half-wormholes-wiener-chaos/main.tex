@@ -23,7 +23,7 @@
 
 \title{\textbf{Half-Wormholes as Wiener Chaos:\ Correlated-Replica Spectroscopy, Exact Pfaffian Sectors, and Boundary Moment Indeterminacy}}
 \author{}
-\date{Working draft -- 28 October 2026}
+\date{Revised working draft -- 29 October 2026}
 \hypersetup{pdfauthor={}}
 
 \begin{document}
@@ -72,7 +72,7 @@ results in the half-wormhole, random-matrix and moment-problem literature. That 
 search is bounded and has not been replaced by a comprehensive current novelty audit for
 this repository edition.
 
-The exact contributions are:
+The paper develops the following exact statements and applications:
 \begin{enumerate}
 \item the $\rho^n$ two-replica identity and OU sector spectroscopy;
 \item a closed $q=2$ reduction of the known sector-variance sum, an independent enumeration,
@@ -160,6 +160,57 @@ Applying \eqref{eq:mehler} to $z^2$ gives
 Hence correlation in coupling space is a sector spectrometer: the coefficients of the
 polynomial in $\rho^2$ are precisely the sector norms.
 
+\section{A low-order sector at even block size}
+
+The general sector variances are prior results of \citet{Mukhametzhanov2022}.
+The following elementary specialization records explicitly how even block size enters
+completion-sign coherence; it is supporting finite-model algebra rather than a new general
+variance theorem.
+
+\begin{proposition}[The fourth-chaos sector at even $q$]\label{prop:W4}
+Let $q$ be even and $n=N/q\ge2$.
+Write $M_r=|\operatorname{Part}_q(N-2q)|$ and
+$M_2=|\operatorname{Part}_q(2q)|$, with the empty partition counted once.
+Then
+\begin{equation}
+ \E[W_4^2]=4M_r^2\left[
+ \frac12\binom Nq\binom{N-q}q+
+ \binom N{2q}\binom{M_2}{2}\right].
+ \label{eq:W4}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+In the Hermite expansion of the square of \eqref{eq:z}, a fourth-chaos monomial has
+one of two forms.
+First, $H_2(J_A)H_2(J_B)$ occurs for disjoint blocks $A,B$.
+Its coefficient is $M_r$, because every completion of the other vertices contributes
+with squared partition sign one.
+There are $\frac12\binom Nq\binom{N-q}q$ such unordered pairs, and each monomial
+has squared Gaussian norm $2\cdot2=4$.
+
+Second, a product of four distinct first-order variables comes from two distinct
+splittings of the same $2q$-vertex support into $q$-blocks.
+The relative partition sign is independent of the common completion: moving one entire
+$q$-block past another contributes $(-1)^{q^2}=1$.
+The two orders of the pair of splittings therefore give coefficient $\pm2M_r$.
+There are $\binom N{2q}\binom{M_2}{2}$ distinct monomials of this kind, each of norm one.
+Distinct splittings cannot share exactly one block, since their complementary block would
+then also agree.
+For the same reason there is no additional $H_2(J_A)J_BJ_C$ type: after the shared
+blocks are removed, two partitions differing by one block must use the same complement.
+Hermite orthogonality now gives \eqref{eq:W4}.
+\end{proof}
+
+\begin{remark}[A sign-scope diagnostic]
+For odd $q$, sorting blocks lexicographically and then taking the permutation sign defines
+a formal Gaussian partition polynomial, but the completion signs need not cohere.
+At $(N,q)=(12,3)$, exact completion-sign enumeration gives
+$\E[W_4^2]=17{,}580{,}480$, whereas blindly using \eqref{eq:W4} gives $20{,}328{,}000$.
+This is a diagnostic of the even-$q$ hypothesis, not a claim about an odd-$q$
+Grassmann SYK partition function.
+\end{remark}
+
 \section{Exact Pfaffian sector spectrum}
 
 For $q=2$, ordered pairs of perfect matchings provide a closed enumeration.
@@ -202,10 +253,18 @@ Extracting $x^{2k}y^{2n}$ and using
 $[u^m](1-u)^{-1/2}=\binom{2m}{m}4^{-m}$ proves \eqref{eq:profile}.
 \end{proof}
 
-Equation~\eqref{eq:profile} is the $q=2$ evaluation of the general finite variance sum in
-\citet{Mukhametzhanov2022}, not a priority claim for the sector variances.  The proof above is
-an independent labelled-component derivation that exposes the rational generating function
-used in the following consequences.
+Equation~\eqref{eq:profile} is a closed reformulation of the $q=2$ case of
+\citet[Eq.~(47)]{Mukhametzhanov2022}.  With unit coupling variance and $m=n-k$,
+that formula reads
+\[
+ \E[W_{2k}^2]
+ =\frac{(2n)!}{4^n}\binom{2m}{m}
+   \sum_{a=0}^{k}\binom{2a}{a}\binom{2(k-a)}{k-a}.
+\]
+The convolution is $4^k$, since the square of $(1-u)^{-1/2}$ is $(1-u)^{-1}$.
+Thus the compact profile is not a new general sector-variance theorem.  The proof above
+provides an independent labelled-component derivation and a convenient generating-function
+form for the correlated-determinant application below.
 
 Two checks are immediate.  At $k=0$, \eqref{eq:profile} equals
 $\E[z^2]^2=((2n-1)!!)^2$.  Summing over $k$ and using
@@ -233,6 +292,40 @@ $2n\times2n$ matrices, then
 $\det J=\operatorname{Pf}(J)^2=z^2$.  Combine \eqref{eq:spectroscopy} with
 Theorem~\ref{thm:profile}.
 \end{proof}
+
+\begin{lemma}[Gaussian Pfaffian convolution]\label{lem:convolution}
+Let $M$ be a fixed real antisymmetric $2n\times2n$ matrix, let the upper entries of $K$
+be independent standard Gaussian variables, and let $c\in\R$.
+For a principal submatrix $M_S$ use $\det M_\varnothing=1$ and $(-1)!!=1$.
+Then
+\begin{equation}
+ \E_K\det(M+cK)=
+ \sum_{r=0}^{n}c^{2r}(2r-1)!!
+ \sum_{\substack{S\subseteq[2n]\\|S|=2n-2r}}\det M_S.
+ \label{eq:convolution}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The Pfaffian minor expansion is
+\[
+ \operatorname{Pf}(M+cK)=
+ \sum_{\substack{S\subseteq[2n]\\|S|\ {\rm even}}}
+ \epsilon(S)c^{|S^c|/2}\operatorname{Pf}(M_S)\operatorname{Pf}(K_{S^c}),
+\]
+where $\epsilon(S)$ is the shuffle sign.
+Gaussian Pfaffian polynomials on distinct vertex sets are orthogonal: their matching
+monomials use different edge sets, so every cross expectation contains a Gaussian
+variable to an odd power.
+For $|S^c|=2r$, the diagonal norm is the number of perfect matchings,
+$\E[\operatorname{Pf}(K_{S^c})^2]=(2r-1)!!$.
+Squaring the expansion, taking expectation and using $\operatorname{Pf}(M_S)^2=\det M_S$
+gives \eqref{eq:convolution}.
+\end{proof}
+
+This elementary minor identity is included as a supporting Gaussian calculation and
+an independent way to check Pfaffian moment manipulations; no separate priority claim
+is assigned to it.
 
 Formula \eqref{eq:det} is distinct from the general characteristic-polynomial averages
 treated in random-matrix theory \citep{deBruijn1955,MehtaNormand2001}.  We have not found
@@ -278,7 +371,7 @@ Put $f_k=\E[W_{2k}^2]/\E[z^2]^2$ and
 $E_{\rm tr}=z^2-\E[z^2]-W_{2n}=\sum_{k=1}^{n-1}W_{2k}$.
 
 \begin{theorem}[Single-draw reconstruction]\label{thm:single}
-For any $\varepsilon_k>0$ with $\sum_{k=1}^{n-1}\varepsilon_k=\varepsilon$,
+For $n\ge2$ and any $\varepsilon_k>0$ with $\sum_{k=1}^{n-1}\varepsilon_k=\varepsilon$,
 \begin{equation}
  \Pp\!\left(|E_{\rm tr}|\ge\varepsilon\E[z^2]\right)
  \le\min\left\{\frac{\sum_{k=1}^{n-1}f_k}{\varepsilon^2},
@@ -293,8 +386,11 @@ For the second, if $|\sum W_{2k}|\ge\sum\varepsilon_k\E[z^2]$, at least one sect
 its threshold.  Apply Lemma~\ref{lem:tail} and the union bound.
 \end{proof}
 
-Theorem~\ref{thm:single} is non-asymptotic and valid for one fixed coupling draw.  It does
-not assert that its dimension-free constants are optimal.  When prior exact sector estimates
+Theorem~\ref{thm:single} is non-asymptotic; its probability is over one Gaussian coupling
+draw.  It is not a deterministic error guarantee for every prescribed realization.
+For $n=1$, the intermediate-sector sum is empty and $E_{\rm tr}=0$ identically.
+For this case the probability of a positive error threshold is zero.
+The dimension-free constants are not asserted optimal.  When prior exact sector estimates
 show $\sum_{k=1}^{n-1}f_k\to0$ in a specified large-$N$ regime \citep{Mukhametzhanov2022}, the
 first term already proves relative $L^2$ reconstruction; the tail term refines atypical
 events sector by sector.
@@ -355,27 +451,83 @@ $t$,
  f(t)\ge c_3t^{-(n-1)/n}\exp[-c_4t^{2/n}].
  \label{eq:lower}
 \end{equation}
-Because $2/n<1$, \eqref{eq:lower} implies
+By symmetry, the same lower bound holds at negative infinity.
+Because $2/n<1$, \eqref{eq:lower} makes the positive part of
+$-\log f(t)/(1+t^2)$ integrable outside a compact interval.
+For completeness, choose $0<s_-<s_+<\infty$ with
+$\mathbb P(s_-\le S\le s_+)>0$.  Restricting the mixture to this event bounds $f$
+uniformly away from zero on every compact interval.  Also $(\log f)_+\le f$ where
+$f\ge1$, so its integral is finite.  Thus the compact part of the logarithmic integral
+is well defined and finite.
+Together these estimates give
 \[
- \int_{\R}\frac{-\log f(t)}{1+t^2}\,dt<\infty
+ \int_{\R}\frac{-\log f(t)}{1+t^2}\,dt<\infty.
 \]
-up to an irrelevant finite contribution on compact intervals.  Krein's criterion therefore
-implies Hamburger indeterminacy \citep{Krein1945,Stoyanov2000}.  This proves the dichotomy.
+Krein's criterion therefore implies Hamburger indeterminacy
+\citep{Krein1945,Stoyanov2000}. This proves the dichotomy.
 \end{proof}
 
+The odd-degree case $n\ge3$ is already covered by prior results on polynomial forms
+in normally distributed variables \citep{Slud1993}.  We include the direct density proof
+because it treats this hyperpfaffian family uniformly, including even degree.  Slud also
+studies even-degree cases, and products of normal variables have a related determinacy
+threshold \citep{StoyanovLinDasGupta2014}.  A full theorem-level comparison with those
+results and subsequent literature remains necessary before assigning originality to the
+even-degree hyperpfaffian application.  We therefore claim a self-contained model-specific
+proof here, rather than a new general theorem about moment problems for Gaussian
+polynomials.
+
 For $n\ge3$, the symmetric Jacobi operator associated with the boundary moments is not
-essentially self-adjoint on polynomials; its canonical self-adjoint extensions form the
-Nevanlinna family and have discrete extremal spectral measures \citep{Akhiezer1965,Simon1998}.
+essentially self-adjoint on polynomials.  Its self-adjoint extensions within the moment
+Hilbert space give the one-parameter $N$-extremal subfamily of the full Nevanlinna
+parametrization; these measures are discrete \citep{Akhiezer1965,Simon1998}.
 The physical coupling law \eqref{eq:density} is continuous and non-extremal, so polynomials
 are not dense in its full $L^2$ space.  This does not make the GNS construction inconsistent.
 It says only that one-time boundary moments do not select the microscopic coupling measure
 uniquely once one boundary amplitude is a Gaussian polynomial of degree at least three.
 
+\subsection{A finite quadrature calibration}
+
+Finite moment data also give a useful, classical compression of the boundary operator.
+The $m\times m$ Jacobi compression on polynomials of degree less than $m$ yields the
+$m$-node Gaussian quadrature rule, exact through degree $2m-1$
+\citep{Akhiezer1965,Simon1998}.
+These inputs are ordinary moments, not connected cumulants.
+Finite exactness alone does not select a measure in an indeterminate moment problem;
+limits there require an additional extension or boundary prescription.
+
+For an explicit determinate example take $(N,q)=(4,2)$.
+The Pfaffian is $z=u\cdot v$ for independent standard Gaussian vectors $u,v\in\R^3$,
+after one harmless coupling sign change.
+Conditioning on $u$ gives
+\[
+ \mu_{2j}=(2j-1)!!(2j+1)!!,\qquad \mu_{2j+1}=0.
+\]
+In particular $(\mu_0,\mu_2,\mu_4,\mu_6)=(1,3,45,1575)$.
+The monic degree-four orthogonal polynomial is
+\[
+ p_4(x)=x^4-40x^2+75.
+\]
+Indeed $\int p_4\,d\mu=45-40\cdot3+75=0$ and
+$\int x^2p_4\,d\mu=1575-40\cdot45+75\cdot3=0$, while the odd orthogonality equations
+follow by symmetry.
+The four nodes and their individual weights are
+\begin{align*}
+ x&=\pm\sqrt{20-5\sqrt{13}},&
+ w&=\frac14+\frac{17}{20\sqrt{13}},\\
+ x&=\pm\sqrt{20+5\sqrt{13}},&
+ w&=\frac14-\frac{17}{20\sqrt{13}}.
+\end{align*}
+The weights are positive and the resulting rule reproduces all moments through order seven.
+This is an exact finite calibration of classical Gauss quadrature, not evidence for
+infinite-order Airy indeterminacy or for a uniquely selected completion in the $n\ge3$ case.
+
 \section{Scope and conclusion}
 
 The exact half-wormhole expansion, its identification with the chaos projections, and its
-general sector-variance sum are not new.  Our contribution is the correlated-replica use of
-the OU grading and the additional consequences developed here.  Equations \eqref{eq:replica} and
+general sector-variance sum are not new. The paper develops the correlated-replica use of
+the OU grading and the additional model-specific consequences presented here; originality
+of those applications remains subject to the comparisons stated above.  Equations \eqref{eq:replica} and
 \eqref{eq:spectroscopy} turn correlated replicas into a sector probe.  Theorem
 \ref{thm:profile} gives a closed Pfaffian reduction and independent proof, while
 Corollary~\ref{cor:det} gives the correlated-determinant consequence.  Theorem~\ref{thm:single} is a finite single-draw statement.
@@ -389,21 +541,36 @@ theorem cannot by itself prove a central limit.  These boundaries prevent the ma
 from being read as a construction of complete quantum gravity; it is a rigorous result about
 a solvable factorisation model.
 
+\paragraph{Reproduction scope.}
+The portable revision check verifies the central-binomial convolution and its reduction
+of the prior variance formula for $1\le n\le12$ and all $0\le k\le n$, the corresponding
+fourth-moment sums, and the empty intermediate-sector case $n=1$.
+Additional exact checks cover the displayed even/odd sign diagnostic, the four-node
+quadrature calibration, and direct Gaussian-Pfaffian convolution at $n=1,2,3$.
+These finite exact checks corroborate the displayed formulas; the analytic proofs establish
+the all-size and density statements.
+Historical supplementary code is retained unchanged and its Monte Carlo loops were not rerun.
+
 \section*{AI-assisted workflow and unresolved attribution}
-The following statement is supplied by the repository operator:
+The repository operator states:
 \begin{quote}
-I genuinely do not know how authorship, intellectual credit, or ownership should be
-attributed for these results. My workflow was to ask AI systems to conduct literature
-research, autonomously select open problems, and attempt to solve them. The principal
-research work was carried out mainly by Fable 5. DeepSeek and several GPT models
-participated in cross-review, checking, and manuscript preparation and organization.
-These manuscripts and their scientific claims have not yet undergone human expert review.
+I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.
 \end{quote}
-This describes the overall workflow reported by the operator; a complete per-model,
-per-manuscript allocation of contributions is unavailable. Author and affiliation fields
-are intentionally blank. Automated checks and AI internal reviews are not human peer
-review. This working draft makes no claim of journal acceptance or settled publication
-priority. Historical source dates are recorded separately in the repository history.
+The reported workflow was to ask AI systems to survey the literature,
+autonomously select open problems, and attempt to solve them. The operator
+reports that the earlier work was led mainly by Fable 5, whereas results from
+July 2026 onward were predominantly produced by GPT models. DeepSeek and
+multiple GPT models also participated in cross-review, checking, and
+manuscript preparation and organization.
+
+This is the operator's reported chronological history, not a complete audited
+allocation of individual contributions. An earlier result is not reattributed
+merely because it was revised or packaged after July. Human author names and
+affiliations are intentionally blank. These results have not undergone human
+expert review; automated checks and AI reviews are further AI review, not human
+peer review. Historical source dates, present packaging dates, and demonstrable
+public-disclosure dates are recorded separately. No authorship, ownership,
+journal acceptance, or publication-priority determination is made here.
 
 \bibliographystyle{plainnat}
 \bibliography{references}

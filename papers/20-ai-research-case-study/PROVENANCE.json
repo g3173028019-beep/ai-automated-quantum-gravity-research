@@ -1,0 +1,81 @@
+{
+  "packet": "20-ai-research-case-study",
+  "prepared_beijing": "2026-10-29",
+  "human_authors": "",
+  "affiliations": "",
+  "pdf_author": "",
+  "human_expert_review": false,
+  "historical_cutoff": "2026-07-11T20:37:59+08:00",
+  "contribution_history": "Earlier work was Fable 5-led; July 2026 onward results were predominantly GPT-produced, as reported by the operator. DeepSeek and multiple GPT models also participated in review/preparation.",
+  "attribution_statement": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "source_files": [
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/R1-ai-for-quantum-gravity/en/main.tex",
+      "sha256": "309282dd37e0deb8197272de796ab0df5502b79a12a7f05572b42fc68d1a1787",
+      "role": "Historical source; transformed into current bounded article"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/R1-ai-for-quantum-gravity/EVIDENCE.md",
+      "sha256": "35af804160aeeaae5d623cba6c78664069125ee2352037cbd13805ddfafe5f29",
+      "role": "Historical source; transformed into current bounded article"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/R1-ai-for-quantum-gravity/data/corpus_metrics.json",
+      "sha256": "d7fb2982fe6e9a6c2c8f3bb004eac46630d212fdf4ed12441558015898b4aece",
+      "role": "Historical source; transformed into current bounded article"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/R1-ai-for-quantum-gravity/data/root_markdown_classification.csv",
+      "sha256": "848c6f988d5538a93eac3c2fff493fe5d5b5fb628bb511470c90235b4e884179",
+      "role": "Historical source; transformed into current bounded article"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/R1-ai-for-quantum-gravity/data/snapshot_manifest.json",
+      "sha256": "bca29925da95cf12b6e012f6907c35f000db1b9ac16d4ff6fd353f0b47020bbc",
+      "role": "Historical source; transformed into current bounded article"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/papers/SCG-2026-series/R1-ai-for-quantum-gravity/scripts/corpus_metrics.ps1",
+      "sha256": "f5bda9a7cf4d85b2b3b353464aac1a0e0826d81ca820e9dd8cd5091c0d562a52",
+      "role": "Historical source; transformed into current bounded article"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/boundary_methods/RESULT.md",
+      "sha256": "2f2faa0c4ec2e390964f5bbe99f44c76f85cdee20bf147c9d46a8e1ff595beb5",
+      "role": "Completed claim-level recovery"
+    }
+  ],
+  "copied_or_reduced_inputs": [
+    {
+      "path": "provenance/baseline_pdf_counts.json",
+      "sha256": "d6807db92cc48020786c676221e79b6044764dc7b5af0bef48d08932067edfc9",
+      "preservation": "Reduced metadata derived from preserved manifest/recovery checks"
+    },
+    {
+      "path": "provenance/corpus_metrics.json",
+      "sha256": "d7fb2982fe6e9a6c2c8f3bb004eac46630d212fdf4ed12441558015898b4aece",
+      "preservation": "Byte-preserved input"
+    },
+    {
+      "path": "provenance/path_hash_relations.csv",
+      "sha256": "f75b72dc1f0b01e6e738c135a2e64421d7665d68f8769d28d4a4098c076aa8e5",
+      "preservation": "Reduced metadata derived from preserved manifest/recovery checks"
+    },
+    {
+      "path": "provenance/root_markdown_classification.csv",
+      "sha256": "848c6f988d5538a93eac3c2fff493fe5d5b5fb628bb511470c90235b4e884179",
+      "preservation": "Byte-preserved input"
+    }
+  ],
+  "scientific_scope": "Descriptive case reconstruction and exact preserved-table reaggregation; no causal model/audit effect, semantic waste estimate or general capability ranking.",
+  "original_sources_modified": false,
+  "raw_conversations_included": false,
+  "secrets_included": false,
+  "third_party_full_papers_included": false,
+  "default_reproduction": "python reproduce.py",
+  "runtime_requires_original_source_paths": false,
+  "network_required": false,
+  "manuscript_sha256": "03d1b20fb27c9b016f047e186478eb7bd107bdecde17b8fc6310d1243a91848f",
+  "pages": 9,
+  "portable_source_sha256": "6ecead4a91603fd9d19a24ccc69c7c89feab17988697f9ee50c3b10b718ac9a9"
+}

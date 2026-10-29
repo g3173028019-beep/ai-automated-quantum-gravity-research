@@ -1,0 +1,72 @@
+{
+  "schema": "portable-paper-provenance-v1",
+  "title": "Positive Cartan Carriers and Signed Lorentz Selectors",
+  "edition_date_beijing": "2026-10-29",
+  "human_authors": [],
+  "human_affiliations": [],
+  "human_expert_review": false,
+  "public_priority_established": false,
+  "global_novelty_certificate": false,
+  "local_source_dates": [
+    "2026-07-12",
+    "2026-07-13"
+  ],
+  "chronology": "The operator reports earlier work was Fable 5-led; July 2026 onward results predominantly GPT-produced. DeepSeek and multiple GPT models also contributed review/preparation. This report does not allocate authorship or ownership.",
+  "attribution_statement": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "sources": [
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/cross-framework-bilingual-series/P02-positive-cone-cartan/en/main.tex",
+      "sha256": "39301337ab43fd4579f9706e3d2054f82687a343ea69c07f43f272902b9e5590",
+      "role": "read-only source; not needed for portable reproduction"
+    },
+    {
+      "path": "E:/TOE-Fable - \u526f\u672c/double-lock-gravity/papers/cross-framework-bilingual-series/P02-positive-cone-cartan/references.bib",
+      "sha256": "545e3963573b10618551106327bf6a3c5c4eb5a313834096a750859a07141f89",
+      "role": "read-only source; not needed for portable reproduction"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/representation/RESULT.md",
+      "sha256": "49e95128d8cc2492f4bc9274b437fa5d7e6ec1455647759aade000d22e4a4360",
+      "role": "read-only source; not needed for portable reproduction"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/representation/VERIFICATION.md",
+      "sha256": "7061ad960ab614721585a805081e77106259bc6fb64786a49718982e1134a9e4",
+      "role": "read-only source; not needed for portable reproduction"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/representation/claims.json",
+      "sha256": "4f3e6b298824ee3b185952cf0b7ced64a4ad2e78ad932a0d8491e2b19b6a4a91",
+      "role": "read-only source; not needed for portable reproduction"
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/candidate-recovery-20261029/representation/verify_representation.py",
+      "sha256": "0f9019ef727e3571610eee3dc05d5b9ffc86aea36f8fb538e97f880080f5c93d",
+      "role": "read-only source; not needed for portable reproduction"
+    }
+  ],
+  "portable_inputs": "No copied numerical input is required: every example and certificate is constructed from definitions. No third-party full paper is bundled.",
+  "source_changes": "Preserved mathematical results, applied targeted bibliography/claim corrections, expanded complete proofs and supplied exact portable verification. Originals unchanged.",
+  "proof_scope": "Finite analytic results and exact symbolic/rational/modular checks; a floating endpoint example only in operational paper.",
+  "build": {
+    "command": "latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex",
+    "pages": 10,
+    "tex_warnings": [],
+    "visual_qa": "Parent integrated QA pending at handoff",
+    "pdf_author": "",
+    "quote_exact_after_whitespace_normalization": true
+  },
+  "deliverable_hashes": {
+    ".gitignore": "be091810b9a0f91199ea4b81d84af819934cdff588c5c41c0e97fb1fbd0a4a9f",
+    "certificate-appendix.tex": "82bc8d1985d126cca3bcdd7ad8c14a9333f7ac178cbf97a243d7b087cf95c50d",
+    "code/verify.py": "3f91760b8c8676da79ff81fb0c9024f979855041284bfbc2118f5b71692811e5",
+    "data/results.json": "ec375920307c5389f010e6c0f5deef1cfa3d1bfcc3cee9873d5bdeed9c2ca00f",
+    "main.tex": "f37d21c380bcccfd41341e9ded180c189504743893651441491155969671519b",
+    "manuscript.pdf": "fc0ae4cdc7fa3541f8f486c991ddd039e49515493bd8ba834ca12ca1eec50107",
+    "README.md": "db3ba18e8467eee962eab0422e7c17cb8295f6798b0ea3a7c3c9212c0131dc40",
+    "references.bib": "718cfa496e586af49e3b8d6b080b6253de218988cc820a8e7f0fd684805a5325",
+    "requirements.txt": "cd1074e2234d1bdcc918bd32ca06a52f2e6fc1a998af932f3ecd6e05f306348d",
+    "selector-and-certificates.tex": "460c08bd2993d26e91ca61b1979362c255157c538bef531218d43044e5d69875",
+    "VERIFICATION.md": "caa6a642bf5108bfe4979a99d684ffafeb040324bf68b427c7661ea3941e58e7"
+  }
+}
