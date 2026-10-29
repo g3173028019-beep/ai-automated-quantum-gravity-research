@@ -1,0 +1,118 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\usepackage{hyperref}
+\hypersetup{pdfauthor={},pdftitle={Positive physical Hadamard states for critical Einstein--scalar multiplets on compact Cauchy surfaces},colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Ran}{Ran}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\WF}{WF}
+\DeclareMathOperator{\tr}{tr}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\cV}{\mathcal V}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\id}{\mathbf 1}
+\title{Positive physical Hadamard states for critical Einstein--scalar multiplets on compact Cauchy surfaces}
+\author{}
+\date{29 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct positive, gauge-invariant quasifree Hadamard states for linearized Einstein gravity coupled to finitely many canonical real scalar fields.
+The background is a smooth four-dimensional globally hyperbolic solution with compact Cauchy surface, the scalar target metric is fixed and positive definite, and the potential gradient vanishes along the background image.
+The scalar fields may be nonconstant, and the potential Hessian need not vanish or be positive.
+We derive the finite-multiplet Hessian and gauge complex in one common normalization, establish compatible microlocal projections and an exact positive metric gauge slice, and treat the full Fredholm obstruction by a smooth finite-rank correction formed with the physical charge.
+The resulting covariances descend to the physical quotient and lift to spacetime with the Hadamard wavefront relation.
+A closed Friedmann--Lema\^itre--Robertson--Walker example has nonconstant scalar fields, nonzero metric--scalar mixing and, after adjoining a spectator, a nonzero potential Hessian.
+\end{abstract}
+
+\section{Introduction and theorem}
+Positive state construction for a gauge theory requires compatibility between the field equations, gauge reduction and microlocal regularity.
+For coupled metric and matter perturbations, formal gauge invariance and normal hyperbolicity alone do not supply positivity on the physical observables.
+The indefinite gravitational charge must be controlled on a genuine gauge slice, including the smooth finite-dimensional obstructions to complete gauge fixing.
+This paper proves that the compact-Cauchy construction for linearized gravity extends to a finite canonical scalar multiplet under a critical-potential hypothesis along the background image.
+
+The covariant linearized Einstein--Klein--Gordon framework is established in Hack~\cite{Hack2014EKG}.
+The one-real-scalar complex in the normalization used below is displayed by Schmid~\cite[Section 2.2.5]{Schmid2026Thesis}.
+The microlocal construction, complete gauge fixing and finite-obstruction architecture are inherited from G\'erard's compact-Cauchy gravity theorem~\cite{Gerard2024Compact}, using pseudodifferential Hadamard methods developed in~\cite{GerardWrochna2014Calculus,GerardWrochna2015YangMills,GerardOulghaziWrochna2017Geometry}.
+The coupled compatibility proofs below replace the vacuum-Einstein identities that cannot be transferred directly.
+The asymptotically flat gravity result~\cite{GerardMolodykWrochna2026Flat} concerns a different background class.
+No claim of priority over the complete coupled-gauge literature is needed here.
+
+\begin{theorem}[Positive physical Hadamard states]\label{thm:main}
+Let $(M,g,\Phi)$ be a smooth, time-oriented, four-dimensional globally hyperbolic on-shell solution of canonical Einstein gravity coupled to $N<\infty$ real scalar fields, with a compact smooth Cauchy surface $\Sigma$.
+The scalar target metric is a fixed positive-definite matrix.
+Suppose that the smooth potential satisfies
+\[
+V_{,A}(\Phi(x))=0\qquad(x\in M,\ A=1,\ldots,N).
+\]
+For the linearized gauge complex constructed below, put
+\[
+\cV_{\mathrm{phys}}=\Ker K_\Sigma^\dagger/\Ran K_\Sigma
+\]
+on smooth Cauchy data, with its induced physical charge.
+There exist positive Hermitian covariances $\lambda_\Sigma^\pm$ on this quotient satisfying the canonical commutation relations.
+Their spacetime lifts define a gauge-invariant quasifree Hadamard state for the real linearized coupled field.
+\end{theorem}
+
+Here ``positive scalar'' refers to the kinetic target metric.
+The matrix $V_{,AB}$ may be indefinite or singular, subject to the identities forced by the hypotheses.
+Differentiating criticality along the background yields $V_{,AB}\,d\Phi^B=0$.
+Thus a varying scalar background lies along flat directions of the critical set; a transverse mass matrix remains allowed.
+No constant-background or rank assumption on $d\Phi$ is imposed.
+
+The theorem is an existence result for the linearized canonical coupled system.
+It does not select a state or assert uniqueness, purity, nonlinear quantization or a dynamical stability conclusion.
+The proof uses compactness for the Fredholm and finite-obstruction steps and retains criticality in the trace-reversal argument.
+The result is not asserted for a field-dependent target metric, a general noncritical potential or an arbitrary noncompact Cauchy surface.
+
+\paragraph{Analytic inputs and proof organization.}
+We use the well-posed Cauchy problem, retarded and advanced Green operators and propagation of singularities for smooth normally hyperbolic operators on finite-rank bundles.
+The pseudodifferential input is the Hermitian-bundle Riccati construction of~\cite[Sections 3.1--3.2]{Gerard2024Compact}, based on~\cite[Section 5.2.7, Proposition 5.2]{GerardMurroWrochna2025Wick}: scalar positive principal root, exact graph projections, smoothing frequency leakage and elliptic regularity on compact $\Sigma$.
+The proof derives the coupled Hessian, exact charges, symmetry, gauge-slice positivity, Fredholm representative and finite-rank repair explicitly.
+Consequently the new compatibility argument is not replaced by an appeal to a generic parametrix.
+
+\input{operator}
+\setcounter{equation}{32}
+\input{fredholm}
+\input{example}
+
+\section{Scope, provenance and computational verification}
+The construction combines an inherited microlocal gauge-fixing method with the explicitly derived finite-multiplet compatibility identities.
+Its essential coupled features are the full scalar Gram and potential-Hessian blocks, the critical trace-reversal commutator, the common metric--scalar normalization, and the physical-charge finite-obstruction repair.
+The finite-rank correction changes the state in a smooth sector and supplies no preferred state-selection prescription.
+
+An accompanying exact-algebra script verifies the common mixed-adjoint normalization, the abstract charged-adjoint identity, the finite-rank physical-charge expansion, and the closed-cosmology constraint and background example.
+These checks concern the stated algebraic identities.
+Gauge annihilation of the spectral corrections follows from the general spectral argument in Section~\ref{sec:covariances}.
+The pseudodifferential estimates and spacetime wavefront conclusion are analytic arguments in the text, using the cited primary results; they are not certified by a finite matrix computation or by a proof assistant.
+
+\begin{samepage}
+\paragraph{Contribution and review disclosure.}
+The inherited work was initially Fable 5-led; according to the operator's account, results from July 2026 onward were predominantly GPT-produced.
+DeepSeek and multiple GPT models also participated in review and preparation.
+The retained source contains an 18 July 2026 checkpoint; the targeted audit and staging occurred on 28 October 2026, and the present consolidation is dated 29 October 2026.
+These dates do not establish a public disclosure date or equation-by-equation model attribution.
+Human authors and affiliations are intentionally blank, and human expert review has not occurred.
+The operator's uncertainty is recorded verbatim:
+\begin{quote}
+I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.
+\end{quote}
+\end{samepage}
+
+\begingroup
+\footnotesize
+\bibliographystyle{plainurl}
+\bibliography{references}
+\endgroup
+\end{document}

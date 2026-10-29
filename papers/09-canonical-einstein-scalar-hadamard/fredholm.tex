@@ -1,0 +1,285 @@
+\section{Complete gauge fixing and the Fredholm obstruction}\label{sec:fredholm}
+We continue with the common normalization and reduced data above.
+Write $\mathcal G^s=\Ran(K_\Sigma:\mathcal H_1^{s+1}\to\mathcal H_2^s)$ and $\mathcal C^s=\Ker K_\Sigma^\dagger$; omission of the superscript denotes smooth data.
+Set $Y^s=H^s(\Sigma;E_1)\oplus H^s(\Sigma;E_1)$.
+The readout $R:\mathcal H_2^s\to Y^s$ is surjective: it is the composition of the graph-coordinate isomorphism with $l_N\oplus l_N$, and $l_N$ has a smooth fibrewise right inverse.
+For example, its prescribed trace can be supplied by a multiple of $g_0$ and its mixed component can be specified independently.
+Surjectivity is an exact statement, including low frequencies.
+
+\subsection{The exact boundary matrix}
+Let $r=\tfrac12h_0^{-1}\dot h_0$ and $H=\tr r$.
+For reduced one-form data $w=(w_t,w_\Sigma)$ the original covector is $a(t)W(t)w(t)$, where $a'/a=-H/2$ and spatial parallel transport satisfies $W'=rW$ at the reference slice.
+The Gaussian Christoffel symbols are $\Gamma^j_{ti}=r_i{}^j$ and $\Gamma^t_{ij}=r_{ij}$.
+Direct substitution gives
+\begin{align*}
+\tr_g(I d_s\xi)|_\Sigma
+ &=\partial_t w_t+\tfrac H2w_t-\operatorname{div}_\Sigma w_\Sigma,\\
+2(d_s\xi)_{t\Sigma}|_\Sigma
+ &=\partial_t w_\Sigma-\tfrac H2w_\Sigma-rw_\Sigma+d_\Sigma w_t.
+\end{align*}
+Consequently, with $\delta_\Sigma=-\operatorname{div}_\Sigma$ and adjoints taken in the positive Riemannian product,
+\begin{equation}\label{eq:B}
+B=\begin{pmatrix}H/2&\delta_\Sigma\\d_\Sigma&-H/2-r\end{pmatrix},\qquad B^*=B,
+\end{equation}
+and
+\begin{equation}\label{eq:readoutK}
+l_N\pi_0K_\Sigma c_1^\pm
+=\tfrac1{\sqrt2}(i b_1^\pm+B)\pi_0c_1^\pm.
+\end{equation}
+The coefficient of $r$ in~\eqref{eq:B} follows from the displayed differentiation.
+In the primary rendering~\cite[Equations (4.10)--(4.11)]{Gerard2024Compact}, the derivative formula agrees with this coefficient whereas the following matrix displays $-r/2$.
+We use~\eqref{eq:B}, with $r=\tfrac12h^{-1}\dot h$ fixed as above.
+
+The scalar row of $K$ is removed exactly by $l_N$.
+Using the smoothing intertwining defect and writing $L_1f=(\pi_0c_1^+f,\pi_0c_1^-f)$, we obtain
+\begin{equation}\label{eq:RK}
+A:=RK_\Sigma
+=\tfrac1{\sqrt2}\begin{pmatrix}A^+&0\\0&A^-\end{pmatrix}L_1+S,
+\quad A^\pm=i b_1^\pm+B,\quad S\in\Psi^{-\infty}.
+\end{equation}
+Thus all coupled lower-order dependence is included in $b_1^\pm$ and $S$; no unaccounted order-zero error is discarded.
+
+\begin{proposition}\label{prop:fredholm}
+For every $s\in\mathbb R$, $A:\mathcal H_1^{s+1}\to Y^s$ is Fredholm of index zero.
+Its kernel and distributional cokernel are finite dimensional, smooth and independent of $s$.
+The gauge range $\mathcal G^s$ is closed.
+The induced charge on $\mathcal C/\mathcal G$ is nondegenerate.
+\end{proposition}
+\begin{proof}
+Each $A^\pm:H^s\to H^{s-1}$ is elliptic: its principal symbol is $\pm i|\eta|+\sigma_1(B)$ and $\sigma_1(B)$ is Hermitian.
+At $s=1/2$, the imaginary part of $(u,A^\pm u)$ is $(u,\operatorname{Re}b_1^\pm u)$, with a fixed sign and a coercive $H^{1/2}$ bound.
+The forms rotated by $\mp i$ are coercive bounded forms on $H^{1/2}$.
+Lax--Milgram gives injectivity and surjectivity $H^{1/2}\to H^{-1/2}$.
+The adjoint estimate has the opposite imaginary sign and excludes a cokernel as well.
+Elliptic regularity gives the isomorphism for every $s$.
+Because $L_1:\mathcal H_1^{s+1}\to H^{s+1}\oplus H^{s+1}$ is an isomorphism, the diagonal term in~\eqref{eq:RK} is invertible onto $Y^s$.
+Its smoothing perturbation is Fredholm of index zero, with smooth kernel and cokernel.
+The perturbation can create both, so invertibility of $A$ is not assumed.
+
+Choose a closed complement $X_0$ to $\Ker A$.
+The restriction $A:X_0\to\Ran A$ is a bounded isomorphism.
+If $K_\Sigma x_n$ converges for $x_n\in X_0$, then $Ax_n=RK_\Sigma x_n$ converges, hence $x_n$ converges.
+Thus $K_\Sigma X_0$ is closed; adding the finite-dimensional smooth space $K_\Sigma\Ker A$ proves closedness of $\mathcal G^s$.
+
+At $s=1/2$, the charge is a strong nondegenerate form: its off-diagonal entries identify $H^{1/2}$ and $H^{-1/2}$ with the appropriate dual spaces.
+The charged-adjoint identity gives $\mathcal C^{1/2}=(\mathcal G^{1/2})^{q_J}$.
+Closedness then implies $(\mathcal C^{1/2})^{q_J}=\mathcal G^{1/2}$, proving nondegeneracy of the quotient.
+This also gives the assertion for smooth data.
+Indeed, after Sobolev conjugation, the principal symbol of $K_\Sigma$ is injective because that of $RK_\Sigma$ is invertible.
+Its positive normal operator is elliptic; its generalized inverse and range projection preserve smooth sections.
+The corresponding constraint projection, obtained using the charge isomorphism, also preserves smooth sections.
+Smooth constrained data are therefore dense in $\mathcal C^{1/2}$, and a smooth gauge-range element has a smooth gauge preimage.
+\end{proof}
+
+\section{Positive covariances, including the singular case}\label{sec:covariances}
+We now construct a bounded gauge correction on each graded Sobolev space.
+Here $Q=q_J$ denotes the physical Cauchy charge as a matrix in the positive auxiliary pairing.
+For a field-data operator $T$, put $T^\dagger=Q^{-1}T^*Q$; for a readout map into the positive target, put $R^\dagger=Q^{-1}R^*$.
+The distinction from $K_\Sigma^\dagger=q_1^{-1}K_\Sigma^*Q$ is essential.
+
+\subsection{The regular case}
+If $A$ is invertible, define
+\[
+T=1-K_\Sigma A^{-1}R.
+\]
+Then $RT=0$, $T^2=T$, $TK_\Sigma=0$, and $T$ preserves $\mathcal C$ because $K_\Sigma^\dagger K_\Sigma=0$.
+For $f\in\mathcal C$, $Tf-f\in\mathcal G$.
+The positive slice proved above gives positive Hermitian covariances
+\[
+\lambda_\Sigma^\pm=\pm T^*Q c_2^\pm T.
+\]
+They annihilate $\mathcal G$ in both arguments, and their difference is $Q$ on $\mathcal C\times\mathcal C$ by charge orthogonality to $\mathcal G$.
+Moreover $c_2^\pm Tc_2^\mp$ is smoothing: $R$ separates the target frequencies, $A^{-1}$ is diagonal modulo smoothing in graph coordinates, and $K_\Sigma$ intertwines the frequency splittings modulo smoothing.
+
+\subsection{The full kernel and cokernel construction}
+Take a positive auxiliary $L^2$ basis $u_1,\ldots,u_n$ of $\Ker A^*$ and set
+\[
+v_j=R^\dagger u_j=Q^{-1}R^*u_j.
+\]
+Elliptic regularity makes all these vectors smooth, and surjectivity of $R$ makes the $v_j$ independent.
+The exact charged-adjoint identity
+\[
+0=A^*u_j=K_\Sigma^*R^*u_j=q_1K_\Sigma^\dagger v_j
+\]
+places every $v_j$ in $\mathcal C$.
+There is no assertion that $R^\dagger u_j$ has a vanishing scalar component.
+The solvable-readout subspace is
+\[
+\mathcal H_{\mathrm{reg}}^s
+=\{f:Rf\in\Ran A\}
+=\{f:q_J(v_j,f)=0\text{ for every }j\}.
+\]
+
+Choose the basis so that $v_1,\ldots,v_p$ represent a complement of $V\cap\mathcal G$ in $V=\operatorname{span}(v_j)$ and $v_{p+1},\ldots,v_n\in\mathcal G$.
+Nondegeneracy of $\mathcal C/\mathcal G$ and smooth density supply smooth $w_1,\ldots,w_p\in\mathcal C$ with an invertible pairing matrix against the first $p$ vectors.
+Their pairings against the remaining vectors vanish.
+Ambient charge nondegeneracy completes them by smooth $w_{p+1},\ldots,w_n$ to a full invertible matrix.
+The block triangular inverse normalizes the dual family while keeping the first $p$ vectors in $\mathcal C$:
+\begin{equation}\label{eq:dual}
+q_J(v_j,w_i)=\delta_{ji},\qquad
+w_i\in\mathcal C\ (i\le p),\quad v_j\in\mathcal C\ (j\le n).
+\end{equation}
+All dual pairings in~\eqref{eq:dual} use the physical charge.
+
+Define smooth finite-rank projections
+\[
+\pi f=\sum_{j=1}^n w_jq_J(v_j,f),\qquad
+\widetilde\pi f=\sum_{j=1}^p w_jq_J(v_j,f).
+\]
+Then $\Ker\pi=\mathcal H_{\mathrm{reg}}$, $\pi K_\Sigma=0$, and $\pi$ preserves $\mathcal C$.
+On $\mathcal C$, $\pi=\widetilde\pi$, since the omitted $v_j$ belong to $\mathcal G$.
+In addition,
+\begin{equation}\label{eq:piannihilation}
+\widetilde\pi K_\Sigma=\widetilde\pi^\dagger K_\Sigma=0.
+\end{equation}
+The second identity uses $w_j\in\mathcal C$ for $j\le p$.
+The full $\pi^\dagger$ need only preserve $\mathcal G$ and is not asserted to annihilate it.
+
+Let $\pi_1$ be a smooth finite-rank projection onto $\Ker A$ and let $G_A$ be the generalized inverse with range $\Ker\pi_1$, extended to all target data through a smooth cokernel projection.
+Thus $G_AA=1-\pi_1$.
+Choose a smooth finite-rank projection $\pi_2$ onto $K_\Sigma\Ker A=\mathcal G\cap\Ker R$.
+Set
+\begin{equation}\label{eq:Tsingular}
+T_{\mathrm{reg}}=1-K_\Sigma G_AR\quad\hbox{on }\mathcal H_{\mathrm{reg}},
+\qquad T=(1-\pi_2)T_{\mathrm{reg}}(1-\pi).
+\end{equation}
+These maps have the required boundedness on every $\mathcal H_2^s$.
+Direct calculation gives $RT=0$, and $T$ is a projection onto $\Ker R\cap\Ker\pi_2$.
+It preserves $\mathcal C$.
+Since $T_{\mathrm{reg}}K_\Sigma=K_\Sigma\pi_1$, one has
+\[
+TK_\Sigma=(1-\pi_2)K_\Sigma\pi_1=0.
+\]
+The $\pi_2$ factor removes residual gauge fields from $\Ker A$ and cannot be omitted.
+For constrained data,
+\begin{equation}\label{eq:Tquotient}
+Tf=(1-\pi)f\pmod{\mathcal G}
+=(1-\widetilde\pi)f\pmod{\mathcal G}.
+\end{equation}
+All extra projections are smooth finite rank, so $c_2^\pm Tc_2^\mp$ remains smoothing.
+
+Define the finite-rank Hermitian smoothing operator
+\begin{equation}\label{eq:nu}
+\nu=Q-(1-\widetilde\pi)^*Q(1-\widetilde\pi)
+=Q\widetilde\pi+\widetilde\pi^*Q-\widetilde\pi^*Q\widetilde\pi.
+\end{equation}
+Equations~\eqref{eq:piannihilation} imply $\nu K_\Sigma=0$.
+The positive and negative spectral parts in the auxiliary positive $L^2$ space,
+\[
+\nu_+=\tfrac12(|\nu|+\nu),\qquad
+\nu_-=\tfrac12(|\nu|-\nu),
+\]
+are positive smooth finite-rank forms with $\nu=\nu_+-\nu_-$.
+Their nonzero eigenvectors lie in the smooth range of $\nu$.
+Every gauge vector belongs to its zero eigenspace, so $\nu_\pm$ both annihilate $\mathcal G$.
+This conclusion follows by spectral calculus and requires no sign assumption on the finite physical obstruction space.
+
+\begin{proposition}\label{prop:covariances}
+The covariances
+\begin{equation}\label{eq:lambdas}
+\lambda_\Sigma^\pm=\pm T^*Q c_2^\pm T+\nu_\pm
+\end{equation}
+are positive and Hermitian, annihilate $\mathcal G$ and satisfy
+$\lambda_\Sigma^+-\lambda_\Sigma^-=Q$ on $\mathcal C\times\mathcal C$.
+Their cross-frequency errors are smoothing.
+\end{proposition}
+\begin{proof}
+The first term in~\eqref{eq:lambdas} is positive because $\Ran T\subset\Ker R$ and the exact slice identity applies.
+Hermiticity follows from physical-charge self-adjointness of $c_2^\pm$.
+Gauge annihilation follows from $TK_\Sigma=0$ and the spectral argument.
+Finally~\eqref{eq:Tquotient}, charge orthogonality to $\mathcal G$, and~\eqref{eq:nu} give, on constrained data,
+\[
+\lambda_\Sigma^+-\lambda_\Sigma^-
+=T^*QT+\nu
+=(1-\widetilde\pi)^*Q(1-\widetilde\pi)+\nu=Q.
+\]
+The finite-rank terms are smoothing and the remaining frequency assertion was proved after~\eqref{eq:Tsingular}.
+\end{proof}
+
+The construction treats gauge stabilizers $K_\Sigma\xi=0$, nonzero residual gauge fields $K_\Sigma\Ker A$, and genuine physical obstruction classes $V/(V\cap\mathcal G)$.
+It follows the singular method of~\cite[Theorem 5.2]{Gerard2024Compact}, with a single physical charge throughout the dual matrix and defect~\eqref{eq:nu}.
+Changing to the untrace-reversed charge in either step would not establish the stated identities.
+
+\section{Spacetime lift and real physical state}\label{sec:lift}
+Let $G_2=G_{2,\mathrm{ret}}-G_{2,\mathrm{adv}}$, with the charge convention fixed consistently with the Green identity, and let $\rho_2$ be the reduced trace.
+For $f,h\in C_c^\infty(M;E_2)$ define
+\begin{equation}\label{eq:lift}
+\Lambda^\pm(f,h)=\lambda_\Sigma^\pm(\rho_2G_2f,\rho_2G_2h).
+\end{equation}
+The Green operator maps compact tests continuously to smooth spacelike-compact solutions, with advanced and retarded support in the corresponding causal cones.
+Their Cauchy traces are smooth; compactness of $\Sigma$ admits every smooth datum.
+Only a Gaussian collar is used for the microlocal construction, and neither a global Gaussian foliation nor geodesic completeness is needed.
+Smooth finite-rank Cauchy terms lift to smooth kernels, since evolution sends smooth data to smooth global solutions.
+
+\subsection{The physical test quotient}
+Let $\Ker_cK^\dagger$ denote compactly supported smooth tests satisfying the constraint.
+Intertwining implies that $\rho_2G_2$ maps this space into $\mathcal C$.
+Furthermore $G_2Ph=-KG_1K^\dagger h$, so $P C_c^\infty(M;E_2)$ maps into the gauge range.
+Hence~\eqref{eq:lift} descends to
+\begin{equation}\label{eq:testquotient}
+\frac{\Ker_cK^\dagger}{P C_c^\infty(M;E_2)}
+\simeq\frac{\mathcal C}{\mathcal G}.
+\end{equation}
+We give the support-sensitive proof of the isomorphism.
+
+Choose a smooth temporal cutoff $\chi$ whose transition lies in a compact Cauchy slab, with constant values zero in the past and one in the future.
+Reverse its sign if required by the propagator convention.
+Given $D_2u=0$ and $K^\dagger u=0$, put
+\[
+f=D_2(\chi u),\qquad v=K^\dagger(\chi u).
+\]
+Both have compact support because the equations vanish outside the transition.
+Then $K^\dagger f=D_1v$, and
+\[
+f_{\mathrm{phys}}=f-Kv\in\Ker_cK^\dagger,
+\qquad G_2f_{\mathrm{phys}}=u-KG_1v.
+\]
+The cutoff Green identity proves surjectivity onto the physical quotient, without requiring surjectivity onto each fixed constrained representative.
+
+For injectivity, suppose $f\in\Ker_cK^\dagger$ and $G_2f=Kw$ with $D_1w=0$.
+Set $\eta=D_1(\chi w)$ so that $G_1\eta=w$.
+Then $G_2(f-K\eta)=0$.
+Exactness of the normally hyperbolic causal sequence supplies compact $h$ satisfying $f-K\eta=D_2h$.
+Applying $K^\dagger$ yields
+\[
+D_1(\eta+K^\dagger h)=0.
+\]
+This homogeneous solution has compact spacetime support and therefore vanishes by Cauchy uniqueness.
+Consequently $f=D_2h-KK^\dagger h=Ph$.
+Conversely every such $Ph$ maps to a gauge solution as above.
+This proves~\eqref{eq:testquotient} using only causal-sequence exactness, cutoff Green identities and uniqueness for normally hyperbolic equations.
+
+\subsection{Microlocal regularity and the neutral real field}
+Because $c_2^\pm$ is $Q$-self-adjoint and $c_2^\pm Tc_2^\mp$ is smoothing, the same cross-frequency assertion holds for $T^\dagger$.
+Thus
+\[
+U_2T^\dagger c_2^\pm T
+=U_2c_2^\pm T^\dagger T\quad\pmod{\text{smooth kernel}}.
+\]
+The factor on the right acting on Cauchy data is graded pseudodifferential.
+The microlocal Cauchy-lift criterion~\cite[Proposition 11.1.1]{Gerard2019Microlocal}, used in~\cite[proof of Theorem 5.1]{Gerard2024Compact}, together with propagation of singularities, gives
+\[
+\WF'(\Lambda^\pm)\subset\mathcal C_{\mathrm{Had}}^\pm
+\subset\mathcal N^\pm\times\mathcal N^\pm.
+\]
+Here $\mathcal C_{\mathrm{Had}}^\pm$ is the relation of cotangent vectors on the same null bicharacteristic with the indicated energy sign, and $\WF'$ reverses the second covector.
+Spatial pseudodifferential kernels are conormal to the diagonal and evolution propagates that relation along null bicharacteristics.
+The equation removes any noncharacteristic contribution in the local parametrix statement.
+The finite-rank corrections introduce no new singularities.
+We assert this Hadamard inclusion for the redundant field representatives and exact commutation relations on physical tests; no equality on every component of the redundant bundle is required.
+
+Arbitrary smoothing choices need not preserve the real-field structure.
+On reduced Cauchy data let $C(f_0,f_1)=(\overline f_0,-\overline f_1)$ and define $a^C(f,h)=\overline{a(Cf,Ch)}$.
+The real differential gauge complex is preserved and $Q^C=-Q$.
+Replace the covariances by
+\[
+\lambda_{\mathrm{real}}^\pm
+=\tfrac12\bigl(\lambda_\Sigma^\pm+(\lambda_\Sigma^\mp)^C\bigr).
+\]
+This preserves positivity, gauge annihilation and the exact physical commutation relations.
+Conjugation exchanges the two characteristic signs, so the Hadamard property is preserved.
+The pair now satisfies $(\lambda_{\mathrm{real}}^+)^C=\lambda_{\mathrm{real}}^-$ and defines a quasifree state on the neutral real physical CCR algebra.
+Explicitly, on the $C$-fixed real quotient set $\sigma=-iQ$ and $\mu=\tfrac12(\lambda_{\mathrm{real}}^++\lambda_{\mathrm{real}}^-)$.
+The relation $Q^C=-Q$ makes $\sigma$ real and antisymmetric, while positivity of $\lambda_{\mathrm{real}}^\pm=\mu\pm i\sigma/2$ gives the quasifree uncertainty inequality.
+With the Weyl convention $W(f)W(h)=e^{-i\sigma(f,h)/2}W(f+h)$, the state is $\omega(W(f))=e^{-\mu(f,f)/2}$.
+Together with Proposition~\ref{prop:covariances} and~\eqref{eq:testquotient}, this proves Theorem~\ref{thm:main}.

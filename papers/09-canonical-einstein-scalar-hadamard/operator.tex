@@ -1,0 +1,388 @@
+\section{Action, Hessian and common normalization}
+
+For clarity about physical units, begin more generally with
+
+\[
+ S_{\rm phys}=\int_M\left[\frac{R-2\Lambda}{2\kappa}
+ -\frac12 G_{AB}\nabla\phi^A\cdot\nabla\phi^B-V_{\rm phys}(\phi)\right]d\mathrm{vol}_g,
+ \qquad \kappa>0,
+\]
+
+where $G$ is a fixed positive-definite matrix. The linear change of scalar coordinates $\Phi=\sqrt\kappa\,G^{1/2}\phi$ and potential $V(\Phi)=\kappa V_{\rm phys}(G^{-1/2}\Phi/\sqrt\kappa)$ gives $S_{\rm phys}=S/\kappa$ with $S$ in (1). Thus the physical Hessian is $1/\kappa$ times the Hessian below. This positive common overall factor is distinct from the relative metric/scalar normalization in (8); it is restored by the corresponding positive normalization of the CCR charge. ``Positive scalar multiplet'' refers to the target kinetic metric $G$, not to the sign of $V_{AB}$. The potential Hessian may be indefinite or singular, subject only to smoothness and the identities forced by a critical on-shell background.
+
+Let the signature be $(-+++)$, let $N<\infty$, and absorb the positive constant gravitational coupling and a constant positive scalar target metric into canonical scalar coordinates. Start with
+
+\[
+ S[g,\Phi]=\int_M\left[\frac12(R-2\Lambda)
+ -\frac12\sum_A g^{ab}\partial_a\Phi^A\partial_b\Phi^A-V(\Phi)\right]d\mathrm{vol}_g.
+ \tag{1}
+\]
+
+Write $a_A=d\Phi^A$, $H_A=\nabla^2\Phi^A$, $S_{ab}=\sum_Aa_{Aa}a_{Ab}$, and $c=\Lambda+V(\Phi)$. The background equations are
+
+\[
+ E_{ab}=\mathrm{Ein}_{ab}+\Lambda g_{ab}
+ -S_{ab}+\left(\tfrac12\sum_A|a_A|_g^2+V\right)g_{ab}=0,
+ \qquad E_A=-\Box\Phi^A+V_A=0.
+ \tag{2}
+\]
+
+Consequently $\mathrm{Ric}-S=cg$. Define
+
+\[
+ (d_s\xi)_{ab}=\nabla_{(a}\xi_{b)},\qquad
+ (\delta_s h)_a=-2\nabla^b h_{ba},\qquad
+ Ih=h-\tfrac12g\operatorname{tr}_g h.
+ \tag{3}
+\]
+
+Thus $d_s^*=\delta_s$ when the one-form pairing is the ordinary Lorentzian contraction and the symmetric two-tensor pairing is
+
+\[
+ \langle h,k\rangle_{S_2}=2\overline h_{ab}k^{ab}.
+ \tag{4}
+\]
+
+The curvature endomorphism convention is $\mathcal R(h)_{ab}=-R_{acbd}h^{cd}$ with the usual Riemann convention for which $g^{cd}R_{acbd}=\mathrm{Ric}_{ab}$. In particular $\mathcal Rg=-\mathrm{Ric}$ and $\operatorname{tr}\mathcal Rh=-\mathrm{Ric}:h$. Set
+
+\[
+ (S\times_s h)_{ab}=S_{(a}{}^c h_{b)c},\qquad
+ A_g=2\mathcal R+2S\times_s .
+ \tag{5}
+\]
+
+This specifies the signs independently of names used for curvature operators in different sources.
+
+For original perturbations $(h,\psi)=(\delta g,\delta\Phi)$, let $L=\delta(E_{ab},E_A)$. Direct differentiation of (2) gives
+
+\[
+\begin{aligned}
+ L_{gg}&=\tfrac12(-\Box-I d_s\delta_s+A_g)I,\\
+ L_{gA}\psi^A&=-2I(a_A\odot d\psi^A)+gV_A\psi^A,\\
+ (L_{Ag}h)_A&=H_A:h-\tfrac12a_A\cdot\delta_s Ih,\\
+ L_{AB}&=-\Box\delta_{AB}+V_{AB}.
+\end{aligned}\tag{6}
+\]
+
+Repeated scalar indices are summed. Here $\odot$ denotes symmetrization with factor $1/2$. To check the mixed terms without relying on a block ansatz, differentiation of the scalar equation gives
+
+\[
+ \delta(-\Box\Phi^A+V_A)
+ =-\Box\psi^A+V_{AB}\psi^B
+ +h^{ab}H_{Aab}
+ +(\nabla^ah_a{}^b-\tfrac12\nabla^b\operatorname{tr}h)a_{Ab}.
+ \tag{7}
+\]
+
+Differentiation of the scalar stress gives the second line of (6). The standard metric variation
+
+\[
+ \delta\mathrm{Ric}_{ab}=-\tfrac12\Box h_{ab}
+ -R_{acbd}h^{cd}+\mathrm{Ric}_{(a}{}^ch_{b)c}
+ +\nabla_{(a}(\nabla^ch_{b)c}-\tfrac12\nabla_{b)}\operatorname{tr}h)
+\]
+
+together with $\mathrm{Ric}-S=cg$ gives the first line of (6). The scalar mass matrix is the full $N\times N$ Hessian $V_{AB}$; no diagonalization or vanishing-mass assumption has been made.
+
+The untransformed Hessian pairing is
+
+\[
+ B_0((h,\psi),(k,\chi))=2\overline h:k+4\overline\psi\cdot\chi.
+\]
+
+On shell, compactly supported variations satisfy $S''(u,v)=-\tfrac14\int B_0(u,Lv)$. This verifies formal self-adjointness of $L$ for $B_0$. One can also check the mixed adjoint by integration by parts: $L_{gA}^*=4L_{Ag}$ in the $S_2$ and scalar pairings, because the discrepancy is proportional to $-\Box\Phi^A+V_A$.
+
+Now write the original metric perturbation as $h=2I\gamma$ and define
+
+\[
+ \mathcal A=\operatorname{diag}(2I,1_N),\qquad
+ P=L\mathcal A,\qquad
+ B((\gamma,\psi),(k,\chi))
+ =4(\overline\gamma:Ik+\overline\psi\cdot\chi).
+ \tag{8}
+\]
+
+Then $S''(\mathcal Au,\mathcal Av)=-\tfrac14\int B(u,Pv)$, so $P=P^\dagger$ for the physical bundle form $B$. Explicitly,
+
+\[
+ P=\begin{pmatrix}
+ -\Box-I d_s\delta_s+A_g&-2I(a_B\odot d\,\cdot)+gV_B\\
+ 2H_A:I(\cdot)-a_A\cdot\delta_s(\cdot)&-\Box\delta_{AB}+V_{AB}
+ \end{pmatrix}.
+ \tag{9}
+\]
+
+In this formula and below the field bundle is $E_2=S^2T^*M_\mathbb C\oplus\mathbb C^N$; the gauge bundle is $E_1=T^*M_\mathbb C$, with the ordinary Lorentzian Hermitian pairing.
+
+\section{The coupled gauge complex}
+
+Set
+
+\[
+ K\xi=\frac1{\sqrt2}\begin{pmatrix}I d_s\xi\\a_A\cdot\xi\end{pmatrix},
+ \qquad
+ K^\dagger(\gamma,\psi)=\sqrt2\left(\delta_s\gamma+2\sum_Aa_A\psi^A\right).
+ \tag{10}
+\]
+
+The adjoint follows directly from (8), (3) and (4): the metric integration by parts contributes $-2\sqrt2\operatorname{div}\gamma$ and the scalar term contributes $2\sqrt2\sum_Aa_A\psi^A$. Moreover $\mathcal AK\xi$ is the infinitesimal diffeomorphism generated by $X=\xi^\sharp/\sqrt2$: its metric component is $\sqrt2d_s\xi$ and its scalar component is $a_A\cdot\xi/\sqrt2$. Naturality of the equations therefore gives
+
+\[
+ PK=0,\qquad K^\dagger P=0.
+ \tag{11}
+\]
+
+This is an on-shell identity; it has not been assumed for arbitrary prescribed scalar profiles.
+
+Use $\delta_sId_s=-\Box-\mathrm{Ric}_a{}^b$ to obtain
+
+\[
+ D_1=K^\dagger K=-\Box-\mathrm{Ric}+2S
+ =-\Box-c\,1_{E_1}+S.
+ \tag{12}
+\]
+
+Here $S$ acts on one-forms as $\xi\mapsto\sum_Aa_A(a_A\cdot\xi)$. The product before cancellation is
+
+\[
+ KK^\dagger=
+ \begin{pmatrix}
+ I d_s\delta_s&2I(a_B\odot d\,\cdot)+2I H_B\\
+ a_A\cdot\delta_s&2a_A\cdot a_B
+ \end{pmatrix}.
+ \tag{13}
+\]
+
+Since $2I H_B=2H_B-g\Box\Phi^B=2H_B-gV_B$, all first-order mixed terms cancel in $D_2=P+KK^\dagger$, yielding
+
+\[
+ \boxed{D_2=
+ \begin{pmatrix}
+ -\Box+A_g&2H_B\\
+ 2H_A:I(\cdot)&-\Box\delta_{AB}+V_{AB}+2a_A\cdot a_B
+ \end{pmatrix}.}
+ \tag{14}
+\]
+
+Equations (10)--(14) extend the one-real-scalar construction of Schmid~\cite[Section 2.2.5]{Schmid2026Thesis} to a finite multiplet. The scalar--scalar $a_A\cdot a_B$ term need not be diagonal. Both $D_i$ are normally hyperbolic; all metric--scalar mixing in $D_2$ is multiplication. Consequently their principal connections are respectively the Levi-Civita connection and the direct sum of the induced tensor connection with the trivial scalar connection. This remains true for nonconstant $\Phi$.
+
+Algebraically,
+
+\[
+ D_2K=KD_1,\qquad K^\dagger D_2=D_1K^\dagger.
+ \tag{15}
+\]
+
+Normal hyperbolicity and uniqueness of retarded/advanced solutions then give $G_2K=KG_1$ and $K^\dagger G_2=G_1K^\dagger$ on compactly supported test sections, for each choice of Green operator and for their causal difference.
+
+\section{Critical potentials and trace reversal}
+
+Put $J=I\oplus1_N$. Since $\nabla I=0$, the rough wave operator commutes with $J$. The curvature-plus-stress block satisfies
+
+\[
+ A_gg=-2(\mathrm{Ric}-S)=-2cg,\qquad
+ \operatorname{tr}(A_g\gamma)=-2(\mathrm{Ric}-S):\gamma=-2c\operatorname{tr}\gamma.
+\]
+
+These two identities imply $[A_g,I]=0$ without supposing that the coupled metric is vacuum Einstein. The full commutator in the common normalization is
+
+\[
+ [J,D_2](\gamma,\psi)=
+ \begin{pmatrix}
+ -g\sum_AV_A\psi^A\\
+ (-V_A\operatorname{tr}_g\gamma)_A
+ \end{pmatrix}.
+ \tag{16}
+\]
+
+Indeed $2(IH_A-H_A)=-g\operatorname{tr}H_A=-gV_A$, and the lower mixed block gives $2H_A:I\gamma-2H_A:\gamma=-V_A\operatorname{tr}\gamma$. Thus under the hypothesis
+
+\[
+ V_A(\Phi(x))=0\quad\text{for every }A,x,
+ \qquad [J,D_2]=0.
+ \tag{17}
+\]
+
+The hypothesis implies $\Box\Phi^A=0$ and $V_{AB}d\Phi^B=0$, but does not imply $V_{AB}=0$. The latter identity merely says that the Hessian annihilates tangent directions to the background image. Nonconstant massless backgrounds and critical manifolds remain included.
+
+\section{Cauchy reduction, charges and domains}
+
+Choose a smooth compact Cauchy surface and a Gaussian collar $g=-dt^2+h_t$. Parallel transport the one-form and tensor bundles along its normal geodesics, use ordinary transport on the scalar factor, and conjugate by the scalar half-density ratio. This produces operators
+
+\[
+ D_i^{\mathrm{red}}=\partial_t^2+a_i(t)
+\]
+
+on fixed bundles over $\Sigma$ with fixed density $d\mathrm{vol}_{h_0}$. Their spatial principal symbols are $|\eta|_{h_t}^2\,1$. The conjugation is block diagonal between metric and scalar factors and carries $J$ to the time-independent $I_0\oplus1_N$.
+
+Take the positive reference fibre metric on $E_2|_\Sigma$ to be four times the full Euclidean tensor contraction plus four times the Euclidean scalar contraction. In the split $(\gamma_{tt},\gamma_{t\Sigma},\gamma_{\Sigma\Sigma},\psi)$, put
+
+\[
+ \tau=\operatorname{diag}(+1,-1,+1,+1_N),\quad F=\tau J.
+ \tag{18}
+\]
+
+Then the untrace-reversed Lorentzian bundle form is represented by $\tau$ and the physical form (8) by $F$. Both $I_0$ and $\tau$ are self-adjoint unitary involutions for the positive reference metric, and they commute. For example,
+
+\[
+ I_0\gamma=\gamma-\tfrac12g_0\langle g_0,\gamma\rangle_{\mathrm{Eucl}},
+ \qquad \langle g_0,g_0\rangle_{\mathrm{Eucl}}=4,
+\]
+
+so $I_0$ is precisely a Euclidean reflection. It is not merely self-adjoint in an indefinite metric. Hence $F=F^*=F^{-1}$ as well.
+
+For reduced Cauchy data $f=(u|_\Sigma,-i\partial_tu|_\Sigma)$ the charges, represented in the positive reference Hilbert pairing, are
+
+\[
+ \widetilde q=\begin{pmatrix}0&1\\1&0\end{pmatrix},\qquad
+ q=\begin{pmatrix}0&\tau\\\tau&0\end{pmatrix},\qquad
+ q_J=\begin{pmatrix}0&F\\F&0\end{pmatrix}=qJ_\Sigma.
+ \tag{19}
+\]
+
+The charge current follows by integration by parts of the rough wave term. Zero-order Hermitian potentials cancel in the Green identity and add no boundary current. Therefore (19) is exact, not a principal-symbol approximation. The factor four in (8) has been included in the reference metric, not silently removed from the scalar or gravitational sector separately.
+
+Let
+
+\[
+ \mathcal H_i^s=H^s(\Sigma;E_i)\oplus H^{s-1}(\Sigma;E_i).
+\]
+
+All statements of operator boundedness use these graded spaces. The forms $q_i$ and $q_J$ pair $\mathcal H^s$ continuously with $\mathcal H^{1-s}$. Quadratic positivity is asserted on smooth data, or on $\mathcal H^s$ for $s\ge1/2$, never on all Sobolev exponents.
+
+With $U_i$ the Cauchy solution maps, define
+
+\[
+ K_\Sigma=\rho_2KU_1,\qquad
+ K_\Sigma^\dagger=\rho_1K^\dagger U_2.
+ \tag{20}
+\]
+
+Green intertwining and the Green identity show that the second operator is exactly the charged adjoint:
+
+\[
+ K_\Sigma^*q_J=q_1K_\Sigma^\dagger.
+ \tag{21}
+\]
+
+They have bounded maps $K_\Sigma:\mathcal H_1^{s+1}\to\mathcal H_2^s$ and $K_\Sigma^\dagger:\mathcal H_2^s\to\mathcal H_1^{s-1}$. Normal derivatives of their first-order expressions are reduced using the equations. Finally,
+
+\[
+ K_\Sigma^\dagger K_\Sigma
+ =\rho_1K^\dagger KU_1=\rho_1D_1U_1=0.
+ \tag{22}
+\]
+
+In particular the gauge image is charge-isotropic and is contained in the constraint kernel. This step concerns solution Cauchy data; it is not the false spacetime identity $K^\dagger K=0$.
+
+\section{Compatible microlocal projections}
+
+Under (17), $D_2$ is formally self-adjoint for both the physical form $F$ and the untrace-reversed form $\tau$. Apply the general finite-rank Hermitian-bundle construction in G\'erard~\cite[Sections 3.1--3.2]{Gerard2024Compact} to the reduced operator using $\tau$. Compactness provides the uniform collar bounds used there. It gives a pseudodifferential Riccati factor $b\in\Psi^1$ with scalar positive principal root and
+
+\[
+ i\partial_tb-b^2+a_2\in\Psi^{-\infty},\qquad
+ b+b^*\ge c\langle D\rangle,
+ \tag{23}
+\]
+
+after a sufficiently large low-frequency cutoff. The adjoint $*$ in this inequality is the positive reference adjoint. The indefinite adjoint is $b^\star=\tau b^*\tau$.
+
+The asymptotic Riccati recursion uniquely determines the symbol of $b$ modulo smoothing: at each descending order its unknown coefficient is multiplied by twice the nonzero scalar root. Since $[J,a_2]=0$ and $\partial_tJ=0$, the factor $JbJ$ has the same recursion and principal root. Thus $JbJ-b\in\Psi^{-\infty}$. Replace
+
+\[
+ b\longmapsto b_J=\tfrac12(b+JbJ).
+ \tag{24}
+\]
+
+This preserves (23) and gives $[b_J,J]=0$ exactly. Its coercivity follows from
+
+\[
+ b_J+b_J^*=\tfrac12[(b+b^*)+J(b+b^*)J].
+ \tag{25}
+\]
+
+For the Sobolev coercive norm one uses that $J$ is a smooth bounded invertible multiplier; alternatively choose the reference elliptic norm to commute with $J$. This avoids treating a pointwise unitary as automatically isometric for an arbitrarily chosen Sobolev norm.
+
+Put $b^+=b_J$ and $b^-=-b_J^\star$. The difference $b^+-b^-=b_J+b_J^\star$ is an isomorphism $H^s\to H^{s-1}$: its positive-reference real part is the sum of the coercive real part of $b_J$ and its $\tau$-conjugate. Define the graph isomorphism
+
+\[
+ \mathscr F(v^+,v^-)=(v^++v^-,b^+v^++b^-v^-),
+ \qquad
+ c_2^\pm=\mathscr F\pi^\pm\mathscr F^{-1}.
+ \tag{26}
+\]
+
+These are exact complementary projections on every $\mathcal H_2^s$. Their graph spaces are $q$-orthogonal because $b^-=-b^{+\star}$. The commutation with $J$ implies
+
+\[
+ q_Jc_2^\pm=c_2^{\pm *}q_J,\qquad [c_2^\pm,J_\Sigma]=0.
+ \tag{27}
+\]
+
+Their graph forms also give directly
+
+\[
+ \langle(v,b^+v),\widetilde q(v,b^+v)\rangle
+ =\langle v,(b_J+b_J^*)v\rangle\ge0,
+\]
+
+whereas the corresponding expression with $b^-$ is
+
+\[
+ -\langle v,\tau(b_J+b_J^*)\tau v\rangle\le0.
+\]
+
+Thus
+
+\[
+ \pm c_2^{\pm *}\widetilde q c_2^\pm\ge0.
+ \tag{28}
+\]
+
+The Riccati construction yields $\mathrm{WF}'(U_2c_2^\pm)\subset\mathcal N^\pm\times T^*\Sigma$ (with the usual harmless noncharacteristic set in a local parametrix statement). Averaging by a smoothing term does not change this relation. Construct $c_1^\pm$ similarly for $D_1$; no trace-reversal symmetry is required for that bundle.
+
+The exact differential intertwiner (15) implies the gauge compatibility
+
+\[
+ c_2^\pm K_\Sigma-K_\Sigma c_1^\pm\in\Psi^{-\infty}.
+ \tag{29}
+\]
+
+For example, $KU_1c_1^+f$ solves $D_2u=0$ and has only positive-energy wavefront. Its negative-frequency component therefore has wavefront in the empty intersection $\mathcal N^+\cap\mathcal N^-$. The standard pseudodifferential Cauchy construction turns this into a smooth kernel on compact $\Sigma\times\Sigma$, exactly as in G\'erard~\cite[Lemma 3.2]{Gerard2024Compact}. This establishes smoothing, not merely a gain of one derivative.
+
+\section{Positivity on the metric gauge slice}
+
+Use the metric-only readout
+
+\[
+ l_N(\gamma,\psi)=(\operatorname{tr}_{g_0}\gamma,2\gamma_{t\Sigma}),
+ \qquad Rf=(l_N\pi_0c_2^+f,l_N\pi_0c_2^-f).
+ \tag{30}
+\]
+
+Its fibre kernel is independent of the scalar component. If $l_Nu_0=0$, then $I_0\gamma_0=\gamma_0$ and $\tau\gamma_0=\gamma_0$. Consequently $Fu_0=u_0$, including the scalar part. Since $F=F^*$, every datum $u=(u_0,u_1)$ satisfying this condition obeys
+
+\[
+ \langle u,q_Ju\rangle
+ =\langle u_0,Fu_1\rangle+\langle u_1,Fu_0\rangle
+ =\langle u_0,u_1\rangle+\langle u_1,u_0\rangle
+ =\langle u,\widetilde qu\rangle.
+ \tag{31}
+\]
+
+No condition on $u_1$ is needed. This is the exact charge identity, which is stronger and more relevant than merely checking that the field fibre metric is positive on a trace-free spatial slice.
+
+For $f\in\ker R$, set $u^\pm=c_2^\pm f$. Each satisfies the hypothesis of (31). Equations (27), the projector identity and (28) give
+
+\[
+ \boxed{\ 
+ \pm\langle f,q_Jc_2^\pm f\rangle
+ =\pm\langle c_2^\pm f,q_Jc_2^\pm f\rangle
+ =\pm\langle c_2^\pm f,\widetilde q c_2^\pm f\rangle\ge0,
+ \quad f\in\ker R.
+ \ }
+ \tag{32}
+\]
+
+Thus the coupled positive-slice step is proved with a common normalization and exact Cauchy current. It neither assumes positivity of the full indefinite gauge bundle nor infers positivity from quotient nondegeneracy. The global gauge correction and spacetime lift are established in the following sections.
+

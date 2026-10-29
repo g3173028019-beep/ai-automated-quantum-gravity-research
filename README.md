@@ -41,7 +41,12 @@ The archive contains scoped mathematical and model-physics manuscripts with mini
    - [LaTeX source](papers/08-einstein-scalar-mixed-quartic/main.tex)
    - [Reproduction and verification](papers/08-einstein-scalar-mixed-quartic/README.md)
 
-The first 29 October packet contains JT mean-energy recovery, a DBI heralded gate and exact integer flux families. The subsequent priority packet adds local autonomous Maxwell control, a clock-foliated effective reference model with positive inhomogeneous quadratic energy, and native Einstein–scalar quartic/backreaction constructions. Each paper states its model and assumptions. Delivery order is not a ranking of the broader research, a complete corpus inventory, or certification of global originality or human validation.
+9. **Positive Physical Hadamard States for Critical Einstein–Scalar Multiplets on Compact Cauchy Surfaces**
+   - [English PDF](papers/09-canonical-einstein-scalar-hadamard/manuscript.pdf)
+   - [LaTeX source](papers/09-canonical-einstein-scalar-hadamard/main.tex)
+   - [Proof scope, algebra and provenance](papers/09-canonical-einstein-scalar-hadamard/README.md)
+
+The first 29 October packet contains JT mean-energy recovery, a DBI heralded gate and exact integer flux families. The subsequent priority packet adds local autonomous Maxwell control, a clock-foliated effective reference model with positive inhomogeneous quadratic energy, and native Einstein–scalar quartic/backreaction constructions. The canonical coupled-state theorem is a separate paper: it constructs positive physical Hadamard states under its compact-Cauchy and critical-potential hypotheses, including nonconstant scalar backgrounds. The effective-model paper neither replaces nor proves this canonical theorem. Delivery order is not a ranking of the broader research, a complete corpus inventory, or certification of global originality or human validation.
 
 ## Status
 

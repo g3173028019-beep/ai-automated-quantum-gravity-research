@@ -1,5 +1,11 @@
 # Verification record
 
+## Canonical coupled-state theorem delivery
+
+The independent fourteen-page paper received focused operator and Fredholm/microlocal analytic scrutiny, followed by common-normalization manuscript integration. The proof includes kernel and cokernel obstructions, residual gauge removal, physical-charge finite-rank CCR repair, compact-test/Cauchy equivalence and neutral real-field averaging. Standard pseudodifferential, elliptic, normally hyperbolic and propagation/lift results are explicitly cited mathematical inputs, not certified by the finite algebra script.
+
+The supporting exact-algebra command passed from the final repository packet. It tests normalization and negative controls, charged-adjoint and defect identities, and the nonconstant background with a massive spectator. Terminal and desktop compilation succeeded; all fourteen rendered pages and selected full-resolution proof/disclosure pages were inspected. The delivered PDF and source files match that edition. The previous eight paper directories remain unchanged. No human expert review or formal proof-assistant certification is claimed.
+
 ## Priority manuscript delivery, 29 October 2026
 
 The three added PDFs are byte-identical to the completed research editions: Maxwell 11 pages, clock-foliated reference model 11 pages, and Einstein–scalar 10 pages. Both terminal LaTeX and the desktop compiler had succeeded, and all 32 pages were visually inspected, with selected proof, matrix and resource pages inspected at readable resolution. This delivery reuses that unaffected evidence instead of rebuilding the papers.

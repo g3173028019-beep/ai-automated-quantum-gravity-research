@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-10-29T00:18:54.216806+00:00",
+  "checked_at_utc": "2026-10-29T00:43:05.975501+00:00",
   "kind": "English manuscript build and archive checks",
   "human_expert_review": false,
   "historical_Wolfram_scripts_rerun": false,
@@ -51,6 +51,12 @@
       "pages": 10,
       "pdf_author": "",
       "citation_count": 2
+    },
+    {
+      "paper": "09-canonical-einstein-scalar-hadamard",
+      "pages": 14,
+      "pdf_author": "",
+      "citation_count": 9
     }
   ],
   "checks": [
@@ -611,6 +617,76 @@
     },
     {
       "check": "08-einstein-scalar-mixed-quartic: clean final LaTeX log",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: blank TeX byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: unique bibliography keys",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: bibliography coverage",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: unique labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: blank PDF author",
+      "passed": true,
+      "detail": "''"
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: disclosure 'I genuinely do not know'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: disclosure 'Fable 5'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: disclosure 'DeepSeek'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: disclosure 'GPT'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: disclosure 'human expert review'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: no unresolved PDF references",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: no placeholder byline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: English PDF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "09-canonical-einstein-scalar-hadamard: clean final LaTeX log",
       "passed": true,
       "detail": ""
     },
@@ -1740,6 +1816,171 @@
       "detail": ""
     },
     {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/code/canonical_algebra_check.py: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/code/canonical_algebra_check.py: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/code/canonical_algebra_check.py: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/example.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/example.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/example.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/fredholm.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/fredholm.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/fredholm.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/main.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/main.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/main.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/operator.tex: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/operator.tex: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/operator.tex: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/PROVENANCE.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/PROVENANCE.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/PROVENANCE.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/README.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/README.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/README.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/references.bib: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/references.bib: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/references.bib: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/requirements.txt: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/requirements.txt: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/requirements.txt: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/results/algebra-results.json: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/results/algebra-results.json: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/results/algebra-results.json: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/VERIFICATION.md: English text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/VERIFICATION.md: no local user paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "papers/09-canonical-einstein-scalar-hadamard/VERIFICATION.md: no common credential patterns",
+      "passed": true,
+      "detail": ""
+    },
+    {
       "check": "README.md: English text",
       "passed": true,
       "detail": ""
@@ -1818,8 +2059,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 551,
-      "sha256": "cc7a3b843baa380797f7cb50f3a4f7a51c08aef6d96bfd5f2b6a312966ae8258"
+      "bytes": 605,
+      "sha256": "e282452e84cad6a2173b85c5f71bfe1b72da9f94c219fb173c4fd5a8d44bafa7"
     },
     {
       "path": ".gitignore",
@@ -1828,13 +2069,13 @@
     },
     {
       "path": "DECLARATIONS.md",
-      "bytes": 3792,
-      "sha256": "0123baa1a0fb9411148d24af2dceb53bed08e6b0315596a5129df5f485c3f417"
+      "bytes": 3909,
+      "sha256": "c53dd400603b48932ece3906c5e97441b89a04e713c09908f3ce8e8aafa80ddd"
     },
     {
       "path": "HISTORY.md",
-      "bytes": 5222,
-      "sha256": "45907fa20fa8eb7d660cdbd0f6d73e4cc069a1d75b99eb7aa96faa8b445f9040"
+      "bytes": 6242,
+      "sha256": "766e18a94a63f6185d67b3eff9e5538b06a8cd5a1de197c7553a8be62c26bca6"
     },
     {
       "path": "papers/01-projection-sign-rigidity/main.tex",
@@ -2237,9 +2478,69 @@
       "sha256": "eaafd7c66ea8780980964400b98e6b6c42a4abb910d7ec0a239eda64aae42b14"
     },
     {
+      "path": "papers/09-canonical-einstein-scalar-hadamard/code/canonical_algebra_check.py",
+      "bytes": 4477,
+      "sha256": "e3bc9616e2b0975eedc9f8459efbdfc561cbf70cded1170d1ed9338938746945"
+    },
+    {
+      "path": "papers/09-canonical-einstein-scalar-hadamard/example.tex",
+      "bytes": 2271,
+      "sha256": "f3e4c2c5f61cb529343b6e2cbea008cb893d1c6cd1aaece6a62b589dfc65083e"
+    },
+    {
+      "path": "papers/09-canonical-einstein-scalar-hadamard/fredholm.tex",
+      "bytes": 16470,
+      "sha256": "dda67b8b949c540aef3fac8dbfc5b31c77063f14fead25191a7b1c0fae1ef97e"
+    },
+    {
+      "path": "papers/09-canonical-einstein-scalar-hadamard/main.tex",
+      "bytes": 8499,
+      "sha256": "2c8f8f079d38cfa0edf26072e3c8312f1ec34d6116c1a2f6d161267ae458c83b"
+    },
+    {
+      "path": "papers/09-canonical-einstein-scalar-hadamard/manuscript.pdf",
+      "bytes": 428099,
+      "sha256": "05543229e719fe7397f4cf8113f266e537bc467ba5acb4b5082badaa7e71fba9"
+    },
+    {
+      "path": "papers/09-canonical-einstein-scalar-hadamard/operator.tex",
+      "bytes": 16451,
+      "sha256": "3284c2ce20a88fbe171124bea8260e68c072bc75fbb059baf102aee3a184ee10"
+    },
+    {
+      "path": "papers/09-canonical-einstein-scalar-hadamard/PROVENANCE.json",
+      "bytes": 13220,
+      "sha256": "c2ff9a79456649d08d9cad484d8f4e3a183df307794b7ea233e0692b1c572040"
+    },
+    {
+      "path": "papers/09-canonical-einstein-scalar-hadamard/README.md",
+      "bytes": 2126,
+      "sha256": "c5a40f1a9cb0dfff1ba845b0ebff97b64257117fe6c329fe959985d715f6e121"
+    },
+    {
+      "path": "papers/09-canonical-einstein-scalar-hadamard/references.bib",
+      "bytes": 5083,
+      "sha256": "bc821b57390e60ec49723f2a063810ba2430cb32d352bfeb53b2128d7c94f2a7"
+    },
+    {
+      "path": "papers/09-canonical-einstein-scalar-hadamard/requirements.txt",
+      "bytes": 14,
+      "sha256": "25f9f1fb1988b230147a1d3092d34e09c069eb7a6c6d6df46b3973b9f2d36efc"
+    },
+    {
+      "path": "papers/09-canonical-einstein-scalar-hadamard/results/algebra-results.json",
+      "bytes": 757,
+      "sha256": "502e473176ed4451b8e2a04049924dca51454f803a4e8a1e373836ae6b1bd292"
+    },
+    {
+      "path": "papers/09-canonical-einstein-scalar-hadamard/VERIFICATION.md",
+      "bytes": 4059,
+      "sha256": "28418e432a89fbd6484644e49baa1c2b5a0c2069982d3f25f9b21c1c4a919286"
+    },
+    {
       "path": "README.md",
-      "bytes": 4666,
-      "sha256": "ee8f34c550790e0c9ca839ad6c77166042f1e591e87a00f7a732d1a006344e8f"
+      "bytes": 5271,
+      "sha256": "8710408e6aa3c616dc6094f607e39796c7e6044bc935262a5f2b74b3583dac8a"
     },
     {
       "path": "tools/build.ps1",
@@ -2248,8 +2549,8 @@
     },
     {
       "path": "tools/check_archive.py",
-      "bytes": 4327,
-      "sha256": "405b3efed2498be97798580e124ad3e0d17f1103acfec32d7066399d43c901c7"
+      "bytes": 4362,
+      "sha256": "734b17dbb13fe50e5b160895e627e7bb9d518559187198411f6619816f805693"
     },
     {
       "path": "tools/render_review.py",
@@ -2258,8 +2559,8 @@
     },
     {
       "path": "VERIFICATION.md",
-      "bytes": 6393,
-      "sha256": "d13efad49f5a3da22d0ba989dbc68c1b96554acd033860016d9c884da3993bb3"
+      "bytes": 7504,
+      "sha256": "34a3c588314c75e7d5fdfeeb6ba7b28a6dd116c0c7e31e0b2b992f69a354a729"
     }
   ]
 }

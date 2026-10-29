@@ -24,7 +24,7 @@ def require(name, condition, detail=""):
 paper_records = []
 for slug in PAPERS:
     folder = ROOT / "papers" / slug
-    source = (folder / "main.tex").read_text(encoding="utf-8-sig")
+    source = "\n".join(path.read_text(encoding="utf-8-sig") for path in sorted(folder.glob("*.tex")))
     bib = (folder / "references.bib").read_text(encoding="utf-8-sig")
     require(f"{slug}: blank TeX byline", re.search(r"\\author\s*\{\s*\}", source))
     keys = re.findall(r"@\w+\s*\{\s*([^,]+),", bib)

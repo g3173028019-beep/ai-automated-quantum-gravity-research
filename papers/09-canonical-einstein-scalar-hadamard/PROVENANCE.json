@@ -1,0 +1,299 @@
+{
+  "prepared_date_beijing": "2026-10-29",
+  "scope": "canonical critical finite-positive-scalar physical Hadamard theorem preparation",
+  "human_authors": [],
+  "affiliations": [],
+  "human_expert_review": false,
+  "chronology": {
+    "original_packet_checkpoint": "2026-07-18",
+    "retrospective_audit": "2026-10-28",
+    "preparation": "2026-10-29",
+    "public_disclosure_date": "not established"
+  },
+  "reported_model_history": "Earlier work Fable 5-led; July 2026 onward predominantly GPT-produced; DeepSeek and multiple GPT models participated in review and preparation. No equation-specific allocation inferred.",
+  "credit_statement": "I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.",
+  "sources": [
+    {
+      "role": "current concise corrected proof",
+      "sha256": "2b2af15b6448d63fd3b868180326873fcb9c1166f2bba29ded5987e25de3bf37",
+      "selected_line_ranges": [
+        {
+          "first": 31,
+          "last": 66,
+          "canonical_utf8_lf_sha256": "f0b42392491ccdb5550483149573c7d9606ae569399d748b357aafff1c0201e5"
+        },
+        {
+          "first": 67,
+          "last": 123,
+          "canonical_utf8_lf_sha256": "d48684fc76d4a0a689f31637b9312e673fa3f3c7ecd3bd8b427ebe35f88c555c"
+        },
+        {
+          "first": 124,
+          "last": 165,
+          "canonical_utf8_lf_sha256": "5155533655cb234a9fbcf2831817c9659f255b32c2545fb430b32a4ea7926b0f"
+        },
+        {
+          "first": 166,
+          "last": 221,
+          "canonical_utf8_lf_sha256": "70f1c7a749e584a73ecf4f0f0977987bafb49c6df844c452fdfff41c30b6dc87"
+        },
+        {
+          "first": 222,
+          "last": 234,
+          "canonical_utf8_lf_sha256": "943ac1f62f9ed6c7f8a23ecdf00e90707408151146e860f8a6e9e77f8b1e1711"
+        }
+      ],
+      "historical_manifest_sha256": "2b2af15b6448d63fd3b868180326873fcb9c1166f2bba29ded5987e25de3bf37",
+      "matches_historical_manifest": true,
+      "source_identifier": "TOE2.0/evidence/parallel-adversarial-physical-closure-wave-1/RESULTS.md"
+    },
+    {
+      "role": "original development and corrected closure",
+      "sha256": "f81bd52c1c50d1bb96555b485e6b518b83a877972b6181c09e0f42ef7774c86f",
+      "selected_line_ranges": [
+        {
+          "first": 3638,
+          "last": 3715,
+          "canonical_utf8_lf_sha256": "7291bcfc5b1807d1c042f238c4975b42d0be37a2cb1ac1f9d07509e63b2d1985"
+        },
+        {
+          "first": 3716,
+          "last": 3785,
+          "canonical_utf8_lf_sha256": "65cb0189a3b539629811abef2ecb8bd0f09c0aa817c42710e9ff89d0c03cbb3a"
+        },
+        {
+          "first": 5752,
+          "last": 5831,
+          "canonical_utf8_lf_sha256": "4fb017515475aea00749c560279ae499e00c6e9eae64b46e89a944b5f8bede91"
+        },
+        {
+          "first": 5984,
+          "last": 6028,
+          "canonical_utf8_lf_sha256": "e90139c7063541f83090eb87d67770800693e257e329f2729bb2ad638ec65029"
+        },
+        {
+          "first": 6127,
+          "last": 6162,
+          "canonical_utf8_lf_sha256": "cf044bb929602e8abd0f75a668d749751d491a1719267d63996c88459e682240"
+        },
+        {
+          "first": 6248,
+          "last": 6274,
+          "canonical_utf8_lf_sha256": "d3dd81a4afe88894b55d56e723c21d28032915176d4aa8e6d1c029786684e16d"
+        },
+        {
+          "first": 6305,
+          "last": 6410,
+          "canonical_utf8_lf_sha256": "1dd8304cbe17294df60fecce4adc6bbfaf371a361ed691a70432d0650461ba56"
+        },
+        {
+          "first": 6411,
+          "last": 6467,
+          "canonical_utf8_lf_sha256": "78979552873391efe4b95ea320b684c85bf12aa3d6ca53aad75a75897f9e30be"
+        }
+      ],
+      "historical_manifest_sha256": "f81bd52c1c50d1bb96555b485e6b518b83a877972b6181c09e0f42ef7774c86f",
+      "matches_historical_manifest": true,
+      "source_identifier": "TOE2.0/evidence/physical-moller-hadamard-wave-1/RESULTS.md"
+    },
+    {
+      "role": "retrospective targeted audit, no original certificate executions",
+      "sha256": "842b00907122b535646486c95b8bcafe98daccdafa7d76cc20ba3867aa963ea4",
+      "selected_line_ranges": [],
+      "historical_manifest_sha256": "842b00907122b535646486c95b8bcafe98daccdafa7d76cc20ba3867aa963ea4",
+      "matches_historical_manifest": true,
+      "source_identifier": "Research-Publications/TOE-QG-results-audit-20261028/second-review/ekg/report.md"
+    },
+    {
+      "role": "historical staging manifest",
+      "sha256": "8fef00fcccd36a7c5118df7d48377a267fc6bd4200ff1d2129d7fb3e21b2847b",
+      "selected_line_ranges": [],
+      "source_identifier": "Research-Publications/TOE-QG-results-audit-20261028/staging/P13/MANIFEST.json"
+    },
+    {
+      "role": "historical manuscript brief",
+      "sha256": "4be04e393ec257092dfbcb9e650c44d3d30f88861b71941a57b967fe95f08112",
+      "selected_line_ranges": [],
+      "source_identifier": "Research-Publications/TOE-QG-results-audit-20261028/staging/P13/MANUSCRIPT-BRIEF.md"
+    },
+    {
+      "role": "retained official arXiv v1 primary HTML",
+      "sha256": "32633ed0a7da8dc0de42067809f16da15cfa7cefc82a73db5c713e73ad1c4947",
+      "selected_line_ranges": [],
+      "source_identifier": "Research-Publications/TOE-QG-results-audit-20261028/scans/toe2/checks/primary-schmid-2604.27026.html"
+    },
+    {
+      "role": "retained primary section 2.2.5 extraction",
+      "sha256": "279d0a942150a8addf19656e0e928371908e0ec81f46b4fcc738944b33595f9d",
+      "selected_line_ranges": [],
+      "source_identifier": "Research-Publications/TOE-QG-results-audit-20261028/scans/toe2/checks/primary-schmid-excerpt-0.txt"
+    },
+    {
+      "role": "retained extractor for primary section",
+      "sha256": "987f5b1aed2a07aff89ad60f82938fdfd799d084ffe162931d5374ba9223a233",
+      "selected_line_ranges": [],
+      "source_identifier": "Research-Publications/TOE-QG-results-audit-20261028/scans/toe2/checks/read_schmid.py"
+    },
+    {
+      "role": "historical finite algebra certificate, code read, not rerun",
+      "sha256": "6cf44ff6da189b802829f120e1981f899b3a523e3c5276670ba8227e731e7916",
+      "selected_line_ranges": [],
+      "source_identifier": "TOE2.0/evidence/physical-moller-hadamard-wave-1/ekg_fundamental_symmetry_commutator_exact.py"
+    },
+    {
+      "role": "historical finite algebra certificate, code read, not rerun",
+      "sha256": "ee7cb94f0db262d6570607b3a285e5569a73ff0c0aaf1114dc805c4fc63880c5",
+      "selected_line_ranges": [],
+      "source_identifier": "TOE2.0/evidence/physical-moller-hadamard-wave-1/ekg_positive_slice_exact.py"
+    },
+    {
+      "role": "historical finite algebra certificate, code read, not rerun",
+      "sha256": "da81f0da5146158b2089f29722faf1ea42681427be7a7dce3849087955a1b7df",
+      "selected_line_ranges": [],
+      "source_identifier": "TOE2.0/evidence/physical-moller-hadamard-wave-1/ekg_four_scalar_hyperbolic_completion_exact.py"
+    }
+  ],
+  "primary_web_reads": [
+    {
+      "key": "Gerard2024Compact",
+      "url": "https://arxiv.org/abs/2311.11043v1",
+      "coverage": "metadata; official HTML selected sections read",
+      "checked": "2026-10-29"
+    },
+    {
+      "key": "Gerard2024Compact",
+      "url": "https://link.springer.com/article/10.1007/s00220-024-05014-6",
+      "coverage": "published metadata verified",
+      "checked": "2026-10-29"
+    },
+    {
+      "key": "Schmid2026Thesis",
+      "url": "https://arxiv.org/abs/2604.27026v1",
+      "coverage": "metadata; saved primary section 2.2.5 read",
+      "checked": "2026-10-29"
+    },
+    {
+      "key": "Hack2014EKG",
+      "url": "https://arxiv.org/abs/1403.3957v2",
+      "coverage": "metadata and abstract scope only",
+      "checked": "2026-10-29"
+    },
+    {
+      "key": "GerardMolodykWrochna2026Flat",
+      "url": "https://arxiv.org/abs/2610.31214v1",
+      "coverage": "metadata and abstract scope only",
+      "checked": "2026-10-29"
+    },
+    {
+      "key": "GerardWrochna2014Calculus",
+      "url": "https://arxiv.org/abs/1209.2604v4",
+      "coverage": "metadata and abstract scope only",
+      "checked": "2026-10-29"
+    },
+    {
+      "key": "GerardWrochna2015YangMills",
+      "url": "https://arxiv.org/abs/1403.7153v4",
+      "coverage": "metadata and abstract scope only; journal metadata also in official Gerard bibliography",
+      "checked": "2026-10-29"
+    },
+    {
+      "key": "GerardOulghaziWrochna2017Geometry",
+      "url": "https://arxiv.org/abs/1602.00930v3",
+      "coverage": "metadata and abstract scope only; journal metadata also in official Gerard bibliography",
+      "checked": "2026-10-29"
+    },
+    {
+      "key": "Gerard2019Microlocal",
+      "url": "https://ems.press/books/esi/173",
+      "coverage": "published metadata; contents locates section 11.1 at pp115ff",
+      "checked": "2026-10-29"
+    },
+    {
+      "key": "Gerard2019Microlocal",
+      "url": "https://arxiv.org/pdf/1901.10175v3",
+      "coverage": "Proposition 11.1.1 and proof read at printed pp95\u201396; PDF pages101\u2013102",
+      "checked": "2026-10-29"
+    },
+    {
+      "key": "GerardMurroWrochna2025Wick",
+      "url": "https://link.springer.com/article/10.1007/s00023-025-01539-1",
+      "coverage": "publication metadata; section5.2 and Lemma5.1, Proposition5.2, Proposition5.4 read",
+      "checked": "2026-10-29"
+    },
+    {
+      "key": "GerardMurroWrochna2025Wick",
+      "url": "https://arxiv.org/abs/2204.01094v2",
+      "coverage": "version metadata",
+      "checked": "2026-10-29"
+    }
+  ],
+  "download_limitations": [
+    "Bundled Python could not run arXiv helper because requests is not installed there; existing system Python with requests and SymPy was used without changing environments.",
+    "Official e-print requests for 2311.11043v1 and 2604.27026v1 timed out; direct Gerard HTML download failed TLS EOF. No saved TeX/PDF is claimed.",
+    "No saved Gerard paper was found in targeted original/audit source locations. Official primary HTML remained readable through web tool.",
+    "Targeted filename scans encountered access-denied unrelated pytest-cache directories; no claim of an exhaustive disk search."
+  ],
+  "verification": {
+    "new_execution": "code/canonical_algebra_check.py",
+    "result": "code/algebra-results.json",
+    "symbolic_engine": "SymPy 1.14.0",
+    "pde_theorem_certified": false
+  },
+  "local_deliverables": [
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/canonical-ekg-hadamard-20261029/preparation/SOURCE-MAP.md",
+      "role": "new preparation artifact",
+      "sha256": "8f7713f6dd3ce64b1c602627938b78dced86f920e0dd3cca904f14e7dd41de6d",
+      "selected_line_ranges": []
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/canonical-ekg-hadamard-20261029/preparation/ALGEBRA-NOTES.md",
+      "role": "new preparation artifact",
+      "sha256": "59fa66bf531c38187031514c0e2f4751b17d27be4ef863309cde5bc247c07d14",
+      "selected_line_ranges": []
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/canonical-ekg-hadamard-20261029/preparation/VERIFICATION.md",
+      "role": "new preparation artifact",
+      "sha256": "1d50cfe4133fcb8ea5cc7900610e6761e218f3d5460ae0b7ba1406491d907836",
+      "selected_line_ranges": []
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/canonical-ekg-hadamard-20261029/preparation/references.bib",
+      "role": "new preparation artifact",
+      "sha256": "7c797c054e355c3f214a9a6b7a4889cdff047482ac39179edd68d958f6e81007",
+      "selected_line_ranges": []
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/canonical-ekg-hadamard-20261029/preparation/code/canonical_algebra_check.py",
+      "role": "new preparation artifact",
+      "sha256": "e3bc9616e2b0975eedc9f8459efbdfc561cbf70cded1170d1ed9338938746945",
+      "selected_line_ranges": []
+    },
+    {
+      "path": "E:/Research-Publications/TOE-QG-research-continuation-20261028/canonical-ekg-hadamard-20261029/preparation/code/algebra-results.json",
+      "role": "new preparation artifact",
+      "sha256": "57021b0943683005d1b059128bbbbd19efc1d1765fc314d2999a666fb7166c7c",
+      "selected_line_ranges": []
+    }
+  ],
+  "delivery_date": "2026-10-29",
+  "manuscript_files_sha256": {
+    "example.tex": "f3e4c2c5f61cb529343b6e2cbea008cb893d1c6cd1aaece6a62b589dfc65083e",
+    "fredholm.tex": "dda67b8b949c540aef3fac8dbfc5b31c77063f14fead25191a7b1c0fae1ef97e",
+    "main.tex": "2c8f8f079d38cfa0edf26072e3c8312f1ec34d6116c1a2f6d161267ae458c83b",
+    "manuscript.pdf": "05543229e719fe7397f4cf8113f266e537bc467ba5acb4b5082badaa7e71fba9",
+    "operator.tex": "3284c2ce20a88fbe171124bea8260e68c072bc75fbb059baf102aee3a184ee10",
+    "references.bib": "bc821b57390e60ec49723f2a063810ba2430cb32d352bfeb53b2128d7c94f2a7"
+  },
+  "new_proof_notes_sha256": {
+    "operator/OPERATOR-PROOF.md": "6fc6191cacaf94e5ac655cd0564faf1b033a82f9095e7315bce55081c101cd0b",
+    "fredholm/FREDHOLM-PROOF.md": "e683050c35b72278e0d7a0db67564b72ef979dbd00bf37d91ff4a214c624016f"
+  },
+  "portable_algebra": {
+    "exit_code": 0,
+    "external_project_access": false,
+    "network_required": false,
+    "source_sha256": "e3bc9616e2b0975eedc9f8459efbdfc561cbf70cded1170d1ed9338938746945"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "sympy_version": "1.14.0",
+  "normalization_mixing_adjoint": "PASS: raw metric/scalar weights 4/4",
+  "normalization_negative_control": "PASS: missing metric factor detected",
+  "critical_hessian_and_trace_reversal": "PASS",
+  "charged_adjoint_identity": "PASS: dimension-symbolic",
+  "physical_charge_defect_expansion": "PASS: dimension-symbolic",
+  "flrw_continuity_constraint_propagation_acceleration": "PASS: exact symbolic",
+  "flrw_initial_values": {
+    "rho": 6,
+    "p": 4,
+    "Hdot": -4,
+    "fddot": -12,
+    "mixed_Hessian_coefficient": 2,
+    "oriented_rank_factor": 3
+  },
+  "critical_nonzero_potential_hessian": "PASS: spectator mass squared retained",
+  "scope": "algebraic consistency only; no projector/Fredholm/Hadamard PDE proof"
+}

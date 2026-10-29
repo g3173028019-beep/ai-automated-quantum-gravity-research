@@ -42,3 +42,9 @@ Three completed manuscripts are added without changing their inspected PDFs or L
 The new packets include portable calculations and saved outputs. Maxwell bundles only the accepted phase coefficient and two switching fractions needed by its replay, with the original input hash; all other bound coefficients are reconstructed. The reference-model and Einstein–scalar scripts reconstruct their inputs algebraically. The packaging pass changes paths and documentation, not scientific claims. The earlier five paper directories remain byte-for-byte unchanged.
 
 The earlier delivery choice did not dispose of other retained work. A separate manuscript-level recovery assessment follows this upload; it will distinguish independent results, overlapping versions, supporting methods, concrete errors and unreviewed material.
+
+## Independent canonical coupled-state theorem
+
+The fourteen-page canonical Einstein–scalar Hadamard paper consolidates a retained proof lineage with an 18 July 2026 checkpoint and the 28 October retrospective audit. The present 29 October consolidation derives the finite-multiplet operators in one normalization and supplies the complete regular/singular physical covariance construction and spacetime lift. A nonconstant closed-cosmology example, with an optional massive spectator, makes the coupled scope explicit.
+
+Focused analytic scrutiny corrected the raw metric/scalar normalization used by an earlier sign-only check, a lower-order boundary-matrix coefficient, and inconsistent physical-charge notation in the inherited singular formulas. The manuscript identifies the standard analytic input theorems separately from its coupled compatibility argument. The prior eight papers are preserved byte for byte. This remains a private research archive, not a human-reviewed publication or public-priority claim.

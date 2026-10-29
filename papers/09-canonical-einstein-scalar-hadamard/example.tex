@@ -1,0 +1,45 @@
+\section{A nonconstant coupled background with a massive spectator}\label{sec:example}
+The critical-potential hypotheses do not reduce the theorem to pure gravity with constant scalar spectators.
+Let $\gamma_{S^3}$ be the unit round metric and $Y:S^3\hookrightarrow\mathbb R^4$ its standard embedding.
+The identities
+\[
+\sum_A(Y^A)^2=1,\quad
+\sum_A dY^A\otimes dY^A=\gamma_{S^3},\quad
+\Delta_{S^3}Y^A=-3Y^A
+\]
+give an exact closed Friedmann--Lema\^itre--Robertson--Walker ansatz
+\[
+g=-dt^2+a(t)^2\gamma_{S^3},\qquad
+X^A(t,\omega)=f(t)Y^A(\omega),\quad A=1,\ldots,4,
+\]
+with flat potential $V=0$.
+Write $\mathscr H=\dot a/a$ and $u=\dot f$ to distinguish the cosmological expansion rate from the spatial mean curvature used earlier.
+The scalar equations and Einstein equations reduce to
+\begin{align*}
+\dot a&=a\mathscr H,&\dot f&=u,&
+\dot u&=-3\mathscr H u-3f/a^2,\\
+\dot{\mathscr H}&=a^{-2}-\tfrac12(\rho+p),&
+\rho&=\tfrac12(u^2+3f^2/a^2),&p&=\tfrac12(u^2-f^2/a^2),
+\end{align*}
+with constraint $3(\mathscr H^2+a^{-2})=\rho+\Lambda$ in the canonical normalization.
+The mixed momentum flow vanishes because $\sum_A Y^AdY^A=0$.
+Differentiating gives $\dot\rho+3\mathscr H(\rho+p)=0$, and therefore propagation of the Einstein constraint.
+
+At initial data
+\[
+(a,f,u,\mathscr H,\Lambda)=(1,1,3,1,0)
+\]
+one finds $\rho=6$, $p=4$, $\dot{\mathscr H}=-4$ and $\ddot f=-12$, satisfying the constraint and evolution equations.
+Smooth local ODE existence with $a>0$ gives an actual on-shell spacetime $I\times S^3$, with compact Cauchy surfaces and no completeness requirement.
+The metric--scalar coupling is nonzero:
+\[
+\nabla_t\nabla_iX^A=(u-\mathscr H f)\partial_iY^A
+=2\partial_iY^A
+\]
+at the initial slice.
+Moreover $dX=uY\,dt+f\,dY$ has rank four wherever $uf\ne0$, since the temporal direction is radial and the three spatial directions span $Y^\perp$.
+Rank four is a property of this example and is not a hypothesis of the state theorem.
+
+Adjoin a fifth background scalar $Z=0$ and potential $V(X,Z)=\mu^2Z^2/2$ with $\mu\ne0$.
+It contributes no background stress and satisfies $V_{,A}=0$ on the entire image, while $V_{,ZZ}=\mu^2\ne0$.
+The same nonconstant coupled solution therefore illustrates both flat background directions and a nonzero transverse potential Hessian.
