@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="304" viewBox="0 0 1280 304" role="img" aria-labelledby="title desc">
+  <title id="title">Geometry, matter and quantum information</title>
+  <desc id="desc">A research-archive cover with a quiet coordinate grid and three abstract intersecting curves. The curves are illustrative, not plotted data.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#DCE7ED" stroke-width="0.7"/></pattern>
+    <clipPath id="clip"><rect x="0.5" y="0.5" width="1279" height="303" rx="8"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="1280" height="304" fill="#F5F9FC"/>
+    <rect x="720" width="560" height="304" fill="url(#grid)"/>
+    <path d="M743 251C858 251 818 58 946 58S1061 243 1248 90" fill="none" stroke="#127D87" stroke-width="2.3"/>
+    <path d="M732 88C868 88 870 235 993 235S1123 65 1287 65" fill="none" stroke="#57728E" stroke-width="1.8"/>
+    <path d="M757 196C864 23 1079 285 1290 148" fill="none" stroke="#A8783F" stroke-width="1.8"/>
+    <circle cx="889" cy="119" r="6" fill="#F5F9FC" stroke="#127D87" stroke-width="2"/>
+    <circle cx="1102" cy="156" r="6" fill="#F5F9FC" stroke="#57728E" stroke-width="2"/>
+    <path d="M889 104V134M874 119H904M1102 141V171M1087 156H1117" stroke="#8AA1B2" stroke-width="0.7"/>
+    <rect x="44" y="44" width="4" height="23" rx="2" fill="#127D87"/>
+    <text x="62" y="61" font-family="Segoe UI,Arial,sans-serif" font-size="14" letter-spacing="2.1" font-weight="600" fill="#46617A">MATHEMATICAL PHYSICS · QUANTUM INFORMATION</text>
+    <text x="44" y="129" font-family="Georgia,Times New Roman,serif" font-size="46" font-weight="700" fill="#112B40">Geometry, matter</text>
+    <text x="44" y="184" font-family="Georgia,Times New Roman,serif" font-size="46" font-weight="700" fill="#112B40">and quantum information.</text>
+    <text x="45" y="244" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#46617A">States, interactions, reconstruction and quantum control.</text>
+    <text x="1216" y="280" text-anchor="end" font-family="Consolas,monospace" font-size="12" letter-spacing="1.1" fill="#688398">20 PAPERS · SOURCE &amp; CODE</text>
+  </g>
+  <rect x="0.5" y="0.5" width="1279" height="303" rx="8" fill="none" stroke="#D7E3EB"/>
+</svg>

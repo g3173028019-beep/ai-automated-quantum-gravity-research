@@ -1,6 +1,20 @@
-# Workflow, attribution, and review declaration
+# Workflow, credit and review
 
-## Statement from the repository operator
+[Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Source history](HISTORY.md)
+
+## How this research was produced
+
+The workflow asks AI systems to survey the literature, choose open problems and attempt solutions through derivation, computation and cross-review. Human direction sets priorities, provides feedback, and decides what is prepared for the archive.
+
+The operator reports the following contribution history:
+
+- **Earlier research:** led mainly by Fable 5.
+- **Results from July 2026 onward:** predominantly produced by GPT models.
+- **Cross-review, checking and manuscript preparation:** DeepSeek and multiple GPT models also participated.
+
+This chronology concerns research production as well as review. Specific attribution follows the retained evidence for a result; revising an older manuscript does not reassign its original proof.
+
+## The operator's statement
 
 > I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.
 >
@@ -8,32 +22,22 @@
 >
 > These manuscripts and their scientific claims have not yet undergone human expert review.
 
-The operator's corrected chronological account is that **the earlier work was led mainly by Fable 5**, while **results from July 2026 onward were predominantly produced by GPT models**. DeepSeek and multiple GPT models also participated in cross-review, checking, and manuscript preparation and organization. This describes production as well as review; it is not a complete audited allocation of individual contributions. **Fable 5** follows the operator's designation; this archive does not infer an alternative model identity.
+## Authorship and review status
 
-This corrected account replaces the earlier blanket archive-wide attribution. The earlier editions of the first two papers are preserved in their version folders with the historical wording. Their current revised PDFs and this declaration give the corrected account. A later manuscript date does not reattribute an older proof. Human authorship, intellectual credit and ownership remain unresolved.
+Human author and affiliation fields are currently blank. Git commit attribution records archive maintenance. References credit the authors of the cited scientific work.
 
-## Authorship
+The archive records analytical derivations, automated calculations and AI cross-reviews. Human expert review has not yet taken place. Paper-specific verification notes explain the evidence supporting each result.
 
-Human author names and affiliations are deliberately blank pending a decision by the operator. No AI system is listed as a formal author. This temporary presentation does not settle authorship, intellectual-credit or legal-ownership questions.
+The current revised editions of papers 01 and 02 include the corrected chronology. Their earlier source and PDF editions retain the historical wording in the preserved version folders. Revising a manuscript does not reassign its original proof. See the [projection edition history](papers/01-projection-sign-rigidity/EDITION-HISTORY.md) and [chaos edition history](papers/02-half-wormholes-wiener-chaos/EDITION-HISTORY.md).
 
-Git commit attribution records archive maintenance, not scientific authorship. References continue to credit the authors of cited works.
+## Scope and editions
 
-## Review and evidence
+Each paper defines its model and conclusion. The twenty papers include finite mathematics and control, reduced gravitational information tasks, integer flux constructions, moment and reconstruction methods, coupled-field theory, boundary calibrations and a descriptive research-method study. Each has its own objects and assumptions.
 
-The source projects contain automated symbolic checks, numerical tests and AI-generated internal reviews. These activities are reported as automated or internal checks, not independent human peer review. Historical labels such as "reviewed" or "hostile review" must be read in that sense.
+The canonical coupled Hadamard theorem in [paper 09](papers/09-canonical-einstein-scalar-hadamard/) is distinct from the preferred-clock effective action and finite-band state in [paper 07](papers/07-clock-foliated-reference/). The split-signature finite geometry in [paper 08](papers/08-einstein-scalar-mixed-quartic/) has a separate domain. The research-process study in [paper 20](papers/20-ai-research-case-study/) reports descriptive evidence without a causal model-ranking claim.
 
-The archive contains English research notes, their source, and scoped verification material. Build checks are distinct from analytical derivations, symbolic identities, numerical evidence and inherited inputs. Those checks do not establish every physical interpretation or global originality claim. Manuscript-specific assumptions and limits remain part of each result.
+[Source history](HISTORY.md) distinguishes historical documents from their repository editions. Local dates, hashes and private commits preserve provenance. Public disclosure and publication dates are recorded separately when established.
 
-## Scientific scope
+## Rights
 
-The first two papers concern finite real projection recovery and a zero-dimensional Gaussian-coupling model. The 29 October deliveries add weighted JT recovery, a reduced DBI heralded gate, integer STU flux constructions, local autonomous Maxwell control, a clock-foliated effective reference model, native Einstein–scalar quartic/backreaction constructions, and an independent canonical coupled-EKG physical Hadamard-state theorem. Their input, apparatus, geometric, signature and effective-theory assumptions are explicit. The modified reference model does not inherit the canonical theorem; the latter has its own proof under compact-Cauchy and critical-potential hypotheses. The finite Walker solution is not a Lorentzian Real completion. No paper establishes complete quantum gravity or ultraviolet completeness.
-
-The recovered-paper delivery adds finite-control, finite-geometry, operator-algebraic, moment-theoretic, benchmark and descriptive research-method articles. Their narrower scientific questions stand independently of a complete-gravity programme. Classical ingredients and cited source theorems remain credited; no model-ranking or causal research-productivity effect is inferred from the descriptive case study.
-
-## Dates and priority
-
-Historical dates are dates recorded in retained source documents. The first batch was packaged on 28 October 2026; the current delivery is dated 29 October 2026. Local dated records, hashes and private commits document provenance; they are not proof of public disclosure or settled publication priority.
-
-## Rights and third-party material
-
-No open-source or manuscript redistribution licence has been selected. This archive makes no decision about the unresolved allocation of rights described above. Third-party works retain their own authorship and applicable terms; citations rather than copies of those papers are included.
+Authorship, intellectual credit and ownership remain unresolved. A repository-wide redistribution licence has not been selected. Third-party papers are cited, and their existing authorship and rights remain with their respective holders.

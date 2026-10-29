@@ -1,0 +1,10 @@
+AI-led research in quantum gravity, quantum information and mathematical physics: 20 English papers with editable sources and reproducible calculations.
+
+Suggested repository topics:
+quantum-gravity
+quantum-information
+mathematical-physics
+general-relativity
+symbolic-computation
+reproducible-research
+research-manuscripts

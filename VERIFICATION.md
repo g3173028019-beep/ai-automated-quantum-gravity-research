@@ -1,61 +1,57 @@
-# Verification record
+# Verification and evidence
 
-## Recovered-paper delivery and current revisions
+[Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Reproduction guide](docs/REPRODUCTION.md)
 
-Eleven new papers and two revised papers are delivered with 155 compiled pages. Terminal builds and the desktop compiler confirmed success. All pages were inspected in rendered contact sheets, with selected dense proofs, tables and the reported paper 18 diagram inspected at readable scale. The diagram was corrected in native TikZ and the final PDF reinspected for line/text collisions and page clipping.
+The archive contains 20 paper packets. The manuscripts state their arguments, calculation files expose supporting algebra or numerics, and local verification notes distinguish executed checks, mathematical inputs and retained evidence. The [historical verification record](docs/VERIFICATION-HISTORY.md) preserves the full delivery narrative.
 
-Each packet's default portable calculation was executed in its standalone package, including clean/unrelated-working-directory checks where documented. The final repository files preserve those code/input bytes. Expensive unchanged producers were not repeated merely for delivery: retained evidence is explicitly distinguished from the bounded default replay. The source-specific verification records state exact analytic, symbolic, numerical and inherited coverage.
+## Evidence used in this archive
 
-Prior paper01/02 editions are preserved byte for byte with an edition manifest. Papers 03--09 remain unchanged. Metadata identifiers may be JSON-escaped without changing decoded values. The archive checker includes all top-level TeX parts and case-insensitive disclosure matching. These packaging checks are not human peer review or formal proof certification.
+| Evidence | What to inspect | Scope |
+|---|---|---|
+| Analytical proof | Definitions, hypotheses, domains, proof steps and cited theorems | Establishes the stated conclusion under its assumptions |
+| Exact algebra | Rational identities, symbolic operators, integer relations and finite field equations | Checks the encoded identities, without replacing an analytic domain or PDE argument |
+| Certified estimate | Interval, residual and tail bounds, their inputs and error propagation | Distinguish newly generated enclosures from recombination of saved bounds |
+| Numerical calculation | Model, discretization, parameters, convergence checks and observable | Supports the specified finite or approximated calculation |
+| Retained certificate or input | Provenance and role in the downstream argument | Replaying a certificate differs from regenerating its producer's data |
+| Packaging and layout | Source/PDF consistency, citations, bylines, metadata and rendered pages | Checks the artifact, without certifying its physical interpretation |
 
+A successful finite check applies to the object it encodes. It does not establish an unencoded infinite-dimensional limit, Fredholm or wavefront theorem, interacting quantum master equation, or physical reconstruction.
 
-## Canonical coupled-state theorem delivery
+## Evidence across the 20 papers
 
-The independent fourteen-page paper received focused operator and Fredholm/microlocal analytic scrutiny, followed by common-normalization manuscript integration. The proof includes kernel and cokernel obstructions, residual gauge removal, physical-charge finite-rank CCR repair, compact-test/Cauchy equivalence and neutral real-field averaging. Standard pseudodifferential, elliptic, normally hyperbolic and propagation/lift results are explicitly cited mathematical inputs, not certified by the finite algebra script.
+The [reproduction guide](docs/REPRODUCTION.md) gives every default command and its output location. Each linked packet supplies its local requirements and verification record.
 
-The supporting exact-algebra command passed from the final repository packet. It tests normalization and negative controls, charged-adjoint and defect identities, and the nonconstant background with a massive spectator. Terminal and desktop compilation succeeded; all fourteen rendered pages and selected full-resolution proof/disclosure pages were inspected. The delivered PDF and source files match that edition. The previous eight paper directories remain unchanged. No human expert review or formal proof-assistant certification is claimed.
+| Paper | Principal evidence and boundary |
+|---|---|
+| [01 · Projection sign rigidity](papers/01-projection-sign-rigidity/README.md) | Analytic genericity and fixed-data holonomy criterion; portable exact revision check. Historical Wolfram subset enumeration is optional. |
+| [02 · Half-wormholes and Wiener chaos](papers/02-half-wormholes-wiener-chaos/README.md) | Probability/combinatorial derivations and two portable exact checks; prior variance formulas are credited. Historical Monte Carlo is separate. |
+| [03 · Energy-weighted thermal recovery](papers/03-jt-energy-weighted-recovery/README.md) | Infinite-input analytic recovery bound, supported by charge/Gaussian algebra, finite coherent examples and interval evaluations. |
+| [04 · Heralded controlled-phase gate](papers/04-dbi-heralded-controlled-phase/README.md) | Complete-instrument and uniform conditional-fidelity arguments; the default replay recombines retained continuum residual partitions rather than reintegrating them. |
+| [05 · Integer flux families](papers/05-integer-flux-families/README.md) | Exact assignments, F-term rank, canonical masses and pointwise lattice calculations; global geometric capacities remain conditional inputs. |
+| [06 · Positive-energy local clocks](papers/06-maxwell-local-clocks/README.md) | Full-state clock comparison and resource/error estimates using the packaged accepted electromagnetic reference data. |
+| [07 · Clock-foliated effective reference](papers/07-clock-foliated-reference/README.md) | Coupled harmonic constraints, positivity and finite-band Gaussian/evolution calculations for the specified modified effective action. |
+| [08 · Einstein–scalar mixed quartic](papers/08-einstein-scalar-mixed-quartic/README.md) | Off-shell quartic/source identities and a separate exact finite-backreaction family, with the split-signature limitation explicit. |
+| [09 · Canonical Einstein–scalar Hadamard states](papers/09-canonical-einstein-scalar-hadamard/README.md) | Analytic physical-state existence proof on the stated compact-Cauchy, critical-potential backgrounds, including singular Fredholm repair; the algebra script supports normalization and examples. |
+| [10 · Controlled quantum-weight networks](papers/10-quantum-weight-networks/README.md) | Finite cell/network proofs and exact binary-symplectic checks; arbitrary-graph and collective-limit statements are not extrapolated from a finite table. |
+| [11 · Finite causal transfer](papers/11-causal-regge-transfer/README.md) | Finite quotient/endpoint analysis and replay from frozen complete-action Hessian blocks; optional full-action producers are separate. |
+| [12 · Complexity-weighted moments and corona states](papers/12-complexity-moment-corona/README.md) | Analytic determinacy, critical escape and quotient/reachability arguments; finite geometric-series values illustrate proved bounds. |
+| [13 · Thermal point-process statistics](papers/13-thermal-statistics-reconstruction/README.md) | Exponential bounds, conditional reconstruction and explicit counterexamples; finite diagnostics do not close the separate Airy density problem. |
+| [14 · Operational instrument geometry](papers/14-operational-instrument-geometry/README.md) | Endpoint normalization, phase/reference obstructions and complete-tree arguments, with exact algebra and finite covariance checks. |
+| [15 · Positive Cartan carriers](papers/15-positive-cartan-carriers/README.md) | Explicit Clifford carrier, positive-selector obstruction and restricted invariant/action analysis, supported by exact finite certificates. |
+| [16 · Fuzzy half-turn covariance](papers/16-fuzzy-half-turn-limits/README.md) | Finite spectrum/covariance and sector-resolved limit proofs; heat-trace sequences are diagnostics rather than proofs of the limits. |
+| [17 · Finite Cartan–Regge closure](papers/17-cartan-regge-closure/README.md) | Local metric quotient, exact Schur blocks and nonlinear source calculations; numerical fold search has its own limited scope. |
+| [18 · Positive boundary sewing](papers/18-positive-boundary-sewing/README.md) | Typed framework, operator-valued CP criterion and two finite operational families; exhaustive small tests and seeded samples are distinguished. |
+| [19 · Local gauge benchmark](papers/19-local-gauge-benchmarks/README.md) | Source-specialized Green/Ward/BRST composition and finite sign checks; physical-state existence is imported, ordinary-dagger descent is obstructed and the interacting anomaly remains uncomputed. |
+| [20 · AI-assisted research case study](papers/20-ai-research-case-study/README.md) | Preserved corpus reaggregation and keyword sensitivity, with historical PDF counts retained as evidence; no causal audit effect or model ranking is inferred. |
 
-## Priority manuscript delivery, 29 October 2026
+Paper 07 modifies a clock-foliated effective action and constructs a finite-band Gaussian. Paper 09 proves the scoped canonical coupled physical-state theorem. They are distinct constructions; neither finite algebra command proves the other's analytic result. Paper 19 uses the physical-state theorem as an input and addresses additional local benchmark interfaces.
 
-The three added PDFs are byte-identical to the completed research editions: Maxwell 11 pages, clock-foliated reference model 11 pages, and Einstein–scalar 10 pages. Both terminal LaTeX and the desktop compiler had succeeded, and all 32 pages were visually inspected, with selected proof, matrix and resource pages inspected at readable resolution. This delivery reuses that unaffected evidence instead of rebuilding the papers.
+## Reusing evidence and reading the history
 
-Each compact package is replayed from its final repository location. Maxwell uses a bundled extraction of its two accepted reference fields; the remaining inputs are algebraic. The checks cover 23 clock/resource assertions, exact reference-model constraints and harmonic positivity with covariance/evolution checks, 42 mixed-quartic checks, and 14 finite-backreaction identities. These are portability replays of completed calculations, not new independent scientific review. See each packet's VERIFICATION.md for the inherited assumptions and exact coverage.
+Unchanged completed evidence can be retained without rerunning it for a documentation update. A changed model, input class, state, time interval or analytic hypothesis needs the corresponding argument or calculation for that setting. Packet-specific `VERIFICATION.md` and `PROVENANCE.json` files identify these boundaries.
 
-The previous five paper directories are compared with their pre-delivery SHA-256 manifest. New packet text, PDF metadata, cross-references and bibliography coverage are included in archive-checks.json. Byte-preserving Git attributes retain the packaged input and output hashes. No human expert review or comprehensive novelty certification is asserted.
+The [historical record](docs/VERIFICATION-HISTORY.md) reports the terminal/desktop builds, rendered-page inspections, portability runs and archive checks performed for the recorded deliveries. Earlier paper 01/02 editions remain preserved with their edition history. Saved archive-check results describe their recorded packaging state; they are not an instruction to rerun the checker whenever prose changes.
 
-## Delivery of 29 October 2026
+This documentation-only revision read packet instructions, requirements and relevant output-writing code. It did **not** execute scientific calculations, optional producers, manuscript builds, new hash inventories or the archive checker. Guide commands are instructions for readers, not new execution receipts.
 
-The three new manuscripts compiled with pdfLaTeX, BibTeX and latexmk to six pages each. Their final logs contain no unresolved references, citations or overfull boxes. The integrated review inspected all 18 rendered pages in contact sheets and selected equation, table and disclosure pages at readable resolution. No clipping, overlap or unresolved-reference markers were found. Human bylines and PDF author metadata are empty.
-
-Each default reproduction command was run successfully from its final repository packet, without historical project paths or network input:
-
-- `papers/03-jt-energy-weighted-recovery`: `python code/reproduce.py` reproduces Gaussian and charge identities, the optimized leading coefficient, 180 coherent matter/reference vector checks and 150-digit interval evaluations. The infinite-dimensional result rests on the stated analytical derivation; the finite checks are implementation checks.
-- `papers/04-dbi-heralded-controlled-phase`: `python replay.py` verifies copied certificate hashes, exact residual sums and initial mismatch, 110-digit gate estimates, and the sharp conditional-fidelity identity. It passes with nominal success at least 0.6565527711781338 and conditional squared fidelity at least 0.96400610918152. The robust bounds are 0.6351321846638459 and 0.9587714318247369. The saved cellwise residual bounds are inherited; the continuum producer was not rerun.
-- `papers/05-integer-flux-families`: `python reproduce.py` checks the exact flux signs, charge normalization, generic family rank and mass formulas, 33 assignments, nine reduced moduli point types and 72 complementary-pair weights. The geometric source capacities and global orientifold assumptions remain inherited inputs.
-
-Packet-specific `VERIFICATION.md` files distinguish derivation, fresh checks, inherited evidence and limits. One focused closure pass reused completed research checks; no full dynamical simulation, new broad literature review, formal proof-assistant certification or human expert review is claimed. The sharper DBI fidelity lemma and the flux branch corollary are bounded mathematical additions, not new physical protocols or global optimality results.
-
-`archive-checks.json` records the final build, metadata, disclosure, bibliography, English-language and common credential/path-pattern checks, together with packaged-file hashes. The two earlier paper directories were compared against their pre-delivery SHA-256 manifest and remain unchanged. These archive checks do not certify physical interpretation or global novelty.
-
-## First repository batch, 28 October 2026
-
-The English sources were read with their stated assumptions. Edits concern blank authorship, the requested AI-workflow disclosure, provenance, bibliography portability, a related-work update, and the intermediate-sector indices described in `HISTORY.md`.
-
-Both PDFs are rebuilt from source. Current archive checks inspect blank author fields, the disclosure, bibliography keys, unresolved PDF cross-references, placeholder bylines, accidental Chinese-language content, and common credential/private-path patterns. `archive-checks.json` records the checks and SHA-256 hashes of packaged files. Rendered pages are inspected for layout.
-
-These are scoped manuscript and archive checks, not a fresh independent proof of every result and not human expert review.
-
-The archive checker uses Python 3 and `pypdf`. The optional visual-review helper also uses Pillow and Poppler (`pdftoppm`). These dependencies are separate from the LaTeX-only build command.
-
-For this edition, AI visual inspection covered the five-page projection PDF and seven-page half-wormhole PDF using rendered page contact sheets and the disclosure pages. The author lines are blank; the requested workflow statement appears in both PDFs. No clipping, overlap, or unresolved cross-reference markers were found in the inspected renders and final build checks.
-
-## Historical automated evidence
-
-The following coverage is inherited from retained records rather than claimed as newly executed:
-
-- **Projection:** the analytic nonvanishing and finite-certificate argument, exact-rational subset-sum examples, and symbolic examples. Finite checks support implementations; the generic theorem rests on the analytic proof.
-- **Half-wormholes:** finite Pfaffian/chaos calculations, generating-function checks, exact low-dimensional determinant identities, and identified Monte Carlo comparisons. The moment-determinacy argument is analytic, not certified by Monte Carlo.
-
-The original scripts can be substantial. The half-wormhole script includes 400,000-sample Monte Carlo comparisons; the projection script includes exponential subset-sum checks. They require Wolfram Language and are optional for reading the papers. Their historical comments are not global-originality claims.
-
-Human review, a comprehensive current novelty review, journal submission and acceptance remain pending.
+The recorded review consists of automated calculations and AI review. Human expert review has not occurred; no comprehensive novelty certificate or publication-priority determination is supplied.

@@ -1,58 +1,42 @@
-# Source history and repository edition
+# Source history and repository editions
 
-Original project folders were read as sources and left unchanged. Historical source dates and the present repository edition are distinct.
+[Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-## Projection sign rigidity
+The current collection contains twenty papers. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
-- Retained projection-recovery note: `trackE-jt-moment-problem/PROOF-IV1-generic.md` records **12 June 2026**, including its all-strata generic theorem W3.
-- SHA-256 of that note: `f50eaaebdc3602620f0623c8ec6949ddb08a59a14c56e5f58ba46eeb1bfadf2c`.
-- Input English paper: P08 in the cross-framework bilingual series, dated **14 July 2026**.
-- SHA-256 of the unmodified input English source: `1e96397c4f7f1ab8c91d5105d3c3c3c46497b48bc6c4cb6100d1900dfc2a23f9`.
+## Scientific deliveries
 
-The October edition leaves authorship blank, adds the requested workflow declaration, makes the bibliography path self-contained, and adds a scoped comparison with Villacis, *Principal Minors and Absolute Values*, arXiv:2609.25499. The June note, July paper and October repository edition are separate provenance facts.
+| Delivery | What entered the repository | Scientific commit |
+|---|---|---|
+| 28 October 2026 | Projection sign rigidity and half-wormholes/Wiener chaos | [ecb0b0c](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/commit/ecb0b0c2a49fa00f02a718508b4871eed214b7a2) |
+| 29 October 2026 | JT mean-energy recovery, the heralded DBI gate and integer STU flux families | [6d6a644](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/commit/6d6a64471465bd356e707d96b1298bcacfc6d6c0) |
+| 29 October 2026 | Autonomous Maxwell clocks, the preferred-clock reference model and Einstein–scalar interactions/backreaction | [cd02b15](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/commit/cd02b15678c3644cf4624f1a2772d68f07368975) |
+| 29 October 2026 | The independent canonical coupled-EKG physical Hadamard theorem | [8858ba8](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/commit/8858ba8bd7d47e08fb5e9d5961553febfd2704cf) |
+| 29 October 2026 | Eleven recovered articles, papers 10–20, and versioned corrections to papers 01/02 | [fe8491e](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/commit/fe8491e7ff572d0da8b6b3db54216f7e06e14220) |
 
-## Half-wormholes and Wiener chaos
+The [detailed scientific history at the completed delivery](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/blob/fe8491e7ff572d0da8b6b3db54216f7e06e14220/HISTORY.md) retains the earlier source selections and recorded identifiers. Current provenance remains in each paper packet. No new scientific calculation accompanies this navigation update.
 
-- Input English paper: P07 in the same series, dated **14 July 2026**.
-- SHA-256 of the unmodified input English source: `acb85931c76f4fca90074649e47f60e1b7f353c81669df44f814517013de81e3`.
-- Earlier research and computational material comes from the original factorization-and-chaos studies; no new assertion of an exact first-discovery date is made here.
+## Versioned revisions
 
-The October edition leaves authorship blank, adds the workflow declaration, makes the bibliography path self-contained, dates the historical literature-search statement, and corrects the summation range in the single-draw bound to the actual intermediate sectors `1<=k<=n-1`.
+Papers 01 and 02 now use their corrected 29 October editions:
 
-## Verification material
+- [Paper 01 history](papers/01-projection-sign-rigidity/EDITION-HISTORY.md): the observed feasible-fibre criterion replaces the stronger global-injectivity characterization, with an exact explanatory counterexample. The generic theorem is unchanged.
+- [Paper 02 history](papers/02-half-wormholes-wiener-chaos/EDITION-HISTORY.md): prior-art attribution, compact-density exposition, canonical-family terminology, single-draw scope and contribution chronology are corrected. Closed Gaussian-chaos supporting statements are incorporated.
 
-The original scripts `e20_w3.wls` and `d11_theorem.wls` are copied as `verification/legacy_checks.wls` within each of the first two papers. Header wording identifies them as historical checks and avoids presenting credited prior formulas as new claims. They were not rerun for this batch. Current checks are described in [VERIFICATION.md](VERIFICATION.md).
+Their earlier tracked PDFs, sources and notes remain under the version folders and in Git history. Historical supplements remain identifiable separately from current portable checks.
 
-## Delivery of 29 October 2026
+The projection proof lineage includes a retained note dated 12 June 2026 and an English draft dated 14 July 2026. The chaos input draft is dated 14 July 2026. The canonical coupled-state lineage includes a retained 18 July checkpoint and the 28 October audit, followed by its 29 October proof consolidation. These dates are not interchangeable discovery or disclosure claims.
 
-Three six-page English manuscripts close selected completed results. Each has blank human authorship, a bibliography, portable reproduction material, saved outputs, a scoped verification record and source hashes in `PROVENANCE.json`.
+## Consolidation by scientific question
 
-- **JT recovery:** the round-one mean-energy theorem is made self-contained, including the Gaussian comparison, charge bounds, coherent-tail estimate and form-domain argument. The leading bound is proportional to `sqrt(nu) C^(-1/4)` for the stated common input class. The separately retained geometry-assisted research is outside this packet.
-- **DBI gate:** the round-two heralded protocol reuses the retained September continuum residual certificate at its frozen gate time. A short sharp contraction estimate improves the conditional squared-fidelity guarantee to `1-eta^2`: at least 0.96400610918152 nominally and 0.9587714318247369 in the stated error box. The protocol and success bounds are unchanged. Saved cell bounds are replayed, not freshly integrated.
-- **Integer STU flux:** the completed divisor construction, positive CS/axiodilaton spectra and pointwise charge minima are presented with exact portable calculations. The weak-coupling branch gives the immediate within-family capacity bound `g_s,min=floor(L/8)^(-2)` for `L>=8`; no global landscape optimum is asserted.
+Identical source versions are merged. Supporting or overlapping material is combined where it strengthens a coherent article: the quantum-weight seed and network obstruction form paper 10; boundary compatibility and two finite calibration families form paper 18. The common projection result remains paper 01, while distinct thermal-statistic questions appear in paper 13.
 
-The first two paper directories are preserved byte for byte against the pre-delivery hash manifest. The completed audit, research rounds and twistor milestone remain in their original locations and were not rewritten. The corrected chronological attribution is recorded in [DECLARATIONS.md](DECLARATIONS.md) and the new manuscripts: earlier work was Fable 5-led, while July 2026 onward results were predominantly produced by GPT models according to the operator. The old PDFs retain their original declaration as an archival edition.
+Independent questions remain separate. In particular, the canonical state-existence theorem, the preferred-clock stability construction and the split-signature exact solution have different hypotheses. The two Regge papers concern different geometries and observables.
 
-These are local source and delivery dates. A commit to this private repository is not demonstrable public disclosure or a claim of publication priority.
+[Manuscript status](MANUSCRIPT-STATUS.md) gives the source-to-paper placement and the bearing gaps in stronger unproved claims. Its record is preserved alongside the finished narrower results.
 
-## Priority manuscripts, 29 October 2026
+## Documentation and credit
 
-Three completed manuscripts are added without changing their inspected PDFs or LaTeX: an eleven-page autonomous Maxwell-control paper, an eleven-page clock-foliated reference-model paper, and a ten-page Einstein–scalar mixed-quartic/backreaction paper. Their main constructions were completed in a separate research continuation before this delivery.
+The homepage, index, research map, reproduction guide and evidence explanations were adapted from the supplied documentation drafts after the twenty-paper scientific delivery. The full previous verification narrative is preserved in [Verification history](docs/VERIFICATION-HISTORY.md). This documentation work does not change the papers, computations or version history.
 
-The new packets include portable calculations and saved outputs. Maxwell bundles only the accepted phase coefficient and two switching fractions needed by its replay, with the original input hash; all other bound coefficients are reconstructed. The reference-model and Einstein–scalar scripts reconstruct their inputs algebraically. The packaging pass changes paths and documentation, not scientific claims. The earlier five paper directories remain byte-for-byte unchanged.
-
-The earlier delivery choice did not dispose of other retained work. A separate manuscript-level recovery assessment follows this upload; it will distinguish independent results, overlapping versions, supporting methods, concrete errors and unreviewed material.
-
-## Independent canonical coupled-state theorem
-
-The fourteen-page canonical Einstein–scalar Hadamard paper consolidates a retained proof lineage with an 18 July 2026 checkpoint and the 28 October retrospective audit. The present 29 October consolidation derives the finite-multiplet operators in one normalization and supplies the complete regular/singular physical covariance construction and spacetime lift. A nonconstant closed-cosmology example, with an optional massive spectator, makes the coupled scope explicit.
-
-Focused analytic scrutiny corrected the raw metric/scalar normalization used by an earlier sign-only check, a lower-order boundary-matrix coefficient, and inconsistent physical-charge notation in the inherited singular formulas. The manuscript identifies the standard analytic input theorems separately from its coupled compatibility argument. The prior eight papers are preserved byte for byte. This remains a private research archive, not a human-reviewed publication or public-priority claim.
-
-## Completed recovered-paper delivery and versioned corrections
-
-The recovered material has now been carried through to eleven complete English manuscripts, numbered 10--20, with compact reproduction packages. The article boundaries follow independent scientific questions: related quantum-weight/network work is combined; complexity/corona and thermal-statistic questions remain distinct; boundary framework and finite calibration are combined; the local gauge benchmark and descriptive research-method study remain separate.
-
-Papers 01/02 now have corrected current editions. Paper01 uses the observed feasible-fibre criterion and gives an exact counterexample to the stronger global-injectivity wording; its generic theorem is unchanged. Paper02 applies the prior-art, compact-density, canonical-family, single-draw and chronology corrections, and includes proved or exactly checked supporting Gaussian-chaos statements. The exact earlier tracked editions are preserved under each paper's versions/2026-10-28 folder, with file hashes and the prior Git commit.
-
-All thirteen delivered versions compiled and were visually inspected (155 pages). The graphical abstract in paper 18 was repaired after a reported text/connector collision; routing, node widths and wrapping were checked in the original PDF at readable scale. Original archives and completed recovery evidence remain unchanged. This private delivery does not establish public priority.
+The accepted contribution chronology and exact operator statement are in [Declarations](DECLARATIONS.md). Human bylines remain blank and human expert review has not occurred. Private commits preserve provenance; they do not establish public priority or journal acceptance.
