@@ -86,4 +86,4 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 | [Manuscript status](MANUSCRIPT-STATUS.md) | Source consolidation and unresolved stronger targets |
 | [Declarations](DECLARATIONS.md) | Contribution history, authorship, review and rights |
 
-This repository is a private research collection. A completed packet is an inspectable scientific artifact; journal publication and demonstrated public disclosure are separate events.
+This repository is a public research archive. A completed packet is an inspectable scientific artifact; journal publication and demonstrated public disclosure are separate events.
