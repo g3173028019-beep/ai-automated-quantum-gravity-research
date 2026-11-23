@@ -75,7 +75,7 @@ wolframscript -file verification/legacy_checks.wls
 
 The projection supplement contains exponential subset-sum enumeration; the chaos supplement includes 400,000-sample Monte Carlo comparisons. Inspect the script and workload before choosing to run it. These historical checks were not repeated for the current revisions. Their finite or stochastic calculations do not replace the manuscripts' analytic genericity, moment or limit arguments.
 
-## Papers 21–24: reading and checking the derivations
+## Papers 21–26: reading and checking the derivations
 
 - [21 · Weyl relative entropy](../papers/21-weyl-diamond-relative-entropy/manuscript.md): An explicit coherent-state quadratic form in electric and magnetic radial curvature, and an obstruction to representing it by a regular finite-jet local curvature density.
 - [22 · Lorentzian Regge Airy asymptotics](../papers/22-lorentzian-regge-airy/manuscript.md): A nonzero cubic on a light-cone-regular branch leads to a uniform localized Airy approximation and opposite Fresnel signs for the separated saddles.
@@ -83,6 +83,9 @@ The projection supplement contains exponential subset-sum enumeration; the chaos
 - [24 · Calibrated de Sitter tidal diffusion](../papers/24-calibrated-tidal-diffusion/manuscript.md): Repeatedly recalibrating a freely falling finite-aperture tracefree tidal record yields a controlled nonzero diffusion scale.
 
 These Markdown manuscripts are the editable derivations. They do not include a separate calculation runner or a LaTeX/PDF build; the packet build instructions below apply to papers 01–20.
+
+- [25 · Characteristic data](../papers/25-characteristic-data-symplectic-rank/manuscript.md): Recompute the endpoint-moment rank and check the symplectic Gram pairing on disjoint radial intervals. The Raychaudhuri check is a separate second-order statement.
+- [26 · Neutral de Sitter states](../papers/26-neutral-de-sitter-mass-susceptibility/manuscript.md): Check the neutral-mode comparison and the susceptibility lower bound on bounded local approximants. This is an analytic derivation, not a simulation.
 
 ## Rebuild a manuscript
 

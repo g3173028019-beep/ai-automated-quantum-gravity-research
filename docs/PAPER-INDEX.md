@@ -4,7 +4,7 @@
 
 The archive contains 20 original research packets and 4 later analytical manuscripts. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–24 continue the sequence. They do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–26 continue the sequence. They do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -343,6 +343,22 @@ Numbering follows delivery order: 01–20 retain their original packet numbers; 
 **Connections.** 06 treats a prepared autonomous Maxwell control, whereas 24 defines a different calibrated readout. 09 provides a contrasting state-existence result. Both 21 and 24 use linearized Weyl curvature, but 21 probes a Minkowski local algebra and 24 a de Sitter time record, not the same background, state or observable.
 
 [Read the Markdown manuscript](../papers/24-calibrated-tidal-diffusion/manuscript.md) · [See the research routes](RESEARCH-MAP.md)
+
+## 25. Characteristic data and radiative symplectic rank
+
+**Result.** Two moments determine the full terminal sphere record in one solved linear characteristic sector, but the endpoint kernel retains infinite reduced radiative symplectic rank. Explicit local reconstruction and the separate leading nonlinear focusing calculation state the limits of the endpoint comparison.
+
+**Connections.** [11](../papers/11-causal-regge-transfer/) considers finite Lorentzian transfer; [19](../papers/19-local-gauge-benchmarks/) isolates a different gauge benchmark. Neither is an assumption of the characteristic result.
+
+[Read the manuscript](../papers/25-characteristic-data-symplectic-rank/manuscript.md)
+
+## 26. Neutral de Sitter mass susceptibility
+
+**Result.** For a minimally coupled scalar restricted to the specified neutral static-patch algebra, the removal of the homogeneous position pole is compatible with local normality but does not make the Araki entropy susceptibility in mass squared finite. The proof does not claim divergent entropy at every positive mass.
+
+**Connections.** [21](../papers/21-weyl-diamond-relative-entropy/manuscript.md) is a coherent Weyl-state comparison and [24](../papers/24-calibrated-tidal-diffusion/manuscript.md) is a tidal record of linearized gravitons. Neither is the scalar mass-variation problem.
+
+[Read the manuscript](../papers/26-neutral-de-sitter-mass-susceptibility/manuscript.md)
 
 ## Reading the evidence
 

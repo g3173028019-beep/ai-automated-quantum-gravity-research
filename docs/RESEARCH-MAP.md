@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Paper index](PAPER-INDEX.md) · [Reproduction](REPRODUCTION.md)
 
-The archive connects explicit information tasks, coupled-field state construction, finite geometry/control, and limits of reconstruction. A channel error bound, a Hadamard state-existence theorem, an exact finite algebra and a descriptive process study answer different scientific questions. The routes below group all 24 manuscripts by those questions while retaining each action, state space, input class and observable.
+The archive connects explicit information tasks, coupled-field state construction, finite geometry/control, and limits of reconstruction. A channel error bound, a Hadamard state-existence theorem, an exact finite algebra and a descriptive process study answer different scientific questions. The routes below group all 26 manuscripts by those questions while retaining each action, state space, input class and observable.
 
 ## Geometry–matter information tasks
 
@@ -87,8 +87,13 @@ Suggested route: **17 → 11 → 22** to compare exact local elimination, finite
 
 This provides a route into how the archive’s arguments were corrected, not a ranking or validation of the other 19 papers. [Declarations](../DECLARATIONS.md) records operator-reported model chronology and unresolved credit; [History](../HISTORY.md) separates source dates and editions.
 
+## From state and propagation data to physical distinctions
+
+- [25 · Characteristic data and symplectic rank](../papers/25-characteristic-data-symplectic-rank/manuscript.md) separates terminal constraints from radiative symplectic data. It complements the locality benchmark in [19](../papers/19-local-gauge-benchmarks/) but uses a different, characteristic constrained system.
+- [26 · Neutral de Sitter mass susceptibility](../papers/26-neutral-de-sitter-mass-susceptibility/manuscript.md) separates local normality from smooth distinguishability in a scalar state comparison. Compare [09](../papers/09-canonical-einstein-scalar-hadamard/) for existence of physical states and [21](../papers/21-weyl-diamond-relative-entropy/manuscript.md) for a different relative entropy question. The scalar comparison is not the tidal observable of [24](../papers/24-calibrated-tidal-diffusion/manuscript.md).
+
 ## Using the routes
 
 The [paper index](PAPER-INDEX.md) links all manuscripts and distinguishes the original PDF/source packets from the later analytical Markdown manuscripts. Use packet notes for commands and dependencies, and the [verification overview](../VERIFICATION.md) for the distinction between proof, exact finite checks, numerical diagnostics and retained inputs. No additional scientific rerun is implied by this navigation layer.
 
-The 24 manuscripts are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.
+The 26 manuscripts are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.

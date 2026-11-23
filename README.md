@@ -2,12 +2,19 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**24 English manuscripts · 20 full research packets and 4 analytical manuscripts**
+**26 English manuscripts · 20 full research packets and 6 analytical manuscripts**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 24 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 26 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
+
+## New analytical manuscripts
+
+- **[25 · Characteristic data and radiative symplectic rank](papers/25-characteristic-data-symplectic-rank/manuscript.md).** In a solved sector of the linearized Einstein null constraints, the terminal sphere record sees two moments while its kernel retains infinitely many independent radiative symplectic pairs. Includes a reconstruction and a separate second-order focusing check.
+- **[26 · Neutral de Sitter mass susceptibility](papers/26-neutral-de-sitter-mass-susceptibility/manuscript.md).** Removing the homogeneous position pole leaves locally normal states, but the mass-squared susceptibility of relative entropy is infinite for the specified neutral static-patch algebra.
+
+These are two scoped technical manuscripts, not a common model or a claim of external peer review.
 
 ## Research highlights
 
@@ -52,7 +59,7 @@ The connections are scientific reading routes across distinct models. The [resea
 
 ## Reproduce a result
 
-The original 20 packets have local READMEs, calculation files and verification records. Papers 21–24 are supplied as Markdown manuscripts with analytical derivations; the archive does not bundle separate PDFs or calculation packets for them. A short exact example, using only Python's standard library, checks the corrected projection-fibre example:
+The original 20 packets have local READMEs, calculation files and verification records. Papers 21–26 are supplied as Markdown manuscripts with analytical derivations; the archive does not bundle separate PDFs or calculation packets for them. A short exact example, using only Python's standard library, checks the corrected projection-fibre example:
 
 ~~~powershell
 cd papers/01-projection-sign-rigidity
@@ -89,7 +96,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All 24 questions, results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 26 questions, results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |
