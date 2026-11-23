@@ -8,6 +8,12 @@ Positive physical states for coupled fields, quantitative geometry–matter info
 
 **[Browse all 20 papers](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
+## Selected technical manuscripts
+
+Four supplemental notes on Weyl relative entropy, Lorentzian Regge asymptotics, infrared gravitational memory and de Sitter tidal diffusion. Each entry states its hypotheses and limits.
+
+**[Read the selected manuscripts](selected-research/README.md)**
+
 ## Research highlights
 
 | Result | What to read |

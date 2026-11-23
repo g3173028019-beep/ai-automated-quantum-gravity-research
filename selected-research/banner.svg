@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
+  <title id="title">Selected Quantum Gravity Manuscripts</title>
+  <desc id="desc">Four technical notes on curvature, discrete geometry, memory and tidal fluctuations.</desc>
+  <rect width="1200" height="280" rx="18" fill="#101b32"/>
+  <path d="M780 229 870 68l85 73 85-95 104 135M870 68l53 161 117-183M780 229l143 0 221-48M955 141l-32 88m32-88 189 40" fill="none" stroke="#62c8b4" stroke-width="2.5" opacity=".75"/>
+  <g fill="#a9e5d4"><circle cx="780" cy="229" r="5"/><circle cx="870" cy="68" r="6"/><circle cx="955" cy="141" r="5"/><circle cx="1040" cy="46" r="6"/><circle cx="1144" cy="181" r="5"/><circle cx="923" cy="229" r="6"/></g>
+  <g font-family="system-ui, sans-serif" font-weight="700"><text x="58" y="76" font-size="19" letter-spacing="4" fill="#80d9c1">RESEARCH ARCHIVE  /  SELECTED RESULTS</text><text x="56" y="142" font-size="47" fill="#fff">Quantum Gravity Manuscripts</text></g>
+  <text x="58" y="195" font-family="system-ui, sans-serif" font-size="21" fill="#c2d1e3">Weyl entropy  ·  Regge asymptotics  ·  Memory  ·  Tidal diffusion</text>
+</svg>
