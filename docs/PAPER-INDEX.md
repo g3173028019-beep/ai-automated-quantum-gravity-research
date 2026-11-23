@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The 20 current papers contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 20 original research packets and 4 later analytical manuscripts. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbered directories follow delivery order. They do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–24 continue the sequence. They do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -90,6 +90,8 @@ Numbered directories follow delivery order. They do not rank importance, enumera
 
 [PDF](../papers/06-maxwell-local-clocks/manuscript.pdf) · [LaTeX source](../papers/06-maxwell-local-clocks/main.tex) · [Packet README](../papers/06-maxwell-local-clocks/README.md) · [Verification](../papers/06-maxwell-local-clocks/VERIFICATION.md)
 
+**Related later manuscripts:** [24 · Calibrated de Sitter tidal diffusion](../papers/24-calibrated-tidal-diffusion/manuscript.md).
+
 ## 07. Quadratic stability of a preferred-clock reference
 
 **A Local Clock-Foliated Repair of the Inhomogeneous Spectrum of a Rotating Einstein-Static Scalar Reference**
@@ -132,6 +134,8 @@ Numbered directories follow delivery order. They do not rank importance, enumera
 
 [PDF](../papers/09-canonical-einstein-scalar-hadamard/manuscript.pdf) · [LaTeX source](../papers/09-canonical-einstein-scalar-hadamard/main.tex) · [Packet README](../papers/09-canonical-einstein-scalar-hadamard/README.md) · [Verification](../papers/09-canonical-einstein-scalar-hadamard/VERIFICATION.md)
 
+**Related later manuscripts:** [21 · Weyl relative entropy](../papers/21-weyl-diamond-relative-entropy/manuscript.md) · [23 · Gravitational memory and boosts](../papers/23-gravitational-memory-boost/manuscript.md) · [24 · Calibrated de Sitter tidal diffusion](../papers/24-calibrated-tidal-diffusion/manuscript.md).
+
 ## 10. Finite quantum-weight control networks
 
 **Controlled Quantum-Weight Networks**
@@ -159,6 +163,8 @@ Numbered directories follow delivery order. They do not rank importance, enumera
 **Evidence.** Analytic rank/endpoint algebra, geometry checks and packaged complete-action outputs. The quick replay reconstructs transfer matrices from frozen Hessian blocks; optional full numerical producers are separate.
 
 [PDF](../papers/11-causal-regge-transfer/manuscript.pdf) · [LaTeX source](../papers/11-causal-regge-transfer/main.tex) · [Packet README](../papers/11-causal-regge-transfer/README.md) · [Verification](../papers/11-causal-regge-transfer/VERIFICATION.md)
+
+**Related later manuscripts:** [22 · Lorentzian Regge Airy asymptotics](../papers/22-lorentzian-regge-airy/manuscript.md).
 
 ## 12. Regulated moments, escape and corona limits
 
@@ -244,6 +250,8 @@ Numbered directories follow delivery order. They do not rank importance, enumera
 
 [PDF](../papers/17-cartan-regge-closure/manuscript.pdf) · [LaTeX source](../papers/17-cartan-regge-closure/main.tex) · [Packet README](../papers/17-cartan-regge-closure/README.md) · [Verification](../papers/17-cartan-regge-closure/VERIFICATION.md)
 
+**Related later manuscripts:** [22 · Lorentzian Regge Airy asymptotics](../papers/22-lorentzian-regge-airy/manuscript.md).
+
 ## 18. Boundary positivity and complete sewing
 
 **Positive Boundary Systems and Completely Positive Sewing**
@@ -257,6 +265,8 @@ Numbered directories follow delivery order. They do not rank importance, enumera
 **Evidence.** Operator-algebraic proofs, exact finite constructions and portable Choi, quotient, composition and negative-control calculations. Related framework/calibration sources are consolidated here.
 
 [PDF](../papers/18-positive-boundary-sewing/manuscript.pdf) · [LaTeX source](../papers/18-positive-boundary-sewing/main.tex) · [Packet README](../papers/18-positive-boundary-sewing/README.md) · [Verification](../papers/18-positive-boundary-sewing/VERIFICATION.md)
+
+**Related later manuscripts:** [21 · Weyl relative entropy](../papers/21-weyl-diamond-relative-entropy/manuscript.md) · [23 · Gravitational memory and boosts](../papers/23-gravitational-memory-boost/manuscript.md).
 
 ## 19. A source-specialized local gauge benchmark
 
@@ -285,6 +295,54 @@ Numbered directories follow delivery order. They do not rank importance, enumera
 **Evidence.** Preserved aggregate/classification tables and an offline standard-library replay. Historical page parsing is inherited; the mutable-timestamp cutoff is not a contemporaneous cryptographic snapshot.
 
 [PDF](../papers/20-ai-research-case-study/manuscript.pdf) · [LaTeX source](../papers/20-ai-research-case-study/main.tex) · [Packet README](../papers/20-ai-research-case-study/README.md) · [Verification](../papers/20-ai-research-case-study/VERIFICATION.md)
+
+## 21. Weyl relative entropy
+
+**Question.** What does the vacuum relative entropy of the physical spin-two algebra measure on a causal diamond?
+
+**Result.** An explicit coherent-state quadratic form in electric and magnetic radial curvature, and an obstruction to representing it by a regular finite-jet local curvature density.
+
+**Scope.** Free linearized Weyl gravity in a round four-dimensional Minkowski diamond. The exclusion concerns the stated class of bulk densities and local edge jets, not all descriptions of entropy.
+
+**Connections.** 09 constructs positive physical Hadamard states in a coupled system; 18 separates positivity and sewing requirements in finite models. 21 instead starts with a prescribed vacuum and computes a local-algebra quantity. It provides neither a coupled-state construction nor a sewing theorem.
+
+[Read the Markdown manuscript](../papers/21-weyl-diamond-relative-entropy/manuscript.md) · [See the research routes](RESEARCH-MAP.md)
+
+## 22. Lorentzian Regge Airy asymptotics
+
+**Question.** What replaces the separate Gaussian saddle approximation near a concrete Lorentzian 4–2 saddle coalescence?
+
+**Result.** A nonzero cubic on a light-cone-regular branch leads to a uniform localized Airy approximation and opposite Fresnel signs for the separated saddles.
+
+**Scope.** An explicit six-vertex circuit and a localized real contour. It does not establish a global contour prescription or a refinement limit.
+
+**Connections.** 17 eliminates independent angles at fixed boundary in a Euclidean finite complex. 11 tests finite Lorentzian transfer and partial subdivision. 22 instead resolves a semiclassical saddle merger; it proves neither equivalence to 17’s quotient nor a continuum limit of 11.
+
+[Read the Markdown manuscript](../papers/22-lorentzian-regge-airy/manuscript.md) · [See the research routes](RESEARCH-MAP.md)
+
+## 23. Gravitational memory and boosts
+
+**Question.** Can one finite-energy infrared representation implement a nonzero physical memory displacement and the standard boost action?
+
+**Result.** Memory is implementable in an explicit finite-energy example, but Doppler leakage into unsqueezed radial modes rules out joint implementation with a nontrivial standard boost in the stated class.
+
+**Scope.** Shell-flat, rotation-equivariant quasifree spin-two representations. No universal Lorentz-symmetry claim and no result for general smooth overlapping radial bases.
+
+**Connections.** 09 concerns the existence of positive physical states and 18 separates positivity from extra compatibility requirements. 23 adds a concrete infinite-dimensional test: finite energy and positive quasifree data do not by themselves make a given symmetry implementable. Its null-infinity representation is not the state space of either earlier paper.
+
+[Read the Markdown manuscript](../papers/23-gravitational-memory-boost/manuscript.md) · [See the research routes](RESEARCH-MAP.md)
+
+## 24. Calibrated de Sitter tidal diffusion
+
+**Question.** Does a bounded-aperture, calibrated tidal record retain a nonzero diffusion coefficient in a specified graviton vacuum?
+
+**Result.** Repeatedly recalibrating a freely falling finite-aperture tracefree tidal record yields a controlled nonzero diffusion scale.
+
+**Scope.** Free linearized Einstein gravity in the Bunch–Davies state, with the specified tracer calibration. Neither detector backreaction nor a state-construction theorem is proved.
+
+**Connections.** 06 treats a prepared autonomous Maxwell control, whereas 24 defines a different calibrated readout. 09 provides a contrasting state-existence result. Both 21 and 24 use linearized Weyl curvature, but 21 probes a Minkowski local algebra and 24 a de Sitter time record, not the same background, state or observable.
+
+[Read the Markdown manuscript](../papers/24-calibrated-tidal-diffusion/manuscript.md) · [See the research routes](RESEARCH-MAP.md)
 
 ## Reading the evidence
 

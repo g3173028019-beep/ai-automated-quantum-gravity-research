@@ -20,6 +20,15 @@ This delivery completes eleven recovered articles and two current revisions. Sup
 
 Papers03--09 remain unchanged. They include the distinct canonical Einstein--scalar Hadamard theorem and the separate preferred-clock effective-model construction. Earlier editions of papers01/02 remain under their version folders and in Git history.
 
+## Papers 21–24: analytical manuscripts
+
+- [21 · Weyl relative entropy](papers/21-weyl-diamond-relative-entropy/manuscript.md). Free linearized Weyl gravity in a round four-dimensional Minkowski diamond. The exclusion concerns the stated class of bulk densities and local edge jets, not all descriptions of entropy.
+- [22 · Lorentzian Regge Airy asymptotics](papers/22-lorentzian-regge-airy/manuscript.md). An explicit six-vertex circuit and a localized real contour. It does not establish a global contour prescription or a refinement limit.
+- [23 · Gravitational memory and boosts](papers/23-gravitational-memory-boost/manuscript.md). Shell-flat, rotation-equivariant quasifree spin-two representations. No universal Lorentz-symmetry claim and no result for general smooth overlapping radial bases.
+- [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md). Free linearized Einstein gravity in the Bunch–Davies state, with the specified tracer calibration. Neither detector backreaction nor a state-construction theorem is proved.
+
+The proofs are in the Markdown manuscripts. These entries do not claim a new numerical reproduction package or an extension of the older papers' model assumptions.
+
 ## Stronger original claims not presented as completed papers
 
 The following are concrete limits of the retained source programmes, rather than reasons to discard their sound finite or mathematical results.

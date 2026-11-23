@@ -2,17 +2,12 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**20 English papers · Editable sources · Portable calculations and saved results**
+**24 English manuscripts · 20 full research packets and 4 analytical manuscripts**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 20 papers](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 24 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
-## Selected technical manuscripts
-
-Four supplemental notes on Weyl relative entropy, Lorentzian Regge asymptotics, infrared gravitational memory and de Sitter tidal diffusion. Each entry states its hypotheses and limits.
-
-**[Read the selected manuscripts](selected-research/README.md)**
 
 ## Research highlights
 
@@ -26,6 +21,17 @@ Four supplemental notes on Weyl relative entropy, Lorentzian Regge asymptotics, 
 | **Integer flux families.** Exact STU solutions have positive complex-structure/axiodilaton masses and explicit charge–coupling relations within the constructed family. | [05 · PDF](papers/05-integer-flux-families/manuscript.pdf) · [Exact calculation](papers/05-integer-flux-families/README.md) |
 
 The [paper index](docs/PAPER-INDEX.md) gives the question, result, model and evidence for every manuscript. Numbers identify delivery packets, not a ranking of importance or a count of the wider source corpus.
+
+### Four connections to the newer manuscripts
+
+| Route | What the comparison adds |
+|---|---|
+| [09](papers/09-canonical-einstein-scalar-hadamard/README.md) → [21 · Weyl relative entropy](papers/21-weyl-diamond-relative-entropy/manuscript.md) | From positive physical state construction to an explicit information quantity on a different, free curvature algebra. |
+| [17](papers/17-cartan-regge-closure/README.md) → [11](papers/11-causal-regge-transfer/README.md) → [22 · Lorentzian Regge Airy asymptotics](papers/22-lorentzian-regge-airy/manuscript.md) | From finite action reduction and causal transfer to a controlled saddle merger on a Lorentzian real contour. |
+| [09](papers/09-canonical-einstein-scalar-hadamard/README.md) → [18](papers/18-positive-boundary-sewing/README.md) → [23 · Gravitational memory and boosts](papers/23-gravitational-memory-boost/manuscript.md) | State existence, positivity and symmetry implementability are separate requirements. |
+| [06](papers/06-maxwell-local-clocks/README.md) → [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md) ↔ [21 · Weyl relative entropy](papers/21-weyl-diamond-relative-entropy/manuscript.md) | Compare the calibration of a physical instrument with two different uses of Weyl curvature: a stationary time record and a local-algebra entropy. |
+
+These are reading routes across distinct models, not implications between theorems. The [research map](docs/RESEARCH-MAP.md#gravity-observables-from-states-to-readouts) names the comparison and the limit at each step.
 
 ## Choose a reading route
 
@@ -46,7 +52,7 @@ The connections are scientific reading routes across distinct models. The [resea
 
 ## Reproduce a result
 
-Every current packet has a local README, useful calculation files and a verification record. A short exact example, using only Python's standard library, checks the corrected projection-fibre example:
+The original 20 packets have local READMEs, calculation files and verification records. Papers 21–24 are supplied as Markdown manuscripts with analytical derivations; the archive does not bundle separate PDFs or calculation packets for them. A short exact example, using only Python's standard library, checks the corrected projection-fibre example:
 
 ~~~powershell
 cd papers/01-projection-sign-rigidity
@@ -83,7 +89,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All twenty questions, results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 24 questions, results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |

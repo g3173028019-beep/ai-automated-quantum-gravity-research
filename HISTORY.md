@@ -2,7 +2,7 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains twenty papers. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 24 manuscripts: the twenty original packets plus papers 21–24. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
 
@@ -14,7 +14,9 @@ The current collection contains twenty papers. Historical research dates, manusc
 | 29 October 2026 | The independent canonical coupled-EKG physical Hadamard theorem | [8858ba8](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/commit/8858ba8bd7d47e08fb5e9d5961553febfd2704cf) |
 | 29 October 2026 | Eleven recovered articles, papers 10–20, and versioned corrections to papers 01/02 | [fe8491e](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/commit/fe8491e7ff572d0da8b6b3db54216f7e06e14220) |
 
-The [detailed scientific history at the completed delivery](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/blob/fe8491e7ff572d0da8b6b3db54216f7e06e14220/HISTORY.md) retains the earlier source selections and recorded identifiers. Current provenance remains in each paper packet. No new scientific calculation accompanies this navigation update.
+The [detailed scientific history at the completed delivery](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/blob/fe8491e7ff572d0da8b6b3db54216f7e06e14220/HISTORY.md) retains the earlier source selections and recorded identifiers. Current provenance remains in each paper packet. This bibliography and navigation integration adds no new scientific calculation.
+
+The four later [analytical manuscripts](docs/PAPER-INDEX.md#21-weyl-relative-entropy) first entered the public repository in [551cf7b](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/commit/551cf7b54828bfa09e3112ad47122d3c6a6d6764) on 23 November 2026. The main catalog now assigns them numbers 21–24; no original packet was renumbered.
 
 ## Versioned revisions
 

@@ -25,3 +25,9 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex
 Copy `build/main.pdf` to `manuscript.pdf` after rebuilding a changed source. `VERIFICATION.md` states actual execution and inherited coverage, including the limits of the numerical fold search. `PROVENANCE.json` records code adaptation and source/output hashes.
 
 Human authors, affiliations and PDF Author are blank. Human expert review has not occurred. Neither the finite one-loop quotient nor its source response is presented as a completed quantum theory, a propagation theorem or a derived connection measure.
+
+## Related manuscripts
+
+- [22 · Lorentzian Regge Airy asymptotics](../../papers/22-lorentzian-regge-airy/manuscript.md)
+
+See the [research map](../../docs/RESEARCH-MAP.md) for the relationship and differences in scope.

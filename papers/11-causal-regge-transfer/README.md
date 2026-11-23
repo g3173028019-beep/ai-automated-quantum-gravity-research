@@ -45,3 +45,9 @@ The deliverable `manuscript.pdf` is the copied final `build/main.pdf`. The build
 Earlier work was Fable 5-led; July 2026 onward results were predominantly produced by GPT models, as reported by the operator. DeepSeek and multiple GPT models also participated in review/preparation. This is reported chronology, not an allocation of individual authorship or ownership.
 
 “I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.”
+
+## Related manuscripts
+
+- [22 · Lorentzian Regge Airy asymptotics](../../papers/22-lorentzian-regge-airy/manuscript.md)
+
+See the [research map](../../docs/RESEARCH-MAP.md) for the relationship and differences in scope.

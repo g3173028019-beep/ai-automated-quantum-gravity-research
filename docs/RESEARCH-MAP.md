@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Paper index](PAPER-INDEX.md) · [Reproduction](REPRODUCTION.md)
 
-The archive connects explicit information tasks, coupled-field state construction, finite geometry/control, and limits of reconstruction. A channel error bound, a Hadamard state-existence theorem, an exact finite algebra and a descriptive process study answer different scientific questions. The routes below group all 20 papers by those questions while retaining each action, state space, input class and observable.
+The archive connects explicit information tasks, coupled-field state construction, finite geometry/control, and limits of reconstruction. A channel error bound, a Hadamard state-existence theorem, an exact finite algebra and a descriptive process study answer different scientific questions. The routes below group all 24 manuscripts by those questions while retaining each action, state space, input class and observable.
 
 ## Geometry–matter information tasks
 
@@ -28,6 +28,15 @@ Suggested route: **04 → 06 → 03** for gate, apparatus and channel estimates.
 | [19. Local Einstein–scalar gauge benchmark](../papers/19-local-gauge-benchmarks/README.md) | A nonminimal Green matrix, compatible free BRST/equicausal interfaces and explicit dagger/interaction limits | An imported action and local AdS-interior/compact-host construction. State existence is credited as an input; a full interacting QME is not proved. |
 
 Suggested routes: **09 → 19** for physical state construction and its use in a local gauge benchmark; **07** for the distinct effective-model harmonic repair; **08** for native interactions and the split-signature finite solution. None substitutes for the hypotheses or conclusion of another.
+
+## Gravity observables: from states to readouts
+
+| Comparison | What is shared | What does not follow |
+|---|---|---|
+| [09](../papers/09-canonical-einstein-scalar-hadamard/README.md) → [21 · Weyl relative entropy](../papers/21-weyl-diamond-relative-entropy/manuscript.md) | Both work with physical, gauge-invariant degrees of freedom. | Constructing a coupled Hadamard state does not give the free Minkowski diamond’s modular form. |
+| [09](../papers/09-canonical-einstein-scalar-hadamard/README.md) → [18](../papers/18-positive-boundary-sewing/README.md) → [23 · Gravitational memory and boosts](../papers/23-gravitational-memory-boost/manuscript.md) | Separate the existence of a positive representation from the operations it supports. | Positivity or an abstract sewing test does not imply implementation of Lorentz boosts on a finite-energy memory representation. |
+| [06](../papers/06-maxwell-local-clocks/README.md) → [24 · Calibrated de Sitter tidal diffusion](../papers/24-calibrated-tidal-diffusion/manuscript.md) | Both make the physical readout or its calibration explicit. | The Maxwell apparatus is not the de Sitter tracer protocol. |
+| [21 · Weyl relative entropy](../papers/21-weyl-diamond-relative-entropy/manuscript.md) ↔ [24 · Calibrated de Sitter tidal diffusion](../papers/24-calibrated-tidal-diffusion/manuscript.md) | Both use linearized Weyl curvature rather than gauge-fixed metric components. | A local-algebra relative entropy in Minkowski does not determine a long-time de Sitter diffusion coefficient. |
 
 ## Moments, low-order data and reconstruction
 
@@ -58,14 +67,15 @@ The current revisions of 01/02 apply local characterization, attribution, proof-
 
 Suggested routes: **14 → 15** for operational versus carrier/selector geometry, and **10 → 16** for finite algebra versus collective or spectral limits. These are mathematical reading routes, not an assertion that the papers define the same gravity model.
 
-## Two distinct finite Regge questions
+## Three distinct finite Regge questions
 
 | Paper | Question answered | What remains separate |
 |---|---|---|
 | [17. Fixed-boundary Cartan–Regge closure](../papers/17-cartan-regge-closure/README.md) | Exact independent-angle elimination, metric quotient matching, determinant placement and nonlinear sourced curvature on one 4–2 complex | A branch-scoped Euclidean finite-complex result is not a Lorentzian propagation theorem or a connection path-integral construction. |
 | [11. Causal transfer and partial refinement](../papers/11-causal-regge-transfer/README.md) | A finite angular-weight-two transfer, architectural rank bound and subdivision dependence with corrected endpoint identification | The tested family is not a vanishing-mesh continuum limit; the fifth level’s hyperbolic transfer is not a universal continuum no-go. |
+| [22 · Lorentzian Regge Airy asymptotics](../papers/22-lorentzian-regge-airy/manuscript.md) | Cubic saddle coalescence and a uniform Airy approximation on the actual localized real contour | One Lorentzian 4–2 circuit. Do not identify its contour with 17’s Euclidean quotient or treat it as a refinement theorem for 11. |
 
-Suggested route: **17 → 11** to compare exact local elimination with causal transfer. Both use Schur reduction, but their geometries, quotients and observables differ. Shared terminology does not merge these papers.
+Suggested route: **17 → 11 → 22** to compare exact local elimination, finite causal transfer and the resolution of a saddle merger. Papers 17 and 11 use Schur reduction; the issue in 22 is uniform semiclassical asymptotics. Their geometries, quotients and observables differ. Shared terminology does not merge these papers.
 
 ## Integer compactification data
 
@@ -79,6 +89,6 @@ This provides a route into how the archive’s arguments were corrected, not a r
 
 ## Using the routes
 
-The [paper index](PAPER-INDEX.md) links every current PDF, editable main source, packet README and verification record. Use packet notes for commands and dependencies, and the [verification overview](../VERIFICATION.md) for the distinction between proof, exact finite checks, numerical diagnostics and retained inputs. No additional scientific rerun is implied by this navigation layer.
+The [paper index](PAPER-INDEX.md) links all manuscripts and distinguishes the original PDF/source packets from the later analytical Markdown manuscripts. Use packet notes for commands and dependencies, and the [verification overview](../VERIFICATION.md) for the distinction between proof, exact finite checks, numerical diagnostics and retained inputs. No additional scientific rerun is implied by this navigation layer.
 
-The 20 packets are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.
+The 24 manuscripts are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.

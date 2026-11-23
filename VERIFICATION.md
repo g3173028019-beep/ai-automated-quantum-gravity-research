@@ -46,6 +46,15 @@ The [reproduction guide](docs/REPRODUCTION.md) gives every default command and i
 
 Paper 07 modifies a clock-foliated effective action and constructs a finite-band Gaussian. Paper 09 proves the scoped canonical coupled physical-state theorem. They are distinct constructions; neither finite algebra command proves the other's analytic result. Paper 19 uses the physical-state theorem as an input and addresses additional local benchmark interfaces.
 
+## Analytical evidence in papers 21–24
+
+- [21 · Weyl relative entropy](papers/21-weyl-diamond-relative-entropy/manuscript.md). Free linearized Weyl gravity in a round four-dimensional Minkowski diamond. The exclusion concerns the stated class of bulk densities and local edge jets, not all descriptions of entropy.
+- [22 · Lorentzian Regge Airy asymptotics](papers/22-lorentzian-regge-airy/manuscript.md). An explicit six-vertex circuit and a localized real contour. It does not establish a global contour prescription or a refinement limit.
+- [23 · Gravitational memory and boosts](papers/23-gravitational-memory-boost/manuscript.md). Shell-flat, rotation-equivariant quasifree spin-two representations. No universal Lorentz-symmetry claim and no result for general smooth overlapping radial bases.
+- [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md). Free linearized Einstein gravity in the Bunch–Davies state, with the specified tracer calibration. Neither detector backreaction nor a state-construction theorem is proved.
+
+The statements and derivations are in the Markdown files. The earlier twenty-packet calculation replays do not verify these four proofs, and no new external review is claimed by this integration.
+
 ## Reusing evidence and reading the history
 
 Unchanged completed evidence can be retained without rerunning it for a documentation update. A changed model, input class, state, time interval or analytic hypothesis needs the corresponding argument or calculation for that setting. Packet-specific `VERIFICATION.md` and `PROVENANCE.json` files identify these boundaries.

@@ -26,3 +26,9 @@ DERIVATION.md and VERIFICATION.md give the calculation, executed coverage and ma
 Earlier work was Fable 5-led; July 2026 onward results were predominantly GPT-produced, as reported by the operator. DeepSeek and multiple GPT models also participated in review and preparation. Human expert review has not occurred. Local research dates and this private repository delivery do not establish public priority.
 
 > I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.
+
+## Related manuscripts
+
+- [24 · Calibrated de Sitter tidal diffusion](../../papers/24-calibrated-tidal-diffusion/manuscript.md)
+
+See the [research map](../../docs/RESEARCH-MAP.md) for the relationship and differences in scope.

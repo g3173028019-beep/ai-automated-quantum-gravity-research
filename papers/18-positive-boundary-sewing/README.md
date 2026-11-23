@@ -18,3 +18,10 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex
 Python requires NumPy; `requirements.txt` lists the requirement. Default reproduction uses no original research path, network or model provider. It writes finite stdout/receipts to `outputs/`. Two historical producers were retained with descriptive labels/output names; their formulas, parameters and negative controls were preserved. The independent diagnostic adds the transpose Choi, restriction, compression and Weyl-dictionary controls.
 
 The paper credits standard operator-algebra/quantum-operation results and claims the bounded compatibility/calibration package. Scalar state Grams do not certify complete positivity. The finite matched-charge quotient uses its declared block algebra. Human byline, affiliation and PDF Author remain blank. No human expert review or global novelty certificate is claimed. Earlier work was Fable 5-led; July onward predominantly GPT-produced according to the operator, with DeepSeek and multiple GPT review/preparation contributions. The full attribution statement and exact operator quotation appear in the manuscript and provenance.
+
+## Related manuscripts
+
+- [21 · Weyl relative entropy](../../papers/21-weyl-diamond-relative-entropy/manuscript.md)
+- [23 · Gravitational memory and boosts](../../papers/23-gravitational-memory-boost/manuscript.md)
+
+See the [research map](../../docs/RESEARCH-MAP.md) for the relationship and differences in scope.

@@ -26,3 +26,11 @@ The command prints a JSON report and requires no network or historical files. Th
 Human names and affiliations remain blank. Earlier work was Fable 5-led; July 2026 onward results were predominantly GPT-produced, as reported by the operator. DeepSeek and multiple GPT models also participated in review and preparation. No human expert review or public-priority certification is asserted.
 
 > I genuinely do not know how authorship, intellectual credit, or ownership should be attributed for these results.
+
+## Related manuscripts
+
+- [21 · Weyl relative entropy](../../papers/21-weyl-diamond-relative-entropy/manuscript.md)
+- [23 · Gravitational memory and boosts](../../papers/23-gravitational-memory-boost/manuscript.md)
+- [24 · Calibrated de Sitter tidal diffusion](../../papers/24-calibrated-tidal-diffusion/manuscript.md)
+
+See the [research map](../../docs/RESEARCH-MAP.md) for the relationship and differences in scope.
