@@ -31,7 +31,7 @@ The proofs are in the Markdown manuscripts. These entries do not claim a new num
 
 ## Later analytical manuscripts
 
-Papers [25 and 26](docs/PAPER-INDEX.md#25-characteristic-data-and-radiative-symplectic-rank) are analytical Markdown manuscripts. Papers 27–31 and the separate companions 29B and 29B+31 are standalone typeset articles:
+Papers [25 and 26](docs/PAPER-INDEX.md#25-characteristic-data-and-radiative-symplectic-rank) are analytical Markdown manuscripts. Papers 27–31 and the separately indexed companions are standalone typeset articles:
 
 - [27 · Parity-odd Weyl-cubic ADM gravity](papers/27-parity-odd-weyl-cubic-adm/README.md): Four-dimensional vacuum on the analytic perturbative branch, to first order in the Weyl-cubic coupling. No higher-order or quantum constraint algebra is asserted.
 - [28 · The Einstein tensor from Lorentzian Regge variation](papers/28-lorentzian-regge-einstein-tensor/README.md): Classical four-dimensional affine, quasi-uniform admissible meshes with uniform non-null margins and regular normal fans. It estimates variational consistency, not convergence of discrete solutions.
@@ -59,3 +59,8 @@ The following are concrete limits of the retained source programmes, rather than
 | A causal estimate of AI research productivity or model superiority | The preserved case has incomplete intervention provenance, no randomized or matched counterfactual comparison, and a keyword-sensitive file classifier. | Paper20 is a complete descriptive case study with reproducible metadata. |
 
 The historical umbrella synthesis is routed into these dedicated questions, not republished as a universal gravity solution. Classical moment, operator-algebra, spinor, control and field-theory inputs are credited. No fixed article count, human peer-review status, journal acceptance or public priority is inferred from this archive.
+
+
+### 27B
+
+[27B · Parity-odd Weyl-cubic gravity with fixed physical multipliers](papers/27b-weyl-cubic-finite-collar/README.md): Reorganizes the fixed-multiplier canonical reduction and proves a nonzero finite-collar invariant for Schwarzschild polar-to-axial mixing, together with a separate nonzero compact physical bracket. This is a first-order classical result on the Einstein branch. It does not assert finite-coupling hyperbolicity or quantum constraint anomaly freedom.

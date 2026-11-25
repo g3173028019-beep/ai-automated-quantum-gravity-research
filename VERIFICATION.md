@@ -77,3 +77,8 @@ The [historical record](docs/VERIFICATION-HISTORY.md) reports the terminal/deskt
 This documentation-only revision read packet instructions, requirements and relevant output-writing code. It did **not** execute scientific calculations, optional producers, manuscript builds, new hash inventories or the archive checker. Guide commands are instructions for readers, not new execution receipts.
 
 The recorded review consists of automated calculations and AI review. Human expert review has not occurred; no comprehensive novelty certificate or publication-priority determination is supplied.
+
+
+### 27B
+
+[27B · Parity-odd Weyl-cubic gravity with fixed physical multipliers](papers/27b-weyl-cubic-finite-collar/README.md): see the TeX and the built PDF. Proofs reviewed internally; no external peer review is claimed. This is a first-order classical result on the Einstein branch. It does not assert finite-coupling hyperbolicity or quantum constraint anomaly freedom.

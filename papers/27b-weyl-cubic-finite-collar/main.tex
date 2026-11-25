@@ -1,0 +1,254 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\TF}{\mathrm{TF}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Lie}{\mathcal L}
+\newcommand{\GN}{16\pi G}
+\newcommand{\Sch}{g_{\mathrm S}}
+\title{Parity-odd Weyl-cubic gravity with fixed physical multipliers:\\
+Canonical reduction and a finite-collar invariant}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study the first-order Einstein branch of four-dimensional vacuum gravity with the parity-odd Weyl cube. A finite-jet tangential metric change gives a first-order canonical action while preserving the numerical lapse and contravariant shift of the original metric. The strong normal-normal constraint bracket uses the inverse reconstructed spatial metric. We relate this canonical chart to the covariant Peierls bracket, keeping the original metric observables fixed. Our new result is a finite-collar non-removability invariant for the known polar-to-axial Schwarzschild mixing. In the master normalization of Cano, Fransen, Hertog and Maenaut, the coefficient of \(i\omega^3\) is \(-144M(1-2M/r)/r^5\). Its tortoise integral between \(r_a,r_b\) is \(-36M(r_a^{-4}-r_b^{-4})\). We prove that a stationary, identity-leading, finite-order local redefinition cannot remove the cross response while retaining the Zerilli and Regge--Wheeler calibrations on both collars for the full local tree solution space. Separately, smooth compact conserved polar sources and later axial readouts give a strictly nonzero first-order covariant and canonical cross bracket. The radial invariant is not itself that bracket or a scattering coefficient.
+\end{abstract}
+
+\section{Question, scope, and conventions}
+
+Order reduction and observable reduction are distinct operations. A change of field coordinates can discard an unwanted higher-derivative branch without changing the observables of the branch continuously connected to Einstein gravity; it does not license discarding the change in how the physical metric is reconstructed. Likewise, mixing coefficients in a master equation depend on the chosen master coordinates, but this does not mean that all mixing can be removed with the measurement variables held fixed at both ends.
+
+We first give a self-contained canonical construction and state the corresponding physical bracket on the same branch. The first-order canonical formulas were presented in the earlier companion \cite{Paper27}; perturbative Hamiltonian reduction for higher-curvature gravity has important precedents, including \cite{GMZ}. The new radial analysis uses, and does not rederive or claim priority for, the Schwarzschild mixing calculated in \cite{Cano}. It tests a more specific equivalence relation: the two observation collars, time marking, and unperturbed physical master readouts are held fixed. No horizon or infinity boundary condition enters that theorem.
+
+Fix signature \((-+++)\) and spacetime orientation. The physical action is
+\begin{align}
+ S_{\rm phys}[g_{\rm phys}]
+ &=\frac{1}{\GN}\int \dd^4x\,\sqrt{-g_{\rm phys}}
+      \bigl(R[g_{\rm phys}]+\eps I_{\rm o}[g_{\rm phys}]\bigr),
+ \label{eq:action}\\
+ I_{\rm o}&=\operatorname{Im}\tr(E+iB)^3
+              =3\tr(E^2B)-\tr(B^3).\nonumber
+\end{align}
+Here \(E_{ij}=C_{ninj}\), \(B_{ij}=\tfrac12\epsilon_i{}^{kl}C_{kl n j}\) are the spatial electric and magnetic Weyl tensors, and the trace uses one index raised on each factor. This equals a nonzero convention-dependent multiple of the covariant odd Weyl contraction. The normalization in \eqref{eq:action} fixes \(\eps\), of dimension length to the fourth power. We retain terms through order \(\eps\) only and use compact variations or cuts on which all perturbative surface terms vanish. A finite-coupling higher-derivative initial-value problem, boundary-charge algebra, or quantum assertion is not implicit in formal equality through this order.
+
+\section{Canonical chart with unchanged lapse and shift}
+
+Write the auxiliary metric and its positive-lapse decomposition as
+\[
+ g=-N^2\,\dd t^2+q_{ij}(\dd x^i+V^i\dd t)(\dd x^j+V^j\dd t),
+ \qquad
+ n=N^{-1}(\partial_t-V),\qquad
+ K_{ij}=\frac{\dot q_{ij}-\Lie_Vq_{ij}}{2N}.
+\]
+Here \(V\) is the \emph{contravariant} shift. Choose curvature sign so the linearized spatial Ricci tensor of a flat transverse-tracefree perturbation is \(-\Delta h/2\); choose the induced spatial orientation in the magnetic formula below. Define
+\begin{align}
+ {\cal E}_{ij}(q,K)&=\bigl(R_{ij}[q]+K K_{ij}-K_{ik}K^k{}_j\bigr)^{\TF},
+ &
+ {\cal B}_{ij}(q,K)&=\bigl(\epsilon_{(i}{}^{kl}D_kK_{l|j)}\bigr)^{\TF}.
+ \label{eq:carriers}
+\end{align}
+
+\begin{theorem}[Fixed physical multipliers]\label{thm:adm}
+For canonical momentum density \(p^{ij}\), put \(p=q_{ij}p^{ij}\) and
+\(K_{0ij}=(\GN/\sqrt q)(p_{ij}-q_{ij}p/2)\). There is a local formal chart of the Einstein branch with Hamiltonian \(C[N]+D[V]\), where
+\begin{align}
+ C[f]&=\int_\Sigma \dd^3x\,f
+ \left[
+ \frac{\GN}{\sqrt q}\bigl(p_{ij}p^{ij}-p^2/2\bigr)
+ -\frac{\sqrt q}{\GN}\,R[q]
+ -\eps\frac{\sqrt q}{\GN}\,I_{\rm o}({\cal E},{\cal B})(q,K_0)
+ \right],\label{eq:constraint}\\
+ D[X]&=\int_\Sigma \dd^3x\,p^{ij}\Lie_Xq_{ij}.\nonumber
+\end{align}
+The physical spatial metric on spatial evolution jets is
+\begin{equation}
+ Q=q-\frac{3\eps}{2}({\cal E}{\cal B}+{\cal B}{\cal E})^{\TF}(q,K_0),
+ \label{eq:physical}
+\end{equation}
+and the physical multipliers are precisely \(N,V\). With the canonical bracket, throughout the unconstrained spatial phase space,
+\begin{align}
+ \{C[f],C[g]\}&=D[Q^{-1}(f\,\dd g-g\,\dd f)]+O(\eps^2),\label{eq:strong}\\
+ \{D[X],C[f]\}&=C[\Lie_X f]+O(\eps^2),&
+ \{D[X],D[Y]\}&=D[[X,Y]].
+\end{align}
+On constrained solution jets the transformations generated by these constraints, with the geometric multiplier transformations, reproduce the spacetime Lie transformation of the reconstructed metric. The local regular first-class count is two gravitational configuration polarizations.
+\end{theorem}
+
+\begin{proof}
+Gauss contraction and Weyl trace subtraction give \(E={\cal E}-\tfrac12(R^{(4)}_{\rm tan})^{\TF}\) off shell. Codazzi gives \(B={\cal B}\): the Ricci terms in the mixed Weyl projection drop out of its symmetric magnetic part. At fixed \(B\) define
+\begin{equation}
+ F_{ij}(g)=-\frac12\int_0^1
+        [I_{{\rm o},E}({\cal E}+s(E-{\cal E}),B)]^{\TF}_{ij}\,\dd s .
+ \label{eq:jetF}
+\end{equation}
+Then \(I_{\rm o}(E,B)-I_{\rm o}({\cal E},{\cal B})=G^{ij}_{\rm tan}F_{ij}\). Extend \(F\) to spacetime in the basis \(\dd x^i+V^i\dd t\), so \(F(n,\cdot)=0\). The map
+\(\Phi:g\mapsto g+\eps F(g)=g_{\rm phys}\) is invertible in formal local jets through order \(\eps\), with inverse obtained by subtracting the same first-order coefficient. It leaves \(N,V\) unchanged. Variation of the Einstein action with respect to the covariant metric has the bulk sign \(-G^{\mu\nu}\delta g_{\mu\nu}/(\GN)\). Hence, modulo a local divergence,
+\begin{equation}
+ S_{\rm phys}[\Phi(g)]=
+ \frac1{\GN}\int\sqrt{-g}\,[R+\eps I_{\rm o}({\cal E},{\cal B})]\,\dd^4x
+ +O(\eps^2).
+ \label{eq:actionid}
+\end{equation}
+This is an action identity; simply evaluating the original integrand on the spacetime Einstein equations would not prove it.
+
+Extract the Einstein surface term. The remaining Lagrangian uses \(K\) and its spatial derivative and has no velocities for \(N,V\). Define \(p\) by spatial integration by parts. The pointwise Einstein velocity Hessian is invertible for \(N>0\); its negative trace eigenvalue does not prevent that inversion. In the perturbative Legendre transform the first change of velocity cancels between \(p\dot q\) and the tree Lagrangian. Evaluating the order-\(\eps\) Lagrangian at \(\dot q_0=2NK_0+\Lie_Vq\) gives \eqref{eq:constraint}. In particular a derivative of the lapse apparently present in a spatial derivative of \(K\) before substitution is not a new smearing derivative in \eqref{eq:constraint}. Nothing requires a finite-\(\eps\) differential Hessian inverse.
+
+On trajectories satisfying only the spatial canonical evolution equations, the order-zero spatial Einstein tensor vanishes because varying \(q\) at fixed \(N,V\) varies precisely the tangential metric. There the coefficient of \(F\) is evaluated at \(E={\cal E}\), \(K=K_0\). Since \(I_{{\rm o},E}=3(EB+BE)^{\TF}\), this gives \eqref{eq:physical}. Away from those trajectories, the full reconstruction is \eqref{eq:jetF}, potentially involving accelerations.
+
+For a spacetime diffeomorphism use normal/tangential descriptors \(\alpha,\beta\) with \(\xi=\alpha n+\beta\). The pulled-back symmetry of \eqref{eq:actionid} has the geometric multiplier variations
+\begin{align}
+ \delta N&=\dot\alpha+\beta(N)-V(\alpha),\\
+ \delta V&=\dot\beta+[\beta,V]+Q^{-1}(\alpha\,\dd N-N\,\dd\alpha).
+ \label{eq:multipliers}
+\end{align}
+The last \(Q\) initially denotes the full reconstructed metric. In the variational identity impose the spatial evolution equations but \emph{not} the multiplier equations, so \(Q\) reduces to \eqref{eq:physical}. Use descriptors of compact time support and integrate their derivatives in
+\(\int (C[\delta N]+D[\delta V])\,\dd t=0\). Taking \(V=\beta=0\) gives the first bracket; the spatial density law and the spatial momentum map give the other two. The evaluation can be made on formal time jets obeying the evolution equations starting at arbitrary spatial canonical data, so it establishes a strong identity without assuming an unconstrained higher-order Cauchy problem. Signed lapse smearings follow by differences of positive lapse choices.
+
+For the on-shell geometric transformation, both the pulled-back spacetime action of \(\xi\) and the canonical generator are tangent to constrained solutions and have the same changes \eqref{eq:multipliers}. Their difference solves the homogeneous linearized first-order canonical evolution with zero multiplier changes. At each perturbative order the difference is a finite-order local differential operator in the descriptors. In the linearized equation, the coefficient of its highest time derivative of a freely variable descriptor occurs one order higher only on the left-hand side. It must vanish with all associated spatial jets; downward induction kills the difference. This establishes the claimed Lie transformation of \emph{the reconstructed metric}, not the naive off-shell Lie transformation of \(q\). Regular perturbation of the four local Einstein constraints gives the stated count, without a claim about global stabilizers.
+\end{proof}
+
+\section{The covariant bracket in the canonical chart}\label{sec:bracket}
+
+The action change in \eqref{eq:actionid} controls the physical pairing as well as the equations. Let \(E_{\rm phys}\) denote the physical Euler derivative and \(\theta_{\rm phys}\) its covariant presymplectic potential. After the differential field substitution, integrate the term \(E_{\rm phys}\cdot D\Phi[\delta g]\) by parts. The transformed potential equals the pullback of \(\theta_{\rm phys}\) plus a term linear in \(E_{\rm phys}\) and finitely many of its derivatives, a field-space exact term from the action divergence, and a possible spatial corner divergence. On the formal solution branch and its tangent solutions through this order, the Euler term and its field variation vanish at the order kept. Integrating the currents on a cut with compactly supported variations therefore gives the same presymplectic form, modulo \(O(\eps^2)\). The Legendre potential of the reduced action is \(\int p^{ij}\delta q_{ij}\): terms with spatial derivatives of the velocities were already included in the variational \(p\), and introduce only spatial divergences in this comparison. After reduction by boundary-trivial diffeomorphisms this gives the canonical form of Theorem~\ref{thm:adm}. This argument would not justify identifying independently chosen boundary symplectic forms on a finite box.
+
+For clarity, on a fixed formal background let \(P_0\) be a normally hyperbolic gauge-fixed Einstein Hessian, and let \(P_1\) denote the order-one insertion, using the same tree gauge fixing. Use the same normalization of variational sources throughout. The coefficientwise retarded and advanced inverses on conserved compact sources are
+\begin{equation}
+ G^\pm_\eps=G^\pm_0-\eps G^\pm_0P_1G^\pm_0+O(\eps^2).
+ \label{eq:born}
+\end{equation}
+The products are taken on the corresponding retarded or advanced support classes; in a compact pairing only the causal region between the tests contributes. No finite-\(\eps\) inverse of a fourth-order principal operator is needed. The physical source pairing is independent of the gauge representative. Denote the invariant Hessian and gauge differential at the formal solution by \(E_\eps\) and \(R_\eps\). The appropriate identity is the total Ward relation \(E_\eps R_\eps=O(\eps^2)\), and its adjoint, not separate annihilation by \(E_1R_0\) on a moving background. Choose a gauge fixing whose ghost operator has the tree normally hyperbolic vector wave principal part. Applying the formal Ward identity to the gauge-fixed equation for a conserved source gives the homogeneous ghost equation for the gauge condition. At order zero its retarded or advanced data vanish; at order one the potential forcing from lower-order gauge conditions is therefore also zero. Order-by-order ghost uniqueness gives the required physical representative.
+
+Take \(\Delta_\eps=G^+_\eps-G^-_\eps\) with \(+\) retarded, and adopt the Peierls convention \(\{B,A\}=\langle B',\Delta_\eps A'\rangle\). Green's identity for the variational current pairs \(\Delta_\eps A'\) with any homogeneous physical tangent to give the differential of \(A\), with the matching symplectic sign. One way to check it is to integrate the retarded identity on a late cut, the advanced identity on an early cut, and subtract. This works coefficientwise by \eqref{eq:born}, using compact test sources and the formal tangent equations. Thus the inverse of the same reduced current evaluated on the variations of the \emph{physical} observables gives the Peierls and canonical brackets equally, in the common orientation convention; see \cite{Khavkine}. In the canonical calculation those observables are composed with \(\Phi\), not substituted as bare auxiliary metric smears. Reversing the common advanced-retarded convention changes an overall sign, not the nonvanishing asserted below.
+
+\section{Matched Schwarzschild and the physical mixed insertion}
+
+Fix \(M>0\) and the oriented Schwarzschild exterior. It is a common exact background: the parity-odd Euler tensor on it is stationary and spherically symmetric, and must be antipodally odd by reversal of orientation. Every stationary spherically symmetric symmetric two-tensor on the background is antipodally even. Thus this Euler tensor is zero. There is no hidden first-order drift of the observation background.
+
+Use one mode \(\ell\ge2\) and a real harmonic calibration. Set \(f_{\rm S}=1-2M/r\), \(x=r_*\) with \(\dd x=\dd r/f_{\rm S}\), \(L=\ell(\ell+1)\), and \(n=(L-2)/2\). The GR master operators are \(L_\pm=\partial_x^2-\partial_t^2-V_\pm\), with
+\begin{align*}
+ V_-&=f_{\rm S}(L/r^2-6M/r^3),\\
+ V_+&=\frac{2f_{\rm S}\big[n^2(n+1)r^3+3n^2Mr^2+9nM^2r+9M^3\big]}
+                    {r^3(nr+3M)^2}.
+\end{align*}
+Fix the tree physical Zerilli and Regge--Wheeler readouts of the metric, in the respective tree normalizations used by \cite[eqs.~(40),(45)]{Cano}; for their gauge-invariant construction and source-free reconstruction see \cite{Moncrief,MartelPoisson}. In Fourier convention \(e^{-i\omega t}\), consider an on-shell GR polar input \(\Psi\) and divide the order-one axial output by the nonzero normalized odd cubic coefficient. In a source-free collar it solves
+\begin{equation}
+ (\partial_x^2+\omega^2-V_-)\Psi_{-,1}=(U+W\partial_x)\Psi,\qquad
+ (\partial_x^2+\omega^2-V_+)\Psi=0,\qquad
+ U=i\omega^3 U_3+i\omega U_1,\quad W=i\omega W_1 .
+ \label{eq:forced}
+\end{equation}
+Here \(U,W\) are the static pure odd-cubic specialization of \cite[eqs.~(49)--(52), App.~C (C17),(C19)]{Cano}. A tree-normalized polar input and zero tree axial output make diagonal order-one normalizations irrelevant for this insertion. The conversion from the coupling in \eqref{eq:action} to that in \eqref{eq:forced} is overall, fixed and nonzero. Signs in the numerical invariant below use the orientation and master/Fourier conventions of \cite{Cano}.
+
+There is a necessary Weyl-versus-Riemann check. In the complex chiral bivector decomposition of the Riemann endomorphism the scalar-curvature part adds a diagonal identity to the chiral Weyl blocks, while tracefree Ricci is off-diagonal. The trace defining the odd cube has a diagonal Hodge insertion, so a single off-diagonal Ricci factor cannot contribute. Thus the difference of the Riemann and Weyl odd cubes at terms linear in Ricci is a multiple of \(R\, C{*}C\); all other terms contain at least two Ricci factors. On Schwarzschild those factors, and \(C{*}C\), vanish. For a source-free tree polar perturbation \(\delta\mathrm{Ric}=0\) and \(\delta(C{*}C)=0\): the latter is a pseudoscalar in the same rotational irrep, whose antipodal transformation is incompatible with that of its polar input. The mixed second action variation of the difference against that input and any compact test in the collar therefore vanishes, including volume-variation contributions. This proves the use of \eqref{eq:forced} for the Weyl correction on this input. Ricci-flatness of the background alone would not justify equality for arbitrary off-shell or sourced perturbations.
+
+\begin{lemma}[Exact longitudinal coefficient]\label{lem:u3}
+In \eqref{eq:forced} one has
+\[
+ U_3(r)=-144\,\frac{M f_{\rm S}(r)}{r^5}.
+\]
+\end{lemma}
+\begin{proof}
+Extract the \(i\omega^3\) coefficient in App.~C (C17) of \cite{Cano}. With \(s=L-2\) and \(\Lambda_L=s+6M/r\), its numerator and denominator are
+\[
+ -2016\, L M^3r^7(r-2M)(sr+6M)^3,\qquad
+ 14\,L M^2r^{16}\Lambda_L^3 .
+\]
+For an expansion check, remove the common factor \(-2016\,LM^3r^7\). The coefficients in descending powers of \(r\) are
+\[
+ s^3,\quad 18s^2-2s^3,\quad 108s-36s^2,\quad 216-216s,\quad -432 .
+\]
+Cancel \((sr+6M)^3\) against \(r^3\Lambda_L^3\) to obtain the result. The derivative coefficient (C19) is linear in \(\omega\) and supplies no \(i\omega^3\) term of this type.
+\end{proof}
+
+\section{The finite-collar invariant}
+
+\begin{theorem}[Endpoint-calibrated non-removability]\label{thm:collar}
+Fix two open collars about \(2M<r_a<r_b<\infty\). Keep both tree master readings, the time calibration, and their order-one physical readouts fixed there for all local tree radial data and all frequencies in an open interval. Among stationary, identity-leading finite-order differential changes of the two master fields with smooth radial coefficients, the response \eqref{eq:forced} cannot be brought to zero under these collar conditions. More precisely, for representatives with \(\deg_\omega U\le3,\ \deg_\omega W\le1\), the number
+\begin{equation}
+ {\cal I}_{ab}=\int_{x_a}^{x_b} U_3(x)\,\dd x
+       =-36M(r_a^{-4}-r_b^{-4}).
+ \label{eq:invariant}
+\end{equation}
+is unchanged per unit normalized coupling. The theorem excludes changes of any finite order that purport to decouple to zero, not just changes initially linear in frequency.
+\end{theorem}
+
+\begin{proof}
+In the order-one axial equation on a tree polar solution only the polar-to-axial part \(A\) of the redefinition matters. Diagonal changes or the other off-diagonal entry multiply an already order-one axial field or change only order-two mixing. Changes of equation representatives by tree polar equations also vanish on this input. A redefinition involving more angular blocks cannot cancel the specified diagonal irrep transition without canceling its projected entry, because the tree operator is block diagonal. It suffices to examine \(A\) on the specified \((\ell,m)\) input and axial output.
+
+Use differential division by the monic tree radial equation, or repeatedly substitute \(\Psi''=(V_+-\omega^2)\Psi\) and differentiate. This gives the on-shell remainder \(A=a(x,\omega)+b(x,\omega)\partial_x\) with finite polynomial \(a,b\) in \(\omega\). No inverse radial operator or boundary Green function is involved. Endpoint identity on the complete local tree space implies \(a=b=0\) on each collar: at each radius and fixed frequency the independent local data \((\Psi,\Psi')\) are arbitrary. An open frequency interval suffices for the resulting polynomial identities.
+
+The insertion change is subtraction of the on-shell \(L_-A\). With \(\Delta V=V_+-V_-\), direct differentiation gives
+\begin{align}
+ U_A&=a''+\Delta V\,a+2(V_+-\omega^2)b'+V_+' b,\\
+ W_A&=2a'+b''+\Delta V\,b ,
+ \label{eq:change}
+\end{align}
+where primes mean \(\partial_x\). Split into the even and odd frequency parts since \(L_\pm\) are even. Only the odd parts can change \(U_3\). If \(\deg a>\max(1,\deg b)\) in this sector, the highest term of \(W_A\) has coefficient \(2a'\) at that order; the degree bound forces that coefficient to be constant before differentiation and the collar makes it zero. Descend until \(\deg a\le\max(1,\deg b)\). If \(\deg b>1\), the term \(-2\omega^2b'\) in \(U_A\) is now of strictly highest degree and exceeds three; its leading coefficient must again be constant and zero by the collar. Repeat the finite descent. The remaining odd part has \(a=i\omega a_1\) and \(b=i\omega b_1\), and only \(-2b_1'\) in \(U_A\) can change \(U_3\). Its integral vanishes between the fixed collars. Lemma~\ref{lem:u3} and \(\dd x=\dd r/f_{\rm S}\) give the displayed value, which is nonzero for all allowed finite collars. A zero representative is in the allowed degree class and is therefore impossible.
+\end{proof}
+
+The invariant refers to the two marked measurements, not to a classification of transformations of the full master system in all conventions. If the collar calibrations were allowed to change, \(b_1(x_b)-b_1(x_a)=18M(r_a^{-4}-r_b^{-4})\) is the difference required just to cancel the integrated cubic-frequency term in the lowest-degree reduction. Changing the tree variables themselves, as in a tree-order intertwiner, is a different comparison; a genuine intertwiner \(L_-A=AL_+\) gives zero input on this tree space. The theorem does not rule out nonlocal, nonstationary, or endpoint-changing diagonalizations. It also makes no assertion that merely matching a single scattering solution enforces \(a=b=0\) on a collar.
+
+\section{A compact metric bracket that detects the response}
+
+\begin{theorem}[Nonzero marked cross bracket]
+There are fixed smooth compact metric sources and axial readouts, at definite opposite parity, on a buffered Schwarzschild exterior laboratory. Their Einstein Peierls bracket vanishes and its first odd-cubic coefficient is nonzero. The same statements hold for their canonical reduced bracket under the reconstruction of Theorem~\ref{thm:adm}.
+\end{theorem}
+
+\begin{proof}
+Use \(\ell=2\) with a real spherical harmonic. Pick \(x_0\) in any finite exterior interval and take smooth compact Zerilli data \(\Psi(t_*,x)=0,\ \partial_t\Psi(t_*,x)=p(x)\) with \(p(x_0)=p'(x_0)=0\), \(p''(x_0)\ne0\). Finite propagation gives the tree polar solution. At the selected event \(\partial_t^3\Psi=p''\), while \(\partial_t\Psi=\partial_t\partial_x\Psi=0\). In the Fourier convention of \eqref{eq:forced}, \(i\omega^3\) is \(\partial_t^3\); by Lemma~\ref{lem:u3} the forcing is nonzero at this event. Therefore the axial first-order output cannot vanish on its entire open neighborhood. This argument does not assume the axial value at the selected event equals the forcing.
+
+Reconstruct the smooth vacuum polar metric perturbation \(h_+\) in that buffered radial interval from the source-free Zerilli solution, using the usual local finite differential reconstruction \cite{Moncrief,MartelPoisson}. Over the finite source and observation interval its radial support stays in the interior if the buffers are chosen sufficiently large, since the master equation has finite propagation and the reconstruction is local. Let \(\chi(t)\) rise smoothly from zero to one strictly before the observation neighborhood. Put \(j=E_0(\chi h_+)\) using the true linearized Einstein Euler operator on the reference metric. It is compact and smooth, supported only where the switch operates, and conserved by the linearized Noether identity. Its tree retarded solution in de Donder gauge agrees with \(\chi h_+\) up to a retarded gauge correction: apply the retarded ghost inverse to its gauge condition. The tree readings in the later observation collar are therefore exactly polar with the selected Cauchy response. The advanced solution vanishes there at tree and first order. In this collar the actual odd-Weyl output of the perturbative retarded inverse satisfies \eqref{eq:forced}, by the on-shell insertion check above. On an open set where the output is strictly of one sign, choose a nonzero smooth nonnegative axial test \(b\) compactly supported there. The first-order pairing is then nonzero.
+
+The two differentials just used can be realized as physical metric readouts on a marked laboratory. Fix a past spacelike shell with marks and use its finite normal geodesic development before caustics, with a fixed reference relabeling to the Schwarzschild chart on the measurement window. Transporting the shell marks with diffeomorphisms gives an equivariant embedding \(\Gamma_g\). Use the input functional \(A[g]=\langle j,\Gamma_g^*g-\Sch\rangle\) and an axial master test \(B[g]\) of the same pulled-back metric difference. At the exact seed the variation of the embedding contributes a Lie derivative, killed for \(A\) by conservation of \(j\), and for \(B\) by tree master gauge invariance. Thus their linear sources are exactly \(j\) and the adjoint axial smear, with no extra shell term. This is a marked construction; it does not pretend four independent intrinsic local curvature coordinates exist on Schwarzschild.
+
+With an overall common normalization of the source and detecting test, \(\{B,A\}_0=0\) by tree parity, and \([\eps]\{B,A\}\) is a nonzero constant times the integral of \(b\Psi_{-,1}\). The symplectic result of Section~\ref{sec:bracket} transfers the same physical pair to the order-reduced canonical chart with unchanged numerical physical multipliers. A reversal of the oriented parity convention exchanges the sign of the odd response. The collar integral in Theorem~\ref{thm:collar}, in contrast, refers to the local coefficient class and is not the value of this experiment.
+\end{proof}
+
+\section{Boundaries of the result}
+
+The non-removability theorem is relative to specified physical measurements at finite exterior locations and tree-normalized input data, not a new derivation of the full mode mixing or quasinormal frequency shifts in \cite{Cano}. The compact bracket is classical on the first-order analytic Einstein branch; it does not imply a finite-coupling global causal or quantum construction. The canonical and covariant bracket comparison uses vanishing corner contributions, not an independent boundary charge identification. These restrictions are necessary for the result: neither arbitrary boundary conventions nor arbitrary nonlocal field redefinitions preserve the quantity \({\cal I}_{ab}\) defined here.
+
+\begin{thebibliography}{9}
+\bibitem{Paper27}
+\emph{A lapse-preserving ADM reduction of parity-odd Weyl-cubic gravity},
+Paper 27 in the same archive,
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/27-parity-odd-weyl-cubic-adm}{source and manuscript}.
+
+\bibitem{GMZ}
+D.~Glavan, S.~Mukohyama and T.~Z{\l}osnik,
+\emph{Removing spurious degrees of freedom from EFT of gravity},
+\href{https://arxiv.org/abs/2409.15989}{arXiv:2409.15989}.
+
+\bibitem{Cano}
+P.~A. Cano, K.~Fransen, T.~Hertog and S.~Maenaut,
+\emph{Gravitational ringing of rotating black holes in higher-derivative gravity},
+Phys.\ Rev.\ D \textbf{105}, 024064 (2022),
+\href{https://arxiv.org/abs/2110.11378}{arXiv:2110.11378}.
+
+\bibitem{Moncrief}
+V.~Moncrief,
+\emph{Gravitational perturbations of spherically symmetric systems. I. The exterior problem},
+Ann.\ Phys.\ \textbf{88}, 323--342 (1974),
+\href{https://doi.org/10.1016/0003-4916(74)90173-0}{doi:10.1016/0003-4916(74)90173-0}.
+
+\bibitem{MartelPoisson}
+K.~Martel and E.~Poisson,
+\emph{Gravitational perturbations of the Schwarzschild spacetime: a practical covariant and gauge-invariant formalism},
+Phys.\ Rev.\ D \textbf{71}, 104003 (2005),
+\href{https://arxiv.org/abs/gr-qc/0502028}{arXiv:gr-qc/0502028}.
+
+\bibitem{Khavkine}
+I.~Khavkine, \emph{Covariant phase space, constraints, gauge and the Peierls formula},
+Int.\ J.\ Mod.\ Phys.\ A \textbf{29}, 1430009 (2014),
+\href{https://arxiv.org/abs/1402.1282}{arXiv:1402.1282}.
+\end{thebibliography}
+\end{document}
+

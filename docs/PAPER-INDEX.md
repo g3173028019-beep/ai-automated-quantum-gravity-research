@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 33 items: 20 original research packets, six later analytical Markdown manuscripts and seven typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 34 items: 20 original research packets, six later analytical Markdown manuscripts and eight typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–31 continue the numbered sequence. The separately counted companions 29B and 29B+31 do not replace Papers 29 or 31, or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–31 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -427,3 +427,12 @@ Two smooth exact vacuum plane waves match full classical Jacobi and longitudinal
 **Scope.** The optical polarization comparison is local and one-directional; the physical transfer concerns a marked nonzero longitudinal-frequency band. The result is not a crossing-wave construction or a global quantum theory.
 
 [Manuscript note](../papers/29b-31-polarization-defects-graviton-transfer/README.md) · [PDF](../papers/29b-31-polarization-defects-graviton-transfer/manuscript.pdf) · [TeX](../papers/29b-31-polarization-defects-graviton-transfer/main.tex)
+
+
+## 27B. Parity-odd Weyl-cubic gravity with fixed physical multipliers
+
+Reorganizes the fixed-multiplier canonical reduction and proves a nonzero finite-collar invariant for Schwarzschild polar-to-axial mixing, together with a separate nonzero compact physical bracket.
+
+This is a first-order classical result on the Einstein branch. It does not assert finite-coupling hyperbolicity or quantum constraint anomaly freedom.
+
+[Paper entry](../papers/27b-weyl-cubic-finite-collar/README.md) · [PDF](../papers/27b-weyl-cubic-finite-collar/manuscript.pdf) · [TeX](../papers/27b-weyl-cubic-finite-collar/main.tex)

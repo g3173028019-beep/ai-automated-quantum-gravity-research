@@ -2,7 +2,7 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains 33 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and seven typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 34 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and eight typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
 
@@ -50,3 +50,6 @@ Independent questions remain separate. In particular, the canonical state-existe
 The homepage, index, research map, reproduction guide and evidence explanations were adapted from the supplied documentation drafts after the twenty-paper scientific delivery. The full previous verification narrative is preserved in [Verification history](docs/VERIFICATION-HISTORY.md). This documentation work does not change the papers, computations or version history.
 
 The accepted contribution chronology and exact operator statement are in [Declarations](DECLARATIONS.md). Human bylines remain blank and human expert review has not occurred. Private commits preserve provenance; they do not establish public priority or journal acceptance.
+
+
+[27B · Parity-odd Weyl-cubic gravity with fixed physical multipliers](papers/27b-weyl-cubic-finite-collar/README.md) is a separately indexed companion published on 25 November 2026. Original Paper 27 is unchanged.

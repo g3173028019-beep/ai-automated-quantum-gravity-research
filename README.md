@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**33 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 7 typeset analytical articles**
+**34 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 8 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 33 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 34 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -29,6 +29,7 @@ These routes connect the 20 original packets with the twelve later analytical ma
 | [29 · Physical polarization in the vacuum high-frequency limit](papers/29-high-frequency-graviton-polarization/README.md) | Under Huneau–Luk generalized-wave-coordinate hypotheses, a two-polarization positive matrix measure is transported along the null flow. Its trace is the scalar Burnett measure. Exact vacuum sequences with the same limiting stress have opposite circular polarization. | [PDF](papers/29-high-frequency-graviton-polarization/manuscript.pdf) · [TeX](papers/29-high-frequency-graviton-polarization/main.tex) |
 | [29B · Physical polarization of high-frequency vacuum gravity](papers/29b-high-frequency-graviton-polarization/README.md) | For the constructed smooth two-face vacuum sequences, frequency-selected tidal curvature distinguishes both polarization matrices in a common overlap at fixed scalar dust limit. | [PDF](papers/29b-high-frequency-graviton-polarization/manuscript.pdf) · [TeX](papers/29b-high-frequency-graviton-polarization/main.tex) |
 | [29B+31 · Polarization defects and opposite graviton transfers](papers/29b-31-polarization-defects-graviton-transfer/README.md) | At finite wavelength, jointly retuned exact vacuum sandwiches match full marked geodesic returns across distinct high-frequency polarization preparations and both graviton-transfer signs. The carrier overlaps the slow focusing core; a calibrated local Weyl readout distinguishes the background covariances, and a cross-collar Einstein–Hilbert bracket distinguishes the exact signs. | [PDF](papers/29b-31-polarization-defects-graviton-transfer/manuscript.pdf) · [TeX](papers/29b-31-polarization-defects-graviton-transfer/main.tex) |
+| [27B · Parity-odd Weyl-cubic gravity with fixed physical multipliers](papers/27b-weyl-cubic-finite-collar/README.md) | Reorganizes the fixed-multiplier canonical reduction and proves a nonzero finite-collar invariant for Schwarzschild polar-to-axial mixing, together with a separate nonzero compact physical bracket. | [PDF](papers/27b-weyl-cubic-finite-collar/manuscript.pdf) · [TeX](papers/27b-weyl-cubic-finite-collar/main.tex) |
 | [30 · Nariai rigidity under null completeness](papers/30-nariai-null-completeness/README.md) | Under the stated four-dimensional Einstein vacuum, positive cosmological constant, two-sided null-completeness, compact nonspherical semidefinite Cauchy hypotheses, the Lorentzian universal cover is the Nariai product. |
 | [31 · Classically matched vacuum waves with opposite quantum transfer](papers/31-graviton-metaplectic-transfer/README.md) | Two smooth exact vacuum plane waves match full classical Jacobi and longitudinal returns but have opposite calibrated physical two-helicity band Weyl brackets. For (N) concatenated intervals, the adjacent brackets distinguish (2^N) relative lift histories while the exterior map retains their product. |
 
@@ -66,7 +67,7 @@ The connections are scientific reading routes across distinct models. The [resea
 
 ## Reproduce a result
 
-The original 20 packets have local READMEs, calculation files and verification records. Papers 21–26 are analytical Markdown manuscripts. Papers 27–31 and the separate companions 29B and 29B+31 include source TeX and compiled PDFs; they do not require a numerical replay. A short exact example, using only Python's standard library, checks the corrected projection-fibre example:
+The original 20 packets have local READMEs, calculation files and verification records. Papers 21–26 are analytical Markdown manuscripts. Papers 27–31 and the separately indexed companions include source TeX and compiled PDFs; they do not require a numerical replay. A short exact example, using only Python's standard library, checks the corrected projection-fibre example:
 
 ~~~powershell
 cd papers/01-projection-sign-rigidity
