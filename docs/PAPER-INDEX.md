@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 34 items: 20 original research packets, six later analytical Markdown manuscripts and eight typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 35 items: 20 original research packets, six later analytical Markdown manuscripts and nine typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
 Numbering follows delivery order: 01–20 retain their original packet numbers; 21–31 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
@@ -436,3 +436,12 @@ Reorganizes the fixed-multiplier canonical reduction and proves a nonzero finite
 This is a first-order classical result on the Einstein branch. It does not assert finite-coupling hyperbolicity or quantum constraint anomaly freedom.
 
 [Paper entry](../papers/27b-weyl-cubic-finite-collar/README.md) · [PDF](../papers/27b-weyl-cubic-finite-collar/manuscript.pdf) · [TeX](../papers/27b-weyl-cubic-finite-collar/main.tex)
+
+
+## 09+21. Local curvature information and modular dynamics in coupled Einstein–scalar theory
+
+On the active four-field background, linearized Weyl curvature and one material scalar generate the full local algebra. Properly localized preparations separate identical Weyl marginals from positive coupled relative entropy, and a specified faithful Hadamard state admits a convergent full modular coordinate kernel.
+
+The kernel is a convergent Abel–Chebyshev distribution series for the chosen state and diamond in the linearized theory, not a state-independent closed kernel.
+
+[Paper entry](../papers/09-21-coupled-modular-kernel/README.md) · [PDF](../papers/09-21-coupled-modular-kernel/manuscript.pdf) · [TeX](../papers/09-21-coupled-modular-kernel/main.tex)

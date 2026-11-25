@@ -64,3 +64,8 @@ The historical umbrella synthesis is routed into these dedicated questions, not 
 ### 27B
 
 [27B · Parity-odd Weyl-cubic gravity with fixed physical multipliers](papers/27b-weyl-cubic-finite-collar/README.md): Reorganizes the fixed-multiplier canonical reduction and proves a nonzero finite-collar invariant for Schwarzschild polar-to-axial mixing, together with a separate nonzero compact physical bracket. This is a first-order classical result on the Einstein branch. It does not assert finite-coupling hyperbolicity or quantum constraint anomaly freedom.
+
+
+### 09+21
+
+[09+21 · Local curvature information and modular dynamics in coupled Einstein–scalar theory](papers/09-21-coupled-modular-kernel/README.md): On the active four-field background, linearized Weyl curvature and one material scalar generate the full local algebra. Properly localized preparations separate identical Weyl marginals from positive coupled relative entropy, and a specified faithful Hadamard state admits a convergent full modular coordinate kernel. The kernel is a convergent Abel–Chebyshev distribution series for the chosen state and diamond in the linearized theory, not a state-independent closed kernel.

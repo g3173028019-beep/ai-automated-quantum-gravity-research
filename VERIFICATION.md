@@ -82,3 +82,8 @@ The recorded review consists of automated calculations and AI review. Human expe
 ### 27B
 
 [27B · Parity-odd Weyl-cubic gravity with fixed physical multipliers](papers/27b-weyl-cubic-finite-collar/README.md): see the TeX and the built PDF. Proofs reviewed internally; no external peer review is claimed. This is a first-order classical result on the Einstein branch. It does not assert finite-coupling hyperbolicity or quantum constraint anomaly freedom.
+
+
+### 09+21
+
+[09+21 · Local curvature information and modular dynamics in coupled Einstein–scalar theory](papers/09-21-coupled-modular-kernel/README.md): see the TeX and the built PDF. Proofs reviewed internally; no external peer review is claimed. The kernel is a convergent Abel–Chebyshev distribution series for the chosen state and diamond in the linearized theory, not a state-independent closed kernel.

@@ -2,7 +2,7 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains 34 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and eight typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 35 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and nine typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
 
@@ -53,3 +53,6 @@ The accepted contribution chronology and exact operator statement are in [Declar
 
 
 [27B · Parity-odd Weyl-cubic gravity with fixed physical multipliers](papers/27b-weyl-cubic-finite-collar/README.md) is a separately indexed companion published on 25 November 2026. Original Paper 27 is unchanged.
+
+
+[09+21 · Local curvature information and modular dynamics in coupled Einstein–scalar theory](papers/09-21-coupled-modular-kernel/README.md) is a separately indexed companion published on 25 November 2026. Original Papers 09 and 21 are unchanged.
