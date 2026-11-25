@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 20 original research packets and 11 later analytical manuscripts. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 32 items: 20 original research packets, six later analytical Markdown manuscripts and six typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–31 continue the sequence. They do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–31 continue the numbered sequence. The separately counted companion 29B does not replace Paper 29 or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -389,6 +389,16 @@ Numbering follows delivery order: 01–20 retain their original packet numbers; 
 **Scope.** Classical four-dimensional forward limit under the specified gauge and scale bounds. No unrestricted-gauge theorem, inverse limit, or quantum state construction is asserted.
 
 [Manuscript note](../papers/29-high-frequency-graviton-polarization/README.md) · [PDF](../papers/29-high-frequency-graviton-polarization/manuscript.pdf) · [TeX](../papers/29-high-frequency-graviton-polarization/main.tex) · [Verification](../papers/29-high-frequency-graviton-polarization/VERIFICATION.md)
+
+## 29B. Physical polarization of high-frequency vacuum gravity
+
+**Question.** Can independently prepared polarization matrices in two intersecting null families be read in the interior when their scalar dust limit is held fixed?
+
+**Result.** In a smooth finite-carrier characteristic construction, exact vacuum developments at the same resolved scalar geometry can carry different transported screen covariances in a common interior overlap. The paper obtains frequency-selected Weyl readouts of this distinction in the marked optical stock.
+
+**Scope.** This is a separate companion to [Paper 29](../papers/29-high-frequency-graviton-polarization/README.md). Its statements concern a constructed angular double-null class with calibrated frequency and screen readouts, not a general inverse Burnett theorem or an unmarked pointwise detector theorem.
+
+[Manuscript note](../papers/29b-high-frequency-graviton-polarization/README.md) · [PDF](../papers/29b-high-frequency-graviton-polarization/manuscript.pdf) · [TeX](../papers/29b-high-frequency-graviton-polarization/main.tex) · [Verification](../papers/29b-high-frequency-graviton-polarization/VERIFICATION.md)
 
 ## Reading the evidence
 

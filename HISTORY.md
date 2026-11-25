@@ -2,7 +2,7 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains 31 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and five typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 32 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and six typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
 
@@ -21,6 +21,8 @@ The four later [analytical manuscripts](docs/PAPER-INDEX.md#21-weyl-relative-ent
 Papers 25 and 26 entered the archive in [7a849c9](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/commit/7a849c9eb29fa1f543a973c8d58fb4c2e71c5be1). On 25 November 2026, the public repository added papers 27–29 with source and compiled PDFs: [27 · Parity-odd Weyl-cubic ADM gravity](papers/27-parity-odd-weyl-cubic-adm/README.md); [28 · The Einstein tensor from Lorentzian Regge variation](papers/28-lorentzian-regge-einstein-tensor/README.md); [29 · Physical polarization in the vacuum high-frequency limit](papers/29-high-frequency-graviton-polarization/README.md). The archive date isn't a claim about when the underlying results were first obtained, nor about priority.
 
 On 25 November 2026, papers 30–31 were added as internally reviewed analytical manuscripts with LaTeX sources and compiled PDFs: [30 · Nariai rigidity under null completeness](papers/30-nariai-null-completeness/README.md); [31 · Classically matched vacuum waves with opposite quantum transfer](papers/31-graviton-metaplectic-transfer/README.md). The original packet and paper numbers are unchanged.
+
+[29B · Physical polarization of high-frequency vacuum gravity](papers/29b-high-frequency-graviton-polarization/README.md) is catalogued as a separate typeset companion to Paper 29. The original Paper 29 files and the numbered 01–31 sequence are unchanged. This entry does not establish a priority date.
 
 ## Versioned revisions
 

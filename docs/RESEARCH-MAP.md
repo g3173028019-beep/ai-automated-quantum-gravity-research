@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Paper index](PAPER-INDEX.md) · [Reproduction](REPRODUCTION.md)
 
-The archive connects explicit information tasks, coupled-field state construction, finite geometry/control, and limits of reconstruction. A channel error bound, a Hadamard state-existence theorem, an exact finite algebra and a descriptive process study answer different scientific questions. The routes below group all 31 manuscripts by those questions while retaining each action, state space, input class and observable.
+The archive connects explicit information tasks, coupled-field state construction, finite geometry/control, and limits of reconstruction. A channel error bound, a Hadamard state-existence theorem, an exact finite algebra and a descriptive process study answer different scientific questions. The routes below group all 32 archive items by those questions while retaining each action, state space, input class and observable.
 
 ## Geometry–matter information tasks
 
@@ -98,6 +98,7 @@ This provides a route into how the archive’s arguments were corrected, not a r
 - [27 · Parity-odd Weyl-cubic ADM gravity](../papers/27-parity-odd-weyl-cubic-adm/README.md) starts with a continuum curvature interaction and asks what remains of the geometric constraint algebra after order reduction. Compare [19](../papers/19-local-gauge-benchmarks/) for a distinct free gauge and causality question.
 - [28 · The Einstein tensor from Lorentzian Regge variation](../papers/28-lorentzian-regge-einstein-tensor/README.md) asks whether the complete signed variation converges along genuinely refining Lorentzian meshes. It extends the archive's finite Regge questions [11](../papers/11-causal-regge-transfer/), [17](../papers/17-cartan-regge-closure/) and [22](../papers/22-lorentzian-regge-airy/) in a different direction; those papers establish neither its hypotheses nor its limit.
 - [29 · Physical polarization in the vacuum high-frequency limit](../papers/29-high-frequency-graviton-polarization/README.md) asks what physical tensor information survives a high-frequency weak limit. [25](../papers/25-characteristic-data-symplectic-rank/) addresses a related loss of radiative information at a characteristic endpoint, using a different construction and no high-frequency limit.
+- [29B · Physical polarization of high-frequency vacuum gravity](../papers/29b-high-frequency-graviton-polarization/README.md) reorganizes the generalized-wave transport theorem and adds an independent characteristic construction: two independent screen covariances at fixed resolved scalar geometry, with frequency-selected tidal readouts in the marked overlap. The two theorems have different hypotheses.
 
 ## Exact vacuum rigidity and quantum transfer
 
@@ -108,6 +109,6 @@ The two manuscripts use different stocks. The Lorentzian universal-cover rigidit
 
 ## Using the routes
 
-The [paper index](PAPER-INDEX.md) links all manuscripts and distinguishes the original PDF/source packets from the later analytical Markdown manuscripts. Use packet notes for commands and dependencies, and the [verification overview](../VERIFICATION.md) for the distinction between proof, exact finite checks, numerical diagnostics and retained inputs. No additional scientific rerun is implied by this navigation layer.
+The [paper index](PAPER-INDEX.md) links all manuscripts and distinguishes the original PDF/source packets, later analytical Markdown manuscripts and typeset analytical articles. Use packet notes for commands and dependencies, and the [verification overview](../VERIFICATION.md) for the distinction between proof, exact finite checks, numerical diagnostics and retained inputs. No additional scientific rerun is implied by this navigation layer.
 
-The 26 manuscripts are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.
+The 32 archive items are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.

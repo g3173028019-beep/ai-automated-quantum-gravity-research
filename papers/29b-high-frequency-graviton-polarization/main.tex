@@ -1,0 +1,302 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Tr}{\operatorname{tr}}
+\newcommand{\TF}{\mathrm{TF}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\dd}{\mathrm d}
+\title{Physical polarization of high-frequency vacuum gravity:\\
+transport, exact preparation, and curvature readout}
+\author{}
+\date{Paper 29B}
+\begin{document}
+\maketitle
+\begin{abstract}
+The scalar effective stress of high-frequency vacuum gravity does not specify the oriented polarization covariance. We develop three complementary results. First, under generalized-wave-coordinate hypotheses, the physical screen quotient of a metric defect carries a positive Hermitian matrix transported by the screen connection, whose trace is the scalar Burnett defect. Second, without imposing a symmetry on the characteristic data, we construct exact vacuum sequences whose smooth double-null limit has two fixed resolved scalar dusts but independently prescribed Hermitian polarization profiles; inverse-area scaling and parallel transport carry these profiles into the overlap. Two harmonics per incident face suffice for the stated smooth factorizable class on the full sphere. A one-stream exact solution gives an absolute normalization and helicity check. Finally, calibrated electric Weyl tests in the generalized-wave class and optical bandpasses of exact Weyl on the characteristic families recover the corresponding matrices. The characteristic result uses a separate proof and does not require generalized-wave derivative bounds.
+\end{abstract}
+
+\section{One scalar source, more than one polarization state}
+Effective gravitational stress is sensitive to intensity but not to all polarization data. Our basic object is a positive Hermitian covariance on the complexified tracefree screen, with each orientation of a null line retained separately. Its trace accounts for the scalar stress; its imaginary part includes circular polarization in an oriented screen. We distinguish transport of an already given defect, exact vacuum realization of independently chosen matrices, and how to read the matrices using curvature. A construction in one gauge is not an application of the theorem in the other.
+
+For comparison, geometric-optics polarization transport is classical \cite{Isaacson,Dolan,AJ}. The scalar high-frequency theorems \cite{Burnett,HL,LR} identify effective matter without specifying an arbitrary oriented Hermitian polarization covariance. Complex matrix H-measures arise already in symmetry \cite{GTC}; the nonpolarized $U(1)$ construction of Huneau and Luk has real two-component amplitude transport \cite{HLU}. Nonlinear geometric-optics constructions of prescribed real-cosine data are also available \cite{Touati,Multi}. The distinctions that matter here are the physical screen quotient for general defect subsequences, independent complex two-stream preparation at fixed resolved traces, and a curvature readout in each of the two analytic classes. The original Paper 29 is retained in the archive; this article incorporates and reorganizes its results with the independent characteristic construction.
+
+\section{The generalized-wave transport theorem}\label{sec:gauge}
+Let \(U\subset\mathbb R^4\) be bounded and \(g_n,g\) smooth Lorentzian metrics on \(U\). Suppose \(g_n\) is vacuum and, for \(\lambda_n\downarrow0\),
+\[
+ |g_n-g|\le \lambda_n,\qquad |\partial g_n|\lesssim1,\qquad
+ |\partial^2 g_n|\lesssim\lambda_n^{-1}.
+\]
+Write \(\mathcal H^\alpha(q)=q^{\mu\nu}\Gamma^\alpha_{\mu\nu}(q)\). In the given coordinates assume
+\[
+ |\mathcal H(g_n)-\mathcal H(g)|\lesssim \lambda_n^\eta,\qquad
+ |\partial\mathcal H(g_n)|\lesssim1
+\]
+for some \(\eta\in(0,1]\). All results below are local on \(U\). The positive-ray cosphere distinguishes \(\xi\) from \(-\xi\). We treat measures on this cosphere as functionals on degree-two homogeneous tests, equivalently as measures on a unit section of any positive auxiliary norm, with the choice of section accounted for by homogeneity. Put \(p=g^{-1}(\xi,\xi)\), \(k=g^{-1}\xi\), \(\mathscr S=k^\perp/\mathbb Rk\), and \(\mathcal E=\operatorname{Sym}^2_0(\mathscr S^*)\otimes\mathbb C\) on \(p=0\).
+
+\begin{theorem}
+Given a component defect subsequence for \(h_n=g_n-g\), its physical quotient defines a positive Hermitian \(\operatorname{End}(\mathcal E)\)-valued measure \(M\), supported on \(p=0\). Under the canonical identification \(\mathcal E_{-\xi}=\mathcal E_\xi\) induced by the screen, \(M(-\xi)=\overline{M(\xi)}\). The trace is the Huneau--Luk scalar defect, without a change of normalization. In particular, for scalar \(\psi\in C_c^\infty(U)\),
+\[
+ \int_U \psi\operatorname{Ric}(g)_{\mu\nu}\,dV_g
+ =\int\psi\,\xi_\mu\xi_\nu\,\operatorname{tr}dM.
+\]
+For every smooth Hermitian section \(a\) of \(\operatorname{End}(\mathcal E)\) of degree one, compactly supported in the base,
+\[
+ \int \operatorname{tr}\left((\nabla_{H_p}a)\,dM\right)=0.
+\]
+Here \(\nabla_{H_p}\) is induced by the Levi--Civita connection, and \(H_p\) has projected speed \(2k\). The transport equation holds on either null sheet separately.
+\end{theorem}
+
+For real sequences, real-even tests retain the real part of the polarization data. It is convenient to work directly with the full complex covariance on the positive-ray cosphere: a real norm square gives a positive Hermitian matrix there, rather than imposing transpose symmetry separately at each oriented ray. The scalar trace pairs identically against the original scalar tests, and in particular against those used for the stress. On a selected sheet, folding the scalar measure from both sheets to one doubles its value there. Folding and conjugating the full matrix are not the same operation as taking an unoriented real matrix. No circular polarization is inferred from an unoriented scalar observation.
+
+The proof of this generalized-wave result is in Sections~\ref{sec:bundle}--\ref{sec:comp}. We write \(\lambda\) for \(\lambda_n\) and \(h\) for \(h_n\). All powers of \(\lambda\) are uniform on the compact patches used in the proof.
+
+\section{The physical polarization bundle}
+\label{sec:bundle}
+Write \(g=g_0\), \(h=g_\lambda-g\) on the common smooth coordinate identification of Huneau--Luk. Take a positive component-matrix Tartar measure of the bounded weakly null vector sequence \(\langle D\rangle h\), testing complex scalar or matrix PDO symbols on the two individually oriented cosphere sheets and evaluating the resulting derivative covariance on degree-two homogeneous symbols as in \cite[Eq.~(1.5)]{HL}. The local extraction is the standard vector-valued defect measure construction \cite{Gerard,Tartar}: after extraction, every order-zero matrix test on the localized \(\langle D\rangle h\) pairs against a positive Hermitian measure. Two extractions differing only in the local cutoff give the same result wherever both cutoffs are one, by pseudolocality and strong local convergence of \(h\). This construction retains the full Hermitian matrix. The transpose symmetry in Huneau--Luk Remark 4.2 Eq. (4.1) must not be imposed sheetwise for this enlarged complex symbol class; instead there is Hermitian symmetry and antipodal conjugation. Their scalar trace contraction is real symmetric in the index pairs and therefore insensitive to the imaginary antisymmetric part. It has a positive Hermitian tensor covariance, supported on the null cosphere, and each slot satisfies, almost everywhere with respect to its total positive scalar trace,
+\[
+ k^\alpha h_{\alpha\beta}=\tfrac12\xi_\beta\,\operatorname{tr}_g h,\qquad
+ k=\xi^\sharp.
+\]
+In this statement \(h\) denotes a possible range vector of the covariance, not the metric sequence itself. Indeed strong \(L^2\) vanishing of the linearized wave-coordinate combination follows from \cite[Eq.~(3.4)]{HL}; the principal symbols then annihilate the covariance in both slots. \(\Box_g h=O_{L^\infty}(1)\) on compact sets by \cite[Eq.~(3.16)]{HL}, giving support on the null cone as in their Prop. 4.4. These facts follow by componentwise defect localization and do not presume propagation.
+
+For null \(k\), set \(\mathcal C_\xi\) equal to the space defined by the displayed constraint and \(\mathcal G_\xi=\{\xi_\mu v_\nu+\xi_\nu v_\mu\}\). A null partner \(\ell\) with \(g(k,\ell)=-1\) and a spacelike screen give \(h(k,k)=h(k,E_A)=0,\ h(k,\ell)=-\operatorname{tr}h/2\); the screen trace vanishes. Gauge amplitudes belong to \(\mathcal C_\xi\) and independently shift the four remaining coordinates \(h(\ell,\ell),h(\ell,E_A),h(k,\ell)\). Thus \(\mathcal C_\xi/\mathcal G_\xi\simeq\operatorname{Sym}^2_0(\mathscr S_\xi^*)\), where \(\mathscr S_\xi=k^\perp/\mathbb R k\), with its positive metric. Push the covariance to this quotient and multiply by \(1/4\); call the resulting endomorphism-valued positive Hermitian measure \(M\). Relative to a positive scalar trace reference its matrix density is positive, independently of chosen screen sections. On \(\mathcal C_\xi\), the polarized pairing \(h^{ab}\bar v_{ab}-\tfrac12\operatorname{tr}h\,\overline{\operatorname{tr}v}\) is exactly the screen pairing: the null offdiagonal term \(2h(k,\ell)\bar v(k,\ell)\) cancels the trace term, and all other off-screen terms pair with zero. Hence \(\operatorname{tr}M=\mu_{\rm Huneau--Luk}\) with exactly their coefficient in Eq. (1.5), on both sheets. A future-only measure obtained by folding the other sheet doubles the scalar trace on the future sheet; this is not a change of Huneau--Luk convention.
+
+For \(p(x,\xi)=g^{\mu\nu}\xi_\mu\xi_\nu\), let \(\nabla_{H_p}\) be the connection along bicharacteristics induced by Levi--Civita on this quotient; the base velocity is \(2k\), and \(\xi\) is parallel. For every compactly supported smooth degree-one Hermitian endomorphism test \(a\) of the physical screen,
+\[
+       \int \operatorname{tr}\bigl((\nabla_{H_p} a)\,dM\bigr)=0 .
+\]
+This is the matrix Liouville equation, with the same homogeneous convention as Huneau--Luk's scalar equation. In a local screen frame the derivative is \(H_p a+[2\Gamma_{\rm screen}(k),a]\); a component scalar derivative alone is not the claim.
+
+\section{Exact transverse PDO tests and covariant linear dynamics}
+Work in a small coordinate patch with \(g\) close to Minkowski as in Huneau--Luk Lemma 3.1, choose compactly nested supports as in Section~5.1, and use properly supported classical PDOs with smoothing errors harmless because \(h=O(\lambda)\) in \(L^2\). Extend \(g\) outside the work patch as in Huneau--Luk. Extend a test on the null cone smoothly to an off-null conic neighborhood with \(\xi_t\ne0\). Fix a smooth timelike unit \(T\), and take the spacelike planes \(T^\perp\cap\ker\xi\) throughout this neighborhood. Using their orthogonal projection and tracefree part gives a lift \(b\) to ambient symmetric covariant tensors whose raised output is \emph{exactly} transverse in both slots at principal-symbol level throughout the extension: \(\xi_\mu(bu)^{\mu\nu}=0\) for every input. The lift annihilates the principal gauge space on the null cone. A cutoff in this neighborhood and homogeneous radial cutoff at low frequency preserve exact output constraint on the homogeneous principal symbol.
+
+On the bundle of covariant symmetric tensors use the nondegenerate (indefinite) \(g\)-fiber pairing \(G\) obtained by raising both slots, and absorb scalar volume into half-densities. The screen lift is \(G\)-selfadjoint whenever the screen endomorphism is Hermitian. We can extend a single future-sheet arbitrary complex Hermitian test to both sheets by \(b(x,-\xi)=-\bar b(x,\xi)\), choosing an actual order-one \(G\)-formally selfadjoint operator \(B\) with this principal symbol and anti-real under conjugation: take the anti-real part of an initial quantization and then \(G\)-adjoint symmetrize. The operator \(iB\) maps real tensors to real tensors; equivalently the principal of \(A\) defined by \(iB=\partial_t A+\Psi^0\) is \(b/\xi_t\), even under combined complex conjugation and \(\xi\mapsto-\xi\). All remainders \(\Psi^0h\) are \(O(\lambda)\) in \(L^2\), paired against a bounded \(L^2\) source. This retains imaginary off-diagonal coherence; restricting to the same real symbol on both sheets would discard it.
+
+Use \(P=-\nabla^\rho\nabla_\rho\), formally selfadjoint for this parallel pairing. Under local coordinates on the half-density bundle,
+\(P=D_\mu g^{\mu\nu}D_\nu-2i\,g^{\mu\nu}\Gamma_\mu^{(V)}D_\nu+\Psi^0\), with \(D=-i\partial\) and \(\Gamma^{(V)}\) the connection on both covariant tensor indices. The scalar divergence form has zero scalar Weyl subprincipal; thus the order-two symbol of \(i[P,B]\) is \(H_p b+[2\Gamma^{(V)}(k),b]\). This can also be verified directly with the leading product rule: the principal scalar \(p\) commutes with every matrix symbol, and the matrix first-order term contributes exactly its matrix commutator. Lower order terms give zero defect pairing by \(h\to0\) strongly in \(L^2\) and bounded \(H^1\). Because \(g,\xi,k\) are parallel along the null flow, \(\mathcal C_\xi\) and \(\mathcal G_\xi\) are preserved. The restriction of this matrix derivative to \(\mathcal C_\xi/\mathcal G_\xi\) is therefore precisely \(\nabla_{H_p}a\). In particular derivatives of the chosen \(T\)-screen section do not transport an arbitrary coordinate polarization: changing its gauge representative yields an element of \(\mathcal G_\xi\), annihilated by the lifted test and irrelevant after quotient. The anti-real extension gives even-conjugate \(H_pb+[2\Gamma(k),b]\), and the real-sequence covariance obeys \(M(-\xi)=\overline{M(\xi)}\), so passage to both sheets multiplies the real pairing on the selected sheet by two, not zero.
+
+For clarity, use the standard Christoffel convention
+\(\Gamma^\alpha_{\mu\nu}=\frac12g^{\alpha\beta}(\partial_\mu g_{\beta\nu}+\partial_\nu g_{\mu\beta}-\partial_\beta g_{\mu\nu})\).
+Re-expanding the first-order part in \cite[Eq.~(3.9) and App.~A]{HL} gives the nonlongitudinal coefficient
+\(2g^{\sigma\rho}g^{\alpha\beta}(\partial_{(\mu}g_{\beta\rho}+\partial_\rho g_{(\mu\beta}-\partial_\beta g_{(\mu\rho})\partial_\sigma h_{\nu)\alpha}\),
+namely \(4g^{\sigma\rho}\Gamma^\alpha_{\rho(\mu}\partial_\sigma h_{\nu)\alpha}\).
+It cancels upon passing from the component wave to the rough wave. This is the two-index tensor-connection term, not a multiple of the longitudinal gauge source. The remaining \(D_{(\mu}^{\alpha\sigma}\partial_{\nu)}h_{\alpha\sigma}\) in (3.11) has longitudinal output and gives zero against \(iB h\), by the above exact principal symbol and the component covariance. The other linear source is \(2g_{\alpha(\mu}\partial_{\nu)}(H_\lambda-H_0)^\alpha\), with \(H_\lambda-H_0=O(\lambda^\eta)\), including cutoff errors if localized. Raising the first slot, write the test \((iBh)^{\mu\nu}=\partial_t w^{\mu\nu}+O_{L^2}(\lambda)\), where \(w\) is an order-zero operator on \(h\) with exactly transverse output principal. Its divergence is therefore order zero on \(h\), not first order. Integrating by parts in the output derivative gives \(\|\partial_t\partial_\nu w^{\mu\nu}\|_2=O(1)\), multiplied by \(O(\lambda^\eta)\); derivatives on smooth background coefficients give at worst \(O(1)\) as well. The \(O(\lambda)\) test error pairs against \(\partial H=O(1)\). Smooth Ricci sources pair with weakly zero \(iBh\); other \(O(\lambda^\eta)\) sources vanish. Hence the nonlinear estimates below suffice for the commutator propagation identity.
+
+\section{Semilinear and quasilinear compensation}
+\label{sec:comp}
+Temporary use of half-densities does not alter a scalar principal factor: their fixed smooth density weights are absorbed into the compact \(x\)-dependent coefficients here. Every component of a fixed \(\Psi^0\) applied to \(h\) lies in the Huneau--Luk \(X_\lambda^2(g)\) class uniformly: boundedness on \(H^k\) for \(k\le2\), and \([\Box_g,\Psi^0]\in\Psi^1\) since the principal is scalar. Smooth compact multipliers preserve the same estimates. Complex coefficients cause no difficulty by real/imaginary decomposition or the complex form of Huneau--Luk Prop. 2.6. In what follows their \(X_\lambda^p\) norm is the one with \(\lambda^{-1}\|f\|_p+\|\partial f\|_p+\lambda\|\partial^2 f\|_p+\|\Box_g f\|_p\); every uncut \(h\) component has \(X_\lambda^\infty=O(1)\) on the localized support. Proper support/cutoff ensures all factors fit the compact version of Huneau--Luk Props. 2.4, 2.6. For Fourier-multiplier outputs one may put an extra fixed cutoff equal to one around the test support; wave-operator commutators with this cutoff are supported away from the test, or bounded by the same \(H^1\) quantities. No \(L^\infty\) bound on an arbitrary order-zero PDO applied to \(h\) is used.
+
+The \(Q\) in Eq. (3.13) is entrywise an ordinary null form. Move the PDO to the differentiated test leg as above and apply Props. 2.4 and 2.6 to \(h,h,w\); their smallness gains \(\lambda\) or \(\lambda^{1/15}\) suffice. The weak-null \(P\) in Eq. (3.14) is a smooth linear combination of \(\partial_\mu f\,\partial_\nu q\). The key projected identity is
+\[
+ (\partial_t w^{\mu\nu})(\partial_\mu f)(\partial_\nu q)
+ = (\partial_\mu w^{\mu\nu})(\partial_t f)(\partial_\nu q)
+   + Q_{t\mu}(w^{\mu\nu},f)\,\partial_\nu q .
+\]
+Smooth index coefficients can be left outside the test; if multiplied into it before the swap their differentiated terms are order zero on \(h\). The first integral goes to zero since \(\partial_\mu w^{\mu\nu}=O_{L^2}(\lambda)\), and the other two derivatives are bounded locally. For the last term, use Huneau--Luk Prop. 2.6 with \(f\) as the first null-form argument in \(X_\lambda^\infty\) (swap the two null arguments), and \(w,q\) in \(X_\lambda^2\). This is \emph{not} the arbitrary coordinate-component cancellation the authors warn against; it relies on the physical transverse output in every matrix entry.
+
+For the quasilinear term \(Q_{\rm ql}(h)=g^{a\mu}g^{b\nu}h_{ab}\partial_{\mu\nu}^2h\), the multiplier of \(\partial^2 h\) is scalar on the output bundle, an important fact not available for a general tensorial quasilinear system. Let \(C\) be the Euclidean formally skew order-one test after inserting the smooth fiber pairing \(G\) (and density weights if not in half-densities). Here all adjoints and pairings are with the fixed background metric; no rapidly varying metric enters the test. Since \(iB\) is exactly skew for \(G\), \(G iB\) is exactly Euclidean skew; its action differs from the componentwise order-zero-matrix-test times \(\partial_t\) by \(O_{L^2}(\lambda)\). It suffices to bound the real part of \(\langle Ch,F^{\mu\nu}\partial^2_{\mu\nu}h\rangle\). Truncate both differentiated \(h\)'s at spacetime frequency \(\lambda^{-1.01}\) as in Huneau--Luk Lemma 5.6: \(\|\partial(h-h^\sharp)\|_2=O(\lambda^{.01})\). In the test slot use the whole source \(O_{L^2}(1)\); in the output slot integrate a derivative once, obtaining \(\|\partial Ch^\sharp\|_2=O(\lambda^{-1})\) multiplied by \(\|h\|_\infty \|\partial(h-h^\sharp)\|_2\), or a coefficient derivative bounded by \(\|\partial h\|_\infty\). Both errors are \(o(1)\).
+
+Use Huneau--Luk's decomposition of the undifferentiated component into \(h^{(1)}, h^{(2)}, h^{(3)}\), with \(\beta\in(\max\{29/30,1-\eta\},1)\). The low frequency threshold is \(|\zeta|\lesssim\lambda^{-\beta}\), the middle angular sector is \(|\zeta_t|\ll|\underline\zeta|\) away from the characteristic cone, the high remaining sector has a controlled time antiderivative. In the low term \(F^{\mu\nu}=g^{a\mu}g^{b\nu}h_{ab}^{(1)}\) is real, symmetric in \(\mu,\nu\), and \(\|F\|_{W^{1,\infty}}=o(1)\) by Lemma 5.10. Integrate by parts in \(\partial_\mu\) once. Terms with \(\partial F\), as well as \([\partial_\mu,C]\in\Psi^1\), are \(o(1)\) by bounded \(H^1\) of \(h^\sharp\). The remaining real bilinear form is \(-\Re\sum_{\mu\nu}\langle C\partial_\mu h^\sharp,F^{\mu\nu}\partial_\nu h^\sharp\rangle\). Swapping \(\mu,\nu\) and using exact Euclidean skewness, its size is bounded by \(\frac12\sum\|\partial_\mu h^\sharp\|_2\|[C,F^{\mu\nu}]\partial_\nu h^\sharp\|_2\). The Calder\'on Lipschitz commutator used in Huneau--Luk Eq. (5.30) applies entry by entry to this fixed matrix PDO, giving \(o(1)\). This is why Hermitian, not arbitrary, physical symbols are required for this test identity.
+
+The elliptic middle term is bounded by \(O(\lambda^{2\beta-1})\) via \(\|h^{(2)}\|_2=O(\lambda^{2\beta})\) (Huneau--Luk Lemma 5.12), \(\|Ch^\sharp\|_4=O(1)\) by \(\Psi^1:W^{1,4}\to L^4\), and \(\|\partial^2 h^\sharp\|_4=O(\lambda^{-1})\). All three factors are independent of the tensor pairing; no exchange needed.
+
+For the high term Huneau--Luk Lemma 5.14 gives \(h^{(3)}_{ab}=\partial_t \mathfrak k_{ab}\), \(\|\mathfrak k\|_{X_\lambda^2}\lesssim \lambda^\beta\) (combine Eq. (5.34) with the multiplier bound (5.36) for the \(\lambda H^2\) term), and
+\[
+ \left\|g^{a\mu}\partial_\mu\mathfrak k_{ab}-\tfrac12\partial_b\operatorname{tr}_g\mathfrak k\right\|_2
+ \lesssim \lambda^{1+\beta/2}+\lambda^{\beta+\eta}.
+\]
+The difference between differentiating \(\operatorname{tr}_g\) and contracting the derivative is \(O(\lambda^{1+\beta})\). Pair with \(\partial_t w\) entrywise, without exchanging any test component. The exact scalar identity
+\[
+ \partial_t\mathfrak k_{ab}\,\partial_{\mu\nu}^2h^\sharp
+ =\partial_\mu\mathfrak k_{ab}\,\partial^2_{t\nu}h^\sharp+
+ Q_{t\mu}(\mathfrak k_{ab},\partial_\nu h^\sharp)
+\]
+converts the contracted first term to \(\tfrac12 Q_0(\operatorname{tr}_g\mathfrak k,\partial_t h^\sharp)\). Gauge-error terms are bounded by \(\lambda^{\beta/2}+\lambda^{\beta+\eta-1}\) using the \(L^\infty\) second-derivative bound for \(h^\sharp\) and \(L^2\) test derivative. Apply Huneau--Luk Prop. 2.4 to the first null form and 2.6 to the second. Huneau--Luk Lemma 5.7 gives \(\|\partial h^\sharp\|_{X_\lambda^\infty}\lesssim\lambda^{-1.01}\); \(w\) is bounded in \(X_\lambda^2\), and \(\mathfrak k\) carries the gain \(\lambda^\beta\). This yields respectively \(\lambda^{\beta-.01}\) and \(\lambda^{\beta-1.01+1/15}\), both small by the stated range of \(\beta\). Smooth coefficients can be retained as the allowed compact multipliers of those propositions, exactly as Huneau--Luk Eq. (5.45). The nonlinear estimates thus extend to the full Hermitian physical matrix, but rely on different mechanisms: skew matrix low compensation, scalar ellipticity and high null identities, and an exact outgoing screen projection for the weak null quadratic.
+
+Since all sources pair to \(o(1)\) with \(iB h\), formal selfadjointness gives \(\langle h,i[P,B]h\rangle_G\to0\). Pass to the matrix defect using its order-two homogeneous symbol, the quotient connection computation, and the even-conjugate extension. This proves the stated positive matrix transport for every defect subsequence in the Huneau--Luk stock; no unique matrix from the weak limit \(g\) is assumed. Gauge covariance here means tensorial under common changes of chart and independent of screen lifts. It does not assert compactness under arbitrary wavelength-dependent coordinate identifications or extend Huneau--Luk's nearly wave-coordinate hypotheses.
+
+\section{One-stream benchmark: exact helicity reversal}\label{sec:rosen}
+On a fixed small \(u\) interval choose shared smooth initial values \(a_\epsilon(0)=1,a_\epsilon'(0)=0\), and
+\[
+ \begin{aligned}
+ ds_\epsilon^2&=-2\,du\,dv+a_\epsilon(u)^2 (H_\epsilon^\pm)_{AB}\,dx^A dx^B,\\
+ H_\epsilon^\pm(u)&=R\!\left(\frac{\pm u}{2\epsilon}\right)
+ \operatorname{diag}(e^\epsilon,e^{-\epsilon})R\!\left(\frac{\pm u}{2\epsilon}\right)^T .
+ \end{aligned}
+\]
+Here \(R\) is ordinary oriented plane rotation. If \(D=\operatorname{diag}(e^\epsilon,e^{-\epsilon})\) and \(J=R'(0)\), let \(B_*=\bigl(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\bigr)\). Then \(JD-DJ=2\sinh(\epsilon)B_*\).
+Hence \(H^{-1}H'\) is conjugate to \(\pm(\sinh\epsilon/\epsilon)D^{-1}B_*\), whose square is \((\sinh^2\epsilon/\epsilon^2)\mathbf1\). Direct Rosen Ricci gives only
+\[
+\mathrm{Ric}_{uu}=-2a''/a-\frac14\operatorname{tr}[(H^{-1}H')^2].
+\]
+Solve \(a_\epsilon''=-a_\epsilon\,\sinh^2\epsilon/(4\epsilon^2)\), shared by both preparations; this makes each metric exact vacuum with \(a_\epsilon\) positive on a fixed small interval. The limit \(a_0\) solves \(a_0''=-a_0/4\), and \(a_\epsilon-a_0=O(\epsilon^2)\) in each fixed \(C^k\) there. Since \(\det H=1\), the sole nonzero contracted Christoffel is
+\[
+H_{\rm contracted}^v=\frac12\operatorname{tr}[(a^2H)^{-1}(a^2H)']=2a'/a .
+\]
+Its difference is \(O(\epsilon^2)\), its derivative is bounded. The perturbation is \(O(\epsilon)\) in \(L^\infty\), with uniformly bounded first and \(O(\epsilon^{-1})\) second derivatives. By taking \(\lambda=C\epsilon\) if necessary, this verifies each Huneau--Luk assumption, not merely linearized calibration.
+
+Let \(A=\operatorname{diag}(1,-1)\), \(B=B_*\). The screen strain in the \(g_0\)-orthonormal frame is \(\epsilon[\cos(u/\epsilon)A\pm\sin(u/\epsilon)B]+O(\epsilon^2)\) with the asserted derivative control. On the marked \(+du\) sheet the complex carrier is \(A\mp iB\), and the \(-du\) sheet is its conjugate. In the orthonormal polarization basis \(A/\sqrt2,B/\sqrt2\), the defect \(M\) has matrix \(\frac18\bigl(\begin{smallmatrix}1&\pm i\\\mp i&1\end{smallmatrix}\bigr)\) on \(+du\), and its conjugate on \(-du\), relative to the background volume measure and \(\xi=du\) homogeneous calibration. This follows from the \(\frac12\) real-carrier splitting at each Fourier sheet and the additional \(1/4\) measure normalization. The total trace is \(1/2\), exactly \(\mathrm{Ric}_{uu}(g_0)\), and the opposite signed imaginary offdiagonal data are nonzero despite identical scalar trace. This benchmark fixes the orientation and numerical normalization. It is not a derivation of the general transport or an instance of the independent two-stream preparation below.
+
+\section{Characteristic preparation at fixed resolved scalar stress}\label{sec:char}
+Use the double-null convention of Luk--Rodnianski \cite{LR}, with optical coordinates $(u,v)$, spheres as cuts, screen metric $\gamma$, lapse $\Omega>0$ and shift $b$. The two null derivatives are
+\[
+ e_3=\Omega^{-1}(\partial_u+b\cdot\partial_\theta),\qquad
+ e_4=\Omega^{-1}\partial_v.
+\]
+Hatted second fundamental forms denote their angular tracefree parts. The two incident faces are $H_0=\{u=0\}$ and $\underline H_0=\{v=0\}$. Use smooth compatible reduced characteristic data in the strong angular regularity class of \cite[Def.~4.5]{LR}, fixed corner data and the $b=0$ gauge on $\underline H_0$. Prescribe the incident lapse $\Omega=1$ on both faces as part of the data, not as a gauge transformation of arbitrary characteristic data; the interior lapse is unrestricted. On each face write $\gamma=\Phi^2 h$, with $h$ determinant normalized, and denote its nonnegative smooth scalar dust profile by $f$ in the convention
+\[
+ \dd\nu_{\rm in}=\Phi^{-2} f\,\dd A_\gamma\,\dd s ,
+\]
+where $s=v$ or $u$ on the respective face. The equality of the relevant initial flux weights here uses the incident lapse normalization: the reduced Raychaudhuri measure convention in \cite[(9.62)]{LR} and the defect flux with $\Omega^2|\widehat\chi|^2$ in their Thm.~4.1/Prop.~6.19 should not be conflated for an arbitrary lapse. Assume the polarized profiles below vanish on a corner buffer. We work on a common sufficiently short rectangle with uniformly positive lapse and uniformly nondegenerate cut metrics, as guaranteed by the uniform characteristic existence theorem for the fixed data and approximants constructed below.
+
+The real screen space is the two-dimensional tracefree symmetric tensor representation of the cut tangent plane, with its induced Frobenius norm. Its Hermitian complexification is denoted $E_{\mathbb C}$. We describe covariances relative to the limiting volume and the homogeneous optical representatives $\xi=+\dd s$; the physical screen derivative covariance is multiplied by $1/4$ as in Section~\ref{sec:bundle}. This convention treats positive and negative oriented rays separately.
+
+\begin{theorem}\label{thm:main}
+On each incident face choose independently a smooth positive semidefinite Hermitian density $M^{\rm in}$ satisfying
+\[
+ \Tr M^{\rm in}=\frac{f}{2\Phi^2},\qquad
+ M^{\rm in}=\frac1{16}\sum_{j=1}^2 B_jB_j^*,
+\]
+for smooth complex screen sections $B_j$ with the prescribed corner buffer. In particular one can use a smooth positive-definite density times a squared smooth amplitude cutoff on the full sphere, without any angular hole. Then there exist smooth exact four-dimensional vacuum developments $g_\eps$ along a sequence $\eps\downarrow0$ with common $C^0$, weak $W^{1,2}$ limit $g_0$, the unique resolved scalar two-dust development of the fixed reduced data. Varying the matrix factors at fixed trace leaves the limiting metric and both resolved scalar dust profiles unchanged.
+
+Let $F_v$ denote the limiting angular flow of $\partial_u+b\cdot\partial_\theta$ at fixed $v$ from $H_0$, $J_v$ its relative screen area Jacobian, and $P_v$ its induced spin-two parallel isometry. For the other family define $F_u,J_u,P_u$ analogously along $\partial_v$ at fixed $u$. On the overlap the oriented physical screen matrices are
+\[
+ \begin{split}
+ M_{+\dd v}(u,v,F_v(u,v,y))
+   &=J_v(u,v,y)^{-1}P_v M_v^{\rm in}(v,y)P_v^*,\\
+ M_{+\dd u}(u,v,F_u(u,v,y))
+   &=J_u(u,v,y)^{-1}P_u M_u^{\rm in}(u,y)P_u^*.
+ \end{split}
+\]
+The opposite sheets carry the conjugates. These matrices can also be recovered from optical bandpasses of the wavelength-scaled exact outgoing and incoming screen Weyl components, respectively, in the quadratic limit of the local $L^2$ reconstruction in Section~\ref{sec:filter}.
+
+If both incident profiles are positive on full-sphere open time bands inside the rectangle, the two transported traces are simultaneously nonzero on their product, an overlap of fixed positive width. The data admit angularly varying resolved traces and independent mixed or circular polarization on both branches. The two optical null normals are separated in direction (opposite in their common unit normal observer frame), with a positive angular gap on a compact window for any uniformly timelike marked smooth observer.
+\end{theorem}
+
+\section{Global two-harmonic preparation}
+The oriented real screen representation over $S^2$ need not admit a global real frame. Its complexification splits into conjugate eigenline bundles for the fiber rotation, hence has first Chern class zero. Complex rank-two bundles over $S^2$ are classified by the determinant winding of the $U(2)$ clutching function, because $SU(2)$ is simply connected. Thus the complex bundle has a smooth global Hermitian orthonormal frame $(q_1,q_2)$, smoothly extended along the incident interval. If $M^{\rm in}=a^2Q$ with $Q$ smooth positive definite and $a$ a real smooth cutoff, one can set $B_j=4aQ^{1/2}q_j$. Smooth fixed-rank positive semidefinite profiles times a squared cutoff also have this factorization, using their smooth spectral projection onto the separated positive spectrum. No smooth factorization is asserted at arbitrary variable rank.
+
+On $H_0$ introduce a genuine real self-adjoint tracefree endomorphism and a positive angular metric by
+\[
+ X_\eps=\eps\operatorname{Re}\sum_{j=1}^2\frac{B_j}{j}e^{ijv/\eps},
+ \qquad h_\eps(\cdot,\cdot)=h(\cdot,e^{X_\eps}\cdot).
+\]
+Its determinant is exactly the reference determinant. In every fixed angular grade, $h_\eps-h=O(\eps)$ and
+\[
+ \partial_v h_\eps=\partial_v h+
+      h\operatorname{Re}\sum_j iB_j e^{ijv/\eps}+O(\eps).
+\]
+The mean excess in $|\partial_vh_\eps|_{h_\eps}^2$ is $\tfrac12\sum_j\|B_j\|^2=4f/\Phi^2$. All remaining terms have uniformly $O(\eps)$ primitives in $v$ at each fixed angular grade, by integrating each nonzero harmonic with its smooth coefficient. Thus the vacuum Raychaudhuri equation for $\Phi_\eps$, with the original corner value and derivative, converges precisely to
+\[
+ \Phi''=2(\log\Omega)'\Phi'-\tfrac18 |h'|_h^2\Phi-\frac{f}{2\Phi}.
+\]
+For detail, writing the difference as a first-order linear system gives uniformly bounded coefficients and forcing with an $O(\eps)$ primitive. Integrate the forcing first and use Gronwall, then differentiate in the angular variables and repeat inductively. One obtains $\|\Phi_\eps-\Phi\|+\|\Phi'_\eps-\Phi'\|=O(\eps)$ at fixed angular grades, and positivity is uniform. The other face is identical with phases $ju/\eps$; the corner buffer leaves lapse, shift and compatibility unchanged. For comparison, before setting the incident lapse to one, the null Raychaudhuri identity has dust term $-(\Phi\Omega^2/2)\mathrm{Ric}(e_4,e_4)$, so (9.3) corresponds to $\mathrm{Ric}(e_4,e_4)=f/(\Omega^2\Phi^2)$. The scalar flux in the $\Omega^2\mathrm{Ric}(e_4,e_4)\,\dd A_\gamma\,\dd v$ convention is therefore $f\Phi^{-2}\,\dd A_\gamma\,\dd v$, or $2\Tr M^{\rm in}\,\dd A_\gamma\,\dd v$. Our fixed incident lapse avoids equating this with the reduced-source convention when $\Omega$ is arbitrary.
+
+The printed \cite[Thm.~4.7]{LR} assumes an angular hole. We do not invoke it verbatim. In its proof the hole enters through the construction of reduced vacuum approximants (Props.~9.4--9.5), relying on the single-real-polarization input in Prop.~9.1. The construction above substitutes for that step on this smooth factorizable class. Its exact constraints, strong area and first derivative convergence, uniform angular norms, common corner conditions, and squared-derivative primitive with mean $4f$ give the same inputs to Lemma~3.1 and the uniform characteristic existence of Thm.~3.2 with bounds of Thm.~3.3, followed by the compactness of Thm.~4.1. The scalar limit and its two separately identified boundary fluxes are the same for every matrix with the specified trace, by the uniqueness in Thm.~4.4. This argument is not an angular-hole removal for general measure-valued data.
+
+\section{Strong transverse Duhamel estimate}
+We prove the statement for the $v$ branch. Move only the angular labels at fixed $v$ by the exact flow $F_\eps$ of $L_\eps=\partial_u+b_\eps\cdot\partial_\theta$. From \cite[Props.~6.2, 6.8]{LR}, $b_\eps$ converges uniformly with its first angular derivatives and the screen metric converges uniformly. Consequently the angular flows and their angular derivatives converge uniformly by the flow and variational equations; their Jacobians are bounded above and below. Let $G_\eps=F_\eps^*\gamma_\eps$. The exact deformation and projected parallel connection in the dragged basis obey
+\[
+ G'_\eps=2\Omega_\eps F_\eps^*\underline\chi_\eps,\qquad
+ \Gamma_\eps=\tfrac12 G_\eps^{-1}G'_\eps,\qquad
+ \|G'_\eps\|_{L^2_uL^\infty_{v,y}}\leq C,
+ \quad G_\eps\to G_0\text{ uniformly}.
+\]
+We write slow coefficients pulled back to these labels without an additional symbol. The connection formula follows from Koszul because the dragged angular directions commute with $L_\eps$, their brackets are screen-tangent, and $L_\eps$ is orthogonal to the cut. The derivative bound follows from the mixed norms of \cite[(3.12)--(3.13)]{LR}. All arguments can be written on finitely many angular patches.
+
+The actual parallel transports converge uniformly even though their coefficients need not. Indeed the residual primitive $\int_0^u(\Gamma_\eps-\Gamma_0)P_0$ splits into the inverse-metric difference times $G'_\eps P_0$, and $\frac12\int_0^uG_0^{-1}(G_\eps-G_0)'P_0$. The first converges uniformly to zero by the mixed norm. For the second integrate by parts, differentiating only the limiting outside factors; they have uniformly integrable path derivatives. Uniform metric convergence controls all endpoint and integrated terms. The integral difference for the parallel ODE and Gronwall establish uniform convergence, including the induced spin-two transports. This uses an actual metric path and its variation bound, not a pointwise limit of $G'_\eps$.
+
+Set $J_\eps=\sqrt{\det G_\eps(u)/\det G_\eps(0)}$. Then $(\log J_\eps)'=\Omega_\eps\Tr\underline\chi_\eps$. The lapse identity $e_3\log\Omega_\eps=-2\underline\omega_\eps$ is crucial: the weak lapse coefficient is removed before multiplying or taking a limit. Pulling to a parallel frame, \cite[(2.20)]{LR} gives
+\begin{equation}\label{eq:duh}
+ \partial_u[\Omega_\eps\sqrt{J_\eps}\,\widehat\chi_\eps]^{\rm par}
+ =\left[\Omega_\eps^2\sqrt{J_\eps}
+ \left(\not\nabla\widehat\otimes\eta_\eps+
+       \eta_\eps\widehat\otimes\eta_\eps-
+       \tfrac12\Tr\chi_\eps\,\widehat{\underline\chi}_\eps\right)\right]^{\rm par}.
+\end{equation}
+The limiting cross tracefree equation has the same form, with no direct scalar dust source. The first two source terms in \eqref{eq:duh} converge strongly in $L^2$ by strong angular connection, metric and torsion convergence, including angular $W^{1,4}$ for $\eta_\eps$ \cite[Props.~6.4, 6.8, 6.10]{LR}. Composition with the flows preserves strong convergence by their uniform limits, bounded Jacobians and density of smooth functions.
+
+The opposite shear term, after its tensor contractions and parallel comparison, is of the form $A_\eps:G_\eps'$. The weights converge strongly in $L^2(u,v,y)$: the expansion $\Tr\chi_\eps$ does by \cite[Prop.~6.15]{LR}, and all other factors converge uniformly. The integrated replacement error is bounded uniformly in its upper integration limit by
+\[
+ \left\|\int_0^u (A_\eps-A_0):G'_\eps\,\dd s\right\|_{L^2_{v,y}}
+ \leq \|A_\eps-A_0\|_{L^2_{u,v,y}}
+          \|G'_\eps\|_{L^\infty_{v,y}L^2_u}.
+\]
+Approximate the remaining limiting weight by smooth ones in the same norm, using the uniform estimate again. For a smooth weight the integral of $(G_\eps-G_0)'$ converges uniformly by integration by parts, including both endpoints. This proves $L^\infty_u L^2_{v,y}$ convergence of the Duhamel primitive of the opposite shear. Thus the limiting weak product alone is not being used as a polarization transport law.
+
+Subtract \eqref{eq:duh} from its limiting counterpart and integrate. In the initial parallel identification,
+\[
+ [\Omega_\eps\sqrt{J_\eps}\,\widehat\chi_\eps]^{\rm par}
+ -[\Omega_0\sqrt{J_0}\,\widehat\chi_0]^{\rm par}
+ =\Omega_0(0)(\widehat\chi_\eps(0)-\widehat\chi_0(0))
+    +o_{L^\infty_uL^2_{v,y}}(1).
+\]
+The analogous proof for the other branch holds on the very same rectangle. Neither step assumes a temporal rate gap or a plane symmetry.
+
+\section{Metric-derivative covariance in the physical screen}
+At the boundary the physical derivative in the limiting orthonormal screen is $\operatorname{Re}\sum iB_j e^{ijv/\eps}$ besides its strong part; the conformal area power cancels in the orthonormal components, and changing to the actual boundary orthonormal frame costs $O(\eps)$. Since the tracefree derivative is $2\Omega\widehat\chi$, the positive harmonic coefficient of the shear is $iB_j/(4\Omega(0))$. The strong Duhamel estimate therefore makes the outgoing physical metric-derivative coefficient
+\[
+ \frac{i}{2\sqrt{J_v}}P_vB_j.
+\]
+There is no lapse ratio. The corresponding trace part converges strongly; for the other branch the angular Lie shift between the characteristic derivative and $\partial_u$ also converges strongly. The moving angular maps never change the relevant optical phase.
+
+Local order-zero PDO tests of these explicit strong expansions select the relevant signed optical ray by principal symbol. Distinct harmonics and distinct $u$ and $v$ rays have vanishing cross terms by nonstationary phase. For slow $L^2$ envelopes this follows by smooth approximation and uniform operator bounds. The tracefree physical sheet matrix is $1/4$ of the resulting screen derivative covariance, namely $J_v^{-1}P_v(\sum_j B_jB_j^*/16)P_v^*$. The other branch is identical. This is a statement about the physical screen quotient and not every component of a gauge-dependent full metric defect; no pointwise generalized-wave hypothesis has been inferred. In particular, fixing the Hermitian trace fixes the two scalar source profiles, while varying the off-trace data changes the observable matrix wherever the corresponding ray tube is present.
+
+\section{Two distinct curvature readouts}
+The readouts below are stated in the analytic classes in which they are proved. In the first, one takes a centered microlocal defect of a calibrated electric Weyl carrier. In the second, one recovers the prescribed coefficients in a strong local $L^2$ optical-band limit on the exact developments. The second is neither a single-clock receiver statement nor an unfiltered pointwise bound.
+
+\subsection{Generalized-wave readout: a calibrated electric Weyl symbol}\label{sec:genread}
+The physical matrix is also the defect of a directly calibrated tidal quantity, not just a coordinate component prescription. On compact patches use the \emph{actual} all-covariant Weyl tensor difference \(W(g_\lambda)-W(g)\). Its Taylor first variation \(DW_g[h]\) plus remainder satisfies
+\[
+ W(g_\lambda)-W(g)=DW_g[h]+O_{L^2_{\rm loc}}(1),
+\]
+because all leading nonlinear errors have factors \(h\,\partial^2h\) or \((\partial h)^2\), bounded under the hypotheses of Section~\ref{sec:gauge}. For an oriented time observer \(T\), apply any properly supported matrix PDO of order minus one whose symbol extracts the \(T\)-electric Weyl tensor, projects both remaining indices to the \(T^\perp\cap\ker\xi\) tracefree screen, and multiplies by \(2\langle\xi\rangle_{\rm hom}/\xi(T)^2\) near the null cone, where \(\langle\xi\rangle_{\rm hom}\) is the positive homogeneous norm used to construct the derivative defect. A conic cutoff keeps \(\xi(T)\ne0\). The bounded remainder is locally compactified by this PDO from \(L^2\) to \(L^2\) (via Rellich on the patch); after subtracting its subsequential strong component it has no defect. On a null amplitude in \(\mathcal C_\xi\), the principal linearized Ricci and scalar curvature vanish, so the Weyl principal is Riemann. Its \(TATB\) component on the screen is \(\frac12 \xi(T)^2h_{AB}\) with the curvature convention in which the linear principal term is \(-\frac12\partial_T^2 h_{AB}\); the opposite overall curvature sign does not change a covariance. Thus the raw, weak-limit-centered carrier has the screen derivative covariance. Multiplying that covariance by \(1/4\) gives \(M\); equivalently halve the carrier before taking its covariance. This remains a result about the common spacetime identification and the fixed observer, not about arbitrary \(\lambda\)-dependent coordinate changes. In the rotating Rosen calibration the sign of the imaginary Stokes component is compared in the same orientation; reversing spatial orientation relabels the two circular polarizations.
+
+\subsection{Characteristic readout: bandpassing the exact optical Weyl components}\label{sec:filter}
+Use the exact vacuum optical equation \cite[(22)]{LRimp},
+\[
+ \not\nabla_4\widehat\chi_\eps+
+   (\Tr\chi_\eps)\widehat\chi_\eps
+ =-2\omega_\eps\widehat\chi_\eps-\alpha_\eps ,
+\]
+where $\alpha_\eps$ is the outgoing screen Weyl component in that sign convention. In the fixed angular basis along $\partial_v=\Omega e_4$ this reads
+\[
+ \Omega_\eps\alpha_\eps=-\partial_v\widehat\chi_\eps+L_\eps.
+\]
+Here $L_\eps$ denotes quadratic lower terms, including the projected connection multiplications. By the optical-direction $L^2_v L^\infty_u L^\infty_y$ bounds on shear and $\omega$ and the expansion bound of \cite[Def.~2.26]{LR}, it is uniformly bounded in $L^1_v L^2_{u,y}$. The swapped statement holds in exact $u$-dragged labels for $\underline\alpha_\eps$, with its own optical phase. The orthonormal components and these marked angular components are related by actual algebraic screen normalization; the optical filter is applied in the specified labels, not to an uncalibrated time series.
+
+Fix a smooth compact cutoff $\rho$ on a buffered optical chart. Let $P_\eps^j=a_j(\eps D_v)$, $D_v=-i\partial_v$, with $a_j$ smooth and compactly supported, one near positive harmonic $j$ and zero near all other signed carrier harmonics and zero frequency. Extend cutoff fields by zero. The one-dimensional convolution kernel has $L^2$ norm $O(\eps^{-1/2})$, so Hilbert-valued Young gives
+\[
+ \|\eps P_\eps^j(\rho L_\eps)\|_{L^2}=O(\sqrt{\eps}).
+\]
+The cutoff derivative gives $O(\eps)$ in $L^2$. Since $\eps P_\eps^j\partial_v$ is uniformly bounded on $L^2$, it preserves the strong $o(1)$ shear remainder, and Fourier translation gives
+\[
+ \eps P_\eps^j(\rho\Omega_\eps\alpha_\eps)
+       =-ij\rho U_j e^{ijv/\eps}+o_{L^2}(1),
+\]
+where $U_j=iP_v B_j/(4\Omega_0\sqrt{J_v})$ denotes the positive optical shear coefficient, written in the limiting orthonormal screen. The filter is first applied to fixed angular components of the measured tensor; the resulting leading coefficient is converted to that limiting orthonormal frame afterwards. This order does not require a commutator estimate for a rapidly varying physical frame. The multiplier formula follows by dominated convergence for any fixed $L^2$ envelope; it also annihilates the limiting slow shear in this scaled high-frequency limit. Therefore weak quadratic tests recover $j^2\rho^2 U_jU_j^*$, and summing over the calibrated bands after division by $j^2$ and multiplication by $\Omega_0^2$ yields $\rho^2 M_{+\dd v}$. There is no division at cutoff zeros. The factor $\Omega_0^2$ is $(2\Omega_0)^2/4$, converting shear to derivative and then to the physical covariance. The opposite branch gives $M_{+\dd u}$ separately even at coincident observer-frame frequencies. This proves the filtered part of Theorem~\ref{thm:main}.
+
+\section{What the results identify}
+The generalized-wave statement transports an oriented covariance along the null Hamilton flow without assuming it is produced by a coherent ansatz. The one-stream benchmark changes its circular sign while fixing the scalar stress exactly in the weak limit. The characteristic theorem gives a separate positive construction: two incident matrices can be changed independently at fixed traces, both survive on a common interior overlap, and the bandpass recovers them from exact curvature. No uniqueness of the matrix given the limiting metric is claimed. A rapidly wavelength-dependent change of spacetime identification, more than two arbitrary complex characteristic families, arbitrary variable-rank data, and pointwise Weyl asymptotics in the angular construction are not covered. All statements are classical.
+
+\begin{thebibliography}{99}
+\bibitem{HL} C.~Huneau and J.~Luk, \emph{Burnett's conjecture in generalized wave coordinates}, \href{https://arxiv.org/abs/2403.03470}{arXiv:2403.03470}.
+\bibitem{Burnett} G.~A.~Burnett, \emph{The high-frequency limit in general relativity}, J.\ Math.\ Phys.\ \textbf{30} (1989), 90--96.
+\bibitem{GTC} A.~Guerra and R.~Teixeira da Costa, \emph{Oscillations in wave map systems and homogenization of the Einstein equations in symmetry}, Arch. Rational Mech. Anal. \textbf{249} (2025), Article 9, \href{https://doi.org/10.1007/s00205-024-02042-3}{DOI}.
+\bibitem{Gerard} P.~G\'erard, \emph{Microlocal defect measures}, Comm.\ Partial Differential Equations \textbf{16} (1991), 1761--1794.
+\bibitem{Tartar} L.~Tartar, \emph{H-measures, a new approach for studying homogenisation, oscillations and concentration effects in partial differential equations}, Proc.\ Roy.\ Soc.\ Edinburgh Sect.\ A \textbf{115} (1990), 193--230.
+\bibitem{Isaacson} R.~A.~Isaacson, \emph{Gravitational radiation in the limit of high frequency. I. The linear approximation and geometrical optics}, Phys.\ Rev.\ \textbf{166} (1968), 1263--1271, \href{https://doi.org/10.1103/PhysRev.166.1263}{DOI}.
+\bibitem{Dolan} S.~R.~Dolan, \emph{Geometrical optics for scalar, electromagnetic and gravitational waves on curved spacetime}, \href{https://arxiv.org/abs/1806.08617}{arXiv:1806.08617}.
+\bibitem{AJ} L.~Andersson, J.~Joudioux, M.~A.~Oancea and A.~Raj, \emph{Propagation of polarized gravitational waves}, Phys.\ Rev.\ D \textbf{103} (2021), 044053, \href{https://doi.org/10.1103/PhysRevD.103.044053}{DOI}.
+\bibitem{Touati} A.~Touati, \emph{Geometric optics approximation for the Einstein vacuum equations}, \href{https://arxiv.org/abs/2206.12318}{arXiv:2206.12318}.
+\bibitem{Multi} A.~Touati, \emph{The reverse Burnett conjecture for null dusts}, \href{https://arxiv.org/abs/2402.17530}{arXiv:2402.17530}.
+\bibitem{LR} J. Luk and I. Rodnianski, \emph{High-frequency limits and null dust shell solutions in general relativity}, \href{https://arxiv.org/abs/2009.08968}{arXiv:2009.08968}.
+\bibitem{LRimp} J. Luk and I. Rodnianski, \emph{Nonlinear interaction of impulsive gravitational waves for the vacuum Einstein equations}, \href{https://arxiv.org/abs/1301.1072}{arXiv:1301.1072}.
+\bibitem{HLU} C.~Huneau and J.~Luk, \emph{High-frequency backreaction for the Einstein equations under $U(1)$ symmetry: from Einstein-dust to Einstein-Vlasov}, \href{https://arxiv.org/abs/2506.21779}{arXiv:2506.21779}.
+\end{thebibliography}
+\end{document}
