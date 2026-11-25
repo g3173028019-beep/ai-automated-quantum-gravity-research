@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Paper index](PAPER-INDEX.md) · [Reproduction](REPRODUCTION.md)
 
-The archive connects explicit information tasks, coupled-field state construction, finite geometry/control, and limits of reconstruction. A channel error bound, a Hadamard state-existence theorem, an exact finite algebra and a descriptive process study answer different scientific questions. The routes below group all 32 archive items by those questions while retaining each action, state space, input class and observable.
+The archive connects explicit information tasks, coupled-field state construction, finite geometry/control, and limits of reconstruction. A channel error bound, a Hadamard state-existence theorem, an exact finite algebra and a descriptive process study answer different scientific questions. The routes below organize the collection by those questions while retaining each action, state space, input class and observable.
 
 ## Geometry–matter information tasks
 
@@ -23,6 +23,7 @@ Suggested route: **04 → 06 → 03** for gate, apparatus and channel estimates.
 | Paper | Positive construction | Distinction to retain |
 |---|---|---|
 | [09. Canonical Einstein–scalar Hadamard states](../papers/09-canonical-einstein-scalar-hadamard/README.md) | Positive gauge-invariant quasifree Hadamard covariances on the physical quotient, with a spacetime lift | A finite canonical real scalar multiplet with fixed positive-definite target metric; smooth on-shell globally hyperbolic four-dimensional background, compact Cauchy surface and potential gradient zero along the scalar image. Nonconstant fields and a nonzero, not necessarily positive, Hessian are included. |
+| [09+21, Edition 2. Local curvature and modular dynamics](../papers/09-21-coupled-modular-kernel/README.md) | Positive physical states and convergent modular reconstruction on the full local algebra | Any smooth globally hyperbolic solution of the canonical finite-scalar theory with a fixed positive target kinetic form and arbitrary smooth potential. The original round four-field curvature-completion and entropy example is retained. |
 | [07. Preferred-clock reference model](../papers/07-clock-foliated-reference/README.md) | Positive physical inhomogeneous quadratic sectors and an explicit 141-oscillator finite-band Gaussian, preserving the homogeneous action | A modified effective action with altered characteristics. This is quadratic stability and a finite-band state, not paper 09’s canonical metric-Hadamard theorem or nonlinear stability. |
 | [08. Native mixed quartic and Walker geometry](../papers/08-einstein-scalar-mixed-quartic/README.md) | An off-shell mixed contact including auxiliary feedback, plus a separate exact matter-supported finite solution | The finite solution has real split signature `(2,2)`. A Lorentzian real lift and full quartic chart descent are not supplied. |
 | [19. Local Einstein–scalar gauge benchmark](../papers/19-local-gauge-benchmarks/README.md) | A nonminimal Green matrix, compatible free BRST/equicausal interfaces and explicit dagger/interaction limits | An imported action and local AdS-interior/compact-host construction. State existence is credited as an input; a full interacting QME is not proved. |

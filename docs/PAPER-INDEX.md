@@ -440,8 +440,8 @@ This is a first-order classical result on the Einstein branch. It does not asser
 
 ## 09+21. Local curvature information and modular dynamics in coupled Einstein–scalar theory
 
-On the active four-field background, linearized Weyl curvature and one material scalar generate the full local algebra. Properly localized preparations separate identical Weyl marginals from positive coupled relative entropy, and a specified faithful Hadamard state admits a convergent full modular coordinate kernel.
+**Edition 2.** The revised edition constructs positive physical Hadamard states for linearized canonical Einstein–scalar theory with arbitrary smooth potential on any smooth globally hyperbolic solution. The construction descends to the nondegenerate global physical quotient; for one chosen state per background, each local modular generator is reconstructed by a convergent series on compact physical tests.
 
-The kernel is a convergent Abel–Chebyshev distribution series for the chosen state and diamond in the linearized theory, not a state-independent closed kernel.
+The original four-field example, its one-scalar local completion, exact compact preparations and two-sided finite information-loss bounds are retained. The modular generator is state-dependent. The general result is not a geometric closed-form kernel, a universal Weyl-only completion theorem, or a nonlinear quantum-gravity construction.
 
-[Paper entry](../papers/09-21-coupled-modular-kernel/README.md) · [PDF](../papers/09-21-coupled-modular-kernel/manuscript.pdf) · [TeX](../papers/09-21-coupled-modular-kernel/main.tex)
+[Paper entry](../papers/09-21-coupled-modular-kernel/README.md) · [PDF](../papers/09-21-coupled-modular-kernel/manuscript.pdf) · [TeX](../papers/09-21-coupled-modular-kernel/main.tex) · [First edition](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/928c00c75833b7a18384f3b035663921fe4a354f/papers/09-21-coupled-modular-kernel)

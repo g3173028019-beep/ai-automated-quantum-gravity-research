@@ -86,4 +86,4 @@ The recorded review consists of automated calculations and AI review. Human expe
 
 ### 09+21
 
-[09+21 · Local curvature information and modular dynamics in coupled Einstein–scalar theory](papers/09-21-coupled-modular-kernel/README.md): see the TeX and the built PDF. Proofs reviewed internally; no external peer review is claimed. The kernel is a convergent Abel–Chebyshev distribution series for the chosen state and diamond in the linearized theory, not a state-independent closed kernel.
+[09+21 · Local curvature information and modular dynamics in coupled Einstein–scalar theory](papers/09-21-coupled-modular-kernel/README.md): the revised TeX and compiled PDF contain the general state, radical descent and modular reconstruction proofs, followed by the retained original example. See the entry for the first edition. The arguments were checked internally; external peer review is not claimed.

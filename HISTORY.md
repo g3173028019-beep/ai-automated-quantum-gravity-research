@@ -56,3 +56,5 @@ The accepted contribution chronology and exact operator statement are in [Declar
 
 
 [09+21 · Local curvature information and modular dynamics in coupled Einstein–scalar theory](papers/09-21-coupled-modular-kernel/README.md) is a separately indexed companion published on 25 November 2026. Original Papers 09 and 21 are unchanged.
+
+The second edition of [09+21](papers/09-21-coupled-modular-kernel/README.md) replaces the companion at the same indexed location. It adds the general Hadamard state, physical radical descent, and local modular reconstruction, and retains the original active four-field results. The [First edition](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/928c00c75833b7a18384f3b035663921fe4a354f/papers/09-21-coupled-modular-kernel) remains available. Papers 09 and 21 are unchanged; the collection count does not increase.

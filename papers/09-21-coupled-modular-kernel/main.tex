@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1.03in]{geometry}
-\usepackage{microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[expansion=false]{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -15,17 +16,674 @@
 \DeclareMathOperator{\arctanh}{arctanh}
 \title{Local curvature information and modular dynamics\\in coupled Einstein--scalar theory}
 \author{}
-\date{Research manuscript 09+21, 25 November 2026}
+\date{Research manuscript 09+21, Edition 2, 25 November 2026}
 \begin{document}
 \maketitle
 
 \begin{abstract}
-We consider the linearized physical theory on an exact compact, closed Einstein--scalar background with four active canonical scalar fields. Compact linearized Weyl smears together with one relational scalar, the squared gradient of the material radius, generate the full local von Neumann algebra in every distributional quasifree representation. The Weyl algebra by itself is strictly smaller. In nested proper diamonds we construct two physical coherent displacements prepared by Weyl unitaries in the outer coupled algebra. They vanish on all inner Weyl measurements but give independent coupled inner readouts and strictly positive coupled relative entropy. Adding finite smooth Gaussian noise from the same local preparations yields finite two-sided bounds on the information lost by the Weyl restriction. Finally we specify a faithful Hadamard reference using smooth angular noise and prove that all compact smooth material Cauchy tests lie in the domain of every power of the modular logarithm. The full diamond generator then has an ordinary coordinate distribution kernel given by a convergent Abel--Chebyshev expansion in physical Gram data. The construction is state-dependent; it does not select a preferred vacuum or transport the Minkowski vacuum modular formula to the curved solution.
+We construct positive quasifree Hadamard states for the physical
+linearized theory of canonical Einstein gravity with scalar fields about smooth
+globally hyperbolic four-dimensional solutions, with finitely many
+scalars and an arbitrary smooth potential. No spatial compactness,
+uniform end geometry, scalar rank, or Killing-field assumption is made.
+Local gauge recovery and a smooth signed charge correction give the
+exact physical commutator, including after reduction by the compact
+presymplectic radical. A single smooth Gaussian preparation makes
+every compact physical Ward test lie in all powers of the local modular
+logarithm in every region. The bare generator has a convergent
+physical Gram reconstruction; relatively compact regions admit a
+redundant coordinate distribution. On the original closed four-scalar
+round solution, one relational scalar together with curvature generates
+the full local algebra; two independently prepared coherent shifts
+hide from the curvature restriction, with finite two-sided
+relative-entropy bounds after Gaussian preparation. The round example
+retains its explicit material-coordinate modular kernel.
 \end{abstract}
 
-\section{Background, physical phase space, and statement of scope}
+\section{Introduction}
+A local physical state and a local modular generator are different
+objects. The first requires a positive covariance with the exact
+gauge-reduced causal bracket, while the second also depends on the
+chosen state and the local algebra. Neither follows from a formal
+frequency splitting of a gauge-fixed wave operator. The compact
+critical state construction of \cite{p09}, the flat Weyl entropy
+calculation of \cite{p21}, and the general linear gauge frameworks of
+\cite{hack,hackschenkel,khavpeierls} motivate the present comparison.
 
-The positivity of a physical Hadamard covariance and the determination of a local modular operator are distinct problems. The compact-Cauchy construction of positive covariances for critical Einstein--scalar multiplets in \cite{p09} provides a state on a coupled physical quotient. The flat Weyl calculation in \cite{p21} instead starts from a specific conformal vacuum and a curvature-only algebra. We ask how much information local curvature carries on an actual active background of the first construction, and what can be computed about the modular operator of the resulting \emph{full} local algebra. We use the existing state-existence theorem as input, not as a modular or local-generation theorem. General Peierls and quasifree modular machinery is available in \cite{hack,khavpeierls,longo}; the closed-background local rigidity, preparations, and compact-test endpoint estimates below are the additional inputs.
+Sections~\ref{sec:general}--\ref{sec:construction} construct a physical
+state on a general fixed background. In particular the actual
+indefinite wave charge is used when the potential gradient makes
+trace reversal fail to commute with evolution. The noncompact step
+uses regional gauge recovery and puts no uniform Fredholm assumption
+at infinity. Section~\ref{sec:generalmod} prepares one reference
+simultaneously for all regions, separates local standardness from
+global cyclicity, and establishes a domain-controlled bare modular
+reconstruction. The later round worked case retains its distinct
+local observable classification, preparations, entropy experiment
+and explicit coordinate kernel. Those round claims are not asserted
+on arbitrary backgrounds; conversely the general state proof does
+not use the scalar markers of that example.
+
+All constructions concern linearized physical observables. We
+neither construct a nonlinear material-time Hamiltonian nor assert
+interacting constraint quantization, ultraviolet completeness, or
+an invariant preferred vacuum.
+
+\section{Canonical gauge complex and the physical theorem}\label{sec:general}
+Let $(M,g,\phi)$ be a smooth time-oriented globally hyperbolic
+four-dimensional solution of
+\[
+ S=\tfrac12\int_M\{R-2\Lambda-\textstyle\sum_A|d\phi^A|^2-2V(\phi)\}\vol_g .
+\]
+A constant invertible field redefinition absorbs any fixed positive
+definite target kinetic matrix. The potential $V$ is an arbitrary smooth
+function, not assumed critical or bounded below. We consider the real
+linear theory on this fixed background; the spaces of configurations and
+sources below are those of the linear theory only. The symbols $C_c^\infty$
+and $H^s_{\rm loc}$ are used for sections of the relevant smooth real or
+complex bundles. We use complexification for covariance and symbol
+calculations. Adjoints denoted $*$ use auxiliary positive pairings unless
+specified; $\dagger$ denotes the action adjoint.
+
+\begin{theorem}[Positive physical reference]\label{thm:generalstate}
+For every such background and every smooth Cauchy surface, the compact
+Ward/equation phase space has a regular positive quasifree state with the
+exact causal physical commutator and signed Hadamard two-point lifts.
+The state may be chosen to descend through the algebraic presymplectic
+radical. No condition on the topology, spatial ends, scalar rank,
+Killing fields, or uniform geometry of the Cauchy surface is required.
+The signed lifts are wave-gauge bisolutions on the redundant field
+bundle; their commutator is prescribed on physical sources, not on
+arbitrary redundant sources.
+\end{theorem}
+
+\subsection{Wave identities and noncritical charge}
+Write $X\mapsto KX=(\mathcal L_X g,X\phi)$ for gauge. In the original
+metric variable $h$, set $Ih=h-\frac12g\operatorname{tr}_g h$ and
+\[
+ b_2((h,\psi),(h',\psi'))=\tfrac14\bar h:Ih'+\bar\psi\cdot\psi',
+ \qquad
+ F(h,\psi)_a=\nabla^b h_{ba}-\tfrac12\nabla_a\operatorname{tr}h
+       -2\psi^A\nabla_a\phi^A .
+\]
+The ghost pairing $b_1$ is the Lorentzian one. Integration by parts gives
+$K^\dagger=-F/2$. Let $A_{ab}=\sum_A a_{Aa}a_{Ab}$, where $a_A=d\phi^A$, and
+$W=\Lambda+V$. In these variables the normalized Euler Hessian is
+$P(h,\psi)=(-2\delta(\operatorname{Ric}-A-Wg),
+\delta(\Box\phi-V'))$. In the first component the Euler trace
+reversal has been moved into $b_2$; the variation of that trace
+reversal on the background equation is zero. On shell the exact identities
+are $PK=0$, $FP=0$, and
+\[
+ D_2=P+KF,\qquad D_1=FK,\qquad
+ D_2K=KD_1,\quad FD_2=D_1F .
+\]
+Both $D_i$ are normally hyperbolic and formally self-adjoint for their
+respective $b_i$. To see the cancellation relevant to the scope, put
+$H_A=\nabla^2\phi^A$. The non-diagonal zeroth-order
+blocks of $D_2$ are $D_{h\psi}^A=-4H_A+2V_Ag$ and
+$(D_{\psi h}h)^A=-H_A:h$; the scalar diagonal potential is
+$-V_{AB}-2a_A\cdot a_B$. The metric diagonal is
+$\Box h_{ab}+2R_{acbd}h^{cd}-2A_{(a}{}^c h_{b)c}$ in the
+convention $g^{cd}R_{acbd}=\operatorname{Ric}_{ab}$, and
+$D_1=\Box+\operatorname{Ric}-2A$ on ghosts. In the metric row
+the $a_{A(a}\nabla_{b)}\psi^A$ variation of $A$ cancels that
+from the symmetrized gradient of $-2\psi^Aa_A$ in $KF$.
+In the scalar row the differentiated metric appears through
+$-a_A\cdot(\operatorname{div} h-\tfrac12d\operatorname{tr}h)$,
+which cancels against the scalar row of $KF$. The on-shell identities are
+$\operatorname{Ric}=\sum_A a_A\otimes a_A+(\Lambda+V)g$ and
+$\operatorname{tr} H_A=V_A$. In particular
+$I(-4H_A+2V_Ag)=-4H_A$, but
+\[
+ [D_2,\operatorname{diag}(I,1)](h,\psi)
+       =(2V_A\psi^Ag,\tfrac12V_A\operatorname{tr}h).
+\]
+It is the actual indefinite charge, not a separately conserved
+unreversed tensor charge, that is used here. Compare the underlying
+gauge complex in \cite{hack,hackschenkel,schmid}. The existence
+results for Maxwell fields in \cite{schmid} and for vacuum
+linearized gravity on asymptotically flat backgrounds in \cite{gmw}
+are not used as state-existence theorems for this coupled system.
+
+Let $U_i$ be Cauchy evolution, $\rho_i$ the value and first normal
+derivative trace on $\Sigma$, and $E_i$ the causal Green operator,
+with the Peierls sign chosen consistently throughout. Let $Q_i$ denote
+the Hermitian charge $i$ times the sesquilinear wave symplectic form
+with integrand $b_i(u_0,v_1)-b_i(u_1,v_0)$. Fix the sign of the
+positive sheet by $u_1=-i|\xi|u_0$ in a flat normal chart. Conservation
+follows from formal $b_i$-self-adjointness and the parallel principal
+connection. Put $k=\rho_2KU_1$, $c=\rho_1FU_2$, and $Q=Q_2$.
+On smooth wave cut data,
+\begin{equation}
+ ck=0,\qquad Q(ka,v)=-\tfrac12Q_1(a,cv).                 \label{eq:gaugecharge}
+\end{equation}
+The second identity follows from the Green pairing and $E_2K=KE_1$;
+one may first test with $v=\rho_2E_2 f$, which realizes every compact
+smooth cut datum by a spacelike compact Cauchy solution and a time
+switch. It extends by compact-test duality.
+
+The real phase space below is
+$\mathcal V=\ker F|_{C_c^\infty}/P C_c^\infty$, with its real Peierls
+form $\sigma$. It is canonically the compact data in $\ker c$ modulo
+compact $k$-gauge data. For surjectivity realize a compact constrained
+wave datum by $E_2 f$; then $E_1Ff=0$, so $Ff=D_1a$ for compact $a$,
+and $f-Ka$ is Ward. For injectivity, if $E_2 f=KX$ with compact ghost
+cut data, take $X=E_1b$ and write $f=Kb+D_2u$ with compact $b,u$.
+Then $D_1(b+Fu)=0$ and compact homogeneous uniqueness gives $f=Pu$.
+These arguments use the exact normally hyperbolic Green sequences.
+The image of a region always means its compact source image in
+$\mathcal V$, not an independently reduced regional quotient.
+
+\subsection{ADM comparison, including an off-constraint identity}
+Write $M_\Sigma$ for the differential map from wave cut variables
+to ADM metric and scalar pairs, and $S_\Sigma$ for the following
+differential section. Set the perturbed lapse and shift to zero on
+the cut, fix the spatial metric and normal derivatives from the
+prescribed canonical pairs, and solve the four remaining normal
+derivatives of the lapse/shift from $F|_\Sigma=0$. This is algebraic
+with invertible normal de Donder coefficient. It gives
+$M_\Sigma S_\Sigma=1$ even off constraint. If the ADM constraints
+hold, the normal Euler equations and $D_2u=0$ give
+$\partial_nF|_\Sigma=0$: all tangential derivatives of $F$ vanish
+there, and the normal projections of the metric row of $KF$ have
+invertible coefficients on the four remaining derivatives. Thus
+$F=0$ propagates by $D_1$. Conversely propagated $F=0$ implies the
+ADM constraints. The same statements hold distributionally.
+
+If $w$ is a compact constrained wave datum then
+$w-S_\Sigma M_\Sigma w=k(0,a_1)$ for compact $a_1$: a zero-value
+ghost with suitable normal derivative changes precisely the
+lapse/shift values without affecting ADM pairs. The remaining normal
+derivatives match by $F|_\Sigma=0$. The ADM gauge operator $B$ acts
+on the lapse and shift descriptors; $M_\Sigma k$ is $B$ of the
+ghost value, and $S_\Sigma B$ is compact wave gauge on compact
+descriptors (choose its ghost normal derivative to keep lapse/shift
+zero). Denote the real ADM charge by $Q_a$, with the factor of $i$
+understood when using its Hermitian complexification.
+
+The charge identity for two $S_\Sigma$ lifts needs only
+$F|_\Sigma=0$, not the constraints. Indeed the gauge-fixed quadratic
+action adds $-b_1(Fu,Fu)/4$ modulo a divergence. Its variation adds
+normal boundary potential $-b_1(Fu,\sigma_F(n)\delta u)/2$, up to
+the choice of outward normal. Its antisymmetrized polarization uses
+the values of $F$ only. The ungauged action current equals the
+canonical ADM current modulo a tangential divergence by the lapse--shift
+form of the same action; the hypersurface boundary functional contributes
+a field-space exact variation and cancels in the antisymmetrization.
+Consequently $Q(S_\Sigma a,S_\Sigma b)=Q_a(a,b)$ when one argument
+is compact smooth, including a distributional first argument. In
+addition, (\ref{eq:gaugecharge}) pairs the gauge gap $k(0,a_1)$
+of a constrained datum to zero against $S_\Sigma a$, even when $a$
+is off constraint, because the first value of $cS_\Sigma a$ is
+zero. In particular, for every compact Ward $f$ and any cut
+distribution $a$,
+\begin{equation}
+ Q(S_\Sigma a,\rho_2E_2 f)=Q_a(a,M_\Sigma\rho_2E_2 f).       \label{eq:offcharge}
+\end{equation}
+The Cauchy shadow of $\supp f$ is compact, so the distributional Green
+pairing in (2) only uses a fixed compact Cauchy buffer; no integration
+at spatial infinity is implicit.
+
+\section{Construction of the positive state}\label{sec:construction}
+\subsection{Proper microlocal positive squares}
+Use balanced Cauchy symbols of orders $H^{1/2}\oplus H^{-1/2}$,
+i.e. locally conjugate by elliptic symbols of orders $1/2,-1/2$.
+No global bounded balancing inverse is used. The real-principal wave
+system has roots $\pm|\xi|$ with their graph eigenbundles. Successively
+eliminate each off-diagonal degree by division by the nonzero root
+difference, and Borel sum with proper kernels. This gives projectors
+$C_{j,s}$, $s=\pm1$, modulo properly smoothing operators, whose sum
+may be taken exactly one. Their wave lifts are the one-sheet Cauchy
+Fourier integral propagators \cite{gow}. The constructions are local
+in space on compact cut charts and require no uniform spatial constants.
+For the exact wave intertwiners $k,c$, the opposite-sheet blocks are
+smoothing to every degree: in their evolution equations the first
+possible symbol is multiplied by the root difference one order above
+its time derivative. The same argument, using conservation
+$Q'=i(QA-A^*Q)$ for $i\partial_t=A$ on the evolving data, gives
+$(C_{2,-s})^*Q C_{2,s}\equiv0$. Here and below $\equiv$ is equality
+modulo proper all-order smoothing; hence $C_{2,s}^*Q\equiv QC_{2,s}$.
+
+The symbol of $k$ on each branch at null $\zeta$ is $(\zeta\odot X,0)$;
+it is injective because $\zeta(n)\ne0$, and the two signs are
+independent. That of $c$ is surjective: for target $f$ use
+$Ih=\ell\otimes f+f\otimes\ell-f(\zeta^\sharp)\ell\otimes\ell$
+with $\ell(\zeta^\sharp)=1$. Choose a proper left symbol parametrix
+$L_0$ of $k$ using $k^*k$, and proper right parametrix $R_0$ of $c$.
+Set
+\[
+ L=\sum_s C_{1,s}L_0C_{2,s},\quad T=1-kL,\quad
+ R=T\sum_s C_{2,s}R_0 C_{1,s},\quad H=1-Rc .
+\]
+Thus $cT=c$ and $ck=0$ exactly, $Tk\equiv0$, $T^2\equiv T$,
+$cR\equiv1$, $TR\equiv R$, and $HT\equiv TH$. On $\ker c$,
+$H=1$ exactly and $T$ changes inputs only by gauge. Define
+$e_s=C_{2,s}TH$. It is an oblique projector modulo smoothing.
+On its principal range, choose temporal gauge $h_{n\mu}=0$ and
+use $\zeta^a Ih_{ab}=0$ to get two spatial TT polarizations; the
+scalar positions are unaffected at principal order. The signed
+charge there is proportional to
+$|h_{\rm TT}|^2/4+|\psi|^2>0$ on each nonzero physical representative.
+The principal gauge shift costs zero charge by
+(\ref{eq:gaugecharge}), so the result also holds in the chosen
+representative. The full matrix
+$e_s^*(sQ)e_s+(1-e_s)^*(1-e_s)$ then has a strictly positive
+principal symbol. Starting with its positive principal root, solve
+each subleading coefficient by the invertible Sylvester map
+$X\mapsto b_0X+Xb_0$ and properly sum to obtain $b_s$ whose
+square $b_s^*b_s$ has this full symbol. Thus the actual factors
+$F_s=b_s e_s$ satisfy
+\begin{equation}
+ F_s^*F_s\equiv sH^*T^*Q C_{2,s}TH,qquad F_s k\equiv0 .       \label{eq:formal}
+\end{equation}
+Indeed $e_s^*Qe_s\equiv H^*T^*Q C_{2,s}TH$ by the charge adjoint
+and idempotence, and $(1-e_s)e_s\equiv0$. No positive low-frequency
+spectrum of an indefinite wave form is invoked. Both $H$ factors in
+(3) are essential before restricting to constraints.
+
+\subsection{Exact regional gauge annihilation}\label{sec:localgauge}
+We describe the local recovery used for this purpose. The symmetric
+gradient in the metric row of $KX$ determines all derivatives of the prolonged
+Killing pair $(X,\nabla_{[a}X_{b]})$ up to a connection term and
+known differential expressions in the metric and scalar sources.
+In a coordinate trivialization write this prolongation as
+$(d+\mathsf A)s=F_1(u)$, with $u=KX$ and $s$ the pair, and
+include the algebraic residuals of the prolongation and scalar row.
+On a sufficiently small star-shaped ball use the regularized
+Poincar\'e homotopy $J$ of order $-1$ \cite{costabel}. For $1$-forms
+it maps into degree zero, and on degree zero $Jd=1-P_0$ where
+$P_0$ is a smooth average taking values among constants. The inverse
+of $1+J\mathsf A$ exists by the small-radius $L^2$ norm bound for
+$J\mathsf A$, and builds a particular recovery
+$s_0=(1+J\mathsf A)^{-1}JF_1(u)$. The remaining homogeneous
+candidates are the finite-dimensional smooth family
+$(1+J\mathsf A)^{-1}c$ for constants $c$. Fit their residuals in
+the simultaneous prolonged and algebraic equations by a fixed
+finite set of compact smooth duals to their residual image; directions
+of zero residual are left untouched. For a pure gauge input this
+recovers the exact pair modulo a joint Killing solution. For general
+inputs the same construction is linear and the residual
+$G(u)=u-K\Xi u$ satisfies $GK=0$.
+
+Here are the support and regularity facts used from this construction.
+On nested buffered balls, the transpose of each homotopy maps
+compact smooth tests into compact smooth tests, with support
+contained in the convex hull with its fixed interior center bump.
+For the Neumann inverse the same holds: the iterates for the transpose
+remain in that fixed compact hull, and the inverse equation gives
+successively one Sobolev order by the smoothing order of $J^*$.
+Localized elliptic regularity for $1+J\mathsf A$ extends recovery to
+distributions by transpose and shows pseudolocality. The fitted
+finite-dimensional terms are smooth and use compact smooth duals.
+In particular $G^*$ of a compact test gives an actual compact Ward
+source, after the identification of auxiliary and action pairings.
+These arguments use the finite-type Killing prolongation and make no
+constant-rank assumption on the residual image as the ball varies.
+
+On a buffered cut patch, apply $\Xi$ to the local $D_2$ solution
+and take the recovered ghost value and first normal derivative.
+Call this cut map $L_i$. For exact pure gauge input in that buffer,
+the recovered ghost differs from the actual ghost by a local joint
+Killing solution, so $1-kL_i$ annihilates pure gauge there. Here $k$
+uses the wave-defined ghost Cauchy map, not arbitrary second
+derivatives of $\Xi u$. The map and its transpose preserve compact
+smooth data on the indicated buffers: for the transpose the inserted
+slice test is a compact timelike-conormal distribution (delta and its
+normal derivative). Pseudolocal recovery keeps the wavefront set inside
+this noncharacteristic conormal, and the \emph{causal} propagator converts it to smooth
+cut data by the Green identity, with buffered support by finite
+propagation. Compact buffers may be chosen locally finite.
+
+Choose $\sum_i\chi_i^2=1$ and $\eta_i=1$ near $\supp\chi_i$ with
+support inside the working buffer of $L_i$. Define
+\[
+ D_{i,s}=\chi_i F_s\eta_i(1-kL_i),\qquad
+ \lambda_s^0=\sum_i D_{i,s}^*D_{i,s}.
+\]
+Each factor kills $k$ exactly. The difference from $\chi_i F_s$
+is smoothing: separated supports handle the missing $1-\eta_i$;
+commuting $\eta_i$ through differential $k$ uses $F_sk\equiv0$
+and a separated-support commutator. An outer cutoff within the
+working buffer allows extension by zero. The bounded smooth transpose
+mapping just established controls the remaining composition in both
+kernel arguments. The sum is locally finite, hence
+$\lambda_s^0\equiv F_s^*F_s$. It is positive on the full wave cut
+and has the correct signed wavefront after the two Cauchy propagations
+from (3); their common diagonal cut covector excludes a one-sided
+zero covector, including at caustics.
+
+\subsection{Closed constraint projection and the smooth signed defect}
+On the full wave cut the Hermitian form
+$R_w=H^*T^*QTH-(\lambda_+^0-\lambda_-^0)$ is jointly smooth
+by (3). Pull only this smooth defect to ADM:
+$R_a=S_\Sigma^*R_wS_\Sigma$. Choose a positive ungraded ADM
+$L^2$ space $\mathcal H$ with smooth weight $w\geq1$ growing as
+necessary so that $R_a$ represents a bounded Hilbert--Schmidt operator
+and every compactly localized output derivative is Hilbert--Schmidt.
+For example, bound the kernel and derivatives on successive compact
+shell pairs and multiply each argument by $w^{-1/2}$ so the resulting
+squared shell norms are summable; for each fixed derivative order
+enforce these bounds from that shell onward. Localization makes
+derivatives of the fixed weight harmless. The real charge is bounded
+and has pointwise invertible smooth Riesz matrix $J_w$ (no bounded
+global inverse is asserted).
+
+The distributional constraint subspace is
+$\mathcal C=(\overline{J_w B C_c^\infty})^{\perp_{\mathcal H}}$.
+Its orthogonal projector is locally regular. Here are the local
+estimates and their origin. On bounded nested coordinate domains,
+the shift metric gauge row controls the symmetric gradient of the
+shift, up to zero-order lapse; the lapse momentum row controls its
+Hessian minus its trace, up to first-order shift and lower lapse.
+The pointwise Hessian-minus-trace map is invertible on symmetric
+tensors in spatial dimension three. By ordinary local Korn and
+Hessian estimates one obtains, for $D=J_wB$,
+\[
+ \|\alpha\|_{H^2}+\|\beta\|_{H^1}
+       \le C(\|D(\alpha,\beta)\|_{L^2}+\|\alpha\|_{L^2}+\|\beta\|_{L^2})
+\]
+on smooth bounded cut subdomains. The first-order shift term in
+the second row is controlled using the first row and interpolation
+absorbs first derivatives of the lapse. On the orthogonal complement
+of the local kernel the two $L^2$ terms can be discarded by Rellich
+and a contradiction sequence. Thus an element of the global gauge
+range closure has a local potential with bounded graded norm, by
+projecting an approximating sequence off the local kernel on a
+slightly larger domain. If $v$ is the Hilbert projection of $f$ into
+that range closure, this potential satisfies $D^*D a=D^*f$ locally.
+The mixed elliptic normal parametrix and bounded local potential give
+\begin{equation}
+ \|P_{\mathcal C}f\|_{H^m(U)}
+ \le C_{m,U,U'}(\|f\|_{H^m(U')}+\|f\|_{\mathcal H}),
+ \qquad U\Subset U'.                                      \label{eq:localell}
+\end{equation}
+All weights here are bounded above and below locally; no global Korn
+or global Fredholm estimate has been used.
+
+For the radical-reduced conclusion let $\mathcal C_0$ be the
+$\mathcal H$ closure of compact smooth constrained vectors, and
+$\mathcal E=\mathcal C\cap\mathcal C_0^\perp$. We prove
+(\ref{eq:localell}) also for $P_{\mathcal C_0}$. Fix
+$e\in\mathcal E$ and put $a=J_w^{-1}e$ locally distributionally.
+Its charge pairs to zero with all compact constrained ADM vectors.
+By (\ref{eq:offcharge}), the distributional wave solution
+$U_2 S_\Sigma a$ annihilates every compact Ward test. In particular
+it annihilates all the regional $G^*$ tests of
+Section~\ref{sec:localgauge}, hence is locally $K\Xi (U_2 S_\Sigma a)$.
+The pure gauge parameter has well-defined cut traces: the wave
+solution has only characteristic wavefront and the recovery is
+pseudolocal on the smaller buffer. The ADM readout then gives
+$a=B\xi$ locally. Since $e\in\mathcal C$,
+$(J_wB)^*(J_wB)\xi=0$ distributionally. The mixed normal
+operator is elliptic as above, so $e$ is smooth. For a fixed compact
+localization the map $\mathcal E\to H^m_{\rm loc}$ has a closed
+graph by distributional convergence, hence its local seminorm is
+bounded by the $\mathcal H$ norm. Therefore
+$P_{\mathcal C_0}=P_{\mathcal C}-P_{\mathcal E}$ obeys (4).
+This proof neither identifies $\mathcal C_0$ with $\mathcal C$
+nor assumes a finite-dimensional end space.
+
+Compress $R_a$ by $P_{\mathcal C_0}$ to get $R_0^a$.
+By (4) its compactly localized output derivatives are
+Hilbert--Schmidt: apply (4) to the Hilbert--Schmidt map with both
+its global $\mathcal H$ norm and its localized derivative norm.
+Right multiplication by a bounded orthogonal projection preserves
+this. Selfadjointness gives the analogous input estimates; Fourier
+weights localized in the two variables then give jointly arbitrary
+Sobolev order, hence a smooth kernel. The same proof for the positive
+and negative spectral parts uses
+$|R_0^a|=R_0^a\operatorname{sgn}(R_0^a)$, so local output
+bounds are retained before using selfadjointness.
+
+The defect $R_a$ pairs compact gauge to zero against all
+distributionally constrained vectors in $\mathcal H$:
+$H=1$ on both arguments, $T$ shifts by gauge, and exact compact
+Ward integration gives this for the charge term; the positive
+factors annihilate gauge identically. Thus $R_0^a$ and its signs
+kill compact gauge. If $r$ is a compact algebraic radical,
+(2) and the regional $G^*$ argument give a locally pure gauge
+smooth wave lift $S_\Sigma r$. Since it is constrained, its
+local ghost solves $D_1$ by $FK=D_1$. Hence all $D_{i,s}$ kill
+$S_\Sigma r$. By definition of the radical $R_a(r,f)=0$ for all
+compact constrained $f$, and by boundedness for the closure
+$\mathcal C_0$. It follows that $R_0^a$ and its signs kill $r$.
+Only the implication radical $\Rightarrow$ locally gauge is used;
+no global Killing-cocycle classification is needed.
+
+Finally set
+\[
+ \lambda^s=\lambda_s^0+M_\Sigma^*(R_0^a)_s M_\Sigma.
+\]
+These are positive. The difference on constrained compact arguments
+is exactly $Q$, because $P_{\mathcal C_0}$ fixes their ADM readout,
+$S_\Sigma M_\Sigma-1$ is compact gauge there, and $H=1$ there.
+They descend through the radical by the preceding argument.
+The correction is smooth even on the ambient wave cut since
+$M_\Sigma$ is differential. Lift with $\rho_2E_2$ in both
+arguments and average by conjugation exchanging signs; this
+preserves positivity, physical commutator and the signed Hadamard
+relation. Smooth cut additions propagate smoothly locally by finite
+causal shadow. The usual Weyl construction from a real covariance
+with $\mu\pm i\sigma/2\geq0$ gives the stated regular state.
+This proves Theorem~\ref{thm:generalstate}.
+
+\section{A single reference and modular kernels for all regions}\label{sec:generalmod}
+We now choose one state, not a different state for each local algebra.
+The state depends on the background, a positive base covariance of
+Theorem~\ref{thm:generalstate}, and the construction parameters below.
+Its reference is generally mixed, nonstationary and not canonical.
+Write $\mathcal V_{\rm r}$ for $\mathcal V$ or its radical reduction,
+choosing the corresponding base covariance $\mu_0$.
+For $O\subset M$ open, the local phase space is the image in
+$\mathcal V_{\rm r}$ of compact Ward sources supported in $O$.
+In particular the following theorem applies to every causally convex
+diamond and every globally hyperbolic causally convex region, including
+unbounded regions.
+
+\begin{theorem}[Bare all-region modular generator]\label{thm:generalmod}
+There is a single regular positive Gaussian physical Hadamard reference
+such that the restriction to every represented local von Neumann
+algebra is faithful and standard in its local cyclic representation.
+Every compact smooth Ward source in that region is in the domain of
+every power of its one-particle modular Hamiltonian. On each fixed
+compact support the graph norms have finite Sobolev bounds. The
+one-particle Hamiltonian has a convergent bare odd-power expansion,
+and a convergent Abel--Chebyshev reconstruction in the physical Gram
+matrices. For relatively compact $O$ the physical logarithmic pairing
+has a redundant ordinary distribution kernel on $O\times O$; for
+arbitrary $O$ the physical pairing is defined on all compact Ward
+tests with fixed-support distribution bounds. No canonical off-Ward
+coordinates on a general unbounded region, global
+Reeh--Schlieder property, or geometrically preferred reference is
+asserted.
+\end{theorem}
+
+\subsection{Compact preparation blocks}
+Choose auxiliary positive spacetime pairings, lowering the ghost index
+by the Lorentzian metric and identifying the resulting bundles
+smoothly with the action pairing. Under this identification the Ward
+operator is the auxiliary formal adjoint $P_W=K^*$ (distinct from
+the Euler operator $P$). At a nonzero real covector $\zeta$ its
+adjoint symbol $w\mapsto 2\zeta_{(a}w_{b)}$ is injective, even for
+Lorentz-null $\zeta$; the scalar row is zeroth order. Thus $P_W$
+is underdetermined elliptic. We describe why the compact support
+right inverse of \cite[Theorems 3.8 and 5.1]{delay} applies on
+smooth relatively compact collar domains. For its positive
+auxiliary weighted estimate compare $\operatorname{sym}\nabla^g$
+with the symmetric gradient of an auxiliary Riemannian metric.
+After ghost index lowering their difference is order zero
+with smooth bounded coefficient near the compact domain boundary.
+In the asymptotic weighted Korn estimate this perturbation is
+multiplied by the boundary weight $x^2$; shrink the collar and
+absorb it. The scalar row increases the positive norm on the
+right. Kernel regularity at the boundary follows by elliptic
+regularity in the interior and the finite-type Killing connection:
+normal transport of the value and antisymmetric first derivative
+extends smoothly through the compact boundary collar, also after
+tangential differentiation. The scalar row imposes additional
+algebraic constraints but does not worsen this estimate. These
+verify the asymptotic Poincar\'e and kernel regularity hypotheses
+for $P_W$; no absence of joint local Killing fields is assumed.
+
+On a fixed such domain the weighted projected variational inverse
+gives a linear right inverse $Q_m$ on sources of a fixed interior
+compact support satisfying exact kernel orthogonality, output
+flat at the outer boundary. Its ordinary smooth seminorms are
+bounded by finite input Sobolev seminorms: use the fixed-domain
+weighted inverse and scaled derivative estimates of \cite{delay};
+on the fixed source support weighted norms are ordinary-equivalent,
+and the boundary multiplier vanishes exponentially, absorbing the
+polynomial derivative losses. Extend the output by zero. Choose a
+smooth precompact exhaustion with compact cutoffs $\chi_m$ equal
+to one on increasing inner sets and supported inside those domains.
+For any smooth auxiliary input a, $P_W(\chi_m a)$ is supported
+in the prescribed interior compact and satisfies the compatibility
+conditions by integration by parts against every homogeneous
+$K$-field. Define
+\[
+ T_m a=\chi_m a-Q_m P_W(\chi_m a).
+\]
+This is a continuous smooth compact-source Ward preparation, and
+$T_m f=f$ for every Ward test supported in the inner set. It is not a
+local projection preserving the support of arbitrary non-Ward inputs.
+
+Extend the auxiliary input bundle to a compact double about that
+support. Choose a real auxiliary elliptic eigenbasis $e_{mj}$ of
+positive order-one frequencies $\lambda_{mj}$ there. Put
+$g_{mj}=[T_m e_{mj}]\in\mathcal V_{\rm r}$. For each fixed m their
+base covariance norms and smooth bisolution seminorms on any fixed
+compact grow polynomially in $\lambda_{mj}$: use compact elliptic
+bounds, the fixed-domain continuity just established, and local
+smooth Green evolution from a compact source. Since the spectral
+count grows polynomially, choose
+\[
+ \epsilon_{mj}=\theta_m\exp[-\log^2(2+\lambda_{mj})],\qquad
+ N=\sum_{m,j}\epsilon_{mj}^2\,
+       \sigma(g_{mj},\cdot)\otimes\sigma(g_{mj},\cdot).
+\]
+Take positive $\theta_m$ small enough that each m-block contributes
+at most $2^{-m}$ to the sum of its covariance norms squared with
+these weights and to its first m seminorm bounds on a fixed compact
+exhaustion of the smooth two-point kernel. This yields a smooth
+real bisolution perturbation with
+$\sum\epsilon_{mj}^2\|g_{mj}\|_{\mu_0}^2<\infty$. The covariance
+$\mu=\mu_0+N$ obeys
+$\mu_0\le\mu\le C\mu_0$ by the CCR bound, and keeps positivity,
+the same physical charge and Hadamard wavefront. The noise
+descends because it uses only $\sigma$-functionals. It can also
+be realized by Gaussian Weyl displacements, but no assumption of
+full displacement support along central directions is used.
+
+\subsection{Uniform endpoint control on each compact support}
+In the real local covariance Hilbert space $Y$ modulo its covariance
+null, let $D$ satisfy $\mu(f,Dg)=\sigma(f,g)/2$; then $A=iD$ is a
+selfadjoint contraction on $Y_\mathbb{C}$, with conjugation
+$J_0 A J_0=-A$. The restricted noise functionals have real Riesz
+columns $v_{mj}$, and the bounded column map $V_O$ obeys
+$1\pm A\ge V_O V_O^*$ by base CCR positivity. For
+$E=1_{[0,\delta]}(1\pm A)$, it follows that
+$\|EV_O\|\le \sqrt\delta$. For a fixed compact Ward f, choose
+one m-block with $T_m f=f$. Its finite spectral reconstruction
+$f_L=[T_m1_{\lambda\le L}f]$ satisfies
+$\|f-f_L\|_\mu\le C_m L^{-1}\|f\|_{H^{s_m+1}}$ by continuity
+on the compact double. The reconstructed sources need not lie in
+the region: their symplectic functionals restrict to $Y$.
+The finite combination defining $A f_L$ in that sense uses the
+columns of $V_O$ with coefficient norm at most
+$C_m\exp(\log^2(2+L))\|f\|_2$.
+The CCR bound controls $\|A f-A f_L\|$ by the covariance
+approximation error, and $|A|\ge1-\delta$ on $E$. Thus, choosing
+$L+2\asymp \exp(\sqrt{|\log\delta|}/2)$, for sufficiently small
+$\delta>0$ we obtain
+\begin{equation}
+ \|Ef\|\le C_m e^{-c_m\sqrt{|\log\delta|}}\|f\|_{H^{s_m+1}}.
+                                                               \label{eq:gendpoints}
+\end{equation}
+On the left only the physical class matters, while on the right
+one uses any fixed-support test representative. These constants
+are independent of the region as long as it contains the given
+support. In particular neither endpoint $\pm1$ is an eigenvalue,
+by density of compact labels. Layer-cake integration bounds the
+spectral moments of every power of
+$k(A)=\log[(1+A)/(1-A)]$ by the same finite test seminorm.
+
+\subsection{Actual Tomita operator and coordinate reconstruction}
+The real Weyl embedding j has complex Gram $1+A$. In the
+cyclic one-particle space its identification with $Y_\mathbb C$
+is $j(f)\mapsto (1+A)^{1/2} f$, onto after completion by
+endpoint exclusion. The real image is closed since
+$\|j(f)\|^2=\mu(f,f)$ for real f, and its intersection with its
+imaginary multiple is zero by injectivity of $(1+A)^{1/2}$.
+It is standard in its cyclic complex span. Its Tomita operator is
+$J_0[(1-A)/(1+A)]^{1/2}$ on
+$\operatorname{ran}(1+A)^{1/2}$, which is exactly the closed
+domain by the identity
+\[
+ \|(1+A)^{-1/2}x\|^2
+ =\tfrac12\bigl(\|x\|^2+
+    \|[(1-A)/(1+A)]^{1/2}x\|^2\bigr).
+\]
+Therefore $\Delta_1=(1-A)/(1+A)$ and $-\log\Delta_1=k(A)$.
+Bosonic second quantization of the standard subspace gives
+the represented modular operator and Hamiltonian
+$\Gamma(\Delta_1)$ and $d\Gamma(k(A))$ \cite{bgl,longo}.
+In the global Fock representation the local algebra acts on
+the Fock space of its cyclic complex span tensored with the
+identity on the complementary factor. Thus the restriction is
+faithful and its automorphism is the one just computed even
+without cyclicity in the entire global representation. Central
+represented real directions are in $\ker A$ and have trivial
+modular action. This is distinct from a promise of a faithful
+representation of an unreduced abstract presymplectic algebra.
+
+With $\delta=n^{-1/2}$ in (\ref{eq:gendpoints}), the endpoint
+projection estimate and the decay of $|A|^n$ on its complement
+give the absolutely norm-convergent identity
+\[
+ k(A)f=2\sum_{n\ge0}\frac{A^{2n+1}f}{2n+1}.
+\]
+The truncation norm is at most
+$C_m\exp[-c'_m\sqrt{\log(2+N)}]\|f\|_{H^{s_m+1}}$ after
+term N: summing the endpoint bound with weight $1/(2n+1)$
+loses at most a polynomial in $\sqrt{\log N}$, absorbed by
+decreasing $c'_m$. Alternatively for $0<q<1$ use
+\[
+ k_q(x)=\log\frac{1+2qx+q^2}{1-2qx+q^2}
+  =4\sum_{j\ge1\ {\rm odd}}\frac{q^j}{j}\mathsf T_j(x).
+\]
+The uniform error at degree J is at most
+$4q^{J+1}/((J+1)(1-q))$; $|k_q|\le|k|$ gives the bare limit on
+the stated domain. For each fixed polynomial, the finite physical
+Gram compression of $A$ converges strongly as its dense
+projection basis is exhausted. Hence the ensuing sequential
+limits of finite ordinary matrices reconstruct the true generator
+in this covariance norm. No fixed finite Gram error uniform
+as $q\uparrow1$ is claimed.
+
+The physical form $\mu(a,k(A)b)$ (or the symplectic output
+$\sigma(a,k(A)b)$) has fixed-support Sobolev bounds by
+(\ref{eq:gendpoints}). For relatively compact $O$, use a single
+block containing its closure and project in a sufficiently high
+ordinary auxiliary Sobolev norm onto the closure of actual
+compact Ward tests in $O$. Compose the two arguments with this
+projection and apply the Schwartz kernel theorem. This gives
+an ordinary redundant bundle distribution and its restricted
+physical form is independent of the redundant extension.
+One must not apply a support-enlarging $T_m$ to an arbitrary
+non-Ward test and treat its image as a local vector in $O$.
+For unbounded $O$ the same argument gives fixed-support
+representatives and the physical form on all compact Ward tests
+with the actual single $A_O$. This proves
+Theorem~\ref{thm:generalmod}. The round example below has
+canonical material output coordinates and the more explicit
+Gram kernel in those coordinates.
+
+
+
+\section{Worked case: the closed active four-scalar background}\label{sec:round}
+
+The positivity of a physical Hadamard covariance and the determination of a local modular operator are distinct problems. The compact-Cauchy construction of positive covariances for critical Einstein--scalar multiplets in \cite{p09} provides a state on a coupled physical quotient. The flat Weyl calculation in \cite{p21} instead starts from a specific conformal vacuum and a curvature-only algebra. We ask how much information local curvature carries on an actual active background of the first construction, and what can be computed about the modular operator of the resulting \emph{full} local algebra. In this worked case we use the original compact-cut reference of \cite{p09}, independently of the more general existence theorem above; it is not used as a modular or local-generation theorem. General Peierls and quasifree modular machinery is available in \cite{hack,khavpeierls,longo}; the closed-background local rigidity, preparations, and compact-test endpoint estimates below are the additional inputs.
 
 In units \(8\pi G=1\), take the action and exact closed FLRW solution
 \begin{equation}
@@ -283,7 +941,7 @@ The odd polynomial vanishes on the zero complement of the finite compression. Te
 
 Equation~\eqref{eq:kernel} is a constructive convergent representation of the coordinate distribution for the \emph{specified} reference, not an evaluated elementary spacetime Green function or a universal local modular energy density. The state and the fixed region are essential inputs. The compact-test endpoint claim does not say that these tests are a core for the maximal logarithmic domain.
 
-\section{Discussion}
+\section{Discussion of the round worked case}
 
 The exact local generation theorem identifies a minimal addition to Weyl \emph{on this active stock}: one material scalar suffices for the represented net, while Weyl alone fails even in arbitrarily small regions. The localized preparations show that the missing information is physically usable within a proper outer region, not just a global homogeneous mode or a spectator. Equal Weyl marginals can conceal finite full relative entropy. The modular operator reconstructed here is consequently that of the coupled algebra, not the flat Weyl modular generator of \cite{p21}; no transfer of that numerical formula is asserted. The covariance construction, local proof, and coordinate reconstruction all concern linearized physical observables. They make no claim of interacting constraint quantization, anomaly cancellation, a nonlinear modular net, or ultraviolet completion.
 
@@ -291,6 +949,13 @@ The exact local generation theorem identifies a minimal addition to Weyl \emph{o
 This manuscript joins two separate archived research inputs on a common explicitly verified Einstein--scalar background. It was prepared with AI assistance and internally cross-checked against the archived source calculations; no external peer review or priority certification is asserted.
 
 \begin{thebibliography}{99}
+\bibitem{bgl} R. Brunetti, D. Guido and R. Longo, \emph{Modular localization and Wigner particles}, Rev. Math. Phys. 14 (2002), \href{https://arxiv.org/abs/math-ph/0203021}{arXiv:math-ph/0203021}.
+\bibitem{costabel} M. Costabel and A. McIntosh, \emph{On Bogovski\v\i{} and regularized Poincar\'e integral operators for de Rham complexes on Lipschitz domains}, Math. Z. 265 (2010), \href{https://arxiv.org/abs/0808.2614}{arXiv:0808.2614}.
+\bibitem{delay} E. Delay, \emph{Smooth compactly supported solutions of some underdetermined elliptic PDE, with gluing applications}, Comm. Partial Differential Equations 37 (2012), \href{https://arxiv.org/abs/1003.0535}{arXiv:1003.0535}.
+\bibitem{gmw} C. G\'erard, M. Molodyk and M. Wrochna, \emph{Hadamard states for linearized gravity on asymptotically flat spacetimes}, \href{https://arxiv.org/abs/2610.31214}{arXiv:2610.31214}.
+\bibitem{schmid} G. Schmid, \emph{On the Quantisation of Linear Gauge Theories on Lorentzian Manifolds: Maxwell's Theory via Complete Gauge Fixing}, \href{https://arxiv.org/abs/2604.27026}{arXiv:2604.27026}.
+\bibitem{gow} C. G\'erard, O. Oulghazi and M. Wrochna, \emph{Hadamard states for the Klein--Gordon equation on Lorentzian manifolds of bounded geometry}, Comm. Math. Phys. 352 (2017), \href{https://arxiv.org/abs/1602.00930}{arXiv:1602.00930}.
+
 \bibitem{p09}
 \emph{Positive physical Hadamard states for critical Einstein--scalar multiplets on compact Cauchy surfaces}, archived manuscript 09 (2026), \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/09-canonical-einstein-scalar-hadamard}{source and example}.
 \bibitem{p21}
@@ -313,3 +978,4 @@ R. Longo, \emph{Modular structure of the Weyl algebra}, Commun.\ Math.\ Phys.\ (
 R. Longo, V. Morinelli, F. Preta and K.-H. Rehren, \emph{Split property for free massless finite helicity fields}, Ann.\ Henri Poincar\'e \textbf{20}, 2555--2584 (2019), \href{https://arxiv.org/abs/1806.04967}{arXiv:1806.04967}.
 \end{thebibliography}
 \end{document}
+
