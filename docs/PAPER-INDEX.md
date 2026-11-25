@@ -420,13 +420,13 @@ Two smooth exact vacuum plane waves match full classical Jacobi and longitudinal
 
 [Manuscript note](../papers/31-graviton-metaplectic-transfer/README.md) · [PDF](../papers/31-graviton-metaplectic-transfer/manuscript.pdf) · [TeX](../papers/31-graviton-metaplectic-transfer/main.tex) · [Verification](../papers/31-graviton-metaplectic-transfer/VERIFICATION.md)
 
-## 29B+31. Polarization defects and opposite graviton transfers
+## 29B+31+Q19. Polarization defects, graviton transfer, and causal counts
 
-**Result.** At finite wavelength, jointly retuned exact vacuum sandwiches match full marked geodesic returns across distinct high-frequency polarization preparations and both graviton-transfer signs. The carrier overlaps the slow focusing core; a calibrated local Weyl readout distinguishes the background covariances, and a cross-collar Einstein–Hilbert bracket distinguishes the exact signs.
+**Result.** Exact vacuum sandwiches can have identical classical returns but distinct background polarization matrices and opposite graviton transfer signs. Marked causal-interval counts recover the signed transfer for arbitrary smooth vacuum sandwiches and recover high-frequency polarization from fixed-length chords. The original finite-wavelength exact returns and independent Weyl polarization and cross-collar Einstein–Hilbert bracket readouts are retained. No wavelength-dependent power law for the sampling density is required for the smooth periodic carrier reconstruction.
 
-**Scope.** The optical polarization comparison is local and one-directional; the physical transfer concerns a marked nonzero longitudinal-frequency band. The result is not a crossing-wave construction or a global quantum theory.
+**Scope.** The probe claim is for the marked nonzero longitudinal-frequency graviton band. Polarization uses a marked plane-wave screen; periodic carriers may have infinitely many harmonics. The phase-free nonperiodic theorem assumes a continuum endpoint-count record or a finite design with a known resolving modulus. The result does not reconstruct arbitrary spacetime from an unmarked causal set.
 
-[Manuscript note](../papers/29b-31-polarization-defects-graviton-transfer/README.md) · [PDF](../papers/29b-31-polarization-defects-graviton-transfer/manuscript.pdf) · [TeX](../papers/29b-31-polarization-defects-graviton-transfer/main.tex)
+[Manuscript note](../papers/29b-31-polarization-defects-graviton-transfer/README.md) · [PDF](../papers/29b-31-polarization-defects-graviton-transfer/manuscript.pdf) · [TeX](../papers/29b-31-polarization-defects-graviton-transfer/main.tex) · [Verification](../papers/29b-31-polarization-defects-graviton-transfer/VERIFICATION.md)
 
 
 ## 27B. Parity-odd Weyl-cubic gravity with fixed physical multipliers

@@ -1,22 +1,77 @@
 \documentclass[11pt]{article}
 \usepackage[margin=0.96in]{geometry}
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage[hidelinks]{hyperref}
 \newtheorem{theorem}{Theorem}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\texorpdfstring}[2]{#1}
 \newcommand{\Ric}{\operatorname{Ric}}
 \newcommand{\tr}{\operatorname{tr}}
 \newcommand{\diag}{\operatorname{diag}}
 \newcommand{\Rea}{\operatorname{Re}}
 \title{Polarization defects and opposite graviton transfers\\ in exact vacuum sandwiches with identical geodesic returns}
 \author{}
-\date{Research manuscript 29B+31}
+\date{Research manuscript 29B+31+Q19, Edition 2}
 \begin{document}
 \maketitle
 \begin{abstract}
-We construct smooth four-dimensional vacuum plane-wave sandwiches that have identical marked geodesic returns at every sufficiently small finite wavelength, yet independently carry different high-frequency polarization covariances and either of two opposite linearized gravitational transfers. The rapidly oscillating curvature and the smooth focusing profile are nonzero on a common open interval. In a local optical chart the positive null sheet carries a prescribed smoothly factorized Hermitian polarization matrix; reversing its circular component need not change the optical limit. A symmetric canonical shear removes the singular coefficient from the Jacobi equation. Its period average depends only on the trace of the polarization matrix. Differentiable averaging and exact retuning set two distinct rational elliptic angles; repeating the retuned cell makes the classical endpoint the identity while retaining an independently selectable metaplectic sign for both physical graviton polarizations. The sign is detected by the Einstein--Hilbert bracket of fixed flat-collar Weyl smearings. The two measurements concern different data: a classical background covariance and a linearized probe transfer.
+We retain the exact vacuum plane-wave sandwiches with identical
+marked geodesic returns, independently variable directed
+high-frequency polarization matrices, and two opposite physical
+linearized graviton transfers. We then show that marked finite
+causal interval counts reconstruct all transverse Jacobi blocks
+and the relative metaplectic sign, including unknown independently
+recoded transverse grids. Fixed-length outgoing chords also
+recover the background polarization under arbitrary joint limits
+of increasing sprinkling intensity and decreasing wavelength;
+a phase-resolved estimator treats smooth infinite periodic
+spectra, and a separate phase-free theorem applies to bounded
+weak-null nonperiodic primitives along an actual
+defect-convergent subsequence. The latter uses a continuum
+endpoint count oracle, or a finite mesh with an available
+resolving modulus. A separate fixed-profile Riccati reconstruction
+and a sharp threshold for a thinner specified count record
+clarify the distinct observation requirements. The physical
+probe is finite-band; all observations are marked.
 \end{abstract}
 
-\section{Setting and theorem}
+\section{Introduction to the expanded edition}
+\label{sec:intro2}
+Two distinct gravitational data can coexist on the same exact
+vacuum sandwich. The first is the directed matrix of a rapidly
+oscillating classical background. The second is the sign of the
+linearized two-polarization probe transfer relative to a matched
+classical return. Equal endpoint geodesic maps do not fix the latter
+unless one retains information about the intervening symplectic path.
+Conversely the probe sign does not specify the classical background
+matrix. Neither is a phase of a global Fock vector.
+
+The original construction, retained in full in
+Sections~\ref{sec:oldsetting}--\ref{sec:oldscope}, supplies exact
+finite-wavelength matched vacuum stocks, finite-harmonic Hermitian
+profiles and an Einstein--Hilbert normalized readout. The expanded
+edition asks what a marked order/count experiment can determine on
+those same stocks and beyond them. Section~\ref{sec:countgeometry}
+reconstructs short symplectic maps and their lifted path in arbitrary
+smooth marked vacuum sandwiches. Section~\ref{sec:selfcal} removes
+numerical calibration and independent transverse grid choices for
+the sign. Section~\ref{sec:riccati} gives a separate continuous
+Riccati reconstruction. Sections~\ref{sec:longcarrier}--\ref{sec:nonperiodic}
+recover the background matrix on fixed long chords, first for a
+phase-resolved carrier and then in a phase-free nonperiodic
+observation model. The thin-aperture experiment in
+Section~\ref{sec:thin} illustrates why a density--wavelength condition
+can be sharp for one observation record yet unnecessary for another.
+
+The geometric input is the exact plane-wave boundary action, not a
+flat approximation to a curved causal diamond. The probabilistic
+input is one Poisson sprinkling in a finite lab per metric, not a
+requirement of independent counts in overlapping intervals. All
+experiments retain labeled preparation marks. No result here
+identifies an unmarked embedding or derives microscopic dynamics.
+
+
+\section{Setting and theorem}\label{sec:oldsetting}
 Use Brinkmann coordinates \((u,v,X^1,X^2)\) and the sign convention
 \begin{equation}\label{eq:brink}
 g_H=-2\,du\,dv+dX^\mathsf{T}dX+X^\mathsf{T}H(u)X\,du^2,
@@ -156,10 +211,627 @@ In a flat collar \(\delta W_{vivj}=-\tfrac12\partial_v^2h_{ij}\); smearing it wi
 
 Choose \(f,g\) on the end collars with \(b_0=\Omega(Vf,g)\ne0\), where \(V\) is the common free transfer from the flat extensions. The signed transfers give brackets \(b_0\) and \(-b_0\) for the same two tests, with at most one shared convention sign for the bracket ordering. In the marked characteristic CCR algebra the corresponding ordered group commutators are \(e^{\mp ib_0/\hbar}I\); rescaling a test to \(b_0/\hbar=\pi/2\) distinguishes them. This comparison does not require choosing a vacuum state on the whole spacetime.
 
-\section{Scope}
+\section{Scope of the original construction}\label{sec:oldscope}
 The theorem gives an exact degeneracy of \emph{end-to-end} classical returns, not equality of all interior lens paths. For a fixed sign the same-trace optical limit is common locally on the pulse. Different sign targets need not have identical limiting interiors. The focusing and carrier coexist in the same exact interval, but belong to a one-direction plane-wave ansatz, not an interaction between crossing waves. The background defect and the outgoing probe covariance cannot be conflated: a central sign cancels out of a same-collar quadratic probe covariance, whereas the cross-collar Einstein--Hilbert bracket is sensitive to it. We do not claim compact longitudinal localization, all-frequency transfer, or nonlinear quantum propagation. Classical plane-wave scattering and caustic effects have independent antecedents \cite{adamo,harte}; here the new comparison combines exact retuning, background polarization freedom at fixed scalar data, and a marked physical amplitude measurement.
 
-\begin{thebibliography}{9}
+
+
+\section{Marked interval counts and the symplectic path}\label{sec:countgeometry}
+\begin{theorem}[Fixed calibrated marked sign]\label{thm:countsign}
+For any fixed smooth tracefree vacuum sandwich with the stated marked
+screen and affine convention, a sufficiently fine finite schedule of
+short coercive cuts and eleven interval counts per step consistently
+recovers its full symplectic transfer and its continuous lift, up to
+one common positive symplectic conjugation when the aperture scale
+is not supplied. Two histories with matched physical endpoint
+matrices have a consistently recovered relative central sign; no
+absence of caustics of the total trajectory or invertibility of its
+total \(A\) block is required with a common endpoint frame. The same
+fixed schedule is uniform for the exact high-frequency matched stocks
+considered here when their symmetric carrier primitives and
+transformed coefficients have uniform bounds.
+\end{theorem}
+We give direct proofs of the geometry and of the finite-dimensional
+statistic. Write \(\varrho\) for sprinkling intensity
+in the new sections, distinct from the original polarization trace.
+In step formulas
+\(D_m\) denotes the momentum block, not a causal surplus.
+\subsection{Local coercivity, exact intervals and nonclipping}\label{local-coercivity-exact-intervals-and-nonclipping}
+
+Use \(g=-2du\,dv+dX^2+X^{\mathsf T}H(u)X\,du^2\), with symmetric tracefree H and Wronskian-normalized transverse equation \(X''=HX\). On an affine subinterval of length \(\delta\), write
+\[
+ H=Q_\varepsilon'+K_0,qquad
+ Q_\varepsilon=Q(u,u/\varepsilon),\qquad K_0=\mathsf C-(\partial_u Q)_\varepsilon
+\]
+in the high-frequency stock, where prime on \(Q_\varepsilon\) is its \emph{total} derivative. The sup norms of Q and \(K_0\) are uniformly bounded on every cell in the fixed finite comparison, including the retuned focusing coefficients and resets (flat joins). For any fixed smooth sandwich, including the Paper 31 examples, use Q=0, \(K_0=H\). Poincare and integration by parts give, for all Dirichlet variations z on every step and substep,
+\[
+ \int(|z'|^2+z^{\mathsf T}Hz)
+ =\int(|z'|^2-2z'^{\mathsf T}Q_\varepsilon z+z^{\mathsf T}K_0z)
+ \ge (1-2\|Q\|\delta/\pi-\|K_0\|\delta^2/\pi^2)\int |z'|^2 .
+\]
+The missing boundary term is exactly zero for Dirichlet variations. For general endpoints the same formula has the added term \([z^{\mathsf T}Q_\varepsilon z]\); this term is \emph{kept} in the action, not silently assumed flat. Choose a fixed short length upper bound so the lower coefficient is at least 1/2; an upper Dirichlet bound by a fixed multiple also follows. Thus the endpoint boundary problem is uniquely solved on each step, with its minimizer given by the transverse Jacobi flow. No coercivity over the entire history is needed. Since any future causal curve is nondecreasing in u, leaving a short subslab cannot produce new paths between its endpoint cuts.
+
+For endpoints \((a,0,X_0),(b,V,X_1)\) put \(S=\frac12\int_a^b(|X'|^2+X^{\mathsf T}HX)du\) on the minimizing solution and D=V-S. The pointwise causal condition is \(v'\ge (|X'|^2+X^{\mathsf T}HX)/2\); constant-u pieces do not lower the bound, so the endpoints are strictly timelike exactly when D\textgreater0. The exact shift isometry, also used in the archived finite-aperture Q19 calculation, works without a flat cut (compare \cite{harte}): translate X by the full interpolant x, and v by \(x'\cdot (X-x)+\frac12 x'\cdot x\) plus a constant. The time-dependent longitudinal shift gauges the endpoints to central transverse zero endpoints with v gap D. At an intermediate u, the allowable longitudinal width at transverse z becomes \(D-\frac12z^{\mathsf T}M(u)z\), the split minimizer's Dirichlet Hessian. The split Hessian is bounded between fixed multiples of \((1/(u-a)+1/(b-u))I\) by the Dirichlet lower estimate and its upper test with the broken straight interpolant. Integrating the positive width in z gives
+\[
+ \operatorname{Vol}I(p,q)=C_{a,b,H}D^2,quad
+ C_{a,b,H}=\pi\int_a^b (\det M(u))^{-1/2}du\asymp\delta^2 .
+\]
+The same positive prefactor is used by all 11 tests of that step; no comparison of prefactors between different steps or stocks is needed.
+
+Uniform nonclipping: if the offsets obey \(|X_{0,1}|=O(\sqrt\delta)\) with fixed V, the straight interpolant l has bounded kinetic energy and endpoint Q terms. Expansion about l and Dirichlet coercivity controls the minimizing path \(b_\star\) by \(\|b_\star'\|_2=O(1)\), \(\|b_\star\|_\infty=O(\sqrt\delta)\): cross terms with l' and Q, \(K_0\) are bounded by a fixed coefficient times the variation's kinetic norm, since l bounded and the Poincare bound holds. A causal path through a point of a tested interval has total action at most V, so its difference from \(b_\star\) satisfies the same estimate by the minimizing identity. To control longitudinal excursions uniformly even though \(\|H\|\) can grow, use \(w=v-X^{\mathsf T}Q_\varepsilon X/2\). Its causal derivative is bounded below by \(|X'|^2/2-X'^{\mathsf T}Q_\varepsilon X+X^{\mathsf T}K_0 X/2\ge -C|X|^2\). Add fixed endpoint w bounds and recover v; constant-u segments just increase v. Thus all intervals of both schedules fit inside a common bounded Brinkmann block in this finite stock family. Use a finite-volume restriction containing the complete union of these intervals, with the \emph{ambient} causal order restricted to its vertices, or any suitable causally convex containing patch when available. No clipping or intrinsic replacement of the causal order of a nonconvex restriction is used.
+
+The marks themselves are geometrically admissible on nonflat cuts. At central X=0 the line v=u/2 is a unit timelike geodesic, the axes \(\partial_{X_i}\) are parallel, and at fixed u and v straight transverse offsets are spacelike geodesics (\(\Gamma^\mu_{ij}=0\)). The null direction \(\partial_v\) is parallel, fixing the shift between the bottom and top reference levels. One can select bottom v=0 and top v=V in the common marked chart for every step; these are equivalent to prescribed null shifts from the central geodesic. Jacobi displacement axes are not used as the top anchors. Coordinate marks fix affine spacing, equal crossed offsets and orientation, but all metric lengths can be withheld from the sign estimator.
+
+\subsection{Eleven interval statistics and exact symplectic reconstruction}\label{eleven-interval-statistics-and-exact-symplectic-reconstruction}
+
+Write the true step map \(M=\begin{psmallmatrix}A&B\\ C&D_m\end{psmallmatrix}\) (\(D_m\) is the momentum block; \(D\) above is the causal surplus) on \((X,X')\). Symplecticity follows from \(H=H^T\). For short steps B is invertible and
+\[
+ S(X_0,X_1)=\tfrac12 X_0^{\mathsf T}B^{-1}AX_0-X_0^{\mathsf T}B^{-1}X_1+
+ \tfrac12 X_1^{\mathsf T}D_m B^{-1}X_1 .
+\]
+Indeed the incoming momentum is \(B^{-1}(X_1-AX_0)\); the symplectic identities give the other endpoint derivative and its symmetric diagonal quadratic. Put \(\alpha=d^2/V\) and take offsets labeled \(0,1,2,+\), representing \(0,de_1,de_2,d(e_1+e_2)\) on both cuts. The intervals are 00, i0, 0j, ij (i,j=1,2), +0, 0+; this is 11 intervals. Set \(r_{ij}=\sqrt{N_{ij}/N_{00}}\); its ideal mean-ratio value is \(1-S/V\). Let
+\[
+ K_{ij}=r_{ij}-r_{i0}-r_{0j}+1,\quad
+ F_{ii}=2(1-r_{i0}),\quad F_{12}=F_{21}=(1-r_{+0})-(1-r_{10})-(1-r_{20}),
+\]
+and analogously G from the outgoing 0j,0+ ratios. Then ideally
+\(K=\alpha B^{-1}, F=\alpha B^{-1}A, G=\alpha D_mB^{-1}\).
+Thus with input scalar \(a_\star>0\) the sample reconstructs
+\[
+ \widehat A=K^{-1}F,\quad \widehat D_m=GK^{-1},\quad
+ \widehat B=a_\star K^{-1},\quad
+ \widehat C=(GK^{-1}F-K^{\mathsf T})/a_\star .
+\]
+This is exactly symplectic whenever K is invertible, even for a noisy sample, because it is the generating function reconstruction with F,G exactly symmetric. Any undefined operation is assigned a declared fallback. For sign take \(a_\star=1\), which uses labels and counts only: the ideal output is the simultaneous conjugate by \(\operatorname{diag}(\alpha^{-1/2}I,\alpha^{1/2}I)\) of every actual step. Common d,V are fixed across this sign schedule and both stocks; the ideal conjugation neither changes endpoints' equality nor a central metaplectic sign. Within the short-step norm bounds below, B\^{}\{-1\} is \(O(1/\delta)\); choose V fixed and d\^{}2/V small compared to the step length so all 11 actions satisfy \(|S|/V\le 1/2\). On a fixed uniform coarse mesh the same d suffices; on the micro mesh take \(d^2/V=\kappa\delta\) with a common known design upper bound for \(\kappa>0\), not necessarily passing its exact value to the estimator. Then every interval mean physical volume is bounded above and below by constants times \(\delta^2\).
+
+\subsection{Fixed coarse schedule and identity lift in a non-small full matrix chart}\label{fixed-coarse-schedule-and-identity-lift-in-a-non-small-full-matrix-chart}
+
+Let \(S_Q=\begin{psmallmatrix}I&0\\Q&I\end{psmallmatrix}\). On the exact high-frequency stock the physical Jacobi flow is \(S_{Q(b)}\,N(b,a)\,S_{Q(a)}^{-1}\), where in \((X,Y=X'-QX)\) the coefficient matrix is uniformly bounded and has upper-right block I. Therefore \(N=I+O(\delta)\), its upper-right block is \(\delta I+O(\delta^2)\) by integrating \(B_N'=Q B_N+D_N\), and its inverse is bounded. This gives exact physical \(A=I+O(\delta)\), \(B=\delta I+O(\delta^2)\); C need not be small. The same estimates hold for every partial step of the chosen fixed mesh and throughout the finite comparison family. Smooth finite Paper 31 profiles are the specialization Q=0. Increasing mesh count to resolve the high frequency is unnecessary for sign.
+
+The set of symplectic matrices with \(\|A-I\|<1/2\) is an identity lift chart. In fact the exact Gauss factorization is
+\[
+ M=\begin{pmatrix}I&0\\ CA^{-1}&I\end{pmatrix}
+   \begin{pmatrix}A&0\\0&A^{-\mathsf T}\end{pmatrix}
+   \begin{pmatrix}I&A^{-1}B\\0&I\end{pmatrix}.
+\]
+Both off-diagonal coordinates are arbitrary symmetric tensors; the A-coordinate is a convex norm ball. This chart is contractible and the metaplectic double cover has a unique continuous lift section taking I to I. In explicit wave-function language choose continuously the quadratic upper/lower shears and the positive normalization in the determinant factor; no branch at a focal point inside a long concatenation is needed. A fixed positive symplectic dilation preserves this A-chart, and its lift conjugates the canonical section by uniqueness. The reconstructed short step therefore lifts on the actual identity sheet, after this simultaneous conjugation. The proof does \textbf{not} require a small matrix logarithm when the lower-left shear is fast. Each true whole short path starts at I and stays in the chosen chart, so lies over the specified section. Multiply the sections in temporal order. The result at each fixed finite wavelength is exactly the metaplectic lift of its full physical oscillator path, not a prescription based only on its classical endpoint.
+
+For noisy pair endpoints \(\widehat M_1,\widehat M_2\), let \(E=\widehat M_2^{-1}\widehat M_1\). At the matched true pair E=I. Whenever E lies in the closing chart, compare \(\widehat L_2^{-1}\widehat L_1\) with the canonical section \(\ell(E)\); their ratio is in \(\{+I,-I\}\). This is the short closing chord. Near the reference it is path-independent in the chart; adding any other chart-local chord produces the same lift. Exact matched pair comparison yields the actual relative sign of L\_1,L\_2. For nearby admissible profiles, even if they lose exact endpoint matching, this statistic has the same sign as the nearby continuous relative-lift comparison with this specified short classical correction; no unqualified claim that unmatched quantum maps differ by a sign is made. Continuity on a compact reference family of bounded steps, with all A estimates in a strict smaller chart and endpoint E exactly I, gives a uniform open tube of statistical perturbations with the true sign. The compactness here follows from the uniformly bounded Q and N matrices, fixed calibration and finitely many steps, not continuity of carrier phases as wavelength tends to zero.
+
+By Paper 31 and 29B+31's exact light-cone reduction, for each k\textgreater0 in the fixed characteristic probe band both physical graviton polarizations have the same Weyl quadratic oscillator transfer in \((X,kX')\); this is a positive symplectic conjugation of the path together with the same physical oscillator normalization. The real negative band is its conjugate. The recovered central sign is therefore the sign of the \emph{real linear} transfer relative to its matched partner; the nonzero fixed cross-collar Einstein--Hilbert Weyl bracket witnesses it. It is not the physically unobservable overall phase of a Fock vector. (In coordinates \((X,kX')\) the naive map has determinant-scale k on the symplectic form; use the canonically equivalent matrix path produced by \(\operatorname{diag}(k^{-1/2}I,k^{1/2}I)\) in normalized affine coordinates. The numerical block conjugation is identical.)
+
+\subsection{Poisson convergence and uniform sign regime}\label{poisson-convergence-and-uniform-sign-regime}
+
+For one sprinkling of intensity \(\varrho\) and deterministic added anchors, count only the Poisson points in the strict marked intervals (exclude every anchor). Each count is Poisson of mean \(\varrho\,\operatorname{Vol}I\), with covariance \(\varrho\,\operatorname{Vol}(I_i\cap I_j)\) between overlapping intervals. For fixed finite marked schedules each normalizing count is bounded away from zero in units of \(\varrho\) with high probability, and all ideal operations on count ratios are smooth in a uniform finite-dimensional neighborhood. Thus the matrices converge in joint probability, locally at \(O_P(\varrho^{-1/2})\), and the sign statistic is correct with probability tending to one. Uniform coercivity, volume gaps, chart margins and compactness above make this estimate uniform over all wavelengths in the fixed finite comparison recipes, despite the divergent Brinkmann coefficient. Chernoff's bound gives a uniform exponential probability estimate for leaving any fixed strict sign tube, for the fixed coarse mesh. No independence between overlapping intervals, between coarse and micro schedules, or between different data products is presumed. If the two metrics are sprinkled separately, only the union bound between metrics is needed. For a fixed schedule, the joint Gaussian approximation (if desired) follows by partitioning the union into its finitely many interval-membership cells: the cells are independent Poisson populations, and the limit covariance of the count vector is the physical intersection-volume matrix. Differentiating the actual normalized-ratio reconstruction propagates this covariance to all real matrix entries. The binary sign does not need a Gaussian approximation.
+
+
+
+\section{Self-calibrated sign with independently recoded cuts}\label{sec:selfcal}
+\begin{theorem}[Removing the geometric scale and frame from the sign]\label{thm:selfcal}
+Suppose the steps are physically short and coercive as above.
+At cut \(j\) use a shared labeled, not necessarily oriented or
+orthonormal, transverse grid, with step-dependent unknown
+longitudinal gaps. One additional unknown-length longitudinal null
+ruler at each cut and two additional counts per step suffice to
+recover the physical lift up to the unmeasured left and right cut
+recodings. If two physical endpoints agree, their relative sign is
+consistent even when all external recodings are independent. With
+invertible total physical \(A\) normalize each history by its total
+Gauss section. If that block may be singular, use either measured
+common endpoint recodings and a short relative chord, or one of
+three common marked physical free durations. The probability
+statement requires fixed finite steps and strict positive aperture
+margins.
+\end{theorem}
+\subsection{Counts with arbitrary screen grids and unknown longitudinal gaps}\label{counts-with-arbitrary-screen-grids-and-unknown-longitudinal-gaps}
+
+On cut j let \(E_j\in GL(2,\mathbb R)\) be an unknown screen basis (columns physically prepared, either orientation), and label the transverse marks \(0,E_je_1,E_je_2,E_j(e_1+e_2)\) at one common longitudinal level \(v_j\). The 0's initially refer to \(X=0\); an extension to arbitrary origins appears below. Use the \textbf{same} grid on that cut for both bordering steps, but not necessarily the same grid at any other cut. The lapse in \(v\) between cuts j and j+1 is \(V_j>0\), unknown and not assumed constant. Marks and sizes are chosen in the strict timelike/coercive regime verified below.
+
+For one step, the exact Q19 volume identity \(\mathrm{Vol}=C_{j}(V_j-S)^2\) holds for all used intervals with the common prefactor independent of their endpoints. Put \(r_{XY}=\sqrt{N_{XY}/N_{00}}\). The eleven usual mixed and diagonal differences yield at population counts
+\[
+ \begin{split}
+ K_j&=V_j^{-1}E_j^T B_j^{-1}E_{j+1},\\
+ F_j&=V_j^{-1}E_j^T B_j^{-1}A_j E_j,\qquad
+ G_j=V_j^{-1}E_{j+1}^T D_j B_j^{-1}E_{j+1}.
+ \end{split}
+\]
+This follows by inserting the actual grid coordinates into the quadratic generating function; incoming-first/outgoing-second order fixes the transpose in K. The letters \(A_j,B_j,C_j,D_j\) are physical Jacobi blocks in a proof-only common Cartesian coordinate; the estimator never uses them directly.
+
+Add \textbf{one} longitudinal ruler mark per cut at \(p_j^+=(u_j,v_j+\Delta_j,0)\), with the unknown positive displacement \(\Delta_j\) along the same null line from that cut's origin mark \(p_j\). For each step count two additional intervals and form
+\[
+ a_j=1-\sqrt{\frac{N(p_j^+,p_{j+1})}{N(p_j,p_{j+1})}},\qquad
+ b_j=\sqrt{\frac{N(p_j,p_{j+1}^+)}{N(p_j,p_{j+1})}}-1 .
+\]
+The shifts really change only the longitudinal surplus. Therefore these converge exactly at population values to \(\Delta_j/V_j,\Delta_{j+1}/V_j\), respectively, with \(\Delta_j<V_j\) for the shortened interval to be timelike. Set
+\[
+ q_j=a_j\prod_{l<j}(a_l/b_l)=\Delta_0/V_j .
+\]
+At finite counts the same algebra defines the estimate when all positive denominators pass their guards (declared fallback otherwise). This is finite exact self-calibration, not a comparison of curved versus flat volume prefactors, nor an estimate from a known length ruler. Different histories may have unrelated \(\Delta_0\).
+
+Use \(a_*=q_j\) in the exact sample assembly
+\[
+ \widehat A=K^{-1}F,\qquad \widehat B=q_jK^{-1},\qquad
+ \widehat D=GK^{-1},\qquad
+ \widehat C=(GK^{-1}F-K^T)/q_j .
+\]
+The noisy matrices are exactly symplectic whenever defined and F,G are set symmetric as in the eleven-count recipe. The population matrices satisfy
+\[
+ M'_j=\mathsf G_{j+1}^{-1}M_j\mathsf G_j,\qquad
+ \mathsf G_j=\operatorname{diag}(\widetilde E_j,\widetilde E_j^{-T}),\quad
+ \widetilde E_j=E_j/\sqrt{\Delta_0}.
+\]
+The scalar primitive \(\Delta_0\) is not measured: it occurs only as one harmless global calibration factor in this identity. If the longitudinal baseline surplus is truly constant over all steps, the auxiliary null rulers are unnecessary: use \(q_j=1\), \(\widetilde E_j=E_j/\sqrt V\). Mere equality of coordinate v-gaps is not sufficient for the shifted-origin variant when the base action is nonzero.
+
+\subsection{Exact implementer equivariance, including orientation reversals}\label{exact-implementer-equivariance-including-orientation-reversals}
+
+Let \(X\) and \(p=-i\nabla_X\) be canonical Schrödinger coordinates. For any invertible real \(A\), the ordinary unitary
+\[
+ (T_Af)(X)=|\det A|^{-1/2}f(A^{-1}X)
+\]
+implements \(\operatorname{diag}(A,A^{-T})\) and satisfies \(T_AT_B=T_{AB}\) for both determinant signs. On \(\det A>0\) this is the canonical continuous splitting of the metaplectic cover of the block-diagonal subgroup. For negative determinant it is in the full \(U(1)\)-extended implementer group, not necessarily in the metaplectic double cover: a one-axis reflection has genuine metaplectic lift equal to reflection times \(\pm i\). Thus \(T_A\) in that component differs from metaplectic operators by the \(i\)-coset, not an invented sign convention.
+
+For every symplectic matrix M with A invertible define the exact \textbf{Gauss implementer section}
+\[
+ \mathcal S(M)=L_{CA^{-1}}\,T_A\,U_{A^{-1}B},\qquad
+ L_C=e^{\,i X^T C X/2},\quad U_B=e^{-i p^T Bp/2}.
+\]
+The symmetric C/A and A/B parameters are fixed by the Gauss symplectic factorization. Shears have their continuous identity metaplectic lift. In the physical short chart \(A\) near I, \(\mathcal S\) lies in Mp and is precisely the unique continuous identity sheet. For arbitrary independent left/right screen recodings the exact unitary identity is
+\[
+ \mathcal S\!\left(\mathsf G_+^{-1}M\mathsf G_-\right)
+     =T_{\widetilde E_+}^{-1}\,\mathcal S(M)\,T_{\widetilde E_-}.
+\]
+Indeed the lower shear parameter transforms by congruence with \(\widetilde E_+\), the upper one by inverse congruence with \(\widetilde E_-\), and the central \(T_A\) factor is multiplicative. This equality holds even when coordinate A is nowhere close to I and even when its determinant is negative; invertibility follows because \(A'=\widetilde E_+^{-1}A\widetilde E_-\). It is not correct to lift each recoded step into the positive sheet of a small identity logarithm chart.
+
+Let \(\widehat M_{\rm tot}\) be the product of reconstructed step matrices, and \(\widehat U\) the corresponding time-ordered product of the displayed sections. At population values inner \(T_{\widetilde E_j}\) exactly telescope, yielding
+\[
+ M'_{\rm tot}=\mathsf G_N^{-1}M_{\rm tot}\mathsf G_0,\qquad
+ U'=T_{\widetilde E_N}^{-1}U_{\rm phys}T_{\widetilde E_0}.
+\]
+Here \(U_{\rm phys}\) is the actual lifted physical path because each original short path stayed in its identity sheet. Use the following \textbf{self-normalized statistic per history}, rather than comparing unnormalized products in potentially unrelated frames:
+\[
+ Z=\mathcal S(\widehat M_{\rm tot})^{-1}\widehat U .
+\]
+The total A block is invertible at population values by the stated hypothesis and its covariance under external recoding. The operators implement exactly the same symplectic matrix, so Z is a scalar unitary; one may compute it by taking its matrix element in a fixed normalized Gaussian and composing the explicit quadratic/Fourier operators. At population values
+\[
+ Z=\mathcal S(M_{\rm tot})^{-1} U_{\rm phys}
+\]
+as a scalar, by the same left/right equivariance. This proves that \textbf{external screen frames, orientations and longitudinal base bars need not match across experiments at all}, while the original marked physical transfer endpoints do match. Their two normalized phases have ratio \(+1\) or \(-1\), the actual relative sign. For identity or common free endpoints each phase itself is \(+1\) or \(-1\) relative to its canonical section. For a more general matched endpoint with \(\det A<0\), both phases can be in \(\{+i,-i\}\) under this convention, but their relative ratio is still binary. If the true physical endpoints do not match, the same recipe assigns chart-relative labels but their comparison is not a statement that the actual physical transfers differ by a central sign.
+
+The interpretation is the two-helicity, fixed longitudinal probe-band oscillator transfer established in papers 31 and 29B+31: changing from affine derivative to physical \(kX'\) amounts to cap-normalized positive symplectic dilation, and the screen coordinate recoding here is only the inferential unitary normalization of that oscillator. The sign is known to flip the calibrated physical cross-collar Weyl bracket, not an overall phase of a fixed Fock state. This theorem does not identify the unrelated local background polarization tensors in uncalibrated reflected axes.
+
+\subsection{Finite-density and uniform aperture conditions}\label{finite-density-and-uniform-aperture-conditions}
+
+Fix a finite number of cuts. Choose mark sizes and longitudinal levels so the population volumes for every selected interval are strictly positive, all ratios are bounded, and \(a_j,b_j\) are bounded below by positive apparatus constants; in particular \(\Delta_j<V_j\) and any extra shifted interval remains in the neighboring coercive slab. This is possible with fixed grids by increasing gaps as needed around bounded actions, then taking smaller but nonzero rulers. Any fixed finite experiment automatically has a positive minimum once these strict inequalities are imposed. Coercivity and nonclipping are obtained by the same integrated carrier estimate and longitudinal bounded \(Q\)-shift in the marked sign theorem above. Absolute unknown cutoff lengths need not enter the inference; they only support the geometric experiment.
+
+For one joint Poisson sprinkling, each count has uniform relative \(O_P(\varrho^{-1/2})\) error and exponential tail at every fixed small relative threshold (the finite union probability uses marginal Poisson tails, no independence). Ratio square roots, recursive q estimates, inversion of K with population determinant separated from zero, and finite matrix products are smooth on a strict positive margin. Thus their errors tend to zero, locally \(O_P(\varrho^{-1/2})\). The recursion is only over a fixed number of cuts; it is not claimed uniformly well-conditioned with increasing depth. Every adapted step and total A determinant is also separated from zero on a strict neighborhood of its realized population value. For a uniform claim across wavelength or apparatus families, impose uniform margins and bounded \(E_j,E_j^{-1}\) as well as the previously established bounded shear stock and a uniform total physical A inverse. All constants then follow from the resulting compact family. No implicit uniformity over arbitrarily ill-conditioned apertures is asserted.
+
+On the good event the sign is an exact discrete phase, not a fragile fit to a continuous value. In each connected determinant component \(\mathcal S\) lies in a fixed \(1\)- or \(i\)-coset of Mp. The product and its endpoint normalizer give a central phase in one fixed two-point subset of the unit circle (choice at population fixes it), and continuity on the good margin selects its correct value. For the source stocks with positive physical total A, the parity of all adapted step det signs equals the parity of the total adapted det sign, so the set is literally \(\{+1,-1\}\). Invariants in the noisy experiment are exact symplecticity and this finite phase class; finite counts do not determine a sign when the experiment lands outside the proved margin (give a declared fallback).
+
+\subsection{Singular endpoint block and common physical extensions}\label{singular-endpoint-block-and-common-physical-extensions}
+
+\textbf{Independently recoded endpoints.} If final A is singular, append a common positive physical free duration \(s\) beyond both return cuts, in flat regions or their common flat extensions. Its transfer \(F_s=\begin{psmallmatrix}I&sI\\0&I\end{psmallmatrix}\) has the unique standard identity shear lift. For \(F_s M\), the upper-left block is \(A+sC\). The polynomial \(\det(A+sC)\) is not identically zero: \(A^TC=C^TA\) implies
+\[
+ (A+iC)^*(A+iC)=A^TA+C^TC>0
+\]
+because the first n columns \((A;C)\) have full column rank for every symplectic M. Hence degree at most n leaves at most n distinct \emph{real} excluded s. In dimension four, \textbf{three shared distinct durations} suffice. Mark the corresponding three late cuts; a single finite partition up to the last of them provides observed prefix products and inherited rulers. Free steps are genuine physical continuations, not locally invented numerical shears in different recodings. One only needs the duration labels to refer to the same physical s in both histories, which can be achieved by equal proper-time continuations on the marked flat observer; absolute numeric s is not an input. Choose a common candidate with a positive observed invertible-A margin, e.g.~maximize the minimum smallest singular value of the two adapted totals across candidates. At least one margin is strictly positive at population, and a finite union estimate handles sampling; even tie switching among valid common candidates is harmless.
+
+For that common candidate normalize each full product by its own \(\mathcal S\) of its actual estimated total. At population the scalar is the corresponding physical shear-extended branch relative to the same \(\mathcal S(F_s M)\), exactly by left-right equivariance, even with unrelated endpoint E frames and longitudinal base bars. The ratio is the actual original central sign because the same standard free lift acts on the left of both histories and cancels. Matching the physical durations matters: choosing two unrelated measured A charts can silently compare branches with different Maslov convention. Neither independently applying a synthetic upper unit shear to unrelated recoded matrices nor deleting the singular total block is a substitute. If no common physical extension/reference and no endpoint transitions are available, we make no general singular-endpoint invariant claim on that weaker apparatus.
+
+\subsection{Further relabelings that can be measured rather than assumed}\label{further-relabelings-that-can-be-measured-rather-than-assumed}
+
+\textbf{Independent left/right grids at a shared interior cut.} If a cut has independently recoded outgoing and incoming transverse grids, with common origin and v-level, simply multiply using an observed transition rather than treating the two label bases as identical. From the preceding bottom grid, measure six additional intervals to the two new top primitive marks: for each use incoming indices \(0,1,2\). Use the original central and bottom-only ratios to form the mixed \(K_{\rm new}\). With \(K_{\rm old}\) for the original top grid,
+\[
+ K_{\rm old}^{-1}K_{\rm new}=E_{\rm old}^{-1}E_{\rm new}.
+\]
+This uses only the same interval factor/longitudinal surplus on the preceding step. Insert the corresponding positive-Jacobian ordinary pullback (with absolute determinant in the square root, not a restriction on orientation) in the direction new-coordinates-from-old, and the symplectic block map for the matrix product. Explicitly if \(R=E_{\rm old}^{-1}E_{\rm new}\), the join between the preceding and following steps is \(T_{R^{-1}}\). Telescoping, determinant consistency and finite-margin estimates are unchanged. If a cut is neither shared nor supplied with any transition record, the proved composition formula has an unknown intermediate factor; no claim of a general information-theoretic impossibility for all order data is made from this alone.
+
+\textbf{Arbitrary transverse origins.} A central freely falling origin is not needed for sign if two additional negative primitive offsets per end are admitted. On cut j use arbitrary \(O_j\) and transverse marks \(O_j,\,O_j\pm E_je_i,\,O_j+E_j(e_1+e_2)\), at one common \(v_j\); put the added same-null ruler at \((u_j,v_j+\Delta_j,O_j)\). Now the central denominator is the positive surplus \(D_{00,j}=V_j-S(O_j,O_{j+1})\) and raw ratios equal \(1-(S-S_{00})/D_{00,j}\). The affine-linear terms in S cancel in the mixed and off-diagonal differences; use \(F_{ii}=2-r_{+i,0}-r_{-i,0}\) and the corresponding outgoing difference to cancel them in the diagonals. The same calibration recursion now gives \(q_j=\Delta_0/D_{00,j}\), so the identical linear transfer assembly and proof hold. The underlying plane-wave transverse equation is homogeneous in its fixed Brinkmann coordinate; these centered finite differences measure its actual \textbf{linear derivative}, regardless of where its affine input and output test grids are centered. Thus no unmeasured classical action along the arbitrary origins is inserted into the quantum propagator. All invariance and exact relative-sign conclusions are for this linear physical transfer. General unmarked geometric placement, calibrating full polarization matrices in arbitrary unknown axes, and singular-total-A comparison without another suitable common endpoint chart are not asserted.
+
+
+
+\section{Riccati recovery without differentiating the data}\label{sec:riccati}
+\begin{theorem}[Exact smooth-profile identifiability]\label{thm:riccati}
+On each short fixed-left coercive window with known common screen
+and affine calibration, four outgoing interval counts determine
+the symmetric Riccati curve at the population level. It determines
+the full local smooth tidal profile and, without differentiation,
+the entire symplectic path and its continuous lift. Count-based
+uniform reconstruction of the Riccati curve for a fixed smooth
+profile is consistent on compact right-endpoint windows away from
+the left cut.
+\end{theorem}
+There is also an efficient calibrated observation of an arbitrary \textbf{fixed} smooth H, distinct from the finite self-calibrated step word and useful for the entire path even when the endpoints do not match between histories. Cover the compact evolution interval by finitely many ordered windows, on each of which a reference left mark a before the window obeys \(b-a\in[L/2,2L]\) for all target times b, with L sufficiently small for Dirichlet coercivity (pre-end flat extension at the very first window if needed). In a fixed common oriented affine screen chart use four outgoing counts with incoming transverse x=0, and the macroscopic flat gain calibration. Their population estimate is the symmetric Riccati matrix \(R_a(b)=D(b,a)B(b,a)^{-1}\). All volumes and the calibration are separated from zero uniformly on the windows, because lengths lie in the stated compact positive range and the exact actions have the strict gap. The fixed common clock units and transverse geometry are assumed here; this continuous path estimator does not supersede the independently recoded finite sign method.
+
+For n target cuts per window and one common sprinkling, the normalized count estimator of R has uniform \(O_P(\sqrt{\log(2+n)/\varrho})\) noise on this finite cover (marginal Poisson tails and union only). One may choose n to increase from a disjoint fixed flat reference count with \(\log n=o(\varrho)\), conditioning on it as in the long-chord counting argument below. Symmetric continuous interpolation then gives uniform convergence of \(\widehat R\) to R on each window for any fixed smooth H, by the smoothness of the exact Riccati curve away from its reference focal events. No time differentiation of noisy data is needed for the \textbf{full Jacobi path}, not just its endpoint.
+
+Indeed \(R'=H-R^2\) follows exactly from \(B'=D,D'=HB\). In the symplectic coordinates \(Y=X'-RX\) one has
+\[
+       X'=Y+RX,\qquad       Y'=-RY .
+\]
+This follows by substituting the Riccati equation into \(Y'=HX-R'X-RX'\). Starting from any cut t within the observation window, solve the bounded Hamiltonian block system with coefficient \(\begin{psmallmatrix}R&I\\0&-R\end{psmallmatrix}\), and undo the explicit symmetric shear at both endpoints. Its physical Jacobi propagator is therefore
+\[
+      M(b,t)=S_{R(b)}\,N_R(b,t)\,S_{R(t)}^{-1}.
+\]
+The same formula with \(\widehat R\) gives a continuous symplectic estimated path from identity on the window. Grönwall gives uniform convergence of its paths and inverse paths with the uniform R error (all R coefficients are bounded on fixed windows); fixed finite composition yields a uniformly consistent full path on the compact slab. At adjoining windows use their separately reconstructed physical maps in the common fixed frame, not a mistaken identification of their different Riccati-shifted momenta. The estimated path has a unique continuous metaplectic lift from identity, uniformly close to the true lift in local covering charts: the pointwise relative symplectic path is uniformly in a fixed identity logarithm chart. Hence arbitrary unmatched histories have both endpoint and actual lift reconstructed with this fixed reference, with no claim of a binary relation between noncoincident physical end maps. The matched relative comparison of Sections~\ref{sec:countgeometry} and~\ref{sec:selfcal} then applies without a total-A assumption. This is distinct from calculating H itself by noisy differentiation of R or claiming that undersampled wavelength-dependent R is uniformly recovered. No relation between density and an irrelevant high-frequency wavelength is needed for each fixed smooth profile; this argument does not prove uniform path recovery for a varying rapidly oscillatory profile using sparse phase-unresolved marks.
+
+For a compact smooth matrix test \(f\), the same formula gives the
+stable weak inversion
+\[
+ \int\operatorname{tr}(f^{T}H)
+ =-\int\operatorname{tr}((f')^{T}R_a)
+    +\int\operatorname{tr}(f^{T}R_a^2).
+\]
+One may smooth an estimated \(R_a\) before differentiating if a
+pointwise estimate of the fixed smooth \(H\) is desired: the error of
+its derivative on an interior compact is
+\(O(b^{-1}\|\widehat R-R\|_\infty)+o(1)\) at smoothing scale \(b\).
+No such stability is asserted for differentiating arbitrary
+wavelength-singular histories.
+
+
+
+\section{Polarization by long chords with phase-resolved endpoints}\label{sec:longcarrier}
+\begin{theorem}[Density decoupled from wavelength]\label{thm:longcarrier}
+On the finite-harmonic stocks of Theorem~\ref{thm:main}, fixed-length
+coercive chords with a common marked oriented screen and
+wavelength-phase-resolved outgoing offsets determine both
+background matrix sheets uniformly on the chosen carrier window.
+Together with the fixed coarse sign experiment, the recovery is
+jointly consistent whenever \(\varepsilon\to0\) and
+\(\varrho\to\infty\), with no condition on their product.
+\end{theorem}
+The affine interval length of a sampled chord is fixed; only the
+separation of outgoing marks requires a wavelength-resolving design.
+\subsection{Exact outgoing marker and structural cancellation}\label{exact-outgoing-marker-and-structural-cancellation}
+
+Fix a compact carrier observation window inside a repeated cell, so the local carrier phase is known up to a common origin. On a larger fixed window use
+\[
+ H_\varepsilon=\mathsf C+\varepsilon^{-1}\partial_\theta Q(u,u/\varepsilon),
+ \qquad Q_\varepsilon=Q(u,u/\varepsilon),\qquad
+ Q(u,\theta)=\operatorname{Re}\sum_{m=1}^{M_0}Z_m(u)e^{im\theta}.
+\]
+In the physical \((X,X')\) Jacobi variables the exact map between a,b is
+\(M(b,a)=S_{Q_\varepsilon(b)}N(b,a)S_{Q_\varepsilon(a)}^{-1}\),
+where \(S_Q=\begin{psmallmatrix}I&0\\ Q&I\end{psmallmatrix}\) and the coefficients of the transformed N system are uniformly bounded. Write its blocks \(A_N,B_N,C_N,D_N\). Direct multiplication, not an averaged approximation, gives
+\[
+ B=B_N,\qquad D=D_N+Q_\varepsilon(b)B_N,qquad
+ D B^{-1}=D_N B_N^{-1}+Q_\varepsilon(b).
+\]
+On any interval of length \(\ell\) in a fixed sufficiently short range,
+\(B_N=\ell I+O(\ell^2)\) and N and its b derivative are uniformly bounded. This follows by integrating the bounded transformed first-order system, whose upper-right block is I. For a fixed left mark a and b-a in \([L/2,2L]\) with L positive and sufficiently short (fixed as wavelength varies), it follows that
+\[
+ \left\|\partial_b(D_N B_N^{-1})\right\|\le C_L .
+\]
+There is no derivative of the transformed coefficients in this estimate; the fast dependence can remain in N, but its contribution to these differences is Lipschitz uniformly in wavelength. This is the central reason no small-volume penalty is required.
+
+At each target time t place one central incoming mark \((t-L,0,0)\). At each outgoing time b near t place the four offsets \(0,de_1,de_2,d(e_1+e_2)\), all at v=V, with fixed positive d,V. From the four normalized count ratios \(r_{0i}=\sqrt{N_{0i}/N_{00}}\), recover G by
+\[
+ G_{ii}=2(1-r_{0i}),\qquad
+ G_{12}=G_{21}=(1-r_{0+})-(1-r_{01})-(1-r_{02}).
+\]
+On population values \(G/\alpha=DB^{-1}\), \(\alpha=d^2/V\) as before. This step uses \textbf{no} crossed marks or inputs from the unknown outgoing trajectories. A single disjoint flat calibration of known affine length \(L_{\rm flat}>0\), same d and V and the same four counts, has \(G^{\rm flat}/\alpha=L_{\rm flat}^{-1}I\); estimate \(\alpha\) by \(L_{\rm flat}\operatorname{tr}(\widehat G^{\rm flat})/2\), with a declared fallback on zero denominators and a positive calibration safety range. One diagonal entry also suffices, so the flat calibration can be reduced to the central and one offset count. This avoids the numerical values of d,V and of sprinkling intensity. The nonzero affine L fixes the display units for the dimensionful Q.
+
+\subsection{Uniform chart, apertures, strictly causal interval volumes}\label{uniform-chart-apertures-strictly-causal-interval-volumes}
+
+Choose L small enough for the bounded-primitive coercivity theorem in the marked sign theorem above on each interval of length at most 2L. It holds uniformly in wavelength by integration by parts of \(Q_\varepsilon'\) for Dirichlet perturbations. At each endpoint length b-a\(\in\){[}L/2,2L{]}, the true \(B^{-1}\) is uniformly bounded by \(C/L\); \(D B^{-1}\) likewise, via the shear. Hence the four on-shell actions \(S(0,Y)=Y^T D B^{-1}Y/2\) obey \(|S|\le C_L d^2\). Choose \(d^2/V\) below a fixed design threshold so that every timelike gap lies in \([V/2,3V/2]\), including the flat calibration. The exact common-volume formula holds on these nonflat cuts and its prefactor is uniformly comparable to \((b-a)^2\), bounded away from zero. Thus all four interval populations have physical volumes in a common fixed positive compact range. No thin interval of u duration \(O(\varepsilon)\) is counted by the carrier estimator, despite the small spacings between the outgoing cuts.
+
+The proof of nonclipping is the same bounded-primitive argument for fixed L and d, and does not depend on separation of nearby outgoing cuts. Dirichlet coercivity bounds the kinetic energy of the minimizing interpolant and of any excess path with total action at most V, giving uniform X bounds since endpoint offsets and L are fixed. For \(w=v-X^TQ_\varepsilon X/2\), completing the square gives \(w'\ge-C|X|^2\) on causal portions. Together with bounded endpoint w values and monotone v on constant-u portions, this controls v. Hence a common finite-volume Brinkmann sampling block contains the union of sampled diamonds with order inherited from the ambient spacetime. All direction labels are imposed by the central parallel frame and fixed transverse geodesic offsets, not by estimating a carrier-dependent Jacobi ray.
+
+\subsection{Alias-free outgoing phase stencil and uniform statistical error}\label{alias-free-outgoing-phase-stencil-and-uniform-statistical-error}
+
+Fix integer \(J>2M_0\) and for each t sample
+\[
+ b_j=t+2\pi\varepsilon j/J,quad
+ \theta_j=b_j/\varepsilon\pmod{2\pi},\quad j=0,\dots,J-1,
+ \qquad a=t-L.
+\]
+Choose the carrier window with a buffer around its endpoints; for small \(\varepsilon\) all outgoing cuts remain in the intended repeated cell/phase chart. Let \(\mathrm{STF}\) denote the ordinary common-screen symmetric tracefree projection. The ideal statistic for m\textgreater0 is
+\[
+ Z^{\rm ideal}_m(t)=\frac{2}{J}\sum_{j=0}^{J-1}
+             e^{-im\theta_j}\,\mathrm{STF}\bigl[G(a,b_j)/\alpha\bigr].
+\]
+The smooth primitive term \(D_N B_N^{-1}\) differs from its j=0 value by \(O(\varepsilon)\), and that value cancels in the nonzero discrete Fourier harmonic. The frozen positive-frequency component of Q is \(Z_m(t)e^{im\theta_j}/2\); its matching Fourier factor survives, all other signed harmonics vanish exactly since J exceeds twice the largest index. Slowly varying envelopes differ from their t values by \(O(\varepsilon)\) uniformly. Thus \(Z^{\rm ideal}_m(t)=Z_m(t)+O(\varepsilon)\). There is no time differentiation or small lower-block subtraction here. A common unknown phase origin only changes each recovered column by a scalar phase and drops out of the two covariance matrices.
+
+For a finite grid of n target times use the same sprinkling for all these counts and for the coarse sign ensemble; overlapping interval counts need not be independent. For fixed conditioned grid selection, the probability of a fixed relative error in a count has Chernoff bound \(2\exp(-c\varrho r^2)\) for 0\textless r\textless1, with uniform c by the positive volume margin. A union bound over at most 4Jn marks (and the constant-size calibration) yields uniform error
+\[
+ \max_{m,t\in\mathrm{grid}}
+    \|\widehat Z_m(t)-Z_m(t)\|
+     =O(\varepsilon)+O_P\!\left(\sqrt{\log(2+n)/\varrho}\right)
+\]
+whenever \(\log(2+n)=o(\varrho)\). Every four-count ratio and the single calibration denominator are in a strict regular range on the good count event. This estimate applies equally to real and imaginary vector components without assuming their errors independent. The result is uniform over any fixed finite collection of prescribed smooth retuned recipes.
+
+Choose an approximately equally spaced grid with n\(\to\)\(\infty\) and \(\log n=o(\varrho)\). There is no need to pass \(\varrho\) to the estimator: arrange the fixed flat calibration step in a separate u-slab disjoint from the union of \emph{all candidate carrier chords}, inspect its central count, and set e.g.
+\[
+ n=\max\{1,\lfloor\min(\sqrt{N_{00}^{\rm flat}},\varepsilon^{-1/2})\rfloor\}.
+\]
+The deterministic recipes for n and all its anchor positions are fixed in advance; one selects a finite family after observing this out-of-band calibration. Conditional on that count step the outside Poisson law is unchanged, so the above union bound remains valid and asymptotically n grows while \(n\le C\sqrt\varrho\) with high probability. One could alternatively preselect n from the design density without adaptation. Relative spacing between target clusters can be chosen much larger than \(\varepsilon\) by the cap, though the proof does not require independence between clusters. This is a shared single-sprinkling experiment, not repeated measurements of n independently sprinkled metrics.
+
+Interpolate the grid estimates by nearest neighbor or piecewise linear interpolation on the compact window. With the actual smooth envelope bound, maximal interpolation error is controlled by C/n plus the maximal measured error. Thus \(\widehat Z_m\to Z_m\) uniformly in probability on the window; in particular
+\(\widehat M_+=\sum_m\widehat Z_m\widehat Z_m^*/4\)
+converges uniformly in probability, and \(\widehat M_-=\overline{\widehat M_+}\). The absolute chart phase conventions, not counts alone, still distinguish the sign of the circular term on a specified oriented sheet. The already proved coarse metaplectic sign converges under the same condition \(\varrho\to\infty\); the two simultaneous outcomes require only a union bound. The sign concerns the real band graviton probe and its calibrated Einstein--Hilbert bracket, not the classical carrier covariance itself.
+
+\subsubsection{Necessary absolute count intensity on a fixed laboratory}\label{necessary-absolute-count-intensity-on-a-fixed-laboratory}
+
+There is a matching, elementary scope-limited necessity for the density diverging at all. Keep the sampled laboratory in a fixed finite-volume Brinkmann block and restrict the observable record to the requested interval cardinalities, with their designed mark names and already verified timelike status of the designated pairs. Allow arbitrary many, even adaptive, count queries in that block, including the coarse sign queries; do not add a data stream of unrequested causal relations among deterministic marks. Choose the same two exact distinct same-sign Hermitian preparations as in the thin experiment. On the empty laboratory event both give precisely the same all-zero count record, including adaptive design decisions when the decision rule is fixed. The block's physical volume is its coordinate volume because the Brinkmann determinant is constant. At bounded intensity the common empty event has a fixed positive probability, so equal-prior two-point error is bounded below by half that probability. Thus no fixed-lab count-only experiment can consistently distinguish those two preparations at bounded intensity. The long chord theorem removes only a wavelength-dependent density condition, not this absolute Poisson sampling requirement, and does not rule out other observation models where arbitrary anchor-only geometric relations are themselves data.
+
+\subsection{Persistent frame calibration for the background data}
+If the outgoing background probes share a persistent unknown grid
+\(E\in GL(2,\mathbb R)\), use the outgoing flat matrix rather than
+only its trace to calibrate it. With a common surplus \(V\),
+\(G_b=V^{-1}E^T(DB^{-1})_bE\) and
+\(G_{\mathrm{fl}}=(VL_{\mathrm{fl}})^{-1}E^TE\). Thus
+\(W=(L_{\mathrm{fl}}G_{\mathrm{fl}})^{-1/2}\) gives
+\(WG_bW=O^T(DB^{-1})_bO\) for one fixed \(O=V^{-1/2}EW\in O(2)\).
+This inverse square root is continuous on a strict positive
+calibration margin. The matrix is recovered modulo that common
+orthogonal frame in the calibrated affine unit. A transverse
+reflection of the whole apparatus preserves all measured orders
+and volumes but reverses the alternating Hermitian component in the
+induced two-dimensional tracefree screen representation.
+Consequently an unorientated apparatus does not determine an
+absolute sign of circular polarization. This limitation does not
+apply to the independently recoded graviton sign in
+Theorem~\ref{thm:selfcal}.
+
+
+
+
+\section{Smooth periodic carriers with infinitely many harmonics}\label{sec:periodic}
+\begin{theorem}[Infinite harmonic resolution]\label{thm:periodic}
+Replace the finite carrier in Theorem~\ref{thm:main} by a smooth real
+tracefree periodic mean-zero two-scale carrier with the same slow
+support and small integrated trace. Exact matched vacuum stocks and
+both independent band signs still exist, and the long-chord
+experiment consistently recovers the entire optical background
+matrix on both oriented covector rays in the same joint limit.
+\end{theorem}
+\subsection{Result and stock}\label{result-and-stock}
+
+The fixed-chord count measurement extends to any smooth real symmetric tracefree carrier \(Q(u,\theta)\), \(2\pi\)-periodic and zero mean in the fast phase, smoothly supported inside the slow packet of the exact 29B+31 focusing cell. Under the same small integrated trace assumption, both oriented optical gravitational defect matrices and the independently retuned finite-wavelength graviton sign are jointly recoverable as \(\varrho\to\infty,\ \varepsilon\to0\) with no power-product condition. The period and affine orientation are apparatus inputs.
+
+In \(g=-2du\,dv+dX^2+X^TH_\varepsilon X\,du^2\) set
+\[
+H_\varepsilon(u;p)=\mathsf C(u;p)+\varepsilon^{-1}Q_\theta(u,u/\varepsilon),
+\qquad Q=\sum_{m\ne0}q_m(u)e^{im\theta},\quad q_{-m}=\overline{q_m}.
+\]
+Here \(\mathsf C\) is the smooth tracefree two-leg core of 29B+31; all coefficients vanish near the cell ends. Every metric is exact Einstein vacuum by \(\operatorname{Ric}_{uu}=-\operatorname{tr}H_\varepsilon=0\). The \(q_m\) are vectors in the marked oriented orthonormal tracefree screen basis, also identified with their tensors when used in \(H_\varepsilon\). Smoothness gives uniformly summable Fourier tails even after any fixed number of slow derivatives. Define
+\[
+M_+=\sum_{m>0}q_m q_m^*,\qquad M_-=\overline{M_+},\qquad r=\operatorname{tr}M_+ .
+\]
+The labels are the covector rays \(+du,-du\), not necessarily future/past labels: when \(\partial_v\) is future, \(g^{-1}(+du)=-\partial_v\) is past.
+
+\subsection{Exact retuning, signed lift, and physical defect}\label{exact-retuning-signed-lift-and-physical-defect}
+
+The shear variable \(Y=X'-Q(u,u/\varepsilon)X\) has equations
+\[
+X'=Y+Q_\varepsilon X,\quad
+Y'=(\mathsf C-Q_\varepsilon^2-(Q_u)_\varepsilon)X-Q_\varepsilon Y.
+\]
+The identity \(Q^2=|Q|_F^2I/2\) for real symmetric tracefree \(2\times2\) tensors and Parseval give the averaged lower block \(\mathsf C-rI\). For a coefficient minus its average take a bounded smooth periodic fast primitive. Along the path it has the form \(\varepsilon(d_u R_\varepsilon-(R_u)_\varepsilon)\), so Duhamel and integration by parts give \(O(\varepsilon)\) error of each bounded transformed fundamental matrix on a fixed cell. For one parameter derivative use its triangular enlarged system. This is \(C^1_p\) accuracy, since the moving parameters are solely in the smooth core and the carrier is fixed. At collars the shear is exactly identity. With small \(\|r\|_1\), the averaged half-trace map is a small \(C^1_p\) perturbation of the invertible smooth two-leg map in 29B+31. Use the same two distinct simple elliptic rational target angles per sign. Simple reciprocal-conjugate roots remain on the unit circle; the \(C^1_p\) contraction reaches the targets exactly with \(p_\varepsilon=p_0+O(\varepsilon)\). Even repetition of the smooth cell gives exact classical core identity and the two relative central metaplectic signs as in 29B+31. The band graviton interpretation requires that paper's actual gauge and Einstein--Hilbert charge, not a covariance sign. Retuning is needed for these matched comparisons, not for the local chord inversion or optical defect by themselves.
+
+For the short optical packet use \(P_\varepsilon=I,\ P_\varepsilon'=0\) at the incoming cut before the carrier; shrink the common window as in 29B+31 to keep \(P_0\) nonsingular by Volterra. Transformed averaging and matching imply
+\[
+P_\varepsilon=P_0+O(\varepsilon),\quad
+P'_\varepsilon=P_0'+Q_\varepsilon P_0+O(\varepsilon),\quad
+G_\varepsilon'-G_0'=2P_0^TQ_\varepsilon P_0+O(\varepsilon),
+\quad G_\varepsilon=P_\varepsilon^TP_\varepsilon .
+\]
+Thus the leading optical strain derivative in the oriented \(P_0\)-orthonormal screen is \(2Q_\varepsilon\), not \(2Q_\theta\). The optical inverse is uniformly bounded and \(G_\varepsilon''=O(\varepsilon^{-1})\). In the optical gauge the sole contracted Christoffel coefficient is, up to a common sign convention, the trace of \((P_\varepsilon'-Q_\varepsilon P_\varepsilon)P_\varepsilon^{-1}\) by \(\operatorname{tr}Q_\varepsilon=0\); the derivative of this trace is uniformly bounded by the transformed equations, and its value converges to its limit. These are the same local regularity bounds as for the finite-harmonic stock.
+
+To obtain the one-quarter optical quadratic defect, first truncate to finitely many signed harmonics. The oscillatory phase \(m u/\varepsilon\) localizes order-zero microlocal tests to the ray \(\mathrm{sgn}(m)du\); distinct harmonics do not survive a quadratic pairing by nonstationary phase. Then send the truncation size to infinity. The Fourier tail is uniformly small in the optical strain's tested \(L^2\) norm by the absolute summability, and order-zero operators are bounded on \(L^2\); Cauchy--Schwarz controls all mixed tails. This proves exactly \(M_+\) on \(+du\) and \(M_-\) on \(-du\). Their total trace is \(2r=\operatorname{Ric}(g_0)_{uu}\). The proof is an explicit defect calculation on an actual family, not a realization theorem for independently prescribed matrix densities.
+
+\subsection{Convergent infinite-harmonic count estimator}\label{convergent-infinite-harmonic-count-estimator}
+
+Use the uniformly coercive and nonclipped fixed-length chords of the long-chord theorem above. The exact four-count outgoing quadratic, with flat calibrated \(\alpha=d^2/V\), is
+\[
+G/\alpha=DB^{-1}=D_NB_N^{-1}+Q_\varepsilon(b).
+\]
+Here \(N\) is the bounded transformed flow. At fixed left \(a=t-L\), its \(D_NB_N^{-1}\) has bounded right-endpoint derivative for \(b-a\in[L/2,2L]\). It follows that on the stencil \(b_j=t+2\pi\varepsilon j/J\), \(0\le j<J\), removal of the sampled DC term makes the drift \(O(\varepsilon)\) uniformly in \(J\); freezing the slow envelope at \(t\) has the same error. Recover the positive DFT representatives \(1\le m<J/2\), omitting Nyquist and zero-filling above. Use normalized DFT with output phase relative to the common affine origin. Parseval bounds the \(\ell^2\) error of all recovered coefficients by the RMS error on the samples, hence no \(\sqrt J\) amplification. For frozen \(t\), absolute convergence gives aliases \(q_{m+\ell J}(t)e^{i\ell Jt/\varepsilon}\); the aggregate alias and omitted tail error is bounded by twice \(\sum_{|m|\ge J/2}\|q_m(t)\|\) via the triangle inequality in \(\ell^2\). This tends to zero uniformly.
+
+The \(4nJ\) count variables at \(n\) grid targets each have fixed positive and bounded physical volume. A Poisson union bound, followed by the smooth ratios on their common safety range, gives on the grid
+\[
+\|\widehat q-q\|_{\ell^2}\ \le\
+O(\varepsilon)
++2\sup_t\sum_{|m|\ge J/2}\|q_m(t)\|
++O_P\!\left(\sqrt{\log(2+nJ)/\varrho}\right).
+\]
+Counts may overlap arbitrarily. Use one disjoint fixed flat calibration, which needs just the central and one offset count. For unknown intensity choose both \(n,J\) of order \(\min((1+N^{\rm flat}_{00})^{1/4},\varepsilon^{-1/4})\) with rounding, so both grow and \(\log(nJ)=o(\varrho)\) with high probability. Condition on the calibration; the law of all candidate carrier chords is unchanged, since they use disjoint \(u\) slabs. Interpolation by nearest grid values incurs \(O(1/n)\) in \(\ell^2\) from the slow derivative Fourier bound. Then
+\[
+\|\widehat M_+-M_+\|
+ \le(\|\widehat q\|_{\ell^2}+\|q\|_{\ell^2})\,\|\widehat q-q\|_{\ell^2}.
+\]
+This recovers both sheets uniformly in probability. A common unknown phase origin rotates each column by a scalar phase and cancels in \(M_\pm\). The exact independent sign continues to use fixed coarse charts; joint success on one sprinkling uses only a union bound.
+
+
+
+\section{Phase-free nonperiodic polarization recovery}\label{sec:nonperiodic}
+\begin{theorem}[Weak-null bounded primitives]\label{thm:nonperiodic}
+Let the real smooth tracefree primitive sequence be uniformly
+bounded, with common interior support, weak-* mean limit zero,
+and weak-* scalar-square limit of sufficiently small integrated
+trace. The matched exact vacuum stocks and independent signs
+persist. Along a subsequence on which the physical directed defect
+exists, fixed tests of that measure are consistently recovered
+from the continuum endpoint count oracle, or from a finite
+resolving mesh with an available profile modulus, as
+\(\varrho\to\infty\) and \(\varepsilon\to0\).
+The experiment does not require a periodic phase reference, but
+retains the oriented affine clock and transverse screen.
+\end{theorem}
+\subsection{Result and observation model}\label{result-and-observation-model}
+
+Let \(Q_\varepsilon(u)\) be any smooth real symmetric tracefree screen tensor, uniformly bounded, supported inside a fixed short packet window of the repeated cell, without any periodicity, carrier phase model, or bound on the number of oscillations. Assume \(Q_\varepsilon\rightharpoonup0\) weak-* and \(\tfrac12|Q_\varepsilon|_F^2\rightharpoonup r\) weak-* on the finite cell, with \(\|r\|_1\) sufficiently small. We work on a sequence or subsequence on which the directed defect measures of \(Q_\varepsilon\) exist; boundedness always supplies subsequences. Then the actual exact retuned vacuum plane waves admit both matched graviton signs, and the signed optical polarization measure of this subsequence can be read from a common sprinkling whose intensity tends to infinity, with no density--wavelength link and no phase reference. Use the empirical interval-count curve of fixed-left, bounded-length charts, either as a continuum endpoint query model, or a finite arbitrarily fine mesh when an a priori modulus of continuity (possibly worsening arbitrarily with \(\varepsilon\)) for the profiles is part of the statistical design. No claim of recovery from an arbitrary fixed finite number of marks without any regularity/control scale is made. The orientation of \(du\) and screen axes is still marked. Fixed coarse signs remain a separate data product.
+
+\subsection{Exact vacuum stocks and actual optical defect}\label{exact-vacuum-stocks-and-actual-optical-defect}
+
+Set \(H_\varepsilon(u;p)=\mathsf C(u;p)+Q_\varepsilon'(u)\), with the same smooth tracefree two-leg core as in public 29B+31. These metrics are exactly Ricci-flat for every smooth primitive, independently of its derivative size. The shear \(Y=X'-Q_\varepsilon X\) gives
+\[
+X'=Y+Q_\varepsilon X,\qquad
+Y'=(\mathsf C-Q_\varepsilon^2)X-Q_\varepsilon Y.
+\]
+The uniformly bounded coefficient matrices converge weak-* to the averaged system with lower block \(\mathsf C-rI\), since \(Q_\varepsilon^2=|Q_\varepsilon|_F^2 I/2\). This gives uniformly convergent cumulative primitives of the coefficient difference on a fixed cell: each primitive is uniformly Lipschitz and converges pointwise by fixed-interval weak-* testing, hence uniformly. In the variation-of-constants difference of the two propagators integrate that primitive once by parts; both propagators and their first derivatives are bounded, so the error is \(o(1)\) uniformly in both endpoints. It is also \(C^1_p\) because the same proof applies to the upper-triangular first parameter derivative system; the parameter derivatives of \(\mathsf C\) are smooth and compactly bounded, and \(Q_\varepsilon\) is fixed independently of \(p\). The small integrated r bound gives the same invertible averaged two-half-trace map and rational-angle targets as public 29B+31. The local spectral and contraction argument yields exact \(p_\varepsilon=p_0+o(1)\) and an even repetition with the same matched classical returns and independent opposite metaplectic signs on the fixed band. There is no appeal to a merely approximate lift. The carriers vanish near cell seams so the metric and switching shear glue smoothly.
+
+For an optical solution \(P_\varepsilon\) with initial \(I,0\) before the packet, choose a short common window with \(P_0\) uniformly nonsingular. The uniform averaging above gives
+\(P_\varepsilon\to P_0\) and \(P_\varepsilon'-P_0'-Q_\varepsilon P_0\to0\) uniformly. Thus in the marked oriented \(P_0\)-orthonormal screen the derivative of the optical metric fluctuation is \(2Q_\varepsilon+o(1)\) in \(L^2_{\rm loc}\). Consequently its physical one-quarter optical covariance on the oriented rays \(+du,-du\) is exactly the two-ray microlocal defect of \(Q_\varepsilon\). Positivity and conjugacy of the two matrix-valued measures are the usual real-field properties \cite{gerard}; their summed trace is \(2r\). The distinction is covector orientation, not a naming of time orientation. On a product chart the leading carrier is a function of u alone: after compact localization in transverse and v variables, their Fourier frequencies stay tight and contribute no limiting transverse directions. A one-dimensional positive or negative Fourier projection on the u variable with local compact weights therefore determines the corresponding directed matrix measure. For example use all real compact weights \(\eta\) to test the positive matrix with entries
+\(\int \overline{\eta Q_\varepsilon^j}\,\Pi_+(\eta Q_\varepsilon^i)\,du\)
+(the row \(i\), column \(j\) convention gives \(q_i\overline{q_j}\)),
+where \(\Pi_+\) projects to positive affine-u frequency; polarizing real or complex test weights determines the local measures. The singularity of its symbol at zero may be cut off in a bounded frequency range; the resulting compactly localized smoothing form vanishes on a bounded weak-null sequence. This is an explicit optical defect statement with no claim of a universal weak limit independent of subsequence. If the full scale-specific generalized-wave estimates are desired impose additionally \(\|Q_\varepsilon'\|_\infty=O(\varepsilon^{-1})\); arbitrary bounded primitives alone need not obey that chosen derivative scale. The metric exactness and this optical defect proof did not require it. If \(r\) is only \(L^\infty\), the limiting optical \(P_0\) is \(W^{2,\infty}\); the measured screen defect still makes sense by uniform coefficient approximation on compact supports. Smooth \(r\) gives a smooth limit. In the same common parallel screen the actual vacuum Weyl tidal coefficient is \(W_{uiuj}=-H_{\varepsilon,ij}\). Integrate in \(u\) from a fixed incoming mark with \(Q_\varepsilon=0\): the negative integrated Weyl equals \(Q_\varepsilon+\int\mathsf C\,du\). The smooth core primitive converges strongly, so its oscillatory signed defect agrees exactly with the optical defect. No such statement is made for the unscaled derivative \(W\) itself, which need not be bounded in \(L^2\).
+
+\subsection{A uniform VC bound for continuum chord queries}\label{a-uniform-vc-bound-for-continuum-chord-queries}
+
+Use finitely many common uniformly short affine charts as in the bounded-primitive sign proof. In each, a local Rosen matrix \(P_\varepsilon\) initialized by \(I,0\) at its beginning stays uniformly close to \(I\) for short length by the bounded transformed system (initial \(Y=-Q_\varepsilon\) is uniformly bounded even on a nonflat chart). The exact zero-Wronskian Rosen coordinates give \(ds^2=-2du\,dw+dx^TG_\varepsilon(u)dx\), \(G_\varepsilon=P_\varepsilon^TP_\varepsilon\) positive definite and uniformly bounded with its inverse. Its coordinate changes are smooth, uniformly bounded on bounded apparatus sets, since \(P_\varepsilon,P_\varepsilon'\) are bounded. Put \(I(u)=\int^u G_\varepsilon^{-1}\). For \(u_a<u_b\), the exact minimum action between Rosen endpoints is
+\[
+S(a,b)=\tfrac12(x_b-x_a)^T[I(u_b)-I(u_a)]^{-1}(x_b-x_a).
+\]
+Indeed \(G_\varepsilon x'\) is conserved on the minimizer and its Dirichlet action is strictly convex. Causal order is determined by \(w_b-w_a>S(a,b)\) for strictly timelike separation. Since u is monotone on causal curves, it suffices to cover the actual queried endpoint intervals by these short full transverse charts, without missing outside detours. Longitudinal nonclipping remains that of the bounded primitive and fixed finite laboratory; no shrinking domain is imposed.
+
+Chronological inclusion of an event \((u,w,x)\) in any designated interval inside a chart is the conjunction of \(u>u_a,u<u_b\) and two polynomial inequalities. For the future inequality, for example multiply by the positive \(\det(I(u_b)-I(u))\):
+\[
+2(w_b-w)\det(I(u_b)-I(u))
+ -(x_b-x)^T\operatorname{adj}(I(u_b)-I(u))(x_b-x)>0.
+\]
+The past inequality is analogous. At fixed mark parameters all these are polynomials of fixed degree in the finite feature vector \((u,w,x_1,x_2,I_{11}(u),I_{12}(u),I_{22}(u))\). Thresholds of polynomials of fixed degree are affine half-spaces after the finite monomial feature embedding. The intersection of four such sets has finite VC dimension, uniformly in the profile and \(\varepsilon\): Sauer's bound \cite{sauer} for each individual class multiplies at most four polynomial shatter bounds. Passing back to original Brinkmann points or restricting the intervals to a fixed lab block cannot increase the resulting shatter coefficient; finitely many charts preserve a uniform bound. These are ordinary measurable sets; for the supremum one may use the outer version of the empirical process inequality or restrict to a countable dense designed endpoint family and the corresponding separable extensions where needed. Null boundary conventions do not change the continuum volumes; choose strict chronological inequalities for the count oracle. For strict causal rather than chronological order, the non-strict inequalities for interior \(u\) and the possible equality-cut null branches add only finitely many polynomial inequalities or equalities: at equal u the transverse positions agree and w increases. This leaves the same finite VC property (still excluding deterministic anchors). For each fixed deterministic count the chronological and causal versions agree almost surely.
+
+Conditional on the Poisson total in the common finite lab block, the sample is iid with normalized volume law. Its intensity total fluctuates by \(O_P(\sqrt\varrho)\); the VC maximal deviation bound \cite{vc} gives uniformly over all fixed-length chords
+\[
+\sup_I\left|\varrho^{-1}N_I-\operatorname{Vol}I\right|
+       =O_P(\sqrt{\log(2+\varrho)/\varrho}).
+\]
+The estimate is distribution-free conditional on the total, hence uniform over the nonperiodic sequence. Exact split-action prefactors and causal gaps bound the interval volumes below on the intended chord family; all four-count ratios and the common flat calibration are uniformly stable. This yields the same bound for the supremum error of the inferred \(R_\varepsilon(b)=D(b,a)B(b,a)^{-1}\) on any fixed-left right-endpoint window separated from a. No density input to the estimator and no independence of overlapping chords are used. The uniformity is over the entire class of aperture queries, not just a grid whose size is controlled by \(\varrho\). If only finitely many queries are allowed, one may use any mesh fine enough in the a priori profile modulus, without paying its cardinality in the statistical bound.
+
+\subsection{Phase-free separation of the drift by compact Lipschitz fitting}\label{phase-free-separation-of-the-drift-by-compact-lipschitz-fitting}
+
+The exact shear decomposition gives
+\[
+R_\varepsilon(b)=Q_\varepsilon(b)+L_\varepsilon(b),\qquad
+L_\varepsilon(b)=D_N(b,a)B_N(b,a)^{-1}.
+\]
+Uniform short-chart invertibility and bounded coefficients imply a known bound on \(\|L_\varepsilon\|_\infty+\operatorname{Lip}L_\varepsilon\) on the right-endpoint window; the computed bounds depend on the chosen uniform primitive bound and the aperture chart, not on its oscillation rate. Uniform averaging proves \(L_\varepsilon\to L_0\) uniformly. Consider the compact convex class \(\mathcal K\subset L^2\) of symmetric matrix curves within that common uniform and Lipschitz bound. This contains \(L_0\). For the measured bounded curve \(\widehat R_\varepsilon\) choose its \(L^2\)-nearest member \(\widehat L_\varepsilon\) of \(\mathcal K\) (existence by compactness; unique by convexity). For the continuum query model the counts as functions of b are measurable (the interval inclusion inequalities are Borel). The fit can also use a uniformly approximated finite-grid \(\widehat R_\varepsilon\) with the previous modulus condition.
+
+Because \(R_\varepsilon-L_0\rightharpoonup0\) in \(L^2\) and the measured curve is uniformly close in probability, the pairings with \(\mathcal K-L_0\) tend uniformly to zero in probability: use finite nets of the compact set and boundedness of \(R_\varepsilon-L_0\) in \(L^2\). Comparing the fitted objective with the admissible value \(L_0\) yields
+\[
+\|\widehat L_\varepsilon-L_0\|_2^2
+ \le 2\big|\langle\widehat R_\varepsilon-L_0,\widehat L_\varepsilon-L_0\rangle\big|
+ \ \longrightarrow\ 0
+\]
+in probability for arbitrary joint limits. Thus
+\(\widehat Q_\varepsilon:=\operatorname{STF}(\widehat R_\varepsilon-\widehat L_\varepsilon)\)
+satisfies \(\|\widehat Q_\varepsilon-Q_\varepsilon\|_2\to0\) in probability. No filtering scale is chosen relative to the oscillations, and no phase origin or periodic basis is supplied. The only model constraint is the uniform chart Lipschitz bound and the weak-null primitive hypothesis. Applying the bounded one-dimensional signed spectral tests of the optical argument above to \(\widehat Q_\varepsilon\) therefore recovers all fixed tested matrix-valued directed defect pairings on any subsequence where they exist, with the usual \(L^2\) continuity estimate for quadratic forms. Compact cutoffs in overlapping right-endpoint windows recover the full packet test collection. The estimate does not assign a nonexistent unique limit if the probes' actual measures fail to converge along the full family.
+
+\subsubsection{A concrete nonperiodic recipe with identifiable primitive coefficients}\label{a-concrete-nonperiodic-recipe-with-identifiable-primitive-coefficients}
+
+For \(d_{\rm fast}\ge2\), take smooth mean-zero STF \(Q(u,\vartheta)\) on the fast \(d_{\rm fast}\)-torus with compact slow support, and evaluate it along \(\vartheta=\omega u/\varepsilon\). Choose rationally independent Diophantine frequencies, meaning \(|k\cdot\omega|\ge c |k|^{-\nu}\) for all nonzero integer \(k\). A zero-mean coefficient \(F(u,\vartheta)\) in the transformed system has a bounded smooth fast-flow primitive by dividing its Fourier coefficients by \(i\,k\cdot\omega\); the loss is polynomial, outweighed by smooth Fourier decay. As in the periodic case, the derivative of this primitive along the fast path gives the \(O(\varepsilon)\) averaging of propagators, including the parameter derivatives. The weak limits in the optical argument above hold with \(r=\sum_{k\cdot\omega>0}\|q_k\|^2\), where \(q_k\) are the torus Fourier coefficients. Distinct finite signed carrier frequencies separate by rational independence, and the uniform small tails give the exact physical sheet matrices \(\sum_{k\cdot\omega>0}q_kq_k^*\) and its conjugate. This yields concrete genuinely quasiperiodic, non-single-period exact vacuum stocks (choose two incommensurate nonzero coefficients) with both independent metaplectic signs. The phase-free estimator in the drift projection below applies directly; here the known bound \(O(\varepsilon^{-1})\) on the primitive derivative also permits a finite universal design mesh \(o(\varepsilon)\) if desired, using the VC bound without statistical penalty in its size. No assertion is made for a general ergodic process without the actual weak limits and deterministic support bounds.
+
+
+
+\section{A sharp threshold for a thinner count record}\label{sec:thin}
+\begin{theorem}[Restricted short-aperture experiment]\label{thm:thin}
+On the finite-carrier stocks, four concordant interval counts per
+wavelength step, with fixed off-axis offsets and a disjoint flat
+calibration, recover both Hermitian matrices in \(L^1\) when
+\(\varrho\varepsilon\to\infty\). For this specified count record
+the divergence is necessary even to distinguish two fixed
+same-trace, same-sign distinct preparations. The converse is not a
+lower bound for the larger long-chord or combined sign record.
+\end{theorem}
+\subsection{Same marked exact stock; different aperture design}\label{same-marked-exact-stock-different-aperture-design}
+
+On one local carrier window in each exact sandwich let \(H_\varepsilon=\mathsf C+\varepsilon^{-1}\partial_\theta Q(u,u/\varepsilon)\), with
+\(Q=\operatorname{Re}\sum_{m=1}^{M_0} Z_m(u)e^{im\theta}\).
+The smooth bounded core parameters are the actual finite-wavelength retunings and \(H_\varepsilon\) is exactly tracefree. Work in its shared oriented Cartesian screen, with common affine u and longitudinal v normalization. Choose fixed positive d,V, independent of wavelength. For each adjacent microstep \(I=[a,b]\), length \(\delta=h\varepsilon\) with \(h=2\pi/J\), \(J>2M_0\) integer, use \textbf{only} the coordinate-concordant pairs
+\[
+ p_e=(a,0,de),\qquad q_e=(b,V,de),\qquad
+ e\in\{e_1,e_2,e_+,e_-\},\quad e_\pm=(e_1\pm e_2)/\sqrt2.
+\]
+This is an allowed nonflat-cut marking by the central parallel screen and longitudinal null shifts as in the previous theorem. Do not take crossed intervals between distinct fixed centers on these short steps: they would be spacelike for small \(\delta\). The two orthogonal contrast pairs at fixed center radii probe tracefree diagonal and off-diagonal entries. Choose d small enough relative to V and to the chosen common carrier bound that the four on-axis actions have \(|S_e|\le V/2\); the uniform bound justifying this appears below. All cut and offset choices are fixed design information; no unknown trajectories are marked.
+
+\subsection{Exact action with fixed offset and uniformly bounded laboratory}\label{exact-action-with-fixed-offset-and-uniformly-bounded-laboratory}
+
+Let \(x_0=de\) be the constant transverse path. The Dirichlet form \(\mathfrak a(z,z)=\int_I(|z'|^2+z^{\mathsf T}H_\varepsilon z)\) is between \((1\pm C\varepsilon)\int_I|z'|^2\), since \(\|H_\varepsilon\|_\infty\le C/\varepsilon\) and \(\delta^2/\varepsilon=O(\varepsilon)\). The linear variation about x\_0 has norm at most
+\[
+ \left|\int_I z^{\mathsf T}H_\varepsilon x_0\right|
+ \le C d\frac{\delta^{3/2}}\varepsilon\|z'\|_2.
+\]
+Thus the minimizing path \(x_0+z_\star\) has \(\|z_\star'\|_2\le C d\delta^{3/2}/\varepsilon\), \(\|z_\star\|_\infty\le Cd\delta^2/\varepsilon\), and its exact boundary-value action is
+\[
+ S_e=\frac{d^2}2 e^{\mathsf T}\left(\int_I H_\varepsilon\right)e
+         +O(d^2\delta^3/\varepsilon^2)
+     =\frac{d^2\delta}{2\varepsilon}e^{\mathsf T}J_I e+O(d^2\varepsilon),
+ \qquad J_I=\frac\varepsilon\delta\int_I H_\varepsilon .
+\]
+Indeed the improvement over the constant path action is one-half the nonnegative energy \(\mathfrak a(z_\star,z_\star)\). This estimate is uniform in the fixed finite preparations. The leading bound is \(O(d^2)\), so choose the stated timelike margin. The exact interval calculation of Q19, extended in the previous theorem to nonflat cuts, gives
+\[
+ V_e=C_I(V-S_e)^2,\qquad
+ C_I=C_{I,\rm flat}(1+O(\varepsilon)),\qquad
+ C_{I,\rm flat}=\pi\delta^2/6.
+\]
+The relative C\_I estimate uses the same (1\(\pm\)C\(\varepsilon\)) bounds on the full Dirichlet quadratic applied to the split interpolation with fixed intermediate point; its stationary minimum then has Hessian within those relative factors of the flat split Hessian. Centering by the interpolant shift isometry is exact, even with finite off-axis center.
+
+Nonclipping remains uniform despite the nonshrinking center. For any causal path through a tested point, the total action is at most V. Relative to the minimizer, the Dirichlet error satisfies \(\|z'\|_2\le C\sqrt V\) and \(\|z\|_\infty\le C\sqrt{\delta V}\). Thus all points lie within \(O(\sqrt\delta)\) of their fixed transverse center. For the longitudinal displacement use the bounded shear primitive \(w=v-X^{\mathsf T}Q_\varepsilon X/2\). Its causal derivative is bounded below by \(-C|X|^2\) by completing the square with \(H=Q_\varepsilon'+(\mathsf C-Q_u)\). The marked endpoint w values are uniformly bounded and constant-u pieces do not decrease v. Hence all causal intervals lie in one fixed bounded laboratory block with ambient inherited order, including all four fixed centers, and near both endpoint cuts. Each interval volume is between fixed multiples of \(\delta^2\). For sufficiently small wavelength the four transverse tubes are pairwise separated within one step; the statistical upper bound below does not even require that extra independence. Different strict steps lie in disjoint u slabs and have independent Poisson counts.
+
+\subsection{The tracefree contrast cancels the square without statistical debiasing}\label{the-tracefree-contrast-cancels-the-square-without-statistical-debiasing}
+
+Let \(N_e\) count sprinkled interior points in I(p\_e,q\_e), excluding all deterministic anchors. The fixed same-geometry same-step prefactor gives
+\[
+ V_{e}-V_{e^\perp}
+ = -2V C_I(S_e-S_{e^\perp})
+     +C_I(S_e-S_{e^\perp})(S_e+S_{e^\perp}).
+\]
+The exact vacuum trace gives \(\operatorname{tr} J_I=0\), so
+\(S_e+S_{e^\perp}=O(d^2\varepsilon)\) and
+\(S_e-S_{e^\perp}=d^2\delta\, e^{\mathsf T}J_I e/\varepsilon+O(d^2\varepsilon)\).
+Thus the raw \textbf{linear signed count difference}, normalized by its fixed population scale, has bias only \(O(\varepsilon)\) from deterministic geometry, not an inverse expected count bias. The e\_1/e\_2 pair estimates \((J_I)_{11}\), the e\_+/e\_- pair \((J_I)_{12}\); set the other entries by symmetry and trace zero. There is no need to estimate either action separately, and the leading Taylor cancellation works at O(1) aperture contrast.
+
+For exact gain without external sprinkling density or numerical d,V, take one independent flat calibrated step of fixed affine length L in a common flat collar, with the same d,V. For its own crossed intervals require \(d^2/V\) small relative to L, possible with the original fixed d choice. The Q19 flat statistic \(K^{\rm flat}\) has ideal \(K^{\rm flat}=(\alpha/L)I\) with \(\alpha=d^2/V\). Use \(\widehat\alpha=L\operatorname{tr}K^{\rm flat}/2\) with an admissible positive safe range, and its central count \(N^{\rm flat}_{00}\) whose mean is \(n_0=\varrho\pi L^2V^2/6\). In the flat stock the two counts 00 and one singly offset interval already suffice since \(\alpha=2L(1-\sqrt{V_{10}/V_{00}})\). Then for each desired entry use
+\[
+ \widehat J_I(e)=-\frac{\varepsilon L^2}{2\widehat\alpha\delta^3}
+          \frac{N_e-N_{e^\perp}}{N^{\rm flat}_{00}} .
+\]
+If the flat inversion or ratio is invalid give a declared bounded fallback for the entire record. For analysis replace \(\widehat\alpha,N^{\rm flat}_{00}\) by the true \(\alpha,n_0\). The resulting estimator is linear in the four microstep counts and satisfies
+\[
+ \mathbb E \widetilde J_I(e)=e^{\mathsf T}J_I e+O(\varepsilon),
+ \qquad \operatorname{Var}\widetilde J_I(e)\le C/(\varrho\varepsilon^2).
+\]
+For why the gain is exact, the leading mean of \((N_e-N_{e^\perp})/n_0\) above is
+\(-2\alpha (\delta/\varepsilon)(\delta/L)^2e^{\mathsf T}J_I e\).
+The variance of the raw difference is bounded by a constant times \(\varrho\delta^2\) using the Poisson intersection covariance (or disjointness here for small wavelengths). Different steps are independent on the same sprinkling. The single random flat correction is a common multiplicative gain
+\(\alpha n_0/(\widehat\alpha N^{\rm flat}_{00})=1+O_P(\varrho^{-1/2})\);
+both estimates use fixed positive flat volumes, and no separate microstep flat ratio is used. One may set L=1 as the marked affine unit if desired. The phase schedule and orientation remain actual inputs, not recovered from unmarked order. One need not supply numerical d, V, or \(\varrho\).
+
+\subsection{\texorpdfstring{Alias-free averaging, \(L^2\) envelopes and \(L^1\) covariance}{Alias-free averaging, L\^{}2 envelopes and L\^{}1 covariance}}\label{alias-free-averaging-l2-envelopes-and-l1-covariance}
+
+With midpoint \(u_j\) of \(I_j\) the exact averaged \(J_{I_j}\) contains the leading positive-frequency tensor
+\[
+ \frac{im}{2}Z_m(u_j)\operatorname{sinc}(mh/2)e^{imu_j/\varepsilon},
+\]
+its conjugate, and a uniform \(O(\varepsilon)\) envelope/slow-core error. This is the same midpoint integral and fixed \(J>2M_0\) as in the earlier theorem, so the transfer filter is nonzero and phase aliases are excluded. The two measured entries reconstruct the symmetric tracefree tensor in the common screen before demodulation. For each fixed test, multiply by its smooth values and the known inverse filter and phase, and sum with weights \(\delta\). The deterministic error tends to zero by ordinary midpoint summation and discrete nonresonant summation by parts; the random variance is \(O((\varrho\varepsilon)^{-1})\). Thus conditional on a good flat calibration, finite tested complex data converge under the new weaker scaling. Real and imaginary errors share the same real raw samples and are not presumed independent.
+
+For strong envelope recovery group an integer number of full carrier periods in bins of width \(b_\varepsilon\to0\), \(b_\varepsilon/\varepsilon\to\infty\), \(\varrho\varepsilon b_\varepsilon\to\infty\). On each bin use the discrete demodulated mean, dividing by the same constant sinc factor. The nonsynchronous harmonics cancel exactly for frozen amplitudes over whole periods; variation costs \(O(b_\varepsilon+\varepsilon)\), and the average variance is \(O((\varrho\varepsilon b_\varepsilon)^{-1})\), uniformly. Integrating squared error over the bins proves strong convergence in probability in \(L^2\); any leftover end bins of width \(O(b_\varepsilon)\) may be dropped/restricted. The global flat calibration factor converges in probability and does not alter this result. Choice of \(b_\varepsilon\) need not know \(\varrho\): \(\varepsilon N_{00}^{\rm flat}\asymp\varrho\varepsilon\) with probability tending to one, so use the larger of \(\sqrt\varepsilon\) and \((\varepsilon N_{00}^{\rm flat})^{-1/2}\), rounded to a whole period, with a fallback if the flat count is zero. Conditional on this disjoint flat calibration, its random bin design is valid and the same variance bound holds. The Hermitian positive-ray estimator \(\sum_m\widehat Z_m\widehat Z_m^*/4\) then tends to the exact target \(M_+\) in \(L^1\) by Cauchy--Schwarz and \(L^2\) tightness; the other sheet is its complex conjugate. A common unknown phase origin rotates each complex column by a unit scalar and cancels in both Hermitian densities. The fixed coarse sign data can overlap these samples; use the union bound for joint convergence and never declare these two estimators independent.
+
+\subsection{Two-point necessary scale for this thin observation}\label{two-point-necessary-scale-for-this-thin-observation}
+
+Choose two fixed smooth nonzero carrier preparations with the same sufficiently small scalar trace, one circular column and its complex conjugate in the same common screen; pick the same exact sign target. Their positive-ray Hermitian matrices differ on an open window. They are admissible actual exact finite-wavelength retunings with a common fixed flat collar and all the preceding bounds. Use the same marked fine experiment and the same intensity \(\varrho\) for the two probability laws. Let \(U_\varepsilon\) be the union of all its four fine intervals per step. There are \(O(\varepsilon^{-1})\) steps; under either stock \(\operatorname{Vol}(U_\varepsilon)\le C\varepsilon\). The fine count vector is zero with probability
+\(e^{-\varrho\operatorname{Vol}(U_\varepsilon)}\ge e^{-C\varrho\varepsilon}\).
+The extra disjoint flat calibration has exactly the same law in both stocks and is independent of the fine counts. On any subsequence with bounded \(\varrho\varepsilon\) the joint two observation laws therefore share at least a fixed positive mass: their common component is the all-zero fine event times the identical flat law. More precisely total variation is at most \(1-e^{-C\varrho\varepsilon}\); for equal-prior classification, average error is at least \(e^{-C\varrho\varepsilon}/2\). In the limit \(\varrho\varepsilon\to0\) the two laws even tend to coincide in total variation. A consistent estimator of M in \(L^1\) would furnish a consistent two-point classifier by the positive fixed \(L^1\) separation of the two targets, impossible in the bounded regime. This proves the precise necessary divergence matching the sufficient threshold \textbf{for the fine count vector plus disjoint flat reference}. The comparison record does not include interior coarse counts, arbitrary extra order relations among deterministic marks, cross-step counts, unlabeled points and their entire causal order, or a growing number of disjoint repeated experiments. Coarse counts can themselves carry polarization-dependent information, so the lower bound must not be read as a necessary threshold for the larger joint observation or a universal geometry-inference bound.
+
+
+
+\section{Scope of the extended results}
+The relative binary sign is a statement at matched physical
+classical returns. Reconstructions at unmatched endpoints
+give lifted classical maps or an explicitly chord-normalized
+comparison, not two transfers differing by a scalar sign.
+The background polarization and the probe have different
+localization, normalization and observation requirements.
+In particular the unordered external axis calibration can be
+removed from the sign, whereas an oriented frame or an equivalent
+physical convention is required to label an oriented circular
+background component. These restrictions, and the finite-band
+character of the graviton proof, persist throughout the expanded
+edition. The original theorem and its proof are not replaced by a
+statistical approximation.
+
+\begin{thebibliography}{99}
 \raggedright
 \bibitem{p29b} \emph{Physical polarization of high-frequency vacuum gravity: transport, exact preparation, and curvature readout}, manuscript 29B, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/29b-high-frequency-graviton-polarization}{research archive}.
 \bibitem{p31} \emph{Identical Jacobi Returns and Opposite Graviton Transfer in Exact Vacuum Sandwiches}, manuscript 31, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/31-graviton-metaplectic-transfer}{research archive}.
@@ -167,5 +839,10 @@ The theorem gives an exact degeneracy of \emph{end-to-end} classical returns, no
 \bibitem{littlejohn} R.~G.~Littlejohn, The semiclassical evolution of wave packets, \emph{Phys.\ Rep.} \textbf{138} (1986), 193--291, \href{https://doi.org/10.1016/0370-1573(86)90103-1}{doi:10.1016/0370-1573(86)90103-1}.
 \bibitem{adamo} T.~Adamo, E.~Casali, L.~Mason, and S.~Nekovar, Scattering on plane waves and the double copy, \emph{Class.\ Quantum Grav.} \textbf{35} (2018), 015004, \href{https://arxiv.org/abs/1706.08925}{arXiv:1706.08925}.
 \bibitem{harte} A.~I.~Harte and T.~D.~Drivas, Caustics and wave propagation in curved spacetimes, \emph{Phys.\ Rev.\ D} \textbf{85} (2012), 124039, \href{https://doi.org/10.1103/PhysRevD.85.124039}{doi:10.1103/PhysRevD.85.124039}.
+
+\bibitem{gerard} P. G\'erard, \emph{Microlocal defect measures}, Comm. Partial Differential Equations 16 (1991), 1761--1794, \href{https://doi.org/10.1080/03605309108820822}{doi:10.1080/03605309108820822}.
+\bibitem{vc} V. N. Vapnik and A. Ya. Chervonenkis, \emph{On the uniform convergence of relative frequencies of events to their probabilities}, Theory Probab. Appl. 16 (1971), 264--280.
+\bibitem{sauer} N. Sauer, \emph{On the density of families of sets}, J. Combin. Theory Ser. A 13 (1972), 145--147, \href{https://doi.org/10.1016/0097-3165(72)90019-2}{doi:10.1016/0097-3165(72)90019-2}.
 \end{thebibliography}
 \end{document}
+

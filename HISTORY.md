@@ -28,6 +28,8 @@ On 25 November 2026, papers 30–31 were added as internally reviewed analytical
 
 ## Versioned revisions
 
+The 29B+31 companion has been superseded in place by Edition 2, [29B+31+Q19](papers/29b-31-polarization-defects-graviton-transfer/README.md). The [first edition](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/672976c37a9db8676dcea7787474825c513ee2a3/papers/29b-31-polarization-defects-graviton-transfer) remains available. Papers 29, 29B and 31 are unchanged; the collection count does not increase.
+
 Papers 01 and 02 now use their corrected 29 October editions:
 
 - [Paper 01 history](papers/01-projection-sign-rigidity/EDITION-HISTORY.md): the observed feasible-fibre criterion replaces the stronger global-injectivity characterization, with an exact explanatory counterexample. The generic theorem is unchanged.

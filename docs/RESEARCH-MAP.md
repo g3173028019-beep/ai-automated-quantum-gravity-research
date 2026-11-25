@@ -105,6 +105,7 @@ This provides a route into how the archive’s arguments were corrected, not a r
 
 - [30 · Nariai rigidity under null completeness](../papers/30-nariai-null-completeness/README.md): Under the stated four-dimensional Einstein vacuum, positive cosmological constant, two-sided null-completeness, compact nonspherical semidefinite Cauchy hypotheses, the Lorentzian universal cover is the Nariai product.
 - [31 · Classically matched vacuum waves with opposite quantum transfer](../papers/31-graviton-metaplectic-transfer/README.md): Two smooth exact vacuum plane waves match full classical Jacobi and longitudinal returns but have opposite calibrated physical two-helicity band Weyl brackets. For (N) concatenated intervals, the adjacent brackets distinguish (2^N) relative lift histories while the exterior map retains their product.
+- [29B+31+Q19 · Causal counts for polarization and signed transfer](../papers/29b-31-polarization-defects-graviton-transfer/README.md) links these complementary observations on one exact plane-wave class: the lifted physical transfer follows from short marked intervals, while fixed-length chords resolve the background tidal polarization.
 
 The two manuscripts use different stocks. The Lorentzian universal-cover rigidity result is classical; it does not furnish a quantum state for the sandwich-wave comparison.
 
