@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**35 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 9 typeset analytical articles**
+**36 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 10 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 35 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 36 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -18,7 +18,7 @@ Positive physical states for coupled fields, quantitative geometry–matter info
 | **What remains stable when discrete geometry is changed?** | [17 · Cartan–Regge closure](papers/17-cartan-regge-closure/) treats the finite first-order reduction; [11 · Causal Regge transfer](papers/11-causal-regge-transfer/) isolates a finite Lorentzian channel; [22 · Lorentzian Regge Airy asymptotics](papers/22-lorentzian-regge-airy/manuscript.md) resolves the behavior of a specific saddle merger. |
 | **Which radiative quantities can be transported or measured?** | [23 · Gravitational memory and boosts](papers/23-gravitational-memory-boost/manuscript.md) treats its stated memory sector; [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md) studies a separate finite-aperture record in a specified graviton vacuum. |
 
-These routes connect the 20 original packets with the twelve later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
+These routes connect the 20 original packets with the sixteen later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
 
 ## New TeX and PDF manuscripts
 
@@ -33,8 +33,9 @@ These routes connect the 20 original packets with the twelve later analytical ma
 | [27B · Parity-odd Weyl-cubic gravity with fixed physical multipliers](papers/27b-weyl-cubic-finite-collar/README.md) | Reorganizes the fixed-multiplier canonical reduction and proves a nonzero finite-collar invariant for Schwarzschild polar-to-axial mixing, together with a separate nonzero compact physical bracket. | [PDF](papers/27b-weyl-cubic-finite-collar/manuscript.pdf) · [TeX](papers/27b-weyl-cubic-finite-collar/main.tex) |
 | [30 · Nariai rigidity under null completeness](papers/30-nariai-null-completeness/README.md) | Under the stated four-dimensional Einstein vacuum, positive cosmological constant, two-sided null-completeness, compact nonspherical semidefinite Cauchy hypotheses, the Lorentzian universal cover is the Nariai product. |
 | [31 · Classically matched vacuum waves with opposite quantum transfer](papers/31-graviton-metaplectic-transfer/README.md) | Two smooth exact vacuum plane waves match full classical Jacobi and longitudinal returns but have opposite calibrated physical two-helicity band Weyl brackets. For (N) concatenated intervals, the adjacent brackets distinguish (2^N) relative lift histories while the exterior map retains their product. |
+| [32 · Type-II scale recovery](papers/32-typeii-scale-recovery/README.md) | For at most r Type-II tree scales with known common Newton normalization, 2r−1 strictly spacelike band averages recover the distribution of inverse first massive threshold. The sharp deterministic Wasserstein error for r ≥ 2 is δ^(1/(2r+2)) without an upper mass bound; the full real-transfer record cannot improve the exponent. | [PDF](papers/32-typeii-scale-recovery/manuscript.pdf) · [TeX](papers/32-typeii-scale-recovery/main.tex) |
 
-These are analytical manuscripts with scoped classical theorems. Read the linked paper notes for the hypotheses and technical checks.
+These are analytical manuscripts with scoped results in classical geometry, quantum fields, and tree-level scattering. Read the linked paper notes for the hypotheses and technical checks.
 
 ## Research highlights
 

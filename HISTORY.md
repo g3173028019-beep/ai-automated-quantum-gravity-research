@@ -2,9 +2,11 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains 35 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and nine typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 36 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and ten typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
+
+On 26 November 2026 (Beijing time), [Paper 32](papers/32-typeii-scale-recovery/README.md) joined the public collection as a new typeset article. Existing manuscripts and companion editions were retained.
 
 | Delivery | What entered the repository | Scientific commit |
 |---|---|---|

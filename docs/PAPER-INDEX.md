@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 35 items: 20 original research packets, six later analytical Markdown manuscripts and nine typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 36 items: 20 original research packets, six later analytical Markdown manuscripts and ten typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–31 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–32 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -445,3 +445,13 @@ This is a first-order classical result on the Einstein branch. It does not asser
 The original four-field example, its one-scalar local completion, exact compact preparations and two-sided finite information-loss bounds are retained. The modular generator is state-dependent. The general result is not a geometric closed-form kernel, a universal Weyl-only completion theorem, or a nonlinear quantum-gravity construction.
 
 [Paper entry](../papers/09-21-coupled-modular-kernel/README.md) · [PDF](../papers/09-21-coupled-modular-kernel/manuscript.pdf) · [TeX](../papers/09-21-coupled-modular-kernel/main.tex) · [First edition](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/928c00c75833b7a18384f3b035663921fe4a354f/papers/09-21-coupled-modular-kernel)
+
+## 32. Recovering Type-II string scales from nonforward five-dimensional graviton scattering
+
+**Result.** For at most r Type-II tree scales with known common Newton normalization, 2r−1 strictly spacelike band averages recover the distribution of inverse first massive threshold. The sharp deterministic Wasserstein error for r ≥ 2 is δ^(1/(2r+2)) without an upper mass bound; the full real-transfer record cannot improve the exponent. The nonforward even scale powers improve the forward-only rate δ^(1/(4r−1)).
+
+**Scope.** A positive mixture of actual projected five-dimensional Type-II tree amplitudes, with a specified positive lower bound on the first massive squared threshold. The reconstructed measure concerns tower scales in inverse squared-mass coordinates; it is not the entire particle spectrum.
+
+**Evidence.** Exact Laurent selection rule, weighted interpolation and matching moment-cancellation witnesses. The seven-page PDF was independently rebuilt and the explicit witnesses checked in exact arithmetic.
+
+[Paper entry](../papers/32-typeii-scale-recovery/README.md) · [PDF](../papers/32-typeii-scale-recovery/manuscript.pdf) · [TeX](../papers/32-typeii-scale-recovery/main.tex)

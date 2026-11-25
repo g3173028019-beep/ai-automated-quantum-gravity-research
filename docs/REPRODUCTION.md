@@ -101,6 +101,8 @@ These are analytical derivations, not numerical runs. Rebuilding confirms the so
 - [30 · Nariai rigidity under null completeness](../papers/30-nariai-null-completeness/README.md): `cd papers/30-nariai-null-completeness` and run `pdflatex -halt-on-error main.tex` twice. Check the covering/seed from Galloway–Ling, the normal-connection identity and Killing-field integral, the equal pole-period obstruction, and Lafuente López’s global identification. Cross-checked analytically; no numerical dependency.
 - [31 · Classically matched vacuum waves with opposite quantum transfer](../papers/31-graviton-metaplectic-transfer/README.md): `cd papers/31-graviton-metaplectic-transfer` and run `pdflatex -halt-on-error main.tex` twice. Check the smooth trace-free retuning, the even-repeat metaplectic sign, nonzero-band gravitational constraint return, fixed Weyl dual smears, and exact same-collar composition. Cross-checked analytically; no numerical dependency.
 
+- [32 · Type-II scale recovery](../papers/32-typeii-scale-recovery/README.md): Rebuild the standalone `main.tex`. Check the Laurent selection rule, the three-scale signed rational witness in the PDF, and the proof of the matching full-record lower bound. No numerical data or extra TeX sources are required.
+
 ## Rebuild a manuscript
 
 With an existing compatible TeX distribution providing `latexmk`, `pdflatex` and BibTeX, run from the repository root:

@@ -68,6 +68,8 @@ Papers [25 and 26](docs/PAPER-INDEX.md#25-characteristic-data-and-radiative-symp
 - [31 · Classically matched vacuum waves with opposite quantum transfer](papers/31-graviton-metaplectic-transfer/VERIFICATION.md): Check the smooth trace-free retuning, the even-repeat metaplectic sign, nonzero-band gravitational constraint return, fixed Weyl dual smears, and exact same-collar composition. Cross-checked analytically; no numerical dependency.
 - [29B+31+Q19 · Polarization defects, graviton transfer, and causal counts](papers/29b-31-polarization-defects-graviton-transfer/README.md): The [manuscript](papers/29b-31-polarization-defects-graviton-transfer/manuscript.pdf) retains the exact vacuum retuning and physical bracket proofs and adds the marked-volume inversion, metaplectic composition, self-calibration, fixed-length chord tomography, and periodic and nonperiodic limit arguments. The continuum versus finite resolving observation distinction is made explicit. No numerical dependency.
 
+- [32 · Type-II scale recovery](papers/32-typeii-scale-recovery/README.md): The [proof and build record](papers/32-typeii-scale-recovery/VERIFICATION.md) documents the independent derivation review, seven-page clean build, and exact two- and three-scale moment-cancellation checks.
+
 ## Reusing evidence and reading the history
 
 Unchanged completed evidence can be retained without rerunning it for a documentation update. A changed model, input class, state, time interval or analytic hypothesis needs the corresponding argument or calculation for that setting. Packet-specific `VERIFICATION.md` and `PROVENANCE.json` files identify these boundaries.

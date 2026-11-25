@@ -1,0 +1,319 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage[margin=1.04in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Recovering Type-II string scales from nonforward five-dimensional graviton scattering}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[1]
+\title{Recovering Type-II string scales from nonforward five-dimensional graviton scattering}
+\author{}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For positive mixtures of at most \(r\) five-dimensional Type-II four-graviton sphere amplitudes with common known Newton normalization, \(2r-1\) strictly spacelike band averages identify the inverse-scale distribution. With no upper bound on the first massive threshold, the sharp deterministic Wasserstein error is of order \(\delta^{1/(2r+2)}\) for \(r\ge2\). The lower bound holds against the entire normalized fixed-transfer coefficient record. The improvement over the forward-only exponent \(1/(4r-1)\) comes from even powers of inverse scale that the actual Type-II amplitude supplies at nonzero transfer but loses identically at forward transfer. A bounded mass interval instead has the collision exponent \(1/(2r-1)\).
+\end{abstract}
+
+\section{Introduction}
+When the heavy poles in a string amplitude move beyond a fixed low-energy scattering window, their signal weakens. For mixtures, the difference between two distributions of scales can hide that signal further by cancellation. We quantify these effects together in a physical polarization contraction of five-dimensional Type-II graviton scattering. The comparison is between the exact forward coefficient sequence and the information retained by varying a real, negative momentum transfer; the construction requires no forward extrapolation.
+
+Our prior consists of positive linear mixtures of exact sphere amplitudes, not a claim that a single microscopic compactification can carry multiple string tensions. The observable to be recovered is the distribution of tower scales, not the weights of all individual poles. The proof uses a sparse moment comparison argument related to \cite{WuYang}, but with a singular endpoint and nonmonomial kernels dictated by the physical amplitude.
+
+\section{Amplitude and data}
+Use external zero-mode gravitons on a toroidal reduction to five dimensions. Set \(x=-st-su-tu\), \(w=stu=-tx+t^3\), with \(s+t+u=0\). Write \(L=4/\alpha'\) for the first heavy squared mass, and \(z=1/L\) for its inverse. The scalar projection specified in Appendix~\ref{d5app:physical} contracts the actual physical spin-two amplitude, with the normalized identity on the ordered two-particle polarization space at forward transfer. Its sphere amplitude is
+\begin{equation}
+ {\cal A}_z(x,t)=\frac{NK(x,t)}{w}\,P(z;s,t,u),\qquad
+ P(z;s,t,u)=\prod_{v=s,t,u}\frac{\Gamma(1-zv)}{\Gamma(1+zv)} ,
+ \label{eq:amplitude}
+\end{equation}
+where \(N>0\) is fixed. The projection of the standard string tensor \cite{CHLi} gives \(K=x^2\) at forward transfer, and at fixed transfer its highest Laurent power is \(x^2\) with coefficient one. Let \(C_m(z,t)=[x^m]{\cal A}_z(x,t)\), extracting the Laurent coefficient on the annular contour exterior to the massless and kinematic poles and interior to the heavy poles. The Einstein contribution has only \(C_1=N/(-t)\) among these positive-index coefficients. In particular, Einstein subtraction does not modify \(C_m\) for \(m\ge2\).
+
+Fix a shared lower bound \(\mu>0\) for \(L\), and a sufficiently narrow transfer interval \([-T,0]\). Use \(R=3\mu^2/4\) for the coefficient contour and \(B=2/\mu^2\) for the full-data norm
+\begin{equation}
+ \|\Delta C\|_*=\sup_{m\ge1}B^{-(m-1)}
+ \int_{-T}^0\sqrt{-t}\,|\Delta C_m(t)|\,\mathrm{d}t .
+ \label{eq:norm}
+\end{equation}
+The contour is an extraction and proof device, not a complex-transfer measurement. The recorded coefficients are functions at real transfer. The fixed contour and the uniform analytic estimates in \(z\) are justified in Appendix~\ref{d5app:physical}. We use an absolute deterministic error model in this norm or in the maximum absolute error of the specified finite band averages.
+
+For a probability law \(\eta\) on \((0,1/\mu]\), the data are the coefficients integrated against \(\eta\). Unit mass imposes the common Newton normalization. Write \({\cal M}_r\) for laws with at most \(r\) atoms. Its compact closure may include an atom at \(z=0\), the pure Einstein limit. We measure error by \(W_1\) on the real \(z\)-axis, the Wasserstein distance with cost \(|z-z'|\).
+
+\section{All-orders selection of scale powers}
+\begin{lemma}\label{lem:selection}
+For \(m\ge2\), at fixed real transfer the actual coefficients satisfy
+\begin{align}
+ C_m(z,t)&=a_m z^{2m-1}-b_m t z^{2m}+O(z^{2m+1}),\label{eq:selection}\\
+ a_m&=2N\zeta(2m-1),&
+ b_m&=2N\!\!\sum_{\substack{p,q\ge3\ {\rm odd}\\p+q=2m}}\!\!\zeta(p)\zeta(q).
+ \nonumber
+\end{align}
+The ordered sum gives \(b_2=0\) and \(b_m>0\) for \(m\ge3\). The exact regular forward coefficients are \(C_m(z,0)=a_m z^{2m-1}\).
+\end{lemma}
+\begin{proof}
+Let \(p_d=s^d+t^d+u^d\). Expansion of the gamma ratio yields
+\[
+ \log P=2\sum_{d\ge3,\ d\ {\rm odd}}\frac{\zeta(d)}{d}\,p_d z^d .
+\]
+Each root \(v\) satisfies \(v^3=xv+w\); hence \(p_d=xp_{d-2}+wp_{d-3}\) with \(p_0=3,\ p_1=0,\ p_2=2x\). The even sums at \(w=0\) are \(p_{2j}=2x^j\) for \(j\ge1\). The coefficient linear in \(w\) in the odd sums is \(d x^{(d-3)/2}\), starting at \(p_3=3w\) and adding two at each step in the recurrence. Odd \(p_d\) have only odd powers of \(w\).
+
+The order-\(z^n\) term of \((P-1)/w\) has weighted degree \(n-3\) in \(x,w\) with weights \(2,3\). A monomial \(x^a w^b\) contributes Laurent degree at most \(2+a+b=(n+1-b)/2\) after multiplication by \(K\) and setting \(w=-tx+t^3\). Thus \(n<2m-1\) cannot contribute to \(C_m\). For \(n=2m-1\) only \(b=0\) can contribute, and this term comes from one logarithm. For \(n=2m\) parity forces \(b\) odd and only \(b=1\) can contribute. Before division by \(w\) this is a quadratic term in \(w\), from one half of the square of the logarithm. The leading power of \(w\) in \(x\) is \(-tx\), and the coefficient of \(x^2\) in \(K\) is one, giving \eqref{eq:selection}. At \(t=0\), only the \(b=0\) terms remain and \(K=x^2\), which gives the exact forward monomials.
+\end{proof}
+The Einstein-subtracted full record is analytic in \(z\) at zero in \eqref{eq:norm}. In particular its orders \(1,2,4\) vanish. Indeed the log starts at orders \(3,5\) and its first product at \(6\), while uniform Cauchy extraction after the \(w\)-cancellation gives a geometric factor \((BR)^{-m}\) in the normalized remainder.
+
+\section{Sharp nonforward recovery}
+\begin{theorem}\label{thm:main}
+For every fixed \(r\ge2\) and \(\mu>0\), there are \(2r-1\) fixed strictly spacelike band averages that determine any law in \({\cal M}_r\). A fit with noise at most \(\delta\) per average has worst-case \(W_1\) error at most \(C\delta^{1/(2r+2)}\), for sufficiently small \(\delta\). Every estimator based on the full record with error at most \(\delta\) in \eqref{eq:norm} has worst-case error at least \(c\delta^{1/(2r+2)}\). The constants can depend on the fixed design, but not on a maximum mass or an atom separation.
+\end{theorem}
+
+\paragraph{Band design.}
+Choose two smooth nonnegative weights \(A,B_0\), supported in disjoint negative-transfer bands, normalized relative to \(\sqrt{-t}\,\mathrm{d}t\), and with distinct mean transfers. Observe the first-band average of \(C_2\), and both averages of \(C_m\) for each \(3\le m\le r+1\). For each pair retain the first average and the difference. Divide by the known leading factors from Lemma~\ref{lem:selection}, including the mean-transfer contrast for the difference. Together with the known constant kernel \(\Psi_0=1\), this yields \(d=2r-1\) measured kernels with ordered exponents
+\[
+ e_0,e_1,\ldots,e_d=0,3,5,6,7,\ldots,2r+2.
+\]
+To see uniformity on \(0\le z\le1/\mu\), use exact homogeneous scaling \(C_m(z,t)=z^{2m-1}C_m(1,tz)\). Choose the two band shapes by a fixed dilation \(t=q\tau\), \(q>0\). Unit-scale coefficients are analytic near zero transfer by the pole-subtracted contour formula. The calibrated kernels are
+\[
+ \Psi_j(z)=z^{e_j}H_j(qz),\qquad H_j(0)=1,
+\]
+with analytic \(H_j\). For a contrast, first factor \(qz\) from the analytic difference; the mean-transfer normalization cancels \(q\). Fix \(q/\mu\) sufficiently small; neither band depends on \(\delta\). This calibration can amplify errors by a fixed constant when the band contrast is small.
+
+\paragraph{Uniform stability at colliding nodes.}
+Use \(D_0f=f\) and recursively
+\[
+ \omega_j=(D_{j-1}\Psi_j)',\qquad D_j f=(D_{j-1}f)'/\omega_j .
+\]
+For \(\ell\ge j\) one inductively obtains \(D_j\Psi_\ell=z^{e_\ell-e_j}H_{j\ell}(qz)\). The leading factors are positive, since differentiation multiplies them by the difference of the exponents and normalization divides by the positive corresponding factor of the weight. Thus \(\omega_j\) is \(z^{e_j-e_{j-1}-1}\) times a factor analytic and positive on the full interval once \(q/\mu\) is sufficiently small. We have \(D_j\Psi_j=1\) and \(D_j\Psi_\ell=0\) for \(\ell<j\). The product rule shows that the coefficient of \(\partial_z^k\) in \(D_j\) is \(z^{k-e_j}\) times a bounded analytic factor.
+
+Let \(f\) be unit-Lipschitz. After subtracting a constant, mollify its clamped extension at scale \(h\) and flatten the mollification below \(h\), switching back to the mollified function by \(2h\). The resulting \(f_h\) has error \(O(h)\), with derivatives of order \(k\ge1\) bounded by \(O(h^{1-k})\) and identically zero below \(h\). Consequently \(\|D_jf_h\|_\infty\le C h^{1-e_j}\). Interpolate \(f_h\) at the at most \(2r\) distinct combined support nodes in the first kernels. The leading coefficient of each prefix interpolant of degree \(j\) in the ordered kernels equals \(D_j f_h\) at an interior point by repeated Rolle on the interpolation error. The first ordinary Rolle step precedes division, so a node at zero is allowed: all later Rolle roots are strictly positive. Rolle applied to any homogeneous interpolant proves uniqueness.
+
+The generalized Newton basis element with lead \(\Psi_j\) is \(\Psi_j\) minus its interpolant on the preceding \(j\) nodes. Its coefficients stay bounded uniformly as nodes collide: by induction, the preceding interpolant has Newton coefficients bounded by \(\|D_k\Psi_j\|_\infty\) for \(k<j\), and the preceding basis elements already have bounded coefficients. Thus the interpolant of \(f_h\) has original kernel coefficients \(O(h^{1-e_d})\). Pairing with the difference of two probability laws, which annihilates \(\Psi_0\), gives
+\[
+ \left|\int f\,\mathrm{d}(\eta-\eta')\right|
+ \le C(h+\delta h^{1-e_d})
+\]
+if their calibrated measurements differ by \(O(\delta)\). Lipschitz duality and \(h=\delta^{1/e_d}\) give the upper bound. A minimum-discrepancy fit on the compact closure achieves it; approximate fits restricted to finite scales work as well. At exact data, sending \(h\) to zero proves injectivity. The measurement count is minimal among continuous real scalar summaries: the chamber of distinct ordered interior nodes and positive weights has an open chart in \(\mathbb R^{2r-1}\), and zero-padding a continuous injection into fewer coordinates contradicts invariance of domain.
+
+\paragraph{Indistinguishability in the entire record.}
+Choose \(2r\) distinct positive nodes \(a_i\). Evaluate the monomials of exponents \(0,3,5,6,\ldots,2r+1\) on these nodes. The ordered maximal minors of this \((2r-1)\)-by-\(2r\) matrix are nonzero with one sign: the ordered powers are a Chebyshev system by weighted Rolle, and the determinant sign is constant on the connected ordered-node chamber. Alternating cofactors therefore yield a null vector with \(r\) weights of each sign. Its mass equation lets us normalize each sign to probability one. At the rescaled nodes \(ha_i\), the resulting laws have distance \(c_0h\), \(c_0>0\). All potentially nonzero analytic orders below \(z^{2r+2}\) cancel, so the full-data distance is \(O(h^{2r+2})\) in \eqref{eq:norm}. The midpoint data are compatible with both candidates when \(h\) is a sufficiently small constant times \(\delta^{1/(2r+2)}\); the triangle inequality forces error at least \(c_0h/2\). In the last measured band contrast the next term is nonzero, since adjoining its monomial row gives an invertible ordered evaluation matrix.
+
+For \(r=2\) and \(a_i=i\), the concrete signed witness is
+\[
+ (293,-473,217,-37)/510 .
+\]
+It annihilates orders \(0,3,5\); its positive and negative laws have \(W_1=h\). The unnormalized sixth moment is \(-23338\), detected by the \(C_3\) contrast. For \(r=3\) the same choice \(a_i=i\) gives
+\[
+ (675744,-1410891,1168384,-573846,160224,-19615)/2004352 .
+\]
+The cancellation orders are \(0,3,5,6,7\); the unnormalized eighth moment is
+\(-660484224\), and \(W_1=h\) again. All scales in these pairs are finite. For \(r=1\), the single \(C_2\) average has derivative comparable to \(z^2\) and gives the cube-root rate; two single scales of order \(h\) separated by order \(h\) have full-data distance \(O(h^3)\), making it sharp.
+
+\section{Forward data and bounded mass ranges}
+\begin{proposition}\label{prop:forward}
+On the same unbounded-mass prior, the sharp deterministic rate for the exact regular forward sequence is \(\delta^{1/(4r-1)}\).
+\end{proposition}
+\begin{proof}
+The analogous forward noise norm is \(\sup_{m\ge2}B^{-(m-1)}|\Delta C_m(0)|\). By Lemma~\ref{lem:selection}, the first \(2r-1\) nonzero regular forward coefficients give exactly the powers \(3,5,\ldots,4r-1\). The same interpolation argument applies with \(e_d=4r-1\). For the lower bound choose alternating cofactors annihilating the mass and first \(2r-2\) powers. Cauchy bounds at \(t=0\) give an \(O(h^{4r-1})\) discrepancy in the whole weighted sequence. The singular Einstein contribution is common.
+\end{proof}
+The nonforward improvement is thus a change of exponent, not just an extra observation at an advantageous transfer. In the two-scale case the two exponents are \(1/6\) and \(1/7\).
+
+\begin{proposition}\label{prop:compact}
+If the scale interval is compact and separated from \(z=0\), both designs give the sharp deterministic rate \(\delta^{1/(2r-1)}\).
+\end{proposition}
+\begin{proof}
+On this interval the coefficients in \(D_j\) stay bounded, yielding \(\|D_j f_h\|_\infty=O(h^{1-j})\) in the same upper proof. For the lower bound use nodes \(z_0+jh\), \(j=0,\ldots,2r-1\), with alternating binomial weights normalized into two laws. The absolute cumulative signed mass between consecutive nodes is \(\binom{2r-2}{j}/2^{2r-2}\), giving distance \(h\). Their data difference is a finite difference of order \(2r-1\) of the analytic template and is \(O(h^{2r-1})\) in either full norm. Apply the midpoint argument.
+\end{proof}
+
+\section{Discussion}
+For \(r\ge2\) the three regimes can be summarized by their sharp error powers:
+\[
+ \begin{array}{c|c|c}
+ \text{Scale prior} & \text{Nonforward data} & \text{Forward data}\\ \hline
+ z\to0\text{ allowed} & 1/(2r+2) & 1/(4r-1)\\
+ z\text{ bounded away from }0 & 1/(2r-1) & 1/(2r-1)
+ \end{array}
+\]
+The entries are Theorem~\ref{thm:main} and Propositions~\ref{prop:forward}--\ref{prop:compact}.
+Strictly spacelike measurements expose an even-power scale signature of the physical sphere amplitude. Under the finite positive Type-II prior, this signature distinguishes mixtures that agree in their leading forward moments and improves the uniform precision at the heavy boundary. The metric deliberately controls inverse squared masses, not relative errors in arbitrarily large masses. The result neither asserts a microscopic multi-tension compactification nor addresses string loops or arbitrary ultraviolet spectra.
+
+\appendix
+\section{The projected five-dimensional sphere amplitude}
+\label{d5app:physical}
+
+\paragraph{External polarization test.}
+Use all-incoming null momenta with \(s=(k_1+k_2)^2\),
+\(t=(k_1+k_3)^2\), \(u=(k_1+k_4)^2\), and \(s+t+u=0\)
+in mostly-minus signature. Set
+\[
+ \begin{gathered}
+ x=-st-su-tu,\qquad w=stu=-tx+t^3,\\
+ r_i=\sum_j(k_i\cdot k_j)k_j,\qquad
+ D_i=k_i\cdot r_i=\tfrac14(s^2+t^2+u^2)=\tfrac{x}{2}.
+ \end{gathered}
+\]
+For each physical polarization choose the representative
+\(E_i=P_i e_i P_i^{\mathsf T}\), where
+\(P_i^\mu{}_\nu=\delta^\mu{}_\nu-k_i^\mu r_{i\nu}/D_i\);
+the transpose notation acts on the second tensor slot. This removes
+longitudinal shifts: \(P_i k_i=0\). The field \(E_i\) is transverse to
+both \(k_i\) and \(r_i\) and is still tracefree, since the representative
+change is longitudinal. Use the three pairings
+\((12)(34),(13)(24),(14)(23)\) of ambient contractions of the \(E_i\)'s,
+respectively weighted by
+\[
+ W_v=1-\frac{2v^2}{s^2+t^2+u^2},\qquad v=s,t,u.
+\]
+Specifically, sum the physical four-graviton matrix element over one
+orthonormal spin-two basis on each leg, multiplying it by
+\(25^{-1}\sum_{v}W_v(E_i:E_j)(E_k:E_l)\), with \((ij)(kl)\) the
+corresponding pairing. Here the basis is orthonormal for the physical
+positive inner product and the colon denotes ambient tensor
+contraction. In the real forward limit at \(t=0\), only the \(t\)
+pairing survives and its weight is one. The physical spin-two
+representation in five dimensions has dimension five; hence this
+limit is the normalized ordered two-particle trace, not an
+unweighted sum over spin-two states.
+
+\paragraph{Kinematic numerator and normalization.}
+Tree-level Type-II zero-mode scattering gives the supersymmetric
+kinematic square and the Virasoro--Shapiro ratio~\cite{CHLi}.
+For definiteness, the open factor in the square may be written as
+\[
+ \begin{aligned}
+ {\cal O}(f_1,f_2,f_3,f_4)
+ &=2\,\mathrm{tr}(f_1 f_2 f_3 f_4+f_1 f_2 f_4 f_3+f_1 f_3 f_2 f_4)\\
+ &\quad-\frac12\sum_{(ij)(kl)}\mathrm{tr}(f_i f_j)\,\mathrm{tr}(f_k f_l),
+ \qquad
+ f_i{}^\mu{}_\nu=k_i^\mu\epsilon_{i\nu}-\epsilon_i^\mu k_{i\nu}.
+ \end{aligned}
+\]
+The two copies act on the two vector slots of each physical
+symmetric-tracefree polarization by multilinearity. One convenient
+way to perform the physical sum is to use the null vector
+\(n_i=r_i-(r_i^2/2D_i)k_i\) and the three-dimensional screen
+endomorphism
+\[
+ \Pi_i{}^\mu{}_\nu
+ =\delta^\mu{}_\nu-\frac{k_i^\mu n_{i\nu}+n_i^\mu k_{i\nu}}{D_i}.
+\]
+The spin-two completeness tensor is the symmetrized square of
+\(\Pi_i\) minus one third of its trace product, using the induced
+screen metric. With the same metric it gives the basis sum of
+\(E_i\)'s above. All denominators in the scalar resulting from this
+sum are thus powers of \(x\). In particular, square roots from any
+choice of frame do not enter.
+
+Let \(K\) denote the resulting scalar kinematic numerator. It is
+crossing-symmetric and homogeneous of degree four in \(s,t,u\).
+After clearing the powers of \(x\), the numerator is a homogeneous
+symmetric polynomial at \(s+t+u=0\), and hence is a polynomial in
+\(x,w\). The degree constraint allows only even powers of \(w\):
+\begin{equation}
+ K=x^2\sum_{j=0}^{J}d_j\left(\frac{w^2}{x^3}\right)^j .
+ \label{d5app:kinematic}
+\end{equation}
+The forward coefficient \(d_0\) can be read off without computing the
+other \(d_j\)'s. At \(t=0\), \(k_3=-k_1\), \(k_4=-k_2\), all vector
+polarizations may be taken in a common spatial screen perpendicular
+to the momenta, and the trace formula reduces to
+\({\cal O}=s^2(\epsilon_1\cdot\epsilon_3)(\epsilon_2\cdot\epsilon_4)\).
+Indeed, with \(A=k_1\cdot k_2=s/2\) and
+\(e_{ij}=\epsilon_i\cdot\epsilon_j\), the three four-trace terms sum
+to \(A^2(e_{23}e_{14}+e_{12}e_{34}+2e_{13}e_{24})\), while the
+sum of paired traces is \(4A^2(e_{12}e_{34}+e_{14}e_{23})\).
+The closed square is therefore \(s^4\) times the identity pairing
+on the ordered two-particle polarization space. Its normalized trace
+is \(K(s,0,-s)=s^4=x^2\), so \(d_0=1\).
+At fixed transfer \(w=-tx+t^3\), every \(j\ge1\) term of
+\eqref{d5app:kinematic} has Laurent degree at most \(2-j\) in \(x\).
+Thus the top Laurent term of \(K\) is exactly \(x^2\).
+
+\paragraph{Massless subtraction and the actual real-transfer data.}
+Let \(L=4/\alpha'\) in the same squared-mass units as \(s,t,u\);
+the massive poles are \(s=nL\) and their crossed copies. Normalize the
+common Einstein pole by a fixed \(N>0\). Then
+\begin{equation}
+ \mathcal A_L(s,t)=\frac{NK(s,t,u)}{stu}\,P_z(s,t,u),\qquad
+ P_z=\prod_{v=s,t,u}\frac{\Gamma(1-zv)}{\Gamma(1+zv)},\qquad z=L^{-1}.
+ \label{d5app:full}
+\end{equation}
+The normalization follows both from \(P_z=1\) at \(stu=0\) and from
+the forward trace just computed. This external channel has the
+usual Type-II Einstein massless residue; it need not be described
+as a pure-metric compactification. Internal compact charge
+conservation for the external zero modes forbids a single
+intermediate state of nonzero compact charge.
+
+At fixed strictly negative \(t\), \(C_m^L(t)\) denotes the finite
+Cauchy coefficient
+\[
+ C_m^L(t)=\frac{1}{2\pi i}\int_{|x|=R}
+                   \frac{\mathcal A_L(x,t)}{x^{m+1}}\,dx .
+\]
+The contour is outside the light pole \(x=t^2\) and the projector
+poles at \(x=0\) and lies below the first massive pole
+\(x=L^2+Lt+t^2\). This convention is a Laurent coefficient, not Taylor
+expansion through a moving pole. Since \(NK/(stu)\) has leading
+Laurent term \(Nx/(-t)\), the Einstein-only datum is \(N/(-t)\) for
+\(m=1\) and zero for \(m\ge2\). By homogeneity,
+\(\mathcal A_L(s,t)=L\mathcal A_1(s/L,t/L)\) with the same \(N\),
+so \(C_m^L(t)=z^{2m-1}C_m^1(tz)\).
+
+These are ordinary fixed-real-transfer data of the exact tree.
+For clarity, writing \(\sigma=s/L\), \(\tau=t/L\), reflection
+rewrites the product of the \(s\) and \(u\) gamma ratios in
+\eqref{d5app:full} as
+\[
+ \frac{\sin\pi(\sigma+\tau)}{\sin\pi\sigma}\,
+ \frac{\Gamma(1+\sigma+\tau)\Gamma(\sigma+\tau)}
+      {\Gamma(1+\sigma)\Gamma(\sigma)} .
+\]
+Use the half-plane with nonnegative \(\operatorname{Re}\sigma\),
+or interchange \(s,u\). On large circles in the \(x\)-plane taken
+between adjacent large positive pole locations, the sine ratio is
+bounded and the gamma quotient is \(O(|\sigma|^{2\tau})\) by the
+gamma ratio asymptotic. The growth of the other factor is
+\(O(|x|/|t|)\), as follows directly from
+\eqref{d5app:kinematic} at fixed transfer. Thus the normalized
+large-circle Cauchy contribution vanishes for every fixed
+\(t<0\) in the narrow measured bands, including \(m=1\). The
+change of variables \(x=s^2+st+t^2\) gives the usual residue
+Jacobian \(2s+t\), with the \(s/u\) pair counted once in \(x\).
+The heavy residue sum is the same Cauchy coefficient. No
+forward Regge limit or uniform large-circle estimate as \(t\to0\)
+is needed for this statement.
+
+\paragraph{Uniform low-contour analyticity.}
+One can use a fixed \(|x|=R\) across all sufficiently small
+transfers and all \(L\ge L_{\min}\). For example \(R=3L_{\min}^2/4\)
+works if the transfer band is sufficiently narrow; it is greater
+than both \(t^2\) and \(1/B\) for \(B=2/L_{\min}^2\). On this
+contour, \(s,u=-t/2\pm\sqrt{x-3t^2/4}\), so the roots satisfy
+\[
+ \max(|s|,|u|)\le T/2+\sqrt{R+3T^2/4}<L_{\min}
+\]
+upon further narrowing the band. Thus a single open complex
+\(z\)-disc of radius greater than \(1/L_{\min}\) keeps
+\(|zv|<1\) on the contour for all \(v=s,t,u\), uniformly on
+the entire closed transfer band.
+The logarithm \(\log P_z\) is divisible by \(stu\), order by
+order in its convergent expansion, so the quotient
+\((P_z-1)/(stu)\) is analytic through \(t=0\) after the common
+Einstein term is removed. A uniform integrand bound yields
+a Cauchy coefficient bound proportional to \(R^{-m}\).
+Multiplication by \(B^{-(m-1)}\) then bounds the entire measured
+coefficient sequence because \(BR>1\). Integration against
+\(\sqrt{-t}\,dt\) over the fixed finite band preserves the
+bound. In particular the Taylor remainders in \(z\) discussed
+in the text hold in the full weighted data norm, rather than
+only for each fixed \(m\).
+\begin{thebibliography}{9}
+\bibitem{CHLi}
+S. Caron-Huot and Y.-Z. Li, \emph{Gravity and a universal cutoff for field theory},
+JHEP 02 (2025) 115, \href{https://arxiv.org/abs/2408.06440}{arXiv:2408.06440}.
+\bibitem{WuYang}
+Y. Wu and P. Yang, \emph{Optimal estimation of Gaussian mixtures via denoised method of moments},
+Ann.\ Statist.\ \textbf{48} (2020) 1981--2007, \href{https://doi.org/10.1214/19-AOS1873}{doi:10.1214/19-AOS1873}.
+\end{thebibliography}
+\end{document}

@@ -47,6 +47,8 @@ Suggested routes: **09 → 19** for physical state construction and its use in a
 
 ## Moments, low-order data and reconstruction
 
+[Paper 32](../papers/32-typeii-scale-recovery/README.md) applies sparse recovery to fixed-transfer graviton scattering: the nonforward coefficients expose scale moments absent at forward transfer, and an explicit ambiguity pair proves the optimal precision.
+
 **Question:** when do partial data identify a matrix, a scalar law, or a random spectrum?
 
 | Paper | Main distinction |
