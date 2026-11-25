@@ -9,12 +9,16 @@ Positive physical states for coupled fields, quantitative geometry–matter info
 **[Browse all 26 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
-## New analytical manuscripts
+## Start with a physics question
 
-- **[25 · Characteristic data and radiative symplectic rank](papers/25-characteristic-data-symplectic-rank/manuscript.md).** In a solved sector of the linearized Einstein null constraints, the terminal sphere record sees two moments while its kernel retains infinitely many independent radiative symplectic pairs. Includes a reconstruction and a separate second-order focusing check.
-- **[26 · Neutral de Sitter mass susceptibility](papers/26-neutral-de-sitter-mass-susceptibility/manuscript.md).** Removing the homogeneous position pole leaves locally normal states, but the mass-squared susceptibility of relative entropy is infinite for the specified neutral static-patch algebra.
+| Question | Reading route |
+|---|---|
+| **Which gravitational degrees of freedom survive reduction?** | [19 · Local gauge benchmark](papers/19-local-gauge-benchmarks/) sets out a free gauge and causal construction. [25 · Characteristic data and radiative symplectic rank](papers/25-characteristic-data-symplectic-rank/manuscript.md) identifies independent radiative data that a terminal sphere record misses in a solved linear null sector. |
+| **How are gravitational states constructed and distinguished?** | [09 · Coupled physical Hadamard states](papers/09-canonical-einstein-scalar-hadamard/) constructs positive states on the physical quotient. [21 · Weyl relative entropy](papers/21-weyl-diamond-relative-entropy/manuscript.md) gives a coherent-state comparison on a free curvature algebra. [26 · Neutral de Sitter mass susceptibility](papers/26-neutral-de-sitter-mass-susceptibility/manuscript.md) studies a separate scalar example in which local normality does not give a finite mass-squared susceptibility. |
+| **What remains stable when discrete geometry is changed?** | [17 · Cartan–Regge closure](papers/17-cartan-regge-closure/) treats the finite first-order reduction; [11 · Causal Regge transfer](papers/11-causal-regge-transfer/) isolates a finite Lorentzian channel; [22 · Lorentzian Regge Airy asymptotics](papers/22-lorentzian-regge-airy/manuscript.md) resolves the behavior of a specific saddle merger. |
+| **Which radiative quantities can be transported or measured?** | [23 · Gravitational memory and boosts](papers/23-gravitational-memory-boost/manuscript.md) treats its stated memory sector; [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md) studies a separate finite-aperture record in a specified graviton vacuum. |
 
-These are two scoped technical manuscripts, not a common model or a claim of external peer review.
+These routes connect the 20 original packets with the six later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
 
 ## Research highlights
 
@@ -28,17 +32,6 @@ These are two scoped technical manuscripts, not a common model or a claim of ext
 | **Integer flux families.** Exact STU solutions have positive complex-structure/axiodilaton masses and explicit charge–coupling relations within the constructed family. | [05 · PDF](papers/05-integer-flux-families/manuscript.pdf) · [Exact calculation](papers/05-integer-flux-families/README.md) |
 
 The [paper index](docs/PAPER-INDEX.md) gives the question, result, model and evidence for every manuscript. Numbers identify delivery packets, not a ranking of importance or a count of the wider source corpus.
-
-### Four connections to the newer manuscripts
-
-| Route | What the comparison adds |
-|---|---|
-| [09](papers/09-canonical-einstein-scalar-hadamard/README.md) → [21 · Weyl relative entropy](papers/21-weyl-diamond-relative-entropy/manuscript.md) | From positive physical state construction to an explicit information quantity on a different, free curvature algebra. |
-| [17](papers/17-cartan-regge-closure/README.md) → [11](papers/11-causal-regge-transfer/README.md) → [22 · Lorentzian Regge Airy asymptotics](papers/22-lorentzian-regge-airy/manuscript.md) | From finite action reduction and causal transfer to a controlled saddle merger on a Lorentzian real contour. |
-| [09](papers/09-canonical-einstein-scalar-hadamard/README.md) → [18](papers/18-positive-boundary-sewing/README.md) → [23 · Gravitational memory and boosts](papers/23-gravitational-memory-boost/manuscript.md) | State existence, positivity and symmetry implementability are separate requirements. |
-| [06](papers/06-maxwell-local-clocks/README.md) → [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md) ↔ [21 · Weyl relative entropy](papers/21-weyl-diamond-relative-entropy/manuscript.md) | Compare the calibration of a physical instrument with two different uses of Weyl curvature: a stationary time record and a local-algebra entropy. |
-
-These are reading routes across distinct models, not implications between theorems. The [research map](docs/RESEARCH-MAP.md#gravity-observables-from-states-to-readouts) names the comparison and the limit at each step.
 
 ## Choose a reading route
 
