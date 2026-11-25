@@ -1,0 +1,171 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.96in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Rea}{\operatorname{Re}}
+\title{Polarization defects and opposite graviton transfers\\ in exact vacuum sandwiches with identical geodesic returns}
+\author{}
+\date{Research manuscript 29B+31}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct smooth four-dimensional vacuum plane-wave sandwiches that have identical marked geodesic returns at every sufficiently small finite wavelength, yet independently carry different high-frequency polarization covariances and either of two opposite linearized gravitational transfers. The rapidly oscillating curvature and the smooth focusing profile are nonzero on a common open interval. In a local optical chart the positive null sheet carries a prescribed smoothly factorized Hermitian polarization matrix; reversing its circular component need not change the optical limit. A symmetric canonical shear removes the singular coefficient from the Jacobi equation. Its period average depends only on the trace of the polarization matrix. Differentiable averaging and exact retuning set two distinct rational elliptic angles; repeating the retuned cell makes the classical endpoint the identity while retaining an independently selectable metaplectic sign for both physical graviton polarizations. The sign is detected by the Einstein--Hilbert bracket of fixed flat-collar Weyl smearings. The two measurements concern different data: a classical background covariance and a linearized probe transfer.
+\end{abstract}
+
+\section{Setting and theorem}
+Use Brinkmann coordinates \((u,v,X^1,X^2)\) and the sign convention
+\begin{equation}\label{eq:brink}
+g_H=-2\,du\,dv+dX^\mathsf{T}dX+X^\mathsf{T}H(u)X\,du^2,
+\qquad R_{uiuj}=-H_{ij},\qquad \Ric_{uu}=-\tr H .
+\end{equation}
+Here \(H\) is a smooth real symmetric \(2\times2\) matrix supported in the interior of a finite interval. The metrics are exact vacuum for tracefree \(H\). Mark the comparison by the same coordinates on the flat end collars, including the normalization of \(\partial_v\), the oriented Cartesian screen, and its orthonormal basis of symmetric tracefree tensors. For real characteristic graviton data use functions Schwartz in \(v,X\) with smooth Fourier support in a fixed band \(0<k_{\min}\le |k|\le k_{\max}<\infty\), with the two signs related by reality. In particular the band condition is not compact support in \(v\).
+
+Let \(J\) denote an open interval inside a cell of fixed duration \(L\). A smoothly factorized Hermitian profile on the complexified two-dimensional screen polarization space is
+\begin{equation}\label{eq:given}
+M_+(u)=\frac14\sum_{m=1}^N Z_m(u)Z_m(u)^*,
+\qquad Z_m\in C^\infty_c(J;\mathbb C^2).
+\end{equation}
+The outer product uses orthonormal polarization components; we also regard \(Z_m\) as a complex symmetric tracefree screen tensor when it appears as a Brinkmann coefficient. Write \(\rho=\tr M_+\). No smooth factorization at transitions in arbitrary variable-rank given matrices is assumed unless it is supplied.
+
+\begin{theorem}\label{thm:main}
+There exist \(L,J\) and a trace bound \(\rho_*>0\) with the following property. For every fixed profile \eqref{eq:given} with \(\|\rho\|_{L^1}<\rho_*\), and for each sign \(s=\pm1\), there is a family of smooth vacuum sandwiches indexed by sufficiently small \(\varepsilon>0\), with common marked duration and end collars. The following statements hold.
+\begin{enumerate}
+\item The full transverse Jacobi map through the repeated core is the identity for every such preparation and both signs at each admissible \(\varepsilon\). The marked longitudinal geodesic returns also agree. Common flat extensions add the same classical free return.
+\item On a local optical chart within each cell the background has a high-frequency polarization defect \(M_+\) on the \(+du\) sheet and \(M_-=\overline{M_+}\) on the \(-du\) sheet. The Ricci tensor of the optical limit is \(2\rho\,du^2\). For a fixed sign target, profiles with the same trace have a common optical limiting metric. When the preparation is nonzero, the fast profile and tracefree slow core overlap on an open interval. The covariance has a calibrated readout from the exact Weyl field.
+\item The physical band transfer of linearized vacuum gravity equals \(sI\) through the repeated core, on both screen polarizations. Common flat extensions replace \(I\) by the same free transfer \(V\). The bracket between one fixed early and one fixed late calibrated Weyl smear has opposite nonzero values for the two signs, independent of the polarization preparation.
+\end{enumerate}
+Smallness of \(\varepsilon\) can be chosen in common for any fixed finite set of preparations. Equality of the optical metric inside the cell is not claimed between opposite signs.
+\end{theorem}
+
+The null sheets in part 2 refer to the high-frequency background. This background is independent of \(v\), so it is not an input in the \(k\ne0\) probe band of part 3. The sign is a marked transfer property, not a phase assigned to the background covariance. The proof uses the oriented screen normalization of the polarization-defect analysis \cite{p29b}, the scalar generalized-wave framework of Huneau and Luk \cite{hl}, and the retuned oscillator and physical transfer constructions of \cite{p31}. We give the overlap, endpoint matching, and normalizations explicitly.
+
+\section{Averaging without losing the physical endpoint}
+Let \(\mathsf C(u;p)=\diag(h(u;p),-h(u;p))\) be a smooth slow core depending on \(p=(a,b)\), to be constructed below. Choose \(J\) in the common interior of one leg of the slow core, where \(h\) is bounded away from zero. The support of the fast profile and its phase are fixed in \emph{physical} \(u\), independently of \(p\). Form
+\[
+ Q(u,\theta)=\Rea\sum_{m=1}^N Z_m(u)e^{im\theta},
+ \qquad
+ H_\varepsilon(u;p)=\mathsf C(u;p)
+      +\varepsilon^{-1}(\partial_\theta Q)(u,u/\varepsilon).
+\]
+The sum is tracefree, so \eqref{eq:brink} is exactly vacuum. Set \(Q_\varepsilon=Q(u,u/\varepsilon)\), and for the exact Jacobi equation \(X''=H_\varepsilon X\) use \(Y=X'-Q_\varepsilon X\). With \(Q_u\) the slow partial derivative,
+\begin{equation}\label{eq:normal}
+ X'=Y+Q_\varepsilon X,\qquad
+ Y'=\bigl[\mathsf C-Q_\varepsilon^2-(Q_u)_\varepsilon\bigr]X-Q_\varepsilon Y.
+\end{equation}
+The shear from \((X,Y)\) to \((X,X')\) is symplectic and is the identity on the collars of the cell. In two dimensions a real symmetric tracefree matrix squares to half its squared Frobenius norm times \(I\). Period averaging therefore yields
+\begin{equation}\label{eq:avg}
+ \overline X'=\overline Y,\qquad
+ \overline Y'=(\mathsf C(u;p)-\rho(u)I)\overline X .
+\end{equation}
+Indeed the mean of \(\|Q\|_{\rm Fro}^2\) is \(\frac12\sum_m\|Z_m\|^2_{\rm Fro}\); \(Q\) and \(Q_u\) have zero mean.
+
+For completeness, if \(B(u,\theta;p)\) is the coefficient of \eqref{eq:normal}, write \(B-\overline B=\partial_\theta R\) with bounded smooth periodic \(R\). Along the fast path this equals
+\(\varepsilon\,dR_\varepsilon/du-\varepsilon(R_u)_\varepsilon\).
+Duhamel's formula between the two fundamental matrices and integration by parts give a uniform \(O(\varepsilon)\) difference, since both transformed propagators and their first time derivatives are bounded on the fixed cell. This does not use a bound on \(\partial_u B_\varepsilon\). For the propagator and one \(p\) derivative use the triangular enlarged system whose diagonal entries are \(B_\varepsilon\) and off-diagonal entry is \(\partial_{p_j}B_\varepsilon\). The same proof applies to that system: the coefficient derivatives in \(p\) arise only in the smooth core, and the carrier phase is fixed. Thus, on compact \(p\) neighborhoods, the physical cell endpoint \(T_\varepsilon(p)\) and averaged endpoint \(T_0(p)\) satisfy
+\begin{equation}\label{eq:c1}
+ \|T_\varepsilon-T_0\|_{C^1_p}=O(\varepsilon).
+\end{equation}
+The constant may depend on the fixed smooth envelopes.
+
+\section{Retuning and exact classical returns}
+For the step benchmark let \(\nu=(a+b)/L\) with \(a,b>0\), set \(h=+\nu^2\) for duration \(a/\nu\) and \(h=-\nu^2\) for duration \(b/\nu\). In the scaled velocity \(X'/\nu\) the first one-axis leg of positive potential has matrix
+\(\bigl(\begin{smallmatrix}\cosh a&\sinh a\\\sinh a&\cosh a\end{smallmatrix}\bigr)\), while a negative leg of scaled duration \(b\) has matrix
+\(\bigl(\begin{smallmatrix}\cos b&\sin b\\-\sin b&\cos b\end{smallmatrix}\bigr)\).
+For the two axes the half-traces are
+\[
+ (d_1,d_2)=(\cosh a\cos b,\ \cos a\cosh b).
+\]
+At \(p_*=(\pi/2,\pi/2)\) both vanish and the half-trace Jacobian is invertible, with diagonal entries zero and off-diagonals \(-\cosh(\pi/2)\).
+
+Smooth each leg by multiplying by a cutoff in its \emph{own} unit interval, identically zero on neighborhoods of both endpoints and equal to one away from neighborhoods of size \(\eta\). In each leg's unit time the endpoint ODE coefficients and their first parameter derivatives converge in \(L^1\) as \(\eta\to0\) to the step coefficients and derivatives, uniformly near \(p_*\). Volterra equations therefore give \(C^1_p\) convergence of the half-trace maps. Extend the truncated legs smoothly by zero across their moving endpoints in physical \(u\); we fix a sufficiently small \(\eta>0\) now. A compact \(\overline J\) can be chosen inside one common nonzero leg in a parameter ball about \(p_*\).
+
+Because \(-\rho I\) is scalar, the two axes of \eqref{eq:avg} remain decoupled, with labeled half-traces. Adding \(-\rho I\) perturbs these and their first \(p\) derivatives by \(O(\|\rho\|_{L^1})\), again by Volterra on a fixed physical interval. Shrinking the parameter ball and \(\rho_*\), there is a common fixed open neighborhood of \((0,0)\) of attained averaged half-traces with nonsingular derivative at the chosen solutions. Explicitly one can use the same central step Jacobian \(A\) for the contraction \(p\mapsto p-A^{-1}(d(p)-d_{\rm target})\) on a small closed ball: the derivative norm is uniformly less than one and its center displacement can be made smaller than the remaining fraction of the ball radius. No simplicity is needed around the simultaneous half-trace zero at this stage.
+
+Fix a large multiple \(M\) of four so that both pairs
+\begin{equation}\label{eq:targets}
+ (m_1,m_2)=(M/4-2,M/4+1),\qquad (M/4-1,M/4+1)
+\end{equation}
+give targets \(d_j=\cos(2\pi m_j/M)\) in the common neighborhood. Their angles are strictly between \(0\) and \(\pi\), and are distinct within each pair. At either averaged solution \(p_0\), the four roots of the endpoint are simple. Only in this neighborhood do we label two eigenvalue branches of positive imaginary part by their original axes. A simple eigenvalue and its conjugate lie in separate disks matched under reciprocal conjugacy: symplectic reciprocity and reality imply that its inverse and conjugate occupy the same unique opposite disk, hence coincide. The perturbed eigenvalues thus stay on the unit circle with smooth real angles. At \(p_0\) the derivative of the two angles is the nonsingular half-trace derivative multiplied by the diagonal factors \(-1/\sin(2\pi m_j/M)\). Equation \eqref{eq:c1} and the same local contraction or the quantitative inverse function theorem give a finite-wavelength retuning \(p_\varepsilon=p_0+O(\varepsilon)\) with exactly those two angles. The major choices are in this order: fix smoothing, allowed trace bound and \(M\), then take \(\varepsilon\) small for the prescribed preparation.
+
+The two real invariant eigenplanes of \(T_\varepsilon(p_\varepsilon)\) are symplectically orthogonal, since complex eigenvectors pair to zero unless their eigenvalues multiply to one. Each plane is nondegenerate and admits a symplectic basis in which the map is rotation by \(\theta_j=2\pi m_j/M\) or \(-\theta_j\); the orientation may differ by plane. Thus \(T_\varepsilon^M=I\) exactly. Repeat the same retuned cell \(M\) times, restarting the carrier in its local \(u\) on every copy. All coefficients vanish near joins, so the result is a single smooth vacuum metric. For geodesics with \(du/ds\ne0\), use \(u\) as affine parameter. If \(c=g_H(\gamma',\gamma')\), then
+\[
+ 2v'=|X'|^2+X^\mathsf T H X-c=(X\cdot X')'-c.
+\]
+The common interval length and the common transverse map determine the longitudinal return for each \(c\) and marked initial datum. For \(du/ds=0\) the profile makes no contribution. This proves part 1, exactly at finite wavelength, also across different preparations.
+
+\section{Optical covariance and exact Weyl calibration}
+Choose \(J\) sufficiently short at the outset, fixing a common cut in the leg just before \(J\). Solve \(P_\varepsilon''=H_\varepsilon P_\varepsilon\) with \(P_\varepsilon=I,\ P_\varepsilon'=0\) there, arranged before the carrier turns on. Let \(P_0\) solve the corresponding averaged equation with core \(p_0\). The common short interval and trace bound can be chosen so that its length times \(\|\mathsf C-
+ho I\|_{L^1}\) is uniformly less than \(1/4\); the Volterra estimate then gives \(\sup\|P_0-I\|<1/2\). This keeps \(P_0\) nonsingular even for a fixed smooth preparation with a large envelope supremum. Then \eqref{eq:normal}, its averaging, and the tuning estimate ensure
+\[
+ P_\varepsilon=P_0+O(\varepsilon),\qquad
+ P_\varepsilon'=P_0'+Q_\varepsilon P_0+O(\varepsilon).
+\]
+The zero Wronskian means \(P_\varepsilon^\mathsf{T}P_\varepsilon'\) is symmetric. The exact change \(X=P_\varepsilon x,\ v=v_R+\frac12 x^\mathsf{T}P_\varepsilon^\mathsf{T}P_\varepsilon'x\) gives the optical metric
+\[
+ g_\varepsilon=-2\,du\,dv_R+G_\varepsilon{}_{AB}\,dx^A dx^B,\qquad
+ G_\varepsilon=P_\varepsilon^\mathsf{T}P_\varepsilon .
+\]
+On bounded blocks of this chart,
+\[
+ G_\varepsilon-G_0=O(\varepsilon),\quad
+ G_\varepsilon'-G_0'=2P_0^\mathsf{T}Q_\varepsilon P_0+O(\varepsilon),\quad
+ G_\varepsilon''=O(\varepsilon^{-1}).
+\]
+The only possibly nonzero contracted Christoffel is
+\(\mathcal H^{v_R}=\tfrac12\tr(G^{-1}G')=\tr(P'P^{-1})\).
+Since \(Q_\varepsilon\) is tracefree, for the exact metric this equals \(\tr((P_\varepsilon'-Q_\varepsilon P_\varepsilon)P_\varepsilon^{-1})\). The transformed bounded-coefficient system gives a uniform bound on its first derivative and convergence to its limit at \(O(\varepsilon)\). Hence these are actual generalized-wave high-frequency bounds in the optical charts, not in the common Brinkmann coordinates, whose \(du^2\) coefficients may diverge. No global nonsingular optical chart through the repeated caustics is required.
+
+In the \(P_0\)-orthonormal screen the leading derivative carrier is \(2Q_\varepsilon\), whose positive-frequency component at \(m/\varepsilon\) is \(Z_m e^{imu/\varepsilon}\). Distinct harmonics and opposite frequencies decouple under compact testing by nonstationary phase; a microlocal test near \(+du\) retains all positive harmonics. The physical screen defect is one quarter of the strain-derivative covariance in this convention \cite{p29b}. Thus the densities, relative to the limit volume and covector representatives \(\pm du\), are precisely \eqref{eq:given} and its complex conjugate. Their traces sum to \(2\rho=\Ric(g_0)_{uu}\), also read directly from the averaged Brinkmann potential \(\mathsf C(u;p_0)-\rho I\). The positive-ray and negative-ray matrices are not identified. Along \(g_0^{-1}du=-\partial_{v_R}\) the coefficients are constant and the screen is parallel, giving direct covariant transport on this one-direction stock, consistently with \cite{hl,p29b}. Equal trace at given sign means the same averaged tuning and the same optical limiting metric. Opposite helicities are obtained, for example, by conjugating a circular complex column; their scalar trace is unaffected.
+
+The central geodesic \(X=0,\ v=u/2\) has proper time \(u\) and a parallel Cartesian screen. Its measured tidal Weyl in every exact vacuum metric is \(W_{uiuj}=-H_{\varepsilon,ij}\), so
+\[
+ \varepsilon W_{uiuj}=-\bigl[(\partial_\theta Q)_\varepsilon+\varepsilon\mathsf C(u;p_\varepsilon)\bigr]_{ij}.
+\]
+This is the actual observer-frame curvature, not a nominal metric perturbation. On a compact time window, multiply by \(e^{-imu/\varepsilon}\) and test by a smooth bump: integration by parts in all nonresonant harmonics yields the tested \(-imZ_m/2\) plus \(O(\varepsilon)\). This calibrated measurement recovers the profile on the packet in the weak-envelope sense, and distinguishes distinct fixed preparations at small finite wavelength. The slow core is nonzero on \(J\); this is an overlapping construction within one propagation direction.
+
+\section{Physical probe and normalized sign measurement}
+For each exact background, longitudinal band invertibility allows the gauge \(h_{v\mu}=0\) for a linearized metric perturbation, using the \(vv,vi,vu\) gauge equations successively. In this section \(h_{\mu\nu}\) denotes a perturbation, not the scalar slow profile. The \(vv\) linearized Ricci equation gives \(-\tfrac12\partial_v^2\tr h=0\), so the screen is tracefree. The other \(v\mu\) equations give the Lorenz condition: their residual term is \(\tfrac12\partial_v(\nabla^\alpha h_{\alpha\mu})\), because \(\partial_v\) is parallel and curvature with a \(v\) index vanishes. In this gauge \(\nabla^\alpha h_{\alpha\mu}=-\partial_v h_{u\mu}+\partial_jh_{j\mu}\), giving
+\[
+ h_{ui}=\partial_v^{-1}\partial_jh_{ji},\qquad
+ h_{uu}=\partial_v^{-2}\partial_i\partial_jh_{ij}.
+\]
+The two STF screen components obey
+\[
+ (-2\partial_u\partial_v-X^\mathsf T H X\,\partial_v^2+\Delta_X)h_{ij}=0 .
+\]
+The screen connection terms couple to vanishing \(v\) components and the curvature term \(R_{iuju}h^{uu}\) vanishes. Conversely the reconstructed perturbation solves all equations: the residual linearized Einstein tensor has vanishing screen, trace and \(v\) components, and its divergence successively eliminates \(ui,uu\) by invertibility of \(\partial_v\). Thus the propagated amplitudes are the physical linearized gravitational screen fields, not scalar observations standing in for them.
+
+With \(e^{-ikv}\), \(k>0\), the equation is \(i\partial_u h=[-\Delta_X/(2k)-(k/2)X^\mathsf T H X]h\). This quadratic Weyl Hamiltonian has no scalar term. Its unitary solution is the metaplectic lift of the oscillator flow in \((X,kX')\) starting at identity \cite{littlejohn}. The single-cell endpoint is a lift of a conjugated two-plane rotation with angles \(\pm2\pi m_j/M\). The ambiguity between two endpoint lifts disappears when taking the even power \(M\); the oscillator lift of either orientation of a full \(2\pi m_j\) rotation is \((-1)^{m_j}\). The repeated-cell transfer is therefore exactly \((-1)^{m_1+m_2}I\), independently of \(k\) in the band. The targets \eqref{eq:targets} differ by one in that exponent. Negative \(k\) follows by reality, so the comparison is a sign on real linear data. No averaging argument is used to infer a lift from a classical endpoint alone.
+
+For a fixed orientation the characteristic Einstein--Hilbert form is
+\[
+ \Omega(f,h)=\frac{1}{32\pi G}\int
+       (f_{ij}\partial_vh_{ij}-h_{ij}\partial_v f_{ij})\,dv\,d^2X .
+\]
+Indeed the on-gauge derivative term of the quadratic Einstein--Hilbert action is
+\[
+ -(64\pi G)^{-1}\nabla_a h_{bc}\nabla^a h^{bc}.
+\]
+Its \(u\) flux uses \(\nabla^u=-\partial_v\). Upper-index contractions with \(u\) pair with zero \(v\) components, curvature terms are algebraic, and packet boundary terms vanish. This gives the stated normalization \cite{p31}. The form is nondegenerate on the band.
+
+In a flat collar \(\delta W_{vivj}=-\tfrac12\partial_v^2h_{ij}\); smearing it with \(4(32\pi G)^{-1}\partial_v^{-1}f\) therefore gives the linear observable \(\Omega(f,h)\) by integration by parts. The cut smear can also be propagated within the flat collar and averaged against a unit-integral smooth \(u\) bump by symplectic conservation. 
+
+Choose \(f,g\) on the end collars with \(b_0=\Omega(Vf,g)\ne0\), where \(V\) is the common free transfer from the flat extensions. The signed transfers give brackets \(b_0\) and \(-b_0\) for the same two tests, with at most one shared convention sign for the bracket ordering. In the marked characteristic CCR algebra the corresponding ordered group commutators are \(e^{\mp ib_0/\hbar}I\); rescaling a test to \(b_0/\hbar=\pi/2\) distinguishes them. This comparison does not require choosing a vacuum state on the whole spacetime.
+
+\section{Scope}
+The theorem gives an exact degeneracy of \emph{end-to-end} classical returns, not equality of all interior lens paths. For a fixed sign the same-trace optical limit is common locally on the pulse. Different sign targets need not have identical limiting interiors. The focusing and carrier coexist in the same exact interval, but belong to a one-direction plane-wave ansatz, not an interaction between crossing waves. The background defect and the outgoing probe covariance cannot be conflated: a central sign cancels out of a same-collar quadratic probe covariance, whereas the cross-collar Einstein--Hilbert bracket is sensitive to it. We do not claim compact longitudinal localization, all-frequency transfer, or nonlinear quantum propagation. Classical plane-wave scattering and caustic effects have independent antecedents \cite{adamo,harte}; here the new comparison combines exact retuning, background polarization freedom at fixed scalar data, and a marked physical amplitude measurement.
+
+\begin{thebibliography}{9}
+\raggedright
+\bibitem{p29b} \emph{Physical polarization of high-frequency vacuum gravity: transport, exact preparation, and curvature readout}, manuscript 29B, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/29b-high-frequency-graviton-polarization}{research archive}.
+\bibitem{p31} \emph{Identical Jacobi Returns and Opposite Graviton Transfer in Exact Vacuum Sandwiches}, manuscript 31, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/31-graviton-metaplectic-transfer}{research archive}.
+\bibitem{hl} C.~Huneau and J.~Luk, Burnett's conjecture in generalized wave coordinates, \href{https://arxiv.org/abs/2403.03470}{arXiv:2403.03470}.
+\bibitem{littlejohn} R.~G.~Littlejohn, The semiclassical evolution of wave packets, \emph{Phys.\ Rep.} \textbf{138} (1986), 193--291, \href{https://doi.org/10.1016/0370-1573(86)90103-1}{doi:10.1016/0370-1573(86)90103-1}.
+\bibitem{adamo} T.~Adamo, E.~Casali, L.~Mason, and S.~Nekovar, Scattering on plane waves and the double copy, \emph{Class.\ Quantum Grav.} \textbf{35} (2018), 015004, \href{https://arxiv.org/abs/1706.08925}{arXiv:1706.08925}.
+\bibitem{harte} A.~I.~Harte and T.~D.~Drivas, Caustics and wave propagation in curved spacetimes, \emph{Phys.\ Rev.\ D} \textbf{85} (2012), 124039, \href{https://doi.org/10.1103/PhysRevD.85.124039}{doi:10.1103/PhysRevD.85.124039}.
+\end{thebibliography}
+\end{document}

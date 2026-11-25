@@ -2,7 +2,7 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains 32 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and six typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 33 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and seven typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
 
@@ -23,6 +23,8 @@ Papers 25 and 26 entered the archive in [7a849c9](https://github.com/g3173028019
 On 25 November 2026, papers 30–31 were added as internally reviewed analytical manuscripts with LaTeX sources and compiled PDFs: [30 · Nariai rigidity under null completeness](papers/30-nariai-null-completeness/README.md); [31 · Classically matched vacuum waves with opposite quantum transfer](papers/31-graviton-metaplectic-transfer/README.md). The original packet and paper numbers are unchanged.
 
 [29B · Physical polarization of high-frequency vacuum gravity](papers/29b-high-frequency-graviton-polarization/README.md) is catalogued as a separate typeset companion to Paper 29. The original Paper 29 files and the numbered 01–31 sequence are unchanged. This entry does not establish a priority date.
+
+[29B+31 · Polarization defects and opposite graviton transfers](papers/29b-31-polarization-defects-graviton-transfer/README.md) is a standalone analytical companion. The three original entries, Papers 29, 29B and 31, are unchanged.
 
 ## Versioned revisions
 

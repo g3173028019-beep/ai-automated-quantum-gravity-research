@@ -55,7 +55,7 @@ Paper 07 modifies a clock-foliated effective action and constructs a finite-band
 
 The statements and derivations are in the Markdown files. The earlier twenty-packet calculation replays do not verify these four proofs, and no new external review is claimed by this integration.
 
-## Analytical evidence in papers 25–31 and companion 29B
+## Analytical evidence in papers 25–31 and companions 29B and 29B+31
 
 Papers [25 and 26](docs/PAPER-INDEX.md#25-characteristic-data-and-radiative-symplectic-rank) give complete scoped Markdown derivations. The typeset papers below provide TeX sources and paper-specific reviews. Internal cross-checks and clean compilation do not constitute external expert review.
 
@@ -66,6 +66,7 @@ Papers [25 and 26](docs/PAPER-INDEX.md#25-characteristic-data-and-radiative-symp
 
 - [30 · Nariai rigidity under null completeness](papers/30-nariai-null-completeness/VERIFICATION.md): Check the covering/seed from Galloway–Ling, the normal-connection identity and Killing-field integral, the equal pole-period obstruction, and Lafuente López’s global identification. Cross-checked analytically; no numerical dependency.
 - [31 · Classically matched vacuum waves with opposite quantum transfer](papers/31-graviton-metaplectic-transfer/VERIFICATION.md): Check the smooth trace-free retuning, the even-repeat metaplectic sign, nonzero-band gravitational constraint return, fixed Weyl dual smears, and exact same-collar composition. Cross-checked analytically; no numerical dependency.
+- [29B+31 · Polarization defects and opposite graviton transfers](papers/29b-31-polarization-defects-graviton-transfer/README.md): See the [manuscript](papers/29b-31-polarization-defects-graviton-transfer/manuscript.pdf) for the exact vacuum shear normal form, differentiable endpoint averaging, simple-angle retuning, finite-wavelength matching, local optical normalization and physical band bracket. No numerical dependency.
 
 ## Reusing evidence and reading the history
 
