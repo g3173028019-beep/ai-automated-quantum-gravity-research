@@ -1,0 +1,162 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Reg}{\mathcal R}
+\newcommand{\cT}{\mathcal T}
+\title{A signed Lorentzian Regge approximation theorem for the Einstein tensor}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove convergence of the full weak Einstein tensor, defined by variation of the real Lorentzian Einstein action with face and joint terms, for a class of tangentially continuous Regge approximants in four dimensions. The meshes are quasi-uniform, with uniform non-null margins and fixed regular Lorentzian normal fans. Broken metric errors of orders two and one in values and first derivatives, together with bounded second jets, imply an order-two bound in the dual of the tensor \(H^2_0\) test space. The proof is entirely real: the first derivative at the smooth metric is transferred to the smooth test by symmetry of the action Hessian; separate nonlinear remainder estimates then control bulk, face, and hinge terms. Degree-one Regge interpolation attains the hypotheses on an explicit class of mixed-sign meshes. A nonflat Ricci-flat plane wave exhibits such convergence outside the class of conformal products of two nondegenerate surfaces. The statement concerns consistency of the variational residual, not convergence of discrete Einstein solutions.
+\end{abstract}
+
+\section{Setting and result}
+A Regge metric here is a piecewise smooth Lorentzian bilinear form with a single tangential restriction on every interior tetrahedral face. It need not be a continuous ambient tensor. This distinction is important: normal metric and connection data can jump at faces. A scalar curvature convergence theorem, even if available, does not control the action variation against independent tensor tests.
+
+Gawlik and Neunteufel prove the corresponding Riemannian densitized Einstein tensor convergence theorem, in a stronger mesh and approximation framework \cite{GN}. Their bulk, face and hinge decomposition is a direct precursor. The issue addressed here is its signed Lorentzian version in a specified nondegenerate class, with a separate real estimate not requiring a complex continuation of an analytic norm argument. We use established Lorentzian non-null joint conventions \cite{Hayward,Sorkin,Asante}; we do not introduce new angle variables.
+
+Let \(\Omega\subset\mathbb R^4\) be a bounded polyhedral coordinate domain, and use a fixed auxiliary Euclidean metric for norms and mesh sizes. Let \(\cT_h\) be embedded quasi-uniform shape-regular affine simplicial meshes, with bounded incidence valence. A face \(F\) below means an interior three-simplex; a hinge \(H\) means an interior two-simplex. Let \(g\) be a smooth time-oriented Lorentzian metric on a neighborhood of \(\overline\Omega\), and \(g_h\) a Regge metric on \(\cT_h\). Put \(e_h=g_h-g\). Assume the following conditions uniformly in \(h\):
+\begin{enumerate}
+\item The path \(m_\theta=g+\theta e_h\), \(0\leq\theta\leq1\), has a common smooth strictly timelike covector, uniformly bounded coefficients and inverse, and uniformly nondegenerate induced forms on faces and hinges (Gram matrices in auxiliary unit tangent bases).
+\item All normal fan boundary rays are non-null. Every Lorentzian normal hinge fan lies on the regular four-null-ray branch along the path; the same condition persists for sufficiently small admissible metric variations on each fixed mesh. The branch is continued from the smooth reference fan, with zero reference deficit. Both signatures of the normal plane are permitted.
+\item The broken norms satisfy
+\[
+ \|e_h\|_{\infty,K}\leq Mh^2,\qquad
+ \|D e_h\|_{\infty,K}\leq Mh,\qquad
+ \|D^2g_h\|_{\infty,K}\leq M\quad (K\in\cT_h).
+\]
+Here derivatives up to the element boundary are taken within each element.
+\end{enumerate}
+Uniform bounds also include the smooth background derivative bounds. The face and hinge forms, their normal planes and densities are the actual metric-induced ones, not Euclidean replacements.
+
+For a face cooriented from its minus to its plus cell, choose the unit normals in that common direction. Write \(\epsilon_F=g(n,n)=\pm1\), let \(K_F\) be the second fundamental form \(g(\nabla_{\cdot} n,\cdot)\), and let \(H_F=\tr_{g_F}K_F\). We use the same notation for any metric \(m_\theta\) when the argument is clear. A jump denotes plus minus minus. The hinge deficit \(k_H\) is the signed sectional-curvature deficit, with the flat turning reference subtracted. For an oriented positive normal plane it is the signed curvature rotation; on an oriented Lorentzian normal plane it is minus the signed boost rapidity in the frame convention below. Time orientation and local fan order fix the continuation; no irregular or null sectors are included. Write \(\dd\mu_s\) for the absolute metric-induced volume on a stratum \(s\).
+
+For a smooth compactly supported covariant symmetric test \(\sigma\), define
+\begin{align}
+ \Reg_h(m;\sigma)
+={}&\sum_K\int_K\langle G(m),\sigma\rangle_m\,\dd\mu_m
+ -\sum_F\epsilon_F\int_F
+ \langle[K_F]-[H_F]m_F,\sigma_F\rangle_{m_F}\,\dd\mu_F \notag\\
+ &-\sum_H\int_H k_H\tr_{m_H}\sigma_H\,\dd\mu_H .
+ \label{eq:residual}
+\end{align}
+Here \(G=\Ric-\frac12 Rm\), and contraction raises both covariant indices with the indicated metric. Restrictions of \(\sigma\) to the face or hinge are denoted by subscripts. The factor \(1/(16\pi G_{\rm N})\) is suppressed throughout.
+
+\begin{theorem}\label{thm:main}
+Under the assumptions above there is \(C\), independent of \(h\), such that
+\[
+ \left|\Reg_h(g_h;\sigma)-
+ \int_\Omega \langle G(g),\sigma\rangle_g\,\dd\mu_g\right|
+ \leq C h^2\|\sigma\|_{H^2(\Omega)}
+ \qquad\bigl(\sigma\in C_c^\infty(\Omega;\operatorname{Sym}^2)\bigr).
+\]
+In particular the difference extends to the dual of \(H^2_0(\Omega;\operatorname{Sym}^2)\) with norm \(O(h^2)\). The result includes both mixed and normal components of the weak Einstein equation; it is not restricted to conformal tests.
+\end{theorem}
+
+\section{The signed action derivative}
+Suppress outer face and joint terms, which have zero variation against interior-supported tests. Define the cell action by the Einstein--Hilbert bulk terms and \(2\epsilon_F\) times the outward mean curvature integral for each cell face. Include the interior joint terms \(2\int_H k_H\,\dd\mu_H\), counting each hinge once with the subtracted flat reference.
+
+The curvature-angle convention can be checked in an oriented normal frame \(e_0,e_1\) with squared lengths \(\epsilon_0,+1\). Set \(\nabla e_0=e_1\omega\) in the normal plane. With \(R(X,Y)=[\nabla_X,\nabla_Y]-\nabla_{[X,Y]}\), the sectional convention is \(\dd\omega=-\epsilon_0 k\dd\mu\); the parallel rotation or rapidity is \(-\oint\omega=\epsilon_0\int k\dd\mu\). Thus a Lorentzian rapidity requires the minus sign when converted to \(k\). At a regular piecewise smooth fan this prescription is applied by the sum of oriented wedge angles, with the flat fan value subtracted. The regular fan fixes the light-crossing constants \cite[Sec.~9]{Sorkin}\cite[Sec.~II and App.~A]{Asante}. In particular one does not differentiate an action in which the reference turning still multiplies the varying hinge area.
+
+\begin{lemma}\label{lem:variation}
+For tangentially compatible metric variations supported away from the outer boundary, the negative action derivative equals \eqref{eq:residual}. For two such variations the mixed derivatives commute throughout a fixed nondegenerate causal branch.
+\end{lemma}
+
+\begin{proof}
+Cellwise Palatini integration gives the bulk \(G\) in the negative variation with respect to a covariant metric. The Gibbons--Hawking--York term cancels the normal derivative of the variation and leaves the outward \(\epsilon_F(K_F-H_Fm_F)\) together with an edge term. Adding the two cell contributions on a common face gives the minus-jump traction in \eqref{eq:residual}. An independent face sign check is Gaussian normal gauge: for \(m=\epsilon\,\dd s^2+m_F(s)\), the singular tangential Einstein tensor is \(-\epsilon([K]-[H]m_F)\delta(s)\).
+
+For completeness the edge cancellation uses both causal signs of the conormals. Let \(n\) be each cell's own outward normal and \(\nu\) the outward conormal of the hinge in that face, with \(\epsilon_\nu=m(\nu,\nu)\). In the oriented orthonormal frame of the normal plane, differentiating the relative angle of the two outward normals gives
+\[
+ 2\,\delta k_H=\sum_{(K,F)\supset H}\epsilon_F\epsilon_\nu
+                 \,\sigma(n,\nu).
+\]
+In the negative action variation the tangential divergence of the face terms contributes the displayed sum with its positive overall sign, canceled by the negative variation of the joint angle. This is the non-null joint variation of \cite{Hayward} with the flat fan reference subtracted. One can verify the differential in a positive plane by differentiating the dot product of the normalized normals and dividing by the signed sine; in a Lorentzian plane the corresponding divided derivative is that of the rapidity, with the sectional sign computed above. The crossing constants are fixed along this variation. For example \(dx^2+dy^2+2\lambda\,dx\,dy\) on a positive quadrant gives exterior angle \(\arccos(-\lambda)\); the mixed quadrant \(-dt^2+dx^2+2\lambda\,dt\,dx\) gives the real angle \(-\operatorname{arsinh}\lambda\). The derivatives at zero are respectively \(+1\) and \(-1\) in the joint convention. Consequently only \(-2 k_H\delta\dd\mu_H=-k_H\tr_{m_H}\sigma_H\dd\mu_H\) remains. The signed wedge functions and their metric derivatives are smooth in a fixed branch; a finite mesh and ordinary differentiation of the cell, face and hinge integrals make the action \(C^2\) in any fixed finite set of admissible variation parameters.
+\end{proof}
+
+\section{Real proof of the quantitative limit}
+
+We first take \(\sigma\) smooth and compactly supported. The interpolating direction \(e=e_h\) is not required to vanish near the outer boundary. One can include the external boundary terms in the mixed derivatives, or apply an auxiliary smooth cutoff to \(e\) that is identically one near the support of \(\sigma\). The relevant mixed identity is the same: the action derivative with respect to \(\sigma\) is localized and no outer term or cutoff derivative can contribute. In particular, by the lemma and mixed derivative symmetry,
+\begin{equation}
+  D\Reg_h(g)[e](\sigma)
+  =\left.\frac{\dd}{\dd s}\Reg_h(g+s\sigma;e)\right|_{s=0}.
+  \label{eq:symmetry}
+\end{equation}
+The right hand side is easy to estimate because \(g+s\sigma\), as opposed to \(e\), is smooth through the mesh. The normalized deficits are zero on all its interior hinges, and the two tractions on all interior faces cancel. Thus the derivative in \eqref{eq:symmetry} is exactly
+\[
+ \int_\Omega e_{ab}\,D\bigl(\sqrt{|\det g|}G(g)^{ab}\bigr)[\sigma]\,\dd^4x .
+\]
+The smooth linearized density is a differential operator of order at most two in \(\sigma\) with bounded coordinate coefficients. It follows that
+\begin{equation}
+ |D\Reg_h(g)[e](\sigma)|
+   \leq C\|e\|_{L^2}\|\sigma\|_{H^2}
+   \leq C h^2\|\sigma\|_{H^2}.
+ \label{eq:linear}
+\end{equation}
+In particular we have not estimated the sum of leading singular strata separately. Such an estimate would generally lose the desired order.
+
+We next estimate \(\Reg_h(g+e;\sigma)-\Reg_h(g;\sigma)-D\Reg_h(g)[e](\sigma)\) from three elementary Taylor expansions. All coefficients and derivatives in the expansions are controlled in the auxiliary positive coordinate norm.
+\begin{enumerate}
+\item \emph{Bulk.} The density of \(G\) with both indices raised is a sum of coefficients smooth in the metric times terms linear in its second jet or quadratic in its first jet. Its remainder is bounded by \(C(|e|^2+|e||De|+|De|^2+|e||D^2e|)\). In particular a term \(|D^2e|^2\) does not occur. This is \(O(h^2)\) pointwise in the cells.
+\item \emph{Faces.} With the affine face fixed, each second fundamental form is linear in the first metric jets, with coefficients smooth in the adjacent metric values and the inverse induced metric. The same is true for the signed traction after contractions and density. Its Taylor remainder per unit auxiliary face area is \(C(|e|^2+|e||De|)|\sigma|\leq C h^3|\sigma|\), summing the one-sided norms where necessary. Squaring first derivatives here would give a false estimate.
+\item \emph{Hinges.} Normal projections, wedge angles on their fixed branches, reference subtraction and hinge density depend only on incident metric values. The local Gram and non-null margins control their second derivatives uniformly. One way to see this is to take an auxiliary reference simplex basis, express the projected ray lengths by face/hinge Schur complements, and compute the rotation or rapidity of the resulting normalized rays. These formulas and their derivatives stay in a compact subset away from degeneracy, and only boundedly many wedges enter any star. Thus the joint residual coefficient has Taylor remainder \(C|e|^2|\sigma|\leq Ch^4|\sigma|\) per unit auxiliary hinge area.
+\end{enumerate}
+
+For reference the scaled trace bounds are 
+\begin{align*}
+ \sum_F\|\sigma\|_{L^2(F)}^2&\leq C h^{-1}\|\sigma\|_{H^2(\Omega)}^2,\\
+ \sum_H\|\sigma\|_{L^2(H)}^2&\leq C h^{-2}\|\sigma\|_{H^2(\Omega)}^2 .
+\end{align*}
+These follow by ordinary trace on fixed Euclidean reference simplices, scaling and finite incidence; the codimension-two bound uses \(2>2/2\), and before summation its right hand side consists of \(h^{-2}\|\sigma\|_{L^2(K)}^2+\|D\sigma\|_{L^2(K)}^2+h^2\|D^2\sigma\|_{L^2(K)}^2\). Total auxiliary face and hinge measures on the bounded domain are respectively \(O(h^{-1})\), \(O(h^{-2})\). Cauchy--Schwarz therefore gives absolute remainder sums of size \(C h^2\|\sigma\|_{H^2}\) for both strata. The bulk has the same bound. At \(\theta=0\), \eqref{eq:residual} is the ordinary smooth Einstein density. Combining with \eqref{eq:linear} and applying density proves Theorem~\ref{thm:main}. The proof does not form products of distributional connections.
+
+\begin{corollary}
+For \(X\in C_c^\infty(\Omega;T\Omega)\), the residual on the fixed smooth diffeomorphism test obeys
+\[
+ |\Reg_h(g_h;\mathcal L_Xg)|\leq C h^2\|X\|_{H^3(\Omega)} .
+\]
+\end{corollary}
+\begin{proof}
+The continuum pairing vanishes by the contracted Bianchi identity after integration by parts. The displayed norm follows from Theorem~\ref{thm:main}. In particular this is an off-shell statement about smooth \(g\), and not an assertion about taking \(\mathcal L_Xg_h\) at fixed discontinuous mesh data.
+\end{proof}
+
+\section{Admissible affine Regge approximations and Lorentzian examples}
+
+\subsection{Degree-one interpolation}
+On each affine four-simplex the local interpolant is a symmetric tensor with affine coefficients. Specify its tangential metric by two polynomial moments of degree at most one on each edge, and its three constant tangential symmetric moments on each triangular face. There are \(20+30=50\) moments, the dimension of the local space. No positivity of the input metric enters these linear degrees of freedom \cite{Christiansen,GN}.
+
+Here is an elementary unisolvence argument. In barycentric coordinates \(\lambda_i\) the ten tensors \(d\lambda_i\odot d\lambda_j\), \(i<j\), form a basis. Linear independence follows also by restricting a constant linear combination to each edge \(ij\), on which only its \(ij\) coefficient survives. If all moments of an affine tensor vanish, the edge moments force its coefficient \(p_{ij}\) to vanish on \(ij\). Thus \(p_{ij}=\sum_{k\ne i,j}c_{ijk}\lambda_k\). On the triangle \(ijk\) the three tangential basis tensors are independent and are tested by the constant dual basis. The mean of the corresponding complementary barycentric variable is \(1/3\), so all \(c_{ijk}\) vanish. Repeating this argument in a tetrahedron shows that the moments shared by adjacent cells determine exactly the same tangential restriction there. This proves the Regge condition rather than merely matching edge lengths.
+
+On shape-regular reference simplices the moment inverse is uniformly bounded under rescaling. The operator reproduces affine tensor fields, so subtraction of the first Taylor polynomial gives \(g_h-g=O(h^2)\), \(D(g_h-g)=O(h)\), and \(D^2g_h=0\) in each cell. This is a degree-one Regge metric interpolation, not a claim about the lowest-order length-only scheme in four dimensions.
+
+\subsection{Mesh and branch margins}
+Start from a finite periodic affine template subdividing boxes by simplices, in an auxiliary coordinate domain. For the Minkowski reference choose a fixed generic linear template tilt. The finitely many face and hinge tangent Gram determinants in normalized directions are nonzero off a finite union of proper algebraic zero sets. If the initial template has strictly spacelike constant-time strata and strictly timelike time--space strata, the small tilt preserves those strict signs. Compactness over the finitely many scaled templates gives a uniform margin. For a fixed smooth metric sufficiently close to the constant reference form, and for the degree-one interpolants with sufficiently small \(h\), the whole metric path preserves this margin and a strict time covector. At a Lorentzian-normal hinge the reference smooth affine star gives a genuine cyclic fan in one two-dimensional plane, with four null rays and no null bounding rays. The count stays constant along the path: adjacent faces have the same tangential metric, so their boundary ray causal types match; within each sector a crossing can only change by passage of a null ray through a bounding ray or an orientation degeneracy. The uniform non-null and shape margins exclude these events. This gives an actual open family of admissible meshes and nearby metrics rather than a claim about arbitrary causal simplex assignments.
+
+\subsection{Nonflat vacuum and off-shell witness}
+In a bounded Brinkmann box consider
+\[
+ g=-2\,du\,dv+dx^2+dy^2+
+      \delta (x^2-y^2)\cos(ku)\,\dd u^2,\qquad \delta k\ne0 .
+\]
+For fixed sufficiently small \(\delta\), \(t=(u+v)/\sqrt2\) is a common strict time function for \(g\) and its sufficiently fine interpolants. For a Brinkmann metric with profile \(F\), the only possible Ricci component is \(\Ric_{uu}=-(\partial_x^2+\partial_y^2)F/2\), whereas \(R_{uiuj}=-\partial_i\partial_jF/2\). Thus this stock is exactly vacuum and curved on an open subbox. The Weyl square is zero since the nonzero components carry two \(u\) indices and none has a \(v\) index. For a conformal product of two nondegenerate surfaces of opposite total signature, by contrast the unwarped Weyl square is \(4(K_1+K_2)^2/3\), and its vanishing implies that the Weyl tensor is zero; this follows by substituting the two constant-at-a-point surface curvature blocks in the Weyl trace subtraction. The conformal scaling is nonzero, so the present vacuum cannot be locally represented by such a product wherever it is curved. The test is genuinely Lorentzian. Adding \(\varepsilon(x^2+y^2)b(u)\,\dd u^2\) with \(b\) smooth and nonzero on a smaller box gives there \(\Ric_{uu}=-2\varepsilon b(u)\), a nonzero off-shell comparison using the same margins. Genuine ambient jumps are not an assumption of this example: dissimilar fixed edge-length ratios on opposite collinear edges at a vertex in a direction with nonzero second profile derivative already force different endpoint values of the two affine edge projections. Indeed the endpoint value of the affine \(L^2\)-projection of a smooth directional component on a length \(L\) interval equals its true value minus \(L^2/12\) times its endpoint second derivative plus \(O(L^3)\). The lengths can have fixed unequal ratios in a shape-regular local template perturbation, while the tangential face match established above is unaffected.
+
+\section{Scope}
+The role of causality in this result is local: uniform use of the regular signed branch and of non-null strata. The theorem is not a near-null estimate, a result for arbitrary Lorentzian Regge fans, a statement of global causal validity for every approximate spacetime, or an existence/convergence theorem for stationary points of the discrete action. There is no assertion for mesh-dependent rough tests outside \(H^2_0\), for length-only interpolation in dimension four, or for the boundary Brown--York tensor by trace of the interior limit. The bound does not address quantum amplitudes or a path-integral measure. Its novelty relative to \cite{GN} is the stated signed Lorentzian consistency, not a new Riemannian estimate or a general extension of the latter's graded-mesh framework.
+
+\begin{thebibliography}{9}
+\bibitem{GN} E. S. Gawlik and M. Neunteufel, \emph{Finite element approximation of the Einstein tensor}, \href{https://arxiv.org/abs/2310.18802}{arXiv:2310.18802}, especially Secs.~3--4, Thm.~4.1 and Cor.~4.3.
+\bibitem{Hayward} G. Hayward, Gravitational action for spacetimes with nonsmooth boundaries, \emph{Phys. Rev. D} \textbf{47} (1993), 3275--3280. \href{https://doi.org/10.1103/PhysRevD.47.3275}{doi:10.1103/PhysRevD.47.3275}.
+\bibitem{Sorkin} R. D. Sorkin, \emph{Lorentzian angles and trigonometry including lightlike vectors}, \href{https://arxiv.org/abs/1908.10022}{arXiv:1908.10022}.
+\bibitem{Asante} S. K. Asante, B. Dittrich and J. Padua-Arg\"uelles, \emph{Complex actions and causality violations: Applications to Lorentzian quantum cosmology}, \href{https://arxiv.org/abs/2112.15387}{arXiv:2112.15387}.
+\bibitem{Christiansen} S. H. Christiansen, \emph{On the linearization of Regge calculus}, \href{https://arxiv.org/abs/1106.4266}{arXiv:1106.4266}.
+\end{thebibliography}
+\end{document}
+

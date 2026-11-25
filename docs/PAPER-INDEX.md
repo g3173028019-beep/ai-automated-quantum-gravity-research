@@ -4,7 +4,7 @@
 
 The archive contains 20 original research packets and 4 later analytical manuscripts. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–26 continue the sequence. They do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–29 continue the sequence. They do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -359,6 +359,36 @@ Numbering follows delivery order: 01–20 retain their original packet numbers; 
 **Connections.** [21](../papers/21-weyl-diamond-relative-entropy/manuscript.md) is a coherent Weyl-state comparison and [24](../papers/24-calibrated-tidal-diffusion/manuscript.md) is a tidal record of linearized gravitons. Neither is the scalar mass-variation problem.
 
 [Read the manuscript](../papers/26-neutral-de-sitter-mass-susceptibility/manuscript.md)
+
+## 27. Parity-odd Weyl-cubic ADM gravity
+
+**Question.** Can a parity-odd curvature correction be reduced to ordinary ADM phase space while retaining the geometric lapse, shift, and hypersurface-deformation algebra?
+
+**Result.** A local first-order reduction retains the original lapse and contravariant shift. The strong normal-normal bracket uses the reconstructed physical spatial metric; the paper gives separate covariance and parity-sensitive physical checks.
+
+**Scope.** Four-dimensional vacuum on the analytic perturbative branch, to first order in the Weyl-cubic coupling. No higher-order or quantum constraint algebra is asserted.
+
+[Manuscript note](../papers/27-parity-odd-weyl-cubic-adm/README.md) · [PDF](../papers/27-parity-odd-weyl-cubic-adm/manuscript.pdf) · [TeX](../papers/27-parity-odd-weyl-cubic-adm/main.tex) · [Verification](../papers/27-parity-odd-weyl-cubic-adm/VERIFICATION.md)
+
+## 28. The Einstein tensor from Lorentzian Regge variation
+
+**Question.** Does the full tensor variation of a real Lorentzian Regge action converge to the weak Einstein tensor on an admissible refining mesh?
+
+**Result.** For the stated tangentially continuous approximation class, the signed bulk, face and joint terms give an order-two error in the dual of tensor H²₀. A nonflat vacuum plane wave realizes the assumptions on a mixed-sign family beyond conformal products.
+
+**Scope.** Classical four-dimensional affine, quasi-uniform admissible meshes with uniform non-null margins and regular normal fans. It estimates variational consistency, not convergence of discrete solutions.
+
+[Manuscript note](../papers/28-lorentzian-regge-einstein-tensor/README.md) · [PDF](../papers/28-lorentzian-regge-einstein-tensor/manuscript.pdf) · [TeX](../papers/28-lorentzian-regge-einstein-tensor/main.tex) · [Verification](../papers/28-lorentzian-regge-einstein-tensor/VERIFICATION.md)
+
+## 29. Physical polarization in the vacuum high-frequency limit
+
+**Question.** What gravitational-wave information survives a high-frequency limit after its effective stress has been specified?
+
+**Result.** Under Huneau–Luk generalized-wave-coordinate hypotheses, a two-polarization positive matrix measure is transported along the null flow. Its trace is the scalar Burnett measure. Exact vacuum sequences with the same limiting stress have opposite circular polarization.
+
+**Scope.** Classical four-dimensional forward limit under the specified gauge and scale bounds. No unrestricted-gauge theorem, inverse limit, or quantum state construction is asserted.
+
+[Manuscript note](../papers/29-high-frequency-graviton-polarization/README.md) · [PDF](../papers/29-high-frequency-graviton-polarization/manuscript.pdf) · [TeX](../papers/29-high-frequency-graviton-polarization/main.tex) · [Verification](../papers/29-high-frequency-graviton-polarization/VERIFICATION.md)
 
 ## Reading the evidence
 

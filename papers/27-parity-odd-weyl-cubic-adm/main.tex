@@ -1,0 +1,219 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.06in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\TF}{\mathop{\mathrm{TF}}}
+\newcommand{\Lie}{\mathcal L}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\PG}{16\pi G}
+\newcommand{\ep}{\varepsilon}
+\title{A lapse-preserving ADM reduction of parity-odd Weyl-cubic gravity}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give an explicit local ADM formulation of the analytic perturbative branch of four-dimensional vacuum Einstein gravity corrected by the parity-odd Weyl cubic, to first order in its coupling. A tangential, derivative-dependent metric redefinition removes the normal accelerations from the correction while retaining the original lapse and contravariant shift. The perturbative Legendre transform then gives the Hamiltonian constraint directly in the usual six metric-momentum pairs. We prove the normal-normal hypersurface-deformation bracket strongly to this order, with the inverse of the \emph{reconstructed physical} spatial metric as its structure function. The proof uses the spatial evolution equations but no multiplier equations and thus does not assume that the data satisfy the constraints. We separately verify the on-shell action of spacetime diffeomorphisms. A real radiative datum gives a nonzero, orientation-sensitive physical Ricci scalar, and the standard chiral on-shell vertex provides a separate field-redefinition-invariant test. All statements are classical and perturbative; no extra-mode truncation at finite coupling, all-order deformation, or quantum constraint algebra is asserted.
+\end{abstract}
+
+\section{Introduction}
+A diffeomorphism-invariant higher-curvature action need not give a practical first-order canonical theory on the branch continuously connected to Einstein gravity. Treating a finite higher-derivative truncation as exact may introduce initial data absent from the effective theory. Even after perturbative reduction there is a separate geometric issue: the canonical metric coordinate can differ from the pullback of the original spacetime metric. Constraint closure with one inverse metric and covariance with another cannot simply be identified. This distinction also matters in attempts to characterize modified hypersurface-deformation algebras \cite{BDS,BDD}.
+
+Glavan, Mukohyama and Zlosnik construct a perturbative ADM reduction and establish first-class closure for a parity-even curvature-cubic term \cite[Secs.~2--5]{GMZ}. Their canonical coordinates and multiplier transformations are not those used below. The chiral classification of the parity-odd Weyl vertex is also established \cite{MP}. The contribution here is the parity-odd canonical formula in a chart in which \emph{both} multipliers remain physical, together with a strong bracket proof in that chart and an explicit real metric witness. We use the parity-even Weyl cubic only as a check of the reduction.
+
+\section{Conventions and statement}
+Use Lorentzian signature \((-+++)\), orientation fixed once and for all, and write the metric as
+\[
+ g=-N^2\,\dd t^2+q_{ij}(\dd x^i+V^i\dd t)(\dd x^j+V^j\dd t).
+\]
+The future unit normal is \(n=N^{-1}(\partial_t-V)\), and
+\(K_{ij}=(\dot q_{ij}-\Lie_Vq_{ij})/(2N)\).
+We choose the curvature convention in which the linearized intrinsic Ricci tensor at Euclidean data in transverse-tracefree gauge is \(-\Delta h/2\). The electric and magnetic Weyl tensors are
+\(E_{ij}=C_{ninj}\) and \(B_{ij}=\tfrac12\epsilon_i{}^{kl}C_{kl n j}\), with the spatial orientation chosen so that \(B\) is the symmetrized curl of \(K\) below. They are symmetric and tracefree. Define, with one index raised by \(q\),
+\begin{equation}
+ I_{\mathrm o}(E,B)=\operatorname{Im}\tr(E+iB)^3
+             =3\tr(E^2B)-\tr(B^3).
+ \label{odd}
+\end{equation}
+This normalization defines the coupling. In the self-dual Weyl decomposition \eqref{odd} is the real oriented cubic Weyl scalar, up to a fixed nonzero multiplier relative to alternative dual-tensor conventions. Let
+\begin{equation}
+ S_{\mathrm{phys}}[g_{\mathrm{phys}}]
+   =\frac{1}{\PG}\int \sqrt{-g_{\mathrm{phys}}}\,
+       \bigl(R[g_{\mathrm{phys}}]+\ep I_{\mathrm o}[g_{\mathrm{phys}}]\bigr)\,\dd^4 x.
+ \label{physaction}
+\end{equation}
+In length units with \(c=1\), \(\ep\) has dimension length to the fourth power. We work modulo \(O(\ep^2)\) in the local formal expansion around the Einstein branch. We use compactly supported variations and smearing fields, or asymptotically flat data with boundary terms kept separate from the local brackets. Lapse is positive and arbitrary, and shift is arbitrary. No symmetry reduction or restrictions on the spatial jets are imposed in the local canonical theorem.
+
+Set
+\begin{equation}
+ E_0(q,K)=(R_{ij}[q]+K K_{ij}-K_i{}^l K_{lj})^{\TF},\qquad
+ B(q,K)_{ij}=(\epsilon_{(i}{}^{kl}D_kK_{l|j)})^{\TF}.
+ \label{carrier}
+\end{equation}
+The indicated tracefree part and all contractions use \(q\).
+\begin{theorem}
+Let \(p^{ij}\) be the canonical momentum density and
+\(K_{0\,ij}=(\PG/\sqrt q)(p_{ij}-\tfrac12 q_{ij}p)\), where \(p=q_{ij}p^{ij}\).
+On the stated branch, the constraints can be written as
+\begin{align}
+ C[N]&=\int_\Sigma N\left[
+ \frac{\PG}{\sqrt q}(p_{ij}p^{ij}-\tfrac12p^2)
+ -\frac{\sqrt q}{\PG}R[q]
+ -\ep\frac{\sqrt q}{\PG}I_{\mathrm o}(E_0(q,K_0),B(q,K_0))\right]\dd^3x,\label{C}\\
+ D[V]&=\int_\Sigma p^{ij}\Lie_Vq_{ij}\,\dd^3x,\nonumber\\
+ q_{\mathrm{phys}}&=q-\frac{3\ep}{2}
+       (E_0B+BE_0)^{\TF}(q,K_0)+O(\ep^2).                         \label{qphys}
+\end{align}
+The lapse and contravariant shift of the reconstructed metric are \(N,V\). With the usual canonical bracket \(\{q_{ij}(x),p^{kl}(y)\}=\delta_{(i}^{k}\delta_{j)}^{l}\delta(x,y)\),
+\begin{align}
+ \{C[f],C[g]\}&=D[q_{\mathrm{phys}}^{-1}(f\,\dd g-g\,\dd f)]+O(\ep^2),\label{CC}\\
+ \{D[X],C[f]\}&=C[\Lie_X f]+O(\ep^2),\\
+ \{D[X],D[Y]\}&=D[[X,Y]] .
+\end{align}
+In \eqref{CC} no constraint is imposed. For spacetime diffeomorphisms with normal and tangential descriptors, the corresponding canonical transformations act on the reconstructed spacetime metric by the on-shell Lie transformation through this order. The local reduced system has two canonical radiative polarizations.
+\end{theorem}
+
+\section{Removing the normal accelerations}
+The spatial Gauss contraction with one spatial index pair contracted is
+\(
+ R^{(4)}_{ij}+R_{ninj}
+ =R_{ij}[q]+K K_{ij}-K_i{}^l K_{lj}.
+\)
+Tracefree projection of the four-dimensional Weyl subtraction gives
+\begin{equation}
+ E=E_0-\tfrac12(R^{(4)}_{ij})^{\TF}.
+ \label{gauss}
+\end{equation}
+In the normal-tangential Weyl projection the Ricci terms contributing to the magnetic tensor are antisymmetric in the remaining spatial indices; the symmetric magnetic part is precisely the Codazzi expression in \eqref{carrier}. Neither identity uses the constraints.
+
+The following change of variables is local on jets. For any polynomial \(I=I(E,B)\), keep \(B\) fixed and let \(I_E\) be the derivative in the electric variable with the \(q\) contraction. Define the spatial covariant tensor
+\begin{equation}
+ F_{ij}=-\frac12\int_0^1
+  \left[I_E\bigl(E_0+s(E-E_0),B\bigr)\right]^{\TF}_{ij}\dd s .
+ \label{F}
+\end{equation}
+Since the tracefree part of the spatial projection of \(G^{\mu\nu}\) agrees with that of \(R^{\mu\nu}\), \eqref{gauss} implies
+\begin{equation}
+ I(E,B)-I(E_0,B)=G^{ij}_{\mathrm{tan}}F_{ij}.
+ \label{difference}
+\end{equation}
+Extend \(F\) to spacetime by \(F=F_{ij}(\dd x^i+V^i\dd t)(\dd x^j+V^j\dd t)\).
+It is tangential, i.e. \(F(n,\cdot)=0\), and \(g+\ep F\) has exactly the same \(N,V\) in this coordinate decomposition. Variation of the Einstein--Hilbert action in the \emph{covariant} metric gives
+\(
+ \delta S_{\mathrm{EH}}=-(\PG)^{-1}\int \sqrt{-g}\,G^{\mu\nu}\delta g_{\mu\nu}
+\)
+up to a boundary divergence. Combining this sign with \eqref{difference},
+\begin{equation}
+ S_{\mathrm{phys}}[g+\ep F(g)]
+ =\frac{1}{\PG}\int\sqrt{-g}\,
+       [R[g]+\ep I(E_0,B)]\,\dd^4x+O(\ep^2).
+ \label{reducedact}
+\end{equation}
+The map \(g_{\mathrm{phys}}=g+\ep F(g)\) is an invertible formal local map at this order, with inverse \(g=g_{\mathrm{phys}}-\ep F(g_{\mathrm{phys}})\) modulo \(O(\ep^2)\). It is deliberately foliation dependent. The original metric action and its geometric observables remain defined in \(g_{\mathrm{phys}}\). In separating out the standard ADM Einstein action we discard only the corresponding transported boundary divergence; all brackets below have compact smearing.
+
+\section{Legendre transform and physical metric}
+After extracting the Einstein boundary term the first-order correction in \eqref{reducedact} depends on \(K\) and spatial derivatives of \(K\), but does not introduce lapse or shift velocities. Spatial integrations by parts define its variational momentum. The six-by-six Einstein velocity Hessian at \(N>0\) is invertible, including its negative trace eigenvalue; no positivity is needed for this inversion. Inverting perturbatively only applies its algebraic inverse to local expressions evaluated at the tree velocity. One is not inverting a finite-\(\ep\) operator with higher spatial derivatives.
+
+More explicitly, if \(\dot q=\dot q_0+\ep v_1\), the order-\(\ep\) terms involving \(v_1\) in \(p\dot q-L_0\) cancel since \(p=\delta L_0/\delta\dot q_0\). Thus the first Hamiltonian correction is minus the first Lagrangian correction evaluated at \(\dot q_0\). At \(\dot q_0=2NK_0+\Lie_Vq\), both \(K\) and its spatial covariant derivatives reduce to those of \(K_0\); all apparent spatial derivatives of the lapse disappear. This establishes \eqref{C}; no modification of the spatial generator is needed.
+
+On histories satisfying the spatial evolution equations, the order-zero spatial projection of \(G^{(4)}_{\mu\nu}\) vanishes. This follows directly by varying \(q\) at fixed \(N,V\), for which the metric variation is purely tangential. Thus its tracefree Ricci part vanishes, even on histories on which the multiplier equations are not imposed. In the coefficient of \(\ep F\) we may therefore put \(E=E_0\) and \(K=K_0\). Since \(I_{\mathrm o,E}=3(EB+BE)^{\TF}\), the physical metric on these histories is precisely \eqref{qphys}. Off such histories the jet map \eqref{F} may depend on accelerations, and \eqref{qphys} is not asserted as an off-shell spacetime field identity. As an internal check, the even Weyl polynomial
+\(I_{\mathrm e}=\tr E^3-3\tr(EB^2)\)
+instead gives \(-3\ep(E_0^2-B^2)^{\TF}/2\) for the shift of the spatial metric.
+
+\section{Strong bracket and geometric transformation}
+\subsection{Multiplier identity without the constraints}
+On the original metric write the diffeomorphism generator in normal and tangential descriptors \((\alpha,\beta)\),
+\(\xi^0=\alpha/N\), \(\xi^i=\beta^i-V^i\alpha/N\).
+The pulled-back transformation is a variational symmetry of \eqref{reducedact}. Because the field map holds the multipliers fixed, their transformations are exactly the geometric ones, using the physical spatial metric:
+\begin{align}
+ \delta N&=\dot\alpha+\beta^i\partial_iN-V^i\partial_i\alpha,\\
+ \delta V&=\dot\beta+[\beta,V]+q_{\mathrm{phys}}^{-1}
+                      (\alpha\,\dd N-N\,\dd\alpha). \label{mult}
+\end{align}
+Here the off-shell metric in \eqref{mult} is first understood as the jet reconstruction. Now evaluate the variational identity on histories satisfying only the first-order canonical equations for \(q,p\), not \(C=D=0\). By the preceding section the structure function in \eqref{mult} is the phase-space expression \eqref{qphys}. For time-compact descriptors the variational identity reduces to \(\int(C[\delta N]+D[\delta V])\,\dd t=0\). Integrating time derivatives of the descriptors yields, for time-independent test labels on each slice,
+\begin{equation}
+ \frac{\dd}{\dd t}\bigl(C[\alpha]+D[\beta]\bigr)=
+ C[\beta^i\partial_iN-V^i\partial_i\alpha]+
+ D\bigl[[\beta,V]+q_{\mathrm{phys}}^{-1}(\alpha\,\dd N-N\,\dd\alpha)\bigr].
+ \label{noether}
+\end{equation}
+The left side is the canonical bracket with \(C[N]+D[V]\).
+The canonical invariance of the integral of a lapse times a scalar density under spatial diffeomorphisms yields the mixed bracket directly; the generator \(D\) yields the spatial bracket. Equation \eqref{noether} then gives \eqref{CC}.
+
+The equality is strong: every smooth initial canonical spatial jet can be the initial jet of a formal history satisfying the dynamical equations, simply by recursively specifying its time derivatives. The Noether identity after the spatial integrations is a local identity on these equation jets, so no Cauchy problem with arbitrary unconstrained data is assumed. In particular, invoking the spatial equations in \eqref{gauss} does not set either the Hamiltonian or the momentum constraint to zero. Positive lapse is not a restriction on the smearings in the final bilinear identity, since a compact signed smearing is a difference of two positive lapse choices agreeing in the outer region, and the identity is linear in lapse.
+
+\subsection{Why closure also describes the metric transformation}
+The pulled-back diffeomorphism maps constrained solutions of the canonical system to constrained solutions; momenta are obtained by the perturbative Legendre map. For a time-dependent descriptor the canonical transformation generated by \(C[\alpha]+D[\beta]\), together with \eqref{mult}, also maps constrained solutions to constrained solutions, by the bracket just proved. To see the first statement directly, the invertible local metric map identifies the two Euler--Lagrange systems order by order, and the Legendre map identifies the spatial equations. For the second, differentiating the Hamiltonian variation of \(q,p\) in time gives the generator with explicit descriptor derivative plus its bracket with the Hamiltonian; by \eqref{noether} this is exactly the multiplier change, modulo terms proportional to constraints that vanish in this on-shell comparison.
+
+Compare the two tangent variations at a fixed constrained smooth solution. Their changes of \(N,V\) agree. Their difference in \(q,p\) solves homogeneous linearized dynamical equations with zero changes of those multipliers. Crucially this difference is a finite-order local linear differential operator in the arbitrary descriptors \(\alpha,\beta\) at each perturbative order. The linearized canonical dynamical equation is first order in time on \(q,p\) (its other derivatives are spatial). If \(s\) is the greatest time derivative order of a descriptor occurring in the difference, the coefficient of its freely specifiable order-\((s+1)\) time jet, including its independent spatial jets, occurs only on the left time derivative. It must vanish. Descending in \(s\) proves that the difference is zero, order by order. This argument uses local independence of descriptor jets, not uniqueness of an arbitrary lapse-fixed off-shell Cauchy problem. Thus the canonical transformation on the reconstructed metric is the Lie transformation modulo \(O(\ep^2)\). This is an on-shell statement and does not assign the naive Lie law to the auxiliary canonical \(q\) off shell.
+
+The four constraints are a regular perturbation of the locally independent Einstein constraints. Subtracting four first-class pairs from the six spatial canonical pairs leaves two local physical pairs. Global Killing or linearization-stability conditions on particular topologies are not part of this local count.
+
+\section{A real vacuum witness and invariant inequivalence}
+\subsection{Change in the specified physical metric}
+The density \(\sqrt{-g}I_{\mathrm o}\) has local Weyl weight \(-2\) in dimension four. The Weyl tensor transformation is homogeneous, so this conformal variation contains no derivatives of the compact conformal parameter \(\omega\). Under \(\delta g_{\mu\nu}=2\omega g_{\mu\nu}\), the Einstein term contributes \(2\omega R\) modulo a divergence. The trace of the original field equation therefore yields
+\begin{equation}
+ R[g_{\mathrm{phys}}]=\ep I_{\mathrm o}[g_{\mathrm{phys}}]+O(\ep^2).
+ \label{traceread}
+\end{equation}
+This is a statement about the specified physical metric, not about every metric field convention.
+
+At the origin of an initially nearly flat slice fix the leading transverse-tracefree metric and extrinsic-curvature perturbations, for a nonzero fixed \(k\), by the jets of
+\begin{equation}
+ h_{xx}=-h_{yy}=(2a/k^2)\cos(kz),\qquad K_{xz}=K_{zx}=(a/k)\sin(ky),
+ \label{jets}
+\end{equation}
+with other components zero. In the orientation used above the pointwise leading tensors are
+\[
+ E=a\,\mathrm{diag}(1,-1,0),\qquad B=a\,\mathrm{diag}(1,0,-1).
+\]
+Indeed the first follows from \(-\Delta h/2\) and the second from the two \(y\)-curl components of \(K\). Then \(\tr B^3=0\) and \(\tr(E^2B)=a^3\), giving \(I_{\mathrm o}=3a^3\) to leading order. The signs are reversed by a spatial mirror at fixed orientation convention.
+
+One can realize this local datum in regular exact small Einstein initial data before computing its order-\(\ep\) correction. Replace each plane-wave pair by narrow real Schwartz Fourier packets with support away from zero and project to the Euclidean transverse-tracefree plane at each Fourier covector. Their finite jets approximate \eqref{jets} to arbitrarily small relative error by shrinking the caps. Use the resulting metric seed and the small York-corrected tracefree momentum in the asymptotically Euclidean conformal constraint construction. At the flat maximal base, in a decaying weighted interval of weights \((-1,0)\), the scalar Laplacian and vector conformal Laplacian are invertible: constants and Euclidean conformal Killing fields are excluded, the scalar and transverse/longitudinal symbols have Newtonian inverses, and the usual weighted elliptic estimates give the isomorphisms. Small coefficients preserve invertibility. The derivative of the scalar/vector constraint defects vanishes on these transverse-tracefree seeds, so the Einstein corrections start quadratically in the small seed amplitude. For the coefficient of \(\ep\), the corrected ADM constraints supply smooth decaying inhomogeneities to the same linearized conformal equations at the exact Einstein datum. Inverting that block supplies the formal first-order data correction; we do not solve an exact higher-derivative Cauchy problem. Its insertion in the right side of \eqref{traceread} affects only order \(\ep^2\).
+
+The scalar in \eqref{traceread} consequently has a nonzero order-\(\ep\) coefficient on an open set of the local radiative development for a sufficiently narrow packet and then sufficiently small nonzero \(a\). A finite invariant readout can use a small geometrically marked proper neighborhood there. In vacuum Einstein gravity \(R\) vanishes on every such neighborhood. This comparison holds with the physical metric specified in \eqref{physaction}; it does not use curvature evaluated in the auxiliary \(q\) convention.
+
+\subsection{A diagnostic invariant under field redefinition}
+The metric trace witness alone does not show that a local field redefinition cannot remove the deformation. For that question use a separate on-shell diagnostic. The cubic invariant equals, with a real fixed overall normalization, the difference of the two chiral Weyl cubics divided by \(i\). The linearized chiral Weyl spinors of external definite-helicity gravitons are proportional to fourth powers of their two-component momentum spinors. Thus the local cubic gives nonzero \((+++)\) and \((---)\) complex three-point amplitudes proportional to \([12]^2[23]^2[31]^2\) and its angle-bracket counterpart, with the opposite relative sign (or opposite \(i\) phases against the even cubic). All mixed-helicity three-point amplitudes from this cubic vanish. These are also the chiral structures underlying the flat-space comparison of \cite{MP}.
+
+For a four-point test take the all-outgoing helicities \((+++-)\) and factorize in the \(s_{12}\) channel. In complex kinematics on the branch \(\langle12\rangle=0\), \([34]=0\) with the crossed invariant nonzero, the left odd \((+++)\) vertex and the right Einstein \((--+)\) vertex give a nonzero residue with opposite internal helicities. The reverse placement of the Weyl vertex is absent because its external pair has mixed helicities. A local contact term cannot cancel this residue. The rational tree amplitude is therefore not identically zero, and by analytic continuation/crossing it is nonzero on an open set of real physical scattering kinematics. The single-minus Einstein four-point tree vanishes. The equivalence theorem for local perturbatively invertible field redefinitions that are identity to linear order preserves the on-shell amplitudes, so the parity-odd interaction is not removable within that class. This is an inequivalence check on the Hamiltonian realization, not a new classification of graviton on-shell vertices.
+
+\paragraph{A polarized rate test.}
+Cross legs 1 and 2 in both channels, fix their incoming helicities and the helicity of final leg 4, and fix a common oriented polarization frame. Let \(M_+=\ep B+O(\ep^2)\) and \(M_-=A+O(\ep)\) be the two amplitudes that differ only in the helicity of final leg 3. The Einstein MHV amplitude \(A\) and the odd correction \(B\) are both nonzero at generic matched kinematics. Analyze leg 3 in the two states \((|+\rangle\pm e^{i\phi}|-\rangle)/\sqrt2\). The difference of rates per common phase-space and flux factor is
+\[
+  2\operatorname{Re}\bigl(e^{i\phi}M_+M_-^*\bigr)
+  =2\ep\operatorname{Re}\bigl(e^{i\phi}B A^*\bigr)+O(\ep^2).
+\]
+The two choices \(\phi=0,\pi/2\) access the two calibrated interference quadratures. This tree-level comparison distinguishes interactions despite strong geometric constraint closure in both theories; it does not select an ultraviolet completion.
+
+\section{Comparison and limits}
+The nearest published reduction is \cite[Secs.~3--5]{GMZ}, whose curvature-cubic interaction is parity even. Their final canonical variables have multiplier as well as spatial metric maps. Geometrical descriptors must be correspondingly transformed if their algebra is to be compared to a physical metric; comparing printed inverse-metric coefficients at fixed coordinate descriptors would not be meaningful. Our proof does not require an off-shell equivalence between the two canonical charts. The established parity-even on-shell independence \cite{BKZ} is likewise not a novelty claim of this work. The result proved here is a parity-odd explicit local Hamiltonian, strong closure with specified geometric coefficients, and real and redefinition-invariant checks of its content. We do not characterize all deformations with a closing constraint algebra; nor do we extrapolate the formal \(\ep\) expansion to large curvatures, extra propagating poles, boundary charge quantization, or quantum anomaly freedom.
+
+\begin{thebibliography}{9}
+\bibitem{GMZ}
+D.~Glavan, S.~Mukohyama and T.~Zlosnik,
+\newblock Removing spurious degrees of freedom from EFT of gravity,
+\newblock \href{https://arxiv.org/abs/2409.15989}{arXiv:2409.15989}, especially Secs.~3--5.
+\bibitem{BDS}
+M.~Bojowald, E.~I.~Duque and A.~Shah,
+\newblock Hypersurface deformations, arXiv:2410.18807,
+\newblock \href{https://arxiv.org/html/2410.18807v1}{primary text}, Eqs.~(6)--(7), (70), (87), (99)--(102).
+\bibitem{BDD}
+M.~Bojowald, M.~Diaz and E.~I.~Duque,
+\newblock Perturbative emergent modified gravity on cosmological backgrounds: Kinematics, arXiv:2507.14358,
+\newblock \href{https://arxiv.org/html/2507.14358}{primary text}, Eqs.~(63)--(77) and App.~A.
+\bibitem{MP}
+J.~M.~Maldacena and G.~L.~Pimentel,
+\newblock On graviton non-Gaussianities during inflation,
+\newblock JHEP \textbf{09} (2011) 045,
+\newblock \href{https://doi.org/10.1007/JHEP09(2011)045}{doi:10.1007/JHEP09(2011)045},
+\newblock \href{https://arxiv.org/abs/1104.2846}{arXiv:1104.2846}, Secs.~2.2, 2.5.
+\bibitem{BKZ}
+Z.~Bern, D.~Kosmopoulos and A.~Zhiboedov,
+\newblock Gravitational effective field theory islands, low-spin dominance, and the four-graviton amplitude,
+\newblock \href{https://arxiv.org/abs/2103.12728}{arXiv:2103.12728}, Eqs.~(77)--(81).
+\end{thebibliography}
+\end{document}
+

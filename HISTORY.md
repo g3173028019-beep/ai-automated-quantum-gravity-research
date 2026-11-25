@@ -2,7 +2,7 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains 24 manuscripts: the twenty original packets plus papers 21–24. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 29 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and three newly typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
 
@@ -17,6 +17,8 @@ The current collection contains 24 manuscripts: the twenty original packets plus
 The [detailed scientific history at the completed delivery](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/blob/fe8491e7ff572d0da8b6b3db54216f7e06e14220/HISTORY.md) retains the earlier source selections and recorded identifiers. Current provenance remains in each paper packet. This bibliography and navigation integration adds no new scientific calculation.
 
 The four later [analytical manuscripts](docs/PAPER-INDEX.md#21-weyl-relative-entropy) first entered the public repository in [551cf7b](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/commit/551cf7b54828bfa09e3112ad47122d3c6a6d6764) on 23 November 2026. The main catalog now assigns them numbers 21–24; no original packet was renumbered.
+
+Papers 25 and 26 entered the archive in [7a849c9](https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/commit/7a849c9eb29fa1f543a973c8d58fb4c2e71c5be1). On 25 November 2026, the public repository added papers 27–29 with source and compiled PDFs: [27 · Parity-odd Weyl-cubic ADM gravity](papers/27-parity-odd-weyl-cubic-adm/README.md); [28 · The Einstein tensor from Lorentzian Regge variation](papers/28-lorentzian-regge-einstein-tensor/README.md); [29 · Physical polarization in the vacuum high-frequency limit](papers/29-high-frequency-graviton-polarization/README.md). The archive date isn't a claim about when the underlying results were first obtained, nor about priority.
 
 ## Versioned revisions
 

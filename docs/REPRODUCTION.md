@@ -87,6 +87,16 @@ These Markdown manuscripts are the editable derivations. They do not include a s
 - [25 · Characteristic data](../papers/25-characteristic-data-symplectic-rank/manuscript.md): Recompute the endpoint-moment rank and check the symplectic Gram pairing on disjoint radial intervals. The Raychaudhuri check is a separate second-order statement.
 - [26 · Neutral de Sitter states](../papers/26-neutral-de-sitter-mass-susceptibility/manuscript.md): Check the neutral-mode comparison and the susceptibility lower bound on bounded local approximants. This is an analytic derivation, not a simulation.
 
+## Papers 27–29: rebuild the analytical articles
+
+With a standard TeX Live installation, open the chosen paper directory and run `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex`; the generated file is `main.pdf`. The repository copy is named `manuscript.pdf`.
+
+- [27 · Parity-odd Weyl-cubic ADM gravity](../papers/27-parity-odd-weyl-cubic-adm/README.md): Check the normal-acceleration elimination and boundary term, the unrestricted bracket using evolution but not multiplier equations, and the reconstructed metric map. The radiative and field-redefinition-invariant vertex tests have different roles.
+- [28 · The Einstein tensor from Lorentzian Regge variation](../papers/28-lorentzian-regge-einstein-tensor/README.md): Check the sign at timelike and spacelike joints, Hessian symmetry at the smooth basepoint, the separate bulk/face/hinge Taylor bounds, and the affine interpolation example.
+- [29 · Physical polarization in the vacuum high-frequency limit](../papers/29-high-frequency-graviton-polarization/README.md): Check the screen quotient and Hermitian test, the covariant matrix symbol and compensated source terms, and the two opposite-helicity exact vacuum families.
+
+These are analytical derivations, not numerical runs. Rebuilding confirms the source and layout, not the mathematical argument.
+
 ## Rebuild a manuscript
 
 With an existing compatible TeX distribution providing `latexmk`, `pdflatex` and BibTeX, run from the repository root:

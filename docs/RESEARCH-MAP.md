@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Paper index](PAPER-INDEX.md) · [Reproduction](REPRODUCTION.md)
 
-The archive connects explicit information tasks, coupled-field state construction, finite geometry/control, and limits of reconstruction. A channel error bound, a Hadamard state-existence theorem, an exact finite algebra and a descriptive process study answer different scientific questions. The routes below group all 26 manuscripts by those questions while retaining each action, state space, input class and observable.
+The archive connects explicit information tasks, coupled-field state construction, finite geometry/control, and limits of reconstruction. A channel error bound, a Hadamard state-existence theorem, an exact finite algebra and a descriptive process study answer different scientific questions. The routes below group all 29 manuscripts by those questions while retaining each action, state space, input class and observable.
 
 ## Geometry–matter information tasks
 
@@ -92,6 +92,12 @@ Suggested route: **17 → 11 → 22** to compare exact local elimination, finite
 [20. Claim correction and artifact growth](../papers/20-ai-research-case-study/README.md) studies preserved artifact states, actual correction cases and sensitivity of a filename classification. It is a descriptive methods paper. File growth, a mutable timestamp cutoff or a changed classification fraction does not establish model superiority, a causal audit effect or scientific value by itself.
 
 This provides a route into how the archive’s arguments were corrected, not a ranking or validation of the other 19 papers. [Declarations](../DECLARATIONS.md) records operator-reported model chronology and unresolved credit; [History](../HISTORY.md) separates source dates and editions.
+
+## The Einstein dynamics and correspondence limits
+
+- [27 · Parity-odd Weyl-cubic ADM gravity](../papers/27-parity-odd-weyl-cubic-adm/README.md) starts with a continuum curvature interaction and asks what remains of the geometric constraint algebra after order reduction. Compare [19](../papers/19-local-gauge-benchmarks/) for a distinct free gauge and causality question.
+- [28 · The Einstein tensor from Lorentzian Regge variation](../papers/28-lorentzian-regge-einstein-tensor/README.md) asks whether the complete signed variation converges along genuinely refining Lorentzian meshes. It extends the archive's finite Regge questions [11](../papers/11-causal-regge-transfer/), [17](../papers/17-cartan-regge-closure/) and [22](../papers/22-lorentzian-regge-airy/) in a different direction; those papers establish neither its hypotheses nor its limit.
+- [29 · Physical polarization in the vacuum high-frequency limit](../papers/29-high-frequency-graviton-polarization/README.md) asks what physical tensor information survives a high-frequency weak limit. [25](../papers/25-characteristic-data-symplectic-rank/) addresses a related loss of radiative information at a characteristic endpoint, using a different construction and no high-frequency limit.
 
 ## Using the routes
 

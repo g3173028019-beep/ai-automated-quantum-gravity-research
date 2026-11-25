@@ -2,7 +2,7 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Reproduction guide](docs/REPRODUCTION.md)
 
-The archive contains 20 paper packets. The manuscripts state their arguments, calculation files expose supporting algebra or numerics, and local verification notes distinguish executed checks, mathematical inputs and retained evidence. The [historical verification record](docs/VERIFICATION-HISTORY.md) preserves the full delivery narrative.
+The original archive contains 20 full research packets. Later analytical manuscripts are documented separately below. The manuscripts state their arguments, calculation files expose supporting algebra or numerics, and local verification notes distinguish executed checks, mathematical inputs and retained evidence. The [historical verification record](docs/VERIFICATION-HISTORY.md) preserves the full delivery narrative.
 
 ## Evidence used in this archive
 
@@ -54,6 +54,14 @@ Paper 07 modifies a clock-foliated effective action and constructs a finite-band
 - [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md). Free linearized Einstein gravity in the Bunch–Davies state, with the specified tracer calibration. Neither detector backreaction nor a state-construction theorem is proved.
 
 The statements and derivations are in the Markdown files. The earlier twenty-packet calculation replays do not verify these four proofs, and no new external review is claimed by this integration.
+
+## Analytical evidence in papers 25–29
+
+Papers [25 and 26](docs/PAPER-INDEX.md#25-characteristic-data-and-radiative-symplectic-rank) give complete scoped Markdown derivations. The typeset papers below provide TeX sources and paper-specific reviews. Internal cross-checks and clean compilation do not constitute external expert review.
+
+- [27 · Parity-odd Weyl-cubic ADM gravity](papers/27-parity-odd-weyl-cubic-adm/VERIFICATION.md): Check the normal-acceleration elimination and boundary term, the unrestricted bracket using evolution but not multiplier equations, and the reconstructed metric map. The radiative and field-redefinition-invariant vertex tests have different roles.
+- [28 · The Einstein tensor from Lorentzian Regge variation](papers/28-lorentzian-regge-einstein-tensor/VERIFICATION.md): Check the sign at timelike and spacelike joints, Hessian symmetry at the smooth basepoint, the separate bulk/face/hinge Taylor bounds, and the affine interpolation example.
+- [29 · Physical polarization in the vacuum high-frequency limit](papers/29-high-frequency-graviton-polarization/VERIFICATION.md): Check the screen quotient and Hermitian test, the covariant matrix symbol and compensated source terms, and the two opposite-helicity exact vacuum families.
 
 ## Reusing evidence and reading the history
 
