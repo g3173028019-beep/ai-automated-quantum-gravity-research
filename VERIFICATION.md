@@ -55,13 +55,16 @@ Paper 07 modifies a clock-foliated effective action and constructs a finite-band
 
 The statements and derivations are in the Markdown files. The earlier twenty-packet calculation replays do not verify these four proofs, and no new external review is claimed by this integration.
 
-## Analytical evidence in papers 25–29
+## Analytical evidence in papers 25–31
 
 Papers [25 and 26](docs/PAPER-INDEX.md#25-characteristic-data-and-radiative-symplectic-rank) give complete scoped Markdown derivations. The typeset papers below provide TeX sources and paper-specific reviews. Internal cross-checks and clean compilation do not constitute external expert review.
 
 - [27 · Parity-odd Weyl-cubic ADM gravity](papers/27-parity-odd-weyl-cubic-adm/VERIFICATION.md): Check the normal-acceleration elimination and boundary term, the unrestricted bracket using evolution but not multiplier equations, and the reconstructed metric map. The radiative and field-redefinition-invariant vertex tests have different roles.
 - [28 · The Einstein tensor from Lorentzian Regge variation](papers/28-lorentzian-regge-einstein-tensor/VERIFICATION.md): Check the sign at timelike and spacelike joints, Hessian symmetry at the smooth basepoint, the separate bulk/face/hinge Taylor bounds, and the affine interpolation example.
 - [29 · Physical polarization in the vacuum high-frequency limit](papers/29-high-frequency-graviton-polarization/VERIFICATION.md): Check the screen quotient and Hermitian test, the covariant matrix symbol and compensated source terms, and the two opposite-helicity exact vacuum families.
+
+- [30 · Nariai rigidity under null completeness](papers/30-nariai-null-completeness/VERIFICATION.md): Check the covering/seed from Galloway–Ling, the normal-connection identity and Killing-field integral, the equal pole-period obstruction, and Lafuente López’s global identification. Cross-checked analytically; no numerical dependency.
+- [31 · Classically matched vacuum waves with opposite quantum transfer](papers/31-graviton-metaplectic-transfer/VERIFICATION.md): Check the smooth trace-free retuning, the even-repeat metaplectic sign, nonzero-band gravitational constraint return, fixed Weyl dual smears, and exact same-collar composition. Cross-checked analytically; no numerical dependency.
 
 ## Reusing evidence and reading the history
 

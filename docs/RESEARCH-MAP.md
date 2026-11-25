@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Paper index](PAPER-INDEX.md) · [Reproduction](REPRODUCTION.md)
 
-The archive connects explicit information tasks, coupled-field state construction, finite geometry/control, and limits of reconstruction. A channel error bound, a Hadamard state-existence theorem, an exact finite algebra and a descriptive process study answer different scientific questions. The routes below group all 29 manuscripts by those questions while retaining each action, state space, input class and observable.
+The archive connects explicit information tasks, coupled-field state construction, finite geometry/control, and limits of reconstruction. A channel error bound, a Hadamard state-existence theorem, an exact finite algebra and a descriptive process study answer different scientific questions. The routes below group all 31 manuscripts by those questions while retaining each action, state space, input class and observable.
 
 ## Geometry–matter information tasks
 
@@ -98,6 +98,13 @@ This provides a route into how the archive’s arguments were corrected, not a r
 - [27 · Parity-odd Weyl-cubic ADM gravity](../papers/27-parity-odd-weyl-cubic-adm/README.md) starts with a continuum curvature interaction and asks what remains of the geometric constraint algebra after order reduction. Compare [19](../papers/19-local-gauge-benchmarks/) for a distinct free gauge and causality question.
 - [28 · The Einstein tensor from Lorentzian Regge variation](../papers/28-lorentzian-regge-einstein-tensor/README.md) asks whether the complete signed variation converges along genuinely refining Lorentzian meshes. It extends the archive's finite Regge questions [11](../papers/11-causal-regge-transfer/), [17](../papers/17-cartan-regge-closure/) and [22](../papers/22-lorentzian-regge-airy/) in a different direction; those papers establish neither its hypotheses nor its limit.
 - [29 · Physical polarization in the vacuum high-frequency limit](../papers/29-high-frequency-graviton-polarization/README.md) asks what physical tensor information survives a high-frequency weak limit. [25](../papers/25-characteristic-data-symplectic-rank/) addresses a related loss of radiative information at a characteristic endpoint, using a different construction and no high-frequency limit.
+
+## Exact vacuum rigidity and quantum transfer
+
+- [30 · Nariai rigidity under null completeness](../papers/30-nariai-null-completeness/README.md): Under the stated four-dimensional Einstein vacuum, positive cosmological constant, two-sided null-completeness, compact nonspherical semidefinite Cauchy hypotheses, the Lorentzian universal cover is the Nariai product.
+- [31 · Classically matched vacuum waves with opposite quantum transfer](../papers/31-graviton-metaplectic-transfer/README.md): Two smooth exact vacuum plane waves match full classical Jacobi and longitudinal returns but have opposite calibrated physical two-helicity band Weyl brackets. For (N) concatenated intervals, the adjacent brackets distinguish (2^N) relative lift histories while the exterior map retains their product.
+
+The two manuscripts use different stocks. The Lorentzian universal-cover rigidity result is classical; it does not furnish a quantum state for the sandwich-wave comparison.
 
 ## Using the routes
 

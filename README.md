@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**29 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 3 typeset analytical articles**
+**31 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 5 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 29 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 31 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -18,7 +18,7 @@ Positive physical states for coupled fields, quantitative geometry–matter info
 | **What remains stable when discrete geometry is changed?** | [17 · Cartan–Regge closure](papers/17-cartan-regge-closure/) treats the finite first-order reduction; [11 · Causal Regge transfer](papers/11-causal-regge-transfer/) isolates a finite Lorentzian channel; [22 · Lorentzian Regge Airy asymptotics](papers/22-lorentzian-regge-airy/manuscript.md) resolves the behavior of a specific saddle merger. |
 | **Which radiative quantities can be transported or measured?** | [23 · Gravitational memory and boosts](papers/23-gravitational-memory-boost/manuscript.md) treats its stated memory sector; [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md) studies a separate finite-aperture record in a specified graviton vacuum. |
 
-These routes connect the 20 original packets with the six later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
+These routes connect the 20 original packets with the eleven later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
 
 ## New TeX and PDF manuscripts
 
@@ -27,6 +27,8 @@ These routes connect the 20 original packets with the six later analytical manus
 | [27 · Parity-odd Weyl-cubic ADM gravity](papers/27-parity-odd-weyl-cubic-adm/README.md) | A local first-order reduction retains the original lapse and contravariant shift. The strong normal-normal bracket uses the reconstructed physical spatial metric; the paper gives separate covariance and parity-sensitive physical checks. | [PDF](papers/27-parity-odd-weyl-cubic-adm/manuscript.pdf) · [TeX](papers/27-parity-odd-weyl-cubic-adm/main.tex) |
 | [28 · The Einstein tensor from Lorentzian Regge variation](papers/28-lorentzian-regge-einstein-tensor/README.md) | For the stated tangentially continuous approximation class, the signed bulk, face and joint terms give an order-two error in the dual of tensor H²₀. A nonflat vacuum plane wave realizes the assumptions on a mixed-sign family beyond conformal products. | [PDF](papers/28-lorentzian-regge-einstein-tensor/manuscript.pdf) · [TeX](papers/28-lorentzian-regge-einstein-tensor/main.tex) |
 | [29 · Physical polarization in the vacuum high-frequency limit](papers/29-high-frequency-graviton-polarization/README.md) | Under Huneau–Luk generalized-wave-coordinate hypotheses, a two-polarization positive matrix measure is transported along the null flow. Its trace is the scalar Burnett measure. Exact vacuum sequences with the same limiting stress have opposite circular polarization. | [PDF](papers/29-high-frequency-graviton-polarization/manuscript.pdf) · [TeX](papers/29-high-frequency-graviton-polarization/main.tex) |
+| [30 · Nariai rigidity under null completeness](papers/30-nariai-null-completeness/README.md) | Under the stated four-dimensional Einstein vacuum, positive cosmological constant, two-sided null-completeness, compact nonspherical semidefinite Cauchy hypotheses, the Lorentzian universal cover is the Nariai product. |
+| [31 · Classically matched vacuum waves with opposite quantum transfer](papers/31-graviton-metaplectic-transfer/README.md) | Two smooth exact vacuum plane waves match full classical Jacobi and longitudinal returns but have opposite calibrated physical two-helicity band Weyl brackets. For (N) concatenated intervals, the adjacent brackets distinguish (2^N) relative lift histories while the exterior map retains their product. |
 
 These are analytical manuscripts with scoped classical theorems. Read the linked paper notes for the hypotheses and technical checks.
 
@@ -62,7 +64,7 @@ The connections are scientific reading routes across distinct models. The [resea
 
 ## Reproduce a result
 
-The original 20 packets have local READMEs, calculation files and verification records. Papers 21–26 are analytical Markdown manuscripts. Papers 27–29 include source TeX, compiled PDFs and paper-specific verification notes; they do not require a numerical replay. A short exact example, using only Python's standard library, checks the corrected projection-fibre example:
+The original 20 packets have local READMEs, calculation files and verification records. Papers 21–26 are analytical Markdown manuscripts. Papers 27–31 include source TeX, compiled PDFs and paper-specific verification notes; they do not require a numerical replay. A short exact example, using only Python's standard library, checks the corrected projection-fibre example:
 
 ~~~powershell
 cd papers/01-projection-sign-rigidity
@@ -99,7 +101,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All 29 questions, results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 31 questions, results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |

@@ -87,7 +87,7 @@ These Markdown manuscripts are the editable derivations. They do not include a s
 - [25 · Characteristic data](../papers/25-characteristic-data-symplectic-rank/manuscript.md): Recompute the endpoint-moment rank and check the symplectic Gram pairing on disjoint radial intervals. The Raychaudhuri check is a separate second-order statement.
 - [26 · Neutral de Sitter states](../papers/26-neutral-de-sitter-mass-susceptibility/manuscript.md): Check the neutral-mode comparison and the susceptibility lower bound on bounded local approximants. This is an analytic derivation, not a simulation.
 
-## Papers 27–29: rebuild the analytical articles
+## Papers 27–31: rebuild the analytical articles
 
 With a standard TeX Live installation, open the chosen paper directory and run `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex`; the generated file is `main.pdf`. The repository copy is named `manuscript.pdf`.
 
@@ -96,6 +96,9 @@ With a standard TeX Live installation, open the chosen paper directory and run `
 - [29 · Physical polarization in the vacuum high-frequency limit](../papers/29-high-frequency-graviton-polarization/README.md): Check the screen quotient and Hermitian test, the covariant matrix symbol and compensated source terms, and the two opposite-helicity exact vacuum families.
 
 These are analytical derivations, not numerical runs. Rebuilding confirms the source and layout, not the mathematical argument.
+
+- [30 · Nariai rigidity under null completeness](../papers/30-nariai-null-completeness/README.md): `cd papers/30-nariai-null-completeness` and run `pdflatex -halt-on-error main.tex` twice. Check the covering/seed from Galloway–Ling, the normal-connection identity and Killing-field integral, the equal pole-period obstruction, and Lafuente López’s global identification. Cross-checked analytically; no numerical dependency.
+- [31 · Classically matched vacuum waves with opposite quantum transfer](../papers/31-graviton-metaplectic-transfer/README.md): `cd papers/31-graviton-metaplectic-transfer` and run `pdflatex -halt-on-error main.tex` twice. Check the smooth trace-free retuning, the even-repeat metaplectic sign, nonzero-band gravitational constraint return, fixed Weyl dual smears, and exact same-collar composition. Cross-checked analytically; no numerical dependency.
 
 ## Rebuild a manuscript
 

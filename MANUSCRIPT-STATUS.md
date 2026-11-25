@@ -31,11 +31,14 @@ The proofs are in the Markdown manuscripts. These entries do not claim a new num
 
 ## Later analytical manuscripts
 
-Papers [25 and 26](docs/PAPER-INDEX.md#25-characteristic-data-and-radiative-symplectic-rank) are analytical Markdown manuscripts. Papers 27–29 are standalone typeset versions:
+Papers [25 and 26](docs/PAPER-INDEX.md#25-characteristic-data-and-radiative-symplectic-rank) are analytical Markdown manuscripts. Papers 27–31 are standalone typeset versions:
 
 - [27 · Parity-odd Weyl-cubic ADM gravity](papers/27-parity-odd-weyl-cubic-adm/README.md): Four-dimensional vacuum on the analytic perturbative branch, to first order in the Weyl-cubic coupling. No higher-order or quantum constraint algebra is asserted.
 - [28 · The Einstein tensor from Lorentzian Regge variation](papers/28-lorentzian-regge-einstein-tensor/README.md): Classical four-dimensional affine, quasi-uniform admissible meshes with uniform non-null margins and regular normal fans. It estimates variational consistency, not convergence of discrete solutions.
 - [29 · Physical polarization in the vacuum high-frequency limit](papers/29-high-frequency-graviton-polarization/README.md): Classical four-dimensional forward limit under the specified gauge and scale bounds. No unrestricted-gauge theorem, inverse limit, or quantum state construction is asserted.
+
+- [30 · Nariai rigidity under null completeness](papers/30-nariai-null-completeness/README.md): This is universal-cover metric rigidity, not a classification of deck groups or of arbitrary double-null spacetimes. The proof takes Galloway–Ling’s null foliations as input and supplies the zero-twist, compact-warp and global-continuation steps.
+- [31 · Classically matched vacuum waves with opposite quantum transfer](papers/31-graviton-metaplectic-transfer/README.md): Statements concern a marked frequency-gapped characteristic band with fixed gravitational normalization. The sign acts on the physical linear transfer, not on an arbitrary overall Fock phase. No global Peierls or interacting theorem is asserted.
 
 ## Stronger original claims not presented as completed papers
 

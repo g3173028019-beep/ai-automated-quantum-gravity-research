@@ -1,0 +1,142 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,geometry,hyperref}
+\geometry{margin=1in}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\title{Identical Jacobi Returns and Opposite Graviton Transfer in Exact Vacuum Sandwiches}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct two smooth four-dimensional vacuum plane-wave sandwiches with the same marked flat collars, identical transverse Jacobi maps and identical longitudinal geodesic return. Their linearized gravitational transfer maps nevertheless differ by a minus sign on a common longitudinal-frequency band bounded away from zero. We prove this by retuning smooth trace-free oscillator cells and reconstructing the two physical screen polarizations from the linearized Einstein equations. The sign is detected by a nonzero cross-collar bracket of calibrated linearized Weyl smearings, normalized by the characteristic Einstein--Hilbert form. Concatenating the sandwiches gives independent interval signs, while the exterior transfer retains only their product. The sign contrast of any fixed finite set of such readings persists under small profile changes. The result concerns a marked characteristic band, not a global plane-wave quantization.
+\end{abstract}
+
+\section{Geometric setting and statement}
+Consider smooth Brinkmann metrics
+\begin{equation}
+ g_H=-2\,du\,dv+\delta_{ij}\,dX^i dX^j+F_H(u,X)\,du^2,
+ \qquad F_H(u,X)=X^\mathsf{T}H(u)X ,
+ \label{eq:metric}
+\end{equation}
+where $H$ is a real symmetric trace-free $2\times2$ matrix of compact support in the interior of a fixed finite interval. The sole potentially nonzero Ricci component is $R_{uu}=-\operatorname{tr}H$, so these are exact vacuum spacetimes. The metric is flat on both end collars. Mark $u,v$, the transverse Cartesian axes, and a real orthonormal basis of screen symmetric trace-free tensors on the collars. These marks, including the normalization of $\partial_v$, are identical in every comparison.
+
+Fix $0<k_{\min}<k_{\max}<\infty$ and use real characteristic test data Schwartz in $(v,X)$, with smooth Fourier support in the longitudinal band $k_{\min}\le |k|\le k_{\max}$. The two Fourier signs are related by reality. In particular the use of a longitudinal band is not a claim of compact localization in $v$.
+
+\begin{theorem}
+There are two metrics of the form \eqref{eq:metric} with common flat collars, identical full transverse Jacobi transfer and identical longitudinal geodesic return, but opposite physical linearized graviton transfers on the marked band. Their relative sign is detected by a nonzero bracket between the same two band-limited Weyl smearings on the early and late collars. For each $N\ge1$, concatenation yields $2^N$ histories with the same classical returns between every pair of the $N+1$ marked collars. The adjacent Weyl brackets distinguish all these histories; the exterior physical transfer depends only on the product of their interval signs. The bracket contrast of fixed tests is stable under sufficiently small $L^1$ changes of the smooth profile preserving the collar marks.
+\end{theorem}
+
+\section{Matching the exact classical returns}
+For an affinely parametrized geodesic with nonzero $du/ds$, rescale its parameter so $du/ds=1$. Its transverse equation and constant squared norm $c$ then give
+\[
+ X''=H X,\qquad
+ 2v'=|X'|^2+X^\mathsf{T}HX-c.
+\]
+Here primes mean $u$ derivatives. Along any solution,
+$|X'|^2+X^\mathsf{T}HX=(X\cdot X')'$. Thus the full endpoint map on $(X,X')$ and the marked interval length determine $\Delta v$ for every initial condition at fixed $c$. Geodesics with $du=0$ meet no profile term in their equations and pose no additional comparison.
+
+We first use a two-step cell of fixed length $L$. Choose positive parameters $a,b$, put $\nu=(a+b)/L$, and use $H=\operatorname{diag}(h,-h)$. Set $h=+\nu^2$ for a duration $a/\nu$, then $h=-\nu^2$ for a duration $b/\nu$. In variables $(X,X'/\nu)$ the propagator on a positive leg is
+$\bigl(\begin{smallmatrix}\cosh d&\sinh d\\\sinh d&\cosh d\end{smallmatrix}\bigr)$
+and that on a negative leg is
+$\bigl(\begin{smallmatrix}\cos d&\sin d\\-\sin d&\cos d\end{smallmatrix}\bigr)$,
+where $d$ is the scaled duration. Multiplying gives the two half-traces
+\[
+ d_1=\cosh a\cos b,\qquad d_2=\cos a\cosh b.
+\]
+At $(a,b)=(\pi/2,\pi/2)$ both vanish and their Jacobian has vanishing diagonal and off-diagonal entries $-\cosh(\pi/2)$. It is invertible.
+
+To retune after smoothing, choose a smooth cutoff on each leg's unit interval, equal to one off neighborhoods of size $\eta$ at the ends and identically zero near the two endpoints. Multiply the signed constant coefficient on that leg by this cutoff, retaining the opposite signs on the two transverse axes. The resulting cell is smooth and zero near its endpoints. After using unit-interval time on each leg, the coefficient matrices of the first-order systems converge in $L^1$ to the step coefficients, uniformly near $(\pi/2,\pi/2)$, and the same holds for their first $a,b$ derivatives. To see this, the cutoff is independent of $a,b$ on the unit interval and the remaining coefficients and their derivatives are bounded on the chosen parameter neighborhood. The Volterra integral equations for the fundamental matrices and their first parameter derivatives therefore yield $C^1$ convergence of the half-trace map. More explicitly, on a sufficiently small closed parameter ball the step Jacobian differs little from the invertible central Jacobian $J$. The same is true of the smoothed Jacobian, with the smoothed central value tending to zero. For every target in a sufficiently small fixed ball about zero, the map $p\mapsto p-J^{-1}(d_\eta(p)-d_{\rm target})$ is consequently a contraction into that parameter ball, for all sufficiently small $\eta$. This produces an exact common open range of smooth half-trace values, not an approximate matching.
+
+Fix one such smoothing. Choose a sufficiently large multiple $M$ of four. We take two cells corresponding to half-traces $\cos(2\pi m_i/M)$ with angular integers
+\[
+ (m_1,m_2)=(M/4,M/4),\qquad (M/4+1,M/4),
+\]
+respectively. These are in the open range, and both axes are strictly elliptic. A real symplectic two-by-two matrix with half-trace $\cos\theta$, $0<\theta<\pi$, is symplectically conjugate to a rotation by $\theta$ or $-\theta$. Thus repeating either cell $M$ times gives the identity transverse map on both axes. The repeated profiles are smooth because the cells are exactly flat near their joins. Common free collars on the exterior may now be appended; their free transfers are identical for the two backgrounds. The transverse and longitudinal returns are therefore matched exactly.
+
+\section{Physical characteristic transfer}
+The vector $\partial_v$ is parallel, and the only nonvanishing coordinate curvature components of \eqref{eq:metric} have two $u$ slots. The gauge transformation of a metric perturbation is
+$h_{\mu\nu}\mapsto h_{\mu\nu}+2\nabla_{(\mu}\xi_{\nu)}$.
+In the nonzero-$k$ band we may successively solve its $vv$, $vi$, and $vu$ equations for the covector components of $\xi$ to set $h_{v\mu}=0$. Their changes are $2\partial_v\xi_v$, $\partial_v\xi_i+\partial_i\xi_v$, and $\partial_v\xi_u+\partial_u\xi_v$, respectively. The solutions are unique within the band because $\partial_v$ is invertible there. Linearized Einstein evolution preserves longitudinal Fourier support on these backgrounds.
+
+For clarity, in this gauge the linearized $vv$ Ricci equation is $-\partial_v^2 \operatorname{tr}h/2=0$, forcing the screen trace to vanish. The $v\mu$ equations then force the Lorenz divergence to vanish: the surviving linearized terms are $\partial_v(\nabla^\alpha h_{\alpha\mu})/2$, since $\partial_v$ is parallel and any curvature term with a $v$ slot is zero. Direct contraction of the connection in \eqref{eq:metric} gives
+$\nabla^\alpha h_{\alpha\mu}=-\partial_v h_{u\mu}+\partial_jh_{j\mu}$.
+Consequently
+\begin{equation}
+ h_{ui}=\partial_v^{-1}\partial_j h_{ji},\qquad
+ h_{uu}=\partial_v^{-2}\partial_i\partial_j h_{ij}.
+ \label{eq:reconstruct}
+\end{equation}
+No screen divergence-free restriction is placed on $h_{ij}$ beyond this reconstruction. In the trace-free Lorenz gauge the screen Einstein equations become
+\begin{equation}
+ (-2\partial_u\partial_v-F_H\partial_v^2+\Delta_X)h_{ij}=0.
+ \label{eq:screen}
+\end{equation}
+Indeed, the connection terms on the two screen tensor indices couple to zero $v$ components, and the curvature term $R_{iuju}h^{uu}$ vanishes. Conversely a screen trace-free solution of \eqref{eq:screen}, reconstructed by \eqref{eq:reconstruct}, satisfies all linearized Einstein equations. The residual linearized Einstein tensor has zero screen and $v$ components, zero trace, and zero divergence by the background vacuum Bianchi identity. Its divergence forces its $ui$ and then $uu$ components to vanish by band invertibility. Thus \eqref{eq:screen} propagates precisely the two physical screen polarizations used here, not two scalar substitutes.
+
+On the Fourier convention $e^{-ikv}$, $k>0$, the screen equation becomes $i\partial_u h=\widehat{\mathcal H}_{H,k}h$ with
+\[
+ \widehat{\mathcal H}_{H,k}
+  =-\frac{1}{2k}\Delta_X-\frac{k}{2}X^\mathsf{T}H(u)X .
+\]
+This is the Weyl quantization of the classical quadratic oscillator in $(X,p)$ with $p=kX'$. There is no independent scalar term. Its unitary evolution is the metaplectic lift of the classical oscillator path starting at the identity \cite{littlejohn}. For either scalar axis, the lift of one cell is one of the two conjugated lifts of the corresponding elliptic rotation. Repeating it an even number $M$ of times eliminates that twofold choice, and a rotation through $\pm2\pi m_i$ lifts to $(-1)^{m_i}I$ (the oscillator has spectrum $j+1/2$ in rotation units). Conjugating the lift cannot change a central sign. The two axes commute, so the repeated cell has sign $(-1)^{m_1+m_2}$ on each screen polarization, independently of $k$. The two choices above differ by one in the exponent. Negative $k$ evolves by complex conjugation and has the same real relative sign. Including the common free collars, the full real band transfer maps are $V$ and $-V$.
+
+\section{Normalized Weyl bracket}
+With a common chosen null orientation the Einstein--Hilbert characteristic form at a cut $u=\mathrm{const}$ is
+\begin{equation}
+ \Omega(f,h)=C_{\rm EH}\int
+ \bigl(f_{ij}\partial_vh_{ij}-h_{ij}\partial_v f_{ij}\bigr)\,dv\,d^2X,
+ \qquad C_{\rm EH}=\frac{1}{32\pi G}.
+ \label{eq:flux}
+\end{equation}
+Indeed the quadratic Einstein--Hilbert action on the trace-free divergence-free representatives has derivative term
+$-(64\pi G)^{-1}\nabla_a h_{bc}\nabla^a h^{bc}$; its algebraic curvature term does not affect the flux. Terms quadratic in the linear trace and divergence make no contribution on the constrained tangents. In the $u$-flux contraction $\nabla^u=-\partial_v$, and components involving $u$ pair with the vanishing $v$ components. Boundary divergences integrate to zero for the stated packets. This yields \eqref{eq:flux} and the fixed band symplectic normalization. It is nondegenerate since $\partial_v$ is invertible on the band; the positive-$k$ norm is equivalent to $L^2$ there and is preserved by the oscillator propagation.
+
+In a flat collar the linearized Weyl tensor is gauge invariant and its measured component is $\delta C_{vivj}=-\partial_v^2h_{ij}/2$. For real band data $f$, the screen smear $t_f=4C_{\rm EH}\partial_v^{-1}f$ applied to $\delta C_{vivj}$ represents the linear functional $\Omega(f,h)$, by integration by parts. Its reality and Schwartz behavior follow from the band gap. A cut evaluation can equally be represented by transporting $f$ to nearby flat cuts and multiplying the corresponding smears by a unit-integral smooth $u$ bump. The result is precisely the same functional, by free symplectic conservation.
+
+Choose an early test $f$ and a late test $g$ with $s=\Omega(Vf,g)\ne0$, possible by invertibility of $V$ and nondegeneracy. The tests are held fixed on the marked collars. The physical bracket is $s$ in one background and $-s$ in the other (up to the same orientation convention in both). In Weyl notation take
+$W(f)W(g)=e^{-i\Omega(f,g)/(2\hbar)}W(f+g)$. Then the ordered group commutator at the late cut, with $Uf$ the transported early test, is
+\[
+ W(Uf)W(g)W(Uf)^*W(g)^*=e^{-i\Omega(Uf,g)/\hbar}I .
+\]
+A common rescaling of one test sets $s/\hbar=\pi/2$ if desired, so the two bounded central elements differ. This detects the sign of the actual real linear transfer under fixed markings.
+
+\section{Composition and continuity of the readings}
+For $N$ intervals choose each copied smooth sandwich independently and mark the common joins as flat collars. Write their physical maps as $U_i=\epsilon_i V_i$, $\epsilon_i\in\{1,-1\}$; any common free gaps are included in the baseline maps $V_i$. Smooth flat joins preserve exact vacuum. From collar $i$ to collar $j$ the real band map is
+\[
+ U_{j:i}=\left(\prod_{r=i+1}^{j}\epsilon_r\right)V_j\cdots V_{i+1},
+ \qquad i<j .
+\]
+Classical transverse maps compose without reference to these signs, and the longitudinal formula above gives equal returns between every pair of marked collars. At each adjacent pair take fixed freshly calibrated tests $f_i,g_i$ with $s_i=\Omega(V_i f_i,g_i)\ne0$. The corresponding brackets are $\epsilon_i s_i$, regardless of the choices on other intervals. The full vector of signs is both sufficient and necessary to distinguish the marked transports on this family: a label appended to the identical classical returns must take at least $2^N$ distinct values. The exterior map alone, in contrast, depends only on the product of the signs. The datum being composed is the metaplectic lift of each marked classical Jacobi path, realized here as a physical symplectic band map.
+
+For fixed Schwartz band data $f$, let $\widetilde H$ be another smooth trace-free profile on the same interval with the same collar marks. Fiberwise unitarity and Duhamel give
+\[
+ \| (U_{\widetilde H}-U_H)f\|_{\rm band}
+ \le C_f \int \|\widetilde H(u)-H(u)\|\,du .
+\]
+On the Schwartz core the generator difference is multiplication by
+$-kX^\mathsf{T}(\widetilde H-H)X/2$. Reference second transverse coordinate moments are uniformly bounded along the finite interval and compact band: metaplectic conjugation expresses $X$ as a linear combination of $X$ and $p$ with bounded coefficients there. The inequality follows by integrating the resulting weighted $L^2$ estimate, with the band weight from \eqref{eq:flux}. Pairing with fixed $g$ therefore preserves any strict bracket sign margin for sufficiently small changes. For a fixed finite number of intervals take the smallest of their admissible radii. This is a stability statement for fixed readings, not operator-norm control on all packets, uniformity in the number of intervals, or persistence of exact classical matching under perturbation.
+
+\section{Relation to previous propagation results}
+Plane-wave graviton modes and scattering are treated in \cite{adamo}, and scalar Green-function caustic phases in \cite{drivas}. In \cite[Sec.~V.A]{harte}, the comparison of scalar propagation determined by endpoint memory excludes intervening conjugate hyperplanes. The present pair allows them; it does not contradict that restricted comparison. The result here isolates a comparison of two smooth trace-free exact vacuum profiles at matched full classical returns, using the nondegenerate Einstein--Hilbert flux and calibrated physical curvature tests. Its composition statement remains limited to this finite family of marked histories. It makes no all-frequency, interacting, global Peierls, or Hadamard assertion and does not postulate a local binary gravitational degree of freedom.
+
+\begin{thebibliography}{9}
+\bibitem{littlejohn}
+R.~G. Littlejohn, The semiclassical evolution of wave packets,
+\emph{Phys. Rep.} \textbf{138} (1986), 193--291,
+\href{https://doi.org/10.1016/0370-1573(86)90103-1}{doi:10.1016/0370-1573(86)90103-1}.
+\bibitem{adamo}
+T.~Adamo, E.~Casali, L.~Mason and S.~Nekovar,
+Scattering on plane waves and the double copy,
+\href{https://arxiv.org/abs/1706.08925}{arXiv:1706.08925}.
+\bibitem{drivas}
+A.~I. Harte and T.~D. Drivas,
+Caustics and wave propagation in curved spacetimes,
+\emph{Phys. Rev. D} \textbf{85} (2012), 124039,
+\href{https://doi.org/10.1103/PhysRevD.85.124039}{doi:10.1103/PhysRevD.85.124039}.
+\bibitem{harte}
+A.~I. Harte, T.~B. Mieling, M.~A. Oancea and E.~Steininger,
+Gravitational wave memory and its effects on particles and fields,
+\emph{Phys.\ Rev.\ D} \textbf{111}, 024034 (2025), \href{https://doi.org/10.1103/PhysRevD.111.024034}{doi:10.1103/PhysRevD.111.024034}.
+\end{thebibliography}
+\end{document}

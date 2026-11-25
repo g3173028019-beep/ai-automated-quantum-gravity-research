@@ -63,3 +63,7 @@ The following coverage is inherited from retained records rather than claimed as
 The original scripts can be substantial. The half-wormhole script includes 400,000-sample Monte Carlo comparisons; the projection script includes exponential subset-sum checks. They require Wolfram Language and are optional for reading the papers. Their historical comments are not global-originality claims.
 
 Human review, a comprehensive current novelty review, journal submission and acceptance remain pending.
+
+## Papers 30–31: analytical release
+
+The two standalone LaTeX sources were compiled twice with pdfLaTeX. Internal checks compared the results with independent derivations, verified bibliography and stated hypotheses, and checked the rendered PDFs. This records a manuscript and build check, not a numerical experiment or external scientific review. [30 · Nariai rigidity under null completeness](../papers/30-nariai-null-completeness/VERIFICATION.md) · [31 · Classically matched vacuum waves with opposite quantum transfer](../papers/31-graviton-metaplectic-transfer/VERIFICATION.md)

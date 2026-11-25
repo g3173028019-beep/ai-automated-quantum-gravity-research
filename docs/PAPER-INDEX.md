@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 20 original research packets and 4 later analytical manuscripts. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 20 original research packets and 11 later analytical manuscripts. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–29 continue the sequence. They do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–31 continue the sequence. They do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -393,3 +393,19 @@ Numbering follows delivery order: 01–20 retain their original packet numbers; 
 ## Reading the evidence
 
 Analytic proofs, exact finite calculations, numerical diagnostics and inherited inputs have different roles. Each packet’s verification file states its actual coverage and remaining limits; the [verification overview](../VERIFICATION.md) explains the shared vocabulary. Human authors and affiliations remain blank, human expert review has not occurred, and local dates do not certify public priority or global novelty.
+
+## 30. Nariai rigidity under null completeness
+
+Under the stated four-dimensional Einstein vacuum, positive cosmological constant, two-sided null-completeness, compact nonspherical semidefinite Cauchy hypotheses, the Lorentzian universal cover is the Nariai product.
+
+**Scope.** This is universal-cover metric rigidity, not a classification of deck groups or of arbitrary double-null spacetimes. The proof takes Galloway–Ling’s null foliations as input and supplies the zero-twist, compact-warp and global-continuation steps.
+
+[Manuscript note](../papers/30-nariai-null-completeness/README.md) · [PDF](../papers/30-nariai-null-completeness/manuscript.pdf) · [TeX](../papers/30-nariai-null-completeness/main.tex) · [Verification](../papers/30-nariai-null-completeness/VERIFICATION.md)
+
+## 31. Identical Jacobi returns and opposite graviton transfer
+
+Two smooth exact vacuum plane waves match full classical Jacobi and longitudinal returns but have opposite calibrated physical two-helicity band Weyl brackets. For (N) concatenated intervals, the adjacent brackets distinguish (2^N) relative lift histories while the exterior map retains their product.
+
+**Scope.** Statements concern a marked frequency-gapped characteristic band with fixed gravitational normalization. The sign acts on the physical linear transfer, not on an arbitrary overall Fock phase. No global Peierls or interacting theorem is asserted.
+
+[Manuscript note](../papers/31-graviton-metaplectic-transfer/README.md) · [PDF](../papers/31-graviton-metaplectic-transfer/manuscript.pdf) · [TeX](../papers/31-graviton-metaplectic-transfer/main.tex) · [Verification](../papers/31-graviton-metaplectic-transfer/VERIFICATION.md)

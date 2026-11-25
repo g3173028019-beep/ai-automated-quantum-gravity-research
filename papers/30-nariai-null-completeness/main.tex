@@ -1,0 +1,424 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\Hess}{Hess}
+\DeclareMathOperator{\grad}{grad}
+\newcommand{\dS}{\mathrm{dS}}
+\newcommand{\Lie}{\mathcal L}
+\title{Nariai rigidity for null-complete vacuum spacetimes\\with a semidefinite Cauchy slice}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let a four-dimensional Einstein spacetime with positive cosmological
+constant be globally hyperbolic and null geodesically complete in both
+directions. Suppose that it has a compact nonspherical Cauchy hypersurface
+with positive semidefinite second fundamental form. The universal
+Lorentzian cover is the product of the universal cover of two-dimensional
+de Sitter space and a round two-sphere, both of curvature equal to the
+cosmological constant. The proof uses the two totally geodesic null
+foliations of Galloway and Ling, but does not infer a metric product from
+the foliations alone. A stable compact initial cut makes their horizontal
+distribution integrable nearby. The vacuum equations and smoothness at
+the extrema of a putative warp factor force that factor to be constant.
+Local product geometry then propagates through noncompact as well as
+compact foliation charts.
+\end{abstract}
+
+\section{Statement and geometric input}
+
+We use Lorentzian signature $(-+++)$ and take the second fundamental form
+of a spacelike Cauchy hypersurface with future unit normal $T$ to be
+$K(X,Y)=g(\nabla_X T,Y)$. A spherical space means a three-manifold
+diffeomorphic to a quotient of the round three-sphere by a finite group
+acting freely by isometries.
+
+\begin{theorem}\label{thm:main}
+Let $(M,g)$ be a connected smooth time-oriented globally hyperbolic
+four-dimensional spacetime with $\Ric_g=\Lambda g$, $\Lambda>0$.
+Suppose every null geodesic is complete in both affine directions.
+If $M$ has a smooth compact spacelike Cauchy hypersurface $V$ with
+$K\geq 0$ and $V$ is not a spherical space, then its universal
+Lorentzian cover is isometric to
+\[
+   \widetilde{\dS_2(\Lambda)}\times S^2(\Lambda).
+\]
+Here each factor has constant sectional curvature $\Lambda$. The
+statement with $K\leq 0$ follows by reversing the time orientation.
+\end{theorem}
+
+A classification of the deck transformations is not part of the theorem.
+The topological reduction and existence of the two null foliations come
+from Galloway--Ling \cite{GLcos,GLpen}. We specify the initial section of
+these foliations because that section supplies essential metric
+information. In particular, the argument does not require saturation of
+a stable marginally outer trapped surface area bound, an assumption
+used in the separate rigidity setting of \cite{GM}.
+
+By the topological reduction preceding \cite[Theorem~5]{GLcos},
+a finite cover has an orientable compact Cauchy hypersurface with
+nontrivial second homology. Work first in that cover. Minimize area in
+a nonzero integral second homology class and choose a connected
+component carrying a nonzero class. In dimension three this gives a
+smooth closed oriented two-sided stable minimal surface $\Sigma$.
+It is nonseparating, since a separating oriented component would
+represent the zero class. The signs of both future null expansions
+are nonnegative: the spatial mean curvature is zero and
+$\operatorname{tr}_{T\Sigma}K\geq0$. The null energy condition used
+in \cite{GLcos,GLpen} holds since $\Ric_g(k,k)=0$ for null $k$.
+
+We now use the cyclic-cover construction in the proofs of
+\cite[Theorems~8--9]{GLpen}, starting from this particular $\Sigma$.
+In the spacetime cover there are transverse foliations by totally
+geodesic null hypersurfaces. The two leaves through the chosen
+lift of $\Sigma$ have that lift as their intersection locally along
+it. To see which cut is at issue, the two families on the lifted
+Cauchy slice start from the deck translates of the chosen surface;
+the proof of Theorem~9 first rules out a strict positive null
+expansion on that surface and then takes the two null normal
+congruences of the resulting marginal families. We use the smooth
+leaf charts in the cover, not achronality of the projected leaves
+in the original spacetime. For clarity, smoothness transverse to a
+complete generator can also be checked on the geodesic map from an
+initial family of cuts. Its screen differential retains rank because
+the null second fundamental form vanishes and the screen metric is
+transported unchanged. A Jacobi variation $J$ of the initial cut
+parameter satisfies
+$k[g(J,k)]=g(\nabla_k J,k)=\tfrac12 J[g(k,k)]=0$
+for the affinely parameterized generator $k$. This scalar is nonzero
+initially, by transversality in the Cauchy slice, so the remaining
+transverse differential retains rank. All arguments below are on the
+connected cyclic spacetime cover unless otherwise stated. All covers
+here inherit null completeness by geodesic path lifting.
+
+\section{The stable cut and the vacuum curvature identities}
+
+Write $\nu$ for the unit normal of the lifted $\Sigma$ in the Cauchy
+slice. Both null second fundamental forms vanish on $\Sigma$.
+Their sum and difference give $K|_{T\Sigma\times T\Sigma}=0$ and
+$\mathrm{II}^{V}_\Sigma=0$. Positive semidefiniteness then gives
+$K(\nu,X)=0$ for $X\in T\Sigma$: a vector $X$ on which the quadratic
+form vanishes is in its kernel. Thus $K$ has rank at most one there.
+The Hamiltonian constraint reduces on $\Sigma$ to $R_V=2\Lambda$.
+The constant-function stability test gives
+$\int_\Sigma \Ric_V(\nu,\nu)\,dA\leq0$, since
+$\mathrm{II}^{V}_\Sigma=0$. The Gauss equation yields
+\[
+ \int_\Sigma R_\Sigma\,dA
+   =\int_\Sigma (2\Lambda-2\Ric_V(\nu,\nu))\,dA
+   \ \geq\ 2\Lambda\operatorname{Area}(\Sigma)>0.
+\]
+Consequently $\Sigma$ is a two-sphere by Gauss--Bonnet. In the normalized
+null frame
+\[
+ \ell=(T+\nu)/\sqrt2,\qquad n=(T-\nu)/\sqrt2,\qquad g(\ell,n)=-1 ,
+\]
+the normal connection $\zeta(X)=g(\nabla_X\ell,n)$ is
+$-K(X,\nu)=0$ on $\Sigma$. Although a boost of the null frame can
+change $\zeta$ by an exact form, the curvature $d\zeta$ is independent
+of this choice.
+
+Here are the local vacuum identities we need. In a double-null chart,
+use an adapted null tetrad $(\ell,n,m,\bar m)$; the complex dyad is
+tangent to the spacelike plaques cut out by the two null foliations.
+Both null congruences are geodesic, with zero expansion, shear and
+optical twist. The four Weyl scalars
+$\Psi_0,\Psi_1,\Psi_3,\Psi_4$ vanish. Indeed curvature preserves a
+totally geodesic null tangent hyperplane when all three input vectors
+are tangent. Contraction with its null normal $\ell$ shows that the
+screen components $C_{\ell A\ell B}$ and $C_{\ell ABC}$ vanish,
+where $C$ denotes the Weyl tensor; the constant-curvature part of
+the Einstein Riemann tensor vanishes in these components. By
+trace-freeness $C_{\ell n\ell A}$ also vanishes. Repeat for $n$.
+The surviving scalar $\Psi_2$ is invariant under the adapted boosts
+and dyad rotations. Reversal of screen orientation conjugates it.
+
+We use the Newman--Penrose Bianchi identities in the conventions
+of \cite[Appendix A, Eqs.~(A24), (A25), (A28), (A29)]{NP}. In the
+present Einstein case the Ricci derivative terms vanish and the
+above optical conditions give
+\begin{equation}\label{eq:bianchi}
+ D\Psi_2=0,\qquad \Delta_{\rm NP}\Psi_2=0,\qquad
+ \delta\Psi_2=3\tau\Psi_2,\qquad
+ \bar\delta\Psi_2=-3\pi\Psi_2 .
+\end{equation}
+Here $D,\Delta_{\rm NP},\delta,\bar\delta$ differentiate along the
+four tetrad vectors. The coefficients $\tau,\pi$ are, up to the
+tetrad sign conventions, the complex screen components of
+$\nabla_n\ell$ and $\nabla_\ell n$, respectively. In particular,
+each vanishes precisely when its indicated real screen projection
+vanishes. The identities do not involve division by $\Psi_2$.
+The normal Ricci equation, with both null second fundamental forms
+zero, identifies $d\zeta$ with the mixed Riemann component
+$R_{AB\ell n}$ up to sign. Its Einstein constant-curvature part is
+zero and its Weyl part is proportional to $\operatorname{Im}\Psi_2$
+times the screen area form, by the adapted tetrad decomposition.
+In particular $\operatorname{Im}\Psi_2=0$ on $\Sigma$.
+
+\section{Removal of the horizontal twist}
+
+Consider first a sufficiently small double-null bundle box around the
+whole compact $\Sigma$. The leaf labels give its base coordinates
+$(u,v)$. The orthogonal complement of the spacelike plaques is
+Lorentzian; let $U,V_0$ be the unique horizontal lifts of
+$\partial_u,\partial_v$, respectively. These are null and we write
+$g(U,V_0)=-\Omega<0$. The induced plaque metric is $h$.
+The two null second fundamental forms vanish, so
+$\Lie_Uh=\Lie_{V_0}h=0$ on vertical arguments. Both fields are
+projectable, so $Z=[U,V_0]$ is vertical, and
+$\Lie_Z h=[\Lie_U,\Lie_{V_0}]h=0$ on the same arguments. Thus $Z$
+is Killing on each plaque.
+
+For a vertical $X$, the Koszul formula gives
+\[
+ 2g(\nabla_X U,V_0)=-X\Omega-h(Z,X).
+\]
+With $\ell=U/\sqrt{\Omega}$ and $n=V_0/\sqrt{\Omega}$ the derivative
+of $\Omega$ cancels, so
+\begin{equation}\label{eq:koszul}
+ \zeta(X)=-\frac{h(Z,X)}{2\Omega},\qquad
+ (\nabla_U V_0)^{\rm vert}=\tfrac12(\grad_h\Omega+Z),\qquad
+ (\nabla_{V_0} U)^{\rm vert}=\tfrac12(\grad_h\Omega-Z).
+\end{equation}
+For example, in the middle identity the only terms in
+$2g(\nabla_U V_0,X)$ that survive are $-Xg(U,V_0)$ and
+$g(X,[U,V_0])$; brackets with a vertical field are vertical.
+
+Here the compact box can be built by transporting $\Sigma$ with $U$
+and then $V_0$ along small base segments. The two global leaf labels
+on the starting sphere may be taken from the two initial families
+in the cyclic construction. Compactness gives a uniform flow
+interval around the whole sphere. For fixed labels the transport is a
+diffeomorphism onto its image with inverse given by the reversed
+segments. The resulting family is a neighborhood of $\Sigma$,
+foliated there by compact spheres. By the first two equations
+in \eqref{eq:bianchi}, $\operatorname{Im}\Psi_2$ vanishes throughout
+this neighborhood. The normal Ricci equation therefore gives
+$d\zeta=0$ on each sphere. As $H^1(S^2;\mathbb R)=0$, there is a
+smooth potential $\varphi$ on each such cut with $\zeta=d\varphi$.
+The divergence of its Killing field $Z$ is zero and the cut has no
+boundary. Thus \eqref{eq:koszul} gives
+\[
+    0=\int Z(\varphi)\,dA_h
+      =-\int\frac{|Z|_h^2}{2\Omega}\,dA_h .
+\]
+Hence $Z=0$ on the compact-cut box. This integral is the step
+that removes horizontal twist. It uses initial normal-connection
+curvature and compact cut topology, not simply the vanishing optical
+twist of each individual congruence.
+
+\section{The smooth compact warp is constant}
+
+Now $U$ and $V_0$ commute, so horizontal flow trivializes the box
+and $g=h(x)-2\Omega(u,v,x)\,du\,dv$, with $h$ independent of $(u,v)$.
+Write $w=\tfrac12\log\Omega$. For base indices $a,b$ and plaque
+indices $A,B$, the mixed Christoffel terms in the block metric are
+\[
+ \Gamma^a{}_{bA}=\delta^a_b\partial_A w,\qquad
+ \Gamma^A{}_{ab}=-g_{ab}h^{AB}\partial_B w,\qquad
+ \Gamma^A{}_{aB}=0=\Gamma^a{}_{AB}.
+\]
+As $\Gamma^b{}_{ab}=2\partial_a w$, the cross terms quadratic in
+Christoffel symbols cancel in $\Ric_{aA}$ and the derivative terms
+give $\Ric_{aA}=-\partial_a\partial_A w$. Thus in the Einstein
+case $w=w_0(u,v)+w_1(x)$, by integrating the mixed identities on
+the connected cut. Set $f=e^{w_1}>0$ and absorb $w_0$ into a
+two-dimensional Lorentzian metric $g_B$. The full metric is
+$h+f^2g_B$. The warped Ricci equations (obtained by substituting
+the same block Christoffel terms) are
+\begin{equation}\label{eq:einstein-warp}
+ \Ric_h-2f^{-1}\Hess_h f=\Lambda h,\qquad
+ \Ric_{g_B}=(\Lambda f^2+f\Delta_h f+|df|_h^2)g_B ,
+\end{equation}
+where $\Delta_h=\operatorname{div}_h\grad_h$. For example the
+horizontal curvature contraction is that of $g_B$ minus
+$(f\Delta_h f+|df|_h^2)g_B$; the mixed sectional terms give
+$-2f^{-1}\Hess_h f$ on the cut since the other factor has dimension
+two. In dimension two \eqref{eq:einstein-warp} implies
+\begin{equation}\label{eq:warp-id}
+ \Hess_h f=\tfrac12\Delta_h f\,h,\qquad
+ K_h=\Lambda+\frac{\Delta_h f}{f},\qquad
+ d|df|_h^2=\Delta_h f\,df,\qquad d\Delta_h f=-2K_h\,df .
+\end{equation}
+The last equality follows by taking the divergence of the Hessian
+equation and commuting covariant derivatives:
+$\tfrac12 d\Delta_h f=d\Delta_h f+K_h\,df$.
+
+For the compact connected sphere, the curvature of $g_B$ is a
+constant $\kappa$: the multiplier in the second equation of
+\eqref{eq:einstein-warp} is a function of $x$ alone and the curvature
+of $g_B$ a function of the base alone. By \eqref{eq:warp-id},
+\[
+ d(f|df|_h^2)=(|df|_h^2+f\Delta_h f)\,df
+              =(\kappa-\Lambda f^2)\,df.
+\]
+Thus $|df|_h^2=Q(f)$, where $Q(s)=\kappa-\Lambda s^2/3+c/s$
+and $c$ is a single constant on the cut. Substitution into
+\eqref{eq:einstein-warp} gives $\Delta_h f=Q'(f)$ everywhere,
+including at critical points.
+
+If the minimum $a$ and maximum $b$ of $f$ satisfy $a<b$, they
+are positive roots of $Q$. Neither $Q'(a)$ nor $Q'(b)$ can
+vanish: along any unit cut geodesic $f$ satisfies
+$(f\circ\gamma)''=Q'(f\circ\gamma)/2$ by the Hessian equation.
+A critical point with $Q'=0$ gives equilibrium initial data, hence
+constancy by uniqueness, first in a normal ball and then on the
+connected cut. Therefore $Q'(a)>0>Q'(b)$.
+
+Let $J$ be the parallel oriented rotation by $\pi/2$ on the
+cut. The field $J\grad_h f$ is Killing, since its covariant
+derivative is $(Q'(f)/2)J$. Its flow exists for all time and
+fixes a minimum and a maximum. At these points the derivatives of
+the flow are rotations with signed speeds $Q'(a)/2$ and
+$Q'(b)/2$. An isometry of a connected Riemannian manifold fixing
+a point and with identity derivative there is the identity:
+it fixes a normal neighborhood, and the same argument continues
+along paths. As a result, the smallest positive period of the
+same global flow computed at either fixed point must be the
+same. In particular $Q'(a)=-Q'(b)$. At any positive root $s$,
+$Q'(s)=\kappa/s-\Lambda s$, so this equality requires
+$\kappa=\Lambda ab$. On the other hand the two equations
+$sQ(s)=0$ imply $\kappa=\Lambda(a^2+ab+b^2)/3$. They contradict
+$a<b$ because $\Lambda>0$. Thus $f$ is constant. This period
+argument enforces smoothness at both extrema without introducing
+rotational coordinates or permitting conical defects.
+
+By \eqref{eq:einstein-warp}, both factors, with the constant
+$f^2$ absorbed into $g_B$, have curvature $\Lambda$. This is local
+Nariai geometry throughout the initial neighborhood.
+
+\section{Local continuation without compact late cuts}
+
+Let $\mathcal P$ be the open set of points with a locally Nariai
+neighborhood. It is nonempty, and we show it is closed. Denote by
+$\Psi_*$ the real nonzero Nariai value of $\Psi_2$ in the conventions
+above. Its nonvanishing follows, for example, from the spacelike
+sectional curvature $\Lambda$ of the spherical factor compared
+with the Einstein constant-curvature contribution $\Lambda/3$.
+The adapted directions in local Nariai are those of the Lorentzian
+factor: the Weyl tensor is nonzero of type D and these are precisely
+its two repeated principal null directions.
+
+Let $p\in\overline{\mathcal P}$. Choose a connected double-null
+chart with a base rectangle and disk plaques around $p$. Shrink
+the base rectangle so that transport along two base coordinate
+segments from a smaller disk remains in the original chart; this
+follows from the smooth bounded horizontal coordinate velocities
+on a relatively compact box. Choose a small open plaque patch
+in $\mathcal P$ at a point sufficiently close to $p$, within the
+smaller disk. By transporting that patch along $U$ and then $V_0$
+we obtain an open family meeting every plaque of the shrunk box.
+Equation \eqref{eq:bianchi} preserves $\Psi_2=\Psi_*$ under
+these transports. The two screen derivatives of $\Psi_2$ vanish
+on this open family; the last two equations of \eqref{eq:bianchi}
+give $\tau=\pi=0$ there. By \eqref{eq:koszul}, this gives both
+$Z=0$ and $\grad_h\Omega=0$ on the transported patches.
+
+On each connected plaque, $Z$ is Killing and is zero on a nonempty
+open patch, so it vanishes on the entire plaque. For this uniqueness,
+the value and first derivative of a Killing field determine it
+along a geodesic by the Jacobi equation; continuation through
+normal neighborhoods then applies even to an incomplete plaque.
+Thus $Z=0$ in the box. Pass to commuting horizontal coordinates,
+restricting to connected plaque disks containing $p$ (on its
+plaque) and the transported patches. More explicitly, the initial
+patch can be chosen arbitrarily close to $p$ in the original chart.
+After shrinking the base, the horizontal trivialization and its
+inverse have uniformly small displacements, and fixed inner
+disk plaques can contain the smaller patch and the disk coordinate
+of $p$. In these coordinates the mixed Einstein equation again
+gives the warped form of \eqref{eq:einstein-warp}. On every
+connected plaque $\grad_h f=0$ and $\Delta_h f=0$ on a nonempty
+open patch because $\Omega$ has zero screen derivative there.
+Along any smooth plaque path $\gamma$, equations
+\eqref{eq:warp-id} are a first-order system for
+$(f,df,\Delta_h f)$:
+\[
+ \frac{df}{ds}=df(\dot\gamma),\qquad
+ \nabla_{\dot\gamma}(df)=\tfrac12\Delta_h f\,h(\dot\gamma,\cdot),
+ \qquad
+ \frac{d(\Delta_h f)}{ds}
+   =-2\Bigl(\Lambda+\frac{\Delta_h f}{f}\Bigr)df(\dot\gamma).
+\]
+In a parallel frame this is smooth where $f>0$. Initial data
+$(f,0,0)$ give the constant solution by uniqueness. Consequently
+$f$ is constant across the local disks, so the box is locally
+Nariai by \eqref{eq:einstein-warp}, and $p\in\mathcal P$.
+This shows $\mathcal P$ equals the whole connected cover. No
+analyticity or compactness of the general late cut has been used.
+
+\section{Global identification}
+
+The cyclic cover is locally symmetric since its metric is locally
+a product of constant-curvature factors. Its universal cover
+$\widetilde M$, also the universal cover of the original $M$,
+is simply connected and null complete. Put
+$N=\widetilde{\dS_2(\Lambda)}\times S^2(\Lambda)$, which is
+simply connected and geodesically complete. The local product
+identifies the tangent curvature model of $\widetilde M$ with that
+of $N$ at chosen points. By Lafuente L\'opez
+\cite[Theorem~1]{Laf}, a curvature-preserving tangent isometry
+between connected locally symmetric null-complete Lorentz
+manifolds extends to a local isometry defined on the entire
+source if the source is simply connected. Apply this in both
+directions to the inverse tangent isometries. Their compositions
+have the identity value and differential at their base points;
+a local isometry with this initial data is the identity, by
+preservation of the geodesic exponential map and continuation
+along connected paths. The global maps are therefore inverses.
+Equivalently, \cite[Corollary~2]{Laf} first gives geodesic
+completeness from null completeness after establishing local
+symmetry, and one can then use the complete simply connected
+Cartan--Ambrose--Hicks theorem. This proves Theorem~\ref{thm:main}.
+
+The topological and foliation rigidity results of Ling, Rossdeutscher,
+Simon and Steinbauer \cite{LRSS} give a complementary comparison
+under 2-convexity and additional symmetry hypotheses in parts of their
+analysis. The present conclusion concerns the Lorentzian universal-cover
+metric for the stated semidefinite vacuum stock.
+
+\begin{thebibliography}{9}
+\bibitem{LRSS}
+E.~Ling, C.~Rossdeutscher, W.~Simon and R.~Steinbauer,
+Rigidity aspects of a cosmological singularity theorem,
+\href{https://arxiv.org/abs/2508.00524}{arXiv:2508.00524}.
+
+\bibitem{GLcos}
+G.~J.~Galloway and E.~Ling,
+A simplified proof of a cosmological singularity theorem,
+\emph{Gen.\ Relativ.\ Gravit.} \textbf{58}, 66 (2026).
+\href{https://doi.org/10.1007/s10714-026-03562-x}{doi:10.1007/s10714-026-03562-x}.
+
+\bibitem{GLpen}
+G.~Galloway and E.~Ling,
+Rigidity aspects of Penrose's singularity theorem,
+\emph{Commun.\ Math.\ Phys.} \textbf{406}, 25 (2025).
+\href{https://doi.org/10.1007/s00220-024-05210-4}{doi:10.1007/s00220-024-05210-4}.
+
+\bibitem{GM}
+G.~J.~Galloway and A.~Mendes,
+Rigidity of marginally outer trapped 2-spheres,
+\emph{Commun.\ Anal.\ Geom.} \textbf{26}, 63--83 (2018).
+\href{https://arxiv.org/abs/1506.00611}{arXiv:1506.00611}.
+
+\bibitem{NP}
+R.~\v{S}varc, A.~Pravdov\'a and D.~Mi\v{s}kovsk\'y,
+Newman--Penrose formalism in quadratic gravity,
+\emph{Phys.\ Rev.\ D} \textbf{107}, 024036 (2023).
+\href{https://doi.org/10.1103/PhysRevD.107.024036}{doi:10.1103/PhysRevD.107.024036}.
+
+\bibitem{Laf}
+J.~Lafuente L\'opez,
+A geodesic completeness theorem for locally symmetric Lorentz manifolds,
+\emph{Rev.\ Mat.\ Univ.\ Complut.\ Madrid} \textbf{1}, 101--110 (1988).
+\href{https://doi.org/10.5209/rev_REMA.1988.v1.n1.18187}{doi:10.5209/rev\_REMA.1988.v1.n1.18187}.
+
+\end{thebibliography}
+\end{document}
