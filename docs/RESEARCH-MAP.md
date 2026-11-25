@@ -31,6 +31,12 @@ Suggested routes: **09 → 19** for physical state construction and its use in a
 
 ## Gravity observables: from states to readouts
 
+### Physical degrees of freedom and state comparisons
+
+- [25 · Characteristic data and symplectic rank](../papers/25-characteristic-data-symplectic-rank/manuscript.md): in a solved linear characteristic sector the terminal sphere record is governed by two moments, while its kernel contains infinitely many radiative symplectic pairs. Read beside [19](../papers/19-local-gauge-benchmarks/) for the separate issue of free gauge reduction; neither proof assumes the other.
+- [26 · Neutral de Sitter mass susceptibility](../papers/26-neutral-de-sitter-mass-susceptibility/manuscript.md): removing a homogeneous scalar position pole gives the stated neutral comparison, with local normality but divergent mass-squared entropy susceptibility. [21](../papers/21-weyl-diamond-relative-entropy/manuscript.md) compares coherent Weyl states on a different algebra; [24](../papers/24-calibrated-tidal-diffusion/manuscript.md) concerns a spin-two tidal record, not the scalar mass problem.
+
+
 | Comparison | What is shared | What does not follow |
 |---|---|---|
 | [09](../papers/09-canonical-einstein-scalar-hadamard/README.md) → [21 · Weyl relative entropy](../papers/21-weyl-diamond-relative-entropy/manuscript.md) | Both work with physical, gauge-invariant degrees of freedom. | Constructing a coupled Hadamard state does not give the free Minkowski diamond’s modular form. |
@@ -86,11 +92,6 @@ Suggested route: **17 → 11 → 22** to compare exact local elimination, finite
 [20. Claim correction and artifact growth](../papers/20-ai-research-case-study/README.md) studies preserved artifact states, actual correction cases and sensitivity of a filename classification. It is a descriptive methods paper. File growth, a mutable timestamp cutoff or a changed classification fraction does not establish model superiority, a causal audit effect or scientific value by itself.
 
 This provides a route into how the archive’s arguments were corrected, not a ranking or validation of the other 19 papers. [Declarations](../DECLARATIONS.md) records operator-reported model chronology and unresolved credit; [History](../HISTORY.md) separates source dates and editions.
-
-## From state and propagation data to physical distinctions
-
-- [25 · Characteristic data and symplectic rank](../papers/25-characteristic-data-symplectic-rank/manuscript.md) separates terminal constraints from radiative symplectic data. It complements the locality benchmark in [19](../papers/19-local-gauge-benchmarks/) but uses a different, characteristic constrained system.
-- [26 · Neutral de Sitter mass susceptibility](../papers/26-neutral-de-sitter-mass-susceptibility/manuscript.md) separates local normality from smooth distinguishability in a scalar state comparison. Compare [09](../papers/09-canonical-einstein-scalar-hadamard/) for existence of physical states and [21](../papers/21-weyl-diamond-relative-entropy/manuscript.md) for a different relative entropy question. The scalar comparison is not the tidal observable of [24](../papers/24-calibrated-tidal-diffusion/manuscript.md).
 
 ## Using the routes
 
