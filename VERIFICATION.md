@@ -105,3 +105,4 @@ The recorded review consists of automated calculations and AI review. Human expe
 
 - [40 · Null-volume shared-label rigidity](papers/40-null-volume-shared-label-rigidity/README.md): [packet verification](papers/40-null-volume-shared-label-rigidity/VERIFICATION.md).
 - [41 · Turaev–Viro fusion, recoupling and Wilson moduli](papers/41-tensor-prices-tv-fusion-and-wilson/README.md): [packet verification](papers/41-tensor-prices-tv-fusion-and-wilson/VERIFICATION.md).
+- [42 · Open Turaev–Viro Dehn fillings](papers/42-tensor-prices-tv-dehn-filling/README.md): [packet verification](papers/42-tensor-prices-tv-dehn-filling/VERIFICATION.md).

@@ -153,3 +153,4 @@ In each linked packet, run `latexmk -pdf -halt-on-error manuscript.tex` or run `
 - [39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](../papers/39-real-tree-spectral-boundary-fields/README.md)
 - [40 · Null-volume shared-label rigidity](../papers/40-null-volume-shared-label-rigidity/README.md)
 - [41 · Turaev–Viro fusion, recoupling and Wilson moduli](../papers/41-tensor-prices-tv-fusion-and-wilson/README.md)
+- [42 · Open Turaev–Viro Dehn fillings](../papers/42-tensor-prices-tv-dehn-filling/README.md)

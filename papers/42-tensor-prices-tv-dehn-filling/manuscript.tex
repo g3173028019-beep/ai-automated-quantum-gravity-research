@@ -1,0 +1,290 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.02in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\hypersetup{pdftitle={Tensor spectral prices of open Dehn fillings in Turaev--Viro theory},
+pdfsubject={Exact support arithmetic and composition for Seifert cobordisms}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\lcm}{lcm}
+\newcommand{\iu}{\mathrm{i}}
+\newcommand{\TV}{\mathrm{TV}}
+\newcommand{\RT}{\mathrm{RT}}
+\newcommand{\TVprice}{\mathsf{P}}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\braket}[2]{\langle #1\mid #2\rangle}
+\newcommand{\tensor}{\mathbin{\otimes}}
+\newcommand{\Surf}[2]{\Sigma_{#1,#2}}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\NN}{\mathbb N}
+\title{\textbf{Tensor spectral prices of open Dehn fillings\\ in Turaev--Viro theory}}
+\author{}
+\date{26 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We evaluate ordinary Euclidean tensor prices on physical Turaev--Viro states with three or more disconnected torus boundaries. The known diagonal form of Seifert states converts the price into a count of nonzero modular filling coefficients. For \(\mathrm{SU}(2)_k\), writing \(r=k+2\), the slopes \(2\mu+\lambda\) and \(2r\mu+\lambda\) give doubled support sizes \(\lfloor r/2\rfloor^2\) and \(1\), respectively. The states have identical boundary Hilbert spaces, and the same completion of their remaining ports gives \(S^3\) and hence the same nonzero closed invariant. We compute the full even-slope support count at odd \(r\). Equal individual cap prices can yield different nonzero prices after joint filling, or even fail to determine whether a joint filling vanishes. Finally, the finite part of the price at a fixed slope depends on the sequence of root orders approaching \(q=1\). The results separate a closed contraction, the size of the open support, and the marked charge set needed to predict a joint filling.
+\end{abstract}
+
+\section{Introduction}
+
+A state sum on a manifold with boundary carries more information than its contraction with any one choice of boundary state. In a topological field theory this distinction is particularly precise: a collection of disconnected boundary components has a tensor-product Hilbert space, while filling a boundary component contracts the state with a particular vector. That gives a direct setting in which to ask what an ordinary tensor spectral invariant detects and what it loses under sewing.
+
+The relevant boundary tensors are known. Link states in torus Hilbert spaces have been studied in Chern--Simons theory~\cite{LinkStates,ColoredJones}. Balasubramanian and Cummings give both the diagonal Greenberger--Horne--Zeilinger (GHZ) form for the trivial circle bundle and the product of modular coefficients for Seifert fillings~\cite[Eqs.~(34)--(43) and (119)]{Fibered}. In particular, the one-vacuum-cap coefficient used below is already present in the \(T_{p,pn}\) specialization of torus-link states~\cite[Eqs.~(4.10)--(4.14)]{ColoredJones}, up to overall phases and boundary basis conventions; see also~\cite[Eq.~(3.31)]{Renyi}. Modular matrix elements and their Gauss sums are standard in surgery formulas~\cite{Jeffrey,Hansen,HansenTakata}. The support count \(\lfloor r/2\rfloor\) for the two-component slope-two example is also known~\cite[Eq.~(3.22)]{Linked}, and residue dependence in the large-level limit of von Neumann entropy for this family has been demonstrated in~\cite{Residue}. Our focus is the ordinary compatible tensor price~\cite{OpenAI} on the projected doubled state, the exact odd-order divisor law, and what is retained or lost by this scalar under open completion and joint sewing. The rank-one cap below gives an explicit case of the separable Seifert states considered in~\cite[Sec.~VI.C and Fig.~14]{Fibered}. Neither a new diagonalization nor a new scalar link invariant independent of rank is claimed.
+
+The main comparison holds at fixed level and with fixed boundary markings: two open states with different prices become the same closed manifold under a single, common completion. The comparison is complemented by an obstruction in the opposite direction. Equal individual prices do not determine the price of a nonzero joint filling, or even whether the full joint tensor vanishes. Both effects are exact, rather than statements about numerical small singular values.
+
+We work with the unitary \(\mathrm{SU}(2)_k\) state sum, the compact sector associated with Riemannian \(2+1\)-dimensional gravity and positive cosmological constant~\cite{MizoguchiTada,Gresnigt}. Only dimensionless root data enter the calculations. The Euclidean site geometry is external and fixed. We neither infer a dimensionful curvature radius nor identify root removal with a unique gravitational flat limit.
+
+\section{Physical boundary tensors and ordinary prices}\label{sec:boundary}
+
+Set \(r=k+2\). We use integer labels \(a,b=1,\ldots,r-1\), where the corresponding spin is \((a-1)/2\) and \(1\) denotes the vacuum. In the chiral Wilson basis of the torus the modular matrices are, up to an overall framing phase of \(T\),
+\begin{equation}\label{eq:ST}
+ S_{ab}=\sqrt{\frac2r}\sin\!\left(\frac{\pi ab}{r}\right),
+ \qquad
+ T_{ab}=\delta_{ab}\exp\!\left[\frac{\pi\iu(a^2-1)}{2r}\right].
+\end{equation}
+In these conventions \(S^2=I\) and \(S_{1a}>0\). Write \(\ket{\widehat a}=\sum_b S_{ba}\ket b\).
+
+Let \(\Surf{g}{p}\) denote a genus-\(g\) oriented surface with \(p\) holes. The chiral state of \(\Surf{g}{p}\times S^1\) is
+\begin{equation}\label{eq:product}
+ Z_{\RT}(\Surf{g}{p}\times S^1)=
+ \sum_{a=1}^{r-1} S_{1a}^{\,2-2g-p}\ket{\widehat a}^{\tensor p}.
+\end{equation}
+Indeed, gluing \(p\) ordinary solid tori with Wilson core labels \(b_1,\dots,b_p\) fills the base holes and gives the trace of the identity on the genus-\(g\) surface with those punctures. The Verlinde formula~\cite{Verlinde,Fibered} evaluates that trace as
+\(\sum_a S_{1a}^{\,2-2g-p}\prod_j S_{b_j a}\). These are the components of~\eqref{eq:product} in the Wilson product basis, so they determine the state.
+
+For a modular input category, the unitary Turaev--Viro theory agrees with Reshetikhin--Turaev theory for the Drinfel'd center, here the product of the chiral category and its reverse~\cite{Balsam}. In particular the physical torus space is \(\mathcal H_{\RT}(T^2)\tensor\overline{\mathcal H_{\RT}(T^2)}\), and the TV state is the chiral state tensored with its conjugate, regrouped by torus. The factorization into torus legs is the monoidal factorization over whole disconnected boundary surfaces. It does not assume any tensor factorization of the physical Hilbert space across a curve \emph{inside} a connected surface.
+
+Place the \(p\) remaining torus legs at a fixed finite set \(L\) of distinct sites in a real Hilbert space, with \(p\geq 3\). Let \(w(L)>0\) be the normalized mean width, with normalization that a segment has its length. An ordinary compatible Euclidean price supplied by~\cite[Theorem~1.1]{OpenAI} assigns \(w(L)\log_2 D\) to the tensor of a shared \(D\)-valued label. For a weighted diagonal tensor
+\[
+ \sum_{\alpha\in I} c_\alpha \ket{\alpha}^{\tensor p},\qquad
+ c_\alpha\ne 0,
+\]
+the same price is \(w(L)\log_2 |I|\). Restriction to the displayed support has an inverse inclusion on this tensor, and one diagonal invertible map on a single leg removes all the nonzero coefficients. The equality holds for each compatible price from the ambient Euclidean system. For these diagonal states \(\TVprice/w(L)\) is also the order-zero R\'enyi entropy, \(\log_2\operatorname{rank}\rho_{\mathrm{one\ port}}\), of any normalized one-port marginal. The price theorem supplies the common multipartite resource normalization, not a scalar independent of that rank. If the coefficients are obtained from a chiral diagonal state with active set \(J\) and its conjugate, the doubled support has size \(|J|^2\). Changes of marking or framing on the remaining ports that act by local invertibles do not alter the price; in comparing fillings below we use the same markings and placements.
+
+For example, adding a handle in~\eqref{eq:product} multiplies each diagonal entry by \(S_{1a}^{-2}\) without changing the support. The unfilled price is \(2w(L)\log_2(r-1)\) for every genus. This is limited insensitivity to genus in this family, not insensitivity of the amplitudes or of arbitrary TQFT states.
+
+\section{A nonzero common closure with different open prices}\label{sec:surgery}
+
+Let \(\mu\) be the oriented base-boundary circle on a chosen torus of \(\Surf{0}{p+1}\times S^1\), and let \(\lambda\) be the fibre. Use a convention in which \(S\) sends \(\mu\) to \(\lambda\) and \(T\) sends \(\lambda\) to \(\lambda+\mu\). Fill that torus by an empty solid torus with meridian \(n\mu+\lambda\), represented by \(T^n S\). The cap has coefficient in the hat basis
+\begin{equation}\label{eq:A}
+ A_a(n)=(S T^n S)_{a1}.
+\end{equation}
+For all-outgoing product states the contraction is with the cap bra, so the surviving \(p\)-port chiral state is
+\begin{equation}\label{eq:capstate}
+ \sum_a S_{1a}^{\,1-p}\overline{A_a(n)}\ket{\widehat a}^{\tensor p}.
+\end{equation}
+Changing the orientation convention conjugates the corresponding coefficients consistently. A common framing phase cancels in the double. Formula~\eqref{eq:capstate} is the standard Seifert gluing formula in this marking~\cite[Eq.~(119)]{Fibered}; see also~\cite{Jeffrey,Hansen,HansenTakata}. Its decisive datum for ordinary prices is the support
+\[
+ I_n=\supp A(n), \qquad
+ \TVprice_{\TV}(n)=2w(L)\log_2|I_n|.
+\]
+
+\begin{theorem}[Different open prices with the same completion]\label{thm:main}
+For every \(r\geq 4\), the slopes \(2\mu+\lambda\) and \(2r\mu+\lambda\) yield nonzero open TV states on the same \(p\) marked tori, of prices
+\[
+ 2w(L)\log_2\!\left\lfloor\frac r2\right\rfloor
+ \qquad\text{and}\qquad 0,
+\]
+respectively. Completing either state by the same ordinary \(\mu\)-meridian caps on the remaining \(p\) tori gives \(S^3\) and the same nonzero invariant.
+\end{theorem}
+\begin{proof}
+At \(n=2r\), the twist eigenvalue is \(T_{bb}^{2r}=(-1)^{b-1}\). Since \(S_{r-1,b}=(-1)^{b-1}S_{1b}\), sine orthogonality gives \(A_a(2r)=\delta_{a,r-1}\).
+
+For \(n=2\), equation~\eqref{eq:ST} gives
+\begin{equation}\label{eq:vacsum}
+ A_a(2)=\frac2r e^{-\pi\iu/r}\sum_{b=1}^{r-1}
+ \sin\!\left(\frac{\pi ab}{r}\right)
+ \sin\!\left(\frac{\pi b}{r}\right)e^{\pi\iu b^2/r}.
+\end{equation}
+Reflecting \(b\mapsto r-b\) multiplies the summand by \((-1)^{a+1+r}\). The sum therefore vanishes if \(a+r\) is even. For \(a+r\) odd, set
+\[
+ G_s=\sum_{b\bmod r}e^{\pi\iu(b^2+sb)/r},
+ \qquad s=a-1,\ a+1 .
+\]
+The exponent is periodic modulo \(r\) because \(s+r\) is even. The sine-product identity, together with \(b\mapsto-b\) in the resulting periodic sums, reduces~\eqref{eq:vacsum} to
+\[
+ A_a(2)=\frac{e^{-\pi\iu/r}}{r}\bigl(G_{a-1}-G_{a+1}\bigr).
+\]
+The \(b=0\) terms cancel. For \(r\) even, \(s\) is even and shifting \(b\) by \(s/2\) gives
+\(G_s=e^{-\pi\iu(s/2)^2/r}G_0\).
+The magnitude of \(G_0\) is \(\sqrt r\): in its squared modulus put \(b=b'+h\), and the sum over \(b'\) eliminates all \(h\ne0\bmod r\).
+The two phases differ by the factor \(\exp(-\pi\iu a/r)\ne1\), so there is no zero on the allowed parity.
+For \(r\) odd, \(s\) is odd and \(b^2+sb\) is even. Writing inverses modulo \(r\) with an overline gives
+\[
+ G_s=\sum_{b\bmod r}\exp\!\left(\frac{2\pi\iu}{r}\overline 2(b^2+sb)\right)
+ =e^{-2\pi\iu\overline 8s^2/r}
+   \sum_{b\bmod r}e^{2\pi\iu\overline2 b^2/r}.
+\]
+The last quadratic sum has modulus \(\sqrt r\) by the same orthogonality argument. The ratio of the two shift phases is \(\exp(-2\pi\iu\overline2a/r)\ne1\). Thus exactly the odd \(a\) for even \(r\) and the even \(a\) for odd \(r\) survive. There are \(\lfloor r/2\rfloor\) such labels.
+
+Finally, each ordinary \(\mu\)-cap on the remaining ports has coefficient \(S_{1a}\). Completing~\eqref{eq:capstate} gives
+\begin{equation}\label{eq:closure}
+ \sum_a S_{1a}\overline{A_a(n)}
+ =\overline{(S^2T^nS)_{11}}=S_{11}.
+\end{equation}
+This yields \(S_{11}^2>0\) after doubling in this normalization. Topologically, the remaining ordinary fillings leave one \(D^2\times S^1\), and its meridian \(\mu\) meets \(n\mu+\lambda\) with absolute intersection number one, the genus-one gluing of \(S^3\). The claim concerns the open states, not two different closed manifolds.
+\end{proof}
+
+\section{Odd root orders: a full even-slope support formula}\label{sec:arithmetic}
+
+\begin{proposition}\label{prop:odd}
+Suppose \(r\) is odd and \(n=2m\). Set \(d=\gcd(m,r)\), including \(d=r\) when \(m=0\bmod r\). Then
+\begin{equation}\label{eq:odd}
+ |I_{2m}|=
+ \begin{cases}
+ (r-1)/2,&d=1,\\
+ r/d,& d>1 .
+ \end{cases}
+\end{equation}
+For \(d=1\) the support consists of all labels with \(a+m\) odd. For \(d>1\), it consists exactly of the labels with that parity satisfying \(a\equiv1\) or \(-1\pmod d\).
+\end{proposition}
+\begin{proof}
+In~\eqref{eq:vacsum} replace the quadratic phase by \(e^{\pi\iu m b^2/r}\) and the prefactor phase accordingly. Reflection keeps only labels with \(a+m\) odd. On that parity, \(s=a\pm1\) obeys \(s\equiv m\pmod2\), so \(m b^2+s b\) is even and the relevant periodic Gaussian sums are
+\[
+ G_{m,s}=\sum_{b\bmod r}
+ \exp\!\left[\frac{2\pi\iu}{r}\overline 2(mb^2+sb)\right].
+\]
+Under \(b\mapsto b+r/d\) this sum acquires the factor \(e^{2\pi\iu\overline2s/d}\). It therefore vanishes unless \(d\) divides \(s\). When \(d\mid s\), the sum is \(d\) times a nondegenerate quadratic sum modulo \(r/d\), of modulus \(\sqrt{r/d}\), by the same squared-modulus orthogonality argument. This includes modulus one. For \(d=1\), completion of the square gives a relative phase \(\exp[-2\pi\iu\overline{(2m)}a/r]\ne1\) between the two terms. If \(d>1\), then \(d\) is odd and cannot divide both \(a-1\) and \(a+1\). The difference is nonzero exactly if one is divisible by \(d\). Both of the nonzero residue classes \(1,-1\pmod d\) occur \(r/d\) times in \(1,\ldots,r-1\). The involution \(a\mapsto r-a\) swaps the classes and the parity, leaving \(r/d\) labels of the required parity. This proves~\eqref{eq:odd}.
+\end{proof}
+
+\section{Composition requires marked supports}\label{sec:composition}
+
+Consider attaching \(s\) solid-torus caps to different ports of \(\Surf{g}{p+s}\times S^1\), leaving the same \(p\geq3\) output tori. If their chiral coefficients in the hat basis are \(B_a^{(1)},\ldots,B_a^{(s)}\), the output coefficient is
+\begin{equation}\label{eq:sewing}
+ S_{1a}^{\,2-2g-p-s}\prod_{j=1}^{s}\overline{B_a^{(j)}}.
+\end{equation}
+The common support is the intersection of the cap supports. The handle and boundary factor does not affect that intersection. An empty intersection is an identically zero TQFT tensor, not a normalizable state to which a finite ordinary price could be assigned.
+
+If the cap carries a core Wilson line of label \(b\), use \(T^{2m}S\ket b\), with chiral coefficient \((S T^{2m} S)_{ab}\). The corresponding doubled spinless label means \((b,b)\) in the chiral and reverse factors, with the obvious dual convention upon gluing.
+\begin{proposition}[Coloured equal-price obstruction]\label{prop:colored}
+Let \(r\) be odd and \(d=\gcd(m,r)>1\). If \(d\nmid b\), the coloured cap has chiral support
+\begin{equation}\label{eq:color}
+ \bigl\{a\in\{1,\ldots,r-1\}:a+b+m\ \text{even},\
+ a\equiv b\ \text{or}\ -b\pmod d\bigr\}.
+\end{equation}
+All such supports have size \(r/d\). At one fixed level, identical lists of separate doubled cap prices can yield two different \emph{nonzero} joint prices. They also need not determine whether a joint tensor vanishes.
+\end{proposition}
+\begin{proof}
+Replacing \(\sin(\pi b'/r)\) in the vacuum calculation by \(\sin(\pi b b'/r)\) changes the reflection sign to \((-1)^{a+b+m}\). It changes the two Gauss arguments to \(a-b\) and \(a+b\); on the allowed parity these are periodic sums with the same vanishing condition \(d\mid s\). At most one argument is divisible by \(d\), since \(d\) is odd and does not divide \(b\). Thus there is no cancellation of two nonzero sums, and~\eqref{eq:color} follows. The nonzero residues \(b,-b\pmod d\) each occur \(r/d\) times; the same reflection pairs opposite parities.
+
+For the nonzero comparison take \(r=135\), \(m_1=9\), and \(m_2=15\), with the same two marked slopes in both experiments. Use core colour \(b=1\) in both caps of the first experiment, and colour \(b=3\) in both of the second. The individual chiral support sizes are \(15\) and \(9\) in either experiment. The common labels are even. For \(b=1\), the joint residues modulo \(45\) are \(1,44\); the two signs must agree modulo the common divisor \(3\). For \(b=3\), all sign choices agree modulo \(3\), giving four residues, \(3,12,33,42\) modulo \(45\). Each residue has three representatives in \(1,\dots,134\), and \(a\mapsto135-a\) pairs opposite parities. The joint chiral support sizes are therefore \(3\) and \(6\). The corresponding doubled native prices differ by \(2w(L)\), although the two individual prices and the two marked slopes agree across the experiments.
+
+For the vanishing comparison take \(r=15\) and \(m=5\). The choices \(b=1\) and \(b=3\) give:
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+core label \(b\) & chiral support & doubled support size\\
+\midrule
+\(1\) & \(\{4,6,14\}\) & \(9\)\\
+\(3\) & \(\{2,8,12\}\) & \(9\)\\
+\bottomrule
+\end{tabular}
+\end{center}
+These supports are disjoint. Equation~\eqref{eq:sewing} proves the claimed distinction; division by a normalization is never used on the zero tensor.
+\end{proof}
+
+For uncoloured caps, the joint cardinalities themselves have a useful exact description.
+\begin{corollary}\label{cor:crt}
+At odd \(r\), take vacuum caps of even slopes \(2m_h\). Different parities among the \(m_h\) give empty common support. If all parities agree, discard the divisors \(d_h=\gcd(m_h,r)\) equal to one. If none remain, the common chiral support has size \((r-1)/2\). Otherwise set \(D=\lcm_h d_h\) over the remaining divisors, and let \(c\) be the number of components in the graph on those divisors, with an edge when their greatest common divisor exceeds one. The common chiral support then has size \(2^{c-1}r/D\).
+\end{corollary}
+\begin{proof}
+Proposition~\ref{prop:odd} first imposes the common parity. Each remaining divisor imposes \(a\equiv\pm1\pmod{d_h}\). Two such congruences agree on any shared factor greater than one only if their signs agree, since all their factors are odd. Hence the sign is constant on each graph component. The least common multiples for different components are pairwise coprime, so the Chinese remainder theorem gives \(2^c\) distinct permitted residues modulo \(D\). All are nonzero. Each has \(r/D\) representatives in \(1,\ldots,r-1\), and the involution \(a\mapsto r-a\) pairs their signs and flips parity. This proves the count.
+\end{proof}
+
+Thus, even in this diagonal setting, the ordinary prices of separately capped states are not sufficient to sew them. The missing information is the location of the support in the \emph{same marked modular basis}, not the total dimension. The full TQFT states, of course, sew without this ambiguity.
+
+\section{A fixed-slope ambiguity as the root approaches one}\label{sec:root}
+
+The comparison in Theorem~\ref{thm:main} lets one slope vary with \(r\). A different comparison keeps the surgery data fixed and varies only the order of the quantum-group root. For a fixed nonzero \(m\), subtract the price of the uncapped genus-zero \(p\)-port state with the same \(p\) placements:
+\begin{equation}\label{eq:renorm}
+ \Delta_r(m)=\TVprice_{\TV}(2m)-2w(L)\log_2(r-1)
+ =2w(L)\log_2\frac{|I_{2m}|}{r-1}.
+\end{equation}
+This subtracts a baseline defined in the same theory at each level.
+
+\begin{corollary}[Root-sequence dependence at fixed filling]
+At odd \(r\to\infty\), along a sequence with \(\gcd(r,m)=1\),
+\(\Delta_r(m)\to-2w(L)\). Along a sequence with a fixed \(\gcd(r,m)=d>1\),
+\(\Delta_r(m)\to-2w(L)\log_2 d\). Thus, when \(m\) has an odd prime factor, the baseline-subtracted ordinary price at a single fixed marked filling does not have a unique limit as the root approaches one.
+\end{corollary}
+\begin{proof}
+Both limits follow directly from~\eqref{eq:odd} and~\eqref{eq:renorm}. For every odd divisor \(d\) of \(|m|\), there are infinitely many odd \(r=d t\) with \(t\) coprime to \(|m|/d\), and then \(\gcd(r,m)=d\). For example, fixed \(m=3\) has distinct coprime and divisible subsequences. Both approach \(q=1\) in the standard root convention, and the common closed topology of Theorem~\ref{thm:main} remains \(S^3\) throughout.
+\end{proof}
+
+The finite part above counts all nonzero amplitudes, however small, and differs from the residue-dependent von Neumann-entropy limit of~\cite{Residue}. It excludes neither smoother state limits nor convergence with extra physical scaling data. Taking \(q\to1\) alone does not specify a dimensionful flat-gravity limit.
+
+\section{Discussion}
+
+The ordinary price counts surviving charge channels. Their locations in the marked basis determine whether additional caps can annihilate the state, while their weights determine the full amplitude. The equal-closure, equal-price and handle comparisons above separate these three kinds of information.
+\clearpage
+\begin{thebibliography}{99}
+\bibitem{LinkStates}
+V.~Balasubramanian, J.~R.~Fliss, R.~G.~Leigh, and O.~Parrikar,
+Multi-boundary entanglement in Chern--Simons theory and link invariants,
+\emph{JHEP} \textbf{04} (2017) 061,
+\href{https://doi.org/10.1007/JHEP04(2017)061}{doi:10.1007/JHEP04(2017)061}.
+\bibitem{ColoredJones}
+V.~Balasubramanian, M.~DeCross, J.~Fliss, A.~Kar, R.~G.~Leigh, and O.~Parrikar,
+Entanglement entropy and the colored Jones polynomial,
+\emph{JHEP} \textbf{05} (2018) 038,
+\href{https://doi.org/10.1007/JHEP05(2018)038}{doi:10.1007/JHEP05(2018)038}.
+\bibitem{Linked}
+S.~Dwivedi, V.~K.~Singh, S.~Dhara, P.~Ramadevi, Y.~Zhou, and L.~K.~Joshi,
+Entanglement on linked boundaries in Chern--Simons theory with generic gauge groups,
+\href{https://arxiv.org/abs/1711.06474}{arXiv:1711.06474}.
+\bibitem{Renyi}
+S.~Dwivedi, V.~K.~Singh, and A.~Roy,
+Semiclassical limit of topological R\'enyi entropy in \(3d\) Chern--Simons theory,
+\href{https://arxiv.org/abs/2007.07033}{arXiv:2007.07033}.
+\bibitem{Residue}
+V.~Ganwariya, S.~Sain, and S.~Dwivedi,
+Semiclassical asymptotics of entanglement in torus-link states,
+\href{https://arxiv.org/abs/2611.11961}{arXiv:2611.11961}.
+\bibitem{Fibered}
+V.~Balasubramanian and C.~Cummings, Multipartite entanglement structure of fibered link states,
+\emph{Phys.\ Rev.\ D} \textbf{111} (2025) 105020,
+\href{https://doi.org/10.1103/PhysRevD.111.105020}{doi:10.1103/PhysRevD.111.105020}.
+\bibitem{Jeffrey}
+L.~C.~Jeffrey, Chern--Simons--Witten invariants of lens spaces and torus bundles, and the semiclassical approximation,
+\emph{Commun.\ Math.\ Phys.} \textbf{147} (1992) 563--604,
+\href{https://doi.org/10.1007/BF02097243}{doi:10.1007/BF02097243}.
+\bibitem{Hansen}
+S.~K.~Hansen, Reshetikhin--Turaev invariants of Seifert \(3\)-manifolds and a rational surgery formula,
+\emph{Algebr.\ Geom.\ Topol.} \textbf{1} (2001) 627--686,
+\href{https://doi.org/10.2140/agt.2001.1.627}{doi:10.2140/agt.2001.1.627}.
+\bibitem{HansenTakata}
+S.~K.~Hansen and T.~Takata, Reshetikhin--Turaev invariants of Seifert \(3\)-manifolds for classical simple Lie algebras, and their asymptotic expansions,
+\href{https://arxiv.org/abs/math/0209403}{arXiv:math/0209403}.
+\bibitem{OpenAI}
+OpenAI, \emph{Euclidean geometry in the asymptotic spectrum of tensors},
+24 November 2026,
+\href{https://mathcommunity.github.io/oai-math-revised/papers/Euclidean-geometry-in-the-asymptotic-spectrum-of-tensors-November-24-2026/}{preprint}.
+\bibitem{MizoguchiTada}
+S.~Mizoguchi and T.~Tada, Three-dimensional gravity from the Turaev--Viro invariant,
+\emph{Phys.\ Rev.\ Lett.} \textbf{68} (1992) 1795--1798,
+\href{https://doi.org/10.1103/PhysRevLett.68.1795}{doi:10.1103/PhysRevLett.68.1795}.
+\bibitem{Gresnigt}
+N.~Gresnigt, A.~Marciano, and E.~Zappal\`a,
+On the dynamical emergence of \(\mathrm{SU}_q(2)\) from the regularization of \(2+1\)D gravity with cosmological constant,
+\emph{Phys.\ Rev.\ D} \textbf{107} (2023) 046018,
+\href{https://doi.org/10.1103/PhysRevD.107.046018}{doi:10.1103/PhysRevD.107.046018}.
+\bibitem{Verlinde}
+E.~Verlinde, Fusion rules and modular transformations in 2D conformal field theory,
+\emph{Nucl.\ Phys.\ B} \textbf{300} (1988) 360--376,
+\href{https://doi.org/10.1016/0550-3213(88)90603-7}{doi:10.1016/0550-3213(88)90603-7}.
+\bibitem{Balsam}
+B.~Balsam, Turaev--Viro invariants as an extended TQFT III,
+\href{https://arxiv.org/abs/1012.0560}{arXiv:1012.0560}.
+\end{thebibliography}
+\end{document}
