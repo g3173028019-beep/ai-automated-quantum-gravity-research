@@ -1,0 +1,186 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.95in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\TF}{\mathrm{TF}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\cD}{\mathcal D}
+\title{Gravitational readouts of a localized\\ non-Abelian null-beam collision}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We construct angularly localized, smooth characteristic data for four-dimensional Einstein--Yang--Mills theory with identical incident focusing and variable relative color. On their fully coupled local developments, two normal curvature components are generated at mixed order: the normal electric term is proportional to the screen inner product of the incident profiles, and the screen magnetic term to their wedge product. Both carry the same Lie bracket. Their squared sum gives a polarization-independent mixed null Ricci coefficient proportional to the squared color commutator. In contrast, the trace-free mixed deformation of the cut metric reads the signed color inner product. Calibrated optical tidal traces extract both curvature entries. A fixed finite screen Wilson loop reads coherent magnetic flux rather than local quadratic energy; two spatially varying profiles can therefore have the same leading Wilson deficit and different integrated mixed Ricci responses. These are local classical statements, obtained from the ordinary Einstein--Yang--Mills equations at fixed Newton coupling.
+\end{abstract}
+
+\section{Problem and setting}
+
+Two incident Yang--Mills waves can have the same separate null energy densities while their relative color changes what they source after meeting. To resolve this distinction without an internal frame at the final gravitational detector, one needs both a physically matched characteristic preparation and an invariant mixed-curvature observable. We give such a preparation with transverse localization, rather than extend a planar formula by treating the angular dependence as an external parameter.
+
+We use the smooth characteristic Einstein--Yang--Mills theory of Mondal and Yau~\cite{MY}, taking its local existence and regularity as input. The use of a gauge curvature with non-Abelian coordinates does not by itself make a collision irreducibly non-Abelian. In particular the exact colliding-plane-wave class of Gurtug and Halilsoy~\cite{GH} is constructed by transforming an Abelian electromagnetic solution into non-Abelian gauge variables. Colliding non-Abelian fields have also been studied on a fixed background~\cite{YMPlane}. The claims here are the mixed commutator jets for localized characteristic data of the coupled equations, the independent signed shape coefficient, and the optical and Wilson comparisons for those same solutions. Neither a general new existence theorem nor a global colliding-wave construction is claimed.
+
+Use signature \((-+++)\), \(\kappa=8\pi G_N\), and zero cosmological constant. Let \(A\) be an anti-Hermitian connection on a locally trivial bundle with compact structure group and positive invariant inner product \(\langle\cdot,\cdot\rangle\). Set \(F=dA+A\wedge A\). The convention \(A\wedge A(L,N)=[A(L),A(N)]\) fixes the sign in all Lie products. The Yang--Mills action is \(-\frac{1}{4g_{\rm YM}^2}\int\langle F_{\mu\nu},F^{\mu\nu}\rangle\,dV_g\), with
+\begin{equation}
+ T_{\mu\nu}=\frac{1}{g_{\rm YM}^2}\left[
+    \langle F_{\mu\lambda},F_\nu{}^\lambda\rangle
+    -\tfrac14 g_{\mu\nu}\langle F_{\lambda\eta},F^{\lambda\eta}\rangle
+ \right],
+ \qquad R_{\mu\nu}=\kappa T_{\mu\nu}.
+ \label{eq:stress}
+\end{equation}
+The second equality uses the four-dimensional trace identity. Curvature signs are chosen so the trace of the optical tidal matrix \(R(e_A,k,e_B,k)\) is \(\Ric(k,k)\).
+
+\section{Matched characteristic data and the leading theorem}
+
+Let two smooth null hypersurfaces \(v=0\) and \(u=0\) meet at a spacelike sphere \(S\). Its corner metric \(\gamma_0\) is exactly flat in a coordinate disk \(P\Subset S\); no assumption is made on the rest of the sphere except smoothness. Let
+\(\alpha=d\phi\), \(\beta=d\psi\) be smooth, exact one-forms supported in a larger coordinate patch, with \(\phi,\psi\) harmonic on \(P\). Choose \(X,Y\) in a common corner gauge frame and restrict the screen connections to
+\begin{equation}
+ A_S|_{v=0}=f_0(u)\alpha X,\qquad
+ A_S|_{u=0}=g_0(v)\beta Y,\qquad
+ f_0(0)=g_0(0)=0,\quad f_0'(0)=a,\quad g_0'(0)=b .
+ \label{eq:data}
+\end{equation}
+We take \(ab\ne0\). Set the normal electric curvature, normal torsion, and both null expansions to zero at \(S\), and choose shear-free, affinely normalized free data on each incident sheet. The screen equations are not made shear-free in the evolved interior.
+
+Denote by \(l,n\) the two normalized null normals with \(g(l,n)=-1\) and by \(e_1,e_2\) a positively oriented orthonormal screen frame. Normal-frame normalization is calibrated by the chosen affine markers on the initial sheets. All angular contractions on the right hand sides below are with \(\gamma_0\). A remainder \(O(uv(u+v))\) means a bound in the incident quadrant uniform on each compact subdisk of \(P\), with constants allowed to depend on the fixed smooth data.
+
+\begin{theorem}[Two invariant responses]\label{thm:response}
+The data can be completed by the characteristic constraints to a smooth, fully coupled local development. At equal incident norms \(\|X\|\) and \(\|Y\|\), varying their relative color leaves the pointwise intrinsic metrics and incident null fluxes of both inputs unchanged. On \(P\) the developed curvatures satisfy
+\begin{align}
+ F(l,n)&=-ab\,uv\,(\alpha\cdot\beta)[X,Y]+O\!\left(uv(u+v)\right),\label{eq:e}\\
+ F(e_1,e_2)&=ab\,uv\,(\alpha\wedge\beta)_{12}[X,Y]+O\!\left(uv(u+v)\right).\label{eq:b}
+\end{align}
+Thus, as an exact leading coefficient,
+\begin{equation}
+ R_{ln}=\frac{\kappa a^2 b^2}{2g_{\rm YM}^2}
+     u^2v^2\,\|\alpha\|^2\|\beta\|^2\,\|[X,Y]\|^2
+     +O\!\left(u^2v^2(u+v)\right).
+ \label{eq:ric}
+\end{equation}
+The trace-free screen Ricci tensor at the original corner is
+\begin{equation}
+ (R_{AB})^\TF|_S
+ =-\frac{\kappa ab}{g_{\rm YM}^2}\langle X,Y\rangle
+       \bigl[\alpha_A\beta_B+\beta_A\alpha_B-(\alpha\cdot\beta)\gamma_{0,AB}\bigr].
+ \label{eq:shape}
+\end{equation}
+It equals the trace-free mixed cut-metric derivative in the normalized chart used in the proof. The covariant Lie-algebra coefficients in \eqref{eq:e}--\eqref{eq:b} transform by the same corner adjoint action; the coefficients in \eqref{eq:ric}--\eqref{eq:shape} are internal-gauge invariant.
+\end{theorem}
+
+\begin{proof}
+\emph{Existence and matched inputs.}
+Use the characteristic constraints with the conformal screen class and the tangential Yang--Mills profiles as free data, and with the declared metric, expansion, torsion, and electric data at the corner. The single-sheet optical equation gives \(\gamma=r^2\gamma_0\) on each incident sheet. On \(v=0\), for example,
+\begin{equation}
+ r_{uu}=-\frac{\kappa(f_0')^2\|\alpha\|_{\gamma_0}^2\|X\|^2}
+                    {2g_{\rm YM}^2 r},\qquad r(0,\theta)=1,\quad r_u(0,\theta)=0 .
+ \label{eq:ray}
+\end{equation}
+There is an analogous equation on \(u=0\). Both solve smoothly for positive \(r\) for short data. The normal gauge curvature along each axis comes from Gauss, not an added bulk assumption. The remaining transverse characteristic components are the constrained transport data, not prescribed to be zero on both sheets. The initial corner Gauss and Codazzi relations give the corresponding curvature components from these geometric and gauge data. No division by a null expansion is used in the transport construction. The data are smooth on the compact corner sphere and sufficiently short sheets, so the smooth local characteristic result in~\cite[Sec.~4, particularly Theorems 4.1--4.3]{MY} applies to the completed data. In \eqref{eq:ray} the flux on \(v=0\) depends on \(X\) only through its norm, and likewise for \(Y\) on \(u=0\). This proves equality of the intrinsic incident geometries and fluxes; it does not prescribe matching complementary derivatives on the two null faces.
+
+\emph{Gauge transport and mixed field jets.}
+Write the metric and normalized normals as
+\begin{align*}
+ ds^2&=-2e^{-\sigma}du\,dv+
+  \gamma_{AB}(d\theta^A-B^A\,dv)(d\theta^B-B^B\,dv),\\
+ L&=\partial_u,\quad N=\partial_v+B^A\partial_A,\quad
+ l=e^{\sigma/2}L,\quad n=e^{\sigma/2}N,\quad
+ \rho=\sqrt{\det\gamma}.
+\end{align*}
+Transport the screen labels from \(u=0\) along \(L\), with \(B=0\) on \(u=0\); choose initial lapses so \(\sigma=0\) on both axes. The vanishing corner torsion gives \(\partial_uB=0\) at \(S\) by the null-frame Koszul identity. Together with zero corner expansions and incident shears, this kills all first metric derivatives on the flat patch of \(S\) in these coordinates. Use \(A_u=0\) in the local region and \(A_v=0\) on \(u=0\), obtained by parallel transport from the common corner frame.
+
+Let \(E=F(L,N)=F_{uv}+B^A F_{uA}\) and \(\Pi=\rho e^\sigma E\). The \(v\)-component of the density-form Yang--Mills equation is exactly
+\begin{equation}
+ \partial_u\Pi=D_A(\rho\gamma^{AB}F_{uB}),
+ \label{eq:gauss}
+\end{equation}
+since \(\sqrt{|g|}F^{uv}=-\Pi\) and \(\sqrt{|g|}F^{Av}=\rho\gamma^{AB}F_{uB}\). On \(u=0\) the other component likewise gives
+\(\partial_v\Pi=-D_A(\rho\gamma^{AB}F_{vB})\); all tangential shift derivatives there vanish. On both axes the factor \(\rho\gamma^{AB}\) equals its corner value by two-dimensional conformal cancellation. Therefore each divergence vanishes on \(P\) by harmonicity and the single-color profile; \(\Pi=0\) on both axes of this patch. The screen curvature \(F_{AB}\) also vanishes on both axes, since \(\alpha,\beta\) are exact and their individual color brackets vanish.
+
+At the corner on \(P\), the \(uvA\) Bianchi equation is
+\(\partial_uF_{vA}-\partial_vF_{uA}=0\). The transverse Yang--Mills equation gives \(\partial_uF_{vA}+\partial_vF_{uA}=0\). Terms omitted from these corner identities are zero: \(F_{uv}=F_{AB}=0\) as functions of the angular corner variable, their angular derivatives are zero, and \(A\) and the first metric derivatives vanish there. Also \(\partial_u A_v=F_{uv}=0\) on this patch of \(S\), so
+\(\partial_{uv}A_A=0\). Differentiating \eqref{eq:gauss} at the corner, the only surviving term is
+\[
+ \partial_{uv}\Pi
+   =\rho_0\gamma_0^{AB}[\partial_v A_A,F_{uB}]
+   =-\rho_0 ab(\alpha\cdot\beta)[X,Y].
+\]
+In \(F_{AB}\), the mixed derivative of the angular exterior derivative of \(A_S\) vanishes, while the mixed derivative of \(A_S\wedge A_S\) supplies \(ab(\alpha\wedge\beta)_{AB}[X,Y]\). Each field vanishes on the two axes. Applying twice the fundamental theorem of calculus gives \(uv\) times its corner mixed derivative plus a smooth \(O(uv(u+v))\) remainder. Orthonormalization and normalization of \(l,n\) then give \eqref{eq:e} and \eqref{eq:b}.
+
+\emph{Invariant contractions.}
+In a null frame \eqref{eq:stress} gives the exact algebraic identity
+\begin{equation}
+ R_{ln}=\frac{\kappa}{2g_{\rm YM}^2}
+       \bigl(\|F(l,n)\|^2+\|F(e_1,e_2)\|^2\bigr).
+ \label{eq:ln}
+\end{equation}
+The two incident radiative contractions cancel from this component. On a real two-plane,
+\((\alpha\cdot\beta)^2+(\alpha\wedge\beta)_{12}^2=\|\alpha\|^2\|\beta\|^2\);
+substitution proves \eqref{eq:ric}. At the corner the only nonzero field components are \(F_{uA}=a\alpha_A X\), \(F_{vA}=b\beta_A Y\). Taking the screen trace-free part of \eqref{eq:stress} gives \eqref{eq:shape}. Since all first metric derivatives vanish on the flat corner patch, the linear second-derivative coordinate expression for \(R_{AB}\) there gives \(R_{AB}|_S=\partial_u\partial_v\gamma_{AB}|_S\): the intrinsic screen term is zero, and the possible terms involving \(\partial_A\partial_uB\) vanish since \(\partial_uB|_S=0\) on the patch. In particular the trace-free identity makes no claim about later Weyl shear. Finally \(X,Y\), defined as the common-frame radiative directions, undergo only a simultaneous adjoint transformation on the corner; contractions and norms in the conclusion are invariant.
+\end{proof}
+
+An explicit genuinely nonconstant family uses a complex Euclidean coordinate \(z\) on \(P\), \(h(z)=z+\delta z^2\), \(\phi=\Re h\), \(\psi=\Re(e^{i\vartheta}h)\) on \(P\); smoothly cut off both potentials outside it. The common intensity is \(|h'|^2\). At fixed \(X,Y\), varying \(\vartheta\) exchanges the two terms in \eqref{eq:ln} without changing the coefficient in \eqref{eq:ric}. For fixed nonzero \(X,Y\) in \(\mathfrak{su}(2)\), the squared bracket gives the squared sine of the relative color angle up to the chosen Lie normalization, while \eqref{eq:shape} gives the signed cosine when both screen profiles are nonzero. Opposite parallel choices leave the commutator contribution zero and change the sign of the shape. Orthogonal colors maximize the commutator at fixed norms and leave the mixed shape coefficient zero.
+
+\section{Optical measurement of the two curvature entries}
+
+A local optical prescription avoids treating a mixed coordinate derivative of area as a universal observable. For an affine null tangent \(k\), let \(\cD(k)\) be the trace of the screen Jacobi acceleration with a minus sign in an initially parallel pencil. Then \(\cD(k)=R(k,k)\) by the geodesic-deviation equation~\cite{Sachs}. Fix the calibrated \(l,n,e_1,e_2\) at the measurement point, and define \(k_{A,\pm}=l+n\pm\sqrt2\,e_A\), which are null. Tensor algebra gives
+\begin{equation}
+ R_{ln}=\frac1{16}\sum_{A=1}^2
+       \{\cD(k_{A,+})+\cD(k_{A,-})-2\cD(l)-2\cD(n)\}.
+ \label{eq:tilt}
+\end{equation}
+Indeed the pair sum removes the odd terms in \(e_A\); the screen Ricci trace is \(2R_{ln}\) because \(R=0\). With arbitrary traceful matter a subtraction \(R/4\) would be needed in \eqref{eq:tilt}. Similarly, the difference between paired tilted sums for screen directions \(e,e'\) gives \(4(R_{ee}-R_{e'e'})\), and rotating the screen basis by \(\pi/4\) reads the off-diagonal entry. These are marked local optical measurements, not observations at infinity. They are sufficient to read the two covariant quantities \eqref{eq:ric} and \eqref{eq:shape}; no common Weyl curvature between different experiments is presumed.
+
+\section{Finite Wilson loops measure coherent flux}
+
+Fix a smooth disk \(D\Subset P\) with marked oriented boundary \(\Gamma\), and transport that contour with the marked screens. Use a nontrivial finite unitary representation \(\pi\) and \(U_\Gamma\) for its Wilson holonomy, with the same ordinary gauge-invariant trace convention as~\cite{Wilson}. The disk is fixed and does not shrink with \(u,v\).
+
+\begin{corollary}[A Wilson deficit does not determine the integrated Ricci coefficient]\label{cor:wilson}
+As \(u,v\) shrink,
+\begin{align}
+ U_\Gamma&=I\ \pm ab\,uv\,\pi_*([X,Y])
+       \int_D\alpha\wedge\beta + O\!\left(uv(u+v)\right), \label{eq:hol}\\
+ 1-\Re\frac{\tr U_\Gamma}{d_\pi}
+   &=\frac{a^2b^2}{2d_\pi}\,u^2v^2
+       \|\pi_*([X,Y])\|_{\rm HS}^2\!
+       \left(\int_D\alpha\wedge\beta\right)^2
+       +O\!\left(u^2v^2(u+v)\right).
+ \label{eq:deficit}
+\end{align}
+There are genuinely spatially varying incident profiles with the same leading Wilson deficit and the same integrated incident flux densities, but different integrated leading mixed Ricci coefficients on \(D\).
+\end{corollary}
+
+\begin{proof}
+In the convention \(A^g=g^{-1}Ag+g^{-1}dg\), the gauge transformation
+\(\exp[-f_0(u)\phi X-g_0(v)\psi Y]\) makes the entire screen connection vanish on both axes. Its screen coefficients are then uniformly \(O(uv)\) on the fixed disk. Path ordering changes the first integrated term only at \(O(u^2v^2)\). Apply ordinary Stokes at this leading order and use \eqref{eq:b}; the commutator of the transformed screen connection only alters the higher order. Basepoint conjugation is immaterial and the overall sign in \eqref{eq:hol} is the choice of orientation or parallel-transport convention. For unitary \(U\),
+\(\|U-I\|_{\rm HS}^2=2d_\pi-2\Re\tr U\), proving \eqref{eq:deficit} without a higher-order expansion of the trace itself.
+
+For the comparison take \(\vartheta=\pi/2\), so \(\alpha\wedge\beta=\pm W\,dA_0\) where \(W=|h'|^2\). The leading deficit reads \((\int_D W\,dA_0)^2\); \eqref{eq:ric} integrated against \(dA_0\) reads \(\int_D W^2\,dA_0\). The same leading Ricci coefficient is obtained with the evolved area density by smoothness. For explicit nonconstant choices on the disk of radius \(R\), take
+\[
+ W_t(z)=\frac{|1+tz|^2}{1+t^2R^2/2},\qquad
+ \overline{W_t}=1,\qquad
+ \overline{W_t^2}=\frac{1+2t^2R^2+t^4R^4/3}{(1+t^2R^2/2)^2}.
+\]
+The bar is the disk mean and \(W_t\) is the derivative intensity of a normalized holomorphic quadratic. The disk mean in the last expression has positive derivative in \(t^2\) at zero; take two distinct small nonzero \(t\). Each supports the smooth local construction, and their integrated incident fluxes agree by \eqref{eq:ray} and \(\overline W_t=1\). More explicitly, the integrated \(T_{uu}\) against the induced proper screen area on the incident ray is exactly proportional to \((f_0')^2\int_D W_t\,dA_0\), since the two powers of \(r\) in area and flux cancel; the analogous statement holds on the second ray. Their pointwise flux profiles need not agree for this last comparison. This distinction is coherent integration of the field versus integration of its squared local strength.
+\end{proof}
+
+\section{Boundary of the result}
+
+The tests take place on sufficiently short smooth characteristic developments and keep the physical affine normalization and screen markings fixed. The equal incident-data statement in Theorem~\ref{thm:response} concerns those intrinsic geometries and pointwise respective fluxes; it does not fix both full characteristic field traces, so this is not a nonuniqueness theorem for the characteristic Cauchy problem. The Wilson example compares only its leading closed-loop deficit, not equality of all loop data or of all coefficients. The angularly localized fluxes yield an interaction at finite gravitational coupling; the result is neither semiclassical backreaction nor a claim of quantum-source coherence, a gauge-free quark apparatus, or full refoliation. A Yang--Mills connection and a change of its relative color supply the physical preparations. No quantum-gravity framework is assumed.
+
+\begin{thebibliography}{9}
+\bibitem{MY} P.~Mondal and S.-T.~Yau, \emph{Einstein--Yang--Mills equations in the double null framework}, \href{https://arxiv.org/abs/2205.01101}{arXiv:2205.01101}.
+\bibitem{GH} O.~Gurtug and M.~Halilsoy, \emph{Restricted class of colliding Einstein--Yang--Mills plane waves}, \href{https://arxiv.org/abs/0802.3797}{arXiv:0802.3797}.
+\bibitem{YMPlane} P.~A.~R\k{a}czka, \emph{Colliding plane waves in non-Abelian gauge theory}, Phys.\ Lett.\ B \textbf{177}, 60--62 (1986), \href{https://doi.org/10.1016/0370-2693(86)90014-6}{doi:10.1016/0370-2693(86)90014-6}.
+\bibitem{Sachs} R.~K.~Sachs, \emph{Gravitational waves in general relativity. VI. The outgoing radiation condition}, Proc.\ Roy.\ Soc.\ A \textbf{264}, 309--338 (1961), \href{https://doi.org/10.1098/rspa.1961.0202}{doi:10.1098/rspa.1961.0202}.
+\bibitem{Wilson} K.~G.~Wilson, \emph{Confinement of quarks}, Phys.\ Rev.\ D \textbf{10}, 2445--2459 (1974), \href{https://doi.org/10.1103/PhysRevD.10.2445}{doi:10.1103/PhysRevD.10.2445}.
+\end{thebibliography}
+\end{document}

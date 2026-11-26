@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 46 items: 20 original research packets, six later analytical Markdown manuscripts and twenty typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 49 items: 20 original research packets, six later analytical Markdown manuscripts and twenty-three typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–42 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–43 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -535,3 +535,27 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** Finite doubled SU(2) state sums with marked whole-torus boundary components. This is a boundary sewing result, not a claim about distinct closed manifolds or the physical zero-cosmological-constant limit.
 
 [42 · Open Turaev–Viro Dehn fillings](../papers/42-tensor-prices-tv-dehn-filling/README.md) · [PDF](../papers/42-tensor-prices-tv-dehn-filling/manuscript.pdf) · [TeX](../papers/42-tensor-prices-tv-dehn-filling/manuscript.tex) · [Verification](../papers/42-tensor-prices-tv-dehn-filling/VERIFICATION.md)
+
+## 43. Gravitational readouts of a localized non-Abelian null-beam collision
+
+**Question.** How does the spacetime curvature distinguish two overlapping non-Abelian null beams?
+
+**Result.** For smooth characteristic Einstein–Yang–Mills data in the stated localized collision, a normal Ricci term detects the commutator norm, while an independent signed shape term changes the optical readout. Uses local characteristic existence for the classical coupled equations. The proof identifies invariant mixed electric and magnetic terms, derives a local optical measurement, and compares it with finite Wilson loops. No quantization is assumed.
+
+[Paper notes](../papers/43-localized-nonabelian-null-collision/README.md) · [PDF](../papers/43-localized-nonabelian-null-collision/manuscript.pdf) · [TeX](../papers/43-localized-nonabelian-null-collision/manuscript.tex)
+
+## 42B. Wilson Phase and Rational Sewing in Turaev–Viro Theory
+
+**Question.** Which phase data of a physical Turaev–Viro cap survive gluing?
+
+**Result.** A fixed geometric cap yields the same limiting fixed-color Wilson laws along distinct level subsequences, while actual simple-current Wilson-cylinder sewing distinguishes their phases. Companion to Papers 41 and 42. Includes rational caps, growing-color limits and filtered modular cylinder networks, with the domains stated separately. The TeX source has two included section files.
+
+[Paper notes](../papers/42b-wilson-phase-rational-tv-sewing/README.md) · [PDF](../papers/42b-wilson-phase-rational-tv-sewing/manuscript.pdf) · [TeX](../papers/42b-wilson-phase-rational-tv-sewing/main.tex)
+
+## 33B. Determining an Evolving Lorentzian Geometry with Uniform Mass Control
+
+**Question.** Can one actively recover evolving geometry through a single calibrated aperture?
+
+**Result.** Exact calibrated retarded aperture responses and synchronized spatially uniform mass variations recover an evolving Lorentzian geometry in the stated setting; the twisted-cap extension uses an independent calibration. Companion to Paper 33. Includes an unconditional orthogonally static compact-cap calibration under its data assumptions, a conditional twisted-cap extension and exact ambiguities for missing control times or uncontrolled spatial profiles.
+
+[Paper notes](../papers/33b-active-evolving-lorentzian-geometry/README.md) · [PDF](../papers/33b-active-evolving-lorentzian-geometry/manuscript.pdf) · [TeX](../papers/33b-active-evolving-lorentzian-geometry/main.tex)

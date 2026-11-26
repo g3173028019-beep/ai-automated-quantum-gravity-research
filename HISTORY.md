@@ -2,9 +2,11 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains 46 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and twenty typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 49 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and twenty-three typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
+
+On 27 November 2026 (Beijing time), [43 · Gravitational readouts of a localized non-Abelian null-beam collision](papers/43-localized-nonabelian-null-collision/README.md), [42B · Wilson Phase and Rational Sewing in Turaev–Viro Theory](papers/42b-wilson-phase-rational-tv-sewing/README.md), [33B · Determining an Evolving Lorentzian Geometry with Uniform Mass Control](papers/33b-active-evolving-lorentzian-geometry/README.md) joined the public archive as typeset research manuscripts. Papers 33, 41 and 42 retain their original files and index entries.
 
 On 26 November 2026 (Beijing time), [40 · Null-volume shared-label rigidity](papers/40-null-volume-shared-label-rigidity/README.md), [41 · Turaev–Viro fusion, recoupling and Wilson moduli](papers/41-tensor-prices-tv-fusion-and-wilson/README.md), [42 · Open Turaev–Viro Dehn fillings](papers/42-tensor-prices-tv-dehn-filling/README.md) joined the public archive as typeset, internally reviewed research manuscripts. Earlier files and numbering are retained.
 

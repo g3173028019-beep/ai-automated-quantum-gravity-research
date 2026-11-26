@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**46 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 20 typeset analytical articles**
+**49 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 23 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 46 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 49 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -18,9 +18,18 @@ Positive physical states for coupled fields, quantitative geometry–matter info
 | **What remains stable when discrete geometry is changed?** | [17 · Cartan–Regge closure](papers/17-cartan-regge-closure/) treats the finite first-order reduction; [11 · Causal Regge transfer](papers/11-causal-regge-transfer/) isolates a finite Lorentzian channel; [22 · Lorentzian Regge Airy asymptotics](papers/22-lorentzian-regge-airy/manuscript.md) resolves the behavior of a specific saddle merger. |
 | **Which radiative quantities can be transported or measured?** | [23 · Gravitational memory and boosts](papers/23-gravitational-memory-boost/manuscript.md) treats its stated memory sector; [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md) studies a separate finite-aperture record in a specified graviton vacuum. |
 
-These routes connect the 20 original packets with the twenty-three later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
+These routes connect the 20 original packets with the twenty-nine later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
 
 ## New TeX and PDF manuscripts
+
+### Latest additions
+
+| Paper | Result | Files |
+|---|---|---|
+| [43 · Gravitational readouts of a localized non-Abelian null-beam collision](papers/43-localized-nonabelian-null-collision/README.md) | For smooth characteristic Einstein–Yang–Mills data in the stated localized collision, a normal Ricci term detects the commutator norm, while an independent signed shape term changes the optical readout. | [PDF](papers/43-localized-nonabelian-null-collision/manuscript.pdf) · [TeX](papers/43-localized-nonabelian-null-collision/manuscript.tex) |
+| [42B · Wilson Phase and Rational Sewing in Turaev–Viro Theory](papers/42b-wilson-phase-rational-tv-sewing/README.md) | A fixed geometric cap yields the same limiting fixed-color Wilson laws along distinct level subsequences, while actual simple-current Wilson-cylinder sewing distinguishes their phases. | [PDF](papers/42b-wilson-phase-rational-tv-sewing/manuscript.pdf) · [TeX](papers/42b-wilson-phase-rational-tv-sewing/main.tex) |
+| [33B · Determining an Evolving Lorentzian Geometry with Uniform Mass Control](papers/33b-active-evolving-lorentzian-geometry/README.md) | Exact calibrated retarded aperture responses and synchronized spatially uniform mass variations recover an evolving Lorentzian geometry in the stated setting; the twisted-cap extension uses an independent calibration. | [PDF](papers/33b-active-evolving-lorentzian-geometry/manuscript.pdf) · [TeX](papers/33b-active-evolving-lorentzian-geometry/main.tex) |
+
 
 ### Tensor spectral geometry
 
@@ -123,7 +132,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All 46 manuscripts, with results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 49 manuscripts, with results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |

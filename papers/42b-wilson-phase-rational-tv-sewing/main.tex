@@ -1,0 +1,189 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=.94in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage{xcolor,needspace}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!55!black]{hyperref}
+\hypersetup{pdftitle={Wilson Phase and Rational Sewing in Turaev--Viro Theory},pdfsubject={Physical marked torus sewing}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand\ZZ{\mathbb Z}
+\newcommand\RR{\mathbb R}
+\newcommand\ii{{\rm i}}
+\newcommand\sgn{\operatorname{sgn}}
+\newcommand\TV{\mathrm{TV}}
+\title{Wilson Phase and Rational Sewing in Turaev--Viro Theory\\[3pt]\large What fixed torus probes miss and what moving colors recover}
+\author{}
+\date{November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A fixed vacuum Dehn filling prepares a three-torus state of the unitary doubled \(\mathrm{SU}(2)\) Turaev--Viro theory. Its complete fixed-color Wilson law has the same limit along different root progressions, but sewing through physical highest-spin simple-current ribbons distinguishes them. We derive exact finite-level expectations and prove why fixed modular circuits cannot replace the growing color. We then give composition-preserving data for arbitrary fixed primitive rational fillings: one quadratic chirp and a finite complex residue profile. These data describe the fixed-color edge, mixed and bulk closure regimes and explain why the edge state alone need not determine a closure. For growing core colors we obtain a filtered stationary-charge formula and an unfiltered critical detuning law. A compact interior band also supports physical non-diagonal modular cylinders, including singular stationary fibres and partial sewing. None of the large-level limits fixes a dimensionful gravitational scale.
+\end{abstract}
+
+\section{Introduction}
+An open torus filling can be studied through at least three different data sets: a support count, a limiting family of marked local measurements, or the complex boundary amplitudes needed for subsequent composition. They are not interchangeable. Earlier archive work separated the first from the closed contraction for Dehn fillings \cite{Archive42}, and analyzed physical Wilson operations and coherent cut probes in the doubled theory \cite{Archive41}. We keep both results and ask what further structure is required to carry the filling through an actual measured sewing.
+
+The lead result in Section~\ref{sec:fixedcap} uses one geometric cap, unchanged with the level. An increasingly high but physically admissible Wilson color couples the two endpoints of the modular charge interval. Any fixed-color, fixed-modular circuit in the class specified there cannot do so in the limiting edge sector. The numerical signs arise from the common marked surgery and are not inferred from an independent abstract choice of edge wavefunction. The remainder of the paper treats the associated composition problem. Rational slopes retain finite complex data that can be multiplied before closing, and moving colors introduce stationary phases invisible to fixed-charge limits. These latter statements concern explicitly normalized scalars and filters, not a general theory of large-level three-manifold invariants.
+
+We use the standard unitary \(\mathrm{SU}(2)_k\) modular convention and its conjugate for the second factor of the doubled Turaev--Viro theory. A chiral formula below is either an intermediate factor of a literal doubled amplitude or a marked chiral operator in the physical double. Standard modular, surgery, and fusion formulas are inputs; the claims concern the operational phase test, and the ways finite-level complex data pass or fail to pass to composed limits.
+
+\input{interedge}
+
+
+\section{Exact rational marked caps}
+
+Set \(r=k_{\mathrm{level}}+2\), with chiral charge labels \(1\le a<r\). Let \(e_a\) be the charge basis, \(S_{ab}=\sqrt{2/r}\sin(\pi ab/r)\), and \(\hat e_a=Se_a\). The torus twist acts by \(\exp(\pi\ii(a^2-1)/(2r))\). An oriented product boundary is marked by its base section \(\mu\) and fibre \(\lambda\). A primitive slope \(p\mu+q\lambda\) of core color \(b\) is obtained by applying the modular map with
+\[
+ g=\begin{pmatrix}p&u\\q&v\end{pmatrix},\qquad pv-qu=1,
+ \qquad S_0g=\begin{pmatrix}-q&-v\\p&u\end{pmatrix},
+ \quad S_0=\begin{pmatrix}0&-1\\1&0\end{pmatrix}.
+\]
+We use one projective chiral phase convention throughout; any discarded phase is a common unit scalar for the whole cap, never an \(a\)-dependent rephasing. Physical \(\TV\) uses the chiral theory and its complex conjugate, regrouped by whole boundary tori \cite{Balsam}. An oriented cap bra conjugates the formulas below consistently.
+
+\begin{lemma}[Cap descriptor]\label{lem:cap}
+For \(p=0\) the cap is a sharp pin \(a=b\). For \(p\ne0\), set \(\kappa_i=\pi q/(2p)\). After extracting the scalar phase \(\exp(\pi\ii u b^2/(2rp))\), the cap multiplied by \(\sqrt r\) has coefficient
+\begin{equation}\label{eq:desc}
+ e^{-\ii\kappa_i a^2/r}F_i(a\bmod |p|,a/r),\qquad
+ G(y)=\sum_{\ell\bmod |p|} e^{2\pi\ii(r u\ell^2+y\ell)/p}.
+\end{equation}
+Here
+\begin{equation*}
+F_i(j,x)=\frac{G(ub-j)e^{-\pi\ii b x/p}-G(-ub-j)e^{\pi\ii b x/p}}
+                    {\sqrt{2|p|}}.
+\end{equation*}
+This holds projectively at all levels, including \(\gcd(r,p)>1\). For fixed \(b\), the profile at fixed \(r\bmod |p|\) consists of two known linear frequencies per residue. Changing \(u,v\) by a meridional framing twist changes only a scalar. No extra quadratic branch comes from a degenerate Gauss sum.
+\end{lemma}
+
+\begin{proof}
+We record the normalization, using the classical arbitrary-matrix kernel \cite[Prop.~2.6]{Jeffrey}; cf.~\cite{HT}. On the cyclic space \(N=2r\), \(U\delta_n=e^{2\pi\ii n/N}\delta_n\), \(V\delta_n=\delta_{n+1}\), and \(Q_{x,y}=e^{-\pi\ii xy/N}U^xV^y\). For \(M=\left(\begin{smallmatrix}A&B\\C&D\end{smallmatrix}\right)\) with \(C\ne0\), a unitary lifted kernel is
+\begin{equation}\label{eq:kernel}
+ K_M(m,n)=\frac1{\sqrt{N|C|}}\sum_{\ell\bmod |C|}
+   \exp\left[\frac{\pi\ii}{NC}
+       \left(A m^2+D(n+N\ell)^2-2m(n+N\ell)\right)\right].
+\end{equation}
+For a direct check, write \(s=n+N\ell\). The relabeling \(s\mapsto s+NA\) under \(m\mapsto m+N\) changes the phase by \(\pi\ii(2Bs+ABN)\), hence the matrix is cyclic. Shifts \(m\mapsto m-C\) and \(m\mapsto m-D\) verify \(K_MU=Q_{A,C}K_M\) and \(K_MV=Q_{B,D}K_M\), using \(AD-BC=1\). These are the same Weyl intertwinings as the Fourier and quadratic generators, so the clock--shift commutant makes \(K_M\) proportional to the standard lift. Each column has norm one: extend its sum of squared moduli to \(N|C|\) consecutive \(m\)'s and use orthogonality of the distinct functions \(e^{-2\pi\ii m\ell/C}\); then divide by the \(N\)-periodicity multiplicity. The kernel commutes with inversion. In the odd cyclic basis the entry is \(K_M(a,b)-K_M(a,-b)\). Substitution of \(M=S_0g\) gives \eqref{eq:desc}. When \(C=0\), the clock intertwining forces the odd restriction to be diagonal. Changing \(u\mapsto u+pt\) leaves the residue sum unchanged and only modifies the extracted phase.
+\end{proof}
+
+\section{Fixed colors: composing and closing the profiles}
+
+The Seifert tensor of \(\Sigma_{g,m}\times S^1\) is diagonal in the hat basis, with coefficient \(S_{1a}^{\,2-2g-m}\) by Verlinde sewing \cite{Verlinde,Hansen}. Suppose \(m\) total ports are capped and \(h=2g+m-2\ge1\). We retain the same scalar normalization as the norm-one open map under any nonempty input/output split of these ports. In particular the charge weight is
+\(w_{r,h}(a)=[\sin(\pi/r)/\sin(\pi a/r)]^h\); this does not assert that the fully closed functional has norm one. Each cap factor is rescaled by \(\sqrt r\); a separate output scaling is indicated explicitly. After removing the common phases in \eqref{eq:desc} the chiral scalar is
+\begin{equation}\label{eq:z}
+ Z_r=\sum_{a=1}^{r-1}w_{r,h}(a)e^{-\ii\kappa a^2/r}F(a\bmod P,a/r),
+ \quad F=\prod_i F_i,\quad \kappa=\sum_i\kappa_i.
+\end{equation}
+Here \(L=\operatorname{lcm}_i|p_i|\), \(P=2L\), and \(r\equiv\rho\bmod4L\). Phases and factors include the chosen cap orientation. Pin caps remain exact evaluations at one charge and are omitted below. In the common cap orientation \(\kappa=\pm(\pi/2)\sum_i q_i/p_i\). The rational Seifert Euler number in the product section is \(-\sum_i q_i/p_i\) in the corresponding convention \cite[\S2]{Hansen}. The exceptional pair is \((|p_i|,\sgn(p_i)q_i)\); regular fillings can carry the integer twist. Section changes shift the separate ratios by integers whose signed sum is zero. Thus the resonance \(\kappa=0\) is geometric in this marking. A cap framing phase must not be confused with a change of section.
+
+Define
+\[
+ F^+(j,x)=F(j,x),\qquad
+ F^-(j,x)=e^{-\ii\kappa\rho+2\ii\kappa j}F(\rho-j,1-x).
+\]
+In particular, on the right \(a=r-n\) the remaining chirp is again \(e^{-\ii\kappa n^2/r}\). Let \(d_*\) be the minimum vanishing order of \(F^\sigma(j,x)\) at \(x=0\) over both edges and residues, and \(f^\sigma(j)=[x^{d_*}]F^\sigma(j,x)\). An infinite minimum means exact zero. The physical odd cyclic coefficients are odd about both endpoint charges \(0,r\); after factoring the even local chirp, analyticity along the residue progression gives \(F^\sigma(-j,-x)=(-1)^mF^\sigma(j,x)\). Thus each \(d_*\)-jet has parity \((-1)^{m+d_*}\) in \(j\).
+
+\Needspace{7\baselineskip}
+\begin{theorem}[Fixed-color closure]\label{thm:fixed}
+Define \(F_{\rm av}(x)=P^{-1}\sum_jF(j,x)\). For fixed colors and fixed non-pin slopes:
+\begin{align*}
+ h-d_*>1:\quad&r^{d_*}Z_r\longrightarrow
+     \sum_{\sigma,n\ge1}n^{-(h-d_*)}f^\sigma(n\bmod P);\\
+ h-d_*=1:\quad&r^{d_*}Z_r\longrightarrow
+     \sum_{\sigma,n\ge1}^{\rm charge\ order}\frac{f^\sigma(n\bmod P)}n
+     +{\bf1}_{\kappa=0}\pi^h\int_0^1\frac{F_{\rm av}(x)}{\sin^h(\pi x)}\,dx;\\
+ h-d_*\le0:\quad&r^{h-1}Z_r\longrightarrow
+      {\bf1}_{\kappa=0}\pi^h\int_0^1\frac{F_{\rm av}(x)}{\sin^h(\pi x)}\,dx .
+\end{align*}
+The first sum is absolute. The middle edge sum is convergent without a logarithm: \(m+d_*=2g+2m-3\) is odd, so each jet has zero residue mean. A surviving integral is an ordinary finite integral. In the doubled theory apply the scale in both factors, obtaining the modulus square.
+\end{theorem}
+
+\begin{proof}
+On each half, \(x=n/r\) and \(w_{r,h}\le C_h n^{-h}\); the profile is uniformly \(O(x^{d_*})\). This proves the absolute edge formula. For the critical case expand the residue profile in frequencies \(\lambda=2\pi j/P\). The summand after scaling is \((r\sin(\pi/r))^h e^{\ii\lambda n-\ii\kappa n^2/r}g_\lambda(n/r)/n\), where \(g_\lambda\) is smooth and \(g_\lambda(0)\) is the corresponding \(d_*\)-jet times \(\pi^{-h}\). A fixed nonzero \(\lambda\bmod2\pi\) has uniformly bounded partial sums near the edge, beginning below some fixed fraction of \(r\). The weighted edge tail beyond \(M\) is \(O(1/M)\) by summation by parts. Away from the edges the weight and its total variation are \(O(1/r)\). There, the partial sums are \(O(\sqrt r)\) for \(\kappa\ne0\) or \(O(1)\) for nonzero \(\lambda\) when \(\kappa=0\). For the \(O(\sqrt r)\) bound, remove the finitely many increment windows within \(r^{-1/2}\) of \(2\pi\ZZ\); their total length is \(O(\sqrt r)\). On each remaining monotone gap use
+\(
+ e^{\ii\phi(n)}=(e^{\ii\phi(n+1)}-e^{\ii\phi(n)})/(e^{\ii\Delta\phi(n)}-1)
+\)
+and the \(O(\sqrt r)\) variation and supremum of the reciprocal denominator. This also handles discrete aliases. The zero residue mode has \(g_0(0)=0\) by parity, so its weight is a smooth \(O(1/r)\) envelope. It contributes a Riemann integral exactly at \(\kappa=0\), and the two halves combine as stated. In the bulk case \(F(j,x)/\sin^h(\pi x)\) is smooth and bounded, and the same partial-sum bounds dispose of all modes other than the zero-frequency resonant average.
+\end{proof}
+
+For open outputs the bound is square summable at \(h-d_*>1/2\); it proves strong open edge convergence but not the closing formula without the profile. As a constructive repair, strip the known chirp and retain complex amplitude jets at a single fixed positive representative of each residue. The analytic coefficient \(F(j,x)\) is a finite sum with known frequencies \(\Omega=\{\sum_i\epsilon_i\pi b_i/p_i:\epsilon_i=\pm1\}\). The first \(|\Omega|\le2^m\) jets determine its coefficients by the Vandermonde matrix \(((\ii\omega)^\ell)_{\ell,\omega}\). This gives the missing profile without requiring measurements at macroscopic charge. One may equivalently retain two jets per individual cap. Chirps add and profiles multiply; discarding nonresonant chirps or nonzero residue harmonics before the next cap is not a compositional quotient.
+
+For a concrete mixed cancellation, the vacuum slopes \(3\mu+\lambda,6\mu+\lambda,-2\mu+\lambda\) at \(r\equiv1\bmod24\) have opposite edge and bulk terms \(\pi/8,-\pi/8\) after dividing by a common modulus \(4\sqrt2\); the finite closed scalar is exactly zero. The genuinely rational triple \(((p,q),b)=((5,2),1),((10,1),2),((2,-1),2)\) at \(r\equiv1\bmod40\) instead has \(h=1,d_*=1\). In the same modulus units its profile on odd \(a\) is \(\sin^2(4\pi a/5+\pi x/5)\sin(\pi x)\), zero on even \(a\), and both leading edge products vanish. Equation \eqref{eq:z} gives exactly \((r/4)\sin(\pi/r)\) in those units, since the sine square is symmetric and its odd half has sum \(r/4\). The chiral limiting magnitude is \(\pi\sqrt2\). These are contrasts between the edge law and actual closing, not priority claims for closed WRT evaluations.
+
+\section{Growing colors: interior and mesoscopic limits}
+
+Let \(b_i(r)/r\to\beta_i\in[0,1]\), fixing the residues of each \(b_i(r)\) modulo \(2|p_i|\) and of \(r\) as above. Formula \eqref{eq:desc} now yields the exact finite branch expansion
+\begin{equation}\label{eq:branches}
+ e^{-\ii\kappa a^2/r}\sum_{\alpha=(\eta,j)}C_{\alpha}e^{\ii\lambda_{\alpha,r}a},
+ \qquad \lambda_{\alpha,r}=\pi\sum_i \eta_i\,b_i(r)/(r p_i)+2\pi j/P .
+\end{equation}
+The signs \(\eta_i=\pm1\) choose the two cap terms and \(j\) is the Fourier mode of their residue product. Coefficients \(C_\alpha\) are fixed by the residues; bra conjugation reverses the indicated phases. The removed factor \(e^{\pi\ii u_i b_i(r)^2/(2rp_i)}\) is not discarded if comparing absolute chiral phases, but cancels in TV. The scaled caps stay uniformly bounded, and fixed-charge edge convergence, hence strong open convergence for \(h>1/2\), still follows. The replacement \(b\mapsto r-b\) is a separate mechanism: the source simple current is \(-V^r\) on the odd space, hence its output is exactly the half-period Weyl operation \(-Q_{-v r,u r}\) under \(S_0g\). In the chosen marking this is an edge reflection when \(u\) is odd and a diagonal parity when \(u\) is even, up to scalar. It does not create genuinely intermediate colors.
+
+\begin{proposition}[Filtered stationary charge]\label{prop:bulk}
+Insert a fixed smooth interior charge filter \(\chi(a/r)\), \(0\le\chi\le1\), \(\chi\in C_c^\infty(0,1)\), and let \(Z_r(\chi)\) denote the corresponding version of \eqref{eq:z} using \eqref{eq:branches}. This is a positive contraction obtained by functional calculus of the marked Wilson \(B_r\hat e_a=2\cos(\pi a/r)\hat e_a\). Put \(f(x)=\chi(x)/\sin^h(\pi x)\), extended smoothly by zero. For \(\kappa\ne0\),
+\begin{align}
+r^{h-1/2}Z_r(\chi)
+&=\pi^h e^{-\ii\pi\sgn(\kappa)/4}\sqrt{\pi/|\kappa|}
+  \sum_{\alpha,\ell} C_\alpha f(x_{\alpha\ell,r})
+         e^{\ii r(\lambda_{\alpha,r}-2\pi\ell)^2/(4\kappa)}
+    +O(r^{-1}),\label{eq:stat}\\
+x_{\alpha\ell,r}&=(\lambda_{\alpha,r}-2\pi\ell)/(2\kappa).\nonumber
+\end{align}
+Only a bounded finite set of aliases can contribute. At \(\kappa=0\), the scale is \(r^{h-1}\) and each branch with \(\lim\lambda_{\alpha,r}=2\pi\ell\) instead contributes its Fourier integral \(\pi^h C_\alpha\int f(x)e^{\ii r(\lambda_{\alpha,r}-2\pi\ell)x}dx+o(1)\); the other branches vanish. In particular bounded detuning is required for a surviving zero-Euler interior mode.
+\end{proposition}
+
+\begin{proof}
+Poisson summation supplies the factor \(r\), with phases \(-\kappa x^2+(\lambda_{\alpha,r}-2\pi\ell)x\). For all sufficiently large aliases, integrations by parts on the common support give summable remainders. In the finitely many remaining terms, complete the square and use the Gaussian integral uniformly in its center. Expressing the amplitude by Fourier transform, the residual multiplier differs from \(1\) by at most \(C|\xi|^2/r\), hence gives the displayed uniform error, even for a center leaving a smooth cutoff. At \(\kappa=0\) the integral is already a Fourier transform and its large detunings decay rapidly.
+\end{proof}
+
+An example with no bounded-color surrogate in its chosen band is three \((p,q)=(5,2)\) caps on \(\Sigma_{0,3}\times S^1\), \(b_i=(r/3,r/7,r/11)\), \(r\equiv2541\bmod4620\). All-positive signs and zero residue frequency give the isolated station \(x_*=131/1386\). For \(u=2\), the zero-frequency cap coefficient is a two-variable Gauss sum with determinant nonzero modulo five; its magnitude is \(5/10^{3/2}\). A fixed filter selecting this station with \(\chi(x_*)=1\) gives \(\sqrt r\,|Z_r(\chi)|\to\pi/(2\sqrt6\sin(\pi x_*))\). This is at nonzero Euler number. The filter isolates an actual branch, not a general claim about the undecorated invariant.
+
+\Needspace{12\baselineskip}
+\begin{theorem}[Unfiltered critical transition]\label{thm:meso}
+At \(h=1\) use \eqref{eq:branches} with any growing colors as above. On each half let \(\lambda^+_{\alpha,r}=\lambda_{\alpha,r}\), \(\lambda^-_{\alpha,r}=2\kappa-\lambda_{\alpha,r}\) and \(C^-_\alpha=C_\alpha e^{-\ii\kappa r+\ii\lambda_{\alpha,r}r}\), fixed by the residues; \(C^+_\alpha=C_\alpha\). If \(\lambda^\sigma_{\alpha,\infty}\notin2\pi\ZZ\), the term contributes its charge-ordered edge series \(\sum_{n\ge1}C^\sigma_\alpha e^{\ii\lambda^\sigma_{\alpha,\infty}n}/n\). In the remaining cluster put \(\delta_{\alpha,r}^\sigma=\lambda^\sigma_{\alpha,r}-\lambda^\sigma_{\alpha,\infty}\). Along a subsequence where all scaled detunings converge in the extended real line, this cluster contributes
+\[
+ \ii\sum_{\alpha} C^\sigma_\alpha H_\kappa(\theta_\alpha),\quad
+ \theta_\alpha=\lim_r \begin{cases}r\delta_{\alpha,r}^\sigma,&\kappa=0,\\
+          \sqrt r\,\delta_{\alpha,r}^\sigma,&\kappa\ne0,\end{cases}
+\]
+with
+\begin{align*}
+ H_0(\theta)&=\pi\int_0^{1/2}\frac{\sin(\theta x)}{\sin(\pi x)}\,dx,\\
+ H_\kappa(\theta)&=\frac12 e^{-\ii\pi\sgn(\kappa)/4}\sqrt{\pi/|\kappa|}
+                    \int_0^\theta e^{\ii t^2/(4\kappa)}\,dt\quad(\kappa\ne0),\\
+ H_\kappa(\pm\infty)&=\pm\pi/2 .
+\end{align*}
+The sum of the two halves and their two classes is the full leading closing limit. No bounded offset around \(\beta_i r\) is required. The same scaling in both chiral factors gives its modulus square for TV.
+\end{theorem}
+
+\begin{proof}
+Here \(m\) is odd. Exact cyclic parity of the caps makes each half-profile odd in the signed edge distance \(n\), after factoring the even local chirp. The near-zero frequency cluster is separately odd, since the exact finite exponential sums on the integers have unique coefficients after merging equal frequencies and distinct limiting clusters are separated. Thus its contribution can be written exactly as \(\ii\sum_\alpha C^\sigma_\alpha\sin(\delta^\sigma_{\alpha,r}n)\). The nonzero limiting frequencies use the summation-by-parts edge bound in the proof of Theorem~\ref{thm:fixed}; the perturbation in the frequency does not close the gap from the zero alias near the edge.
+
+For a sine term with \(\kappa=0\) and bounded \(r\delta_r\) take a Riemann sum in \(n/r\). For nonzero \(\kappa\) and bounded \(\sqrt r\,\delta_r\), take the mesh \(t=n/\sqrt r\), replacing the weight by \(1/n\) up to any fixed \(M\sqrt r\). Beyond that, up to a small fixed fraction of \(r\), a dyadic block starting at \(n=s\) has increment gap \(\gtrsim s/r\); its weighted bound is \(O(r/s^2)\). Beyond the small fraction of \(r\) the global chirp bound applies. This gives the sine Fresnel integral \(\int_0^\infty e^{-\ii\kappa t^2}\sin(\theta t)\,dt/t\); differentiating on compact \(\theta\)-sets and using the Gaussian integral gives \(H_\kappa\). For divergent scaled detuning start instead at \(n=M/|\delta_r|\), where the chirp is negligible at nonzero \(\kappa\). The mesh \(|\delta_r|n\) gives the signed truncated Dirichlet integral. When \(\kappa=0\), the remaining weighted geometric tail is \(O(1/M)\). For \(\kappa\ne0\), the same bound holds up to a small fixed multiple of \(r|\delta_r|\) by the increment gap \(\gtrsim|\delta_r|\); the rest is \(O((|\delta_r|\sqrt r)^{-1})\) by the global chirp estimate. Taking \(M\to\infty\) proves the endpoints of the transition and prevents a logarithm under arbitrary detuning.
+\end{proof}
+
+For instance an ordinary meridian with odd \(b\to\infty\), \(b/r\to0\), on the only port of \(\Sigma_{1,1}\times S^1\) has both fixed-edge terms and every compact interior leading term zero. Its unfiltered scalar is nevertheless \(\sqrt2(r-b)\sin(\pi/r)\to\pi\sqrt2\), by the sine quotient Fourier sum. At \(p=q=1\) with \(b/\sqrt r\to\gamma>0\), the missing term is instead \(\sqrt2 H_{\pi/2}(\pi\gamma)\), up to a common phase, and it is nonzero for sufficiently small \(\gamma\). These are moving near-edge windows, distinct from both the simple current and the compact interior station.
+
+\input{graph_transfer}
+
+\section*{Scope}
+The standard inputs include the modular representation, rational Seifert surgery, and stationary phase for WRT sums \cite{Jeffrey,HT,Hansen,Charles,Rozansky,ColoredTori}. Beyond the fixed-cap phase test, the claims here are the open sewing descriptor, the finite complex-jet repair, and the explicit uniform moving-color and modular-seam limits in their stated marked protocols. At fixed label, the root limit \(e^{\pi\ii/r}\to1\) does not by itself prescribe a gravitational length normalization. Growing slopes, unfiltered networks of non-diagonal seams, and a dynamical connection to 4D EPRL are not established here.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem{Archive41} \emph{Physical Gluing and Wilson Constraints from Euclidean Tensor Prices}, AI-Automated Quantum Gravity Research archive, Paper 41 (2026). \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/41-tensor-prices-tv-fusion-and-wilson}{Archive entry}.
+\bibitem{Archive42} \emph{Tensor spectral prices of open Dehn fillings in Turaev--Viro theory}, AI-Automated Quantum Gravity Research archive, Paper 42 (2026). \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/42-tensor-prices-tv-dehn-filling}{Archive entry}.
+\bibitem{BC} V.\ Balasubramanian and C.\ Cummings, \emph{Multipartite entanglement structure of fibered link states}, Phys. Rev. D \textbf{111} (2025), 105020. \href{https://arxiv.org/abs/2502.19466}{arXiv:2502.19466}.
+\bibitem{BDFKLP} V.\ Balasubramanian, M.\ DeCross, J.\ Fliss, A.\ Kar, R.\ G.\ Leigh, and O.\ Parrikar, \emph{Entanglement entropy and the colored Jones polynomial}, JHEP \textbf{05} (2018), 038. \href{https://arxiv.org/abs/1801.01131}{arXiv:1801.01131}.
+\bibitem{FrohmanGelca} C.\ Frohman and R.\ Gelca, \emph{Skein modules and the noncommutative torus}, Trans. Amer. Math. Soc. \textbf{352} (2000), 4877--4888. \href{https://arxiv.org/abs/math/9806107}{arXiv:math/9806107}.
+\bibitem{Jeffrey} L.\ C.\ Jeffrey, \emph{Chern--Simons--Witten invariants of lens spaces and torus bundles, and the semiclassical approximation}, Comm. Math. Phys. \textbf{147} (1992), 563--604. \href{https://doi.org/10.1007/BF02097243}{DOI}.
+\bibitem{HT} S.\ K.\ Hansen and T.\ Takata, \emph{Reshetikhin--Turaev invariants of Seifert 3-manifolds for classical simple Lie algebras}, \href{https://arxiv.org/abs/math/0209403}{arXiv:math/0209403}.
+\bibitem{Hansen} S.\ K.\ Hansen, \emph{Reshetikhin--Turaev invariants of Seifert 3-manifolds and a rational surgery formula}, Algebr. Geom. Topol. \textbf{1} (2001), 627--686. \href{https://arxiv.org/abs/math/0111057}{arXiv:math/0111057}.
+\bibitem{Verlinde} E.\ Verlinde, \emph{Fusion rules and modular transformations in 2D conformal field theory}, Nucl. Phys. B \textbf{300} (1988), 360--376. \href{https://doi.org/10.1016/0550-3213(88)90103-7}{DOI}.
+\bibitem{Balsam} B.\ Balsam, \emph{Turaev--Viro invariants as an extended TQFT III}, \href{https://arxiv.org/abs/1012.0560}{arXiv:1012.0560}.
+\bibitem{Charles} L.\ Charles, \emph{On the Witten asymptotic conjecture for Seifert manifolds}, in particular \S5, \href{https://arxiv.org/abs/1605.04124}{arXiv:1605.04124}.
+\bibitem{Rozansky} R.\ Lawrence and L.\ Rozansky, \emph{Witten--Reshetikhin--Turaev invariants of Seifert manifolds}, Comm. Math. Phys. \textbf{205} (1999), 287--314. \href{https://www.ma.huji.ac.il/~ruthel/papers/99wrtsm.html}{Author's page}.
+\bibitem{ColoredTori} J.\ E.\ Andersen et al., \emph{The Witten--Reshetikhin--Turaev invariant for links in finite order mapping tori I}, \href{https://arxiv.org/abs/1408.2499}{arXiv:1408.2499}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,245 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[margin=.94in]{geometry}
+\usepackage{xcolor,needspace}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!55!black]{hyperref}
+\hypersetup{pdftitle={Determining an Evolving Lorentzian Geometry with Uniform Mass Control},pdfsubject={Active scalar wave inverse problem}}
+\setlength\emergencystretch{1.5em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand\dd{\mathrm d}
+\newcommand\RR{\mathbb R}
+\newcommand\cD{\mathcal D}
+\newcommand\cK{\mathcal K}
+\newcommand\cR{\mathcal R}
+\DeclareMathOperator{\diag}{diag}
+\title{Determining an Evolving Lorentzian Geometry with Uniform Mass Control\\[3pt]
+\large Active inversion with stationary preparation and readout}
+\author{}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Consider a scalar on a smooth four-dimensional Lorentzian spacetime with compact Cauchy slices, an unknown real potential, and arbitrary time dependence between two independently calibrated stationary ends. We show that exact retarded aperture data and their first variations under a spatially uniform mass-squared pulse determine the metric and potential through the evolving region, up to a single time-preserving isometry that fixes the aperture. The pulse may be tried at a countable dense set of synchronized times and needs no spatial labeling. Its action on Cauchy data forces a comparison of the two dynamics to preserve pure velocity states. A first-order transport equation then forces the comparison to be local and the same pulse fixes the physical metric scale. We give an unconditional stationary calibration for orthogonally static compact ends using one species with two settings, and isolate the additional calibration needed for genuinely stationary twist. Exact conformal counterexamples explain why a missed open time interval or an unmarked spatial pulse profile cannot be ignored.
+\end{abstract}
+
+\section{Introduction}
+
+A passive wave experiment can record a transfer between prepared and detected waves without identifying which interior Cauchy states it used. In a time-dependent geometry this is a real distinction: a comparison of two wave evolutions is initially an operator on a function space, not necessarily induced by a spacetime map. Our active datum forces that comparison to become geometric using only one spatial profile, the constant function. The profile is a scalar mass-squared offset; it is \emph{not} a density, and it is applied throughout each marked Cauchy slice. It is an assumption of the experiment, not a proposed method for local actuation by an observer with no interior access.
+
+The clock pulse has a special role. Its kernel identifies pure velocity data. The upper row of wave evolution and its mixed spatial--time part then propagate the known geometric identification from a stationary end by a first-order equation. This avoids interior null-ray visibility assumptions, time analyticity in the evolving part, or an internal grid of spatial tags. A second use of the same pulse determines the inverse temporal metric coefficient, and ordinary Cauchy freedom gives the rest of the operator.
+
+The comparison with passive methods is important. The marked-tube result in \cite{Archive33} uses complete time-resolved kernels in a stated angularly homogeneous class and supplies exact finite-angular ambiguity examples. The present method changes the inputs, not that passive conclusion. Stationary inverse results such as \cite{Saksala,Eskin} supply useful reference calibrations. The time-dependent boundary-control result of Eskin \cite[Theorem 1.2]{EskinDynamic} uses a different Dirichlet-to-Neumann protocol with time analytic coefficients and a controllability condition. The evolving core here needs neither, but requires the additional synchronized bulk pulse. Nonlinear inverse methods such as \cite{LUW} use a different physical mechanism, creating interactions from local sources to determine an unknown Lorentzian geometry. Here the dynamically probed equation is linear for each mass setting, and the additional control is a globally uniform, timed perturbation. The proof recovers a comparative spacetime isometry from exact records, not a noise-stable algorithm.
+
+\section{The calibrated inverse problem}
+
+Let \(M_i=I\times\Sigma_i\), where \(I\) is a finite common time interval and \(\Sigma_i\) is smooth, connected, compact and without boundary. The interval is contained in a globally hyperbolic development with \(t\) a smooth temporal Cauchy time; \(\partial_t\) need not be timelike in the core. Use signature \((-+++)\). Fix a marked open spatial aperture \(D\), embedded in each \(\Sigma_i\) with the same method of labeling times, scalar fields and density sources. The corresponding subapertures may be arbitrarily small but are open. The two physical operators are
+\[
+ P_i=-\Box_{g_i}+q_i,\qquad q_i=m^2+V_i,\qquad
+ \widehat P_i=\rho_i P_i,\quad \rho_i=\sqrt{|\det g_i|}.
+\]
+Here \(m^2\) denotes a known baseline setting, and \(V_i\) are arbitrary real smooth functions, not assumed positive. We use coordinate notation for densities throughout. A source \(f\) is the marked density on \(I\times D\), and the response is the scalar restriction of the retarded solution of \(\widehat P_i u=f\).
+
+Choose \(t_-<t_+\) strictly inside the early and late caps, respectively. In the main comparison hypotheses the caps have the following properties.
+\begin{enumerate}
+ \item In a neighborhood of each comparison slice the coefficients are stationary, with a calibrated, time-preserving geometric cap comparison carrying \(g_1,V_1\) to \(g_2,V_2\) and fixing a common nonempty observation subaperture. The two cap isometries need not agree as spatial maps; the actual early and late geometries can also be different. Section~\ref{sec:caps} gives an unconditional way to obtain this calibration for compact orthogonally static ends, and a separate clock-alignment lemma for the twisted case.
+ \item Retarded sources on the early preparation subaperture strictly before \(t_-\) give a dense set of Cauchy data at \(t_-\), in \(H^1\oplus L^2\), for each model. Advanced receivers in the late subaperture strictly after \(t_+\) have the analogous property there. These are cap conditions, not assumptions of controllability in the evolving region.
+\end{enumerate}
+
+In addition to the baseline calibrated aperture map, measure its first variation under
+\[
+ q_i(t,x)\ \longmapsto\ q_i(t,x)+\varepsilon b_\eta(t-\tau),\qquad
+ b_\eta(s)=\eta^{-1}b(s/\eta),
+ \qquad b\in C^\infty_c(\RR),\quad \int b=1 ,
+\]
+with a known physical amplitude setting and synchronized time \(\tau\). Take the derivative at \(\varepsilon=0\), then the limit \(\eta\downarrow0\), for each source/receiver pair. Any countable dense set of times \(\tau\in(t_-,t_+)\) is adequate. In particular no long-time limit of the data is taken. The base retarded record includes all early-to-late pairings and the records from the early sources to the aperture at each time in the core. The measured fields are exact; no finite sample or resolution claim is made. Section~\ref{sec:contact} also explains how a single calibrated plateau of the same mass knob supplies the physical normalization if only per-experiment projective retarded maps are initially given.
+
+\begin{theorem}[Dynamic uniqueness with a uniform mass pulse]\label{thm:main}
+Under these hypotheses, equality of the base aperture data and the pulse variations implies a smooth time-preserving diffeomorphism \(\Psi(t,y)=(t,\psi_t(y))\) from the second slab to the first, with
+\[
+ g_2=\Psi^*g_1,\qquad V_2=\Psi^*V_1 .
+\]
+The diffeomorphism fixes the measured aperture and restricts on the cap overlaps to the two calibrated cap isometries. No smallness, spatial symmetry, potential-sign hypothesis, or unique continuation in the evolving region is required.
+\end{theorem}
+
+\section{Recovering the matched comparison from actual source and receiver states}
+
+Let \(X_i=H^1(\Sigma_i)\oplus L^2(\Sigma_i)\), with any fixed equivalent auxiliary norms on the compact slices. Write \(U_i(t,s)\) for the homogeneous evolution of the phase pair \(x=(u,u_t)\). Smooth hyperbolic energy estimates give reversible bounded maps over compact time intervals, preserving smooth pairs. In local time-independent spatial coordinates set
+\[
+ A_i=-\rho_i g_i^{00}>0,\qquad b_i^j=-\rho_i g_i^{0j}.
+\]
+Define the canonical time-dependent Green flux on the phase space by
+\begin{equation}\label{eq:omega}
+ \Omega_{i,t}\big((u,v),(w,z)\big)
+ =\int_{\Sigma_i}\left\{A_i(uz-wv)
+          +b_i^j(u\partial_jw-w\partial_j u)\right\}\dd x .
+\end{equation}
+It is continuous and weakly nondegenerate: testing first against arbitrary pure velocities forces \(u=0\) and then testing against smooth displacements forces \(v=0\). For solutions of \(\widehat P_i u=f,\ \widehat P_i w=h\),
+\begin{equation}\label{eq:green}
+ \partial_t\Omega_{i,t}(u,w)=\int_{\Sigma_i}(u h-w f)\dd x .
+\end{equation}
+This follows by writing the densitized operator in divergence form and integrating by parts on the closed slice. It also verifies that \(U_i(t,s)\) preserves the flux between its two time slices. The weak form is not used as an energy norm.
+
+Let \(W_\pm:X_1\to X_2\) be the phase maps carrying solutions of model 1 to model 2 on each geometrically aligned cap. By covariance they carry early reached states \(X_{i,-}^f\) and late advanced states \(Y_{i,+}^h\) to their counterparts with the identically marked local source \(f\) or receiver \(h\). Causality here uses only the early and late cap intervals, not a solution of the whole inverse problem. For any such early \(f\), late \(h\), \eqref{eq:green} integrated forward from \(t_+\) until the advanced field vanishes gives
+\[
+ \langle h,\cR_i f\rangle
+ =-\Omega_{i,t_+}\big(U_i(t_+,t_-)X_{i,-}^f,Y_{i,+}^h\big).
+\]
+The base data equate the two sides. Substitute the cap comparisons, use continuity on the two dense reachable sets, and use weak nondegeneracy and symplecticity to conclude
+\begin{equation}\label{eq:U}
+ U_2(t_+,t_-)W_-=W_+U_1(t_+,t_-).
+\end{equation}
+For all intermediate times define the bounded comparison
+\[
+ W_t=U_2(t,t_-)W_-U_1(t_-,t)
+     =U_2(t,t_+)W_+U_1(t_+,t).
+\]
+The second identity follows from \eqref{eq:U}. Hence \(W_t\) matches not only the cap-prepared forward field, but also the cap-prepared advanced field, at every intermediate time. The two families there remain dense by reversible propagation; no interior preparation is used in this argument.
+
+\section{The pulse forces locality and fixes the full metric}
+
+Write \(r_i=\rho_i/A_i=-1/g_i^{00}>0\). The mass impulse acts on homogeneous phase data at a slice by the infinitesimal insertion
+\[
+ J_{i,t}(u,v)=(0,-r_i(t,x)u) .
+\]
+Indeed differentiating the retarded equation in the perturbation gives \(-\cR_i(\rho_i b_\eta u_i^f)\) before restricting to the receiver; the first-variation pairing converges to \(-\int\rho_i(\tau)u_i^f(\tau)w_i^h(\tau)\dd x\). This is precisely
+\(-\Omega_{i,\tau}(J_{i,\tau}X_i^f,Y_i^h)\). The narrow-width limit is taken on smooth prepared fields before using density. Since \(J_i\) is bounded \(X_i\to X_i\), the same matching argument therefore gives
+\begin{equation}\label{eq:J}
+ W_tJ_{1,t}=J_{2,t}W_t .
+\end{equation}
+For a dense time set this extends to all intermediate times: \(J_i(t)\) is norm-continuous, \(W_t\) is strongly continuous and locally uniformly bounded. No surjectivity of the range of \(J_i\) is needed.
+
+\subsection{The exact first-order comparison equation}
+
+The kernel of \(J_{i,t}\) is the entire pure velocity subspace. By \eqref{eq:J}, \(W_t\) has an upper-right zero block there and can be written on smooth pairs as
+\[
+ W_t=
+ \begin{pmatrix}T_t&0\\ S_t&Z_t\end{pmatrix}.
+\]
+Writing the density wave in the form \(u_{tt}+L_i u_t+M_i u=0\) gives
+\begin{equation}\label{eq:L}
+ L_i=A_i^{-1}(2b_i^j\partial_j+\partial_t A_i+\partial_j b_i^j),
+ \qquad
+ G_i=\begin{pmatrix}0&I\\ -M_i&-L_i\end{pmatrix}.
+\end{equation}
+Here \(M_i\) is the remaining spatial second-order differential operator. We differentiate on the smooth phase spaces only, where the Cauchy evolution is differentiable with its usual scale of seminorms. The equality \(\dot W+WG_1=G_2W\) gives \(Z=T,\ S=\dot T\) from the upper row. The lower-right block then yields
+\begin{equation}\label{eq:tr}
+ 2\dot T=T L_1-L_2T .
+\end{equation}
+This equation, rather than a spatially resolving mass pulse, is the locality input.
+
+Denote by \(C_i(t,s)\) the first-order propagator \(v_t=-L_i(t)v/2\). Its vector field is \(b_i/A_i\); on a compact slice it is a global weighted pullback on each finite strip, with strictly positive smooth weight obtained by integrating the real zeroth-order coefficient along its characteristics. Differentiating \(C_2(t_-,t)T_t C_1(t,t_-)\) on smooth tests and using \eqref{eq:tr} shows this expression is constant. Thus
+\begin{equation}\label{eq:pull}
+ T_t=C_2(t,t_-)T_{t_-}C_1(t_-,t)=a(t,\cdot)\psi_t^* ,
+\end{equation}
+with \(a>0\) smooth and \(\psi_t:\Sigma_2\to\Sigma_1\) a smooth family of diffeomorphisms. The initial \(T_{t_-}\) is the genuine spatial pullback from the early cap, hence has weight one. This proves locality, not merely that a local solution exists for a putative comparison equation. In particular no spatial second-order elliptic inverse is taken in the evolving region.
+
+\subsection{Physical scale, the lower-order coefficient, and the marked aperture}
+
+The remaining block of \eqref{eq:J} gives \(T_t(r_1u)=r_2T_tu\). By \eqref{eq:pull},
+\[
+ g_2^{00}=(\Psi^*g_1)^{00},\qquad \Psi(t,y)=(t,\psi_t(y)).
+\]
+This is an equality of the metric coefficients themselves, not only of their ratio. Set \(P_1'=-\Box_{\Psi^*g_1}+\Psi^*q_1\). Every smooth homogeneous solution \(u\) of \(P_1'\) maps to a homogeneous solution \(a u\) of \(P_2\). The differential defect \(P_2(a\,\cdot)-aP_1'\) has no pure \(\partial_t^2\) term by the preceding identity and annihilates every such \(u\). At a point on each fixed Cauchy slice, the spatial jets of \(u\) and \(u_t\) can be independently prescribed with smooth local Cauchy data. Thus all the remaining spatial and mixed second-order coefficients vanish separately; no freedom of the pure second time jet is invoked. It follows that the full metrics match. The remaining first-order defect is \(-2g_2^{-1}(da,d\,\cdot)\), so nondegeneracy gives \(da=0\). Its early value is one, hence \(a=1\), and the zeroth-order comparison now gives \(q_2=\Psi^*q_1\).
+
+The aperture fixing follows directly from actual data. For every early \(f\), equality of the base aperture fields throughout the core and forward matching give \((T_tu_1^f)|_D=u_1^f|_D\). The displacement projections of those phase data are dense in \(H^1\). By continuity this equality holds for every smooth displacement. The test \(u=1\) and then smooth bump functions separating individual points show that the weight is one and \(\psi_t\) fixes each measured point, including any additional observed components. Finally on the neighborhoods of \(t_\pm\), each formula for \(W_t\) agrees with the matching stationary cap map by covariance of the cap evolution. This proves compatibility with both ends and finishes Theorem~\ref{thm:main} without assuming any initial topological alignment between the two cap identifications.
+
+\section{Physical normalization from aperture contact}\label{sec:contact}
+
+This section supplies a one-species calibration with known relative mass units. Let \(R_{t,s}\) be retarded propagation of a slice impulse \(\delta(t-s)F(x)\) in the densitized equation. For compact smooth spatial \(F\) on the aperture, the right contact derivatives \(D_j(s)F=\partial_t^j(R_{t,s}F)|_{t=s+}\) follow from the initial data \(u=0,\ u_t=A^{-1}F\). In the notation of \eqref{eq:L},
+\begin{equation}\label{eq:jets}
+ D_1=A^{-1},\qquad D_2=-L A^{-1},\qquad
+ D_3=(L^2-\dot L-M)A^{-1}.
+\end{equation}
+The tests and right differentiation can be implemented by limits of smooth time pulses and fixed spatial smearing in the measured kernel. There is no product of sharp point distributions. Equality of aperture maps implies equality of these contacts as local differential operators.
+
+Suppose that in each separate experiment the full retarded map is initially measured only up to one common nonzero scalar. Its normalized contacts \(D_jD_1^{-1}\) do not depend on this scalar. The normalized second contact supplies \(L\); the principal third contact supplies the spatial principal symbol of \(M\). They determine the principal inverse-metric ratios
+\[
+ B^{00}=1,\qquad B^{0j}=b^j/A,\qquad
+ B^{jk}=-\rho g^{jk}/A,\qquad B^{\mu\nu}=g^{\mu\nu}/g^{00}.
+\]
+Use one known nonzero constant mass-squared offset \(c\) on an open time plateau in the aperture calibration. Its \(\dot L,L\) are unchanged, and \(M\) gains the multiplication operator \(c r\). Thus the normalized third contact difference is exactly \(-c r\), where \(r=-1/g^{00}\). The absolute metric, and then its density and \(A\), follow locally from the ratios. This calibrates the separate gains by \(D_1=A^{-1}\), even if those gains were unrelated between the experiments. The baseline retarded map on the full measured window has one gain; once this is fixed in the stationary calibration window, all its contacts during the core are canonically measured. In four dimensions the equation \(r=A\sqrt{|\det B|}\) makes the recovered aperture scale explicit. The same kinetic \(D_1\) calibrates each later pulsed experiment separately, since only the scalar potential was perturbed. This normalization precedes taking the first variation of the family of maps. If calibrated retarded records are given from the outset, no additional projective experiment is necessary in the core.
+
+The spatial profile of the plateau and of the short pulses is the same constant one. In a stationary cap the offset may be held throughout a finite calibration window. By causality the retarded data with sources and receivers in that window are exactly those of a second known effective mass on that stationary cap, with the same background potential. Hence two mass settings do not require two physical probe species.
+
+\section{Concrete cap calibration and the stationary clock gauge}\label{sec:caps}
+
+\begin{proposition}[Orthogonally static caps]\label{prop:static}
+Assume that in each model and each cap the metric in marked time is \(g=N(x)^2(-\dd t^2+k(x))\) and \(V\) is stationary. Each \((\Sigma,k)\) is compact and closed. With local contact calibration and two known distinct mass-squared settings, a finite measured stationary window of duration strictly greater than twice the larger candidate optical diameter determines an aperture-fixed time-preserving comparison of the cap. A preparation or advanced readout subwindow of that length also gives the dense Cauchy families in the hypotheses of Theorem~\ref{thm:main}.
+\end{proposition}
+\begin{proof}
+Use the time-independent conformal change \(v=Nu\). For \(g=N^2g_0,\ g_0=-\dd t^2+k\),
+\[
+ (-\Box_g+q)(N^{-1}v)
+ =N^{-3}\big[-\Box_{g_0}+Q\big]v,\qquad
+ Q=N^{-1}\Delta_kN+N^2q .
+\]
+Equivalently the density operator factors as \(M_N\widehat P_{g_0,Q}M_N\), where \(M_N\) is multiplication by \(N\). From the known local \(N,k\) the density drive and scalar receive maps convert to the physical optical volume-source and field map. The finite closed-manifold statement of Saksala and Shedlock \cite[Theorem 1.1 and Remark 1.2]{Saksala} applies with zero magnetic coefficient and arbitrary smooth real \(Q\), recovering \(k\) and \(Q\) up to the aperture-fixed spatial isometry. Real source and receive data may be complexified linearly when applying that statement. The spatial map is the same for both masses because the aperture-fixed optical isometry is unique on the connected slice. Since
+\[
+ Q_{m_2}-Q_{m_1}=N^2(m_2^2-m_1^2),
+\]
+both \(N\) and the physical potential are determined. There is no normalization of a Killing coordinate beyond the marked rate already used in the data.
+
+For the state density, first pass to the known optical equation \(\partial_t^2-\Delta_k+Q\). A continuous functional on \(H^1\oplus L^2\) annihilating all reached pairs can be represented by the Green pairing with an adjoint homogeneous solution of terminal regularity \(L^2\oplus H^{-1}\); explicitly in the optical normalization choose its terminal velocity and minus displacement to be the two dual components with the spatial volume factors included. Orthogonality gives zero adjoint field on the observed aperture throughout the source window. Time-independent unique continuation gives zero on the central double optical cone, which contains an open neighborhood of the middle Cauchy slice because the interval is longer than twice the optical diameter. For this regularity one can first convolve in time with a compact smooth kernel supported inside the strict slack. The stationary spectral decomposition of the elliptic \(-\Delta_k+Q\) makes the mollified waves smooth (large positive frequencies acquire rapid Fourier decay; zero and negative eigenvalues are finitely many). Apply the smooth double-cone theorem \cite[Theorem 2.25]{Saksala}, then let the kernel shrink on a smaller open neighborhood of that slice. The distributional field is zero there and Cauchy uniqueness makes its terminal data zero. Hahn--Banach gives density. Reversing the time direction in this stationary argument gives the advanced density. Multiplication by \(N\) is a state-space isomorphism, so both conclusions also hold physically. This is approximate state preparation, not exact boundary controllability.
+\end{proof}
+
+\begin{proposition}[Aligning a calibrated stationary time shear]\label{prop:shear}
+Suppose a genuinely stationary cap already admits an independently obtained geometric comparison of its stationary extensions, of form \((t,x)\mapsto(t+c(x),\varphi(x))\), fixing an open subaperture. Assume the compact phase maps between the corresponding marked Cauchy surfaces are regular energy isomorphisms and cap preparation and readout are dense at one common pulse time. A nonzero uniform pulse at that time forces \(c=0\) everywhere. Theorem~\ref{thm:main} then applies with those cap identifications.
+\end{proposition}
+
+\begin{proof}
+Use the stationary extensions to define the phase comparison by carrying the full solution through the geometric isometry and restricting to the second marked slice. Its Green pairing is preserved: the two Cauchy surfaces can be different graphs and the conserved homogeneous Green flux is independent of Cauchy surface. The energy comparison follows from hyperbolic evolution between compact smooth spacelike Cauchy surfaces under the stated regularity. All actual drives, pulse, and reads used here remain in the common stationary window. Their retarded and advanced states are faithfully computed by the stationary extensions, so no equality of marked times away from the aperture is presumed. Covariance pairs the dense families by the phase comparison. The first-variation argument from Section 4 implies that this comparison preserves the entire pure-velocity subspace.
+
+At the calibrated pulse time \(\tau\), choose a smooth homogeneous solution in the first extension with \(u(\tau,x)=0,\ u_t(\tau,x)=1\) everywhere. Compactness gives \(u(\tau+s,x)=s+O(s^2)\) uniformly for small \(s\). Preserved zero displacement implies \(u(\tau-c(x),x)=0\). Since \(c=0\) on the fixed aperture, continuity and connectedness would give a nonzero arbitrarily small value of \(c(x)\) if it were nonzero anywhere, contradicting the uniform Taylor estimate. Thus the full cap is clock aligned.
+\end{proof}
+
+Proposition~\ref{prop:shear} is conditional on a geometric stationary cap inverse and preparation/readout. It does not invoke the Riemannian optical theorem for a twisted metric; nor does it promote a pure-metric stationary boundary theorem to an arbitrary-potential theorem. The unconditional realization in this paper is Proposition~\ref{prop:static}. Positive stationary Killing energy is not presumed for either the core argument or the static calibration with real \(Q\).
+
+\section{Sharp scope of the time schedule and spatial profile}
+
+\begin{proposition}[Unknown uniform strengths]\label{prop:gain}
+Suppose the base aperture map is canonically calibrated and the two candidate cap matches are obtained as above. If core pulses use unknown but nonzero spatially constant strengths at each of the densely sampled times, the same reconstruction holds and the strengths agree under the marked calibration.
+\end{proposition}
+
+\begin{proof}
+At each sampled time equality of data implies
+\(W_t(\alpha_1(t)J_{1,t})=\alpha_2(t)J_{2,t}W_t\).
+Nonzero strengths preserve the conclusion about the nullspace, which extends to every time by strong continuity of \(W_t\) and the fixed closed velocity subspace. Thus the transport and the locality proof still apply. The base data alone show that the resulting weighted pullback is identity on the aperture, by the source-density and bump-function argument in Section 4. The baseline contact then gives the actual common \(r\) on the aperture. The lower block of the scaled pulse identity restricted there reads \(\alpha_1 r=\alpha_2 r\), so the strengths agree. Cancel them, extend the exact resulting identity to all times by continuity, and finish the proof as before. No assumed continuity of the unknown sampled strengths is needed.
+\end{proof}
+
+\begin{proposition}[An invisible conformal change through a missing window]\label{prop:blind}
+For a single dynamically recorded baseline mass, if the ideal pulse times miss an open interval between the calibrated ends and the aperture leaves an open unobserved set, the corresponding inverse statement can fail exactly. If the spatial pulse profiles themselves are arbitrary unknown smooth functions, even arbitrarily many pulse experiments can be matched by a suitable hidden change of profiles.
+\end{proposition}
+
+\begin{proof}
+Choose \(N>0\) smooth and equal to one off a compact subset of the unprobed interval and outside an open region disjoint from the aperture. In four dimensions put
+\[
+ g_2=N^2g_1,\qquad q_2=N^{-2}(q_1-N^{-1}\Box_{g_1}N).
+\]
+Then the exact conjugacy
+\[
+ (-\Box_{g_2}+q_2)(N^{-1}u)=N^{-3}(-\Box_{g_1}+q_1)u
+\]
+also gives \(\widehat P_2(N^{-1}u)=N\widehat P_1u\). The source densities and fields match on the aperture, since \(N=1\) there. Both cap calibrations, and every ideal pulse measurement outside the support, agree. The argument works for smooth pulse windows that miss the support as well. On a flat static compact torus with a bump such that \(\Box_{g_1}N\) is nonzero somewhere, the second metric has nonzero scalar curvature there and cannot equal the first under any diffeomorphism. In particular finitely many ideal pulses cannot eliminate all single-mass conformal ambiguity when there is a hidden open region. A globally recorded additional effective mass across the gap is different data, not covered by this example.
+
+If the unknown spatial actuator profiles are \(k_i(t,x)\) multiplying the imposed temporal waveform, take \(k_2=N^{-2}k_1\); the same conjugacy now matches every pulse amplitude and waveform throughout the gap. Thus calibrated spatial uniformity is essential to the data comparison, whereas the unknown scalar strengths of Proposition~\ref{prop:gain} are permitted.
+\end{proof}
+
+\section{Scope}
+
+The phase comparison \eqref{eq:pull} displays how time-dependent locality follows from the measured operator identities; its coefficients are written in the candidate geometries. No algorithm with uniform noisy stability is asserted. Finite time means a finite observation window, not finitely many labels, source shapes or ideal pulse measurements. The proof uses neither any underlying quantum-gravity theory nor a particular vacuum representation. It permits different stationary past and future, arbitrary smooth evolution in between, and all real potentials allowed by ordinary hyperbolic evolution. It does not recover geometry outside the comparison domain, extend the argument to uncontrolled noncompact ends, or replace the passive finite-angular theorem in \cite{Archive33}.
+
+\begin{thebibliography}{99}
+\bibitem{Archive33} \emph{Time-resolved scalar returns from a marked timelike tube}, AI-Automated Quantum Gravity Research archive, Paper 33 (2026). \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/33-vacuum-wave-returns}{Archive entry}.
+\bibitem{Saksala} T.\ Saksala and A.\ Shedlock, \emph{An inverse problem for symmetric hyperbolic partial differential operators on complete Riemannian manifolds}, \href{https://arxiv.org/abs/2503.14676v2}{arXiv:2503.14676v2}.
+\bibitem{Eskin} G.\ Eskin, \emph{Inverse hyperbolic problems and optical black holes}, Comm.\ Math.\ Phys.\ \textbf{297} (2010), 817--839. \href{https://arxiv.org/abs/0809.3983}{arXiv:0809.3983}.
+\bibitem{EskinDynamic} G.\ Eskin, \emph{Inverse problems for general second order hyperbolic equations with time-dependent coefficients}, \href{https://doi.org/10.1007/s13373-017-0100-2}{DOI:10.1007/s13373-017-0100-2}; \href{https://arxiv.org/abs/1503.00825}{arXiv:1503.00825}.
+\bibitem{LUW} M.\ Lassas, G.\ Uhlmann, and Y.\ Wang, \emph{Inverse problems for semilinear wave equations on Lorentzian manifolds}, Comm.\ Math.\ Phys.\ \textbf{360} (2018), 555--609. \href{https://arxiv.org/abs/1606.06261}{arXiv:1606.06261}.
+\end{thebibliography}
+\end{document}

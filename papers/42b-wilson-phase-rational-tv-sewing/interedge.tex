@@ -1,0 +1,72 @@
+\section{A fixed open filling and a phase-sensitive Wilson sewing}\label{sec:fixedcap}
+
+Our first example uses one fixed geometric preparation at every level. It is not constructed by choosing an arbitrary wavefunction separately at each \(r\). Take the product of the four-holed sphere and \(S^1\); fill one torus by a vacuum solid torus with meridian \(\mu+\lambda\), leaving three marked outputs. The diagonal form of the product-surface state and its surgery-fed generalization are standard \cite[\S\S3.3,4]{BC}; compare the torus-link formulas in \cite[\S4]{BDFKLP}. In the charge/hat convention of the next section the oriented cap has coefficient \(S_{a1}e^{\pi\ii(a^2-1)/(2r)}\) up to a scalar. Indeed take \(g=\left(\begin{smallmatrix}1&0\\1&1\end{smallmatrix}\right)\), so \(S_0g=T_0^{-1}S_0\), and use the cap bra. The four-port product has the factor \(S_{a1}^{-2}\). The resulting normalized chiral boundary state is
+\begin{equation}
+ \Psi_r=\frac{1}{\sqrt{D_r}}\sum_{a=1}^{r-1}
+     \frac{e^{\pi\ii(a^2-1)/(2r)}}{\sin(\pi a/r)}\,\hat e_a^{\otimes3},
+ \qquad D_r=\sum_{a=1}^{r-1}\csc^2(\pi a/r).
+ \label{eq:open-example}
+\end{equation}
+The physical doubled preparation is \(\Psi_r\otimes\bar\Psi_r\), with whole tori as the three output sites. A simultaneous choice of conjugate orientation reverses complex phases below and does not remove the distinctions.
+
+Let \(W_r\hat e_a=\hat e_{a-1}+\hat e_{a+1}\), with the natural zero endpoints, and \(B_r\hat e_a=2\cos(\pi a/r)\hat e_a\). These are two fundamental transverse and longitudinal Wilson operations. The highest-spin simple-current ribbon in the transverse marking acts by
+\begin{equation}
+ X_r=U_{r-2}(W_r/2),\qquad X_r\hat e_a=\hat e_{r-a},
+ \qquad X_r^*=X_r,\quad X_r^2=I,
+ \label{eq:simple}
+\end{equation}
+where \(U_j\) is the Chebyshev polynomial of the second kind. The fusion recurrence gives the polynomial, and the diagonal ribbon values in the charge basis are \(S_{r-1,b}/S_{1b}=(-1)^{b+1}\). The latter and \(S_{r-a,b}=(-1)^{b+1}S_{ab}\) give the reflection explicitly. Thus this is one physical norm-one insertion, not an exponentially ill-conditioned linear combination of fixed probes.
+
+\begin{theorem}[A single geometric cap with inequivalent Wilson sewings]\label{thm:phase}
+All fixed joint Wilson polynomials in the fundamental marked torus operations have the same limiting expectation in \(\Psi_r\) along each of the four residue classes \(r\bmod4\); all proper output marginals have the same strong edge limit. Nevertheless the normalized gluing through three simple-current cylinders is exactly
+\[
+ \langle\Psi_r,X_r^{\otimes3}\Psi_r\rangle
+ =\begin{cases}
+ -(-1)^{r/2}(r^2+2)/(2(r^2-1)),&r\text{ even},\\
+ 0,&r\text{ odd}.
+ \end{cases}
+\]
+In the physical doubled theory a chiral marked ribbon at each port gives the same answer; using the diagonal pair instead gives the square. In particular the defect-free preparations have the same limiting fixed-color Wilson law, but the diagonal-pair decorated gluing has limits \(1/4\) and \(0\) on even and odd progressions.
+\end{theorem}
+
+\begin{proof}
+Embed the two endpoints \(a=n\), \(a=r-n\) into \(|+,n\rangle,|-,n\rangle\) for \(n\ge1\). If \(r\) is even place its unique midpoint on either side. Since \(\sin(\pi n/r)\ge 2n/r\) for \(n\le r/2\), the normalized coefficient sequences obey a uniform \(1/n\) bound. Their unnormalized chirality-resolved limits after dividing the coefficients in \eqref{eq:open-example} by \(r\) are
+\[
+ \frac{1}{\pi n},\qquad
+ e^{\pi\ii r/2}\frac{(-1)^n}{\pi n},
+\]
+on a fixed residue progression. This gives norm convergence before and after normalization by dominated convergence in \(\ell^2\). In the same embedding \(W_r\) converges strongly to the half-line adjacency \(J\) on both branches, \(B_r\) to \(2(\mathrm{diag}(1,-1)\otimes I)\), and \(X_r\) to the edge swap. Indeed this holds on every finite support, and the norms are uniformly bounded. Fixed Wilson polynomials, including fixed-color fixed slopes by the standard torus skein operation \cite{FrohmanGelca}, cannot couple the two edges in this limit; they only see the two same-edge coherence matrices. Any proper marginal also removes the cross term since at least one leg is traced out. The same assertions hold after doubling.
+
+For the full swap, the coefficient at \(r-a\) divided by that at \(a\) is \(e^{\pi\ii r/2}(-1)^a\). Thus the numerator is \(e^{\pi\ii r/2}\sum_a(-1)^a\csc^2(\pi a/r)\). Odd \(r\) cancels by pairing \(a\) and \(r-a\). Differentiating the cotangent multiplication identity and taking the finite part at the origin gives \(D_r=(r^2-1)/3\). For even \(r\), the even subsum is \(D_{r/2}\), so the desired formula is \(e^{\pi\ii r/2}(2D_{r/2}-D_r)/D_r\). For the doubled product state a chiral defect acts on the first factor alone; with its conjugate the two expectations multiply. The closure in each case is literal: glue the preparation to its orientation reverse through the marked decorated cylinders and divide by its undecorated norm gluing.
+\end{proof}
+
+If only odd levels are compared, a Hermitian word gives an exact distinction even at finite \(r\): the observable \((\ii B_r X_r/2)\otimes X_r^{\otimes2}\) has chiral expectation \(-\ii e^{\pi\ii r/2}/2\). To see this use \(X_r B_r=-B_r X_r\) and the odd-\(r\) identity
+\(\sum_{a=0}^{r-1}(-1)^a\csc(x+\pi a/r)=r\csc(rx)\). This identity follows by the residues at all poles, periodicity and decay at both ends of the imaginary direction. Its derivative at zero after removing the pole gives
+\(\sum_{a=1}^{r-1}(-1)^a\cos(\pi a/r)\csc^2(\pi a/r)=-(r^2-1)/6\).
+A chiral simple object \((r-1,1)\) is an allowed defect in the doubled theory; one does not need to identify the chiral factor with the entire physical theory.
+
+\begin{proposition}[The missing phase and the resources that detect it]\label{prop:obstruction}
+For strongly convergent edge vectors of the equal-charge form appearing in \eqref{eq:open-example}, bounded fixed-length circuits of fixed-color fixed-slope Wilson operations and fixed modular words are insensitive to the relative phase of the two pure edge components. Without modular operations, a uniformly bounded Wilson polynomial of transverse degree \(d_r\) cannot connect \(a=n\) to \(a'=r-m\) unless \(d_r\ge r-n-m\). This bound can be attained by one appropriate growing-color ribbon. Adding the simple current to bounded operations recovers the relative phase when the two same-edge complex coherence matrices are known.
+\end{proposition}
+
+\begin{proof}
+Each \(W_r\) factor increases the bandwidth by at most one; \(B_r\) is diagonal. The fusion max-addition channel for \(U_{r-n-m}(W_r/2)\) has matrix element one between the two specified charges (for large \(r\)), at the exact threshold. Its norm stays bounded by \(n+m-1\) because it equals \(X_rU_{n+m-2}(W_r/2)\). Thus the obstruction holds uniformly for a bounded sequence with \(r-d_r\to\infty\), first approximating any strongly convergent edge vector by a finite support.
+
+For fixed modular circuits use the cyclic Weyl lifts described in Lemma~\ref{lem:cap}. Fixed Wilson operations are finite linear combinations of fixed cyclic shifts with diagonal Weyl phases, compressed to the odd space. Move all modular factors to the right by exact conjugation. Let the remaining modular word have first column \((A,C)^T\) in the hat basis (the hat conjugation is a fixed modular word). If \(C=0\), the lift is diagonal times the identity or inversion permutation; odd compression and the remaining bounded shifts cannot span the gap. If \(C\ne0\), each column of the lift is an eigenvector of \(Q_{A,C}\), so its modulus is constant on orbits of the shift by \(C\). A normalized column has entries of modulus at most \(\sqrt{\gcd(C,2r)/(2r)}\), which tends to zero. Odd compression and finitely many shifts preserve this vanishing. Finite tensor products or linear combinations of such words are covered by the same argument. This treats transitions of uniformly positive conditional success as well, but not arbitrary rescaling of a vanishing selection probability.
+
+For the repair let the two edge coefficient sequences be \(u^+,u^-\), both nonzero. The same-edge matrices fix their rays and leave one relative phase. Define
+\[
+ P_\pm=(2I\pm B_r)/4,\qquad
+ L_{r,j}=P_+ T_j(W_r/2)X_r P_-,
+\]
+where \(T_j\) is the first-kind Chebyshev polynomial. These converge strongly to
+\(|+\rangle\langle-|\otimes T_j(J/2)\).
+The half-line sine transform gives, for \(j>0\),
+\[
+ \langle n|T_j(J/2)|m\rangle
+ =\tfrac12(\delta_{j,|n-m|}-\delta_{j,n+m});
+\]
+for \(j=0\) it is the identity. On \(p\ge2\) equal-charge outputs, if the supports intersect at \(n\), use \(j=0\) on \(p-1\) legs and \(j=2n\) on the last. The only surviving cross entry is \(-\bar u_n^+u_n^-/2\), divided by the total squared norm. If the supports are disjoint choose nonzero indices \(n,m\) on opposite edges, use \(j=|n-m|\) on \(p-1\) legs and \(j=n+m\) on the last, giving \(-2^{-p}\bar u_n^+u_m^-\) divided by that norm. Both quadratures of this ordered tensor product are marked Hermitian observables. Either nonzero complex value fixes the relative phase. This step assumes the same-edge matrices as input; it does not claim that the fixed low-color marginal data by themselves supply those matrices on arbitrary preparations.
+\end{proof}
+
+The obstruction just proved concerns the marked physical operator family, not the asymptotic spectrum of tensors becoming sensitive to arbitrary complex phases. We next explain what complex cap information survives \emph{composition}, including modes not determined by the strong edge state.

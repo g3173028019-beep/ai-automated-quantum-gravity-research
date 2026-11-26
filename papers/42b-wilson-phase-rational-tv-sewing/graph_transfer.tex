@@ -1,0 +1,39 @@
+\Needspace{8\baselineskip}
+\section{A non-diagonal next operation: modular cylinder seams}\label{sec:graph}
+
+The cap calculus can compose across a genuinely mixing torus cut if charges are restricted to compact interior bands. Take a fixed finite graph of Seifert pieces, an integer modular cylinder \(M_e=\left(\begin{smallmatrix}A_e&B_e\\ C_e&D_e\end{smallmatrix}\right)\), \(C_e\ne0\), for each internal edge, and primitive caps on the unused ports. Give each vertex a fixed smooth marked charge filter as in Proposition~\ref{prop:bulk}. Let \(V\) and \(E\) be the numbers of vertices and such edges, and \(H=\sum_v h_v\) the sum of the local Seifert exponents. The normalization retains all modular cylinder matrix elements without additional rescaling, and still includes a factor \(\sqrt r\) per transverse cap. All slopes, the graph and the cylinders are fixed. Growing cap colors are permitted with the same frozen residues, with the period now also including the \(|C_e|\). We omit exact pins in the transfer formula.
+
+Diagonal vertex states leave one charge \(a_v\) per vertex. At an oriented edge \(v\leftarrow w\), the odd subtraction in \eqref{eq:kernel} gives two choices \(\eta_e=\pm1\) whose quadratic parts, in \(x_v=a_v/r\), are
+\begin{equation}\label{eq:edgequadratic}
+ \frac{\pi}{2C_e}\left(A_e x_v^2+D_e x_w^2-2\eta_e x_vx_w\right).
+\end{equation}
+The summation label \(\ell\) of the edge kernel enters only as a periodic-residue term, which can again be Fourier expanded. Conjugation negates the whole phase for that edge. Consequently, after removing common unit phases, the exact filtered graph scalar has the finite branch form
+\begin{equation}\label{eq:graph}
+ r^{-E/2}\sin^H(\pi/r)
+ \sum_{\alpha}C_\alpha\!
+       \sum_{a\in\ZZ^V} f(a/r)
+      e^{\ii r(\frac12(a/r)^TQ_\alpha(a/r)+\lambda_{\alpha,r}\cdot(a/r))},
+ \qquad
+ f(x)=\prod_v\frac{\chi_v(x_v)}{\sin^{h_v}(\pi x_v)} .
+\end{equation}
+The smooth \(f\) vanishes outside a compact subset of \((0,1)^V\); \(C_\alpha\) includes the factors \((2|C_e|)^{-1/2}\) and the residue weights. The Hessian \(Q_\alpha\) is obtained by adding the local cap terms \(-\kappa_v x_v^2\) to the incident edge quadratic forms \eqref{eq:edgequadratic}. Thus in particular the off-diagonal entry from one non-self edge is \(-\pi\eta_e/C_e\) before any conjugation. This is not the diagonal charge-product rule.
+
+For one branch let \(d=\operatorname{rank}Q_\alpha\), \(N=\ker Q_\alpha\) and \(T=N^\perp\), and denote the invertible restriction to \(T\) by \(Q_T\). For an alias \(z\in\ZZ^V\) set \(\xi_r=\lambda_{\alpha,r}-2\pi z\), \(\xi_N=P_N\xi_r\), \(\xi_T=P_T\xi_r\), \(x_T=-Q_T^{-1}\xi_T\). After dividing out its constant \(C_\alpha\), the contribution of this branch to \eqref{eq:graph}, multiplied by \(r^{H+E/2-V+d/2}\), is
+\begin{equation}\label{eq:graphstat}
+ \frac{\pi^H(2\pi)^{d/2}e^{\ii\pi\sgn(Q_T)/4}}{|\det Q_T|^{1/2}}\!
+ \sum_z e^{-\ii r\langle \xi_T,Q_T^{-1}\xi_T\rangle/2}
+       \int_{N} f(x_T+y)e^{\ii r\langle \xi_N,y\rangle}\,dy
+       +O(r^{-1}) .
+\end{equation}
+Only a fixed finite set of aliases is needed, chosen large enough for the common support and bounded \(\lambda_{\alpha,r}\). For \(d=V\) the integral means simply \(f(x_T)\). For \(d=0\), determinants and phases in \(T\) are interpreted as \(1\). A singular branch therefore gives a Fourier transform along a stationary affine fibre; it can disappear if its null detuning diverges. The formula is branchwise and does not disregard cancellations between different Hessians or the possible vanishing of its leading term.
+
+Indeed, multiply the odd kernels and the cap factors, and Fourier-expand their finite residue products; this proves \eqref{eq:graph}. Multivariate Poisson summation gives a factor \(r^V\). Aliases with large \(|z|\) are summably nonstationary by integrating sufficiently many times along \(z/|z|\) on the common support. For a retained alias decompose \(x=t+y\), \(t\in T,y\in N\), and complete the square in \(t\). The rank-\(d\) Gaussian expansion has absolute error \(O(r^{-d/2-1})\) before Poisson scaling, uniformly in the transverse center and null detuning: bound the residual multiplier by \(C|\xi|^2/r\) in the partial Fourier transform of \(f\) in \(T\), then integrate its bound over \(y\). This proves \eqref{eq:graphstat}. For \(C_e=0\) the cylinder instead identifies equal odd charge labels; one may first merge such labels and use the resulting weights, but that diagonal case is not included in the exponent \(E/2\) above. No unfiltered network boundary behavior is asserted.
+
+
+The same calculation gives a partial sewing rule. Split the charge variables into internal \(I\) and exposed \(O\), and assume the block \(Q_{II}\) of a branch is nonsingular. Keep \(x_O\) in a common compact band, apply Poisson only on the \(I\)-lattice, and set \(\xi_I=\lambda_I-2\pi z_I\). Each internal stationary contribution has center \(x_I=-Q_{II}^{-1}(\xi_I+Q_{IO}x_O)\). Its output phase is
+\[
+ \tfrac12 x_O^T(Q_{OO}-Q_{OI}Q_{II}^{-1}Q_{IO})x_O
+ +(\lambda_O-Q_{OI}Q_{II}^{-1}\xi_I)\cdot x_O
+ -\tfrac12\xi_I^T Q_{II}^{-1}\xi_I .
+\]
+Its amplitude is the original filtered symbol evaluated at this center, times the same Gaussian prefactor in the summed directions. The Gaussian error is uniform in the exposed compact variables. This is a Schur-complement rule for each retained alias, not a claim that discarded aliases or near-boundary contributions stay negligible after an arbitrary subsequent normalization.
