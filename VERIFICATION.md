@@ -106,3 +106,12 @@ The recorded review consists of automated calculations and AI review. Human expe
 - [40 · Null-volume shared-label rigidity](papers/40-null-volume-shared-label-rigidity/README.md): [packet verification](papers/40-null-volume-shared-label-rigidity/VERIFICATION.md).
 - [41 · Turaev–Viro fusion, recoupling and Wilson moduli](papers/41-tensor-prices-tv-fusion-and-wilson/README.md): [packet verification](papers/41-tensor-prices-tv-fusion-and-wilson/VERIFICATION.md).
 - [42 · Open Turaev–Viro Dehn fillings](papers/42-tensor-prices-tv-dehn-filling/README.md): [packet verification](papers/42-tensor-prices-tv-dehn-filling/VERIFICATION.md).
+
+## Verification for Papers 44–47
+
+The proofs and typeset sources were checked internally and the PDFs were built from those sources. No external expert review is represented.
+
+- [44 · Gravitational region sewing](papers/44-gravitational-region-sewing/README.md): [proof and build checks](papers/44-gravitational-region-sewing/VERIFICATION.md).
+- [45 · Vacuum stress and its massless pole](papers/45-vacuum-stress-massless-pole/README.md): [proof and build checks](papers/45-vacuum-stress-massless-pole/VERIFICATION.md).
+- [46 · The common Einstein light cone](papers/46-einstein-scalar-common-cone/README.md): [proof and build checks](papers/46-einstein-scalar-common-cone/VERIFICATION.md).
+- [47 · Spacelike area tomography](papers/47-spacelike-area-tomography/README.md): [proof and build checks](papers/47-spacelike-area-tomography/VERIFICATION.md).

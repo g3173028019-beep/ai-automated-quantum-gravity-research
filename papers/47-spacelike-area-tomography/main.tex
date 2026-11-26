@@ -1,0 +1,144 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[letterpaper,margin=1.03in]{geometry}
+\usepackage[colorlinks,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\dd}{\mathrm d}\newcommand{\Lie}{\mathcal L}
+\newcommand{\gmark}{\mathsf g}
+\newcommand{\Sym}{\operatorname{Sym}}
+\setlength{\emergencystretch}{2em}
+\title{Spacelike area tomography and compact linear gravitational probes}
+\author{}\date{}
+\hypersetup{pdftitle={Spacelike area tomography and compact linear gravitational probes},pdfauthor={}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a direct inverse for the local Lorentzian metric from twelve fixed types of spacelike area measurements in four dimensions. Six spatial planes recover the intrinsic metric; six signed tilted planes recover the shift and lapse and leave two independent consistency checks. An explicit ten-plane subset is locally sufficient at small nonzero tilt and is minimal for pointwise continuous reconstruction on an open set. No field equations enter either inverse. On a vacuum patch located by four independent local scalar metric markers, the derivative of the inverse gives compact area source profiles for every compact conserved linearized Einstein test. Thus these area probes generate the usual local linear gravitational algebra, on its physical quotient and under the standard hyperbolic hypotheses. Metric reconstruction, choice of relational markers and linear quantization are separate steps.
+\end{abstract}
+
+\section{Measurements and scope}
+Consider a smooth time-oriented Lorentzian metric of signature \((-+++)\) on a four-dimensional region. Let \(X_g:M_0\to\mathcal O\subset\mathbb R^4\) be one regular, oriented label chart, and put \(\gmark=(X_g^{-1})^*g\). The three spatial label directions span a spacelike hyperplane, so \(q=(\gmark_{ij})_{i,j=1}^3>0\). We first keep these labels fixed, without assuming how they are supplied. Write \(e_0,e_1,e_2,e_3\) for the constant coordinate frame on label space.
+
+For independent fixed coordinate vectors \(v,w\), the local spacelike area density per label parallelogram is
+\begin{equation}
+ a(v,w)=\sqrt{\gmark(v,v)\gmark(w,w)-\gmark(v,w)^2}.
+ \label{area}
+\end{equation}
+Only spacelike planes are used; for the planes below one tangent is a spacelike spatial vector and a positive determinant is equivalent to a positive induced two-metric. A reading of type \(I\) is \(A_I(f)=\int_{\mathcal O} f a_I\,\dd^4X\) with real \(f\in C_c^\infty(\mathcal O)\). One can view it as a smooth family of parallel coordinate-area windows on two-surfaces, integrated transversely. On a compact measurement patch all selected planes have a strict spacelike margin. Knowing all the windows of one type determines \(a_I\) distributionally and hence pointwise for a smooth metric. Twelve \emph{types} are used, not twelve scalar integrations for an entire region. No operator associated with an unsmeared surface is required.
+
+The induced area form on bivectors is standard in area-metric geometry \cite{SW}. The question here is not to replace the metric by a general area metric. It is to choose a finite list of equally admissible, unambiguously labeled spacelike planes and invert their positive area readings, then use this inverse to produce actual compact gravitational source profiles.
+
+\section{An explicit inverse with two checks}
+\begin{theorem}[Twelve spacelike directions]\label{T12}
+On any marked open branch on which the planes described below are spacelike, the twelve area densities determine all ten components of \(\gmark\) by a smooth pointwise left inverse. Equality of all twelve families of smooth readings determines the metric up to the isometry identifying its prescribed label branches. The two redundant readings give independent local consistency conditions.
+\end{theorem}
+\begin{proof}
+For two spatial vectors identify the exterior product \(v\wedge w\) with a three-component column \(n\) using the chosen alternating coordinate symbol, not a physical Euclidean metric. With \(C=(\det q)q^{-1}\), the minor formula gives \(a(v,w)^2=n^{\mathsf T} C n\). Every nonzero spatial bivector in three dimensions is simple. Use the six normals \(e_1,e_2,e_3,e_1+e_2,e_2+e_3,e_3+e_1\) in this component identification. The first three measurements give the diagonal of \(C\), and subtracting two diagonal readings from the squared-area reading at their sum gives twice the corresponding off-diagonal. Since \(\det C=(\det q)^2\), the positive branch is
+\begin{equation}
+ q=\sqrt{\det C}\,C^{-1}.
+ \label{q}
+\end{equation}
+
+Let \(s_i=\gmark_{0i}\) and \(u=\gmark_{00}\). Pick a fixed nonzero tilt \(\alpha\) so small that the six extra planes \((e_i\pm\alpha e_0,e_j)\), with \((i,j)\) cycling through \((1,2),(2,3),(3,1)\), are spacelike. On a relatively compact patch a single sufficiently small \(\alpha\) works by openness and compactness. Write \(L_i^\pm=a(e_i\pm\alpha e_0,e_j)^2\) and \(L_i^0=q_{ii}q_{jj}-q_{ij}^2\), available from the recovered \(q\). Expansion of the determinant gives
+\begin{equation}
+ L_i^\pm=L_i^0\pm 2\alpha(q_{jj}s_i-q_{ij}s_j)
+                 +\alpha^2(q_{jj}u-s_j^2).
+ \label{tilt}
+\end{equation}
+The signed differences divided by \(4\alpha\) form the right-hand side of a linear cyclic system \(M(q)s=b\). Its determinant is
+\(q_{11}q_{22}q_{33}-q_{12}q_{23}q_{31}>0\).
+In fact positivity of every two-by-two principal spatial minor gives
+\(|q_{ij}|<\sqrt{q_{ii}q_{jj}}\), so the magnitude of the second product is strictly smaller than the first. Hence \(s\) is determined. From the even differences one obtains each of three values for \(u\):
+\begin{equation}
+ u_i=\frac{1}{q_{jj}}\left[
+ \frac{(L_i^++L_i^-)/2-L_i^0}{\alpha^2}+s_j^2
+ \right].
+ \label{u}
+\end{equation}
+They agree on the metric image. Their two differences are independent conditions: with \(q\) and all odd differences fixed, changing the two independent even differences for \(i=2,3\) changes \(u_2-u_1\) and \(u_3-u_1\) independently. The ADM quantities in this chart are \(\beta^i=q^{ij}s_j\) and \(N=\sqrt{q^{ij}s_i s_j-u}>0\), with the sign of time orientation chosen by the marking. The image also satisfies open positivity and spacelike inequalities. Choosing \(u_1\) off the image extends the inverse smoothly nearby. After applying it pointwise, two equivalent marked data sets give the same metric \(\gmark\), and the chart correspondence \(X_{\widetilde g}^{-1}\circ X_g\) is the isometry between these branches.
+\end{proof}
+
+The odd combinations determine a physically specified coordinate component of the marked metric; they are not invariant under an independent change of the mark. For example at fixed \(q,u\), reversing \(s\) interchanges each plus/minus pair and leaves all three sums unchanged. The consistency checks use \(\alpha^{-2}\), whereas obtaining the signed shift uses \(\alpha^{-1}\); these denominators are why arbitrarily small tilt is not a uniformly conditioned measurement.
+
+\begin{proposition}[Locally optimal ten directions]\label{T10}
+Keep the six spatial directions and only the four tilted directions for \(L_1^\pm,L_2^+,L_3^+\). About any reference metric as above, for sufficiently small \emph{fixed} nonzero \(\alpha\), these ten area densities have a locally smooth inverse. Fewer than ten continuous pointwise scalar readings cannot invert the unrestricted marked metric on an open set.
+\end{proposition}
+\begin{proof}
+Recover \(q\) as before. The pair at \(i=1\) fixes \(b_1\) and \(d_1=q_{22}u-s_2^2\), so \(u=(d_1+s_2^2)/q_{22}\). For \(i=2,3\) put \(y_i=(L_i^+-L_i^0)/(2\alpha)\). At fixed \(q,d_1\), the equations for \(s\) are
+\[
+ \begin{pmatrix}b_1\\y_2\\y_3\end{pmatrix}
+ =M(q)s+\frac{\alpha}{2}
+   \begin{pmatrix}
+     0\\
+     q_{33}(d_1+s_2^2)/q_{22}-s_3^2\\
+     q_{11}(d_1+s_2^2)/q_{22}-s_1^2
+   \end{pmatrix}.
+\]
+The Jacobian in \(s\) is \(M(q)+O(\alpha)\) on any compact set with \(q>0\) and bounded \(s\); it is invertible for small fixed nonzero \(\alpha\). The smooth implicit inverse on the reference branch, followed by the formula for \(u\), solves the exact equations, not a truncation in \(\alpha\). If desired, on a bounded convex set of shifts at fixed \(q,d_1\), the nonlinear correction is Lipschitz with constant \(O(|\alpha|)\); when this constant is smaller than the least singular value of \(M(q)\), equal measurements imply equal shifts throughout that set. These are local/bounded-branch statements, not an unconditional global ten-direction inverse. Finally the set of admissible metric components is open in \(\mathbb R^{10}\). A continuous injective map to \(\mathbb R^m\) with \(m<10\), followed by the inclusion into \(\mathbb R^{10}\), would contradict invariance of domain: its image cannot be open. This lower bound concerns pointwise readings and no use of field equations or nonlocal data.
+\end{proof}
+
+\section{From relational area variations to conserved sources}
+We now assume the prescribed branch is \emph{intrinsic} and local: the four \(X_g^A\) are scalar differential concomitants of the metric with independent gradients \(J^A{}_\mu=\nabla_\mu X_g^A\). Choose a background reference branch and compact windows in its interior, away from any multiple preimages or branch boundary on the neighborhood of metrics considered. Diffeomorphisms act on the branch as well as on the fields, so the pulled-back metric \(\gmark\) is unchanged by this simultaneous transformation. One possible collection in vacuum is the real and imaginary parts of the quadratic and cubic self-dual Weyl invariants, \emph{where} these four gradients are independent. A fixed real linear recombination of the labels can provide the needed spacelike hyperplane locally. Intrinsic labeling and gauge-invariant observables of this kind have established precedents \cite{Khavkine,BFR,BFHKP}. This paper assumes one regular branch; it does not assert that this example of curvature markers works on every vacuum metric.
+
+For a variation \(h\) of the covariant metric, set
+\[
+  Z^\mu[h]=(J^{-1})^\mu{}_A X_g^{A\,\prime}[h],\qquad
+  \Pi h=h-\Lie_{Z[h]}g .
+\]
+Differentiating \(X_g\circ X_g^{-1}=\mathrm{id}\) shows that \(\Pi h\), expressed in the reference label chart, is the variation at fixed physical labels. Since \(X_g^{A\,\prime}[\Lie_\xi g]=\xi^\mu J^A{}_\mu\), one has \(\Pi\Lie_\xi g=0\) and \(\Pi^2=\Pi\). For these markers \(\Pi\) is a finite-order differential operator; its formal adjoint therefore preserves compact support. Relational constructions using harmonic labels from a marked Cauchy cap \cite{FrobLima} can still use the algebraic inverse of Sec.~2, including on a flat background. In general their variation involves a Green operator and initial data, so the same support statement cannot be made without including the causal preparation region.
+
+For differentiating the area map use the symmetric-tensor pairing; the coefficient for plane tangent matrix \(V=(v,w)\) is
+\[
+ D_I^{ab}:=\frac{\partial a_I}{\partial\gmark_{ab}}
+   =\tfrac12 a_I [V(V^{\mathsf T}\gmark V)^{-1}V^{\mathsf T}]^{ab}.
+\]
+If \(R\) is the inverse on the branch (using the smooth twelve-direction extension above when needed), put \(B^I_{ab}=\partial R_{ab}/\partial a_I\). Differentiating \(R\circ a=\mathrm{id}\) gives
+\begin{equation}
+ \sum_I B^I_{ab}D_I^{cd}=\delta^c_{(a}\delta^d_{b)} .
+ \label{right}
+\end{equation}
+The product is independent of the chosen extension away from actual area data. All coefficient formulas are evaluated on the reference metric and the fixed branch.
+
+\begin{theorem}[All compact conserved linear metric probes]\label{Tlin}
+On a regular intrinsic patch as above, an array \(f=(f_I)\) of smooth compact label densities defines a compact conserved symmetric test density \(T_f\), by
+\[
+ \delta\!\left(\sum_I A_I(f_I)\right)[h]=\langle T_f,h\rangle,\qquad
+ T_f=\Pi^*\!\left(\sum_I f_I D_I\right).
+\]
+Conversely each compact conserved smooth symmetric test density \(t\) supported in the patch is obtained by choosing \(f_I=B^I_{ab}t^{ab}\) in reference coordinates, with the density factor included. This source identity holds off shell.
+\end{theorem}
+\begin{proof}
+The variation at fixed labels is \(D_I^{ab}(\Pi h)_{ab}\). Pull back the label test density to the reference region, and apply the formal adjoint of \(\Pi\). Its locality gives the support bound. It pairs to zero with \(\Lie_\xi g\) for any smooth compactly supported vector field \(\xi\); integration by parts implies covariant conservation of the tensor density. Conversely the stated smooth compact \(f_I\) satisfies \(\sum_I f_ID_I=t\) by Eq.~\eqref{right}. For all \(h\),
+\[
+ \langle \Pi^*t,h\rangle=\langle t,\Pi h\rangle
+                        =\langle t,h\rangle-\langle t,\Lie_{Z[h]}g\rangle
+                        =\langle t,h\rangle
+\]
+by conservation and compact support, with no use of linearized equations of motion. This proves the claim.
+\end{proof}
+
+\section{Linear physical algebra and preparation}
+For the field-theoretic assertion take a vacuum Einstein background (with any specified cosmological constant) on a globally hyperbolic domain, with the standard gauge-fixed hyperbolic linearized theory and no unspecified timelike boundary conditions. Take a causally convex intrinsic measurement patch for the locality statement. Let \(P\) denote the linearized Einstein action Hessian written as a formally self-adjoint map to symmetric densities and \(E\) the physical causal propagator pairing on conserved tests, with Einstein normalization. Quotient by equations of motion and, if working with the nondegenerate physical algebra, by the radical, as in the covariant theory \cite{FH}. Local support refers to representatives before the quotient. The composition of the area-test map with this quotient has exactly the image of all conserved tests supported in the patch, both on the kinematic test space and in the induced physical algebra. The sign convention is chosen so that for \(W(f)=\exp(i\Phi(T_f)/\hbar)\),
+\[
+ W(f)W(k)=\exp[-i\langle T_f,ET_k\rangle/(2\hbar)]W(f+k).
+\]
+Spacelike separated compact area windows commute by causal support of \(E\). Redundant area arrays are not additional graviton modes. Any chosen regular positive quasifree representation of this standard algebra represents the smeared linear area variations; this does not assert a preferred vacuum or a nonlinear area operator.
+
+There is also a preparation form of the source result. Suppose \(p\) is a smooth spacelike-compact physical linearized solution and a smooth time cutoff \(\chi\) is zero before, and one after, a slab containing the transition relevant to the preparation. If the compact transition support lies in the regular marked region, then \(t=P(\chi p)\) is compact and conserved by the linearized Bianchi identity. Since \(Pp=0\), \(\chi p\) and \((\chi-1)p\) are respectively retarded and advanced physical representatives for \(t\). A retarded or advanced hyperbolic gauge change to the chosen gauge preserves this support property in the respective causal sense, and gauge-fixed uniqueness gives \(Et=[p]\) with retarded-minus-advanced convention. Theorem~\ref{Tlin} provides compact area source profiles for that Weyl displacement. It does not state that every wave can be prepared in an arbitrarily small prescribed patch; the slab and the support requirement are essential.
+
+\section{Relation to existing approaches}
+Area-metric constructions use the full bivector geometry and may admit tensors not induced by one spacetime metric \cite{SW}. Triangle-area approaches to Regge calculus pose a different global and discrete inverse problem, with metric ambiguities and shape matching across simplices \cite{BRW}. This paper uses chosen local marked planes of a smooth metric, all spacelike; it is not a claim about arbitrary triangle areas or discrete area spectra. Intrinsic observables and the linear covariant graviton algebra are established separately \cite{Khavkine,BFR,FH}. The contribution is the explicit twelve-direction inverse with its checks, the local minimal reduction, and the support-preserving source conversion showing that this specified family realizes all compact physical linear probes on a regular patch. Nothing here selects a nonlinear quantum representation, produces a new equation of motion, or constructs intrinsic markers on symmetric spacetimes.
+
+\paragraph{Research status.} AI-led research manuscript, internally checked; no external expert review is represented.
+
+\begin{thebibliography}{99}\small
+\bibitem{SW} F. P. Schuller and M. N. R. Wohlfarth, \emph{Geometry of manifolds with area metric: multi-metric backgrounds}, Nucl. Phys. B \textbf{747}, 398--422 (2006), \href{https://arxiv.org/abs/hep-th/0508170}{arXiv:hep-th/0508170}.
+\bibitem{BRW} J. W. Barrett, M. Ro\v{c}ek and R. M. Williams, \emph{A note on area variables in Regge calculus}, Class. Quantum Grav. \textbf{16}, 1373--1376 (1999), \href{https://arxiv.org/abs/gr-qc/9710056}{arXiv:gr-qc/9710056}.
+\bibitem{Khavkine} I. Khavkine, \emph{Local and gauge invariant observables in gravity}, Class. Quantum Grav. \textbf{32}, 185019 (2015), \href{https://arxiv.org/abs/1503.03754}{arXiv:1503.03754}.
+\bibitem{BFR} R. Brunetti, K. Fredenhagen and K. Rejzner, \emph{Quantum gravity from the point of view of locally covariant quantum field theory}, Commun. Math. Phys. \textbf{345}, 741--779 (2016), \href{https://arxiv.org/abs/1306.1058}{arXiv:1306.1058}.
+\bibitem{BFHKP} R. Brunetti, K. Fredenhagen, T.-P. Hack, N. Pinamonti and K. Rejzner, \emph{Cosmological perturbation theory and quantum gravity}, JHEP \textbf{08}, 032 (2016), \href{https://doi.org/10.1007/JHEP08(2016)032}{doi:10.1007/JHEP08(2016)032}.
+\bibitem{FrobLima} M. B. Fr\"ob and W. C. C. Lima, \emph{Propagators for gauge-invariant observables in cosmology}, Class. Quantum Grav. \textbf{35}, 095010 (2018), \href{https://arxiv.org/abs/1711.08470}{arXiv:1711.08470}.
+\bibitem{FH} C. J. Fewster and D. S. Hunt, \emph{Quantization of linearized gravity in cosmological vacuum spacetimes}, Rev. Math. Phys. \textbf{25}, 1330003 (2013), \href{https://arxiv.org/abs/1203.0261}{arXiv:1203.0261}.
+\end{thebibliography}
+\end{document}

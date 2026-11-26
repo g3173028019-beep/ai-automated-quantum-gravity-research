@@ -67,3 +67,12 @@ Human review, a comprehensive current novelty review, journal submission and acc
 ## Papers 30–31: analytical release
 
 The two standalone LaTeX sources were compiled twice with pdfLaTeX. Internal checks compared the results with independent derivations, verified bibliography and stated hypotheses, and checked the rendered PDFs. This records a manuscript and build check, not a numerical experiment or external scientific review. [30 · Nariai rigidity under null completeness](../papers/30-nariai-null-completeness/VERIFICATION.md) · [31 · Classically matched vacuum waves with opposite quantum transfer](../papers/31-graviton-metaplectic-transfer/VERIFICATION.md)
+
+## Papers 44–47: analytical release
+
+Each standalone TeX manuscript was checked by a second internal instance and built with pdfLaTeX. See the packet-specific verification notes for theorem scope and source/PDF hashes. This was not external peer review.
+
+- [44 · Gravitational region sewing](../papers/44-gravitational-region-sewing/VERIFICATION.md)
+- [45 · Vacuum stress and its massless pole](../papers/45-vacuum-stress-massless-pole/VERIFICATION.md)
+- [46 · The common Einstein light cone](../papers/46-einstein-scalar-common-cone/VERIFICATION.md)
+- [47 · Spacelike area tomography](../papers/47-spacelike-area-tomography/VERIFICATION.md)

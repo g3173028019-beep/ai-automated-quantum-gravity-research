@@ -1,0 +1,130 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\geometry{margin=1in}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\adm}{\mathrm{ADM}}
+\newcommand{\e}{\mathrm e}
+\title{When Two Scalar Modes Share the Einstein Light Cone}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In four-dimensional Einstein gravity consider two minimally coupled real scalar fields with a general first-derivative Lagrangian \(P(\phi,X^{IJ})\), where \(X^{IJ}=-g^{-1}(\dd\phi^I,\dd\phi^J)/2\). On an open set of attained jets with independent field gradients, positive strongly hyperbolic scalar modes share the metric null cone if and only if the Lagrangian is locally a positive nonlinear sigma model with a potential. Equality of characteristic sets is enough once strong hyperbolicity is imposed; at the repeated metric roots it forces the entire scalar symbol to vanish on the cone. The restriction of the two gradient contractions to the null cone then detects all six independent kinetic Hessian entries. No analyticity is needed for this local result; in an analytic Lagrangian the affine kinetic form extends throughout its connected analytic domain in the sense of vanishing Hessian. Exact asymptotically flat constrained initial data realize both a curved target obeying the criterion and a positive strongly hyperbolic nonmember with a distinct scalar cone.
+\end{abstract}
+
+\section{The classification question}
+For canonical scalar matter the characteristic light cone is that of the metric, even when the target metric or potential is nontrivial. Noncanonical kinetic terms generally change scalar characteristic cones. In multi-field DBI cosmology the adiabatic and entropy perturbations can share a common \emph{effective} speed, which need not be the speed of the metric light cone \cite{LRST}. The one-field effective-metric computation also has a substantial prior literature \cite{BMV,Rendall}. We ask the converse with the metric cone fixed: if both physical scalar polarizations travel on the gravitational cone for an open family of inhomogeneous, rank-two data, which kinetic actions can do this?
+
+It is essential to address both physical polarizations, all covector directions, and the repeated-root eigenspaces. A homogeneous estimate with parallel field gradients cannot test the entire kinetic Hessian. A characteristic determinant alone can hide a deficient eigenspace. The theorem is local and classical; it asserts neither a quantum stability theorem nor a change of the Einstein metric by a derivative-dependent field redefinition.
+
+\section{Action, symbol and physical sector}
+Let \(g\) have signature \((-+++)\) and take the action
+\[
+ S[g,\phi]=\int \sqrt{-g}\left(\frac{R_g}{16\pi G_N}+P(\phi,X)\right)\dd^4x,
+ \qquad X^{IJ}=-\tfrac12g^{ab}\partial_a\phi^I\partial_b\phi^J .
+\]
+All field indices are summed, including both off-diagonal orders; derivatives on \(\operatorname{Sym}^2\RR^2\) use its symmetric-matrix pairing. Write \(K_{IJ}=P_{X^{IJ}}\), \(H_{IJ,LM}=P_{X^{IJ}X^{LM}}\), with the within-pair and exchange symmetries. The scalar Euler--Lagrange equations and stress tensor are
+\[
+ \nabla_a(K_{IJ}\nabla^a\phi^J)+P_{\phi^I}=0,
+ \qquad T_{ab}=K_{IJ}\partial_a\phi^I\partial_b\phi^J+P g_{ab}.
+\]
+These use the same general kinetic quantities as \cite[Secs.~III--V]{LRST}; no homogeneous specialization is made here.
+
+Write \(v^{Ia}=\nabla^a\phi^I\), \(q^I(k)=v^{Ia}k_a\), and \(g(k,k)=g^{ab}k_a k_b\). With the symbol evaluated by replacing differentiation by \(k\) without the factors of \(i\), the scalar pencil is
+\begin{equation}
+ Q_{IL}(k)=K_{IL}g(k,k)-H_{IJ,LM}q^J(k)q^M(k).
+ \label{eq:pencil}
+\end{equation}
+Indeed, the derivative part of the variation is \(\delta X^{LM}=-v^{(La}\partial_a\pi^{M)}\); symmetry of \(H\) gives \eqref{eq:pencil}. In generalized harmonic gauge, with derivative-free gauge source, the trace-reversed linear metric equations have the metric-wave principal part. The variation of \(T_{ab}\) has at most one derivative of \(\pi\), and variation of the scalar equation has at most one derivative of the metric perturbation. The second-order principal blocks therefore decouple; in a first-order derivative reduction these cross terms are algebraic in the derivative unknowns.
+
+For clarity, on a nonzero null covector the harmonic condition imposes four independent linear conditions on the ten metric amplitudes. Residual harmonic gauge then removes four independent pure-gauge amplitudes, leaving the usual two transverse traceless metric polarizations with positive Einstein kinetic sign. At that principal order a gauge vector producing a finite oscillating metric amplitude is down by one frequency, so its scalar shift \(\xi^a\partial_a\phi^I\) is subprincipal. The harmonic subsidiary equations follow from the Bianchi identity and the scalar equations; on constraint-compatible initial data they propagate the gauge conditions. There is no extra principal scalar constraint if \(-Q(n)\) is positive on a unit timelike normal covector \(n\). This is the physical two-scalar block whose characteristic cone is being compared. These facts can also be read from the canonical wave reduction near a positive block; they do not require that the full nonlinear Hamiltonian be bounded below for every allowed field value.
+
+\section{Rigidity on the attained rank-two set}
+\begin{theorem}[Metric-cone rigidity]\label{thm:rigid}
+Consider a smooth on-shell rank-two jet where \(v^1,v^2\) are linearly independent. Suppose there is a common unit timelike covector \(n\) with \(-Q(n)>0\), and that the scalar principal initial-value reduction is strongly hyperbolic with this normal. If the nonzero real characteristic covectors of the physical two-scalar block are exactly the metric-null covectors, then \(H=0\) and \(K>0\) at that jet.
+
+If this occurs on an open attained family of rank-two jets whose invariant \((\phi,X)\) values contain a neighborhood, then near any such invariant value,
+\[
+ P(\phi,X)=G_{IJ}(\phi)X^{IJ}-V(\phi),\qquad G=G^{\mathsf T}>0 .
+\]
+Conversely this form with \(G>0\) is positive in the normal and has both scalar modes strongly hyperbolic on the metric cone. If \(P\) is real analytic on a connected analytic domain containing the attained neighborhood, \(P_{XX}=0\) holds throughout that domain; positivity need not extend with it.
+\end{theorem}
+\begin{proof}
+Take unit spatial covectors \(\xi\) in \(n^\perp\), and use \(k=\xi-\lambda n\). The second-order scalar pencil in \(\lambda\) has invertible leading coefficient and a standard four-dimensional companion symbol for its two amplitudes and two time derivatives. Every eigenspace at \(\lambda\) is naturally isomorphic to \(\ker Q(\xi-\lambda n)\): the second block of the eigenvector is fixed by \(\lambda\) and the first block. Strong hyperbolicity gives real semisimple eigenvalues. By the cone hypothesis the only roots are \(+1,-1\), and both occur for every spatial direction. The algebraic multiplicity at \(+1\) is locally constant on the unit spatial sphere, since it is the rank of the continuous spectral projection separating \(+1\) from \(-1\). The sphere is connected and replacing \(\xi\) by \(-\xi\) exchanges the two multiplicities by homogeneity of \(Q\). Thus each root has multiplicity two. Semisimplicity makes each kernel two-dimensional. Therefore \(Q(k)=0\) as a matrix on the entire nonzero metric null cone. For example, the one-spatial-direction pencil \(\operatorname{diag}(-(\lambda-\xi)^2,-(\lambda+\xi)^2)\) illustrates why a squared wave determinant itself is not sufficient.
+
+At the fixed jet, \(q\) restricted to the null cone is a submersion at any null \(k\) whose raised vector \(k^\sharp\) is not in \(\operatorname{span}(v^1,v^2)\). Indeed the tangent covectors \(\dot k\) have \(\dot k(k^\sharp)=0\); a failure of rank would give a nonzero linear combination of the independent \(v^I\) in the annihilator of that tangent, namely the line spanned by \(k^\sharp\). Such a point always exists because the full null cone is not contained in a two-plane. This also covers a degenerate gradient plane. The image of \(q\) on the null cone consequently contains an open two-dimensional subset.
+
+Equation \eqref{eq:pencil} now implies that the three quadratic polynomials \(H_{IJ,LM}q^Jq^M\) for the symmetric pairs \(IL=11,22,12\) vanish identically in \(q\). For \(IL=11\) the coefficients give \(H_{11,11}=H_{11,12}=H_{12,12}=0\); for \(22\) they also give \(H_{12,22}=H_{22,22}=0\). The mixed coefficient for \(12\) is \(H_{11,22}+H_{12,12}\), supplying \(H_{11,22}=0\). These are all six entries. With \(H=0\), the normal coefficient \(-Q(n)=K\) is positive.
+
+On any open invariant neighborhood the vanishing Hessian can be integrated on sufficiently small product patches to yield the displayed form. The rank condition is the natural one for the invariant coordinates: at fixed \(g\) the Gram map from the independent gradients to \(X\) is a submersion, since varying each gradient permits its two contractions against \(v^1,v^2\) to be prescribed independently, and \(\delta X\) is their symmetric part. When the family is defined by the Einstein equations one still requires an attained neighborhood rather than assuming that every unconstrained jet is on shell. Section~\ref{sec:examples} constructs attained examples. Analytic continuation applies to the entries of \(H\) separately; a global single-valued \(G,V\) across disconnected kinetic slices does not have to be invoked.
+
+Conversely, the Hessian vanishes for the specified affine kinetic form. The scalar wave energy uses \(G\) on both time and spatial derivative blocks, and a positive square root of \(G\) gives a symmetrizer locally uniform over spatial directions. There are two independent scalar eigenvectors at each sign, and two independent Einstein polarizations at that sign. Lower-order couplings do not remove them from the principal symbol.
+\end{proof}
+
+In particular, \(\det X\) is not a kinetic null term in this class. If an \(X\)-dependent term made no contribution to the principal scalar symbol on such an open attained family, its Hessian would vanish as above, and the remaining kinetic coefficient would be forced to vanish by any non-null test covector. Genuine boundary terms outside the specified form are not at issue. Point changes of scalar variables conjugate the equations and transform \(G\) by congruence. Derivative-dependent metric changes are excluded because they would change which cone is being compared.
+
+\section{Exact constrained, nonhomogeneous examples}\label{sec:examples}
+Fix an asymptotically Euclidean spatial slice \(\RR^3\) with Euclidean reference coordinates, \(\gamma=\psi^4\delta\), and second fundamental form \(K_{ij}^{\adm}=0\). Set the initial normal derivatives of both fields to zero. Prescribe \(\phi^1=\phi^1_0+\varepsilon\chi(x)x^1\), \(\phi^2=\phi^2_0+\varepsilon\chi(x)x^2\), with smooth compact cutoff \(\chi=1\) on a ball. The momentum source vanishes, and the Hamiltonian constraint is exactly
+\begin{align}
+ -8\Delta_\delta\psi&=16\pi G_N\psi^5\rho,\qquad \psi\longrightarrow1,\\
+ \rho&=-P(\phi,X),\qquad X^{IJ}=-\tfrac12\psi^{-4}
+       \delta^{ij}\partial_i\phi^I\partial_j\phi^J .
+ \label{eq:constraint}
+\end{align}
+The two actions below have no potential and satisfy \(P(\phi,0)=0\). For either, write the equation as its Newton-potential integral
+\[
+ \psi(x)=1+\frac{G_N}{2}\int_{\RR^3}\frac{\psi(y)^5\rho(y)}{|x-y|}\dd^3y .
+\]
+On, for example, \(\|\psi-1\|_\infty\le1/4\), the compactly supported integrand and its derivative in \(\psi\) are uniformly \(O(\varepsilon^2)\). The supremum of the integral of \(|x-y|^{-1}\) over a fixed compact support is finite. The map is a contraction onto this ball at sufficiently small \(\varepsilon\) and yields \(\psi=1+O(\varepsilon^2)>0\). Elliptic regularity and the compact support then give a smooth asymptotically Euclidean solution. Smooth dependence on the prescribed constants and slopes follows by differentiating the contraction, or the implicit function theorem for the same integral equation.
+
+The field gradients are independent in the inner ball. At its center one can replace the fixed slopes by \(\varepsilon A\) for arbitrary \(A\in\RR^{2\times3}\) close to the two reference coordinate rows and vary the constants \(\phi_0\). The differential of \(\varepsilon^{-2}X=-\psi^{-4}AA^{\mathsf T}/2\) with respect to \(A\) is an \(O(\varepsilon^2)\) perturbation of the surjective Gram differential. This gives an open family of attained \((\phi,X)\) values with negative definite \(X\). A common positive wave reduction in the two examples gives a local harmonic Einstein--matter evolution; it is the usual local quasilinear hyperbolic construction with smooth constrained data (see \cite{Friedrich,Rendall} for the reduced Einstein and kinetic-scalar Cauchy framework). Specifically, in both examples the principal matter block is a direct sum of wave operators after a positive field normalization. Each has the same spacelike initial slice and positive time kinetic coefficient in the stipulated neighborhood, so standard first-order wave energies furnish a simultaneous symmetrizer. Stress and scalar geometry couplings are of lower differential order in that reduction, and the subsidiary equations propagate the constraints.
+
+\paragraph{A curved-target survivor.}
+Take
+\[
+ P=\e^{2b(\phi^1)^2}(X^{11}+X^{22}),\qquad b>0 .
+\]
+The target is genuinely curved: for a two-dimensional conformal target \(\e^{2u}\delta\), its Gaussian curvature is \(-\e^{-2u}\Delta_\phi u\); here it is \(-2b\e^{-2b(\phi^1)^2}\). Yet \(H=0\) and each polarization travels on the metric cone. Affinity in \(X\) does not require two decoupled free fields.
+
+\paragraph{A positive nonmember.}
+Take \(P=X^{11}+X^{22}+\beta(X^{11})^2\), \(\beta>0\).
+Set \(r^2=|\operatorname{grad}_\gamma\phi^1|^2>0\) and choose the initial slopes small enough that \(\beta r^2<1/3\). In the common normal frame \(-Q(n)=\operatorname{diag}(1-\beta r^2,1)>0\). The first scalar form is
+\[
+ (1-\beta r^2)g^{ab}k_a k_b-2\beta(v^{1a}k_a)^2;
+\]
+the second is the metric form. The first mode has spatial coefficients \(1-3\beta r^2\) in the gradient direction and \(1-\beta r^2\) transverse to it, so its squared speed along the gradient is
+\[
+ c_{\parallel}^2=\frac{1-3\beta r^2}{1-\beta r^2}<1 .
+\]
+This wave block is positive and strongly hyperbolic, including directions in which the speeds meet, because the two scalar blocks are diagonal. These are on-shell constrained data, not an example from inserting an arbitrary stress on a fixed flat background.
+
+\section{Scope}
+The converse selects a nonlinear sigma model in the Einstein frame whenever all positive physical scalar polarizations have the same characteristic geometry as the Einstein graviton on an open rank-two family. It is not an assumption of scalar homogeneity, a condition on only one observed direction, or a theorem about equality of group velocities away from the principal regime. A rank-deficient background, fields with extra derivative or curvature couplings, and quantization lie outside the classification. Canonical scalar Hadamard and modular results can use sigma-model kinetics as an input; this theorem instead derives that form from common-cone propagation in the stated class.
+
+\begin{thebibliography}{9}
+\bibitem{LRST}
+D.~Langlois, S.~Renaux-Petel, D.~A.~Steer and T.~Tanaka,
+\emph{Primordial perturbations and non-Gaussianities in DBI and general multi-field inflation},
+Phys. Rev. D \textbf{78} (2008) 063523, \href{https://arxiv.org/abs/0806.0336}{arXiv:0806.0336}.
+\bibitem{BMV}
+E.~Babichev, V.~Mukhanov and A.~Vikman,
+\emph{k-Essence, superluminal propagation, causality and emergent geometry},
+JHEP \textbf{02} (2008) 101, \href{https://arxiv.org/abs/0708.0561}{arXiv:0708.0561}.
+\bibitem{Rendall}
+A.~D.~Rendall, \emph{Dynamics of k-essence},
+Class. Quantum Grav. \textbf{23} (2006) 1557--1570,
+\href{https://arxiv.org/abs/gr-qc/0511158}{arXiv:gr-qc/0511158}.
+\bibitem{Friedrich}
+H.~Friedrich, \emph{Hyperbolic reductions for Einstein's equations},
+Class. Quantum Grav. \textbf{13} (1996) 1451--1469,
+\href{https://doi.org/10.1088/0264-9381/13/6/014}{doi:10.1088/0264-9381/13/6/014}.
+\end{thebibliography}
+\end{document}

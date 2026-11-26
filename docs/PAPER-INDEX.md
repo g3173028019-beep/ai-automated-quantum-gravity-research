@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 49 items: 20 original research packets, six later analytical Markdown manuscripts and twenty-three typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 53 items: 20 original research packets, six later analytical Markdown manuscripts and twenty-seven typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–43 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–47 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -559,3 +559,43 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Result.** Exact calibrated retarded aperture responses and synchronized spatially uniform mass variations recover an evolving Lorentzian geometry in the stated setting; the twisted-cap extension uses an independent calibration. Companion to Paper 33. Includes an unconditional orthogonally static compact-cap calibration under its data assumptions, a conditional twisted-cap extension and exact ambiguities for missing control times or uncontrolled spatial profiles.
 
 [Paper notes](../papers/33b-active-evolving-lorentzian-geometry/README.md) · [PDF](../papers/33b-active-evolving-lorentzian-geometry/manuscript.pdf) · [TeX](../papers/33b-active-evolving-lorentzian-geometry/main.tex)
+
+## 44. Gravitational Region Sewing: Minimal Corner Registers and Continuous Radiative Loads
+
+**Question.** How much boundary data are needed to preserve linked graviton observables or transmit a physical gravitational wave?
+
+**Result.** The minimum independent register for a bracket-preserving linear dressing is the cross-pairing rank. Linked linear graviton charges require ten pairs per independent link for a single electric–magnetic pairing. A propagating polarization instead has continuous spectral load, yielding quantitative finite-reservoir obstructions on planar and Schwarzschild cuts.
+
+**Scope.** Finite independent linear dressings of marked charge families, and positive closed linear reservoirs at fixed momentum or in one canonical Schwarzschild parity channel. No unrestricted nonlinear reservoir or nonlinear quantum gluing claim.
+
+[Paper notes](../papers/44-gravitational-region-sewing/README.md) · [PDF](../papers/44-gravitational-region-sewing/manuscript.pdf) · [TeX](../papers/44-gravitational-region-sewing/main.tex) · [Verification](../papers/44-gravitational-region-sewing/VERIFICATION.md)
+
+## 45. A massless stress pole from the variance of a spatially scaled vacuum energy
+
+**Question.** Can a fixed-time-gate, spatially dilated vacuum-energy measurement distinguish a massless stress pole from a gapless continuum?
+
+**Result.** The large-window vacuum variance is an explicit positive functional times the massless-shell atom. Only a helicity-zero stress tensor structure survives on that shell. A separate scalar–tensor model distinguishes Ricci focusing and the bare source from the complete linear gravitational charge.
+
+**Scope.** A specified conserved stress in a positive-spectrum Poincaré-invariant vacuum, no centered zero-four-momentum component, and a fixed normalized time gate. The gravitational comparison is linear in a specified action, not a nonlinear quantum ADM variance.
+
+[Paper notes](../papers/45-vacuum-stress-massless-pole/README.md) · [PDF](../papers/45-vacuum-stress-massless-pole/manuscript.pdf) · [TeX](../papers/45-vacuum-stress-massless-pole/main.tex) · [Verification](../papers/45-vacuum-stress-massless-pole/VERIFICATION.md)
+
+## 46. When Two Scalar Modes Share the Einstein Light Cone
+
+**Question.** Which noncanonical two-scalar kinetic actions can make both physical modes propagate on the Einstein null cone?
+
+**Result.** For positive strongly hyperbolic scalar modes with independent gradients on an open attained family, equality of the scalar and Einstein characteristic sets forces a positive nonlinear sigma model with a potential. Two exact constrained data families distinguish this property from hyperbolicity alone.
+
+**Scope.** Classical minimally coupled first-derivative two-real-scalar actions in four dimensions, with the Einstein metric as the reference cone and attained rank-two jets. Local smooth result; analyticity continues Hessian vanishing, not positivity.
+
+[Paper notes](../papers/46-einstein-scalar-common-cone/README.md) · [PDF](../papers/46-einstein-scalar-common-cone/manuscript.pdf) · [TeX](../papers/46-einstein-scalar-common-cone/main.tex) · [Verification](../papers/46-einstein-scalar-common-cone/VERIFICATION.md)
+
+## 47. Spacelike area tomography and compact linear gravitational probes
+
+**Question.** Which marked spacelike areas suffice to recover a Lorentzian metric, and what linear gravitational probes do they generate?
+
+**Result.** Twelve spacelike area types recover the marked metric with two independent consistency checks; ten are locally sufficient and minimal among continuous pointwise scalar readings. On a regular intrinsic patch, the differential of the inverse gives area profiles for every compact conserved linearized Einstein test.
+
+**Scope.** A fixed labeled metric branch, spacelike planes, and local scalar markers with independent gradients for the compact-source theorem. Standard gauge-fixed linear theory is used for the physical algebra; no nonlinear area operator or marker construction on all spacetimes.
+
+[Paper notes](../papers/47-spacelike-area-tomography/README.md) · [PDF](../papers/47-spacelike-area-tomography/manuscript.pdf) · [TeX](../papers/47-spacelike-area-tomography/main.tex) · [Verification](../papers/47-spacelike-area-tomography/VERIFICATION.md)

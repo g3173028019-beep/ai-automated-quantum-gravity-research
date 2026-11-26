@@ -154,3 +154,12 @@ In each linked packet, run `latexmk -pdf -halt-on-error manuscript.tex` or run `
 - [40 · Null-volume shared-label rigidity](../papers/40-null-volume-shared-label-rigidity/README.md)
 - [41 · Turaev–Viro fusion, recoupling and Wilson moduli](../papers/41-tensor-prices-tv-fusion-and-wilson/README.md)
 - [42 · Open Turaev–Viro Dehn fillings](../papers/42-tensor-prices-tv-dehn-filling/README.md)
+
+## Building Papers 44–47
+
+Each paper is a self-contained analytical article. Run `latexmk -pdf -halt-on-error -jobname=manuscript main.tex` in the packet directory, or run `pdflatex -halt-on-error -jobname=manuscript main.tex` three times. This is a document rebuild, not a numerical reproduction of the theorem.
+
+- [44 · Gravitational region sewing](../papers/44-gravitational-region-sewing/README.md)
+- [45 · Vacuum stress and its massless pole](../papers/45-vacuum-stress-massless-pole/README.md)
+- [46 · The common Einstein light cone](../papers/46-einstein-scalar-common-cone/README.md)
+- [47 · Spacelike area tomography](../papers/47-spacelike-area-tomography/README.md)

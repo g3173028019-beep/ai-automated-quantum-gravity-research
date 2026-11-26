@@ -1,0 +1,149 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[letterpaper,margin=1.03in]{geometry}
+\usepackage[colorlinks,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Mink}{\eta}
+\newcommand{\pn}{\boldsymbol p}
+\newcommand{\kn}{\boldsymbol k}
+\setlength{\emergencystretch}{2em}
+\title{A massless stress pole from the variance of a spatially scaled vacuum energy}
+\author{}\date{}
+\hypersetup{pdftitle={A massless stress pole from the variance of a spatially scaled vacuum energy},pdfauthor={}}
+\begin{document}
+\maketitle
+\begin{abstract}
+For a positive-spectrum, Poincar\'e-invariant vacuum of a four-dimensional matter theory, we consider its specified symmetric conserved stress, integrated with a smooth spatial window dilated by \(R\) and a fixed normalized smooth time gate. We show that the connected variance has a finite large-\(R\) limit and is zero if and only if the positive stress spectral measure has no massless-shell atom. A connected atom at zero \emph{four}-momentum is excluded and would instead cause volume-squared growth for a window of nonzero mean. The massless shell contributes only a helicity-zero improvement-type tensor, even when the timelike stress spectrum includes spin two. We give rates for a gapless continuum and use a Coulomb-branch dilaton as a matter example. In a separate linear scalar--tensor gravity model, the same pole appears in Jordan-metric Ricci focusing but cancels from the complete linear gravitational charge when its scalar boundary term is retained. The result concerns a specified measurement family, not nonlinear quantum ADM energy.
+\end{abstract}
+
+\section{The measurement and the spectral input}
+Use signature \((-+++)\), units \(c=1\), \(p=(\omega,\pn)\), \(q=|\pn|\), \(s=-p^2\). Let \(T_{\mu\nu}\) be a Lorentz-covariant, Hermitian, symmetric conserved local stress, an operator-valued tempered distribution in a positive Hilbert-space representation, with Poincar\'e-invariant state vector \(\Omega\) and joint translation spectrum in the future cone. Center \(T\) by its expectation. Assume that the centered stress vacuum vectors have zero projection onto the translation-invariant subspace. This holds in a sector with a unique invariant vacuum; it is not implied by subtracting the one-point function in a mixture of distinct vacuum densities. Let \(g,w\) be real with \(g\in C_c^\infty(\mathbb R)\), \(\int g=1\), and \(0\ne w\in C_c^\infty(\mathbb R^3)\); for an energy probe one can take a nonnegative plateau equal to one around its center. Define
+\[
+ Q_R=\int \dd t\,\dd^3 x\,g(t)w(\boldsymbol x/R)T_{00}(t,\boldsymbol x),\qquad
+ \Var_\Omega Q_R:=\|Q_R\Omega\|^2 .
+\]
+Only this vacuum norm is needed, not a strong operator limit or a claim of essential self-adjointness. Our Fourier convention is \(\widehat f(k)=\int e^{ikx}f(x)\dd x\) with inverse measure \(\dd^dk/(2\pi)^d\) in \(d\) variables; the signs of Fourier phases do not affect the variance.
+
+Stress two-point spectral decomposition in the timelike region is standard \cite{CFL,Karateev}; it is the covariance and positivity of the \emph{Wightman} measure that enter, not a subtracted time-ordered function. On \(p^2=-s<0\) let \(D_{\mu\nu}=p_\mu p_\nu+s\Mink_{\mu\nu}\). The tensors
+\[
+ P^{(0)}_{\mu\nu,\rho\sigma}=\tfrac13D_{\mu\nu}D_{\rho\sigma},\qquad
+ P^{(2)}_{\mu\nu,\rho\sigma}=
+ \tfrac12(D_{\mu\rho}D_{\nu\sigma}+D_{\mu\sigma}D_{\nu\rho})-
+ \tfrac13D_{\mu\nu}D_{\rho\sigma}
+\]
+occur with nonnegative measures \(\rho_0,\rho_2\) in the mass-squared variable \(s>0\), with explicit \(s^2\) taken into these tensors rather than the measures' normalization. To obtain this form, disintegrate the covariant positive matrix measure into the timelike mass orbits with the invariant shell measure. In a rest frame, conservation kills the time components, and the symmetric spatial tensor decomposes multiplicity-free into the trace and trace-free irreducible representations of \(\mathrm{SO}(3)\). Covariance, positivity and Schur's lemma give the two nonnegative measures. Since \(D_{00}=q^2\), the spectral component used below is
+\begin{equation}
+ \widehat W_{00,00}(\omega,\pn)
+  =2\pi\theta(\omega)q^4 \int_{[0,\infty)}\nu(\dd s)\,
+       \delta(\omega^2-q^2-s),\qquad
+ \nu|_{(0,\infty)}=\tfrac13(2\rho_2+\rho_0).
+ \label{spec}
+\end{equation}
+The only possible contribution at \(s=0\), other than the excluded atom at the origin, is described next.
+
+\begin{lemma}[Polarization on the punctured future null cone]\label{lemma}
+The positive stress matrix measure on \(p^2=0,\ p\ne0,\ p^0>0\) is a nonnegative constant \(a\) times \(p_\mu p_\nu p_\rho p_\sigma\) times the invariant shell measure \(2\pi\theta(\omega)\delta(\omega^2-q^2)\). It carries only helicity zero.
+\end{lemma}
+\begin{proof}
+On this single homogeneous orbit the covariant measure is determined by an invariant positive matrix at a representative null \(p\), using the invariant orbit measure. Positivity rules out derivatives of shell delta functions. The finite-dimensional range of the matrix carries an invariant positive inner product induced by the matrix, and the little group acts unitarily there. A null translation in the finite-component Lorentz tensor representation is unipotent, so its restriction to that range is the identity. Choose a null tetrad \(p,n,e_1,e_2\), with \(p\cdot n\ne0\) and orthonormal transverse \(e_i\). Conservation in each tensor pair forces the range into \(\operatorname{Sym}^2\operatorname{span}(p,e_1,e_2)\), eliminating \(n\). Null translations act by \(e_i\mapsto e_i+c_i p\); invariance for all \(c_i\) first eliminates the \(e_i e_j\) terms and then the \(p_{(\mu}e_{i,\nu)}\) terms. The remaining line is spanned by \(p_\mu p_\nu\) and is invariant under the little group rotations. Positivity gives \(a\ge0\). This is a vacuum-to-stress statement and not the Weinberg--Witten theorem about one-particle charge matrix elements \cite{WW}.
+\end{proof}
+
+In Eq.~\eqref{spec}, \(\nu(\{0\})=a\). The measure \(\nu\) is locally finite at zero: testing \(W_{00,00}\) by a nonnegative function supported in a compact spatial annulus \(0<q_-<q<q_+\), positive up to a small positive mass, bounds the mass integral there because \(q^4/(2\sqrt{q^2+s})\) is bounded below on a smaller annulus. The same spatial annulus and a sufficiently decaying polynomial test at large frequency give \(\int (1+s)^{-N}\nu(\dd s)<\infty\) for some \(N\), using temperateness of the positive Wightman measure. This avoids any assumption of an ordinary density at threshold.
+
+\section{Exact variance and its limit}
+\begin{theorem}[Fixed normalized time gate]\label{thm}
+Under the preceding hypotheses,
+\begin{equation}
+ \lim_{R\to\infty}\Var_\Omega Q_R
+  =\frac{\nu(\{0\})}{2}\int_{\mathbb R^3}\frac{\dd^3k}{(2\pi)^3}
+                           |\kn|^3|\widehat w(\kn)|^2.
+ \label{limit}
+\end{equation}
+The integral on the right is strictly positive for every nonzero \(w\). Hence the vacuum-column norm of \(Q_R\) tends to zero exactly when the stress Wightman measure has no massless-shell contribution.
+\end{theorem}
+\begin{proof}
+Use \(\widehat w_R(\pn)=R^3\widehat w(R\pn)\) in Eq.~\eqref{spec} and do the positive-frequency integral:
+\begin{align}
+ \Var_\Omega Q_R
+ &=R^{-1}\int\frac{\dd^3k}{(2\pi)^3}\,
+       |\kn|^4|\widehat w(\kn)|^2 K_g(|\kn|/R),\\
+ K_g(q)&=\int_{[0,\infty)}\nu(\dd s)\,
+       \frac{|\widehat g(\sqrt{q^2+s})|^2}{2\sqrt{q^2+s}}.
+ \label{Kg}
+\end{align}
+For \(q>0\), the integrand of \(qK_g(q)\) is dominated by \(C_N(1+s)^{-N}\), since \(q/\sqrt{q^2+s}\le1\) and \(\widehat g\) is Schwartz. For \(s>0\) it tends to zero; at \(s=0\) it tends to \(1/2\). Thus \(qK_g(q)\to a/2\) and is uniformly bounded. Write the variance integral with weight \(|\kn|^3|\widehat w|^2\) and apply dominated convergence again. This weight is integrable, and its integral cannot vanish unless \(\widehat w=0\) almost everywhere.
+\end{proof}
+
+\paragraph{Thresholds and the operational limit.}
+If there is no atom and \(\nu((0,s])=O(s^\alpha)\) as \(s\downarrow0\), with \(\alpha>0\), Eq.~\eqref{Kg} gives
+\[
+ \Var_\Omega Q_R=
+ \begin{cases}
+ O(R^{-2\alpha})&0<\alpha<1/2,\\
+ O(R^{-1}\log R)&\alpha=1/2,\\
+ O(R^{-1})&\alpha>1/2 .
+ \end{cases}
+\]
+Indeed, for \(q\) small split at \(s=q^2\) and at fixed \(s_0>0\). The first part is \(O(q^{2\alpha-1})\); the second is bounded by \(\int_{(q^2,s_0]} s^{-1/2}\nu(\dd s)\), evaluated by integration by parts against the cumulative measure; the tail is uniformly finite. The Schwartz spatial tail permits these bounds to be integrated, including the logarithm at \(\kn=0\). There is no universal power rate without a threshold condition. For example an improvement of a generalized free scalar with positive mass measure \(c\,s^{\alpha-1}e^{-s/s_*}\dd s\), \(0<\alpha<1/2\), gives \(K_g(q)\sim C_\alpha q^{2\alpha-1}\) by setting \(s=q^2y\). This is a local conserved source, not on its own a translation-generating stress of a generalized free theory.
+
+If \(a>0\), the null part of \(Q_R\Omega\) remains finite in norm but is concentrated at \(q=O(R^{-1})\), and its unnormalized first energy moment is \(O(R^{-1})\). On every fixed region \(p^0\ge\epsilon>0\) its norm tends to zero, by the Schwartz tail in \(\widehat w\). Since the zero-four-momentum component is absent, this gives weak convergence of the vacuum vectors to zero. It does not give a nonzero translation energy to \(\Omega\). For an atom of weight \(a\) at \(m^2>0\), the exact contribution is
+\[
+ \frac a2\int\frac{\dd^3k}{(2\pi)^3}
+ \frac{|\kn|^4|\widehat w(\kn)|^2
+ \big|\widehat g(\sqrt{|\kn|^2/R^2+m^2})\big|^2}
+ {\sqrt{|\kn|^2+(mR)^2}} .
+\]
+It can approximate the massless answer before the scale \(m^{-1}\), while at fixed \(m>0\) it is \(O(R^{-1})\) and can decay faster for a time gate with a notch at \(m\). An \(R\)-dependent normalized dilation of the time gate of duration \(\tau_R\) contributes the additional null multiplier \(|\widehat g(\tau_R|\kn|/R)|^2\). A finite limit of \(\tau_R/R\) preserves a strictly positive signal, while \(\tau_R/R\to\infty\) removes it. Fixed-width spatial boundaries likewise define a different family; subvolume area laws and time-smearing effects known for other charges should not be identified with Eq.~\eqref{limit} \cite{BOY,MS}. A centered random constant stress component gives the distinct contribution \(R^6|\int w|^2\) times its variance, for \(\int w\ne0\).
+
+\section{Dilaton matter and the two gravitational readouts}
+
+\paragraph{Interacting matter example.}
+Consider \(\mathcal N=4\) \(SU(2)\) super--Yang--Mills at nonzero coupling on its Coulomb branch, with the conformal stress fixed by the coupling to a background metric. At a nonzero adjoint scalar expectation value the radial Goldstone fluctuation of spontaneously broken scale invariance supplies a massless dilaton. The improvement of the conformal stress contains a term linear in this radial fluctuation at weak coupling, as in the microscopic example of Ref.~\cite[Sec.~2]{ST}. Its covariant on-shell matrix element is \(F_\sigma p_\mu p_\nu\) in the normalized dilaton channel, with \(F_\sigma\ne0\); the broken conformal Ward identity gives the associated pole. Independent holographic Coulomb-branch calculations display this mechanism in another regime \cite{BFS}. With the null scalar normalization used in Eq.~\eqref{spec}, a canonically normalized pole contributes \(|F_\sigma|^2\) to \(a\). The atom is itself traceless; absence of a trace pole does not exclude it. In the scale-invariant vacuum at the origin no dimensionful atom residue is allowed by dilations, and the dimension-four conformal stress instead has the scale-invariant timelike spin-two spectrum, \(\nu(\dd s)\propto\dd s\). Equations \eqref{Kg}--\eqref{limit} distinguish the two vacua at fixed gate without counting mere massless multi-particle thresholds as atoms.
+
+\paragraph{Linear gravity at fixed action.}
+Independently of the interacting example, consider a \emph{specified} linear source improvement
+\(I_{\mu\nu}=(\Mink_{\mu\nu}\Box-\partial_\mu\partial_\nu)O\), and suppose \(O\) has a massless scalar pole. If \(\delta G_{\mu\nu}=\kappa I_{\mu\nu}\), with \(\kappa=8\pi G\), one particular solution is \(h_{\mu\nu}=\kappa O\Mink_{\mu\nu}\), because
+\[
+ \delta G_{\mu\nu}[2\varphi\Mink]=
+    2(\Mink_{\mu\nu}\Box-\partial_\mu\partial_\nu)\varphi .
+\]
+An independently specified homogeneous graviton and a gauge perturbation may be added. The scalar contribution to the linear Weyl tensor is zero, while
+\(R^{(1)}_{\ell\ell}=-\kappa(\ell\cdot\partial)^2O\) for a null vector \(\ell\). On the massless shell the scalar curvature also vanishes. A noncollinear null receiver therefore reads Ricci focusing, or a timelike receiver can use transverse breathing: if \(\varphi=\kappa O/2\) depends on \(t-z\), then \(R^{(1)}_{0i0j}=\partial_i\partial_j\varphi-\delta_{ij}\partial_t^2\varphi\). It has equal transverse components and zero longitudinal component. A free helicity-two plane wave instead has traceless transverse tidal curvature. This refers to metric-coupled detectors with physical clock and length calibration, not just conformally invariant unparameterized light trajectories. No scalar noise calculation supplies a helicity-two graviton propagator.
+
+Now assume the same improvement follows from the full scalar--tensor action,
+\[
+ S=\int\sqrt{-g}\,\dd^4x
+       \left[\tfrac12 F(\sigma)R
+             -\tfrac12 Z g^{\mu\nu}\partial_\mu\sigma\partial_\nu\sigma
+             +\ldots\right],
+ \qquad F_0=\kappa^{-1}>0,\quad \delta F=-O,\quad Z>0 ,
+\]
+around Minkowski with constant background scalar, zero background stress and a massless scalar fluctuation at quadratic order. The variational field equation has \(\nabla_\mu\nabla_\nu F-g_{\mu\nu}\Box F\) on the stress side and hence the above \(I_{\mu\nu}\) at first order. The Einstein metric \(\widetilde g=(F/F_0)g\), on the branch \(F>0\), has linear perturbation \(h-\kappa O\Mink\). It cancels the conformal particular solution. For classical asymptotically flat configurations obeying the falloff required for the surface terms, inserting the conformal change in the linear ADM integrand \((\partial_j h_{ij}-\partial_i h_{jj})/(2\kappa)\) gives
+\[
+ E_{\rm ADM}^{\rm met}[\widetilde h]-E_{\rm ADM}^{\rm met}[h]
+ =-\frac{1}{\kappa F_0}\int_{S_\infty}\partial_n\delta F\,\dd A
+ =+\int_{S_\infty}\partial_n O\,\dd A .
+\]
+This is the scalar surface term required on the Jordan side of the same Hamiltonian charge \cite{DT}, not an assertion that the bare metric integrals in the two frames agree. For the common smooth finite window of the theorem, the correction gives \(+\int g(\Delta w_R)O\) and the bare source contributes \(\int gw_R(-\Delta O)\), so their linear cancellation is an exact distributional identity before letting \(R\to\infty\).
+
+For instance, when \(O=f_\sigma\sigma\), diagonalization of this quadratic action gives the scalar kinetic coefficient \(Z_{\rm eff}=Z+3f_\sigma^2/(2F_0)>0\). With unit-residue normalization for a canonical scalar, the bare linear Jordan source has \(a_{\rm J}=f_\sigma^2/Z_{\rm eff}\); it leaves no such term in the complete linear charge. The scalar still carries its usual positive \emph{quadratic} energy. Physical Jordan clocks and focusing couplings have to be transported in an Einstein-frame calculation. This comparison neither assumes that a Coulomb branch is unchanged when strongly coupled to gravity nor identifies the complete quantum ADM variance away from the linear model.
+
+\section{Scope}
+The input is a fixed physical stress in a fixed matter sector. The spectral decomposition and the existence of dilatons are established ingredients. The result is the atom-only criterion, with its explicit coefficient and detector limit, and its application to distinguish a resolved matter or bare-metric energy from a complete linear charge. It is not a statement about arbitrary improvements at fixed detector coupling, arbitrary cutoffs, or all states. No nonlinear gravitational dressing is assumed.
+
+\paragraph{Research status.} AI-led research manuscript, internally checked; no external expert review is represented.
+
+\begin{thebibliography}{99}\small
+\bibitem{CFL} A. Cappelli, D. Friedan and J. I. Latorre, \emph{C-theorem and spectral representation}, Nucl. Phys. B \textbf{352}, 616--670 (1991), \href{https://doi.org/10.1016/0550-3213(91)90102-4}{doi:10.1016/0550-3213(91)90102-4}.
+\bibitem{Karateev} D. Karateev, \emph{Two-point functions and bootstrap applications in quantum field theories}, JHEP \textbf{02}, 186 (2022), \href{https://arxiv.org/abs/2012.08538}{arXiv:2012.08538}.
+\bibitem{WW} S. Weinberg and E. Witten, \emph{Limits on massless particles}, Phys. Lett. B \textbf{96}, 59--62 (1980), \href{https://doi.org/10.1016/0370-2693(80)90212-9}{doi:10.1016/0370-2693(80)90212-9}.
+\bibitem{BOY} R. Brustein, D. H. Oaknin and A. Yarom, \emph{Implications of area scaling of quantum fluctuations}, Phys. Rev. D \textbf{70}, 044043 (2004), \href{https://doi.org/10.1103/PhysRevD.70.044043}{doi:10.1103/PhysRevD.70.044043}.
+\bibitem{MS} G. Morchio and F. Strocchi, \emph{Charge density and electric charge in quantum electrodynamics}, J. Math. Phys. \textbf{44}, 5569--5587 (2003), \href{https://arxiv.org/abs/hep-th/0301111}{arXiv:hep-th/0301111}.
+\bibitem{ST} A. Schwimmer and S. Theisen, \emph{Spontaneous breaking of conformal invariance and trace anomaly matching}, Nucl. Phys. B \textbf{847}, 590--611 (2011), \href{https://arxiv.org/abs/1011.0696}{arXiv:1011.0696}.
+\bibitem{BFS} M. Bianchi, D. Z. Freedman and K. Skenderis, \emph{How to go with an RG flow}, JHEP \textbf{08}, 041 (2001), \href{https://arxiv.org/abs/hep-th/0105276}{arXiv:hep-th/0105276}.
+\bibitem{DT} S. Deser and B. Tekin, \emph{Conformal properties of charges in scalar--tensor gravities}, Class. Quantum Grav. \textbf{23}, 7479--7482 (2006), \href{https://arxiv.org/abs/gr-qc/0609111}{arXiv:gr-qc/0609111}.
+\end{thebibliography}
+\end{document}

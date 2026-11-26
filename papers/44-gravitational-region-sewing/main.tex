@@ -1,0 +1,151 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\geometry{margin=1in}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\rk}{\operatorname{rank}}
+\newcommand{\TV}{\mathrm{TV}}
+\newcommand{\e}{\mathrm e}
+\title{Gravitational Region Sewing: Minimal Corner Registers and Continuous Radiative Loads}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+For linear canonical dressings of two finite observable families, the number of independent boundary canonical pairs needed to cancel a cross bracket while preserving both internal brackets equals the cross-pairing rank. Linked electric and magnetic fluxes of the linearized graviton give \(10\operatorname{rank} L\), where \(L\) is the linking matrix. This finite criterion does not solve radiative sewing. A gauge-invariant graviton polarization at a planar cut has a transparent load with an absolutely continuous force commutator. Every finite positive closed linear replacement has nonzero uniform dissipative error and nonzero total-variation spectral error on each propagating band. A positive tangentially local continuum realizes the exact limit with a controlled cutoff. Each Regge--Wheeler and Zerilli channel at a Schwarzschild worldtube obeys a parallel lower bound, obtained from Jost flux conservation.
+\end{abstract}
+
+\section{Two requirements at a cut}
+Regional sewing can require two different kinds of information. One is a finite bilinear obstruction: two specified families cannot be made to commute without altering them or supplying extra variables. Another is a frequency-dependent physical response: removing an exterior region leaves a load with which the retained region exchanges radiative flux. The second problem includes the quantum commutator of the exterior force, not just an outgoing classical solution. We quantify both in linear gravity and keep their domains separate.
+
+Extended phase spaces with gravitational boundary variables already play a role in gauge-invariant subregions \cite{DonnellyFreidel,FreidelGeillerPranzetti}. We impose a narrower algebraic condition, fixing both original same-side brackets before allowing independent linear dressings, and use the graviton flux algebra of Benedetti, Casini and Mag\'an \cite{BCM}. The radiative calculation instead uses an actual propagating polarization. The flat load is a Dirichlet-to-Neumann operator; exact Schwarzschild radiation kernels likewise are known \cite{Lau}. Our target is the finite conservative realization cost and bandwise error, not discovery of either exterior kernel.
+
+\section{The minimum register for a prescribed cross bracket}
+Let \(V_L,V_R\) be finite real label spaces. Suppose real linear observable families \(A(v),B(w)\) have central commutator \([A(v),B(w)]=i\hbar C(v,w)\mathbf1\) with \(C\) bilinear. The same-side brackets are prescribed and need not vanish. An \(n\)-pair register is an independent \(2n\)-dimensional symplectic space \((R,\omega_R)\), commuting with the original observables, with linear shifts \(a\colon V_L\to R\), \(b\colon V_R\to R\). A successful dressing changes neither same-side bracket and cancels the cross bracket.
+
+\begin{theorem}[Exact canonical-pair cost]\label{thm:rank}
+The smallest \(n\) is \(\rk C\). The optimum is attained by a real Weyl register and preserves all same-side Weyl phases.
+\end{theorem}
+\begin{proof}
+Independence forces \(\omega_R(a(v),a(v'))=\omega_R(b(w),b(w'))=0\); both images are isotropic. Since \(C(v,w)=-\omega_R(a(v),b(w))\), one has \(\rk C\leq\min(\dim\operatorname{im}a,\dim\operatorname{im}b)\leq n\). Conversely, factor \(C=XY^{\mathsf T}\) with \(r=\rk C\) columns and add \(v^{\mathsf T}Xq\) on the left and \(-w^{\mathsf T}Yp\) on the right, where \([q_i,p_j]=i\hbar\delta_{ij}\mathbf1\). The coordinate polarizations are isotropic and the mixed pairing is correct. The Weyl statement follows from the central Weyl relations without using products of unbounded operators.
+\end{proof}
+
+This is not a lower bound on unrestricted encodings, Hilbert-space dimension, or retaining a subset. Keeping only the left kernel of \(C\) removes the cross pairing without a register. The optimum can use an ordinary Schr\"odinger representation with infinite-dimensional Hilbert space; finite here counts canonical pairs.
+
+\subsection{Physical example: linked graviton fluxes}
+On a flat spatial slice the vacuum electric and magnetic linear Weyl tensors \(E_{ij},B_{ij}\) are symmetric, traceless and transverse. Contracting with a Euclidean conformal Killing vector \(Y\) gives conserved currents \(J^i_E=E^{ij}Y_j\) and \(J^i_B=B^{ij}Y_j\). Choose a closed smooth two-form \(\tau\) of unit meridional integral compactly supported in a tube around an oriented ring. This Thom representative has a compact primitive \(a\) on the full slice because \(H^2_c(\RR^3)=0\). The flux smearing is \(\int a_iJ^i\dd^3x\). Changing the representative within its Thom class changes the primitive by a tube-supported one-form plus a global exact form. The exact term vanishes on the conserved current. The primitive need not be supported in the tube, so this is a dual-localized observable, not an additive curvature smearing confined to the tube \cite[Sec.~3]{BCM}.
+
+In the conventions of \cite[Eq.~(3.50)]{BCM}, suppressing an overall physical normalization, the unit-link magnetic--electric pairing is
+\[
+ M((a,s,\kappa,b),(\widetilde a,\widetilde s,\widetilde\kappa,\widetilde b))
+ =a\cdot\widetilde b+b\cdot\widetilde a
+ +\tfrac14\operatorname{tr}(s\widetilde s)
+ +\tfrac12\kappa\widetilde\kappa ,
+\]
+with \(a,b\in\RR^3\), \(s\) an antisymmetric \(3\times3\) matrix, and \(\kappa\in\RR\). Translations and special conformal transformations pair in six directions; rotations and dilation supply four more. On the second tube the first primitive is closed, and by Stokes its longitudinal period is the signed intersection with any spanning surface. In the local differential commutator calculation of \cite[Sec.~3.4]{BCM}, that period appears as the jump across a transverse disk. Thus changing the representative within a tube only adds an additive smearing commuting with the other dual-localized observable; a jump of integer winding multiplies the unit-link commutator by that signed integer. For marked cores with linking matrix \(L\), the cross form is \(L\otimes M\).
+
+\begin{corollary}\label{cor:gravity-rank}
+Retaining all left magnetic and right electric charges requires exactly \(10\rk L\) pairs. Retaining both families on both sides requires \(20\rk L\).
+\end{corollary}
+\begin{proof}
+The first assertion uses Theorem~\ref{thm:rank} and multiplicativity of rank. With both families the cross form is block off-diagonal with a magnetic--electric block and the orientation-reversed electric--magnetic block, each of rank \(10\rk L\). Same-type cross blocks vanish.
+\end{proof}
+
+For a geometric realization, put two Hopf links in disjoint balls. Each can be made from \((\cos u,\sin u,0)\) and \((1+\cos v,0,\sin v)\) with compatible orientations. Join the two left tubes and the two right tubes separately by thin disjoint connectors avoiding the cores. This yields disjoint genus-two handlebodies with \(L=I_2\), rather than imposing a tensor-factorization assumption. The one-family minimum is twenty and the two-family minimum forty. Constructing the second pair unlinked instead, with the same connector scheme, gives \(\rk L=1\). The real Weyl parameters vary continuously, so a nonzero cross form cannot be hidden modulo \(2\pi\). These are ranks of dual-localized flux brackets, not counts of propagating modes or a local net containing both undressed families.
+
+\section{A gravitational polarization at a planar cut}
+Use Minkowski coordinates \((t,x,y,z)\). Take the perturbation odd under \(y\mapsto-y\) and independent of \(y\), normalized per unit length or taken in a periodic \(y\) zero mode. Its only components are \(h_{ay}=A_a\), \(a=t,x,z\), with \(A\mapsto A+\dd\xi_y\) under the odd linear diffeomorphism. The quadratic Einstein action in this block is the reduced Maxwell action \(-C\int F_{ab}F^{ab}\dd^3x/4\), \(C>0\). This follows by retaining the metric fiber \(\dd y+A\): its curvature contributes \(-F_{ab}F^{ab}/4\) to the base Einstein term. Equivalently it follows by substitution in the quadratic Fierz--Pauli action. The difference between that fiber metric and the linear ansatz in the base block is second order and does not change the quadratic bulk action on the vacuum background.
+
+The source-free Maxwell equation gives \(F=\pm *\dd\psi\). The dual action \(-C\int\dd\psi\wedge *\dd\psi/2\) follows by eliminating independent \(F\) from \(-C\int F\wedge *F/2+C\int F\wedge\dd\psi\); the choice of canonical boundary polarization includes the corresponding Legendre term. The vacuum Weyl component \(C_{tzxy}=-\partial_x F_{tz}/2=\pm\partial_x^2\psi/2\) calibrates the scalar interface variable at each nonzero tangential Fourier momentum \(k\).
+
+Take exterior \(z>0\), with boundary amplitude \(\psi_0\) and Fourier convention \(\exp(-i\omega t+ikx)\). The outgoing extension at \(\operatorname{Im}\zeta>0\) is \(\psi_0\e^{-s z}\), with \(s=\sqrt{k^2-\zeta^2}\), \(\operatorname{Re}s>0\). For the exterior load \(-C\partial_z\psi|_0\) the transfer and positive-frequency commutator density are
+\begin{align}
+ K_{\rm out}(\zeta;k)&=C\sqrt{k^2-\zeta^2},\\
+ \rho_k(\omega)&=-2\operatorname{Im}K_{\rm out}(\omega+i0;k)
+ =2C\sqrt{\omega^2-k^2},\qquad\omega>|k|.\label{eq:flat-rho}
+\end{align}
+Here \(\hbar=1\) and the Fourier transform is \(\int\e^{i\omega t}(\cdot)\dd t\). The symmetrized vacuum density on positive frequencies is half the commutator density. Directly, the canonical Dirichlet sine coordinate \(X_q\), \(q>0\), has frequency \(\omega_q=\sqrt{k^2+q^2}\) and force coupling \(g(q)=\sqrt{2C/\pi}\,q\). The coefficient in the commutator is
+\[
+ \int_0^\infty\frac{\pi g(q)^2}{\omega_q}\delta(\omega-\omega_q)\dd q
+ =2C\sqrt{\omega^2-k^2}.
+\]
+This identifies the quantum port, rather than just the classical outgoing solution.
+
+\subsection{An unavoidable band error}
+A finite closed linear reservoir has finitely many canonical pairs at the chosen \(k\), a time-independent strictly positive quadratic Hamiltonian on its dynamical space, and a linear force port. It can include conservative local contact terms. This includes translation-preserving finite-order linear boundary fields with finitely many species after resolving constraints and fixing \(k\); one can use the real \(\pm k\) pair. A closed finite Hilbert-dimensional port with a stationary vacuum has an atomic force measure by the same spectral reasoning. Neither statement says that arbitrary finite-canonical-dimensional nonlinear quantum systems have pure-point spectrum.
+
+\begin{theorem}[Radiative realization obstruction]\label{thm:bounds}
+No such finite closed linear reservoir reproduces the planar graviton load. For a compact nondegenerate band \(I\subset(|k|,\infty)\), its self-response \(K_N\) and force measure \(\mu_N\) obey
+\begin{align}
+ \|\operatorname{Im}(K_N-K_{\rm out})\|_{L^\infty(I);{\rm ess}}
+ &\ge C\sup_{\omega\in I}\sqrt{\omega^2-k^2},\\
+ \|\mu_N-\rho_k\dd\omega\|_{\TV(I)}
+ &\ge \int_I2C\sqrt{\omega^2-k^2}\dd\omega .
+\end{align}
+The first norm uses ordinary boundary values away from singular frequencies and the second uses total variation of signed measures.
+\end{theorem}
+\begin{proof}
+Conjugating the finite Hamiltonian matrix by the positive energy square root gives a real antisymmetric matrix. Thus the vacuum force commutator for a linear port is supported at finitely many real normal frequencies. Its retarded self-response is real off those poles: the dispersive part is a Cauchy transform of real spectral weights and conservative self-contact terms have real symbols there. This gives the first bound from \eqref{eq:flat-rho}. Atomic and absolutely continuous measures are mutually singular, giving the second bound with \(\|\nu\|_{\TV(I)}=|\nu|(I)\).
+\end{proof}
+
+Increasing the number of finite lossless modes does not improve these particular norms. This is consistent with weak convergence after frequency smearing. A phenomenologically damped rational transfer is not a finite closed conservative reservoir. The theorem permits finite parameterizations coupled to external continua; that continuum is exactly the separate resource.
+
+\subsection{A positive, tangentially local continuum}
+For \(0<q<\Lambda\), couple \(\psi_0(t,x)\) to real canonical fields \(X_q,\Pi_q\) with energy
+\[
+ \frac12\int\dd x\int_0^\Lambda\dd q\,
+ \left[\Pi_q^2+(\partial_x X_q)^2+
+ q^2\left(X_q-\frac{\sqrt{2C/\pi}}q\psi_0\right)^2\right].
+\]
+Eliminating \(X_q\) with the retarded prescription gives
+\[
+ K_\Lambda(\zeta;k)=\frac{2C}{\pi}\int_0^\Lambda
+ \frac{s^2}{q^2+s^2}\dd q .
+\]
+The integral to infinity equals \(\pi s/2\), by continuation from \(s>0\) to \(\operatorname{Re}s>0\). The completed square gives the cutoff local subtraction rather than imposing a tangentially nonlocal counterterm. On a propagating band put \(p_*=\max_I\sqrt{\omega^2-k^2}\). If \(\Lambda>p_*\), the on-shell pole is inside the interval for every \(\omega\in I\), and the band force density is already exact. The remaining real tail satisfies
+\[
+ \sup_{\omega\in I}|K_\Lambda-K_{\rm out}|
+ \le\frac{2C}{\pi}\frac{p_*^2}{\Lambda(1-p_*^2/\Lambda^2)}.
+\]
+This establishes the retarded continuum limit in the stated physical polarization, not a vacuum construction on arbitrary nonlinear cuts.
+
+\section{The exterior load at a Schwarzschild worldtube}
+Fix \(r=R_0>3M\), a parity master with \(\ell\ge2\), and its canonical kinetic coefficient \(1/2\). Let \(a=r_*(R_0)\) and \(V\) be the usual real Regge--Wheeler or Zerilli potential \cite{Lau}. On \([a,\infty)\) these are smooth integrable potentials tending to zero as \(O(r_*^{-2})\). Let \(f_\omega(x)\sim\e^{i\omega x}\), \(x=r_*\), be the outgoing Jost solution at real \(\omega>0\). The normalized outgoing continuation is \(f_\omega(x)/f_\omega(a)\). In the sign convention of the derivative facing infinity the map is \(m_a=f'_\omega(a)/f_\omega(a)\), and the positive-frequency force density is \(2\operatorname{Im}m_a\). Indeed the real Dirichlet standing solution \(\operatorname{Im}(\overline f_\omega(a)f_\omega(x)/|f_\omega(a)|)\) has unit sine amplitude at infinity and wall derivative \(\omega/|f_\omega(a)|\). With the half-line sine normalization \(\sqrt{2/\pi}\), the canonical commutator therefore has density \(2\omega/|f_\omega(a)|^2\). Equivalently this is the boundary spectral measure of the Weyl function. Reversing the load orientation does not affect the positive dissipative magnitude.
+
+\begin{proposition}[Exterior-worldtube lower bound]\label{prop:schwarzschild}
+Let \(I=[\omega_1,\omega_2]\subset(0,\infty)\) be nondegenerate and \(M_a=\int_a^\infty |V(x)|\dd x\). Every finite positive closed linear approximation of this exterior channel satisfies
+\begin{align*}
+ \|\mu_N-\rho_a\dd\omega\|_{\TV(I)}&\ge
+ 2|I|\omega_1\exp(-2M_a/\omega_1),\\
+ \|\operatorname{Im}(K_N-K_{\rm out})\|_{L^\infty(I);{\rm ess}}
+ &\ge \omega_1\exp(-2M_a/\omega_1).
+\end{align*}
+\end{proposition}
+\begin{proof}
+The Wronskian \(\overline f f'-\overline{f'}f=2i\omega\) is constant. It rules out real zeros of \(f_\omega(a)\) and gives \(\operatorname{Im}m_a=\omega/|f_\omega(a)|^2\). In the outgoing Volterra equation the free kernel has modulus at most \(1/\omega\). Ordered iteration yields \(|f_\omega(a)|\le\sum_{n\ge0}(M_a/\omega)^n/n!=\exp(M_a/\omega)\). Consequently \(\rho_a\ge2\omega_1\exp(-2M_a/\omega_1)\) everywhere on \(I\). The atomic and off-pole arguments of Theorem~\ref{thm:bounds} give the claims without taking a high-frequency limit.
+\end{proof}
+The result concerns the exterior-to-infinity incidence channel, not independent horizon incidence. Either parity qualifies with its own potential and canonical master. Local conservative terms do not remove the continuous force commutator. The same estimate is uniform for wall families with a common bound on \(M_a\).
+
+\section{Conclusion}
+The rank of a finite central cross bracket exactly quantifies independent canonical pairs for one bracket-preserving sewing prescription. Actual linear graviton fluxes exhibit a linking-dependent cost. In contrast, even one propagating graviton polarization cannot be represented by a finite closed linear apparatus without losing its bandwise dissipative response and its continuous quantum force spectrum. The two conclusions concern different data and are not alternative counts of one gravitational boundary Hilbert space.
+
+\begin{thebibliography}{9}
+\bibitem{DonnellyFreidel}
+W.~Donnelly and L.~Freidel, \emph{Local subsystems in gauge theory and gravity},
+JHEP \textbf{09} (2016) 102, \href{https://arxiv.org/abs/1601.04744}{arXiv:1601.04744}.
+\bibitem{FreidelGeillerPranzetti}
+L.~Freidel, M.~Geiller and D.~Pranzetti, \emph{Edge modes of gravity. Part I. Corner potentials and charges},
+JHEP \textbf{11} (2020) 026, \href{https://arxiv.org/abs/2006.12527}{arXiv:2006.12527}.
+\bibitem{BCM}
+V.~Benedetti, H.~Casini and J.~M.~Mag\'an, \emph{Generalized symmetries of the graviton},
+JHEP \textbf{05} (2022) 045, \href{https://arxiv.org/abs/2111.12089}{arXiv:2111.12089}.
+\bibitem{Lau}
+S.~R.~Lau, \emph{Analytic structure of radiation boundary kernels for blackhole perturbations},
+J. Math. Phys. \textbf{46} (2005) 102503, \href{https://arxiv.org/abs/gr-qc/0507140}{arXiv:gr-qc/0507140}.
+\end{thebibliography}
+\end{document}
