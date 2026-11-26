@@ -1,0 +1,103 @@
+\section{The maximizing face for arbitrary paired-cap trees}\label{sec:trees}
+
+Let \(G\) be any fixed connected tree with \(N\ge2\) backbone vertices, all with zero framing and the same two caps. The phase is just \((-1)^{r(N-1)}\). Write \(\nu\) for the maximum matching number and \(\alpha=N-\nu\). On
+\[
+ \mathcal I_G=\{t\in[0,1]^{V(G)}: t_v+t_w\le 1\ \text{on each edge }vw\}
+\]
+the maximum of \(\sum_v t_v\) is \(\alpha\). We give the coefficient and a proof of positivity as well as the scale. All coordinates used here are folded charge exponents; they are not inserted colors.
+
+Choose a minimum vertex cover \(A\), let \(B=V(G)\setminus A\), and match each \(j\in A\) to \(b_j\in B\) by a maximum matching. To recall existence without any choice of ordinary graph weights, start with any maximum matching in a bipartition \(L\sqcup R\). Follow alternating paths from unmatched vertices of \(L\) and call the total set reached \(W\). Then \((L\setminus W)\cup(R\cap W)\) is a vertex cover: an uncovered edge would leave a reached \(L\)-vertex for an unreached \(R\)-vertex, which is impossible by the alternating rule, also for the matched edge. No unmatched \(R\)-vertex is reached. Each matched edge has exactly one endpoint in the cover and no unmatched vertex is in it. Thus the cover has size \(\nu\), which is minimal. For any such cover, each matching edge touches exactly one cover vertex by counting, and all its vertices are matched.
+
+Let \(B_*=B\setminus\{b_j:j\in A\}\). On \(A\) direct an arrow \(i\to j\) whenever \(i\ne j\) and \(i\) is adjacent to \(b_j\). The unoriented arrow graph is a forest: its edges are the indicated edges after contracting the matching in a tree. Let \(F\subset A\) consist of neighbors of \(B_*\) and their ancestors in this arrow graph, and set \(D=A\setminus F\). Define
+\[
+ \mathcal P_G=\{t\in[0,1]^D:t_i\le t_j\text{ on arrows }i\to j
+       \text{ within }D;\ t_i+t_j\le1\text{ on }A\text{--}A
+                   \text{ edges within }D\}.
+\]
+Write \(d=|D|\) and \(\operatorname{Vol}(\mathcal P_G)=1\) if \(D\) is empty. Summing the separate matching bounds and the unmatched-coordinate bounds gives \(\sum t_v\le\alpha\). Equality is possible, for example taking \(t_v=1\) on \(B\) and zero on \(A\). At equality \(t_{b_j}=1-t_j\) and \(t_b=1\) for \(b\in B_*\), and the residual constraints on \(A\) are exactly the arrows and \(A\)--\(A\) inequalities. Neighbors of \(B_*\) and their ancestors must be zero. The constraints remaining on \(D\) are precisely \(\mathcal P_G\). Its interior is nonempty: take strictly ordered values along a topological ordering in \((0,1/3)\). Thus \(d\) is the dimension of the maximizing face. The volume used below is coordinate Lebesgue volume on these \(D\) variables, not ambient Euclidean face measure.
+
+For \(b\in B\) and positive odd charges on its neighboring sites, put
+\[
+ Q_b(\boldsymbol n)=
+ \frac{\#\{(k_i)_{i\sim b}:
+           k_i\in\ZZ,\ |k_i|\le(n_i-1)/2,\ \sum_{i\sim b} k_i=0\}}
+      {\prod_{i\sim b} n_i}.
+\]
+It is the probability that a sum of independent centered integer spins is zero. In particular \(Q_b\le1/\max_{i\sim b}n_i\) by conditioning on all but the largest spin, and \(n_jQ_b=1\) if \(n_j-1\) is at least the sum of \(n_i-1\) at all other neighbors. For \(b=b_j\) with \(j\in F\), and for \(b\in B_*\), all neighbors lie in \(F\). Put
+\[
+ K_G=\sum_{\substack{n_i\ge1\ {\rm odd}\\ i\in F}}
+        \left(\prod_{i\in F} n_i^{-1}\right)
+        \left(\prod_{j\in F} n_j Q_{b_j}(\boldsymbol n)\right)
+        \left(\prod_{b\in B_*} Q_b(\boldsymbol n)\right).
+\]
+An empty sum of coordinates is evaluated once. The series is absolutely convergent and positive, as proved below.
+
+\begin{theorem}[Paired-cap tree face law]\label{thm:trees}
+In sphere normalization, on both level parities,
+\[
+ \frac{\tau_r(M_G)}
+ {(-1)^{r(N-1)}r^{N/2+\alpha}(\log r)^d}
+  \ \longrightarrow\
+  2^{3N/2-2\alpha-d}\pi^{-N}\operatorname{Vol}(\mathcal P_G)K_G>0.
+\]
+In particular the degree of the leading logarithm is the dimension of the maximizing face of \(\mathcal I_G\). The right-hand side is independent of the auxiliary cover and matching.
+\end{theorem}
+\begin{proof}
+Use the exact cap and Kirby formulas in Section~\ref{sec:conventions}. Put
+\(F_k(x)=\cos^2(\pi x/2)(\pi x/\sin\pi x)^k\).
+With \(q_v=\deg_G v\), factoring the linear arguments from all edge sines shows that
+\[
+ Z_r(M_G)=(-1)^{r(N-1)}2^{(3N+1)/2}\pi^{1-N}
+             r^{N/2-3/2} I_r,\qquad
+ I_r=\sum_{\boldsymbol n\ {\rm odd}<r}
+           \prod_v F_{q_v}(n_v/r)
+           \prod_{vw}\sinc(\pi n_v n_w/r).
+\]
+The ordinary signature vanishes because the opposite cap Schur terms cancel and the unframed bipartite adjacency has symmetric spectrum. All \(n_v\) are positive. There are no edges within \(B\). Fix \(n_A\) and set
+\[
+ U_{b,r}(\boldsymbol n_A)=\frac4r
+         \sum_{l\ {\rm odd}<r} F_{q_b}(l/r)
+                    \prod_{i\sim b}\sinc(\pi n_i l/r),\qquad
+ H_{j,r}=n_j U_{b_j,r}.
+\]
+Then \(I_r\) is \((r/4)^\alpha\) times the \(A\)-sum with weight \(\prod_{j\in A}F_{q_j}(n_j/r)/n_j\), one factor \(H_{j,r}\) per matched site, one \(U_{b,r}\) per unmatched site and the original sincs for edges within \(A\).
+
+\emph{Exact sewing where no alias occurs.}
+For \(1+\sum_{i\sim b}(n_i-1)<r\), one has
+\begin{equation}\label{eq:UQ}
+                       U_{b,r}(\boldsymbol n_A)=Q_b(\boldsymbol n_A).
+\end{equation}
+Indeed the summand becomes \(\cos^2(\pi l/(2r))\) times the product of
+\(\sin(\pi n_i l/r)/(n_i\sin(\pi l/r))\).
+For odd \(n_i\) the ratios are averages of \(\exp(2\pi\ii k_i l/r)\) over those same centered integer spin labels. Extend the sum to all odd \(l<2r\) and halve by reflection; the possible midpoint vanishes by the cosine-square weight after filling removable ratios. In units \(\pi l/r\) the odd grid kills all frequencies not divisible by \(r\), and the bound in \eqref{eq:UQ} leaves only the zero-total-weight sector from the constant half of the cosine square. Its mass is \(r/4\) before normalization.
+
+\emph{Uniform transfer bounds.}
+In separate choices of low or high sectors for all charges set \(x_v=\min(n_v,r-n_v)\). On each sector the reflected edge sine has a constant sign fixed by the parities, and moving its denominator factors to the incident vertices changes the local profile to \(F_{q_v}(x_v/r)\) for a low coordinate, or to
+\(\sin^2(\pi x_v/(2r))(\pi x_v/(r\sin(\pi x_v/r)))^{q_v}\)
+for a high coordinate. These profiles are smooth on \([0,1/2]\), with the high profile \(O((x_v/r)^2)\). Thus all estimates can be made for bounded smooth profiles on the folded grid; reflected branches can be summed after taking the bounds. In a \(B\)-factor, multiply by one neighbor charge \(N_0=x_j\). Its sum becomes a bounded constant times
+\[
+ \sum_l \frac{F(l/r)}l\,\sin(\pi N_0l/r)
+                      \prod_{i\ne j,\,i\sim b}\sinc(\pi x_i l/r).
+\]
+The product of the remaining sincs is an average of cosines with real frequencies, so the displayed sum is bounded by the uniform bound on partial harmonic sine sums on either parity and summation by parts in \(F\). For that bound, split at the inverse distance of the phase increment to its nearest lattice period, using the sine estimate first and geometric summation on the remaining tail. For an odd progression near the half period use \(\sin((\pi-\beta)l)=\sin(\beta l)\); on an even progression use the corresponding minus sign. If a different neighboring charge \(M>N_0\) is larger, a stronger estimate follows from the two absolute sinc bounds: split at \(r/M\) and \(r/N_0\). After multiplying by \(N_0/r\) it is \(C(N_0/M)(1+\log(M/N_0))\). Consequently, writing the folded versions of the transfers in the same notation,
+\[
+ |H_{j,r}|\le C \min(1,x_j/\max_{i\sim b_j}x_i)^{1/2},
+ \qquad |U_{b,r}|\le C/\max_{i\sim b}x_i\quad(b\in B_*).
+\]
+The second inequality uses a largest neighbor as anchor.
+
+\emph{The shared bounded sector.}
+For each \(i\in F\) follow an arrow path to a neighbor of \(B_*\). Along this path the matched-factor suppressions telescope against the unmatched factor at the last vertex, giving a bound \(C x_i^{-1/2}\) on the product of all forced and unmatched factors. For example, each path step contributes at most \(\min(1,\sqrt{x_{\rm next}/x_{\rm prev}})\), and the last unmatched factor supplies at most \(x_{\rm last}^{-1/2}\). Since the full product obeys the bound for each \(i\), a geometric mean gives \(C\prod_{i\in F}x_i^{-1/(2|F|)}\) if \(F\ne\varnothing\). Including the outside \(1/x_i\) factors, this is summable in all forced labels, independently of the free labels and \(r\). The identical argument applies to \(Q_b\) using its stated bounds, proves convergence of \(K_G\), and the all-one term proves positivity.
+
+Any high reflected \(A\)-coordinate is negligible after division by \((\log r)^d\) in the normalized \(A\)-sum: a free coordinate with a high profile has only \(O(1)\) harmonic mass, while for a forced coordinate that profile tends to zero at each fixed reflected charge against the summable envelope. Therefore retain all \(A\)-coordinates on the lower grid. For the bounded sector fix the forced charges first; the contribution from its tail is uniformly small by that envelope.
+
+\emph{Free logarithmic variables.}
+For \(i\in D\) put \(t_i=\log n_i/\log r\). Away from arbitrarily thin strips about \(t_i=0,1\), \(t_i=t_j\) on arrows, and \(t_i+t_j=1\) on edges inside \(A\), each no-alias inequality in \eqref{eq:UQ} is eventually satisfied. The strips have arbitrarily small relative harmonic mass: each one-coordinate harmonic distribution tends, after the factor \((\log r)/2\), to uniform measure on \([0,1]\), uniformly on intervals by the odd harmonic sum estimate. On a strict arrow chamber the anchor of \(H_{j,r}\) is eventually greater by a power of \(r\) than every other neighbor precisely if every incoming free exponent is smaller. Bounded forced charges do not alter this comparison. In the greater case \(H_{j,r}=1\) by \eqref{eq:UQ}; otherwise it tends uniformly to zero by \(Q_b\le1/\max n_i\). Remaining \(A\)--\(A\) sincs tend to the indicator \(t_i+t_j<1\); edges incident to a forced charge tend to one. The folded uniform bound controls all deleted strips. Hence the normalized free-sector limit is \(\operatorname{Vol}(\mathcal P_G)\) and the bounded sector gives exactly \(K_G\), by summability. We obtain
+\[
+ I_r=(r/4)^\alpha((\log r)/2)^d
+                        \bigl[\operatorname{Vol}(\mathcal P_G)K_G+o(1)\bigr].
+\]
+Together with the prefactor and \(Z_r=S_{11}\tau_r\) this gives the theorem. Its unique positive limit implies choice independence.
+\end{proof}
+
+For a perfect matching no vertices are forced. If \(A\) is one color class then \(\mathcal P_G\) is the order polytope of the acyclic orientation induced by contracting the matching. Its volume is the number of linear extensions divided by \(\nu!\) \cite{Stanley}. The even path has a total order in these coordinates, in agreement with Theorem~\ref{thm:paths}. For general graphs with cycles, a proof for the physical invariant must separately specify the nonseparating torus gluings and their phase, and signed limiting contributions can cancel. Theorem~\ref{thm:trees} makes no all-graph positivity or asymptotic assertion.

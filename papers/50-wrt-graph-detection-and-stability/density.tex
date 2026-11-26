@@ -1,0 +1,215 @@
+\section{Signed rigid coefficients under dense perturbations}
+\label{den:section}
+
+The logarithmic comparisons above detect differences within growing families.
+We next consider a different question: whether the signed leading coefficient of a rigid core is stable under changes to a dense graph. The two limits in this section are ordered. First take the WRT level to infinity for the fixed graph, as in Section~\ref{sec:sewing}. Then let the graph size tend to infinity. On a connected nonbipartite core with positive fractional edge weights of incident sum one, the rigid signed coefficient, apart from the prefactor fixed by the vertex and edge counts, is
+\[
+ J(G)=\int_{(0,\infty)^{V(G)}}\prod_{ij\in E(G)}s(x_i x_j)\prod_i dx_i,
+ \qquad s(z)=\frac{\sin(\pi z)}{\pi z}.
+\]
+The oscillatory factors in this integral require control of the exterior in absolute value, even though the eventual sign below is positive.
+
+\begin{theorem}[Vertex saddle for sublinear deletion degree]\label{den:thm}
+Let \(H\) be a fixed connected nonbipartite simple graph, and form a blowup \(G_n^0\) by replacing class \(a\) by \(n_a\) independent vertices, with complete connections on the edges of \(H\). Assume \(n=\sum_a n_a\), \(n_a/n\to\alpha_a>0\), and that there are strictly positive numbers \(w_{ab}=w_{ba}\) on \(E(H)\) with \(\sum_{b:ab\in E(H)}w_{ab}=\alpha_a/2\). Delete any set \(F_n\) of edges of maximum degree \(\Delta_n=o(n)\), obtaining \(G_n\). Put \(\beta=\pi^2/6\). For all sufficiently large \(n\) there is a unique positive solution of
+\begin{equation}\label{den:site}
+ \frac{\beta}{n}m_i\sum_{j:ij\in E(G_n)}m_j=\frac12 .
+\end{equation}
+With \(a_i=(2m_i)^{-1}\), define
+\[
+ {\cal A}_n=n^{-n/4} e^{n/4}\prod_i\frac{\sqrt\pi}{2\sqrt{a_i}}.
+\]
+Let \(t_a>0\) be the unique solution of
+\(\beta t_a\sum_{b:ab\in E(H)}t_b=\alpha_a/2\), let \(A_H\) be the ordinary adjacency matrix, and set \(\Sigma=\operatorname{diag}(2t_a^2/\alpha_a)\). Then
+\begin{equation}\label{den:result}
+ \frac{J(G_n)}{{\cal A}_n}\longrightarrow
+ \frac{\displaystyle
+   \exp\!\left[-\frac{\pi^4}{20}\sum_{ab\in E(H)}
+                             \frac{t_a^2t_b^2}{\alpha_a\alpha_b}\right]}
+ {\sqrt{\det(I+\beta\Sigma^{1/2}A_H\Sigma^{1/2})}}>0 .
+\end{equation}
+The matrix in the denominator is positive definite. No pairwise degree balance, grouping of removed edges, or rate condition beyond \(\Delta_n=o(n)\) is needed.
+\end{theorem}
+
+\subsection{The template saddle and uniform residual comparisons}
+
+Write \(B\) for the signless incidence matrix of \(H\), with column \(e_a+e_b\) at \(ab\). It has full row rank: an element of \(\ker B^t\) alternates sign across every edge, so an odd cycle and connectedness force it to vanish. Using a fixed right inverse of \(B\), the positive weights in Theorem~\ref{den:thm} extend uniformly to all fractions \(\gamma\) near \(\alpha\), with \(Bw=\gamma/2\). The log-radius exponent
+\[
+ f_\gamma(u)=\tfrac12\sum_a\gamma_a u_a-\beta\sum_{ab\in E(H)}e^{u_a+u_b}
+\]
+is a sum over edges of \(w_{ab}(u_a+u_b)-\beta e^{u_a+u_b}\). The weights are uniformly positive and the pair sums span all linear directions. Consequently \(f_\gamma(u)\le C-c\sum_a|u_a|\), and its Hessian is strictly negative definite. Its unique uniformly bounded maximum has \(t_a=e^{u_a}\) solving the corresponding saddle equations. These assertions also hold with \(\beta/2\) in place of \(\beta\).
+
+We will restrict to residual graphs obtained by removing \(\ell=o(n)\) vertices, keeping the scale \(n\) in every equation. Write \(r_a\) for residual class sizes, \(N'=\sum r_a\), and \(\gamma_a=r_a/n\). For the bare residual template, the unique site solution is constant in each class, \(m_a^0=e^{u_a}/\gamma_a\). In logarithmic site coordinates the relevant functional is
+\[
+ {\cal F}_G(y)=\tfrac12\sum_i y_i-\frac{\beta}{n}
+                  \sum_{ij\in E(G)}e^{y_i+y_j}.
+\]
+Its negative Hessian at the bare solution is the weighted signless Laplacian. On each class-mean-zero subspace it is multiplication by \(1/2\); on vectors constant within classes it is uniformly invertible by the same signless rank condition, with all class fractions bounded away from zero. The projections onto these subspaces are bounded in sup norm, so the bare inverse is uniformly bounded in that norm. Deletion changes both the gradient and the Hessian at the bare point by \(O(\Delta_n/n)\) in the respective sup norms, and the Hessian has uniformly bounded local Lipschitz constant there by its row-sum formula. The contraction obtained by subtracting the bare gradient linearization yields a stationary point with
+\begin{equation}\label{den:vertexclose}
+ \max_i|m_i-m_{a(i)}^0|=O(\Delta_n/n).
+\end{equation}
+For example, fixing the bare inverse, the Newton correction map sends a sup-norm ball of radius \(C\Delta_n/n\) into itself and has Lipschitz constant \(O(\Delta_n/n)\) on this ball. If there are no deletions the bare solution suffices.
+
+The active graph retains signless coercivity
+\begin{equation}\label{den:coercivity}
+ \sum_{ij\in E(G)}|y_i+y_j|\ge c n\sum_i |y_i|.
+\end{equation}
+For the bare graph, let \(\bar y_a\) be the class mean and \(D_{ab}=\sum_{i\in a,j\in b}|y_i+y_j|\) on a template edge. Jensen gives \(r_ar_b|\bar y_a+\bar y_b|\le D_{ab}\) and
+\(\sum_{i\in a}|y_i-\bar y_a|\le2D_{ab}/r_b\).
+Sum the latter over classes using one adjacent class each, and control the class means by injectivity of \(B^t\). This proves \eqref{den:coercivity} before deletion; the deletion loss is at most \(\Delta_n\sum_i|y_i|\). Thus the Hessian of \({\cal F}_G\) is strictly negative everywhere, making the nearby point its unique global maximum. Connectivity also persists: within any class two vertices retain a common neighbor in an adjacent class, and adjacent classes retain edges. Equation \eqref{den:site} gives actual positive fractional weights \(p_{ij}=(2\beta/n)m_i m_j\asymp n^{-1}\) on all active edges, of incident sum one.
+
+For a residual graph define \({\cal A}_G\) by replacing the site count \(n\) by \(N'\) in the powers and the product of \({\cal A}_n\), retaining the scale \(n^{-N'/4}\).
+Summing \eqref{den:site} gives \((\beta/n)\sum_{ij\in E(G)}m_i m_j=N'/4\).
+Hence for a fixed numerical \(c_0\),
+\[
+ \log{\cal A}_G=\max{\cal F}_G+N'/2-(N'/4)\log n+c_0N'.
+\]
+All optimizing \(m_i\) are uniformly bounded above and away from zero. Comparing the maximum before and after restriction by evaluating each candidate on the other's domain, extending by fixed bounded coordinates in the reverse direction, changes it by \(O(\ell)\). Each removed site affects only one log term and \(O(n)\) bounded edge terms divided by \(n\). It follows that
+\begin{equation}\label{den:resratio}
+ {\cal A}_{G}/{\cal A}_n\le(Cn^{1/4})^\ell,\qquad
+ {\cal A}_n\ge n^{-n/4}e^{-Cn}.
+\end{equation}
+Removing edges increases \({\cal F}_G\) pointwise, so \({\cal A}_G\) is at least the corresponding bare residual normalizer.
+
+We also use two bare radius bounds. If \(T_a=\sum_{i\in a}x_i^2\) and \(V^0=\beta\sum_{ab\in E(H)}T_aT_b\), polar coordinates by classes put the radius integral for \(Q^0=\int e^{-V^0}dx\) in the form \(\int e^{n f_\gamma(u)}du\), up to the radius-independent prefactor, with \(u_a=\log(T_a/\sqrt n)\). The uniform linear bound above implies that outside a sufficiently wide fixed box \(a_0\le T_a/\sqrt n\le A_0\) the radius integral at coefficient \(\beta/2\) can be bounded by \(e^{-Ln}\) times its full integral at coefficient \(\beta\), for any prescribed \(L\). Indeed reserve half the negative linear bound for integration, and lower bound the denominator on a fixed compact box. Below we also obtain \(Q^0\le C{\cal A}_G\).
+
+\subsection{Exact Gamma tilt and the compact fluctuation estimate}
+
+Put \(U_i=\sqrt n\,x_i^2\). Under \(P_m\) let the \(U_i\) be independent Gamma variables with shape \(1/2\) and rate \(a_i\), thus mean \(m_i\). Define
+\[
+ X_a=n^{-1/2}\sum_{i\in a}(U_i-m_i),\quad
+ B_0(X)=\beta\sum_{ab\in E(H)}X_aX_b,\quad
+ L_F=\frac{\beta}{n}\sum_{ij\in F}(U_i-m_i)(U_j-m_j).
+\]
+In all formulas on residual sets, \(F\) is the restricted deletion graph. The exact change of measure for the surviving quartic energy is
+\begin{equation}\label{den:tilt}
+ e^{-(\beta/n)\sum_{ij\in E(G)}U_iU_j}\prod_i dx_i
+       ={\cal A}_G e^{-B_0(X)+L_F}\,dP_m .
+\end{equation}
+The constant term of the energy at \(m\) is \(N'/4\); its linear term is \(\sum_i a_iU_i-N'/2\) by \eqref{den:site}; its centered quadratic is \(B_0-L_F\). The Gamma factors in \eqref{den:tilt} are exactly those in \(dx_i=n^{-1/4}dU_i/(2\sqrt{U_i})\).
+
+For a fixed compact radius box enclosing the limiting saddle there is \(p_0>1\) such that, uniformly for the residual sets under consideration,
+\begin{equation}\label{den:block}
+ \mathbb E_m[e^{-p_0 B_0(X)}\mathbf 1_{\rm box}]\le C .
+\end{equation}
+To prove this even when \(B_0\) is indefinite, write \(v_a=T_a/\sqrt n=n^{-1}\sum_{i\in a}U_i\) and \(v^*_{a,n}=n^{-1}\sum_{i\in a}m_i\). The class log-mgf divided by \(n\) is \(\psi_{a,n}(s)=-(2n)^{-1}\sum_{i\in a}\log(1-2m_i s)\). On the box, the one-dimensional tilt \(s\) satisfying \(\psi'_{a,n}(s)=v_a\) stays in a compact interior interval of its domain. This follows from \eqref{den:vertexclose}: all means in class \(a\) tend uniformly to \(\mu_a=t_a/\alpha_a\), and the limiting derivative \(t_a/(1-2\mu_a s)\) ranges over the positive half-line. Under the tilted law, the density of the scaled class sum \(X_a\) is bounded by a uniform constant. Fourier inversion gives this since the modulus of its characteristic function is at most \((1+c\xi^2/n)^{-r_a/4}\); its integral in \(\xi\) is \(O(1)\). Undoing the tilt bounds the density at \(X_a=\sqrt n(v_a-v_{a,n}^*)\) by \(C\exp[-n I_{a,n}(v_a)]\), where \(I_{a,n}=sv_a-\psi_{a,n}(s)\). The rates converge in \(C^2\) on the box to
+\[
+ I_a(v)=\frac{v-t_a}{2\mu_a}-\frac{\alpha_a}{2}\log(v/t_a).
+\]
+They vanish to first order at their finite centers. At \(p=1\), the limit of
+\(\sum_a I_{a,n}(v_a)+p\beta\sum_{ab}(v_a-v_{a,n}^*)(v_b-v_{b,n}^*)\)
+is the strict log-radius objective gap,
+\[
+ \beta\sum_{ab}(v_av_b-t_at_b)-\tfrac12\sum_a\alpha_a\log(v_a/t_a).
+\]
+The identity uses \(1/(2\mu_a)=\beta\sum_{b:ab\in E(H)}t_b\). Its Hessian at \(v=t\) is \(\Sigma^{-1}+\beta A_H>0\) by the strictly negative log-radius Hessian. A compact annular gap, uniform \(C^2\) convergence and vanishing first derivatives at the finite centers give a lower bound \(c\|v-v_n^*\|^2\) on the box also for some \(p_0>1\). Apply the independent density bounds and integrate \(e^{-c\sum X_a^2}\) to obtain \eqref{den:block}. This also proves the positive definiteness in the theorem. Applied to the bare graph, \eqref{den:tilt} and \eqref{den:block} give \(Q^0\le C {\cal A}_{G^0}\): the compact box contains at least half the bare radius mass by its Laplace estimate. Thus \(Q^0\le C{\cal A}_G\) as asserted above.
+
+\subsection{Neighborhood control of the deleted quadratic}
+
+Fix a small constant \(\eta>0\) and use the event
+\begin{equation}\label{den:admissible}
+ {\cal E}_G=\left\{\sum_{j:ij\in F}U_j\le\eta n
+                         \text{ for every residual site }i\right\}.
+\end{equation}
+For each fixed \(p>0\), with \(\eta\) sufficiently small,
+\begin{equation}\label{den:mgf}
+ \mathbb E_m[e^{p|L_F|}\mathbf 1_{{\cal E}_G}]\le C_p .
+\end{equation}
+The site Gamma laws have the uniform centered estimate
+\(\log\mathbb E e^{s(U_i-m_i)}\le C s^2\) for \(|s|\le s_0\), by their bounded means and rates. Consider a single deleted class-pair matrix \(A\) and the independent centered Gamma vectors \(\xi,\zeta\) at its two endpoints. Retaining only the restrictions \({\cal E}_a=\{\sum_i A_{ij} U_i\le\eta n\ \forall j\}\) from the first side, condition on \(\xi\) to bound
+\[
+ \mathbb E[e^{(\theta/n)\xi^t A\zeta}\mathbf 1_{{\cal E}_G}]
+ \le \mathbb E_\xi[e^{C_\theta\|A^t\xi\|^2/n^2}\mathbf 1_{{\cal E}_a}]
+\]
+for fixed \(\theta\in\mathbb R\). Indeed \(\|A^t\xi\|_\infty\le\eta n+C\Delta_n\), within the local mgf interval after division by \(n\) and a suitable choice of \(\eta\).
+
+Linearize the square using a standard Gaussian \(g\) on the column-label space. Require \(\|Ag\|_\infty\le c_1n\) for a small fixed \(c_1>0\). Completing the Gaussian square at each \(\xi\in{\cal E}_a\) shifts \(g\) by \(g_0=\sqrt{2C_\theta}A^t\xi/n\). Then \(\|Ag_0\|_\infty=O(\Delta_n(\eta+\Delta_n/n))=o(n)\), and each unshifted coordinate of \(Ag\) has variance at most \(\Delta_n\). The shifted restriction therefore retains \(1-o(1)\) of its Gaussian mass, uniformly in \(\xi\), by a union bound \(O(n e^{-c n^2/\Delta_n})\); the empty matrix is immediate. Reverse the two expectations after this restriction, dropping the \(\xi\)-event and now using the local Gamma mgf on the first side. The right-hand side is bounded by
+\[
+ (1-o(1))^{-1}\mathbb E_g e^{C'_\theta\|Ag\|^2/n^2}=1+o(1).
+\]
+The Gaussian determinant is bounded because \(\|A\|_{\mathrm{op}}=O(\Delta_n)\) and \(\|A\|_F^2=O(n\Delta_n)\); the associated eigenvalue bound and trace bound tend to zero. Taking both signs and using finite H\"older across class pairs proves \eqref{den:mgf}. The argument does not assume a finite unconditional exponential moment for a product of uncapped Gamma variables.
+
+Under the original product Gamma law, \(P_m({\cal E}_G^c)=o(1)\): a fixed positive-parameter Chernoff estimate for each missing-neighbor sum is \(e^{-c\eta n+C\Delta_n}\). Also \(L_F\to0\) in probability by its variance \(O(\Delta_n/n)\), since centered deleted-edge products sharing only one endpoint have zero covariance. From \eqref{den:block} and \eqref{den:mgf} we obtain a uniform \(L^p\) bound, for some \(p>1\), on \(e^{-B_0+L_F}\) restricted to \({\cal E}_G\) and the compact radius box. Choose the first H\"older exponent sufficiently close to one and \(p\) small enough so their product is less than \(p_0\), then fix \(\eta\) to accommodate the other exponent. The radius box can be fixed before \(\eta\), as made explicit in the tail bounds next.
+
+\subsection{Absolute exterior at every sublinear deletion rate}
+
+Use \(x_i=n^{-1/4}e^{y_i}\), so \(U_i=e^{2y_i}\), and the global bound \(|s(z)|\le (1+2\beta z^2)^{-1/2}\). For \(z\le1\) this follows from Euler's product and \(\log(1+u)\le u\); for \(z\ge1\) use \(|s(z)|\le1/(\pi z)\). The log-envelope potential satisfies, uniformly for \(p_{ij}\asymp n^{-1}\),
+\[
+ \tfrac12\log(1+2\beta e^{2v}/n)-p_{ij}v
+ \ge \frac d n |v|-\frac C n+
+       \frac {c_3}n\mathbf1_{v\ge0}\min(e^{2v},n).
+\]
+On \(v<0\) use nonnegativity and the lower bound on \(np_{ij}\). Up to \(v=(\log n)/2\) use the exponential lower bound, retaining a fixed fraction of it and absorbing the desired linear term in the rest. Above that point use the positive derivative, bounded below independently of \(n\). Summing, the fractional linear term cancels the Jacobian, and \eqref{den:coercivity} gives the pointwise absolute bound
+\begin{equation}\label{den:log-envelope}
+ n^{-n/4}\exp\!\left[
+   Cn-c_4\sum_i|y_i|-\frac{c_5}{n}
+     \sum_{ij\in E(G_n)}
+       \mathbf1_{y_i+y_j\ge0}\min(e^{2(y_i+y_j)},n)\right]\,dy .
+\end{equation}
+This already proves absolute convergence at each sufficiently large \(n\).
+
+Let \(c_6n\) be a uniform lower bound on all active degrees. The part with at least \(c_6n/4\) sites \(y_i<-A\) has absolute mass at most \(e^{-n}{\cal A}_n\) for sufficiently large fixed \(A\): extract half the independent log decay in \eqref{den:log-envelope} before integrating the rest and use \eqref{den:resratio}. On the remaining configurations every site has a positive fraction of \(n\) retained neighbors with \(U_j\ge e^{-2A}\). If \(M\to\infty\), \(M\le n\), and at least \(D n/M\) sites satisfy \(U_i>M\), the last term of \eqref{den:log-envelope} gives another \(e^{-n}{\cal A}_n\) bound for large fixed \(D\): charge \(cM\) to each such site using its non-tiny neighbors, counting each edge at most twice. The constants are independent of the rate at which \(M\) grows.
+
+Otherwise fix the high set above \(M\), of size \(\ell<Dn/M=o(n)\). Each high site still has a positive fraction of \(n\) retained \emph{low} neighbors with \(U_j\ge e^{-2A}\), since the removed high set is small. Its high-low factors are bounded by \((1+\kappa U_i/n)^{-\nu n}\) for fixed \(\kappa,\nu>0\). These edge sets are disjoint for different high sites. Half of the bound gives \(e^{-c\min(U_i,n)}\), and the other half has bounded integral in \(dU/(2\sqrt U)\), since
+\[
+ \int_0^\infty (1+\kappa U/n)^{-\nu n/2}\frac{dU}{2\sqrt U}
+  =\tfrac12\sqrt{n/\kappa}\,
+    \mathrm B(1/2,\nu n/2-1/2)\le C.
+\]
+Thus on a set forcing \(\sum_{\rm high}\min(U_i,n)\ge R_*\), integrate the high variables at cost \(e^{-cR_*}(Cn^{-1/4})^\ell\). Extract the penalty uniformly before dropping constraints on high variables; no hypothesis of independent constraints is needed. The \(n^{-1/4}\) is the physical \(x\)-measure factor, and cancels the factor \(n^{1/4}\) per removed site in \eqref{den:resratio}.
+
+First bound \({\cal E}_{G_n}^c\) by taking
+\(M=\sqrt{n/\max(\Delta_n,\sqrt n)}\).
+Then \(\Delta_n M=o(n)\), so a violating neighborhood has at least \(\eta n/2\) of high charge; the aggregate \(\sum_{\rm high}\min(U_i,n)\) is at least \(\eta n/2\) if \(\eta\le1\). The number of high sets, including \(C^\ell\), is \(\exp(o(n))\) by the binomial entropy bound since \(\ell<Dn/M\). For the low variables write \(S_a=\sum_{i\in a,{\rm low}}U_i\). Their products are in the positive sine regime since \(M=o(\sqrt n)\), so their product is bounded above by \(e^{-V^0+D_{\rm lost}}\). For each pair of classes its lost energy is at most \((\beta/n)\Delta_n M\min(S_a,S_b)\). On the compact radius box this is \(o(n)\). Outside it, the bound \(D_{\rm lost}\le V^0/2+C(\Delta_n M)^2/n=V^0/2+o(n)\) follows by separating \(\max(S_a,S_b)\ge2\Delta_n M\) from its complement for each pair. The bare radius estimates and \(Q^0\le C{\cal A}_{G}\) now apply. On the box the high penalty beats \(e^{o(n)}\) times the residual normalization; outside it, the broad bare radius box alone gives exponential suppression. Thus the absolute integral on \({\cal E}_{G_n}^c\) is \(o({\cal A}_n)\).
+
+On \({\cal E}_{G_n}\) take instead a fixed positive cube \(x_i\le b\), \(b^2\le1/2\), with high threshold \(M=b^2\sqrt n\). At least \(D n/M\) high sites were already excluded by \eqref{den:log-envelope}. For fewer than this and at least one high site, integrate the high variables as above at cost \((Cn^{-1/4}e^{-c\sqrt n})^\ell\). The low-site neighborhood bound \({\cal E}_G\) is inherited by removal of high sites. On the radius box, \eqref{den:tilt} and its \(L^p\) bound control the low product by \(C{\cal A}_G\) after integration. Summing high sets costs at most \(\sum_{\ell\ge1}(Cn e^{-c\sqrt n})^\ell=o(1)\) relative to \({\cal A}_n\). Outside the box, use the neighborhood bound to get \(D_{\rm lost}\le V^0/2+C\eta^2n\) by the same pairwise argument with \(\eta n\) in place of \(\Delta_n M\). The bare box can be chosen first large enough to beat \(C\eta^2 n\) for every \(\eta\le1\). Its tail estimate then applies also at \(\ell=0\). This proves that everything outside the intersection of \({\cal E}_{G_n}\), the fixed cube, and the compact radius box contributes \(o({\cal A}_n)\) in absolute measure.
+
+\subsection{Evaluation of the signed integral}
+
+Under \(P_m\), the fixed cube has probability tending to one by the union bound for Gamma tails, the neighborhood restriction was checked above, and the compact box has probability tending to one by concentration of class sums. Equation \eqref{den:vertexclose} and the independent triangular-array central limit theorem give \(X\Rightarrow N(0,\Sigma)\), with diagonal covariance as in Theorem~\ref{den:thm}. On the cube the product divided by its surviving quartic envelope is positive and at most one, and its logarithm is
+\[
+ -\frac{\pi^4}{180}\sum_{ij\in E(G_n)}x_i^4x_j^4
+       +O\big((\sum_i x_i^6)^2\big).
+\]
+Under the product Gamma law \(\sum_{i\in a}x_i^4\to3t_a^2/\alpha_a\) by the law of large numbers, \(\sum_i x_i^6=O_P(n^{-1/2})\), and \(\sum_i x_i^8=O_P(n^{-1})\). The deleted fourth-order terms are at most \(C\Delta_n\sum_i x_i^8=o_P(1)\), so the sine correction tends to the exponential in \eqref{den:result}. Combine the block convergence, \(L_F\to0\), and the restricted \(L^p\) bound to take expectations in \eqref{den:tilt}. The Gaussian expectation of \(e^{-B_0}\) is the inverse square root of \(\det(I+\beta\Sigma^{1/2}A_H\Sigma^{1/2})\). The absolute exterior bound completes the proof of Theorem~\ref{den:thm}.
+
+\subsection{Linear-degree deletion: a loop permutation seen by the determinant}
+
+We give a boundary example in which vertex degrees, pair densities, the product saddle normalization, and the leading WRT phase can all be held fixed. Start with three coarse classes of size \(qN\) each, equip each with \(q\) microclasses of \(N\) vertices, and fix \(q\ge3\). Across each coarse pair remove the \(K_{N,N}\)'s specified by a matching of the \(q\) labels. In each class the labels may be permuted independently. Thus the first two removed matchings can be taken as the identity and the remaining one is a permutation \(P\), the ordered product of the three original matchings around the triangle (up to conjugation, or inversion upon reversing the triangle). This is a statement about the retained adjacency, not a continuum gauge interpretation.
+
+\begin{proposition}[Loop permutation determinant]\label{den:loop}
+For the resulting graphs \(G_{N,P}\), all sites lose \(2N\) neighbors and the deleted fraction between each coarse pair is \(1/q\). Write \(k_0=3q\), \(d_0=2(q-1)\), and \(T_P\) for the retained quotient on microclasses. The product normalization \({\cal A}_n\) is independent of \(P\), and
+\begin{equation}\label{den:det-loop}
+ \begin{aligned}
+ \frac{J(G_{N,P})}{{\cal A}_n}
+ &\longrightarrow e^{-9k_0/(40d_0)}\det(I+A_{T_P}/d_0)^{-1/2},\\
+ \det(I+A_{T_P}/d_0)
+ &=\frac12\prod_{e^{i\theta}\in\operatorname{spec}(P|_{\mathbf1^\perp})}
+              \left(1-\frac3{d_0^2}-\frac{2\cos\theta}{d_0^3}\right).
+ \end{aligned}
+\end{equation}
+The product is over eigenvalue multiplicity.
+\end{proposition}
+
+\begin{proof}
+The refined quotient is \(d_0\)-regular on \(k_0\) vertices. Across a pair of coarse classes the quotient is \(K_{q,q}\) minus a matching, which is connected for \(q\ge3\) since any two vertices on one side have a common neighbor. An allowed \(A\)--\(C\) pair of labels, together with a \(B\) label different from both, gives a triangle. Thus \(T_P\) is connected and nonbipartite, with positive fractional weights \(1/d_0\). Theorem~\ref{den:thm} applies to its \emph{bare} equal-size blowup, rather than to the linear deletions from the original coarse graph. The radial solution is \(t_a^2=(2\beta k_0 d_0)^{-1}\); the common site mean is \(\sqrt{k_0/(2\beta d_0)}\); the covariance is \(\Sigma=(\beta d_0)^{-1}I\). This gives the first formula of \eqref{den:det-loop}, including its \(P\)-independent sine correction.
+
+The three between-class adjacency blocks are \(J_q-I_q,J_q-I_q,J_q-P\), up to transposes; here \(J_q\) is the all-ones matrix. On the uniform label mode the normalized three-by-three block \(I+A_{T_P}/d_0\) has diagonal one and off-diagonal \(1/2\), giving determinant \(1/2\). On the orthogonal label space \(J_q=0\). Diagonalizing \(P\) over \(\mathbb C\) gives for each eigenvalue \(e^{i\theta}\) a three-by-three Hermitian block with off-diagonals \(-1/d_0,-1/d_0,-e^{i\theta}/d_0\) in a cyclic orientation, up to conjugation of the last entry. The determinant expansion gives the second formula.
+\end{proof}
+
+The cycle dependence can also be written in real terms. Put \(a=1-3/d_0^2\), \(b=2/d_0^3\), \(a_*=(a+\sqrt{a^2-b^2})/2\), and \(v=b/(2a_*)\in(0,1)\). Then \(a-b\cos\theta=a_*|1-v e^{i\theta}|^2\). For cycle lengths \(\ell_1,\ldots,\ell_j\) of \(P\), taking products over the roots of unity and removing one uniform mode gives
+\[
+ \det(I+A_{T_P}/d_0)=
+        \tfrac12 a_*^{q-1}\frac{\prod_i(1-v^{\ell_i})^2}{(1-v)^2}.
+\]
+Merging two cycles strictly increases the determinant since
+\((1-v^u)(1-v^w)<1-v^{u+w}\) for positive \(u,w\), and decreases the signed coefficient's normalized limit. This dependence persists at arbitrarily small fixed positive deleted fraction \(2/(3q)\).
+
+For \(q=4\), compare \(P\) of type \((2,2)\) with a four-cycle. The normalized signed leading ratio from \eqref{den:det-loop} is
+\[
+ \frac{a}{\sqrt{a^2-b^2}}=\frac{99}{70\sqrt2}>1 .
+\]
+The quotient adjacency signatures in both cases are \(-2\). Indeed the uniform block has signature \(-1\); a nonuniform adjacency block has trace zero and determinant \(-2\cos\theta\), so its signature is respectively \(+1,-1,0\) for positive, negative, or zero \(\cos\theta\). The extra zero modes of the blowup do not change signature. The two graphs also have exactly the same edge and vertex counts. Thus the ratio distinguishes even the coefficients with the same oriented WRT phase under the convention of Section~\ref{sec:sewing}. It is not an effect of the Maslov factor. Alternating the two refinements yields no common vertex-normalized limit at linear deletion degree despite identical degree, density, site-mean, and phase data.
+
+\paragraph{Order of limits.}
+The vertex theorem does not interchange the WRT and graph-size limits. The finite expression already shows why uniformity would need separate estimates. For example, in the balanced tripartite graph \(K_{m,m,m}\), keeping the original odd charge equal to one on two entire classes and summing the third freely produces a nonnegative sector of the normalized finite sum of size
+\((1+o(1))\,2^{n/3}r^{-n/6}\) when \(n=3m\) and \(r\asymp n^{3/2}\). For this sector the only edge factor after cancellation is \(R(1/r)= (\pi/r)/\sin(\pi/r)\) per edge, and each free site has cap sum \(\sum_{k<r,\ k\ {\rm odd}}\cos^2(\pi k/(2r))=r/4\) on either parity. The sector has the same \(n^{-n/4}\) dimensional power as the tripartite continuum bulk on that scale. It is not a lower bound on the full signed sum.

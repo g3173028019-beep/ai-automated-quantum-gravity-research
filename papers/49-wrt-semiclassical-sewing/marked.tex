@@ -1,0 +1,37 @@
+\section{Marked comparison: a determinant and a loop term}\label{sec:marked}
+
+For this section only, insert a smooth cutoff \(\chi(a/r)\) at each regular fibre, equal to one near the positive Weyl end and supported in a sufficiently small fixed neighborhood there. This is an actual finite Wilson-calculus insertion: the distinct fundamental eigenvalues \(2\cos(\pi a/r)\) allow polynomial interpolation of the cutoff values. It is not the unmarked invariant of Sections~\ref{sec:H}--\ref{sec:wall}. Use uniform coprime signed odd weights \(p,q\), both magnitudes at least three, and positive spine swaps; put \(D=-1/p-1/q\).
+
+\begin{proposition}[Marked forest and loop benchmarks]\label{prop:marked}
+For a connected tree with \(n\) vertices, \(Z_r^\chi/S_{11}\to (|pq|^n|\det Q|)^{-3/2}\). This is the inverse \(3/2\)-power of the absolute determinant of its full capped plumbing matrix. For the triangle (\(n=3\)), set \(t=(D^3-3D)/2\). The marked physical scalar instead has a nonzero order-one limit
+\begin{equation}\label{eq:marked-tri}
+ Z_r^\chi\longrightarrow -|pq|^{-9/2}
+ \left[\frac1{2\sqrt{2(1-t)}}+\frac{\ii}{2\sqrt{2(1+t)}}\right].
+\end{equation}
+The two terms include an angular resonance and its principal value; the loop cannot be replaced by a three-copy tree determinant.
+\end{proposition}
+
+\begin{proof}
+In the positive corner factor the linear part \(\pi a_va_w/r\) of each edge sine and retain its sinc. It cancels all inverse endpoint powers at each vertex. The noncentral reciprocal residue group is even on the signed lattice under simultaneous reversal of both cap residues and is zero at the origin (the full cap product and the removed central/central term each vanish there). Thus one-half the full signed Poisson sum gives its positive-grid sum, with no endpoint term. Each noncentral pair has nonzero linear frequency modulo two in units of \(\pi\) by the odd coprime hypothesis. Expanding incident sincs as averages of exponential linear steps, all other shifts are \(O(\delta)\) on support \(a/r<\delta\). Taking \(\delta\) sufficiently small, nonstationary parts eliminate these terms to arbitrary order, uniformly for all other charges. The remaining central pair contributes \(-\pi^2(a/r)^2/(pq)\) after its common reciprocal factor. Rescale \(a=\sqrt r\,x\); the compact-window Riemann sum gives the kernel
+\[
+ {\cal I}_G(D)=\int_{x>0}e^{\pi\ii D\sum_vx_v^2/2}
+             \prod_v x_v^2\prod_{vw}\sinc(\pi x_vx_w)\,d^nx .
+\]
+Its integral is a smooth dyadic exhaustion, equivalent to Gaussian Abel damping. Here is the uniform tail test. In a box of largest charge scale \(B\gg\sqrt r\), separate the largest cluster of comparable scales by a sufficiently large fixed multiplicative gap. Expand its internal edge sines into signed exponentials; the true principal Hessian there is \(DI+\) signed adjacency, whose product by \(pq\) is \(-(p+q)I\bmod |pq|\) and hence invertible. Smaller neighboring charges contribute arbitrarily small relative shifts by choosing the gap large. A smooth subdivision selects a large coordinate with phase step \(\gtrsim B/r\), and \(N\) dyadic parts give \((r/B^2)^N\) against the worst normalized volume \(\prod_v(B_v/\sqrt r)^3\). Direct sine expansion on a large comparable scale costs only a fixed factor relative to its sinc envelope. Small boxes are summable by those cubic factors. This gives uniform lattice tails; the same integration by parts controls the continuum tails with or without positive Gaussian damping, whose dyadic seminorms are bounded uniformly. This justification precedes angular integration and does not presume integrability of its pointwise undamped determinant. Counting the lattice densities and common factors in \eqref{eq:finite} gives
+\[
+ r^{-3(l-n)/2}Z_r^\chi
+ \ \longrightarrow\
+ 2^{n-l/2}\pi^{2n-l}|pq|^{-3n/2}e^{-3\pi\ii\sig Q/4}\,{\cal I}_G(D).
+\]
+The cap sign cancels the sign of \((-1/pq)^n\).
+
+For the tree, write each sinc as the average of \(e^{\pi\ii x_vx_w n_v\cdot n_w}\) in unit directions; successively integrating leaf directions makes the joint spherical average exactly the product of sincs. With damping the Cartesian Gaussian is therefore \((4\pi)^{-n}\) times the integral with three copies of \(DI+\operatorname{Adj}G\). These matrices are invertible by the same modulus test. Their signature equals \(\sig Q\) by bipartite sign gauge, so their phase cancels the physical Maslov phase. The remaining prefactor is \(\sqrt2\pi r^{-3/2}(|pq|^n|\det Q|)^{-3/2}\); dividing by \(S_{11}\) gives the first assertion.
+
+For the triangle, instead use independent Haar rotations on the edges inside the damped Gaussian; this gives every sinc without the leaf factorization. Gauge two edges along a tree to the identity; the third carries a single Haar \(SO(3)\) loop angle \(\theta\in[0,\pi]\) of density \((1-\cos\theta)/\pi\). This density follows from the unit-quaternion cover with scalar modulus \(\cos(\theta/2)\). Along its axis the Gaussian is the ordinary scalar \(B_0=DI+\operatorname{Adj} C_3\), of signature \(-1\) and determinant \(2(1+t)\). In its transverse plane the two real copies form a complex twisted cycle, with determinant \(2(t(z)+\cos\theta)\), \(t(z)=(z^3-3z)/2\) and \(z=D+2\ii\epsilon/\pi\). This follows directly from the two oriented triangle permutations of the phase twist. The plane Gaussian contributes \(2^3\ii^3/[2(t(z)+\cos\theta)]\). The axis square roots are continued separately from positive damping, giving \(2^{3/2}e^{-\pi\ii/4}/\sqrt{2(1+t)}\). Evaluate the angle integral at \(\epsilon>0\), before taking any boundary limit:
+\[
+ \frac1{2\pi}\int_0^\pi\frac{1-\cos\theta}{t(z)+\cos\theta}\,d\theta
+   =\frac12\left[-1+\frac{1+t(z)}{\sqrt{t(z)^2-1}}\right],
+ \qquad \sqrt{T^2-1}\sim T\text{ at infinity}.
+\]
+The identity is the tangent-half-angle integral with the specified branch. Since \(|D|<1\), \(|t|<1\) and \(t'(D)<0\), its boundary value is \(\tfrac12[-1+\ii(1+t)/\sqrt{1-t^2}]\). The underlying plane determinant has a zero at one real angle, so pointwise substitution would not give an absolutely convergent integral. Combining this boundary value with the axis factor, \(\sig Q=1\), and the common normalization gives \eqref{eq:marked-tri}. This establishes a distinct marked loop term without assigning it to the unmarked scalar.
+\end{proof}

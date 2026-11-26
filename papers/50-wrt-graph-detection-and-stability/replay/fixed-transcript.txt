@@ -1,0 +1,4 @@
+common lower data (V,W,D): ((0, 0, 56, 264, 576), (0, 0, 24, -168, 576), (0, 0, 4, 24, 0))
+left W ingredients ((0, 0, 72, 360, 0), (0, 0, 0, 48, 576)) right W ingredients ((0, 0, 72, 360, 0), (0, 0, 0, 48, 576))
+symbolic untouched-twin suffix j=1: −2Q; j=2: +2Q; all other prototype sectors vanish
+fourth signed-gap equality = k! k(k+1) times C4−2P4+matching, every k>=1

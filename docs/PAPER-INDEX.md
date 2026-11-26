@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 53 items: 20 original research packets, six later analytical Markdown manuscripts and twenty-seven typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 56 items: 20 original research packets, six later analytical Markdown manuscripts and thirty typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–47 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–50 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -599,3 +599,33 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** A fixed labeled metric branch, spacelike planes, and local scalar markers with independent gradients for the compact-source theorem. Standard gauge-fixed linear theory is used for the physical algebra; no nonlinear area operator or marker construction on all spacetimes.
 
 [Paper notes](../papers/47-spacelike-area-tomography/README.md) · [PDF](../papers/47-spacelike-area-tomography/manuscript.pdf) · [TeX](../papers/47-spacelike-area-tomography/main.tex) · [Verification](../papers/47-spacelike-area-tomography/VERIFICATION.md)
+
+## 48. Leading logarithms in closed SU(2) Witten–Reshetikhin–Turaev invariants of capped trees
+
+**Question.** Can closed three-manifold invariants have nonzero leading logarithms of arbitrarily high degree, and what controls them?
+
+**Result.** An exact closed H-tree calculation and an irreducible corona family show nonzero leading logarithms of unbounded degree. The paired-tree face formula and all-length path law identify how the sewing graph controls the leading scale.
+
+**Scope.** Closed, uninserted SU(2) WRT in the specified surgery families; the corresponding SO(3) check is at odd shifted levels. No claim of a log-free result failing on Seifert integral homology spheres or of a full expansion for all graphs.
+
+[Paper notes](../papers/48-wrt-leading-logarithms/README.md) · [PDF](../papers/48-wrt-leading-logarithms/manuscript.pdf) · [TeX](../papers/48-wrt-leading-logarithms/main.tex) · [Verification](../papers/48-wrt-leading-logarithms/VERIFICATION.md)
+
+## 49. Chern–Simons Phases and Degenerate Sewing in SU(2) WRT Invariants
+
+**Question.** Which Chern–Simons phases and endpoint mechanisms govern the specified capped sewings?
+
+**Result.** The split classical cubic, calibrated adjoint APS phases and a signed Weyl pairing identify distinct semiclassical mechanisms for the specified capped sewings. A closed two-seam example and separately marked central sectors make the phase and endpoint effects explicit.
+
+**Scope.** Capped plumbing families and stated flat-connection branches. Wilson-marked central tests are separated from unmarked closed invariants; the local cubic mechanism is not an attribution of the full invariant to one saddle.
+
+[Paper notes](../papers/49-wrt-semiclassical-sewing/README.md) · [PDF](../papers/49-wrt-semiclassical-sewing/manuscript.pdf) · [TeX](../papers/49-wrt-semiclassical-sewing/main.tex) · [Verification](../papers/49-wrt-semiclassical-sewing/VERIFICATION.md)
+
+## 50. What Graph Structure Survives WRT Sewing? Hidden connector motifs and the stability boundary of dense cores
+
+**Question.** Which graph changes survive WRT asymptotics, and when is the signed coefficient stable?
+
+**Result.** Matched connector networks can have equal initial asymptotic data and distinct WRT coefficients; a leafless motif law detects hidden structure. Dense strict-template cores retain a positive signed coefficient under arbitrary sublinear maximum deletion degree, but linear-degree rearrangements can change its leading determinant.
+
+**Scope.** Fixed, mesoscopic, and sequential graph-size limits are stated separately. The density theorem assumes strict feasible proportions in a fixed template; it does not assert a general simultaneous level–size limit.
+
+[Paper notes](../papers/50-wrt-graph-detection-and-stability/README.md) · [PDF](../papers/50-wrt-graph-detection-and-stability/manuscript.pdf) · [TeX](../papers/50-wrt-graph-detection-and-stability/manuscript.tex) · [Verification](../papers/50-wrt-graph-detection-and-stability/VERIFICATION.md)

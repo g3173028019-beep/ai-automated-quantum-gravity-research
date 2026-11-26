@@ -1,0 +1,8 @@
+cycle counts and diamond counts: ((4, 2, 4), 1) ((4, 2, 4), 0)
+exact diamond integral: 1/467775
+actual relative mesoscopic coefficient: 7072/4455
+diamond and pentagon contrasts: (Fraction(1, 467775), Fraction(-3911, 212837625)) (Fraction(-1, 93555), Fraction(53, 500500))
+composite order-five exactly cancels; sixth cube weight: 11933/851350500
+sixth relative hard coefficient: 2449558508/945
+marked z^4 differences: 1/4725 -1/1890 composite: 1/1890
+relative soft multiplier of w0: 27010/63

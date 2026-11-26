@@ -1,0 +1,157 @@
+\section{Corona plumbings and arbitrary log degree}
+
+Let \(\mathcal T\) be a fixed connected tree on \(m\ge1\) spine vertices. Attach one pendant to each spine vertex. At \emph{every} one of the resulting \(2m\) backbone vertices, attach two terminal cap leaves with framings \(+2,-2\). The spine framings are \(w_i\in\ZZ\) and the matching pendant framings \(h_i\in\ZZ\). Every edge is a positive Hopf clasp in the standard framed-unknot plumbing link. Concretely, root the tree, draw the root unknot, and attach each child meridian at a separate short arc of its parent away from the existing clasps; the child has the vertex framing relative to its zero longitude. There are no other clasps. This fixes an actual link, not only a linking matrix. Write \(M=M_{\mathcal T;w,h}\) for the closed oriented surgery manifold.
+
+\begin{figure}[ht]
+ \centering
+ \setlength{\unitlength}{1mm}
+ \begin{picture}(112,44)
+ \linethickness{0.6pt}
+ \put(28,25){\line(1,0){56}}
+ \put(28,13){\line(0,1){12}}
+ \put(84,13){\line(0,1){12}}
+ \put(28,25){\line(-1,1){11}}
+ \put(28,25){\line(1,1){11}}
+ \put(84,25){\line(-1,1){11}}
+ \put(84,25){\line(1,1){11}}
+ \put(28,13){\line(-1,-1){8}}
+ \put(28,13){\line(1,-1){8}}
+ \put(84,13){\line(-1,-1){8}}
+ \put(84,13){\line(1,-1){8}}
+ \frnode{28}{25}{w_1}
+ \frnode{84}{25}{w_2}
+ \put(28,13){\circle*{1.65}}\put(24,13){\makebox(0,0)[r]{\(\scriptstyle h_1\)}}
+ \put(84,13){\circle*{1.65}}\put(80,13){\makebox(0,0)[r]{\(\scriptstyle h_2\)}}
+ \frnode{17}{36}{+2}
+ \frnode{39}{36}{-2}
+ \frnode{73}{36}{+2}
+ \frnode{95}{36}{-2}
+ \frnode{20}{5}{+2}
+ \frnode{36}{5}{-2}
+ \frnode{76}{5}{+2}
+ \frnode{92}{5}{-2}
+ \end{picture}
+ \caption{Exact plumbing diagram for the two-vertex spine. The horizontal edge is the spine and each vertical edge joins one pendant. Each dot is one unknot, each label its integral framing, and each edge one positive Hopf clasp. For other spines the same pendant and cap attachments are made independently at every vertex.}
+ \label{fig:plumb}
+\end{figure}
+
+Let \(A\) be the adjacency matrix of \(\mathcal T\). The real Schur complement for the two opposite cap framings at any backbone vertex is zero. The full surgery signature is therefore the signature \(\sigma\) of
+\[
+ C=\begin{pmatrix}A+\operatorname{diag}(w)&I_m\\ I_m&\operatorname{diag}(h)\end{pmatrix}.
+\]
+If \(h=0\), then \(C\) is unimodular and is real congruent to
+\(\bigl(\begin{smallmatrix}0&I\\ I&0\end{smallmatrix}\bigr)\); the full signature is zero and the full surgery determinant is \((-1)^m16^m\). More precisely, call a backbone meridian generator \(a_j\) and its leaf generators \(x_j,y_j\). The leaf relations give \(a_j=-2x_j=2y_j\) and the backbone rows give \(x_j+y_j=2\sum_l C_{jl}x_l\). Hence \(H_1(M;\ZZ)=\operatorname{coker}(4C)\), in particular \((\ZZ/4\ZZ)^{2m}\) when \(h=0\).
+
+Use the fixed modular data of Section~\ref{sec:conventions}. Put \(W=\sum_i(w_i+h_i)\) and
+\[
+ \Phi_r=\kappa_r^{-\sigma}(-1)^{r+W}
+         \exp\!\left(\frac{\pi\ii W(r^2-1)}{2r}\right).
+\]
+Define the charge-exponent polytope
+\[
+ \mathcal P=\{t\in[0,1]^m:\ t_i+t_j\le1\ (ij\in E(\mathcal T)),\
+       t_i\le1/2\ (w_i\ne0),\ t_i\ge1/2\ (h_i\ne0)\}.
+\]
+
+\begin{theorem}\label{thm:corona}
+For the fixed closed surgery \(M_{\mathcal T;w,h}\),
+\[
+ \frac{\tau_r(M)}{\Phi_r r^{2m}}
+       =\pi^{-2m}\vol(\mathcal P)(\log r)^m
+          +O_{\mathcal T,w,h}((\log r)^{m-1}),
+ \qquad \tau_r(S^3)=1.
+\]
+With \(Z_r(S^2\times S^1)=1\), the corresponding power is \(r^{2m-3/2}\) and the leading coefficient is \(\sqrt 2\,\pi^{1-2m}\vol(\mathcal P)\). The estimate holds on both parities, including when the displayed coefficient vanishes. The volume is positive if and only if no matched pair is doubly twisted and the set \(\{i:h_i\ne0\}\) is independent in \(\mathcal T\).
+\end{theorem}
+
+\paragraph{The manifolds are irreducible.}
+Use the circle-bundle description of plumbing, in which the edges exchange section and fibre \cite{EN}. The two caps become two order-two exceptional fibres at each backbone vertex. At backbone degree \(b\ge1\), the remaining block is Seifert fibred over a genus-zero orbifold with \(b\) boundary circles and the two cone points. The backbone framings affect the marked sections, not the cone orders. The orbifold double cover sending both cone meridians to the nontrivial deck element and every boundary circle to zero is an orientable surface \(F\) with \(2b\) boundary components and Euler characteristic \(2-2b\). The pulled-back bundle is \(F\times S^1\). It is irreducible and its boundary is incompressible, since \(F\) has at least two boundary circles. A compressing disc would lift to the product. An embedded sphere lifts to two spheres bounding balls; an innermost such ball projects injectively and bounds the original sphere. Finally gluing the blocks along incompressible tori preserves irreducibility by the usual innermost-disc argument \cite{Hatcher}. Thus the leading powers below are not produced by connected-sum multiplication.
+
+\subsection{Pendant transform}
+Set \(b_r(n)=\frac{\pi}{2r}\cot(\frac{\pi n}{2r})\). It is nonnegative, decreasing, and \(\le1/n\). Summing the pendant at spine site \(i\) gives, apart from its phase \((-1)^{r+h_i}e^{\pi\ii h_i(r^2-1)/(2r)}\), the factor
+\begin{equation}\label{eq:pend}
+ K_{r,h_i}(n)=\frac4\pi\sum_{\substack{1\le l<r\\l\text{ odd}}}
+       b_r(l)e^{\pi\ii h_i l^2/(2r)}\sin(\pi nl/r).
+\end{equation}
+In fact a pendant contributes \(\sqrt{2/r}\cot(\pi l/(2r))\) at its supported odd \(l\), by \eqref{eq:cap} divided by \(S_{1,r-l}\). Its edge has \(S_{r-n,r-l}=(-1)^r\sqrt{2/r}\sin(\pi nl/r)\) for odd \(n,l\). For \(h_i=0\), \(K_{r,0}(n)=1\) exactly. This is \eqref{eq:cot-transform}.
+
+At a spine vertex of spine degree \(d\), the cap pair leaves a denominator \(S_{1a}^{d+1}\). For odd \(n\) the remaining real local factor is
+\[
+\begin{gathered}
+ f_{r,d}(n)=c_d\,r^{(3d+1)/2} n^{-d-1}F_d(n/r),\\[-1pt]
+ c_d=4\,2^{-(d+1)/2}\pi^{-(d+1)},\qquad
+ F_d(x)=\cos^2(\pi x/2)\left(\frac{\pi x}{\sin(\pi x)}\right)^{d+1}.
+\end{gathered}
+\]
+\(F_d\) is smooth on \([0,1/2]\), with \(F_d(0)=1\). Put \(P_r=\kappa_r^\sigma\Phi_r\) and \(C_m=2^{m+1/2}\pi^{1-2m}\). The contribution to \(B_r/(P_r C_m\,r^{2m-3/2})\) with \emph{all} \(n_i\le r/2\) is exactly
+\begin{equation}\label{eq:low}
+ \sum_{\substack{1\le n_i\le r/2\\ \text{all }n_i\text{ odd}}}
+    \prod_i\frac{F_{d_i}(n_i/r)\,e^{\pi\ii w_i n_i^2/(2r)}K_{r,h_i}(n_i)}{n_i}
+    \prod_{ij\in E(\mathcal T)}\sinc(\pi n_i n_j/r),
+ \qquad \sinc x=\frac{\sin x}{x}.
+\end{equation}
+Each of the \(m-1\) remaining edges contributes the linear factor
+\(\sqrt{2}\pi r^{-3/2}n_i n_j\) times its sinc and sign. The linear factors cancel \(d_i\) powers of \(n_i\) at each site, leaving \(1/n_i\). Their constants combine with the \(c_{d_i}\) to give \(C_m\). The \(2m-1\) backbone edges supply the single sign \((-1)^r\); all other signs and scalar twists are exactly those in \(P_r\).
+
+\subsection{Uniform control of the sewing sums}
+\begin{lemma}\label{lem:quadratic}
+For fixed nonzero integer \(h\), any real \(\beta\), and any interval of odd \(l\) in \([1,r-1]\),
+\[
+ \left|\sum_l e^{\pi\ii h l^2/(2r)+\ii\beta l}\right|=O_h(\sqrt r).
+\]
+\end{lemma}
+\begin{proof}
+Write \(l=2j+1\), with phase \(f(j)\). The forward differences \(\Delta_j=f(j+1)-f(j)\) have step \(4\pi h/r\) and range of length \(O_h(1)\). Differences within \(r^{-1/2}\) of \(2\pi\ZZ\) account for \(O_h(\sqrt r)\) terms. In each of the \(O_h(1)\) other intervals use
+\[
+ e^{\ii f(j)}=\frac{e^{\ii f(j+1)}-e^{\ii f(j)}}{e^{\ii\Delta_j}-1}.
+\]
+The inverse denominator has size plus variation \(O(\sqrt r)\) there, since its varying part is a constant multiple of the monotone cotangent between consecutive poles. Summation by parts proves the estimate.
+\end{proof}
+
+\begin{lemma}\label{lem:pendant}
+For fixed \(h\ne0\), \(K_{r,h}(n)\) is uniformly bounded in \(r,n\). For \(1\le n\le r/2\), write \(u=n/\sqrt r\). Then
+\[
+ \left|K_{r,h}(n)-\supp_{n>\sqrt r}\right|
+ \le C_h\min(u^{1/2},u^{-1/2}).
+ \tag{*}
+\]
+In particular its error against the sharp cutoff has uniformly bounded harmonic mass.
+\end{lemma}
+\begin{proof}
+By Lemma~\ref{lem:quadratic}, splitting the sine into two exponentials and summing by parts in \(b_r\), the tail \(l\ge R\sqrt r\) of \eqref{eq:pend} is \(O_h(R^{-1})\) on summing geometrically over dyadic blocks. For an arbitrary real \(\beta\in[0,\pi]\) the partial sums of \(\sum_{l\ {\rm odd}}\sin(\beta l)/l\) are bounded uniformly: use \(\sin((\pi-\beta)l)=\sin(\beta l)\), split at \(l\min(\beta,\pi-\beta)\asymp1\), and use the odd geometric sum bound \(O(1/|\sin\beta|)\) on the remaining weighted tail. On \(l\le\sqrt r\) the multiplier \(l b_r(l)e^{\pi\ii h l^2/(2r)}\) is bounded with uniformly bounded variation, so this proves the uniform bound when combined with the tail estimate.
+
+For \(u\le1\), truncate at \(R\sqrt r\) with \(R=u^{-1/2}\). The sine bound below that point costs \(O(uR)\), and the twisted tail costs \(O_h(R^{-1})\). For \(u>1\), compare to \(K_{r,0}=1\) and use \(\eta=u^{-1/2}, R=u^{1/2}\). Below \(\eta\sqrt r\) the phase change costs \(O_h(\eta^2)\), by \(b_r(l)\le1/l\). Above \(R\sqrt r\) the respective tails cost \(O_h(R^{-1})\) and \(O((uR)^{-1})\). On the middle interval the maximum and total variation of \(b_r(l)e^{\pi\ii h l^2/(2r)}\) are \(O_h((\eta^{-1}+R)/\sqrt r)\): the variation from the quadratic is \(O_h(1/r)\) per site after multiplication by \(b_r(l)\). The odd geometric bound with \(\beta=\pi n/r\) gives \(O_h((\eta^{-1}+R)/u)\). These choices prove (*). Summing the stated error against \(1/n\) gives \(O_h(1)\) on either side of \(\sqrt r\).
+\end{proof}
+
+\paragraph{The upper charge endpoint is lower order.}
+Set \(x_i=\min(n_i,r-n_i)\). Reflection of either charge about \(r/2\) preserves the modulus of the integer sine kernel. Bound it by \(\pi x_i x_j/r\) at each edge. The factor \(f_{r,d_i}(n_i)\) is bounded by \(C r^{(3d_i+1)/2}x_i^{-d_i-1}\); at \(n_i>r/2\), this bound gains \((x_i/r)^2\) because the cosine in \eqref{eq:cap} vanishes at \(n_i=r\). Together with bounded pendant factors this gives an absolute bound after dividing by \(r^{2m-3/2}\):
+\[
+ C\prod_i x_i^{-1}\prod_{i:n_i>r/2}(x_i/r)^2.
+\]
+Summing any upper variable costs \(O(1)\), not \(O(\log r)\), and each lower variable costs at most \(O(\log r)\). So all terms with an upper variable are \(O(r^{2m-3/2}(\log r)^{m-1})\) in \(B_r\).
+
+\subsection{The polytope limit with a one-logarithm remainder}
+Write \(L=\log r\). After dividing by the explicit scalar in \eqref{eq:low}, we claim that replacing the oscillatory weight by the indicators defining \(\mathcal P\) costs \(O(L^{m-1})\) in the odd harmonic sum.
+
+\emph{Edge cutoffs.} Replace \(F_d(n/r)\) by one, using smoothness and \(F_d(0)=1\). The harmonic error is bounded because \(\sum_{n\le r/2}n^{-1}(n/r)=O(1)\). For fixed \(n\le r/2\), the weighted difference between a signed sinc and its hard edge cutoff is
+\[
+ \sum_{p\le r/2}\frac{1}{p}
+  \left|\sinc(\pi np/r)-\supp_{np\le r}\right|
+  \le C\left((n/r)^2\sum_{p\le r/n}p
+                    +(r/n)\sum_{p>r/n}p^{-2}\right)
+  \le C'.
+\]
+Summing over all integers here only enlarges the bound. Telescoping over the edges proves the stated error after all replacements. The error from upper charge endpoints was already bounded by the same scale.
+
+\emph{Pendant and spine cutoffs.} Replace all nonzero-framing pendant factors by \(\supp_{n_i>\sqrt r}\), one at a time. Lemma~\ref{lem:pendant} gives bounded harmonic error at that site and the other sites cost \(O(L^{m-1})\). Untwisted pendant factors are one. Separate the region on which any twisted spine charge exceeds \(\sqrt r\) by partitioning it according to the first such site. With all other charges fixed, the edge and pendant indicators and the partition constrain that site's charge to one interval. On its odd sites above \(\sqrt r\), Lemma~\ref{lem:quadratic} and summation by parts against the decreasing weight \(1/n\) give an \(O(1)\) bound. All other sums cost \(O(L^{m-1})\). Finally on the retained low intervals, replace each twisted phase by one with bounded harmonic cost, using \(|e^{\pi\ii w n^2/(2r)}-1|\le C_w n^2/r\).
+
+\emph{Polytope volume.} In the variable \(t=\log n/\log r\), the unnormalised odd harmonic measure below \(r/2\) has uniform cumulative mass \(tL/2+O(1)\) on \([0,1]\), by subtracting the even harmonic sum. Its difference from \((L/2)dt\) on every interval, with either endpoint included or omitted, is \(O(1)\). With the other coordinates fixed, every one-coordinate section of \(\mathcal P\) is an interval or empty, even in the zero-volume cases. Replace the coordinate measures one by one to get
+\[
+  \sum_{(\log n_i/\log r)\in\mathcal P}
+   \prod_i\frac{1}{n_i}
+  =(L/2)^m\vol(\mathcal P)+O(L^{m-1}),
+\]
+where all charges in the sum are odd and at most \(r/2\). In a pendant equality at \(\sqrt r\), either endpoint convention changes the estimate by at most \(O(L^{m-1})\). The exact prefactors in \eqref{eq:low} and \(S_{11}=\sqrt2\pi r^{-3/2}(1+O(r^{-2}))\) prove Theorem~\ref{thm:corona}.
+
+A doubly twisted pair forces \(t_i=1/2\); two adjacent twisted pendants together with their edge force both coordinates to equal \(1/2\). Either makes the volume zero. Otherwise choose \(t_i=3/5\) on twisted pendants and \(3/10\) elsewhere. This satisfies every defining inequality strictly, proving positive volume.
+

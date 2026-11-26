@@ -138,8 +138,16 @@ The two manuscripts use different stocks. The Lorentzian universal-cover rigidit
 
 These are separate model-scoped results. No map edge identifies a finite canonical register with a radiative bath, a stress-pole readout with a graviton pole, or a marked area inverse with nonlinear quantization.
 
+## WRT sewing and quantum topology
+
+- [48 · Leading logarithms of closed WRT invariants](../papers/48-wrt-leading-logarithms/README.md): An exact closed H-tree calculation and an irreducible corona family show nonzero leading logarithms of unbounded degree. The paired-tree face formula and all-length path law identify how the sewing graph controls the leading scale.
+- [49 · Semiclassical sewing and central WRT phases](../papers/49-wrt-semiclassical-sewing/README.md): The split classical cubic, calibrated adjoint APS phases and a signed Weyl pairing identify distinct semiclassical mechanisms for the specified capped sewings. A closed two-seam example and separately marked central sectors make the phase and endpoint effects explicit.
+- [50 · Graph detection and stability in WRT sewing](../papers/50-wrt-graph-detection-and-stability/README.md): Matched connector networks can have equal initial asymptotic data and distinct WRT coefficients; a leafless motif law detects hidden structure. Dense strict-template cores retain a positive signed coefficient under arbitrary sublinear maximum deletion degree, but linear-degree rearrangements can change its leading determinant.
+
+The closed WRT and Chern–Simons calculations are complementary to the marked open Turaev–Viro experiments in Papers 41, 42 and 42B. Their quantum invariants, normalizations and claims remain distinct.
+
 ## Using the routes
 
 The [paper index](PAPER-INDEX.md) links all manuscripts and distinguishes the original PDF/source packets, later analytical Markdown manuscripts and typeset analytical articles. Use packet notes for commands and dependencies, and the [verification overview](../VERIFICATION.md) for the distinction between proof, exact finite checks, numerical diagnostics and retained inputs. No additional scientific rerun is implied by this navigation layer.
 
-The 53 archive items are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.
+The 56 archive items are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.

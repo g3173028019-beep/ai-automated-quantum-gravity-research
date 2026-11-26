@@ -1,0 +1,113 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[expansion=false]{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\sig}{sig}
+\DeclareMathOperator{\CS}{CS}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\sinc}{sinc}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\E}{\mathbb E}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\title{Chern--Simons Phases and Degenerate Sewing\\in \texorpdfstring{$\mathrm{SU}(2)$}{SU(2)} WRT Invariants}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We compare exact oriented Witten--Reshetikhin--Turaev sewing with classical flat-connection data in three explicit regimes. In the opposite-cap H plumbing, the closed leading logarithm localizes in the actual quaternionic holonomy chart, where the Coulomb-reduced Chern--Simons action is an exact split cubic. The local density and its scale are obtained from the finite surgery sum. For opposite order-two caps on a graph, a deleted trace computes the absolute adjoint APS invariant, including singular characters; for closed odd cycles the signed leading coefficient is a convergent average of the actual one-loop torsion density, up to its fixed normalization. On a two-seam star, two noncentral branches meet the same central character with opposite APS jumps. Their individual boundary weights diverge, but the signed Weyl sum has a finite limit and differs from the independently computed central coefficient by a factor of \(i\). A separately marked calculation shows how an endpoint determinant changes when the sewing contains a loop. These are regime-specific comparisons, not a general stationary-phase formula for closed WRT invariants.
+\end{abstract}
+
+\section{Question and conventions}
+
+A finite torus sewing computes a complex number. Its semiclassical interpretation in terms of flat connections goes back to Witten~\cite{Witten}. A classical comparison should explain its action, its orientation-sensitive phase, and how the comparison changes when a noncentral fibre becomes central. These are different questions. In particular, the RT framing correction is not an adjoint eta invariant, and an equality of actions does not infer a density on a singular character variety. We keep the finite contraction and the classical spectral calculation separate until each comparison is made. Earlier marked Wilson sewing in the Turaev--Viro theory~\cite{Paper42B} motivates this distinction, but none of the closed oriented computations below use a doubled invariant.
+
+Write \(r=k+2\) for shifted level, \(1\le a,b<r\) for charges, and set
+\[
+ S_{ab}=\sqrt{2/r}\sin(\pi ab/r),\qquad
+ \Theta_{aa}=\exp(\pi\ii(a^2-1)/(2r)),\qquad
+ \kappa_r=e^{3\pi\ii/4-3\pi\ii/(2r)}.
+\]
+We normalize \(Z_r(S^2\times S^1)=1\), \(Z_r(S^3)=S_{11}\); in the alternative convention \(\tau_r=Z_r/S_{11}\). The operator defining the real adjoint rho invariant is
+\[
+ {\cal D}_A(\phi,\alpha)=(d_A^*\alpha,d_A\phi+*_3d_A\alpha),
+ \qquad \rho_{\rm ad}=\eta({\cal D}_A)-3\eta({\cal D}_{\rm triv}).
+\]
+Zero eigenvalues are omitted from eta and from signatures. The Chern--Simons convention uses the fundamental trace and the physical oscillation \(e^{2\pi\ii k\CS}\).
+
+For each graph vertex \(v\) take a punctured sphere times a circle, with one torus for each incident edge and for each listed nonzero cap weight \(p_{vj}\). The spine framing is zero. Coordinates \((z,h)\) on a torus are induced section and fibre, \(z\cdot h=1\). A cap of Kirby weight \(p\) has slope \(-pz+h\); the marked edge \(\epsilon_e S\), \(\epsilon_e=\pm1\), exchanges \(z,h\) with a simultaneous sign \(\epsilon_e\). These data define actual torus gluings even if the graph contains cycles. Let \(A_\epsilon\) be the signed adjacency and put \(Q=\operatorname{diag}(D_v)-A_\epsilon\), \(D_v=-\sum_j1/p_{vj}\).
+
+\begin{lemma}[Exact modular contraction]\label{lem:exact}
+Let \(d_v\) be the spine degree and \(c_v\) the number of caps at \(v\). Put \(C_p(a)=(S\Theta^pS)_{a1}\) and \(s=\sum_{v,j}\sgn p_{vj}\). Then the unmarked graph manifold has
+\begin{equation}\label{eq:finite}
+ Z_r=\kappa_r^{-s-\sig Q}
+ \sum_{\boldsymbol a}\prod_v
+ \frac{\prod_j C_{p_{vj}}(a_v)}{S_{1a_v}^{\,d_v+c_v-2}}
+ \prod_{vw}S_{a_va_w}.
+\end{equation}
+For any signed nonzero integer \(p\),
+\begin{equation}\label{eq:rec}
+ C_p(a)=\ii\sqrt{\frac{2}{r|p|}}\,
+ e^{\pi\ii\sgn p/4-\pi\ii(p+1/p)/(2r)}
+ \sum_{j\bmod|p|}
+    \sin\frac{\pi(a+2rj)}{rp}
+    e^{-\pi\ii(a+2rj)^2/(2rp)} .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Verlinde sewing gives the vertex denominator and the cap column. With the section Lagrangian on all ports, weight-zero cylinders and caps have matrices \(S\) and columns \(\Theta^p S|1\rangle\) before the incidence \(S\). One verifies these weights by testing against section-meridian solid tori: the test kernel equals the declared Lagrangian, so its Maslov correction vanishes. Signed swaps give the same \(S\) because all labels are self-dual. The actual simultaneous-interface seam kernel has the form \((T y,y)\), where a cap contributes the diagonal entry \(-p\) and an edge the hyperbolic block with off-diagonal \(-\epsilon_e\). If \(H\) sums incidence coordinates at each vertex, the product-block kernel is \(\{(H^{\mathsf T}x,y):Hy=0\}\). The interface Maslov form is \(T|_{\ker H}\), whose signature equals \(\sig T-\sig(HT^{-1}H^{\mathsf T})=-s-\sig Q\). The inertia identity holds also in the singular case: the common radical of the two complementary restrictions splits off in a hyperbolic summand. The unextended gluing rule multiplies by \(\kappa_r\) to this signature~\cite[IV.3.5, IV.7.1]{Turaev}; see also~\cite{GilmerMasbaum}. For \eqref{eq:rec}, the two sine products turn the defining sum into \(e^{-\pi\ii p/(2r)}[G(a-1)-G(a+1)]/(2r)\), where \(G(u)=\sum_{b\bmod 2r}e^{\pi\ii p b^2/(2r)+\pi\ii ub/r}\). Apply signed quadratic reciprocity~\cite[Prop.\ 2.3]{Jeffrey}; subtracting the neighboring squares gives \eqref{eq:rec}.
+\end{proof}
+
+\input{cubic.tex}
+\input{aps.tex}
+\input{weyl.tex}
+\input{marked.tex}
+\section{What remains distinct}
+
+In the H case the classical cubic and the actual leading closed logarithm are related by a density derived from a finite surgery sum. This does not allocate the next-order coefficient among equal-action characters. On the opposite-cap graph the absolute APS identity is topological even where the one-loop integrand is singular; an ordinary angular average still requires a separate integrability argument. At the central-fibre wall the correct quantum operation is to sum signed residues before taking the limit. A positive measure made by taking branch magnitudes first gives a different answer. Finally, the loop determinant calculation uses stated Wilson insertions. It does not give the unmarked leading coefficient or replace the signed regrouping at a Weyl wall.
+
+\begin{thebibliography}{20}
+\bibitem{APS} M.\,F.~Atiyah, V.\,K.~Patodi, and I.\,M.~Singer,
+\emph{Spectral asymmetry and Riemannian geometry. II},
+Math.\ Proc.\ Cambridge Philos.\ Soc.\ \textbf{78} (1975), 405--432.
+\bibitem{Auckly} D.~Auckly, \emph{Topological methods to compute Chern--Simons invariants},
+Math.\ Proc.\ Cambridge Philos.\ Soc.\ \textbf{115} (1994), 229--251,
+\href{https://www.math.ksu.edu/about/personal/dav/topmethCS.pdf}{author's copy}.
+\bibitem{GilmerMasbaum} P.\,M.~Gilmer and G.~Masbaum,
+\emph{Maslov index, Lagrangians, mapping class groups and TQFT},
+Forum Math.\ \textbf{25} (2013), 1067--1106,
+\href{https://arxiv.org/abs/0912.4706}{arXiv:0912.4706}.
+\bibitem{Jeffrey} L.\,C.~Jeffrey, \emph{Chern--Simons--Witten invariants of lens spaces and torus bundles, and the semiclassical approximation},
+Commun.\ Math.\ Phys.\ \textbf{147} (1992), 563--604,
+\href{https://webhomes.maths.ed.ac.uk/~v1ranick/papers/jeffrey.pdf}{article}.
+\bibitem{KKR} P.~Kirk, E.~Klassen, and D.~Ruberman,
+\emph{Splitting the spectral flow and the Alexander matrix},
+Comment.\ Math.\ Helv.\ \textbf{69} (1994), 375--416,
+\href{https://webhomes.maths.ed.ac.uk/~v1ranick/papers/kirklarub.pdf}{article}.
+\bibitem{Massuyeau} G.~Massuyeau,
+\emph{An introduction to the abelian Reidemeister torsion of three-dimensional manifolds},
+Ann.\ Math.\ Blaise Pascal \textbf{18} (2011), 61--140,
+\href{https://doi.org/10.5802/ambp.294}{doi:10.5802/ambp.294}.
+\bibitem{SWW} H.~Sun, S.~Wang, and J.~Wu,
+\emph{Self-mapping degrees of torus bundles and torus semi-bundles},
+\href{https://arxiv.org/abs/0810.1799}{arXiv:0810.1799}, Prop.\ 1.5.
+\bibitem{Toffoli} E.~Toffoli,
+\emph{The Atiyah--Patodi--Singer rho invariant and signatures of links},
+Proc.\ Edinburgh Math.\ Soc.\ \textbf{65} (2022), 404--440,
+\href{https://arxiv.org/abs/2011.00525}{arXiv:2011.00525}.
+\bibitem{Turaev} V.\,G.~Turaev,
+\emph{Quantum Invariants of Knots and 3-Manifolds}, de Gruyter, 1994.
+\bibitem{Witten} E.~Witten, \emph{Quantum field theory and the Jones polynomial},
+Commun.\ Math.\ Phys.\ \textbf{121} (1989), 351--399.
+\bibitem{Paper42B} \emph{Wilson Phase and Rational Sewing in Turaev--Viro Theory},
+Project manuscript no.~42B, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/blob/main/docs/PAPER-INDEX.md}{manuscript index}.
+\end{thebibliography}
+\end{document}

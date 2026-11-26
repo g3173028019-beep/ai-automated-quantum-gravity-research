@@ -1,0 +1,21 @@
+\begin{proof}[Proof of Theorem~\ref{thm:hcase}]
+The two caps at a trivalent center leave the vector
+\[
+ u_r(a)=\frac{|(S\Theta^2S)_{a1}|^2}{S_{1a}}
+       =\sqrt{2/r}\,\mathbf1_{r-a\ {\rm odd}}
+                      \cot\bigl(\pi(r-a)/(2r)\bigr)
+\]
+by \eqref{eq:cap}. The ordinary signature is zero, so \(Z_r=u_r^{\mathsf T}S u_r\). For \(1\le b<r\) the following odd cotangent transform is exact:
+\begin{equation}\label{eq:cot-transform}
+ \sum_{n\ {\rm odd}<r}\cot(\pi n/(2r))\sin(\pi nb/r)=r/2.
+\end{equation}
+For clarity, over the full length-\(N\) grid the transform
+\(\sum_{n=1}^{N-1}\cot(\pi n/N)\sin(2\pi jn/N)\) equals \(N-2j\) for \(1\le j<N\). At \(j=1\) the summand is \(1+\cos(2\pi n/N)\), and differences for consecutive \(j\) sum to \(-2\) by root orthogonality. Subtract the even part of the full \(N=2r\) sum and fold about \(r\); the midpoint cotangent is zero. This proves \eqref{eq:cot-transform}. Sine reflection then gives \((Su_r)(b)=(-1)^{b+1}\), which has sign \((-1)^r\) on the support of \(u_r\). The exact formulas follow with \(Z_r=S_{11}\tau_r\).
+
+Subtract \(2r/(\pi n)\) from the odd cotangent summand. The resulting smooth Riemann sum is
+\[
+ \frac r2\int_0^1\left[\cot(\pi x/2)-\frac{2}{\pi x}\right]dx+O(1)
+       =\frac r\pi\log(2/\pi)+O(1).
+\]
+The subtraction itself sums to \((r/\pi)[\log r+\gamma_{\rm E}+\log2]+O(1)\) on both parities. This gives the stated finite constant and asymptotic estimates.
+\end{proof}

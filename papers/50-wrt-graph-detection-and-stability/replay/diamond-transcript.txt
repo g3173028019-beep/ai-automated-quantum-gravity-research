@@ -1,0 +1,3 @@
+cycle counts and diamond counts: ((4, 2, 4), 1) ((4, 2, 4), 0)
+exact diamond integral: 1/467775
+actual relative mesoscopic coefficient: 7072/4455

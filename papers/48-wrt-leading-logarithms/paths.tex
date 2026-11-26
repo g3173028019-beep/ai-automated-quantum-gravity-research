@@ -1,0 +1,79 @@
+\section{Paths of arbitrary length}\label{sec:paths}
+
+The corona theorem attains a sequence of unbounded log degrees. A plain path shows a different distinction: even paths support an ordered family of growing defects, whereas on odd paths the defects that remain after summation have an absolutely summable joint law. The distinction follows from an exact finite transform, including the upper half of the charge grid.
+
+\begin{lemma}[Degree-two transfer]\label{lem:fejer}
+Let \(1\le a,b<r\), and put \(\delta_r(a)=\min(a,r-a)\). Then
+\[
+ \sum_{\substack{1\le l<r\\l\ {\rm odd}}}
+ \frac{\sin(\pi al/r)\sin(\pi bl/r)}{2\sin^2(\pi l/(2r))}
+     =\frac r2\min\bigl(\delta_r(a),\delta_r(b)\bigr).
+\]
+\end{lemma}
+\begin{proof}
+Extend to all odd \(l<2r\). Reflection halves the answer, since the midpoint, if present, contributes zero. At \(\theta=\pi l/r\), the identity for the product of the two sines gives half the difference of \((1-\cos j\theta)/(1-\cos\theta)\) at \(j=a+b\) and \(j=|a-b|\). For \(j>0\) this last ratio is
+\[
+ j+2\sum_{u=1}^{j-1}(j-u)\cos(u\theta).
+\]
+On the \(r\)-point odd grid the only nonconstant possible frequency below \(2r\) is \(u=r\), which sums to \(-r\). Hence the grid sum is \(r\min(j,2r-j)\), also correct for \(j=0\). The difference and the reflection give \(r[\min(a+b,2r-a-b)-|a-b|]/4\), as stated.
+\end{proof}
+
+Let \(P_N\) denote the zero-framed backbone path of \(N\) nodes, with two opposite order-two caps at every node as in Section~\ref{sec:conventions}. Write \(Z_N(r)=Z_r(M_{P_N})\), and set
+\[
+ U_r(n)=\frac1{2\sin^2(\pi n/(2r))},\qquad
+ W_r(n)=\cot\frac{\pi n}{2r},\qquad
+ M_r(n,n')=\min\bigl(\delta_r(n),\delta_r(n')\bigr).
+\]
+All remaining sums below are over odd \(1\le n_j<r\). Eliminating alternate sites by Lemma~\ref{lem:fejer} and the end cotangent transform gives
+\begin{align}
+ Z_{2m+1}(r)&=\sum_{\boldsymbol n}
+      \prod_{j=1}^m U_r(n_j)\prod_{j=1}^{m-1}M_r(n_j,n_{j+1}), \label{eq:oddexact}\\
+ Z_{2m}(r)&=(-1)^r\sqrt{2/r}\sum_{\boldsymbol n}
+       W_r(n_m)\prod_{j=1}^{m-1}U_r(n_j)M_r(n_j,n_{j+1}). \label{eq:evenexact}
+\end{align}
+Indeed the weight at an end in the reflected grid is \(\sqrt{2/r}\,W_r(n)\); at a degree-two site it is \(U_r(n)=W_r(n)/\sin(\pi n/r)\). The signature vanishes and each edge contributes \((-1)^r\sqrt{2/r}\) times its sine. Thus the common prefactor before alternate elimination is \((-1)^{r(N-1)}(2/r)^{(N+1)/2}\). For \(N=2m+1\) the two end transformations and \(m-1\) internal transformations give \((r/2)^{m+1}\). For \(N=2m\) one end and \(m-1\) internal transformations give \((r/2)^m\). No cutoffs or signs are removed in these formulas. In particular the overlap of two neighbors is represented by just one \(M_r\) factor.
+
+\begin{theorem}[Parity of paths]\label{thm:paths}
+For each fixed \(m\ge1\),
+\begin{align*}
+ Z_{2m}(r)
+ &=\frac{(-1)^r\sqrt2}{m!\,\pi^{2m-1}}
+        r^{2m-3/2}(\log r)^m
+     +O_m\!\left(r^{2m-3/2}(1+\log r)^{m-1}\right),\\
+ Z_{2m+1}(r)
+ &=\left(\frac2{\pi^2}\right)^m r^{2m}
+       \left(K_m+O_m\!\left(\frac{(1+\log r)^{m-1}}{r}\right)\right),\\
+ K_m&=\langle v,T^{m-1}v\rangle>0,\qquad
+      v(n)=n^{-1},\quad T(n,n')=\frac1{\max(n,n')},
+\end{align*}
+where \(T\) is on the space of square-summable sequences of positive odd labels. In the sphere normalization each displayed power of \(r\) increases by \(3/2\) and each leading coefficient is divided by \(\sqrt2\,\pi\).
+\end{theorem}
+\begin{proof}
+Use the smooth profiles \(F(x)=(\pi x/(2\sin(\pi x/2)))^2\) and \(A(x)=(\pi x/2)\cot(\pi x/2)\), both \(1+O(x^2)\) near zero. Then \(U_r(n)=2r^2F(n/r)/(\pi^2 n^2)\) and \(W_r(n)=2r A(n/r)/(\pi n)\).
+
+For odd \(N\), the limiting kernel after extracting \((2r^2/\pi^2)^m\) is
+\[
+ \prod_j n_j^{-2}\prod_{j<m}\min(n_j,n_{j+1})
+       =v(n_1)v(n_m)\prod_{j<m}T(n_j,n_{j+1}).
+\]
+The equality includes \(m=1\) with \(v(n)^2\). The positive operator \(T\) is bounded by the Schur test with weight \(n^{-1/2}\). Its scalar recurrence \(f_0=v,\ f_{k+1}=Tf_k\) has the form
+\[
+ f_{k+1}(n)=n^{-1}\sum_{l\le n,\ l\ {\rm odd}}f_k(l)
+              +\sum_{l>n,\ l\ {\rm odd}}f_k(l)/l .
+\]
+Splitting the sum at \(n\) proves \(f_k(n)\le C_k(1+\log n)^k/n\). The limiting weight at any fixed site \(n_i=n\), summed over the other sites, is \(f_{i-1}(n)f_{m-i}(n)\le C_m(1+\log n)^{m-1}/n^2\). The tail at \(n>r/2\) is therefore \(O_m((1+\log r)^{m-1}/r)\). This envelope controls the exact sum as well since \(M_r(n,n')\le\min(n,n')\) and \(F\) is bounded. On the lower grid the replacement \(F(n/r)\to1\) costs the same amount by the bound \(O((n/r)^2)\) and the same conditioned sum. This gives the odd formula.
+
+For even \(N\), extract \((-1)^r2^{m+1/2}r^{2m-3/2}/\pi^{2m-1}\) in \eqref{eq:evenexact}. The rest is a harmonic sum with densities \(\prod_j n_j^{-1}\), the bounded \(F,A\) profiles and factors \(M_r(n_j,n_{j+1})/n_j\le1\). Any coordinate above \(r/2\) contributes only \(O(1)\) of harmonic mass in that coordinate, so every such sector costs \(O_m((1+\log r)^{m-1})\). The same bound pays for replacing the profiles by one. On the lower grid the transfer factors are \(\min(1,n_{j+1}/n_j)\). They equal one on the ordered region \(n_1\le\cdots\le n_m\); away from it some adjacent inversion has harmonic cost
+\[
+   \sum_{a>b}\frac1{ab}\frac ba
+             \le \sum_{a\le r/2}a^{-2}\,\#\{b<a\}=O(1+\log r),
+\]
+while the other coordinates have at most \(m-2\) logs. The ordered harmonic mass is \(((\log r)/2)^m/m!+O_m((1+\log r)^{m-1})\), by permuting the unrestricted harmonic sum; coincident pairs supply a convergent \(n^{-2}\) factor and cost at most \(O_m((1+\log r)^{m-2})\) if \(m\ge2\). For \(m=1\) the ordered mass is simply the odd harmonic sum. This proves the even formula.
+\end{proof}
+
+For \(P_3\), \eqref{eq:oddexact} even gives \(Z_3(r)=(r^2-\mathbf1_{r\ {\rm odd}})/4\). Indeed the full odd-grid sum of \(\csc^2(\pi n/(2r))\) is \(r^2\), by differentiating the cotangent multiplication identity; reflection omits the midpoint when it exists. For \(P_4\) the leading term is \((-1)^r r^{5/2}(\log r)^2/(\sqrt2\,\pi^3)\). With the same four backbone vertices, the three-leaf star instead leads as \((-1)^r7\zeta(3)r^{7/2}/(4\sqrt2\,\pi^3)\), because its three leaves independently contribute the finite cotangent transform and leave just one summable center defect. In fact the exact star expression is
+\[
+ (-1)^r\sqrt{r/2}\sum_{m\ {\rm odd}<r}
+      \bigl(1+\cos(\pi m/r)\bigr)\csc^3(\pi m/r).
+\]
+Its cubic pole at zero gives the displayed leading constant; the remaining two simple poles contribute only \(O(r^{3/2}\log r)\).

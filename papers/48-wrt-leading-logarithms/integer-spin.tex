@@ -1,0 +1,21 @@
+\appendix
+\section{Odd-level integer-spin normalization}
+\begin{corollary}[The odd-level integer-spin theory]\label{cor:so}
+For odd \(r\) the same closed manifolds have a genuine unitary \(\mathrm{SO}(3)\) invariant, normalised by \(\tau_r^o(S^3)=1\), with
+\[
+ \frac{\tau_r^o(M)}{\kappa_o^{-\sigma}e^{-\pi\ii W/(2r)}r^{2m}}
+ =2^{-m}\pi^{-2m}\vol(\mathcal P)(\log r)^m
+     +O_{\mathcal T,w,h}((\log r)^{m-1}).
+\]
+Here \(W=\sum_i(w_i+h_i)\) and \(\kappa_o\) is the Kirby phase of the integer-spin theory.
+\end{corollary}
+\begin{proof}
+The odd labels \(a\) form the integer-spin modular subcategory with matrix \(S^o_{ab}=\sqrt{2}S_{ab}\) and the restricted twists. Write any full label as \((a,s)\), denoting \(a\) for \(s=0\) and \(r-a\) for \(s=1\). Direct sine reflection and twist division factor the full modular data into the odd-label data and the pointed factors
+\[
+ S^s=2^{-1/2}\begin{pmatrix}1&1\\1&-1\end{pmatrix},
+ \qquad T^s=\operatorname{diag}(1,\zeta),\qquad
+ \zeta=e^{\pi\ii(r-2)/2}.
+\]
+This is the usual splitting of the odd-root theories \cite{KM}. Every factor in the exact Kirby sum, including the anomaly correction and \(S_{11}\), factors accordingly. Both cap sums in the pointed theory are \((S^s(T^s)^{\pm2}S^s)_{s0}=\supp_{s=1}\). Thus all \(2m\) backbone labels have pointed index 1. The exact pointed closed factor is \(-2^m\kappa_s^{-\sigma}\zeta^W\), by counting the \(2m-1\) negative backbone edges and the resulting dimension factors. Divide Theorem~\ref{thm:corona} by this nonzero factor. For odd \(r\), \((-1)^W e^{\pi\ii W(r^2-1)/(2r)}\zeta^{-W}=e^{-\pi\ii W/(2r)}\), giving the asserted phase.
+\end{proof}
+

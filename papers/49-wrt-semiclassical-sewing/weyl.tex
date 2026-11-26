@@ -1,0 +1,83 @@
+\section{A signed Weyl collision at a central fibre}\label{sec:wall}
+
+In a zero-Euler triple, write \(t=a/r\) for the unreflected fibre angle in units of \(\pi\), and \(u_j\) for the even reciprocal residues of \eqref{eq:rec}. Thus \(\sum_j1/p_j=0\) and in a resolved bulk term the local resonance is \(\Lambda=\sum_j u_j/p_j\in\Z\), with parity supplied by adjacent corners. Define
+\[
+ P_u(t)=\prod_{j=1}^3\sin[\pi(u_j+t)/p_j].
+\]
+At a central wall \(e=0\) or \(1\) the signed Weyl involution \(u\mapsto u'=-u-2e\) preserves the resonance parity. In the endpoint class the axes reverse and \(u_j+e\) becomes its negative. The quadratic frequency changes by \(4e\Lambda\), since the reciprocal sum is zero, so its \(r\)-phase is unchanged. In particular
+\begin{equation}\label{eq:weyl-pair}
+ P_{u'}(e+s)=-P_u(e-s),\qquad
+ \lim_{t\to e}\frac{P_u(t)+P_{u'}(t)}{\sin\pi t}
+  =\frac{2(-1)^e}{\pi}P_u'(e).
+\end{equation}
+This cancels an individual simple pole after signed grouping, not after replacing each residue by its absolute value. We next compare a finite wall value with a distinct physical central charge coefficient.
+
+\begin{theorem}[Closed two-seam star]\label{thm:star}
+Take a three-vertex path with positive swaps, central caps \((4,4,-2)\) and four \(+2\) caps on each leaf. There are two actual resolved noncentral branches meeting the same central character at \(t=1\), all with \(\CS=0\). In the orientations above their adjoint rho invariants are respectively \(-3,-7\) in the interior and \(-5\) at the common endpoint. The two branch densities diverge individually; their signed sum has limit \(i\) times the nonzero central coefficient at that tuple. In the full unmarked contraction
+\begin{equation}\label{eq:star}
+ \frac{Z_r}{r^5}=(1+(-1)^r)\left[
+       \frac{e^{5\pi\ii/4}}{4\sqrt2\,\pi^2}
+      +\frac{3\zeta(3)e^{-\pi\ii/4}}{2\sqrt2\,\pi^4}\right]+o(1).
+\end{equation}
+The coefficient on odd levels is zero; no conclusion at lower orders is asserted.
+\end{theorem}
+
+\subsection{Actual flat phases}
+
+The leaves have negative fibre and four trace-zero cap holonomies. Use a fixed axis \(\mathbf i\) for the central block, with fibre angle \(t\), and the two residue triples \(u=(0,0,0)\) and \((-2,-2,-2)\). They have \(\Lambda=0\). At \(t=1\), using opposite axes, their cap holonomies become the same signed matrices; the three angles then are \((\pi/4,\pi/4,\pi/2)\). One can keep the ordered four-cap leaf products flat as \(t\) changes: choose the first pair product a pure unit quaternion perpendicular to the central axis, and the other pair product its inverse times the required inverse section. Both products are noncentral, and each admits a circle of trace-zero pair realizations, continuously along these paths. This gives the same endpoint tuple on both sides by the free pair choices. At the central endpoint these four-cap leaf products equal \(-1\). One may vary a first pair product continuously to \(+1\) and the other to \(-1\) along one axis, then align all axes; this is a flat deformation to an abelian endpoint. The central eigenline has spine coordinates \(-1/2\) and cap coordinates \(s_j/(2p_j)\) with \(s_j\) odd, taken as signed unit labels here. The marked trace matrix times this vector is integral by the cap and product relations. Its square modulo one is \(-2/2+\sum s_j^2/(4p_j)\): the omitted sum of cap eigenphases is integral by the product relations (there are two edges). The centre cap contribution is zero, and the two leaf contributions are \(1/2\) each. The square is therefore zero modulo one. By the eigenline transgression and the actual flat paths, the common CS is zero.
+
+The absolute spectral computation can be made without using the quantum phases. At the central endpoint, \eqref{eq:deletion} gives \(3\sig Q=-3\), \(Q_I=0\) (only a central axis with Euler weight zero), and cap lens sum \(-2\). In detail the nontrivial signed order-\(|p|\) adjoint-plane lens correction for residue \(a\) is
+\[
+ L(p,a)=4a^2/p-4\sgn(p)a+2\sgn(p),\qquad 1\le a<|p|.
+\]
+A trivial character has zero correction, not the polynomial value at zero. This is the two conjugate lines of the lens cotangent formula~\cite[Sec.\ 2.3]{Toffoli}, in the oriented terminal trace convention of \eqref{eq:deletion}. Here \(L(4,1)=-1\), \(L(\pm2,1)=0\); thus the central value is \(-5\).
+
+For the interior choose \(t=1/2\) and compress both tori at slopes \((1,2)\) viewed from the middle and \((2,1)\) from the leaves. These slopes have trivial fundamental holonomy. To see the absolute defect, use the common-boundary cut-and-paste formula~\cite[Thm.\ 3.9]{Toffoli}. The replaced seam cylinders closed by matching meridians are \(S^2\times S^1\)'s with rho zero (flat extension over \(D^3\times S^1\)). With \(\beta=b/a\) for each filling slope and \(K_v=D_v+\sum\beta\), the component kernel is
+\[
+ x_{ve}=J_{ve}c_v,\qquad \sum_eJ_{ve}^*y_{ve}=-D_v c_v,
+\]
+where \(W_e\) is the fixed space of the peripheral local system, \(I_v\) the local fixed space and \(J_{ve}:I_v\to W_e\) its inclusion. On the trivial factor this is the section sum and common fibre relation. In a noncentral fibre the other two coefficient directions are acyclic; at the central leaves with no invariant vector the boundary section maps in the punctured base are injective by the surface pair sequence, and only the fibre kernel remains after the genuine fills. For clarity the resulting defect signatures are
+\[
+ \tau_E=\sum_v(\dim I_v)\sgn K_v-\sum_e\dim W_e-\sig Q_I,\qquad
+ \tau_o=\sum_v\sgn K_v-|E|-\sig Q.
+\]
+Indeed on an anti-swap torus kernel use \(q_e=(y_{ve}-\beta_{ve}x_{ve})/\sqrt{\beta_{ve}}\); the other side is its transported signed image after the reciprocal scaling. With incidence \(Aq\) formed by summing these images on \(I_v\) with weights \(\sqrt\beta\), decomposition into the cap and component kernels gives \(K_I c=-Aq\). The Maslov form reduces to \(A^*K_I^{-1}A-I\); its complementary Schur form is \(K_I-AA^*=Q_I\). Ordinary coefficients have the same calculation with scalar invariant spaces. The anti-swap, rather than the ordinary graph of the seam isometry, is the kernel here.
+
+In this example \(K=(4,-3/2,-3/2)\), each \(W_e\) is a line, and the only local invariant is the centre axis. Hence \(\tau_E=-1,\tau_o=-2\), giving defect \(\tau_E-3\tau_o=5\). Each filled leaf contributes \(-3\) by \eqref{eq:deletion}, since its local \(I\) vanishes and the new order-two lens has zero rho. On the filled centre compare with the bare zero-Euler triple (ordinary section fills at its two spine ports). Its adjoint plane is a conjugate pair of flat lines. In this comparison those line systems on the ports are acyclic; the two auxiliary opposite-orientation order-two lens line values vanish. The ordinary Maslov form is \(\sum_{\text{ports}} a_e b_e q_e^2\) on \(\sum b_e q_e=0\): subtract the ordinary section direction in each decomposition and use the zero-Euler sum of fibre components. This is positive of dimension one, so the filled central adjoint rho is twice its bare line rho minus two.
+
+The bare line has holonomy \(e^{2\pi\ii t}\) on the fibre, and fractions \((u_j+t)/p_j\) on the cone loops. At \(t=0\) its two values are \(0,-2\): by \eqref{eq:deletion}, the first system is trivial, and the second has two order-four residues \(2\) giving \(2L(4,2)=-4\) on the conjugate plane. These bare line values persist to \(t=1/2\). To check the possible jump at zero, the Euler-zero Seifert form \(\xi\) can be chosen invariant and closed with fibre period one (the homomorphism \(h\mapsto1,z_j\mapsto1/p_j\) gives its de Rham class). In the local product metric \(d_t=d_0-2\pi\ii t\,\xi\wedge\). The nonzero fibre weights are acyclic near zero and all integer Fourier weights are acyclic for \(0<t<1\) by the contraction with the circle generator. Horizontal zero-weight harmonic lines split by type, with mixed operator slopes \(-2\pi t\) on \((1,0)\) and \(+2\pi t\) on \((0,1)\), since \(*_2(dx+\ii dy)=-\ii(dx+\ii dy)\). For the trivial line the base sphere has no horizontal harmonic one-forms, and the scalar/vertical pair has opposite signs. For the second line the base orbifold weights \((1/2,1/2,0)\) give invariant holomorphic degree \(-1\) on the sphere, as does the conjugate line; their \(H^1\)'s are zero. Thus no eta jump at zero in either case. The local eta variation on the flat cylinder vanishes (the only curvature is proportional to \(dt\wedge\xi\), with zero square). The interior values on the full star are consequently \(2(0)-2-6+5=-3\) and \(2(-2)-2-6+5=-7\). Along the chosen flat paths the odd-signature kernel dimension is constant on \(0<t<1\): the middle block has \(b_1=2\) on its common axis and each leaf \(b_1=5\) (five holed base of rank three, no invariant, then four line cap kills). The seam \(H^1\) map has rank three (two independent leaf section images plus one middle section direction); the \(H^0\) map has rank one from two seam lines. Global \(b_1=10\), \(b_0=0\). Thus no nonzero-mode crossing changes these absolute values along the paths.
+
+\subsection{Exact lattice comparison and the wall limit}
+
+The global Maslov exponent in \eqref{eq:finite} is \(-8\), since the cap sign sum is \(9\) and \(\sig Q=-1\). With \(t=a/r\), one leaf contributes \(L_r(a)=\sum_b C_2(b)^4 S_{ab}/S_{1b}^3\). Formula \eqref{eq:rec} gives exactly
+\[
+ L_r(a)=-(-1)^{r+a+1}e^{-5\pi\ii/r}r^2\,l_r(t),\quad
+ l_r(t)=\frac8{r^3}\sum_{\substack{d\ {\rm odd}\\d<r}}
+ \frac{\cos^4(\pi d/2r)}{\sin^3(\pi d/r)}
+ e^{-\pi\ii d^2/r}\sin(\pi td).
+\]
+Thus \(l_r\to t(1-t)\) by the odd cubic sine series, uniformly on \([0,1]\). Indeed the lower weights are bounded by \(C/d^3\) and the upper range gives \(O(r^{-2})\), using the fourth-order cosine zero. Likewise \(l_r\) has uniformly bounded first derivative (multiply the weights by \(d\)), and for every fixed endpoint lattice defect \(f\), \(r l_r(f/r)\to f\) and \(r l_r(1-f/r)\to f\) (differentiate the dominated sine series at the endpoints, using odd \(d\)). In particular \(|l_r|\le C\min(t,1-t)\). The two leaf signs square out.
+
+The remaining normalized centre term is
+\[
+ \frac{e^{-\pi\ii/4}}{4\sqrt2\,r}
+ \sum_{a=1}^{r-1}\frac{l_r(t)^2}{\sin^3(\pi t)}
+ \sum_{\substack{j,j'\bmod4\\\ell\bmod2}}
+  P_{(2j,2j',2\ell)}(t)\,
+     e^{-\pi\ii r(j^2+j'^2-2\ell^2)/2}
+     e^{-\pi\ii a(j+j'-2\ell)/2},
+\]
+times a common \(1+O(1/r)\) from the finite twists. The resonant residues satisfy \(j+j'=2\ell\bmod4\). The four terms at each action \(0,1/2\) sum to \(\sin\pi t\), with the latter group multiplied by \((-1)^r\). For example, if \(x=\pi t/4\), the complementary residues each give \(-\sin^2 x\sin2x\) and \(+\cos^2 x\sin2x\) in pairs. The resonant Riemann sum therefore gives the bulk part, using \(\int_0^1[t(1-t)/\sin\pi t]^2\,dt=6\zeta(3)/\pi^4\). For the integral, integrate \(p(t)\csc^2(\pi t)\), \(p=t^2(1-t)^2\), twice by parts against \(\cot\pi t\) and \(\log\sin\pi t\); then \(p''=12(t^2-t+1/6)\) and the two cosine series give this value. Endpoint logarithms are square integrable, so the Fourier pairing is legitimate.
+
+The nonresonant residues contribute the endpoint regimes. Uniformly, their summand with the oscillating phase removed is \(O(1/f)\) and its one-step difference is \(O(1/f^2)\), where \(f=\min(a,r-a)\), by the bounded derivative of \(l_r\) and its linear endpoint bound. The frequency gap is at least a quarter-period, so discrete parts make the tail with \(f>N\) uniformly \(O(1/N)\). Thus one may evaluate fixed defects first and then remove their cutoff. The positive endpoint is zero because its \(-2\) cap sine vanishes. At the negative endpoint each of four ordered angle pairs from \((\pi/4,3\pi/4)\), with third angle \(\pi/2\), lands at a pair-product interval wall. Pairing the two Weyl signs of each actual endpoint cap gives the sine sum \(\sum_{d\ge1}\sin(\alpha d)\sin(\beta d)\sin(\pi d/2)/d=\pi/8\): the three-sine Dirichlet sum is \(\pi/4\) in the strict pair interval and takes half its value at the wall. This elementary identity follows by product-to-sum and the linear sine series. The full magnitude of each tuple is \(1/(8\sqrt2\pi^2)\) with unit phase \(e^{5\pi\ii/4}\); explicitly the centre reciprocal constant \(e^{-\pi\ii/4}/(4\sqrt2)\) is multiplied by \((2\ii)^3\sin\alpha\sin\beta\sin(\pi/2)=-4\ii\), then by \(\pi^{-3}(\pi/8)\). Two endpoint tuples have phase one and two have the \(r\)-frequency \((-1)^r\), from the squares of their odd cap residues. The previously removed resonant sum vanishes pointwise at the wall, so this endpoint computation does not double count it. This proves \eqref{eq:star}.
+
+The two specified branches have signed numerators
+\[
+ P_1=-\sin^2(x)\sin(2x),\qquad P_2=\cos^2(x)\sin(2x).
+\]
+Their unit quantum phases are \(e^{3\pi\ii/4},e^{-\pi\ii/4}\), exactly the two independently computed APS phases. At \(t=1\) they approach opposite simple pole terms with nonzero magnitudes; \(P_1+P_2=\frac12\sin\pi t\). For the same action and cap-class tuple their grouped density in \(dt=d(a/r)\) is
+\[
+ A_{\rm pair}(t)=\frac{e^{-\pi\ii/4}}{8\sqrt2}
+                   \left[\frac{t(1-t)}{\sin\pi t}\right]^2 .
+\]
+Its boundary value is \(i\) times the central weight \(e^{5\pi\ii/4}/(8\sqrt2\pi^2)\) found above. This relates a limiting density to a coefficient in a separate charge regime, not an atom in that density. Neither a universal quarter-turn law nor the general absolute phase of every noncentral saddle is inferred.

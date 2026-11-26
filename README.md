@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**53 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 27 typeset analytical articles**
+**56 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 30 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 53 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 56 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -18,7 +18,7 @@ Positive physical states for coupled fields, quantitative geometry–matter info
 | **What remains stable when discrete geometry is changed?** | [17 · Cartan–Regge closure](papers/17-cartan-regge-closure/) treats the finite first-order reduction; [11 · Causal Regge transfer](papers/11-causal-regge-transfer/) isolates a finite Lorentzian channel; [22 · Lorentzian Regge Airy asymptotics](papers/22-lorentzian-regge-airy/manuscript.md) resolves the behavior of a specific saddle merger. |
 | **Which radiative quantities can be transported or measured?** | [23 · Gravitational memory and boosts](papers/23-gravitational-memory-boost/manuscript.md) treats its stated memory sector; [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md) studies a separate finite-aperture record in a specified graviton vacuum. |
 
-These routes connect the 20 original packets with the thirty-three later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
+These routes connect the 20 original packets with the thirty-six later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
 
 ## New TeX and PDF manuscripts
 
@@ -26,6 +26,9 @@ These routes connect the 20 original packets with the thirty-three later analyti
 
 | Paper | Result | Files |
 |---|---|---|
+| [48 · Leading logarithms of closed WRT invariants](papers/48-wrt-leading-logarithms/README.md) | An exact closed H-tree calculation and an irreducible corona family show nonzero leading logarithms of unbounded degree. The paired-tree face formula and all-length path law identify how the sewing graph controls the leading scale. | [PDF](papers/48-wrt-leading-logarithms/manuscript.pdf) · [TeX](papers/48-wrt-leading-logarithms/main.tex) · [Verification](papers/48-wrt-leading-logarithms/VERIFICATION.md) |
+| [49 · Semiclassical sewing and central WRT phases](papers/49-wrt-semiclassical-sewing/README.md) | The split classical cubic, calibrated adjoint APS phases and a signed Weyl pairing identify distinct semiclassical mechanisms for the specified capped sewings. A closed two-seam example and separately marked central sectors make the phase and endpoint effects explicit. | [PDF](papers/49-wrt-semiclassical-sewing/manuscript.pdf) · [TeX](papers/49-wrt-semiclassical-sewing/main.tex) · [Verification](papers/49-wrt-semiclassical-sewing/VERIFICATION.md) |
+| [50 · Graph detection and stability in WRT sewing](papers/50-wrt-graph-detection-and-stability/README.md) | Matched connector networks can have equal initial asymptotic data and distinct WRT coefficients; a leafless motif law detects hidden structure. Dense strict-template cores retain a positive signed coefficient under arbitrary sublinear maximum deletion degree, but linear-degree rearrangements can change its leading determinant. | [PDF](papers/50-wrt-graph-detection-and-stability/manuscript.pdf) · [TeX](papers/50-wrt-graph-detection-and-stability/manuscript.tex) · [Verification](papers/50-wrt-graph-detection-and-stability/VERIFICATION.md) |
 | [44 · Gravitational region sewing](papers/44-gravitational-region-sewing/README.md) | The minimum independent register for a bracket-preserving linear dressing is the cross-pairing rank. Linked linear graviton charges require ten pairs per independent link for a single electric–magnetic pairing. A propagating polarization instead has continuous spectral load, yielding quantitative finite-reservoir obstructions on planar and Schwarzschild cuts. | [PDF](papers/44-gravitational-region-sewing/manuscript.pdf) · [TeX](papers/44-gravitational-region-sewing/main.tex) · [Verification](papers/44-gravitational-region-sewing/VERIFICATION.md) |
 | [45 · Vacuum stress and its massless pole](papers/45-vacuum-stress-massless-pole/README.md) | The large-window vacuum variance is an explicit positive functional times the massless-shell atom. Only a helicity-zero stress tensor structure survives on that shell. A separate scalar–tensor model distinguishes Ricci focusing and the bare source from the complete linear gravitational charge. | [PDF](papers/45-vacuum-stress-massless-pole/manuscript.pdf) · [TeX](papers/45-vacuum-stress-massless-pole/main.tex) · [Verification](papers/45-vacuum-stress-massless-pole/VERIFICATION.md) |
 | [46 · The common Einstein light cone](papers/46-einstein-scalar-common-cone/README.md) | For positive strongly hyperbolic scalar modes with independent gradients on an open attained family, equality of the scalar and Einstein characteristic sets forces a positive nonlinear sigma model with a potential. Two exact constrained data families distinguish this property from hyperbolicity alone. | [PDF](papers/46-einstein-scalar-common-cone/manuscript.pdf) · [TeX](papers/46-einstein-scalar-common-cone/main.tex) · [Verification](papers/46-einstein-scalar-common-cone/VERIFICATION.md) |
@@ -136,7 +139,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All 53 manuscripts, with results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 56 manuscripts, with results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |

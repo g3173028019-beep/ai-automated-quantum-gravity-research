@@ -1,0 +1,29 @@
+\section{Conventions and the common finite cap calculation}\label{sec:conventions}
+We use the standard framed-unknot tree link. Root the bookkeeping tree and realize every child as a small meridian of its parent away from the other meridional clasps. Each framing is taken relative to the zero longitude and each edge is a positive Hopf clasp. This fixes a specific link, not just its linking numbers. At each backbone vertex the two additional terminal meridians have framings \(+2,-2\). We work with standard unitary modular data as follows.
+For the standard unitary \(\mathrm{SU}(2)\) modular data at \(r=k+2\ge3\), set
+\[
+ S_{ab}=\sqrt{2/r}\sin(\pi ab/r),\qquad
+ \theta_a=e^{\pi\ii(a^2-1)/(2r)},\qquad
+ \kappa_r=S_{11}^{-1}\sum_{a=1}^{r-1}S_{1a}^{\,2}\theta_a,\quad |\kappa_r|=1.
+\]
+Labels are \(1\le a,b<r\), with vacuum \(1\). Write \(\tau_r(S^3)=1\) and \(Z_r(S^2\times S^1)=1\), so \(Z_r(S^3)=S_{11}\) and \(Z_r=S_{11}\tau_r\). Here the twist \(\Theta=\operatorname{diag}(\theta_a)\) carries no central-charge scalar.
+
+For a framed tree \(\Gamma\), the bare modular contraction is
+\[
+ B_r=\sum_{(a_v)}
+     \prod_{v\in V(\Gamma)}S_{1a_v}^{\,2-\deg_\Gamma(v)}\theta_{a_v}^{f_v}
+     \prod_{uv\in E(\Gamma)}S_{a_u a_v}.
+\]
+For the standard plumbing link \(L\) its Kirby-color evaluation is \(D^{|\Gamma|+1}B_r\), where \(D=S_{11}^{-1}\). This follows by multiplying the framed colored tree evaluation by \(S_{1a}/S_{11}\) at every vertex and noting \(2|V|-|E|=|V|+1\) \cite[App.~A]{GPPV}. The closed modular surgery formula is \(Z_r=D^{-|\Gamma|-1}\kappa_r^{-\sigma}J_\Omega(L)\), so
+\[
+ Z_r=\kappa_r^{-\sigma}B_r,\qquad \tau_r=Z_r/S_{11}.
+\]
+This formula is not restricted to nonsingular linking matrices: a \(\pm1\) stabilising unknot multiplies \(J_\Omega\) by \(D\kappa_r^{\pm1}\), and the zero-framed unknot gives \(D^{-2}\sum_a (S_{1a}/S_{11})^2=1\). All cap labels are summed in \(J_\Omega\); no operator or marked core is left in \(M\).
+
+At a backbone charge \(a=r-n\) the two caps give
+\begin{equation}\label{eq:cap}
+ |(S\Theta^2 S)_{a1}|^2=\frac4r\,\supp_{n\text{ odd}}\cos^2(\pi n/(2r)),\qquad
+ \Theta=\operatorname{diag}(\theta_a).
+\end{equation}
+Indeed, with \(G(j)=\sum_{l\bmod2r}e^{\pi\ii(l^2+jl)/r}\), the matrix coefficient is \(e^{-\pi\ii/r}[G(a-1)-G(a+1)]/(2r)\) by the sine product and reflection. Shifting \(l\) by 1 gives \(G(a+1)=e^{-\pi\ii a/r}G(a-1)\). Shifting by \(r\) gives zero if \(r+j\) is odd; otherwise \(|G(j)|^2=4r\) since only differences \(0,r\bmod 2r\) survive the squared sum. These are \eqref{eq:cap}.
+

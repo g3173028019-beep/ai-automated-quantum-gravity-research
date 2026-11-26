@@ -163,3 +163,11 @@ Each paper is a self-contained analytical article. Run `latexmk -pdf -halt-on-er
 - [45 · Vacuum stress and its massless pole](../papers/45-vacuum-stress-massless-pole/README.md)
 - [46 · The common Einstein light cone](../papers/46-einstein-scalar-common-cone/README.md)
 - [47 · Spacelike area tomography](../papers/47-spacelike-area-tomography/README.md)
+
+## Building Papers 48–50
+
+Build from each paper’s directory using the TeX entry listed in its README, with the bundled section files alongside it. The verification notes describe the scope of the proof checks and any included finite replays.
+
+- [48 · Leading logarithms of closed WRT invariants](../papers/48-wrt-leading-logarithms/README.md)
+- [49 · Semiclassical sewing and central WRT phases](../papers/49-wrt-semiclassical-sewing/README.md)
+- [50 · Graph detection and stability in WRT sewing](../papers/50-wrt-graph-detection-and-stability/README.md)

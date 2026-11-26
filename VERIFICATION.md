@@ -115,3 +115,11 @@ The proofs and typeset sources were checked internally and the PDFs were built f
 - [45 · Vacuum stress and its massless pole](papers/45-vacuum-stress-massless-pole/README.md): [proof and build checks](papers/45-vacuum-stress-massless-pole/VERIFICATION.md).
 - [46 · The common Einstein light cone](papers/46-einstein-scalar-common-cone/README.md): [proof and build checks](papers/46-einstein-scalar-common-cone/VERIFICATION.md).
 - [47 · Spacelike area tomography](papers/47-spacelike-area-tomography/README.md): [proof and build checks](papers/47-spacelike-area-tomography/VERIFICATION.md).
+
+## Verification for Papers 48–50
+
+The paper-level notes record the proof and build checks, with exact or finite replays identified as such. Internal review is separate from external peer review.
+
+- [Paper 48 verification](papers/48-wrt-leading-logarithms/VERIFICATION.md)
+- [Paper 49 verification](papers/49-wrt-semiclassical-sewing/VERIFICATION.md)
+- [Paper 50 verification](papers/50-wrt-graph-detection-and-stability/VERIFICATION.md)

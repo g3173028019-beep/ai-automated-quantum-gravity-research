@@ -1,0 +1,240 @@
+\section{Fixed connectors: topology beyond three coefficients}\label{sec:fixed}
+Let \(H_0,G_0\) be bipartite \(4+4\) graphs whose A-to-B row masks, with bit \(j\) referring to \(B_j\), are
+\[
+ H_0=(3,7,11,12),\qquad G_0=(3,5,14,14).
+\]
+Append \(g\ge1\) distinct B sites, each adjacent to all four A sites, obtaining \(H_g,G_g\). These are connected, leafless and nonisomorphic: the two original degree-three B sites have identical neighbor sets in one graph and different sets in the other, and the two bipartition sizes \(4,4+g\) are unequal. Denote \(\lvert\tau_r(M_{\square(H)})\rvert\) by \(W_r[H]\); this is distinct from the function \(W(s)\) below.
+
+\begin{theorem}[Fixed fourth-log distinction]\label{thm:fixed}
+For every fixed \(g\ge1\), the normalized moduli \(W_r[H_g]/A_{m,q}(r)\) and \(W_r[G_g]/A_{m,q}(r)\), with \(m=8+g,\ q=10+4g\), have expansions through \(L^{m-3}\). The first three coefficients coincide. The full fourth-coefficient difference is
+\[
+ C_4(H_g)-C_4(G_g)=\frac{g\,\mathcal R}{(g+2)(g+3)(g+4)(g+5)}>0,
+ \qquad \mathcal R=2\int_0^\infty W(s)\bigl(W(s)-s\bigr)\dd s,
+\]
+where \(W(s)=\int_0^\infty K(x)\bigl(K(e^{-s}x)-1\bigr)\dd x/x\).
+The result holds as \(r\to\infty\) over all integer shifted levels separately for each \(g\).
+\end{theorem}
+
+\begin{proof}
+We first compare the entire cap and lattice correction, then subtract the continuous logarithmic products before computing their coefficients.
+
+\paragraph{Finite weights versus the continuous reference.}
+For odd \(a\ge1\) define
+\[
+ p(a)=\sum_{c\ge1,\ c\ {\rm odd}}\max(a,c)^{-2},\quad
+ c_p=\tfrac12(\gamma+\log2)+\tfrac14,\quad
+ \mu_p=\sum_{a\ {\rm odd}}p(a)\delta_{\log a},\quad
+ \mu_0=h_0\,\dd t+c_p\delta_0 .
+\]
+Here \(\gamma\) is Euler's constant. Counting the odd pairs with maximum \(a\) gives
+\(\sum_{a\le X,\ {\rm odd}}(p(a)-1/a)=\#\{a\le X:a\text{ odd}\}
+\sum_{c>X,\ {\rm odd}}c^{-2}=1/4+O(1/X)\).
+Thus \(D(t)=(\mu_p-\mu_0)([0,t])=O(e^{-t})\), and both measures have uniformly bounded unit-interval masses. For fixed connector degree \(d\), \eqref{eq:square} yields \(p_{r,d}(a)=p(a)+O(r^{-1})\) on the lower half: \(W_r(a)\) differs from its infinite \(F_2=1\) counterpart by \(O(a^2/r)\). After all incident reflections the upper weight is \(O(s_a/r^2)\). These bounds apply in any mixture of replaced and unreplaced weights.
+
+For a leafless fixed connector define
+\[
+ V_H=\operatorname{vol}\{0\le x_i\le1:\ x_i+x_j\le1\ (ij\in E(H))\},
+ \qquad \mathcal D_H=\sum_{\deg_H(v)=2}V_{H-N[v]} .
+\]
+Volumes include isolated surviving sites and assign volume one to the empty set. Set \(\Phi(u)=K(e^{-u})\). The difference between \(h_0^{-m}P_H(r)\) and the reference integral on \([0,L]^m\) with measure \((\mu_0/h_0)^{\otimes m}\) and edge weights \(\Phi(L-t_i-t_j)\) is
+\begin{equation}\label{eq:micro}
+ \Gamma\,\mathcal D_H L^{m-3}+o(L^{m-3})
+\end{equation}
+for a universal \(\Gamma\). For a degree-\(d\) cap replacement, retaining the \(d\) adjacent sine bounds costs \(O((1+L)^{m-d-1})\): their neighboring harmonic sums are \(O(1+\log(r/s_a))\), and \(r^{-1}\sum_{a\le r/2}(1+\log(r/a))^d=O(1)\). Thus degree at least three is negligible. For degree two, condition on its neighbors \(b,c\). The conditional difference tends, at fixed odd \(b,c\), to
+\[
+ h_0\int_0^1\frac{M(x)-1}{x}K(bx)K(cx)\dd x,\quad
+ M(x)=F_4(x)\,j(\min(x,1-x))/x,\quad
+ j(u)=\pi\int_0^u v\cot(\pi v)\dd v .
+\]
+Indeed \(W_r(rx)/r\to j(\min(x,1-x))\) by the odd-mesh \(\min\)-square integral, whose derivative for the lower half is \(\pi x\cot(\pi x)\). Upper reflection of the conditioned site absorbs both incident denominators, giving \(O(s_a/r^2)\) instead of \(O(1/s_a)\). Splitting the conditioned sum at \(r/\max(b,c)\) gives \(C(1+\log\max(b,c))/\max(b,c)\) after reflection, summable against \(1/(bc)\). Upper branches of the two neighbors vanish pointwise after their incident reflections. With these charges fixed the other normalized coordinates give \(V_{H-N[v]}\): constraints to a fixed charge affect only the top boundary of the exponent cube, and any edge between the fixed charges tends to one.
+
+Next telescope \(\mu_p\) to \(\mu_0\) and integrate \(D\) by parts. If the differentiated kernel's high neighbor at \(t\) has degree at least three, retaining two other edges gives \(O((1+L-t)^2)\) after integrating their other coordinates. The product with \(\min(1,e^{2(s+t-L)})|D(s)|\) leaves only \(O(L^{m-4})\). At a degree-two high neighbor write its coordinate \(L-y\), and the opposite low coordinate \(z\); the local factor is \(D(s)\Phi'(y-s)\Phi(y-z)\). The high-site mesh tends to \(h_0\dd y\), the same deletion volume appears, and the \(z,y\) integrals are dominated against \(O((1+s)^2)|D(s)|\). The two derivative origins see \(\mu_p,\mu_0\) once each at the opposite low coordinate, independent of the telescoping order. With \(B_p(y)=\int_0^\infty\Phi(y-z)\mu_p(\dd z)\) and \(B_0\) defined analogously, their sum uses \(\int(B_p^2-B_0^2)\dd y\), since \(B_p-B_0=\int D(s)\Phi'(y-s)\dd s\). Combining the mesh and cap terms in the \(h_0^{-m}\) normalization gives
+\[
+ \Gamma=4\int_0^\infty \bigl(M(e^{-y})B_p(y)^2-B_0(y)^2\bigr)\dd y.
+\]
+This is integrable by \(M(e^{-y})=1+O(e^{-2y})\), \(B_p-B_0=O(e^{-y})\) at infinity, and the upper cap cancellation at zero. The leading \(V_H L^m>0\) allows removal of the modulus at all displayed orders; \(\pi/[r\sin(\pi/r)]\) affects none of them.
+
+The only degree-two sites of either graft are old B sites. Their deletion invariants agree: reverse B coordinates to \(x_A\le y_B\), where each linear extension contributes volume \(1/(m-3)!\) after deletion. In an old order let \(j\) count sites after the final surviving A; insert the \(g\) labeled twins in \((g+j)!/j!\) ways. By appending unused vertices only when their predecessors have appeared, the common old deletion histogram is \((0,0,4,24,0)\) for \(j=0,\ldots,4\), checked also by the supplied integer certificate. Thus \eqref{eq:micro} cancels.
+
+\paragraph{Ordered-gap cancellation.}
+Reverse B coordinates and sort the \(m-a\) free values after choosing \(a\) atoms. A pins lie at 0 and B pins at \(L\). Each edge spans an interval of consecutive gaps. Forward edges give \(1+f_+\), backward edges \(f_-\), where \(f_+(u)=\Phi(u)-1\), \(f_-(u)=\Phi(-u)\) for \(u\ge0\), evaluated at the sum of that edge's gaps. An edge between pins gives \(1+O(e^{-2L})\). If the chosen defect intervals use \(b'\) gaps, integrate out the others at unit Jacobian to get
+\((L-\sum z)_+^{m-a-b'}/(m-a-b')!\) times the product of the \(f\)'s in the used gaps. A term using every gap is exponentially small; all products decay exponentially in the sum of used gaps. Consequently coefficients through order \(m-3\) require only \(a+b'\le3\).
+
+For reproducibility, enumerate free orders and pin sets, include every backward defect, and insert optional forward defects while their union has at most \(3-a\) gaps. Store the multiset of signed nonempty gap masks, canonically minimizing over permutations of the selected gap labels. Identical lists have identical integrals. Only \(d=0,1,2,3\) prototype twins are needed: each touched twin is pinned or in a nontrivial gap-contracted block, costs a distinct pin or gap, and every nontrivial free block contains an A. An untouched twin must be after the last A-block. If \(j\) old B singletons follow that block, insertion has multiplicity
+\(\binom gd(g-d+j)!/j!=g!\binom{g-d+j}j/d!\).
+If the last A is absorbed into the fixed right endpoint no untouched twin fits; at most two can be touched, and \(g=1,2\) are checked directly. The finite signed count of the stated masks is
+\[
+(d,j)=(0,1): -2\mathcal S,\qquad (d,j)=(0,2): 2\mathcal S,
+\qquad \mathcal S=\operatorname{sig}_{\rm gaps}(C_4-2P_4+M_2),
+\]
+in the no-atom signature, with all other sectors zero. Here \(M_2\) denotes two disjoint edges, and \(\mathcal S\) uses exactly three gaps. The bundled C++/Python replay checks the entire integer signature, including \(g=1,2\); this is a finite exact count, not a numerical integral. The insertion multiplier yields \(g!g(g+1)\mathcal S\), so only the fourth continuous coefficient differs, with denominator \((g+5)!\).
+
+To evaluate its integral, take ordered A coordinates \(p,p+s\) and put \(q'=L-p-s\). The B transfers for both neighbors and for a single high or low neighbor are
+\(H_{\mathrm{tr}}=\int_{-p-s}^{q'}\Phi(u)\Phi(u+s)\dd u\),
+\(J_n=\int_{-p-s}^{q'}\Phi(u)\dd u\), and
+\(J_f=\int_{-p}^{q'+s}\Phi(u)\dd u\).
+Including both A orders, the contrast has integrand
+\(2(H_{\mathrm{tr}}-J_n)(H_{\mathrm{tr}}-J_f)\).
+The exponential tails of \(\Phi-\mathbf1_{u\ge0}\) give differences
+\(W(s)+O(e^{-p-s}+e^{-2q'-2s})\) and \(W(s)-s+O(e^{-2q'}+e^{-p})\).
+Thus the integral is \(L\mathcal R+O(1)\). Finally the integral of \(K(x)(1-\cos(\pi z x))\dd x/x\) for \(0\le z\le1\) equals
+\(\tfrac12[(1+z)\log(1+z)+(1-z)\log(1-z)]\), by inserting damping, differentiating, integrating the sine-product Frullani formula, and removing damping. Averaging with \(z=e^{-s}v\) for \(v\in[0,1]\) shows \(W(s)<0\) and \(W(s)=O(e^{-2s})\). This gives \(\mathcal R>0\) and completes the coefficient calculation.
+\end{proof}
+
+\section{Growing connectors: when leading data forget incidence}\label{sec:growing}
+Let a fixed bipartite core have \(n\) A labels and \(b\) old B sites with nonempty neighborhoods \(S\subseteq[n]\), and append \(g\) universal B sites. The number \(q\) of connector edges may now depend on \(g\). Define the character \(J_a(x)=\sin(\pi a x)/(a\sin(\pi x))\) and the B transfer
+\[
+ T_{r,S}(\boldsymbol a)=\sum_{c<r,\ c\ {\rm odd}} p_{r,0}(c)\prod_{i\in S}J_{a_i}(c/r),
+ \qquad B_r(\boldsymbol a)=\Bigl(\prod_i Q(a_i/r)\Bigr)T_{r,[n]}(\boldsymbol a).
+\]
+Conditioning on A in \eqref{eq:square} gives the exact product of each old \(T_{r,S}\), the common \(B_r^g\), and the individual \(p_{r,d_i}\), with \(d_i\) the old A degree. Reflect upper A labels before multiplying these factors. At every old B label \(c\) odd, \(K((r-s)c/r)=(s/(r-s))K(sc/r)\) and \(Q((r-s)/r)s/(r-s)=Q(s/r)\). Thus \(B_r\) is unchanged as a function of the reflected labels, and the reflected A measure has lower contribution \(p_{r,d_i}(s)\) and upper contribution \(p_{r,d_i}(r-s)(s/(r-s))^{d_i}\), where the original labels are odd and the reflection midpoint is counted only once. The upper weight is \(O(s/r^2)\) as in Section~\ref{sec:fixed}. In particular the exact high degree of the newly added sites does not enter the sitewise constants.
+
+For \(\boldsymbol s\) reflected, write \(M_S=\max_{i\in S}s_i,\ M=M_{[n]}\). Uniformly,
+\begin{equation}\label{eq:bound}
+ T_{r,S}(\boldsymbol s)=h_0(L-\log M_S)+O(1),\qquad
+ B_r(\boldsymbol s)=h_0(L-\log M)+O(1).
+\end{equation}
+For \(c\le r/2\) the exact weight is \(p(c)+O(1/r)\); use \(|J_a|\le1\), \(|1-J_a(x)|\le C\min(1,(ax)^2)\) on the lower half, and \(|J_a(x)|\le C/(ax)\) there. Split at \(c=r/M_S\): replacing the kernel by one below the cut and bounding it with the maximal charge above each cost \(O(1)\) in the harmonic mass. The upper \(c\) contribution is bounded by \(p_{r,0}(c)=O((r-c)/r^2)\), with the characters bounded by one. The ratio \(Q(s_i/r)=1+O((M/r)^2)\) costs at most \(O(1)\) times the logarithmic estimate. This proves \eqref{eq:bound}, with no positivity assertion at finite \(r\).
+
+For fixed odd \(\boldsymbol a\), define
+\[
+ \rho(x)=\frac{F_2(x)j(\min(x,1-x))}{x^2},\qquad
+ \mathcal C_S(\boldsymbol a)=c_p+h_0\int_0^1
+       \Bigl[\rho(x)\prod_{i\in S}J_{a_i}(x)-\frac1x\Bigr]\dd x .
+\]
+The integral converges since \(\rho(x)=1/x+O(x)\) near zero and \(\rho(x)=O(1-x)\) at the other end. Subtracting the harmonic mass and using the odd Riemann sum and the endpoint bounds of Section~\ref{sec:fixed} gives \(T_{r,S}-h_0L\to\mathcal C_S\). For this fixed-label limit \(\prod Q(a_i/r)=1+O(r^{-2})\) as well.
+
+\begin{proposition}[Two distinct charge localizations]\label{prop:thermal}
+If \(g/L\to\alpha>0\), the signed reduced scalar divided by \((h_0L)^{g+b}\) tends to the positive Gibbs mass
+\[
+ Z_n(\alpha)=\sum_{\boldsymbol a\ {\rm odd}\ \ge1}
+       \prod_i p(a_i)\exp\bigl(\alpha\mathcal C_{[n]}(\boldsymbol a)/h_0\bigr).
+\]
+In the separate regime \(g\to\infty,\ g=o(L)\), put \(T=L/g\). The same normalized scalar divided further by \(T^n\) tends to \(h_0^n n!\), with normalized limiting A-charge density \(e^{-\max_i u_i}/n!\) for \(u_i=\log(s_i)/T\). In either regime the leading normalized invariant has no dependence on the internal incidence of the fixed core. When comparing raw values the prefactor \(A_{m,q}(r)\) must be restored.
+\end{proposition}
+\begin{proof}
+At finite \(\alpha\) the common factor satisfies
+\(\lvert B_r/(h_0L)\rvert^g\le C_\alpha M^{-\alpha/2}\), using \eqref{eq:bound} and \(1+x\le e^x\). Together with the A measure bound \(C/s_i\) this is summable, even with any fixed power of \(1+\log M\), by grouping according to \(M\). The upper A labels vanish pointwise, and the fixed lower ones give the stated Gibbs mass with a positive all-one term. In the mesoscopic regime the common factor goes to \(e^{-\max u_i}\) on compact scaled sets and has absolute bound \(Ce^{-\max u_i}\) globally, again by \eqref{eq:bound}. Each old transfer divided by \(h_0L\) tends to one on compacts. The measures \(\mu_p/T\) in the scaled log coordinate converge to \(h_0\dd u\) and have uniformly bounded masses on scaled unit intervals; the upper contribution and lower errors vanish on each compact with the same tail domination. Layer cake in the radial maximum gives \(\int e^{-\max u}\dd^nu=\int_0^\infty t^n e^{-t}\dd t=n!\). Both proofs apply to bounded tests and show that the signed real scalars are eventually positive.
+\end{proof}
+
+\subsection{A finite-subtraction comparison and a positive motif law}
+A useful transparent family begins with a simple \(d\)-regular graph \(J\) of \(n\) vertices. Its vertices are the A sites; each old edge contributes one B site \(S=\{i,j\}\). One may add a common old universal B site in both cores to ensure connectivity. Then append \(g\) universal B twins. Write \(H_g,G_g\) for the two resulting connectors from \(J_H,J_G\) with the same \(n,d\). The exact reflected A product is invariant under any permutation of labels, since the original A degrees agree sitewise. In the finite product expand each old \(T_{r,S}\) as \(h_0L+X_{r,S}\). A term selects \emph{distinct} old B sites, leaving shared A variables shared. An old universal site has the same symmetric factor in each sum. Every lower sector cancels at finite \(r,g\) if the counts of the selected edge shapes in that sector agree, including any shared vertices and isolated padding. This prevents errors from subtracting two separately approximated leading terms.
+
+\begin{theorem}[First eligible mesoscopic comparison]\label{thm:motif}
+Suppose the selected-edge shape counts agree at every order below \(\ell\). Set
+\[
+ Z_J(z)=\int_{[0,1]^n}\prod_{uv\in E(J)}[1-z\max(x_u,x_v)]\,\dd^n x,\qquad
+ C(x,y)=\tfrac12(x^2+y^2)-\max(x,y)+\tfrac13 .
+\]
+For \(g\to\infty,\ g=o(L)\),
+\begin{equation}\label{eq:motif}
+ g^\ell\frac{W_r[H_g]-W_r[G_g]}{W_r[G_g]}
+ \longrightarrow \frac{(n+\ell)!}{n!}[z^\ell](Z_{J_H}-Z_{J_G}).
+\end{equation}
+The coefficient on the right is a sum over \(\ell\)-edge motifs with no degree-one vertices:
+\[
+ [z^\ell](Z_{J_H}-Z_{J_G})
+ =\sum_F (N_{J_H}(F)-N_{J_G}(F))\,\int\prod_{uv\in E(F)}C(x_u,x_v)\,\dd^{|V(F)|}x .
+\]
+Every weight in this sum is strictly positive. An exact signed cancellation can still occur between different motifs. For \(g/L\to\alpha>0\), the analogous first eligible limit scales by \(L^\ell\) instead of \(g^\ell\) and equals \(h_0^{-\ell}\) times the Gibbs expectation of the degree-\(\ell\) difference of \(\prod_{\rm old\ }(1+z\mathcal C_S)\).
+\end{theorem}
+\begin{proof}
+Under \eqref{eq:bound}, on the scaled log domain \(X_{r,S}/(h_0T)\to-\max_{i\in S}u_i\). Its polynomial growth in the maximum is absolutely dominated by the common exponential bound. Degree \(j\) sectors, after normalizing by the leading mass, are \(O(g^{-j})\), so the exactly canceled sectors below \(\ell\) cannot reappear as measurement or approximation errors. The remaining homogeneous polynomial at degree \(\ell\) gets radial factorial \((n+\ell)!\) from the same layer cake as in Proposition~\ref{prop:thermal}. At \(g/L\to\alpha>0\) one instead has \(X_{r,S}\to\mathcal C_S\) on each fixed-label configuration, and the summable Gibbs envelope tolerates its fixed powers; this yields the last assertion. In both cases the physical prefactors match and the reduced scalars are eventually positive.
+
+For the centering, let \(U_z(x,y)=1-z\max(x,y)\). There is a positive continuous \(a_z\), analytic near \(z=0\), satisfying
+\[
+ \int U_z(x,y)a_z(y)^{d-1}\dd y=a_z(x)N_z,\qquad N_z=\int a_z^d,\qquad a_0=1 .
+\]
+The derivative of right minus left at the constant \(1\) is \(f\mapsto f+\int f\), a bounded isomorphism on \(C[0,1]\), so the implicit function theorem applies. With \(\mu_z=a_z^d\dd x/N_z\) the kernel \(B_z=U_z/(a_z\otimes a_z)-1\) has exactly zero mean in each variable. By regularity \(Z_J=N_z^n\int\prod_{uv}(1+B_z(x_u,x_v))\prod_i\mu_z(\dd x_i)\); a chosen subgraph with a leaf integrates to zero. Differentiating at zero gives \(B_z=zC+O(z^2)\) uniformly. Lower shape agreement gives the displayed coefficient formula. Agreement only of lower leafless motif counts suffices for this hard polynomial, but has not been used in the actual finite WRT cancellation.
+
+The kernel \(C\) is the mean-zero Neumann Green kernel, as follows from \(-\partial_x^2 C=\delta_y-1\) and zero end derivatives and zero mean. Its absolutely uniform expansion is \(\sum_{m\ge1}(\pi m)^{-2}e_m(x)e_m(y)\), \(e_m(x)=\sqrt2\cos(m\pi x)\). At a vertex every integral of incident cosine products is a nonnegative multiple of the number of sign choices with signed frequencies summing to zero. A strictly positive term exists for a connected leafless graph: choose a signed incidence matrix with a full-support rational kernel vector. When there are no bridges, use ordinary oriented incidence since removing any edge leaves rank unchanged. With bridges, remove them and consider the resulting block tree. Each leaf block contains a cycle (otherwise a singleton leaf block would have original degree one). Mark one edge of a cycle in each leaf block negative, others positive, using same-sign incidence at the two ends of a negative edge. Each side of any bridge has an unbalanced cycle and any nonbridge deletion leaves some unbalanced cycle intact. The connected signed-incidence rank is full in the presence of such a cycle, by propagating any left-null vector along the edges. Hence any one column removal leaves its rank unchanged, so there is a rational null vector nonzero on every column (avoid the finite union of proper coordinate hyperplanes). Clear denominators and use the magnitudes as integer frequencies, taking the local signs from the signed incidence relation. Disconnected motifs factor over components. This proves strict positivity.
+\end{proof}
+
+For example, if two \(d\)-regular cores have girth at least \(\ell\), their lower shape counts coincide: any source homomorphism with fewer edges lifts into the universal \(d\)-regular tree once its root is lifted, because all fundamental cycles map to walks too short to wind. Inclusion--exclusion on coincident labels turns these hom counts into injective ones and tolerates quotient loops (zero) and repeated edges (one constraint). At \(\ell\) the only leafless possibility is an \(\ell\)-cycle, whose weight is \(\Tr(C^\ell)=\zeta(2\ell)/\pi^{2\ell}\). Thus \(C_\ell\sqcup C_\ell\) versus \(C_{2\ell}\) gives arbitrarily deep first separating orders in the mesoscopic regime, with the common old universal B site making both connectors connected.
+
+With shorter cycles present, counts of cycles alone can fail at the first eligible order. In a regular core triangle and four-cycle equality implies all selected-edge shape counts match through four: remove source leaves (factor \(d\)) and isolated vertices (factor \(n\)); the only nonempty leafless cores remaining are triangles and squares, and the noninjective part of the square count is governed by smaller quotients. Then use the same inclusion--exclusion. At order five the only possibilities are the pentagon and the diamond \(D=K_4-e\); their weights are \(1/93555\) and \(1/467775\). The latter follows by integrating \(C(x,y)(C^2(x,y))^2\dd x\,\dd y\), where \(C^2(x,y)=\int C(x,u)C(u,y)\dd u\); splitting the inner polynomial at \(x,y\) and doubling the ordered triangle uses \(\int_{0\le x\le y\le1}x^iy^j\dd x\dd y=1/[(i+1)(i+j+2)]\). The signed hard coefficient is therefore
+\begin{equation}\label{eq:diamond}
+ \frac{5\Delta c_5+\Delta N(D)}{467775}.
+\end{equation}
+Here is a matched cubic pair \(D_H,D_G\) on vertex labels \(0,\ldots,11\):
+\[
+\begin{array}{c|l}
+D_H&(0,1),(0,4),(0,8),(1,4),(1,9),(2,5),(2,7),(2,11),(3,6),\\
+ &(3,7),(3,11),(4,9),(5,8),(5,11),(6,7),(6,10),(8,10),(9,10)\\
+D_G&(0,4),(0,5),(0,9),(1,2),(1,9),(1,11),(2,6),(2,9),(3,4),\\
+ &(3,7),(3,8),(4,5),(5,7),(6,10),(6,11),(7,8),(8,10),(10,11).
+\end{array}
+\]
+Both have \((c_3,c_4,c_5)=(4,2,4)\), while summing \(\binom{|N(u)\cap N(v)|}{2}\) over edges gives one diamond in \(D_H\) and none in \(D_G\). Thus the full mesoscopic modulus contrast is positive at \(g^{-5}\), with coefficient \(17!/(12!\,467775)\). The exact edge lists and the polynomial integrations are also checked by the replay.
+
+\subsection{A sign reversal from competing hard and soft motifs}\label{sec:reversal}
+Construct two further cubic graphs on 12 labels:
+\[
+\begin{array}{c|l}
+C_H&(0,3),(0,4),(0,6),(1,4),(1,10),(1,11),(2,8),(2,9),(2,11),\\
+ &(3,5),(3,10),(4,7),(5,9),(5,11),(6,7),(6,8),(7,9),(8,10)\\
+C_G&(0,3),(0,5),(0,10),(1,3),(1,4),(1,5),(2,6),(2,8),(2,10),\\
+ &(3,7),(4,9),(4,10),(5,11),(6,7),(6,11),(7,8),(8,9),(9,11).
+\end{array}
+\]
+They have no triangles or diamonds; their four-cycle counts are both two, but their five-cycle counts are five and six. Let \(J_H\) consist of five copies of \(D_H\) and one \(C_H\), and let \(J_G\) be the corresponding G copies. These edge graphs have \(n=72\), \(b=108\). Add one common old universal B site so the bipartite cores are connected, and then graft \(g\) twins as before.
+
+\begin{theorem}[Actual modulus reversal]\label{thm:reversal}
+For the specified cores, as \(g\to\infty,\ g=o(L)\) their actual closed WRT moduli obey
+\[
+ \frac{W_r[H_g]-W_r[G_g]}{W_r[G_g]}
+ =\mathcal A g^{-6}+\mathcal B g^{-5}T^{-2}
+    +o(g^{-6}+g^{-5}T^{-2}),\qquad T=L/g,
+\]
+where
+\[
+ \mathcal A=\frac{2449558508}{945}>0,\qquad
+ \mathcal B=\frac{27010}{63}\left(\frac{\pi^2}{24}-\frac12\right)<0 .
+\]
+The sign is positive when \(g/L^{2/3}\to0\) and negative when \(g/L^{2/3}\to\infty\) within this regime. At finite limiting ratio \(\lambda\), the \(g^6\)-scaled gap has limit \(\mathcal A+\mathcal B\lambda^3\), with no sign asserted when that number is zero.
+\end{theorem}
+
+\begin{proof}
+All selected-edge shapes through four match. By \eqref{eq:diamond} and \(\Delta c_5=-1,\ \Delta N(D)=5\), the hard coefficient of degree five also cancels. For the hard sixth coefficient an exact useful recurrence is obtained by integrating on \([0,t]^S\), retaining edges within \(S\), and splitting by the maximal site \(v\). If the coefficient of \(z^q\) is \(c(S,q)t^{|S|+q}\), then
+\[
+ c(S,q)=\frac1{|S|+q}\sum_{v\in S}\sum_{j=0}^{\min(q,d_S(v))}
+             (-1)^j\binom{d_S(v)}j c(S\setminus v,q-j),\qquad c(\varnothing,0)=1 .
+\]
+Use \(c(\varnothing,q)=0\) if \(q>0\); \(d_S(v)\) counts incident edges in \(S\). For the two component contrasts the degree-six coefficients are \(-3911/212837625\) and \(53/500500\), the degree-five coefficients \(1/467775\) and \(-1/93555\), and the common degree-one coefficient of each polynomial is \(-12\). Multiplying over the six components gives \([z^6]\Delta Z_J=11933/851350500\), since all cross contributions from the degree-five differences have the same multiplier and cancel. Layer cake gives \(\mathcal A=(78)!/72!\) times this rational coefficient. Selecting the common old universal B at sixth order leaves a degree-five angular difference, already zero, times the common radial maximum. Orders seven and above are \(O(g^{-7})\) after leading normalization.
+
+To obtain the competing fifth coefficient, retain the exact radial weight until all hard angular cancellations have occurred. Put \(t_i=\log s_i\), \(t=\max t_i\), and cut at \(t_*=L-\sqrt L\). Outside this body \eqref{eq:bound} bounds the normalized common power by \((2/\sqrt L)^g\) for large \(r\); the other masses cost only fixed powers of \(L\). The error is smaller than any prescribed negative power of \(L\) for every \(g\to\infty\). In the body upper A weights and the replacement of the lower A weights by \(p\) cost relatively \(O(e^{-\sqrt L})\), since \(s/r\le e^{-\sqrt L}\). Use a common shifted old reference \(h_0L+c_\infty\), with \(c_\infty=c_p+h_0\int_{\mathbb R}(\Phi(u)-\mathbf1_{u\ge0})\dd u\); lower cancellations are unchanged. On this body the needed transfers are
+\begin{align}
+ T_{r,\{i,j\}}-h_0 L-c_\infty&=-h_0\max(t_i,t_j)+h_0W(|t_i-t_j|)+R_{ij},\notag\\
+ B_r-h_0 L-c_\infty&=-h_0t+h_0\sum_{i\ne i_{\max}}W(t-t_i)+R_* .\label{eq:tieexp}
+\end{align}
+Here \(R_{ij}=O((1+t_{\{i,j\}})e^{-t_{\{i,j\}}}+e^{-\sqrt L})\) and \(R_*\) has the analogous one-site error plus \(O(Le^{-2\sqrt L})\) and a sum of \(O(e^{-\max(t-t_i,t-t_j)})\) for distinct nonmaximal \(i,j\).
+For clarity, the estimates follow by writing the character product around its maximum \(A\) as \(J_A\prod(1+(J_B-1))\). For the singleton, replace \(p_{r,0}\) by \(p\) in the lower half, \(J_A(x)\) by \(K(Ax)\), and extend the \(p\)-sum; the respective errors are bounded by \(C(1+\log A)/A+C A/r\) using the small-argument and \(1/(Ax)\) bounds in \eqref{eq:bound} (the reflected upper half has \(O((r-c)/r^2)\) weight). Integration by parts in the cumulative discrepancy \(D\) costs \(O(A/r)\), by
+\(\left|\partial_{\log c}K(Ac/r)\right|\le C\min((Ac/r)^2,1)\);
+the atom and continuum lower limit give the constant \(c_\infty\). With one difference \(J_B-1\) the same bounds hold: the discrepancy derivative for \(K(Ac/r)(K(Bc/r)-1)\) obeys the same estimate uniformly for \(B\le A\), and the continuum term after rescaling is \(h_0W(\log(A/B))\). For products containing at least two differences retain the smallest charge \(B\) and the maximal \(A\) in the bound: split \(c<r/A,\ r/A\le c<r/B,\ c\ge r/B\), to get \(O(B/A)\). This localizes at least two gaps. The immediate \(Q\) correction is \(O(Le^{-2\sqrt L})\). This proves \eqref{eq:tieexp}. The explicit cosine integral for \(W\) in Theorem~\ref{thm:fixed} also yields
+\[
+ w_0=\int_0^\infty W(s)\dd s
+   =-\sum_{j\ge1}\frac1{(2j)^2((2j)^2-1)}=\frac{\pi^2}{24}-\frac12 ,
+\]
+and \(W,W'\) decay exponentially (the derivative series is summable also at \(s=0\)).
+
+In an unnormalized fifth moment, a single \(W\) loses one free log by tying a pair, and replaces one growing factor (or costs \(T^{-1}\) when differentiating the common power). Its possible scale is \(T^{n+3}\), against \(T^{n+5}\) for the hard fifth term. With bounded unit log masses and common bound \(Ce^{-t/T}\), two soft factors lose at least one log while replacing two powers, hence give \(O(T^{n+2})\). The remainders in \eqref{eq:tieexp} either localize at least two logs or differences, or are negligible on the body; they give the same bound. The first two derivatives of the normalized common power with respect to the bounded base shift satisfy \(CT^{-j}e^{-t/T}\), \(j=1,2\), since the exponent is \(g\) and the base before normalization is \(L+O(1)-t\) with \(t\le t_*\).
+
+For the pure hard lattice comparison replace \(\mu_p\) by \(h_0\dd t+c_p\delta_0\) one coordinate at a time. A derivative of a hard edge maximum with respect to \(t_i\) vanishes unless the other endpoint is \(\le t_i\); thus the discrepancy \(D(t_i)\) exponentially pins \emph{two} coordinates and the derivative removes one power of \(T\). A radial derivative anchors all coordinates below \(t_i\) and costs \(T^{-1}\). If some anchored coordinates have already been pinned their log powers were already lost. Therefore the cumulative replacement error is \(O(T^{n+2})\). The continuous and the one- and two-atom contributions are zero: for every \(J\) the hard cube restricted to \([s,1]^n\) is
+\[
+ (1-s)^n(1-zs)^bZ_J(z(1-s)/(1-zs)).
+\]
+At \(s=0\), the first derivative is minus the sum of one-pin face integrals. The second derivative is twice the sum of two-pin integrals: the normal integrand derivative on a lower face vanishes a.e., since each neighboring argument is larger. Equality of the hard polynomials through order five thus kills these summed face differences, and by homogeneity their cancellations hold at each radius, including with the exact finite-\(g\) radial weight. Three or more pins are \(O(T^{n+2})\).
+
+For a linear tie, replacing all measures by \(h_0\dd t\) costs a further log: an atom or discrepancy anchors a changed coordinate as well as the tied gap, or if that coordinate belongs to the tie it anchors both partners. Integration by parts uses the exponential bounds on \(D,W,W'\); any ordering-boundary point, including a lattice equality, has the same loss, since a jump is evaluated with the anchored discrepancy or with lattice atom size \(O(e^{-t_i})\). On each of the two tie orientations substitute \(s=t_i-t_j\ge0\), collapse the two coordinates, and extend the gap integral to infinity. The Jacobian in \((t_i,s)\) is one; the error in the remaining Lipschitz maxima is bounded by \(|s|\) times a polynomial of one lower degree, and the endpoint error is exponentially anchored. Thus the leading multiplier for a collapsed tie is exactly \(2w_0\), with all these errors \(O(T^{n+2})\) on the fifth moment.
+
+A universal tie collides two global maximizers. The sum of the two-upper-face polynomials equals half of
+\(\partial_t^2(t^n Z_J(zt))\big|_{t=1}
++\frac{dz}{1-z}\partial_t(t^n Z_J(zt))\big|_{t=1}\):
+on a single upper face precisely \(d\) incident factors equal \(1-zt\) and give the stated derivative correction. Hence its coefficient of degree five again cancels exactly. The only leading soft term comes from an old marked edge \(e\) whose endpoints collide. Delete \(e\) and merge its endpoints; every other edge survives with its multiplicity. The degree-four signed collapsed integral is therefore
+\[
+ C_{\rm mark}=[z^4]\Delta\sum_e Z_{J/e}(z).
+\]
+The same recurrence above with multiplicity gives \(1/4725\) for the D contrast and \(-1/1890\) for the C contrast; all lower marked differences vanish by lower shape equality. With the unmarked lower coefficients matched, \(C_{\rm mark}=5/4725-1/1890=1/1890\). The bundled exact replay computes these rational coefficients using integer multiples of \((|S|+q)!\).
+
+The collapsed dimension is \(n-1\) and the polynomial degree four, giving radial factor \((n+3)!\). Replacing the common radial weight by \(e^{-t/T}\) inside these surviving scaled integrals is now justified by dominated convergence. The five reference factors and the common site density cancel the powers of \(h_0\); the remaining denominator is \(n!\). This gives \(\mathcal B=2w_0(n+3)!C_{\rm mark}/n!\). The fifth moment residual is \(o(T^{n+3})\) after the radial limit, the sixth has its dominated hard limit, and all comparisons used the signed finite subtraction. Both scalar leading terms are positive by Proposition~\ref{prop:thermal}, so these are actual relative moduli. Finally \(g^{-5}T^{-2}/g^{-6}=g^3/L^2\), proving the sign change.
+\end{proof}

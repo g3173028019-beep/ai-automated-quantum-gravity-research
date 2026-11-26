@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,xcolor,hyperref,enumitem}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\sig}{sig}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\dd}{\mathrm d}
+\title{What Graph Structure Survives WRT Sewing?\\
+\large Hidden connector motifs and the stability boundary of dense cores}
+\author{AI Automated Quantum Gravity Research}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study which graph data survive in the closed, oriented \(\mathrm{SU}(2)\) Witten--Reshetikhin--Turaev invariants of graph manifolds sewn with opposite order-two caps. In square-decorated sewings, an infinite family agrees in its first three logarithmic coefficients but is distinguished by the complete fourth. When the number of connectors grows with level, a centered Neumann kernel governs the first eligible motif contrast. Short-cycle counts do not suffice: a diamond separates connected cubic cores with identical triangle, square and pentagon counts. For a different pair, the actual modulus contrast reverses sign across a scale proportional to \((\log r)^{2/3}\). In rigid dense cores, take the level limit first. After exact vertexwise normalization, any \(o(n)\) maximum-degree deletion is invisible in the limiting signed fluctuation multiplier of a strict fixed template; at linear degree, a loop-permutation contrast survives despite identical local degrees, densities, normalization and exact framing phase. These mechanisms share the same finite oriented sewing but do not interchange the level and size limits.
+\end{abstract}
+\tableofcontents
+
+\section{Question and regimes}
+An invariant of a closed manifold need not record a preferred description of its topology. A sewing presentation still permits a precise question: which changes can the invariant distinguish after fixing elementary data, and which changes are lost? One comparison holds low log coefficients fixed and changes an incidence motif; the other holds local degrees, pair densities, and the exact normalized saddle fixed and changes the composition of permutation masks around a loop. Graph detection here means distinction between specified sewings, not reconstruction of a graph or a canonical JSJ labeling.
+
+In square-decorated sewings integer spin transfer leaves logarithmic charge coordinates. Their correlations resolve shared incidences; the relative order of a pair of invariants can even reverse as graph growth and level compete. In strict dense cores every site instead lies at scale \(\sqrt r\) after the fixed-graph level limit. The subsequent signed continuum saddle remembers a small matrix and tolerates arbitrary inhomogeneous sublinear edge deletion. At linear deletion the matrix changes even when its coarse first-order data are fixed.
+
+We use \(r\) for the shifted level and \(g\) for the number of appended twins. The regimes are (i) fixed square connector, \(r\to\infty\), including every fixed \(g\); (ii) one fixed connector core and \(g=g(r)\to\infty\), with \(g=o(\log r)\) or \(g/\log r\to\alpha>0\); (iii) for a given dense graph \(G_n\), first \(r\to\infty\) and then \(n\to\infty\) in the signed coefficient. The first expansion supplies neither the second nor the third. We distinguish moduli in the square case and signed coefficient and phase information in the dense case.
+
+\section{Closed sewings and exact charge transfer}\label{sec:sewing}
+Let \(G\) be finite, connected and simple, and let \(N=|V(G)|\), \(E=|E(G)|\). At a vertex of degree \(d\) take \(\Sigma_{0,d+2}\times S^1\) with section \(z\) oriented as the base boundary and fiber \(h\). Fill the two extra boundaries along \(2z+h,-2z+h\), and glue the remaining ones along backbone edges by \((z,h)\mapsto(h,z)\). These are orientation-reversing boundary identifications. A cycle is a trace in the torus state space, not a division by its dimension. There are no Wilson insertions after filling.
+
+Use \(Z_r(S^2\times S^1)=1\), \(Z_r(S^3)=S_{11}\), \(\tau_r=Z_r/S_{11}\), with
+\[
+ S_{ab}=\sqrt{2/r}\sin(\pi ab/r),\quad
+ \theta_a=e^{\pi i(a^2-1)/(2r)},\quad
+ \kappa_r=e^{3\pi i/4-3\pi i/(2r)}.
+\]
+The core basis is dual orthonormal by the two-point sphere trace. The product-block amplitude is \(\sum_a S_{1a}^{-d}\prod_j S_{ab_j}\) by Verlinde. A filled cap therefore contracts to \((S\Theta^{\pm2}S)_{a1}\); the signs can interchange because a geometric slope \(pz+h\) gives the core ribbon framing \(-p\) in the induced section convention. The pair is unaffected. A seam leaves \(S^3=S\), since the core labels are self-dual.
+
+For the oriented phase, assemble all caps and seam cylinders into a single composition with the disjoint product blocks \cite{BHMV,GM,Turaev}. The test tori use the section Lagrangian \(L_0=\{(q,0)\}\), with \(q,p\) the section and fiber coordinates, \(z\cdot h=1\). Their own kernel is \(L_0\), so individual block, cap and seam tests have zero Maslov correction. Let \(H\) take port sums at each vertex. The product-side actual kernel is \(L_X=\{(H^{\mathsf T}a,p):Hp=0\}\); the base sections have one sum relation per vertex, while fiber copies share one class per vertex. The cap/seam-side kernel is \(L_Y=\{(Tp,p)\}\): a cap has entry \(+2\) or \(-2\), and a seam has the two-by-two block with diagonal zero and off-diagonal \(-1\), from matching cycles across the two ends with opposite boundary signs. Then \(\sig T=0\), \(T\) is invertible, and \(HT^{-1}H^{\mathsf T}=-A_G\). The Maslov form on \((L_X+L_0)\cap L_Y\) is \(p^{\mathsf T}T\tilde p\) on \(\ker H\), using \(x_X=(0,p),x_0=(Tp,0)\). Its signature is \(\sig T-\sig(HT^{-1}H^{\mathsf T})\): the orthogonal complement of \(\ker H\) in the \(T\)-form is \(T^{-1}\operatorname{im}H^{\mathsf T}\), and the residual common radical contributes a hyperbolic space of signature zero. Hence the gluing index is \(\sig A_G\) even when adjacency is singular. In Turaev's unextended composition convention this multiplies the contraction by \(\kappa_r^{+\sig A_G}\): the anomaly unit is \(D/\Delta\), with \(D=1/S_{11}\) and \(\Delta=\sum_a\theta_a^{-1}(S_{1a}/S_{11})^2\). No comparison here requires an absolute Chern--Simons or APS convention.
+
+Put \(K(x)=\sin(\pi x)/(\pi x)\), \(Q(x)=1/K(x)\) on \(0<x<1\), and \(F_d(x)=\cos^2(\pi x/2)Q(x)^d\). For defects \(a=r-\text{color label}\), the paired cap is \(4r^{-1}\cos^2(\pi a/(2r))\) on odd \(a\) and zero on even \(a\). Indeed, for color \(b\) the sine-product expansion of \(S\Theta^2S\) gives, up to a unit factor, \([G(b-1)-G(b+1)]/(2r)\), with \(G(j)=\sum_{\ell\bmod 2r}e^{\pi i(\ell^2+j\ell)/r}\). Translation gives \(G(b+1)=e^{-\pi i b/r}G(b-1)\), and geometric orthogonality in \(|G(j)|^2\) retains only differences \(0,r\), so this norm squared is \(4r\) for \(j+r\) even and zero otherwise. The claimed cap weight follows.
+Canceling local charge powers against the edge numerators yields
+\begin{equation}\label{eq:wrt}
+ \tau_r(M_G)=\frac{\varphi_r(G)}{S_{11}}\,
+ 2^{2N-E/2}\pi^{-E}r^{3E/2-N} I_r(G),\qquad
+ \varphi_r(G)=(-1)^{rE}\kappa_r^{\sig A_G},
+\end{equation}
+where the real scalar
+\[
+ I_r(G)=\sum_{\substack{1\le a_i<r\\a_i\text{ odd}}}
+       \prod_i F_{\deg_G(i)}(a_i/r)\prod_{ij\in E(G)}K(a_i a_j/r)
+\]
+is not presumed positive. An upper reflection \(a_i\mapsto s_i=r-a_i\) against an unreflected odd label gives no sign; two adjacent upper reflections give \((-1)^r\). The denominator gains absorb \((s_i/a_i)^{\deg(i)}\), leaving an \(O((s_i/r)^2)\) reflected cap factor times a bounded function for \(s_i\le r/2\).
+
+\subsection{Strict nonbipartite cores}\label{sec:rigidbridge}
+For fixed nonbipartite connected \(G\) with weights \(0<w_e<1\), \(\sum_{e\ni i}w_e=1\), we have
+\begin{equation}\label{eq:strictbridge}
+ (2/\sqrt r)^N I_r(G)\longrightarrow J(G)
+ =\int_{(0,\infty)^N}\prod_{ij\in E(G)}K(x_i x_j)\,\dd^Nx .
+\end{equation}
+At scale \(s_i=\sqrt r\,x_i\), a dyadic box \(x_i\asymp2^{j_i}\) has absolute normalized mass at most \(C2^{\sum_i j_i-\sum_{ij}(j_i+j_j)_+}\), by \(|K(x)|\le\min(1,1/(\pi |x|))\). On a nonempty lattice box the count is \(O(\sqrt r\,2^{j_i})\) at each site. The exponent equals \(\sum_{ij}\{w_{ij}(j_i+j_j)-(j_i+j_j)_+\}\le-c\sum_{ij}|j_i+j_j|\), summable because the edge-sum map is injective on a connected graph with an odd cycle. Upper reflected branches vanish on compact rescaled boxes by the cap gain. The lower odd mesh has spacing \(2/\sqrt r\) and cap factors tend uniformly to one there. This proves absolute convergence and the limit for fixed \(G\), without uniformity in \(N\).
+
+\subsection{Exact reduction of a square}\label{sec:square}
+Replace each vertex of a connector \(H\) by an alternating \(K_{2,2}\) and join the designated vertex of each square along connector edges, obtaining \(\square(H)\). For odd \(a,c<r\), set \(s_a=\min(a,r-a)\). The degree-two sum
+\begin{equation}\label{eq:two}
+ \sum_{b<r,\ b\text{ odd}}F_2(b/r)K(ab/r)K(cb/r)
+ =\frac{r}{4ac}\min(s_a,s_c)
+\end{equation}
+follows by extending to the full odd \(2r\)-grid and dividing by two; \(b=r\), if present, gives zero. The summand before \(1/(4ac)\) is \(\sin(\pi ab/r)\sin(\pi cb/r)/\sin^2(\pi b/(2r))\). The cosine difference on the full \(M\)-grid is \(2j(M-j)\) by geometric orthogonality; subtracting the even terms gives \(2r\min(j,2r-j)\) on the odd grid. Product-to-sum gives the result. Applying this to the two opposite sites in each block and summing the nonconnector site gives
+\begin{align}
+ W_r(a)&=\sum_{c<r,\ c\ {\rm odd}}F_2(c/r)c^{-2}\min(s_a,s_c)^2,\quad
+ p_{r,d}(a)=a^{-2}F_{2+d}(a/r)W_r(a),\notag\\
+ P_H(r)&=\sum_{\boldsymbol a<r,\ {\rm odd}}\prod_i p_{r,d_i}(a_i)
+        \prod_{ij\in E(H)}K(a_i a_j/r),\qquad
+ I_r(\square(H))=(r/4)^{2m}P_H(r),\label{eq:square}
+\end{align}
+where \(m=|V(H)|\), \(d_i=\deg_H(i)\). For \(q=|E(H)|\), \(\chi=q+1\), \(L=\log r\), and \(h_0=1/2\), define
+\[
+ A_{m,q}(r)=2^{m-\chi/2}\pi^{-4m-\chi}r^{4m+3\chi/2}.
+\]
+Then exactly \(|\tau_r(M_{\square(H)})|/A_{m,q}(r)=\pi h_0^{-m}|P_H(r)|/[r\sin(\pi/r)]\), valid at either parity even in a joint limit.
+
+\input{detection}
+\input{density}
+\section{What survives}
+Equal low log coefficients need not erase an incidence motif. Joint charge weighting changes the size of a graph contrast and, for a suitable pair, reverses its sign. In dense cores arbitrary \(o(n)\) maximum-degree edge deletion becomes invisible in the signed fluctuation multiplier after vertexwise normalization, not in the raw invariant. At linear deletion, loop ordering changes the normalized determinant. This determinant is not an APS invariant or a twist of a marked operator. The conclusions are neither reconstruction at all orders nor a general graphon limit, and the sequential density theorem is not a simultaneous level theorem.
+
+\begin{thebibliography}{9}
+\bibitem{BHMV} C. Blanchet, N. Habegger, G. Masbaum and P. Vogel, Topological quantum field theories derived from the Kauffman bracket, \emph{Topology} 34 (1995), 883--927.
+\bibitem{Turaev} V. G. Turaev, \emph{Quantum Invariants of Knots and 3-Manifolds}, De Gruyter, 1994, Chapter IV.
+\bibitem{GM} P. M. Gilmer and G. Masbaum, Maslov index, Lagrangians, mapping class groups and TQFT, \emph{Forum Math.} 25 (2013), 1067--1106; \href{https://arxiv.org/abs/0912.4706}{arXiv:0912.4706}.
+\end{thebibliography}
+\end{document}

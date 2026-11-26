@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=.88in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!55!black]{hyperref}
+\hypersetup{pdftitle={Leading logarithms in closed SU(2) WRT invariants of capped trees},pdfsubject={Quantum topology and finite modular sewing}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\vol}{\operatorname{Vol}}
+\newcommand{\sinc}{\operatorname{sinc}}
+\newcommand{\supp}{\mathbf 1}
+\newcommand{\frnode}[3]{\put(#1,#2){\circle*{1.65}}\put(#1,#2){\makebox(0,0)[b]{\raisebox{1.45mm}{\(\scriptstyle #3\)}}}}
+
+\title{Leading logarithms in closed \(\mathrm{SU}(2)\)\\Witten--Reshetikhin--Turaev invariants of capped trees}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We compute leading asymptotics of the uncolored \(\mathrm{SU}(2)\) Witten--Reshetikhin--Turaev invariant for fixed tree plumbings with two opposite order-two caps at every backbone vertex. An exact cotangent sum gives an \(r^2\log r\) leading term for a six-component H plumbing in sphere normalization, where \(r\) is the shifted level. A family of irreducible corona plumbings realizes arbitrarily large leading logarithmic degrees; fixed integer framings give a polytope cutoff with a one-logarithm error estimate. Exact finite elimination on paths gives a log at each free ordered charge on even paths and a summable bounded-charge chain on odd paths. For general unframed paired-cap trees, the leading exponent is given by the maximum matching number and the log degree is the dimension of the maximizing fractional independent-set face. The coefficient in this case is positive after a known parity sign. These results exclude the literal finite-phase log-free Laurent--Puiseux ansatz for the H example and give no uniform bound on leading log degree across the corona family.
+\end{abstract}
+\input{introduction}
+
+\input{conventions}
+\input{h-tree}
+\input{corona}
+\input{paths}
+\input{trees}
+\input{consequences}
+\input{integer-spin}
+
+\paragraph{Reproducibility.}
+The accompanying scripts replay the finite Kirby and modular sums on small levels, test both level parities and all path lengths from one to ten, and compare the integer-spin factor. They are checks on the normalizations; the proofs do not rely on floating-point evaluation.
+
+\begin{thebibliography}{9}
+\bibitem{KM} R.~Kirby and P.~Melvin,
+  \emph{The 3-manifold invariants of Witten and Reshetikhin--Turaev for \(\mathfrak{sl}(2,\mathbb C)\)},
+  Invent.~Math.~\textbf{105} (1991), 473--545.
+\bibitem{GPPV} S.~Gukov, D.~Pei, P.~Putrov, and C.~Vafa,
+  \emph{BPS spectra and 3-manifold invariants},
+  \href{https://arxiv.org/abs/1701.06567}{arXiv:1701.06567v2} (2017).
+\bibitem{EN} D.~Eisenbud and W.~D. Neumann,
+  \emph{Three-Dimensional Link Theory and Invariants of Plane Curve Singularities},
+  Chapter V, Princeton University Press (1986),
+  \href{https://doi.org/10.1515/9781400881925-011}{Relation to Plumbing}.
+\bibitem{Hatcher} A.~Hatcher, \emph{Notes on Basic 3-Manifold Topology},
+  \href{https://pi.math.cornell.edu/~hatcher/3M/3M.pdf}{Chapters 1--2}.
+\bibitem{Stanley} R.~P. Stanley, \emph{Two poset polytopes},
+  Discrete Comput.\ Geom.\ 1 (1986), 9--23,
+  \href{https://www-math.mit.edu/~rstan/pubs/pubfiles/66.pdf}{author's copy}.
+\bibitem{AHLMS} J.~E. Andersen, L.~Han, Y.~Li, W.~E. Misteg\aa rd, D.~Sauzin, and S.~Sun,
+  \emph{A proof of Witten's asymptotic expansion conjecture for WRT invariants of Seifert fibered homology spheres},
+  \href{https://arxiv.org/abs/2510.10678v1}{arXiv:2510.10678v1} (2025).
+\bibitem{Murakami} Y.~Murakami,
+  \emph{A framework for proving quantum modularity: Application to Witten's asymptotic expansion conjecture},
+  \href{https://arxiv.org/pdf/2508.21710v1#page=2}{arXiv:2508.21710v1} (2025).
+\bibitem{AP} J.~E. Andersen and W.~E. Petersen,
+  \emph{Asymptotic expansions of the Witten--Reshetikhin--Turaev invariants of mapping tori I},
+  \href{https://arxiv.org/abs/1803.09510}{arXiv:1803.09510v3} (2018).
+\bibitem{HT} S.~K.~Hansen and T.~Takata,
+  \emph{Reshetikhin--Turaev invariants of Seifert 3-manifolds for classical simple Lie algebras, and their asymptotic expansions},
+  J.~Knot Theory Ramifications \textbf{13} (2004), 617--668,
+  \href{https://arxiv.org/abs/math/0209403}{arXiv:math/0209403}.
+\end{thebibliography}
+\end{document}
