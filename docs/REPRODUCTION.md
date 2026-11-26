@@ -152,3 +152,4 @@ In each linked packet, run `latexmk -pdf -halt-on-error manuscript.tex` or run `
 - [38 · From Euclidean tensor prices to EPRL amplitudes: a rank obstruction at the four-to-two move](../papers/38-tensor-prices-eprl-boundary/README.md)
 - [39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](../papers/39-real-tree-spectral-boundary-fields/README.md)
 - [40 · Null-volume shared-label rigidity](../papers/40-null-volume-shared-label-rigidity/README.md)
+- [41 · Turaev–Viro fusion, recoupling and Wilson moduli](../papers/41-tensor-prices-tv-fusion-and-wilson/README.md)

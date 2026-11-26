@@ -104,3 +104,4 @@ The recorded review consists of automated calculations and AI review. Human expe
 - [39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](papers/39-real-tree-spectral-boundary-fields/README.md): [packet verification](papers/39-real-tree-spectral-boundary-fields/VERIFICATION.md
 
 - [40 · Null-volume shared-label rigidity](papers/40-null-volume-shared-label-rigidity/README.md): [packet verification](papers/40-null-volume-shared-label-rigidity/VERIFICATION.md).
+- [41 · Turaev–Viro fusion, recoupling and Wilson moduli](papers/41-tensor-prices-tv-fusion-and-wilson/README.md): [packet verification](papers/41-tensor-prices-tv-fusion-and-wilson/VERIFICATION.md).

@@ -1,0 +1,203 @@
+\section{A native joint-Wilson test of the marked torus character variety}
+\label{sec:torus-joint-wilson}
+
+The preceding cut tests recover finite gluing data from which compatible
+prices are computed.  Here we use a different, joint spectral test to
+recover a classical configuration space.  No classical holonomy is used
+to place the tensor indices. The two sites are incoming and outgoing copies of the torus,
+placed at two fixed receiver sites with unit separation. The geometric input
+is the standard interpretation of \(\mathrm{SU}(2)\) Wilson loops as
+holonomy traces, not a prescribed metric on their spectrum.
+
+\subsection{The physical operators and the twist convention}
+
+Let \(r=k+2\) and \(\zeta_r=e^{\pi i/r}\).  The chiral
+\(\mathrm{SU}(2)_k\) torus Hilbert space has orthonormal charge basis
+\(e_n\), \(n=1,\ldots,r-1\), where \(n=2j+1\).
+Turaev--Viro theory for the unitary modular category is the doubled
+theory, so these chiral operators act on one factor of the physical
+torus Hilbert space \(\mathcal H_k\otimes\overline{\mathcal H_k}\)
+\cite{BalsamIII}.  In the positive fundamental-trace convention, the
+marked meridian and longitude operators are
+\begin{equation}
+ D_r e_n=2\cos(\pi n/r)e_n,\qquad
+ B_r e_n=e_{n-1}+e_{n+1},\qquad e_0=e_r=0.
+ \label{eq:tw-torus-basic-operators}
+\end{equation}
+The first is the fundamental \(S\)-matrix quotient
+\(S_{2n}/S_{1n}\); the second is fusion by the fundamental object.
+The oriented meridional Dehn twist \(T_r\) multiplies \(e_n\) by
+\(\exp\!\big(i\pi(n^2-1)/(2r)\big)\), up to one common framing phase.
+The common phase cancels in the slope operator \(C_r=T_rB_rT_r^*\);
+hence
+\begin{equation}
+ C_r e_n=\zeta_r^{\,n+1/2}e_{n+1}
+          +\zeta_r^{\,-n+1/2}e_{n-1}.
+ \label{eq:tw-torus-twist-operator}
+\end{equation}
+We fix the marking so that the slope of \(C_r\) is the product
+of the two marked cycles.  Reversing the twist and the corresponding
+marking just replaces the second classical eigenangle by its negative.
+
+For clarity, these operators can be realized in the odd subspace of
+\(\mathbb C[\mathbb Z/(2r)]\), with odd basis
+\((\delta_n-\delta_{-n})/\sqrt2\),
+\(n=1,\ldots,r-1\).  On the ambient space define
+\[
+ U_r\delta_n=\zeta_r^n\delta_n,\qquad
+ V_r\delta_n=\delta_{n+1},\qquad J_r\delta_n=\delta_{-n}.
+\]
+They obey \(U_r V_r=\zeta_r V_r U_r\).  The restrictions of
+\[
+ U_r+U_r^*,\qquad V_r+V_r^*,\qquad
+ \zeta_r^{-1/2}(U_r V_r+U_r^{-1}V_r^{-1})
+\]
+to the odd subspace are exactly \(D_r,B_r,C_r\).
+In particular, the last formula is selfadjoint with the displayed
+phase.  This is the standard torus skein representation
+\cite{FrohmanGelca,CharlesMarche}.  Its product-to-sum identity follows
+directly from the Weyl relation: if \(W_{(a,b)}=\zeta_r^{-ab/2}U_r^aV_r^b\)
+and \(L_{\nu}=W_\nu+W_{-\nu}\), then
+\begin{equation}
+ L_\nu L_\mu
+   =\zeta_r^{\,\det(\nu,\mu)/2}L_{\nu+\mu}
+     +\zeta_r^{-\det(\nu,\mu)/2}L_{\nu-\mu}.
+ \label{eq:tw-torus-product-sum}
+\end{equation}
+The physical three operators are the slopes \((1,0)\), \((0,1)\), and
+\((1,1)\).  No commutativity at a finite level is assumed.
+
+\subsection{A joint rank support theorem}
+
+For a trial triple \(p=(p_1,p_2,p_3)\in\mathbb R^3\) and
+a tolerance \(\delta>0\) define the positive operator and its spectral
+projector
+\begin{equation}
+ K_{r,p}=(D_r-p_1I)^2+(B_r-p_2I)^2+(C_r-p_3I)^2,\qquad
+ E_{r,p,\delta}=\boldsymbol{1}_{[0,\delta^2]}(K_{r,p}).
+ \label{eq:tw-torus-joint-penalty}
+\end{equation}
+This is one gauge-invariant quantum spectral projection, not a product
+of incompatible sharp projections.  In a unit vector, the expectation
+of \(K_{r,p}\) is the sum of the squared errors of the three Wilson
+operators.  The ordinary tensor of \(E_{r,p,\delta}\) across the two
+marked torus ports has native two-site price \(\log_2 \operatorname{rank} E_{r,p,\delta}\)
+when nonzero, and has zero spectral value when it vanishes
+\cite{OpenAIPrice}.  An independent change of the positive port
+separation multiplies a finite logarithmic price and does not change the
+rank test.  The following statements concern this specified projector,
+not the ranks of the three unsigned Wilson tensors by themselves.
+
+\begin{theorem}[Joint-Wilson rank support and state count]
+\label{thm:tw-torus-joint-wilson}
+Let
+\[
+ X=\{(2\cos\alpha,2\cos\beta,2\cos(\alpha+\beta)):
+                 (\alpha,\beta)\in(\mathbb R/2\pi\mathbb Z)^2\}.
+\]
+For each \(p\in X\) and each fixed \(\delta>0\), \(E_{r,p,\delta}\) has
+positive rank for all sufficiently large \(r\).  For
+\(p\notin X\) and \(0<\delta<\operatorname{dist}(p,X)\), it has zero rank
+for all sufficiently large \(r\).  Moreover, with normalized torus Haar
+measure \(d\mu\),
+\begin{equation}
+ \begin{aligned}
+ \lim_{r\to\infty}\frac{\operatorname{rank}E_{r,p,\delta}}{r-1}
+   &=\int_{(\mathbb R/2\pi\mathbb Z)^2}
+     \boldsymbol{1}_{\{k_p(\alpha,\beta)\leq\delta^2\}}\,d\mu,\\
+ k_p(\alpha,\beta)
+   &=\big\|(2\cos\alpha,2\cos\beta,2\cos(\alpha+\beta))-p\big\|^2 .
+ \end{aligned}
+ \label{eq:tw-torus-count}
+\end{equation}
+Thus the eventually nonzero rank support at every positive tolerance
+recovers \(X\), including its degenerate character points.  In the
+doubled theory, using both chiral Wilson sets in the sum of penalties
+gives \(X\times X\) and the analogous product-Haar count.
+\end{theorem}
+
+\begin{proof}
+For spectral exclusion, work first in the full
+\(\mathbb C[\mathbb Z/(2r)]\) representation.  In the quotient of bounded
+matrix sequences by sequences tending to zero in operator norm, the
+classes of \(U_r,V_r\) are commuting unitaries, since
+\(\|U_rV_r-V_rU_r\|=|\zeta_r-1|\).
+Continuous functional calculus then identifies the class of \(K_{r,p}\)
+as the image of the continuous function \(k_p\) on the torus.  This
+function is bounded below by \(\operatorname{dist}(p,X)^2\).
+By continuity of the negative-part functional calculus, the negative
+part of \(K_{r,p}-\operatorname{dist}(p,X)^2 I\) tends to zero in norm.
+The same lower bound holds after restriction to the odd subspace.
+This excludes sparse spectral outliers at any fixed positive distance,
+a conclusion that would not follow from normalized traces alone.
+
+For existence, every represented triple has a representative
+\(\alpha\in[0,\pi]\) after joint angle inversion.  Let \(f\) be a nonzero
+smooth bump of compact support in \((-1,1)\).  Choose the nearest integer
+to \(r\alpha/\pi\) clipped to
+\([\lfloor r^{2/3}\rfloor,r-\lfloor r^{2/3}\rfloor]\) as the charge
+center \(c_r\), and let \(\sigma_r=r^{1/3}\).  In the physical odd
+basis use the normalized vector
+\[
+ \psi_{r,n}=\mathrm{const}\cdot f\!\left(\frac{n-c_r}{\sigma_r}\right)
+                 e^{-i\beta n}.
+\]
+The packet avoids both missing endpoints even at \(\alpha=0,\pi\).
+On its support \(D_r\) differs from \(2\cos\alpha\) by
+\(O(\sigma_r/r+|c_r/r-\alpha/\pi|)=O(r^{-1/3})\).
+The normalized bump changes in \(\ell^2\) by \(O(\sigma_r^{-1})\)
+under a unit shift, proving
+\(\|(B_r-2\cos\beta)\psi_r\|=O(r^{-1/3})\).
+The coefficients in \eqref{eq:tw-torus-twist-operator} applied to the
+shifted packet differ from \(e^{\pm i\alpha}\) by \(O(r^{-1/3})\);
+the phases of the shifted vector supply \(e^{\pm i\beta}\).
+This gives
+\(\|(C_r-2\cos(\alpha+\beta))\psi_r\|=O(r^{-1/3})\).
+Hence \(\langle\psi_r,K_{r,p}\psi_r\rangle=O(r^{-2/3})\), and a
+small eigenvalue exists below each fixed positive tolerance.
+
+For the count, the full trace of a fixed \(U_r^aV_r^b\) vanishes for
+all large \(r\) unless \(a=b=0\).  Its trace after multiplication
+by \(J_r\) has absolute value at most two: a contributing basis vector
+must solve \(2n\equiv-b\pmod{2r}\).  Insert \((I-J_r)/2\) when taking
+the trace of a polynomial in \(D_r,B_r,C_r\).
+Such a polynomial expands as a finite sum of Fourier monomials,
+and commuting full \(U_r,V_r\) changes phases only by factors tending
+to one.  The physical trace normalized by \(r-1\) therefore converges
+to the torus Haar trace on every fixed polynomial in the classical
+symbols.  Since the spectra of \(K_{r,p}\) lie in a fixed compact
+interval, polynomial approximation gives weak convergence of its
+empirical eigenvalue law.  The use of a discontinuous indicator in
+\eqref{eq:tw-torus-count} is then legitimate: each level set of
+\(k_p\) has Haar measure zero, because it is a nonconstant real-analytic
+trigonometric polynomial (the term \(2\cos(2\alpha)\) from the first
+square has no other term of that frequency to cancel it).
+For the doubled model the two operators act on separate factors,
+normalized traces factorize, and the penalty symbol is the sum of
+the two classical penalties.  The endpoint construction, lower bound,
+and continuity of the count apply to this sum as well.
+\end{proof}
+
+\subsection{Identification and scope}
+
+The known flat character space for the marked torus consists of
+commuting pairs in \(\mathrm{SU}(2)\) up to simultaneous conjugation.
+They can be simultaneously diagonalized, with eigenangles up to joint
+inversion.  Their trace triples satisfy
+\[
+ x^2+y^2+z^2-xyz=4,\qquad |x|,|y|,|z|\leq2.
+\]
+Conversely the two roots of this relation in \(z\) are
+\((xy\pm\sqrt{(4-x^2)(4-y^2)})/2\), exactly the two relative-angle
+choices.  For interior \(x,y\), \(z\) distinguishes the choices
+since \(\sin\alpha\sin\beta\ne0\).  If either holonomy is central,
+joint inversion identifies the would-be remaining ambiguity.
+Thus the triple recovers the marked compact character variety everywhere.
+The character variety and its quantum torus algebra are classical
+ingredients; the new statement here is their recovery from the support
+and state counts of the native rank probes
+\eqref{eq:tw-torus-joint-penalty}--\eqref{eq:tw-torus-count}.
+This is the space of allowed marked flat data, not a construction of
+a nondegenerate metric from every flat pair, not an inferred curvature
+radius, and not a dynamical selection of one state.
+

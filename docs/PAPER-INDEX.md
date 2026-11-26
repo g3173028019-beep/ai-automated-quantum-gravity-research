@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 44 items: 20 original research packets, six later analytical Markdown manuscripts and eighteen typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 45 items: 20 original research packets, six later analytical Markdown manuscripts and nineteen typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–40 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–41 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -519,3 +519,11 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** The joint physical volume sampler is assumed, and the bound is on exact conditional-independence labels. It neither constrains arbitrary tensor encodings nor detects a horizon from rank alone.
 
 [40 · Null-volume shared-label rigidity](../papers/40-null-volume-shared-label-rigidity/README.md) · [PDF](../papers/40-null-volume-shared-label-rigidity/manuscript.pdf) · [TeX](../papers/40-null-volume-shared-label-rigidity/manuscript.tex) · [Verification](../papers/40-null-volume-shared-label-rigidity/VERIFICATION.md)
+
+## 41. Physical Gluing and Wilson Constraints from Euclidean Tensor Prices
+
+**Result.** Physical cylinder tensors recover quantum dimensions and signed recoupling data. Joint Wilson projector prices also reconstruct the known marked SU(2) torus character variety in the large-level limit.
+
+**Scope.** Exact finite physical fusion and coherent operator tests, plus a separate marked torus limit. The native recovery is not a new character variety or a derivation of dynamics.
+
+[41 · Turaev–Viro fusion, recoupling and Wilson moduli](../papers/41-tensor-prices-tv-fusion-and-wilson/README.md) · [PDF](../papers/41-tensor-prices-tv-fusion-and-wilson/manuscript.pdf) · [TeX](../papers/41-tensor-prices-tv-fusion-and-wilson/manuscript.tex) · [Verification](../papers/41-tensor-prices-tv-fusion-and-wilson/VERIFICATION.md)
