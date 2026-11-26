@@ -144,3 +144,10 @@ The TeX for these five articles is self-contained. In each paper directory run `
 - [35 · Positive string poles and indefinite finite-transfer graviton amplitudes](../papers/35-typeii-full-polarization/README.md)
 - [36 · Full counting statistics of neutral emission in a quantum charged throat](../papers/36-charged-throat-emission/README.md)
 - [37 · Winding rank and shape confinement in homogeneous Einstein–scalar tori](../papers/37-winding-rank/README.md)
+
+## Building the tensor spectral geometry papers
+
+In each linked packet, run `latexmk -pdf -halt-on-error manuscript.tex` or run `pdflatex -halt-on-error manuscript.tex` twice. The peer-review status and any standalone exact replay are described in the packet verification notes.
+
+- [38 · From Euclidean tensor prices to EPRL amplitudes: a rank obstruction at the four-to-two move](../papers/38-tensor-prices-eprl-boundary/README.md)
+- [39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](../papers/39-real-tree-spectral-boundary-fields/README.md)

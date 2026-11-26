@@ -121,8 +121,13 @@ This provides a route into how the archive’s arguments were corrected, not a r
 
 The two manuscripts use different stocks. The Lorentzian universal-cover rigidity result is classical; it does not furnish a quantum state for the sandwich-wave comparison.
 
+## Tensor spectral geometry
+
+- [38 · From Euclidean tensor prices to EPRL amplitudes: a rank obstruction at the four-to-two move](../papers/38-tensor-prices-eprl-boundary/README.md): Coherent cut-price operators reproduce finite corrected Euclidean EPRL amplitudes and their gluing. A marked 4↔2 boundary block has rank five against a rank-one coarse seam, with exact cutoff-limit values at γ=1/3. Corrected Euclidean EPRL at the stated rational Immirzi parameters, weights and boundary marks. The spin-cutoff limit keeps the two complexes fixed; it is not a graph continuum limit.
+- [39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](../papers/39-real-tree-spectral-boundary-fields/README.md): A compatible spectral assignment recovers real-tree distances and finite Steiner-hull lengths. A Poisson field has explicit non-Gaussian connected boundary kernels below threshold and a Gaussian white-noise limit at critical scaling. A classical tree-indexed probability field and a tensor spectral encoding, with the existing finite Poisson model explicitly credited. No spacetime or gravity construction is asserted.
+
 ## Using the routes
 
 The [paper index](PAPER-INDEX.md) links all manuscripts and distinguishes the original PDF/source packets, later analytical Markdown manuscripts and typeset analytical articles. Use packet notes for commands and dependencies, and the [verification overview](../VERIFICATION.md) for the distinction between proof, exact finite checks, numerical diagnostics and retained inputs. No additional scientific rerun is implied by this navigation layer.
 
-The 41 archive items are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.
+The 43 archive items are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.

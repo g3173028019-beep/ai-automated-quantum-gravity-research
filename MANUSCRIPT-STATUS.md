@@ -79,3 +79,8 @@ The historical umbrella synthesis is routed into these dedicated questions, not 
 - [35 · Positive string poles and indefinite finite-transfer graviton amplitudes](papers/35-typeii-full-polarization/README.md): Type-II tree amplitude and the prescribed real probe and subtraction. The coefficient is not a forward EFT Wilson coefficient.
 - [36 · Full counting statistics of neutral emission in a quantum charged throat](papers/36-charged-throat-emission/README.md): The reduced deep-quantum cascade and a fixed channel; no claim about coherence or continuation outside that model.
 - [37 · Winding rank and shape confinement in homogeneous Einstein–scalar tori](papers/37-winding-rank/README.md): Flat homogeneous tori and the fully marked shape cover. The fixed-clock spectrum is not a theorem about inhomogeneous dynamics or a time-dependent propagator.
+
+## Tensor spectral geometry
+
+- [38 · From Euclidean tensor prices to EPRL amplitudes: a rank obstruction at the four-to-two move](papers/38-tensor-prices-eprl-boundary/README.md): Corrected Euclidean EPRL at the stated rational Immirzi parameters, weights and boundary marks. The spin-cutoff limit keeps the two complexes fixed; it is not a graph continuum limit.
+- [39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](papers/39-real-tree-spectral-boundary-fields/README.md): A classical tree-indexed probability field and a tensor spectral encoding, with the existing finite Poisson model explicitly credited. No spacetime or gravity construction is asserted.

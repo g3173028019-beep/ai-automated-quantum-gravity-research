@@ -2,9 +2,11 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains 41 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and fifteen typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 43 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and seventeen typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
+
+On 26 November 2026 (Beijing time), [38 · From Euclidean tensor prices to EPRL amplitudes: a rank obstruction at the four-to-two move](papers/38-tensor-prices-eprl-boundary/README.md) and [39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](papers/39-real-tree-spectral-boundary-fields/README.md) joined the public archive as typeset, internally reviewed research manuscripts. The private source collection was consolidated by question; the existing archive was not renumbered.
 
 Papers 33–37 joined the public archive as five separate typeset research manuscripts: [33 · Time-resolved scalar returns from a marked timelike tube](papers/33-vacuum-wave-returns/README.md), [34 · Normalizable quadrupole states off the vacuum stress orbit](papers/34-ads3-vacuum-stress/README.md), [35 · Positive string poles and indefinite finite-transfer graviton amplitudes](papers/35-typeii-full-polarization/README.md), [36 · Full counting statistics of neutral emission in a quantum charged throat](papers/36-charged-throat-emission/README.md), [37 · Winding rank and shape confinement in homogeneous Einstein–scalar tori](papers/37-winding-rank/README.md). Existing editions and source packets were retained.
 

@@ -1,0 +1,255 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=30mm]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{booktabs}
+\urlstyle{same}
+\hypersetup{pdftitle={Spectral Steiner Costs on Real Trees and a Poisson Field on the p-Adic Boundary}}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Zp}{\mathbb Z_p}
+\newcommand{\Qp}{\mathbb Q_p}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\cum}{\operatorname{cum}}
+\newcommand{\hull}{\operatorname{hull}}
+\newcommand{\D}{\Delta}
+\newcommand{\Id}{\mathbf 1}
+\newcommand{\hprice}{\mathsf H}
+\title{\bfseries Spectral Steiner Costs on Real Trees\\[2pt]
+and a Poisson Field on the \texorpdfstring{\(p\)}{p}-Adic Boundary}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-1.25em}
+\begin{abstract}
+Every real tree carries a compatible family of Strassen spectral prices on complex tensors. Binary wires cost their tree distance, and a \(q\)-level label shared by a finite set of sites costs the length of its spanning subtree times \(\log_2 q\). The construction uses laminar quantum functionals and a normalization under restriction of the site set; it is not an average of log flattening ranks on arbitrary tensors. We relate the shared-label price to every connected cumulant of a classical tree-indexed Poisson Markov field. On the boundary of the \((p+1)\)-regular Bruhat--Tits tree the renormalized first mode converges, after smearing, in every finite \(L^r\) for \(0<\Delta<1/2\). Its non-Gaussian connected kernels are the exponentials of renormalized shared-label prices. At \(\Delta=1/2\) an additional inverse square-root depth normalization instead gives Gaussian white noise in the sense of joint test-function laws. An exact four-point calculation identifies the internal exchange length as a difference of two prices in the same spectrum.
+\end{abstract}
+
+\section{Introduction}
+
+The asymptotic spectrum of tensors assigns exact algebraic costs to local restriction problems \cite{Strassen,CVZ}. A spectral point preserves tensor products and block direct sums and is monotone under local linear maps. OpenAI's Euclidean construction makes the log cost of a binary wire equal to the distance between its sites, compatibly for all finite placements in a real Hilbert space \cite[Theorem~1.1]{OpenAI}. It also gives a nonpositive-curvature constraint for geodesic spectral spaces \cite[Theorem~4.3]{OpenAI}. That constraint does not assert that all nonpositively curved spaces carry such prices.
+
+The first result here identifies a different class of spectral spaces: arbitrary real trees. A weighted split decomposition of a tree distance is classical \cite{Buneman}, and the required finite spectral extensions come from Botero, Christandl, Fraser, Leigh, and Nieuwboer \cite{Botero}. The geometric step is to use the \emph{same} extension for every embedded shared-label tensor of a finite set, and then maintain all its prices under enlargement of the set. This gives the full Steiner length of a common label, not just pairwise distances. The price equals an achievable and optimal wire-network cost.
+
+The second result relates this multifactor quantity to a classical stochastic field. The finite Poisson Markov law is known: it is the tree-thinning model of C\^ot\'e, Cossette, and Marceau \cite{Cote}, equivalently the tree common-shock representation of Cossette, C\^ot\'e, Dubeau, and Marceau \cite{Cossette}. We do not claim either finite model as new. We express its all-order connected functions in the compatible Strassen prices, and use the cumulant formula to control the \(p\)-adic boundary limit, including the change from a non-Gaussian distribution to Gaussian white noise at the critical scaling. Critical central limit regimes for bifurcating Markov chains are known \cite{BDpoint,BDl2}; here the exact Steiner kernels give a direct spatial, joint test-function proof and its covariance on a \(p\)-ary boundary. Tree-boundary propagators and tensor-network factorizations provide established context \cite{Gubser,GP,HLM}. The field constructed here is a classical probability model on a fixed tree; the boundary statement is not an identification with a quantum theory of gravity or a derivation of its dynamics.
+
+\section{A compatible spectrum on an arbitrary real tree}
+
+A real tree \(X\) is a geodesic metric space in which every two points are joined by a unique simple arc and that arc is isometric to a real interval. For a nonempty finite set \(A\subset X\), write \(L(A)\) for the total length of its finite spanning subtree \(\hull(A)\). In particular \(L(\{x\})=0\) and \(L(\{x,y\})=d(x,y)\).
+
+For \(|S|\ge 2\), a spectral point \(F_S\) is a normalized semiring homomorphism from complex \(S\)-tensors to \(\mathbb R_{\ge0}\), preserving block direct sums and sitewise tensor products, and nonincreasing under local linear maps. We use \(F_S(0)=0\), \(F_S(1)=1\). Write \(\D_A(q)=\sum_{j=1}^q\bigotimes_{a\in A}e_j\) on the indicated sites and pad unused sites with one-dimensional factors. The binary wire on \(x,y\) is \(\D_{\{x,y\}}(2)\). We use \(\hprice(0)=-\infty\).
+
+\begin{theorem}[Compatible Steiner prices]\label{thm:tree}
+For every real tree \(X\), there is a spectral point \(F_S\) for every finite \(S\subset X\) with \(|S|\ge 2\) such that the price
+\[
+ \hprice(T)=L(S)\log_2 F_S(T),\qquad \operatorname{sites}(T)\subseteq S ,
+\]
+is independent of spectator sites. On all nonempty finite \(A\subset X\) it satisfies
+\begin{equation}\label{eq:steiner}
+ \hprice(\D_A(q))=L(A)\log_2 q .
+\end{equation}
+The assignment is on all finite-dimensional complex tensors, not only on shared-label or graph tensors. No uniqueness for general tensors is asserted.
+\end{theorem}
+
+\begin{proof}
+First fix \(S\). Subdivide its hull at all marks and branch points. Each positive-length edge \(e\) partitions \(S\) into two nonempty sets; denote the resulting bipartition by \(b_e\). Orient each split away from any one root in \(S\). The selected sides are nested or disjoint, so these bipartitions are laminar. Combine duplicate splits by setting
+\[
+ \theta_b=\frac{1}{L(S)}\sum_{e:b_e=b}|e|.
+\]
+By \cite[Proposition~4.3, Theorem~4.6, and Lemma~4.13]{Botero}, a universal spectral point exists that, for every embedded binary unit tensor, has log value equal to the total \(\theta\)-weight of the splits that separate its marks. The same value rule for \(A=S\) follows from normalization, and for a singleton from equivalence to the unit. An edge lies in \(\hull(A)\) if and only if it separates marks of \(A\). Thus the chosen finite evaluator satisfies \eqref{eq:steiner} for \(q=2\). Multiplicativity gives it at powers of two. For general \(q\), apply monotonicity to compare \(\D_A(q)^n\) with the adjacent powers of \(\D_A(2)\) that bracket \(q^n\), take logs, and divide by \(n\). For the two-site case one can equivalently use matrix rank.
+
+These finite choices need not be compatible in advance. Let \(U\supseteq S\) and evaluate an \(S\)-tensor \(T\) by padding it to \(U\), writing \(G(T)=F_U(T)\). Padding respects products but not the location of direct-sum blocks. Put \(a=L(S)/L(U)>0\); the preceding computation gives \(G(\D_S(q))=q^a\). Then \(G^{1/a}\) is a spectral point on \(S\), by the normalization on subsets in \cite[Section~2.2]{OpenAI}. For clarity, tensor powers of a block direct sum decompose into \(n+1\) types with multiplicities \(\binom nj\). Each type has padded value \(G(T_1)^jG(T_2)^{n-j}\binom nj^a\). The value of the full power is bounded below by the maximum of the type values and above by their sum using restriction monotonicity and the large-site direct sum. The binomial theorem, followed by \(1/(an)\)-th roots, gives \(G(T_1\oplus T_2)^{1/a}=G(T_1)^{1/a}+G(T_2)^{1/a}\).
+
+Choose independently such an \(F_U\) on each finite set \(U\) of size at least two and take a cofinal ultrafilter on these finite sets, directed by inclusion. For each fixed nonzero \(S\)-tensor with tensor rank \(R\), \(L(U)\log_2G(T)\) lies in \([0,L(S)\log_2 R]\) on the tail \(U\supseteq S\). This uses the normalized spectral point \(G^{1/a}\) and the rank restriction. Its ultralimit therefore exists. The price obtained is unchanged under adjoining any fixed set of spectators, since the padded tensors are identical on a common tail. On \(S\) exponentiating with the fixed scale \(L(S)\) preserves product, addition, normalization and monotonicity, and the shared-label evaluations pass to the limit. A one-site nonzero tensor has price zero because it is equivalent to the unit. This constructs a simultaneous assignment on all sites.
+\end{proof}
+
+An average of log cut ranks would independently reproduce the values in \eqref{eq:steiner}, but exponentiating that average does not generally preserve the block direct sum (see \cite[Section~1.1]{OpenAI}). The finite spectral extension and the normalization under padding are therefore essential.
+
+\begin{corollary}[Optimal preparation cost]\label{cor:optimal}
+To obtain \(\D_A(q)\) from a product of independent wires placed anywhere in \(X\), by local linear restrictions including contractions at auxiliary sites, the total wire price is at least \(L(A)\log_2q\). This bound is achieved.
+\end{corollary}
+\begin{proof}
+At each marked site or branch point of the hull, attach one independent \(q\)-wire per incident hull edge. Apply a local equality tensor: it vanishes unless all incoming wire labels agree, and then emits the common label at a marked site or the scalar \(1\) at an auxiliary site. The output is \(\D_A(q)\), at the asserted cost. Conversely multiply the spectral values of the input wires and restrict to the output. Spectator compatibility includes every auxiliary site in this comparison.
+\end{proof}
+
+\section{Poisson cumulants are exponentiated Steiner prices}
+
+Fix \(\lambda,\mu>0\). At a finite set \(S\) place Poisson cuts of rate \(\mu\) per unit length on its hull. Let \(\pi_S\) be the resulting connectivity partition, and let \(\nu_S(C)=\Prob(C\in\pi_S)\) for each nonempty \(C\subset S\). Take independent counts \(Y_C\sim\operatorname{Poisson}(\lambda\nu_S(C))\), and set \(N_x=\sum_{C\ni x}Y_C\). This is the finite common-shock law in \cite{Cossette} with edge retention \(e^{-\mu|e|}\).
+
+\begin{theorem}[Exact cumulants and subdivision]\label{thm:poisson}
+The finite laws are consistent under deletion of marks and under subdivision of edges. They define a stationary-marginal field on \(X\) with \(N_x\sim\operatorname{Poisson}(\lambda)\). For \(n\ge1\) and any marked sites, allowing repeats,
+\begin{equation}\label{eq:cumulant}
+ \cum(N_{x_1},\ldots,N_{x_n})
+  =\lambda \exp\!\left[-\mu\,\hprice\!\left(\D_{\{x_1,\ldots,x_n\}}(2)\right)\right].
+\end{equation}
+The construction agrees with the thinning and immigration transition of \cite{Cote} on every finite spanning tree.
+\end{theorem}
+\begin{proof}
+For \(S\subset S'\), a block of \(\pi_{S'}\) restricts to a block of \(\pi_S\), or disappears, because paths between old marks and the restriction of the cut intensity to their hull are unchanged. For empty intersections ignore the corresponding counts; for a nonempty \(C\subset S\), sum the independent counts with \(C'\cap S=C\). Their intensities sum to \(\lambda\nu_S(C)\), because no partition contains two blocks with the same nonempty intersection. This proves projective consistency. Kolmogorov extension applies directly, without a global finite length measure. A single-site law has parameter \(\lambda\).
+
+The log moment-generating function on \(S\) is
+\[
+ \log\E e^{\sum_{x\in S}t_xN_x}
+   =\lambda \sum_{\emptyset\ne C\subset S}\nu_S(C)
+        \left(e^{\sum_{x\in C}t_x}-1\right).
+\]
+The mixed derivative is \(\lambda\) times the probability that a block contains all marked sites. This event is exactly the absence of cuts along their spanning hull, giving \eqref{eq:cumulant} by Theorem~\ref{thm:tree}. For repeats the same mixed derivative applies with repeated indices.
+
+Equivalently root the finite tree and transmit each of the particles at a parent independently along an edge of length \(\ell\) with probability \(q_\ell=e^{-\mu\ell}\), adding \(\operatorname{Poisson}(\lambda(1-q_\ell))\) new particles at the child. Start the root with \(\operatorname{Poisson}(\lambda)\) particles. A connected block in the finite edge-cut description has a unique vertex nearest the root. Its intensity in the particle description is \(\lambda\) if that top vertex is the root or \(\lambda(1-q_\ell)\) otherwise, times the independent outward pruning probability. This is precisely the common-shock intensity. Along an edge, two successive transitions have the single-edge transition with the product of their retention factors, by independent thinning and addition of the immigrating Poisson populations. This proves the subdivision statement as a local semigroup identity.
+\end{proof}
+
+For example, \(\Cov(N_x,N_y)=\lambda e^{-\mu d(x,y)}\). Thus within this family the normalized two-point function recovers the tree metric up to the length unit \(\mu^{-1}\), and the connected functions of all higher orders read the shared-label prices of that same tree. This does not say that arbitrary matter on a given tree has fixed higher correlators.
+
+\subsection{Exact branch exchange}
+
+The transition \(P_\ell\) is reversible with respect to \(\operatorname{Poisson}(\lambda)\), as follows by writing each adjacent pair as a common Poisson count of mean \(\lambda q_\ell\) plus independent counts of mean \(\lambda(1-q_\ell)\). Let \(C_m\) be the Charlier polynomials given by
+\[
+ E_s(n)=e^{-\lambda s}(1+s)^n
+      =\sum_{m\ge0}C_m(n;\lambda)\frac{s^m}{m!}.
+\]
+Thinning gives \(P_\ell E_s=E_{q_\ell s}\), and the Poisson generating function gives \(\E[E_sE_t]=e^{\lambda st}\). Thus \(O_m=C_m/\sqrt{m!\lambda^m}\) are orthonormal eigenobservables of \(P_\ell\) with eigenvalues \(e^{-m\mu\ell}\). Multiplication at a branch is ordinary multiplication of functions. In particular
+\begin{equation}\label{eq:OPE}
+ O_1^2=1+\lambda^{-1/2}O_1+\sqrt{2}\,O_2.
+\end{equation}
+For a quartet with internal split \(12|34\), let \(\ell\) denote its internal edge and \(a_i\) its external arms. The two price readings
+\begin{align*}
+ a_1+\cdots+a_4
+   &=\hprice(\D_{\{x_1,x_2\}}(2)\otimes\D_{\{x_3,x_4\}}(2)),\\
+ \ell&=\hprice(\D_{\{x_1,x_2,x_3,x_4\}}(2))-(a_1+\cdots+a_4)
+\end{align*}
+distinguish independent pair labels from one common four-party label. Propagate \(O_1\) on the arms, apply \eqref{eq:OPE} at each branch, and propagate the resulting eigenobservables across the internal edge. One obtains
+\begin{equation}\label{eq:quartet}
+ \E\prod_{i=1}^4 O_1(N_{x_i})
+ =e^{-\mu\sum_i a_i}\left(1+\lambda^{-1}e^{-\mu\ell}
+                                    +2e^{-2\mu\ell}\right).
+\end{equation}
+The middle term is exactly the connected four-point function, after subtracting the three pair contractions. This is an elementary transfer-and-fusion identity, not a construction of a new quantum interaction. On the \(p\)-adic boundary in this channel, \(p^{-\ell}\) is the absolute value of the cross ratio \(x_{12}x_{34}/(x_{13}x_{24})\), giving the usual exchange powers upon stripping external arms \cite{GP,HLM}.
+
+\section{Boundary distribution and the critical limit}
+
+Use the unit-edge Bruhat--Tits tree over \(\Qp\). In the rooted \(p\)-ary cone with boundary \(\Zp\), write \(v_N(x)\) for the vertex on the ray to \(x\) at integer depth \(N\). Haar measure \(dx\) on \(\Zp\) is normalized to one. Put \(q=e^{-\mu}=p^{-\Delta}\), \(\Delta>0\), and define, for \(f\) locally constant on \(\Zp\),
+\begin{equation}\label{eq:mart}
+ X_N(f)=\int_{\Zp} f(x)p^{\Delta N}\bigl(N_{v_N(x)}-\lambda\bigr)\,dx .
+\end{equation}
+The centered first mode is an eigenobservable with factor \(q\) per edge. With the filtration by generations this makes \(X_N(f)\) a martingale.
+
+\begin{lemma}[Finite-depth geometrical identity]\label{lem:bound}
+For \(n\ge2\), put \(u_{ij}=\min\{N,v_p(x_i-x_j)\}\), where \(v_p(0)=+\infty\). Relabel so that \(u_{12}\) is a minimum of all pair depths. If \(A_N=\{v_N(x_i):1\le i\le n\}\), then
+\begin{equation}\label{eq:bound}
+ nN-L(A_N)=2u_{12}+\sum_{j=3}^n\max_{i<j}u_{ij}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The first pair spans a path of length \(2(N-u_{12})\). Its top vertex is the common ancestor of \emph{all} marks, so each later mark reaches the existing hull along a new segment of length \(N-\max_{i<j}u_{ij}\). This identity still holds when several marks share a cutoff vertex. Sum the added lengths.
+\end{proof}
+
+\begin{theorem}[Subcritical field and critical Gaussian limit]\label{thm:limits}
+\begin{enumerate}
+\item If \(0<\Delta<1/2\), the \(X_N\) converge almost surely on the countable cylinder basis of test functions and in every finite \(L^r\) against any locally constant \(f\). The limit is a non-Gaussian random distribution. Its connected \(n\)-point kernel, \(n\ge2\), is locally integrable and, for distinct marks, equals
+\begin{equation}\label{eq:ren}
+ K_n(x_1,\ldots,x_n)=\lambda e^{-\mu L_{\rm ren}(x_1,\ldots,x_n)},\qquad
+ L_{\rm ren}=\lim_{N\to\infty}
+       \bigl[\hprice(\D_{A_N}(2))-nN\bigr].
+\end{equation}
+\item At \(\Delta=1/2\), the \(N^{-1/2}X_N\) converge jointly on every finite family of test functions to centered Gaussian white noise with covariance
+\begin{equation}\label{eq:WN}
+ \lambda(1-p^{-1})\int_{\Zp} f(x)g(x)\,dx .
+\end{equation}
+For \(\Delta\ge1/2\) there is no unmodified \(L^2\) limit on any nonzero real locally constant test.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By \eqref{eq:cumulant} the rescaled covariance kernel at finite depth is \(\lambda p^{2\Delta u_{12}}\), and every connected kernel of order \(n\ge2\) is
+\begin{equation}\label{eq:cutoff}
+ K_{n,N}=\lambda p^{\Delta(nN-L(A_N))}.
+\end{equation}
+For distinct marks, the exponent stops changing after all rays separate. For \(0<\Delta<1/2\), the pair kernel is dominated by \(\lambda |x_1-x_2|_p^{-2\Delta}\), which is integrable by summing \(p\)-adic shells. This gives the martingale limit in \(L^2\) and almost surely. The indicators of the countably many cylinders span the space of locally constant tests; intersect their probability-one events. The limiting functional is continuous on each finite-resolution test space, hence is a random distribution in the usual inductive-limit test-function sense.
+
+For the higher moments, on each region where a given pair is minimal in \eqref{eq:bound} put that pair first and use any fixed order of the remaining marks. The kernel there is bounded by
+\[
+ \lambda |x_1-x_2|_p^{-2\Delta}
+       \prod_{j=3}^n \sum_{i<j}|x_i-x_j|_p^{-\Delta}.
+\]
+Integrate successively in reverse order; each later variable gives a finite shifted Haar integral, and the first pair is integrable. Taking the sum over finitely many minimal-pair choices gives a uniform integrable bound for fixed \(n\), even across collisions. The moment--cumulant formula gives uniform even moments of all orders for every test function. Applying the \(L^r\) martingale theorem with these bounds proves convergence in every finite \(L^r\); dominated convergence applied to the kernels proves \eqref{eq:ren}, also for mixed tests. The third cumulant on every nonzero nonnegative test is strictly positive. In particular the limiting distribution is not Gaussian.
+
+For \(\Delta=1/2\), take \(f,g\) constant on all depth-\(M\) balls for some fixed \(M\). The shell \(v_p(x-y)=s\) has \(y\)-measure \((1-p^{-1})p^{-s}\) at each \(x\). Inside its depth-\(M\) ball \(g(y)=g(x)\). Thus for \(M\le s<N\) each shell contributes \(\lambda(1-p^{-1})\int fg\) to the covariance. The final capped ball and all shallower shells contribute \(O(1)\). Division by \(N\) yields \eqref{eq:WN}. The same argument using the final ball gives divergence of the unmodified variance for all \(\Delta>1/2\); at criticality the covariance grows linearly.
+
+It remains to bound the higher critical cumulants. Partition the domain by \(s=\min_{i<j}u_{ij}\) and choose a minimal pair in each stratum. For \(s<N\), all marks are in the same depth-\(s\) ball and that pair separates into different children there. Rescale that ball to \(\Zp\), removing \(s\) units of depth and giving the pair depth zero. Formula \eqref{eq:bound} contributes \(p^{ns/2}\) from the removed depth. Summing over the \(p^s\) balls gives a measure factor \(p^{-(n-1)s}\). On the rescaled stratum the first-pair singularity is absent, and the remaining attachment factors are integrable uniformly in the remaining cutoff by the previous reverse-order integration with exponent \(1/2<1\). The stratum \(s=N\) is all marks in the same cutoff ball, with total weight exactly \(p^{-(n/2-1)N}\) before bounded tests and \(\lambda\). The geometric sum over \(s\) is finite for every \(n>2\). All those cumulants of \(X_N\) are therefore uniformly bounded and, after division by \(N^{n/2}\), vanish. The first cumulant is zero. The moment--cumulant formula now gives all Gaussian moments of every real linear combination of test functions. Gaussian moment determinacy and Cram\'er--Wold give the asserted joint weak convergence. This is a statement of convergence on finite collections of tests, not a uniform convergence in a stronger distribution topology.
+\end{proof}
+
+
+\subsection{Covariance on the full tree boundary}
+
+The subcritical proof also applies to the complete boundary of the regular tree. Fix a base vertex \(o\); let \(\sigma_o\) be the probability measure giving every depth-\(N\) cylinder mass \((p+1)^{-1}p^{-(N-1)}\) for \(N\ge1\). Use \(v^o_N(\xi)\) and \(\sigma_o\) in \eqref{eq:mart} to define the limiting random distribution \(X_o\). The depth lemma remains true with \(u_{ij}\) the capped length of the common initial path. A shared prefix of length at least \(s\ge1\) has \(\sigma_o\)-probability \((p+1)^{-1}p^{-(s-1)}\) conditional on the first point. All pair and attachment integrals used above therefore converge with the same exponents. The field in a \(p\)-ary cone is recovered on restricting to that cone and rescaling the reference measure to mass one.
+
+For a tree automorphism \(g\), define the integer depth shift
+\[
+ b_g(\xi)=\lim_{N\to\infty}
+   \bigl[d(g^{-1}o,v^o_N(\xi))-N\bigr] .
+\]
+It is bounded, locally constant on the boundary, and stabilizes once the ray has passed the segment joining \(o\) and \(g^{-1}o\). The field satisfies the following equality of joint test-function laws:
+\begin{equation}\label{eq:covariant}
+ X_o(f)\ \overset{\mathrm{law}}{=}\ 
+ X_o\!\left(
+     p^{(1-\Delta)b_g\circ g^{-1}}\, f\circ g^{-1}
+      \right).
+\end{equation}
+Indeed, for \(N\) sufficiently large,
+\(g v^o_N(\xi)=v^o_{N+b_g(\xi)}(g\xi)\).
+Isometry invariance of the finite Poisson law gives equality in joint law before smearing at these vertices. The field factor \(p^{\Delta N}\) therefore contributes a factor \(p^{-\Delta b_g}\) relative to depth \(N+b_g\). A depth-\(N\) cylinder on a region of constant \(b_g\) maps to a depth-\(N+b_g\) cylinder, so changing variables in \(\sigma_o\) contributes \(p^{b_g}\). Decompose every test into the finitely many locally constant shift regions and pass to the subcritical martingale limit on each. This proves \eqref{eq:covariant} as a property of the random distribution, not just of separated moments. The action includes \(\mathrm{PGL}_2(\Qp)\) through its action on the Bruhat--Tits tree.
+
+\section{Scope and relation to prior results}
+
+For binary wires the spectral length is the original tree distance; for shared labels it is the minimal subtree, not the sum of all pair distances. The construction uses a compatible extension of laminar functionals, not a new general interpolation of spectral points. The finite Poisson law and its positive common-shock weights are established in \cite{Cote,Cossette}; the cumulant verification here is direct. The boundary analysis uses all orders of the marked kernels and supplies an actual stochastic limit on test functions, not just a prescription for separated correlators. In particular \(\Delta<1/2\) and \(\Delta=1/2\) represent different scaling limits even though the underlying finite spectral geometry is unchanged.
+
+The result neither prices unsquared distances of the real hyperbolic plane by a scalar spectral point nor identifies the classical probability model with a spacetime quantum field theory. It gives a fixed-geometry example in which one genuine compatible tensor spectrum specifies pair propagation and multiparty connected kernels for a selected matter law.
+
+\paragraph{Research provenance.}
+This is an AI-led research manuscript. The derivations were checked internally; no external expert review is claimed.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem{Strassen} V.~Strassen, \emph{The asymptotic spectrum of tensors},
+ J. Reine Angew. Math. \textbf{384} (1988), 102--152.
+ \href{https://doi.org/10.1515/crll.1988.384.102}{doi:10.1515/crll.1988.384.102}.
+\bibitem{CVZ} M.~Christandl, P.~Vrana, and J.~Zuiddam, \emph{Universal points in the asymptotic spectrum of tensors}, J. Amer. Math. Soc. \textbf{36} (2023), 31--79.
+ \href{https://doi.org/10.1090/jams/996}{doi:10.1090/jams/996}.
+\bibitem{OpenAI} OpenAI, \emph{Euclidean geometry in the asymptotic spectrum of tensors}, preprint, November 24, 2026.
+ \href{https://github.com/openai/math/blob/main/preprints/Euclidean-geometry-in-the-asymptotic-spectrum-of-tensors-November-24-2026/paper.pdf}{Manuscript}.
+\bibitem{Botero} A.~Botero, M.~Christandl, T.~C.~Fraser, I.~Leigh, and H.~Nieuwboer,
+ \emph{On quantum functionals for higher-order tensors}, preprint (2026).
+ \href{https://arxiv.org/abs/2604.18283v2}{arXiv:2604.18283v2}.
+\bibitem{Buneman} P.~Buneman, \emph{A note on the metric properties of trees},
+ J. Combin. Theory Ser. B \textbf{17} (1974), 48--50.
+\bibitem{Cote} B.~C\^ot\'e, H.~Cossette, and E.~Marceau, \emph{Tree-structured Markov random fields with Poisson marginal distributions},
+ J. Multivariate Anal. (2025).
+ \href{https://arxiv.org/abs/2408.13649}{arXiv:2408.13649}.
+\bibitem{Cossette} H.~Cossette, B.~C\^ot\'e, A.~Dubeau, and E.~Marceau, \emph{On a risk model with tree-structured Poisson Markov random field frequency, with application to rainfall events}, ASTIN Bull. \textbf{56} (2026), 317--343.
+ \href{https://doi.org/10.1017/ASB.2026.10087}{doi:10.1017/ASB.2026.10087}.
+\bibitem{Gubser} S.~S.~Gubser, J.~Knaute, S.~Parikh, A.~Samberg, and P.~Witaszczyk,
+ \emph{\(p\)-adic AdS/CFT}, Commun. Math. Phys. \textbf{352} (2017), 1019--1059.
+ \href{https://arxiv.org/abs/1605.01061}{arXiv:1605.01061}.
+\bibitem{GP} S.~S.~Gubser and S.~Parikh, \emph{Geodesic bulk diagrams on the Bruhat--Tits tree},
+ Phys. Rev. D \textbf{96} (2017), 066024.
+ \href{https://arxiv.org/abs/1704.01149}{arXiv:1704.01149}.
+\bibitem{BDpoint} S.~V.~Bitseki Penda and J.-F.~Delmas, \emph{Central limit theorem for bifurcating Markov chains under point-wise ergodic conditions}.
+ \href{https://arxiv.org/abs/2012.04741}{arXiv:2012.04741}.
+\bibitem{BDl2} S.~V.~Bitseki Penda and J.-F.~Delmas, \emph{Central limit theorem for bifurcating Markov chains under \(L^2\)-ergodic conditions}.
+ \href{https://arxiv.org/abs/2106.07711}{arXiv:2106.07711}.
+\bibitem{HLM} L.-Y.~Hung, W.~Li, and C.~M.~Melby-Thompson, \emph{\(p\)-adic CFT is a holographic tensor network}, JHEP \textbf{04} (2019), 170.
+ \href{https://arxiv.org/abs/1902.01411}{arXiv:1902.01411}.
+\end{thebibliography}
+\end{document}
+

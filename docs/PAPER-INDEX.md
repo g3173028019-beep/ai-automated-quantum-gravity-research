@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 41 items: 20 original research packets, six later analytical Markdown manuscripts and fifteen typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 43 items: 20 original research packets, six later analytical Markdown manuscripts and seventeen typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–37 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–39 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -495,3 +495,19 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** Flat homogeneous tori and the fully marked shape cover. The fixed-clock spectrum is not a theorem about inhomogeneous dynamics or a time-dependent propagator.
 
 [Paper entry](../papers/37-winding-rank/README.md) · [PDF](../papers/37-winding-rank/manuscript.pdf) · [TeX](../papers/37-winding-rank/manuscript.tex) · [Verification](../papers/37-winding-rank/VERIFICATION.md)
+
+## 38. From Euclidean tensor prices to EPRL amplitudes: a rank obstruction at the four-to-two move
+
+**Result.** Coherent cut-price operators reproduce finite corrected Euclidean EPRL amplitudes and their gluing. A marked 4↔2 boundary block has rank five against a rank-one coarse seam, with exact cutoff-limit values at γ=1/3.
+
+**Scope.** Corrected Euclidean EPRL at the stated rational Immirzi parameters, weights and boundary marks. The spin-cutoff limit keeps the two complexes fixed; it is not a graph continuum limit.
+
+[38 · From Euclidean tensor prices to EPRL amplitudes: a rank obstruction at the four-to-two move](../papers/38-tensor-prices-eprl-boundary/README.md) · [PDF](../papers/38-tensor-prices-eprl-boundary/manuscript.pdf) · [TeX](../papers/38-tensor-prices-eprl-boundary/manuscript.tex) · [Verification](../papers/38-tensor-prices-eprl-boundary/VERIFICATION.md)
+
+## 39. Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary
+
+**Result.** A compatible spectral assignment recovers real-tree distances and finite Steiner-hull lengths. A Poisson field has explicit non-Gaussian connected boundary kernels below threshold and a Gaussian white-noise limit at critical scaling.
+
+**Scope.** A classical tree-indexed probability field and a tensor spectral encoding, with the existing finite Poisson model explicitly credited. No spacetime or gravity construction is asserted.
+
+[39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](../papers/39-real-tree-spectral-boundary-fields/README.md) · [PDF](../papers/39-real-tree-spectral-boundary-fields/manuscript.pdf) · [TeX](../papers/39-real-tree-spectral-boundary-fields/manuscript.tex) · [Verification](../papers/39-real-tree-spectral-boundary-fields/VERIFICATION.md)

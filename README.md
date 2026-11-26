@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**41 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 15 typeset analytical articles**
+**43 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 17 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 41 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 43 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -18,9 +18,18 @@ Positive physical states for coupled fields, quantitative geometry–matter info
 | **What remains stable when discrete geometry is changed?** | [17 · Cartan–Regge closure](papers/17-cartan-regge-closure/) treats the finite first-order reduction; [11 · Causal Regge transfer](papers/11-causal-regge-transfer/) isolates a finite Lorentzian channel; [22 · Lorentzian Regge Airy asymptotics](papers/22-lorentzian-regge-airy/manuscript.md) resolves the behavior of a specific saddle merger. |
 | **Which radiative quantities can be transported or measured?** | [23 · Gravitational memory and boosts](papers/23-gravitational-memory-boost/manuscript.md) treats its stated memory sector; [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md) studies a separate finite-aperture record in a specified graviton vacuum. |
 
-These routes connect the 20 original packets with the twenty-one later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
+These routes connect the 20 original packets with the twenty-three later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
 
 ## New TeX and PDF manuscripts
+
+### Tensor spectral geometry
+
+| Paper | Result | Files |
+|---|---|---|
+| [38 · From Euclidean tensor prices to EPRL amplitudes: a rank obstruction at the four-to-two move](papers/38-tensor-prices-eprl-boundary/README.md) | Coherent cut-price operators reproduce finite corrected Euclidean EPRL amplitudes and their gluing. A marked 4↔2 boundary block has rank five against a rank-one coarse seam, with exact cutoff-limit values at γ=1/3. | [PDF](papers/38-tensor-prices-eprl-boundary/manuscript.pdf) · [TeX](papers/38-tensor-prices-eprl-boundary/manuscript.tex) · [Verification](papers/38-tensor-prices-eprl-boundary/VERIFICATION.md) |
+| [39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](papers/39-real-tree-spectral-boundary-fields/README.md) | A compatible spectral assignment recovers real-tree distances and finite Steiner-hull lengths. A Poisson field has explicit non-Gaussian connected boundary kernels below threshold and a Gaussian white-noise limit at critical scaling. | [PDF](papers/39-real-tree-spectral-boundary-fields/manuscript.pdf) · [TeX](papers/39-real-tree-spectral-boundary-fields/manuscript.tex) · [Verification](papers/39-real-tree-spectral-boundary-fields/VERIFICATION.md) |
+
+### Earlier typeset work
 
 | Paper | Result | Files |
 |---|---|---|
@@ -111,7 +120,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All 41 manuscripts, with results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 43 manuscripts, with results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |

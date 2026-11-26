@@ -97,3 +97,8 @@ The recorded review consists of automated calculations and AI review. Human expe
 - [35 · Positive string poles and indefinite finite-transfer graviton amplitudes](papers/35-typeii-full-polarization/README.md): [manuscript verification](papers/35-typeii-full-polarization/VERIFICATION.md).
 - [36 · Full counting statistics of neutral emission in a quantum charged throat](papers/36-charged-throat-emission/README.md): [manuscript verification](papers/36-charged-throat-emission/VERIFICATION.md).
 - [37 · Winding rank and shape confinement in homogeneous Einstein–scalar tori](papers/37-winding-rank/README.md): [manuscript verification](papers/37-winding-rank/VERIFICATION.md).
+
+## Tensor spectral geometry
+
+- [38 · From Euclidean tensor prices to EPRL amplitudes: a rank obstruction at the four-to-two move](papers/38-tensor-prices-eprl-boundary/README.md): [packet verification](papers/38-tensor-prices-eprl-boundary/VERIFICATION.md
+- [39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](papers/39-real-tree-spectral-boundary-fields/README.md): [packet verification](papers/39-real-tree-spectral-boundary-fields/VERIFICATION.md
