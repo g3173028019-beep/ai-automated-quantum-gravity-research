@@ -1,0 +1,256 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\dvol}{\operatorname{dvol}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\Hess}{\operatorname{Hess}}
+\newcommand{\sech}{\operatorname{sech}}
+\title{Time-resolved scalar returns from a marked timelike tube:\\
+homogeneous-orbit reconstruction and exact vacuum ambiguities}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We consider the inverse problem of recovering a Lorentzian metric from causal scalar returns to one timelike tube. On a regular two-way radar wedge with fixed compact homogeneous angular orbit, we show that finitely many marked angular channels determine the nonlinear metric, angular shift and twist. The reconstruction does not require small shear or multiplicity-free angular representations. Its main analytic ingredient is a noncommutative Volterra inverse for the full time-resolved response in an invariant angular block. Two distinct scalar mass squares fix the absolute conformal scale. Alternatively a single massless probe and its calibrated instantaneous contact suffice. Within the vacuum Einstein class the contact is unnecessary at a nonumbilic tube: Ricci flatness removes that conformal ambiguity. An umbilic flat cone pair shows the remaining exception. Angular information has a different obstruction. We prove a marked \(T^2\) angular lower bound even on exact four-dimensional vacuum metrics with the same induced tube metric and scalar contacts. We also construct angle-dependent exact vacuum metrics with identical finite projected responses at every probe mass, but distinguishable by a strictly delayed angular conversion measurement outside the observed set.
+\end{abstract}
+
+\section{Data and scope}
+
+The data are scalar Dirichlet histories and the corresponding inward canonical normal flux, with angular input and output patterns registered on one timelike tube. We use the retarded increment, with no unknown incoming increment to the experiment. Boundary data, clock, angular coordinates, and the outward or inward choice must be fixed before comparing metrics. Throughout we use the inward sign. The positive-delay part of the response is distinguished from distributions supported at equal emission and reception times. For a free scalar in a fixed reflecting Dirichlet realization the same positive-delay map is, up to the specified normalization, the retarded commutator of the normal fields: Green's identity expresses the Dirichlet solution using a source-side normal trace of the retarded Green distribution; the flux adds a receiver-side normal trace. This interpretation requires the corresponding well-defined boundary traces and does not turn an arbitrary volume source into a Dirichlet drive.
+
+Our uniqueness statements concern actual registered coefficients and complete temporal kernels in specified angular channels. They do not assert reconstruction from finitely many time samples, stable reconstruction across a caustic, or identification of an unknown angular topology. In the homogeneous problem we assume a marked regular product chart on the two-way wedge, and the intrinsic tube metric and boundary transport are calibrated. In the angle-dependent construction in Section~\ref{sec:inhom} we use a directly posed finite global-time slab instead; no radial reduction is assumed there. General Lorentzian Dirichlet-to-Neumann problems carry additional diffeomorphism and conformal issues \cite{StefanovYang,LiimatainenOksanen}. The finite angular mechanism here uses matrix response entries, not unmarked eigenvalues \cite{AvdoninBelishevIvanov,GordonSchuethSutton}.
+
+\section{An exact finite-matrix Volterra inverse}
+
+Let \(u\le v\) denote radar times of emission and reception at the same tube, so the tube is \(u=v\). Write \(t=(u+v)/2\) and \(y=(v-u)/2\) in this section. Assume the calibrated scalar field restricted to a fixed finite angular block satisfies
+\begin{equation}\label{eq:L}
+ \mathcal L\psi=0,\qquad
+ \mathcal L=4\partial_u\partial_v+4B\partial_v+2B_v+V ,
+\end{equation}
+where \(B^*=-B\), \(V^*=V\) with respect to a known fixed angular inner product, and \(B(u,u)\) is known. Set \(Q=V+2B_v\). On a fixed compact wedge, all coefficient matrices are smooth and bounded. Incident and outgoing normalizations are calibrated so that the delayed inward flux is the delayed part of \(\partial_y\psi\).
+
+For an emission time \(s\), write the impulse response as
+\[
+ \psi_s(u,v)=\delta(u-s)I+\mathbf 1_{\{u>s\}}K(s;u,v).
+\]
+The \(v\)-derivative of the incident delta vanishes. Matching the delta term and the smooth interior equation gives
+\[
+ 4K_v(s;s,v)=-Q(s,v),\qquad
+ \partial_u K_v(s;u,v)=-B(u,v)K_v(s;u,v)-\tfrac14 Q(u,v)K(s;u,v).
+\]
+The driven boundary has zero delayed Dirichlet value, hence \(K(s;u,u)=0\). Let \(U(v;u,\xi)\) solve \(\partial_u U=-B(u,v)U\), \(U(v;\xi,\xi)=I\), holding \(v\) fixed. It is unitary. Then
+\begin{align}
+4K_v(s;u,v)&=-U(v;u,s)Q(s,v)
+ -\int_s^u U(v;u,\xi)Q(\xi,v)K(s;\xi,v)\,d\xi,\label{eq:transport}\\
+K(s;u,v)&=\int_u^v K_v(s;u,v')\,dv',
+\qquad R(v,s)=2K_v(s;v,v).\label{eq:readout}
+\end{align}
+The flux factor follows because \((\partial_u+\partial_v)K(s;v,v)=0\) for \(v>s\). The order of all matrix products in \eqref{eq:transport} matters. In particular the unknown \(Q(s,v)\) occurs inside the unintegrated leading term of \(K_v\) for every intermediate \(u\); it is the unitary \(U\) multiplying this term, not a lag argument on \(K_v\), that makes the inverse possible.
+
+\begin{lemma}\label{lem:matrix}
+On each fixed bounded admissible matrix class, \((R,B|_{u=v})\) determines \((V,B,B_v)\) uniquely and locally Lipschitz on compact wedges in the uniform norms of the exact delayed kernel and boundary calibrations.
+\end{lemma}
+\begin{proof}
+The identities \(V=(Q+Q^*)/2\), \(B_v=(Q-Q^*)/4\) and the boundary value reconstruct \(B\) from \(Q\). The adjoint is taken on the pointwise angular matrix, not by reversing the source and receiver times. To compare two candidates let \(D(\lambda)=\sup_{v-u\le\lambda}\|\Delta Q(u,v)\|\) and first suppose their boundary \(B\) agrees. Integration of \(B_v\) gives \(\|\Delta B(u,v)\|\le\tfrac12\int_0^{v-u}D(q)\,dq\). Variation of constants for \(U\), using unitarity on both sides, gives
+\[
+ \|\Delta U(v;u,s)\|\le C_T\int_0^{v-s}D(q)\,dq ,
+\]
+where \(T\) bounds the lag.
+
+The two forward tails \(K\) are uniformly bounded by integrating \eqref{eq:transport} in \(v\) and applying Gronwall. For the difference tails this integration puts the leading \(\Delta Q(s,v')\) under a lag integral. In the integrated \(\Delta Q(\xi,v')K\) term use the variable \(q=v'-\xi\). The terms involving \(\Delta U\) are bounded by the preceding estimate, and the term involving \(\Delta K\) has kernel bounded in \(v'\) after taking the supremum in \(\xi\le v'\). Gronwall yields the bound
+\[
+  \sup_{s\le u\le v}\|\Delta K(s;u,v)\|\le C_T\int_0^{v-s}D(q)\,dq
+\]
+for each fixed \(s,v\). Subtract \eqref{eq:transport} at \(u=v\). The leading coefficient on \(\Delta Q(s,v)\) is unitary while every other coefficient-difference term has the same accumulated lag bound. Consequently
+\[
+ D(\lambda)\le 2\|\Delta R\|_{\le\lambda}
+     +C_T\int_0^\lambda D(q)\,dq .
+\]
+Gronwall proves the claim. If boundary \(B\) differs, its measured uniform difference enters linearly in the same estimates. These comparisons concern admissible data; they do not claim that arbitrary matrix-valued kernels are in the range.
+\end{proof}
+
+\section{Nonlinear reconstruction on compact homogeneous angular orbits}
+
+Let \(X=G/H\) be a fixed marked compact connected homogeneous space of dimension \(d>0\), and \(\nu\) a fixed positive invariant smooth density. In the registered product chart assume
+\begin{equation}\label{eq:metric}
+ g=-a\,du\,dv+q(d\theta-b\,du,d\theta-b\,du).
+\end{equation}
+Here \(a>0\) depends on \(u,v\), and \(q,b\) are arbitrary smooth \(G\)-invariant angular metrics and vector fields, respectively, at each \(u,v\). The chart transports angular labels along \(\partial_v\); the boundary registration fixes the remaining angular coordinate freedom. Set
+\[
+ S=(\dvol_q/\nu)^{1/2},\quad
+ B=b\cdot d_\theta,\quad
+ L_q=-\operatorname{div}_{\nu}(q^{-1}d_\theta).
+\]
+By transitivity \(S\) is constant on each orbit. Similarly \(\operatorname{div}_{\nu} b\) is angularly constant and its integral vanishes, so \(B\) is skew on \(L^2(\nu)\). In the minimally coupled wave equation the substitution \(\psi=S\phi\) gives \eqref{eq:L} with
+\begin{equation}\label{eq:V}
+ V_\mu=W+a\mu^2+a L_q,\qquad W=-4S_{uv}/S .
+\end{equation}
+For example the null transport derivatives are \(\partial_u+B\) and \(\partial_v\); symmetrizing their product yields \(4\partial_u\partial_v+4B\partial_v+2B_v\). The scalar rescaling cancels the two radial first-derivative terms and leaves the stated \(W\). On \(u=v\) the inward unit normal is \(a^{-1/2}(\partial_v-\partial_u-b\cdot d_\theta)\). Its angular term applied to the zero delayed Dirichlet trace vanishes. The same holds for the rescaling term proportional to the trace. Thus the actual canonical flux gives \eqref{eq:readout} after the known area, \(S\), and clock normalization.
+
+\begin{theorem}\label{thm:homog}
+A fixed finite family of calibrated angular return matrices, depending only on the marked \(G/H\), determines \(a,q,b\) and the twist \([\partial_v,\partial_u+b]=\partial_v b\) on the observed wedge. One can use a full finite block for a massless probe and an extra singlet for a second mass. On bounded smooth classes and fixed positive ellipticity margins the reconstruction of these coefficient values, including the twist, is locally Lipschitz in the delayed-kernel norms.
+\end{theorem}
+\begin{proof}
+Choose a fixed \(G\)-invariant reference metric on \(X\) by averaging. By compactness, finitely many smooth real functions can be chosen with differentials spanning every cotangent space: use local coordinates multiplied by cutoffs and a finite cover. Approximation in \(C^1\) by finite spectral sums of the reference Laplacian preserves spanning. Call the resulting functions \(f_i\). Reference eigenspaces are finite \(G\)-modules, and multiplication is equivariant, so the constants, \(f_i\), and \(f_if_j\) lie in finitely many angular representation types. Let \(E\) be the sum of the \emph{full} corresponding \(G\)-isotypic components of \(L^2(X,\nu)\). It is still finite-dimensional: the scalar representation on \(G/H\) is the right-\(H\)-invariant subspace of the Peter--Weyl sum on \(G\), with multiplicity at most the dimension of each irreducible representation. Taking full isotypic components avoids assuming that the unknown operator commutes with the reference Laplacian or preserves an individual copy of a repeated type. Equivariant operators preserve \(E\), including \(B,V_\mu\) and the exact response. This argument is also consistent with the classical equivariant embedding theorem \cite{Mostow,Palais}.
+
+By Lemma~\ref{lem:matrix} the full massless block recovers \(B,B_v,V_0\), and the second-mass singlet differs from the massless singlet by \(\mu^2 a\). Let \(D=V_0-WI=aL_q\); \(W\) is known from the singlet. Then
+\[
+ -\tfrac12\big[D(f_i f_j)-f_i D f_j-f_j D f_i\big]
+ =a q^{-1}(df_i,df_j),\qquad B f_i=df_i(b).
+\]
+The same first-order identity with \(B_v\) gives \(df_i(\partial_vb)\). All inputs on the left lie in \(E\), and outputs are known as functions in its fixed basis. The reference-metric right inverse of the surjection \(c\mapsto\sum_i c_i df_i(x)\) is uniformly bounded on compact \(X\); applying it to these identities recovers the tensor and vectors at every point. Divide by \(a\) and invert \(q^{-1}\). Finite-dimensional norm equivalence on \(E\) and positive margins give the stated value stability. On each isotypic \(V_\pi\otimes W_\pi\) the data matrices are \(I_{V_\pi}\otimes R_\pi\); one fixed unit vector in \(V_\pi\) and all pairs in its multiplicity space \(W_\pi\) suffice. Thus this is a finite set of time-dependent coherent channels, not a spectral-eigenvalue experiment.
+\end{proof}
+
+\paragraph{Examples.}
+For \(X=\mathbb T^2\), take the zero mode at two masses and massless Fourier directions \(e_1,e_2,e_1+e_2\). These give all entries of \(a q^{-1}\) by polarization and all entries of \(b\) by their skew parts. The \(q\) matrix need not be diagonal and may vary at finite amplitude. For \(X=SU(2)\) with a fixed left-invariant coframe, the same singlets and one massless spin-one triplet suffice: in the Cartesian spin-one basis \(q^{ab}J_aJ_b=\tr(q^{-1})I-q^{-1}\), while the three generators recover \(b\) from \(B\). The spin-half anticommutator only sees the trace of \(q^{-1}\). This finite exact argument does not extrapolate to the infinite angular system of an unrestricted smooth nonsymmetric metric.
+
+\paragraph{A single massless probe.}
+The massless block alone gives \(M=a q^{-1}\), \(b\), and \(W\). It therefore gives the entire conformal class in the marked chart. With the instantaneous singlet contact it also gives \(S_y(t,0)\): after the known \(-\delta'\) free term is removed, rescaling the inward singlet flux gives the local coefficient \(-S_y/S\). The induced tube gives \(S(t,0)\). Since \(4\partial_u\partial_v=\partial_t^2-\partial_y^2\), \(W\) determines
+\[
+ S_{yy}-S_{tt}=W S.
+\]
+The sideways problem here is the ordinary \(1+1\) wave Cauchy problem with evolution variable \(y\); d'Alembert and Volterra iteration use exactly the available interval \([u,v]\) and give local Lipschitz stability. In \(\nu\)-volume-one frames, \(\det M=a^d/S^4\), so \(a=(S^4\det M)^{1/d}\) and \(q=a M^{-1}\). If the contact is not observed, any small change of the free initial derivative \(S_y(t,0)\) yields positive solutions on compact subwedges with the same \(S(t,0)\), \(M,b,W\) and the same full delayed massless map, even including unobserved angular modes. The intrinsic tube data stay fixed. This is the exact kinematical ambiguity, before imposing field equations. A different calibrated local boundary action would require a correspondingly different contact normalization.
+
+\section{When vacuum Einstein determines the missing conformal scale}
+
+The following is a boundary consequence of the conformal Einstein classification \cite{Brinkmann}. It does not require angular symmetry.
+
+\begin{theorem}\label{thm:conf}
+Let \(g,\widetilde g=f^{-2}g\) be Ricci-flat metrics on a connected region of spacetime dimension \(n\ge3\) with a common marked timelike tube and equal induced tube metrics, so that \(f=1\) there. If the tube is nonumbilic at any point, \(f=1\) everywhere. Otherwise, given \(g\) and the designated inward side, there is at most one distinct conformal Ricci-flat representative with the same induced tube metric. A distinct representative requires a totally umbilic tube with nonzero constant principal curvature and reverses the oriented second fundamental form. In four dimensions its local geometry is flat. If the full massless canonical contact is included, it distinguishes any distinct representative.
+\end{theorem}
+\begin{proof}
+The trace-free conformal Ricci equation is \(\Hess_g f=cg\); the full equation gives \(|df|_g^2=2cf\). Thus
+\[
+ 2c\,df=d|df|_g^2=2f\,dc+2c\,df,
+\]
+so \(c\) is constant. On the tube \(df=\alpha N^\flat\) for the consistently inward, spacelike unit normal \(N\). Its second fundamental form \(II\) satisfies
+\[
+ \alpha^2=2c,\qquad
+ \alpha II=c\gamma ,
+\]
+with \(\gamma\) the induced metric. At a nonumbilic point this forces \(\alpha=c=0\), hence \(df\) is parallel and vanishes at that point. By connectedness \(f=1\). In the nonconstant case \(\alpha\ne0\), \(II=(\alpha/2)\gamma\), and the conformal law gives \(\widetilde{II}=II-\alpha\gamma=-II\). The value of \(\alpha\) is forced by the initial \(II\), and \(\nabla df=cg\) determines \(f\) by integration along curves from this fixed boundary first jet. This yields at most one distinct representative.
+
+For \(c>0\), let \(r=(2f/c)^{1/2}\). Direct differentiation gives \(|dr|^2=1\), \(\Hess r=(g-dr^2)/r\). The flow of the spacelike gradient of \(r\) is geodesic and gives locally \(g=dr^2+r^2h\). The vacuum equation then reads \(\Ric_h=(n-2)h\). If \(n=4\), the three-dimensional Lorentzian Einstein metric \(h\) has constant sectional curvature \(+1\), and its cone is flat.
+
+Finally, since both scalar curvatures vanish, the conformal wave equation agrees with the minimally coupled massless equation on both metrics. Its solution transformation is \(\widetilde\phi=f^{(n-2)/2}\phi\). At \(f=1\) the normal and boundary density agree, so the raw inward Dirichlet-to-normal map changes exactly by \(\tfrac{n-2}{2}\alpha\) times the input, a contact term. The retarded zero initial increment and any common homogeneous Dirichlet conditions are preserved. This term is nonzero in the exceptional branch.
+\end{proof}
+
+For the class of Theorem~\ref{thm:homog}, the finite delayed massless block already gives \(a q^{-1}\) and \(b\), thus the conformal class. Theorem~\ref{thm:conf} therefore removes the need for both the second mass and the contact on a nonumbilic vacuum tube. Outside the homogeneous-orbit recovery theorem, this inference is conditional on an independently recovered conformal class. Boundary jets and lens data \cite{StefanovYang} do not supply a general whole-region linear conformal reconstruction on their own. In particular the claimed such result in arXiv:2303.08430 was withdrawn by its authors for a proof error and is not used here.
+
+The exceptional branch is attained. Let \(h=-d\tau^2+\cosh^2\tau\,d\Omega_2^2\) be the unit de Sitter metric and consider \(g_\pm=r_0^2 e^{\pm2x}(dx^2+h)\) on \(0\le x\le L\). Both metrics are flat, as is clear from the cone coordinates \(r=r_0e^{\pm x}\). The same tube at \(x=0\) has induced metric \(r_0^2h\) and signed \(II_\pm=\pm\gamma/r_0\) in the designated inward orientation. The two candidates are not related by an isometry fixing the tube and its inward side. The solution transformation \(\phi_-=e^{2x}\phi_+\) preserves the common homogeneous condition at \(L\), and changes the inward contact by \(2/r_0\) times the prescribed Dirichlet data. All positive-delay massless returns, in all angular modes, are equal. One may alternatively measure before the outer reflection.
+
+\section{Sharp angular resources on an exact vacuum two-torus}
+
+\begin{theorem}\label{thm:gowdy}
+For marked individual \(\mathbb T^2\) Fourier channels, the projectors \(n_j n_j^{\mathsf T}\) must span \(\operatorname{Sym}(2)\) for reconstruction even after restricting to smooth four-dimensional vacuum backgrounds with the same complete induced tube geometry, proper clock and canonical scalar contacts. For any nonspanning set there are two such marked vacuum candidates with identical responses in all chosen channels and at every scalar mass. They are not isometric by an isometry fixing the tube pointwise and its inward side.
+\end{theorem}
+\begin{proof}
+Choose a nonzero indefinite \(H\) in the common kernel \(n_j^{\mathsf T}Hn_j=0\). If the tested vectors span \(\mathbb R^2\), every nonzero element of this matrix kernel must be indefinite, since a semidefinite one would annihilate the span. Otherwise take \(H=e f^{\mathsf T}+f e^{\mathsf T}\) for \(e\) perpendicular to all vectors and nonzero \(f\) perpendicular to \(e\). Choose \(A_0>0\) diagonal in an orthonormal eigenbasis of \(H\) with eigenvalues the absolute values of those of \(H\). Then \(K=A_0^{-1/2}H A_0^{-1/2}\) has spectrum \(\{1,-1\}\).
+
+Use the same fixed angular lattice on both candidates and choose \(t>0\):
+\[
+ g_\pm=e^{\lambda/2}t^{-1/2}(-dt^2+dx^2)+q_\pm(d\theta,d\theta),
+ \qquad
+ q_\pm=tA_0^{-1/2}\exp(\mp P K)A_0^{-1/2}.
+\]
+Locally a constant angular congruence puts the metrics in standard polarized Gowdy form. This is a local check of the vacuum equation, not a change of the angular lattice marking. Their angular components are translation invariant and hence define metrics on the same torus. Take
+\[
+ P=\epsilon\sin(kx)J_0(kt),\qquad
+ \lambda_t=t(P_t^2+P_x^2),\qquad
+ \lambda_x=2tP_tP_x .
+\]
+The Bessel equation gives \(P_{tt}+t^{-1}P_t-P_{xx}=0\), which also makes the two derivatives of \(\lambda\) compatible. Both signs of \(P\) give the same \(\lambda\). These are the exact vacuum Gowdy equations \cite[\S III]{GreenWald}; for integer \(k\) one can make \(x\) periodic since \(\lambda_x\) has zero mean on the circle. Work on a regular two-way wedge near \(x=0\) without remote returns.
+
+On \(x=0\), \(P=0\), so the whole induced tube metric is common, \(q_+=q_-=t A_0^{-1}\), and the shifts vanish. The proper-time radar reparameterization is identical since the quotient conformal coefficient is common. The orbit half-density \(S=t^{1/2}(\det A_0)^{-1/4}\) agrees everywhere and has vanishing tube normal derivative. Thus raw source and canonical flux normalizers and local contacts agree. Moreover
+\[
+ q_+^{-1}-q_-^{-1}=2t^{-1}\sinh(P)H .
+\]
+Equation~\eqref{eq:V} therefore gives identical full \(1+1\) scalar problems in each selected Fourier channel at every mass. Their complete retarded responses agree. On the other hand the difference of the oriented angular second fundamental forms at \(x=0\) is
+\[
+ -\big(e^{\lambda/2}t^{-1/2}\big)^{-1/2}
+  t P_x(t,0)\, A_0^{-1/2} K A_0^{-1/2}.
+\]
+Choose the clock interval to contain a time where \(P_x(t,0)\ne0\). This rules out any isometry preserving the tube pointwise and its observed side. The distinct normal shear is not included in the asserted common intrinsic tube data.
+\end{proof}
+
+Three spanning nonzero projectors in two angular dimensions suffice by Theorem~\ref{thm:homog} with a singlet calibration, and Theorem~\ref{thm:gowdy} shows their necessity for the stated marked Fourier acquisition. There is no lower bound here on the number of experimental trials if one trial can encode independently many Fourier directions. The proof uses existing exact vacuum solutions; its new point is their indistinguishability by the declared scalar data, not a new Gowdy solution family.
+
+\section{Finite response ambiguity with genuine angular scattering}\label{sec:inhom}
+
+The previous positive inverse uses invariant angular blocks. The next result instead allows actual coupling out of the observed subspace. It makes a distinction between finite projected and full angular boundary data.
+
+\begin{theorem}\label{thm:inhom}
+Given any finite list of marked torus Fourier labels, there are genuinely angularly inhomogeneous smooth four-dimensional vacuum metrics with the same induced marked tube and canonical responses compressed to that list at every scalar mass. The compressed responses include all equal-time contacts and all coherent matrix entries. The metrics are not isometric by an isometry fixing the marked tube pointwise and its designated inward side, but are isometric if the angular translation of the marking is allowed. A strictly delayed omitted conversion channel distinguishes their full marked maps.
+\end{theorem}
+\begin{proof}
+Use \(t\in\mathbb R\), \(x\in[0,L]\) and fixed period-\(2\pi\) angular labels \(z,y\), with observed tube \(x=0\). For a positive integer \(N\) and phase \(\varphi\) set
+\[
+ g_\varphi=-dt^2+dz^2+dx^2+dy^2+H_\varphi(dt-dz)^2,\qquad
+ H_\varphi=\epsilon\sinh(Nx)\cos(Ny+\varphi).
+\]
+Here \(\epsilon\ne0\) is small enough that \(|H_\varphi|\le\eta<1/4\) on the slab. In local Brinkmann coordinates \(u=t-z,\ v=-(t+z)/2\), the sole possible Ricci component is \(-\tfrac12(H_{xx}+H_{yy})\) in the \(uu\) slot, hence zero. The curvature component \(R_{uyuy}=-H_{yy}/2\) is nonzero somewhere. The angle-dependent metric does not retain the continuous \(y\) translations. One can impose the same homogeneous Dirichlet condition at \(L\) with zero retarded initial increment. Both boundaries are timelike, \(g^{tt}=-1-H_\varphi\) is uniformly negative, and compact spatial slices and uniform cones provide the ordinary hyperbolic Dirichlet energy problem. The cone inequality gives \(|dx/dt|\le\sqrt{1+2\eta}\); lags below \(2L/\sqrt{1+2\eta}\) avoid any return from the outer boundary.
+
+The induced tube is \(-dt^2+dz^2+dy^2\) and the normal flux is precisely \(\partial_x\), with the same boundary density. The same tube proper clock and physical angular Fourier markings are used in both candidates. Their second fundamental forms differ when the phases differ, since
+\[
+ II_\varphi=\tfrac12\epsilon N\cos(Ny+\varphi)(dt-dz)^2 .
+\]
+A marked isometry preserving the inward side would preserve this tensor. Rotation \(y\mapsto y+\alpha\), by contrast, changes phase by \(N\alpha\) and translates the prescribed labeling.
+
+Translation by \(2\pi/N\) is an isometry of each fixed phase metric and preserves every boundary prescription. By uniqueness the actual retarded map commutes with this translation, so a matrix element from \(y\)-index \(n\) to \(m\) vanishes unless \(m-n\in N\mathbb Z\); \(z\)-index is separately conserved. Arbitrary angular translation conjugates the full map while changing the phase and acts on the \(n\)-to-\(m\) entry by the corresponding character \(e^{\pm i(m-n)\alpha}\). Choose \(N\) larger than all finite observed \(y\)-index differences. Off-diagonal \(y\)-entries in the measured list vanish exactly, and diagonal \(y\)-entries acquire no phase. This is exact equality of the finite projected causal distribution, also for finite coherent combinations and any masses. It is not a reduction to uncoupled waves outside the observed list.
+
+For actual omitted scattering take mass zero, \(z\)-index zero, incident \(y\)-index zero, and detected index \(N\). The inverse metric and constant determinant give scalar operator
+\[
+ \partial_x^2+\partial_y^2-\partial_t^2+\partial_z^2
+       -H_\varphi(\partial_t+\partial_z)^2 .
+\]
+In the Laplace variable \(s>0\), write \(\kappa_j=(s^2+j^2)^{1/2}\) and \(f_j(x)=\sinh(\kappa_j(L-x))/\sinh(\kappa_jL)\). These are the flat unit Dirichlet inputs at \(0\), zero at \(L\). Differentiating the measured inward flux at \(\epsilon=0\) gives the omitted entry
+\begin{equation}\label{eq:conversion}
+ -\frac{s^2e^{i\varphi}}2\int_0^L \sinh(Nx) f_0(x)f_N(x)\,dx .
+\end{equation}
+Indeed the output variation \(w\) solves
+\(w''-\kappa_N^2 w=\tfrac12s^2e^{i\varphi}\sinh(Nx) f_0\) with zero endpoint values. Integration by parts against \(f_N\) gives \(-w'(0)\) equal to the displayed positive-sign source pairing.
+
+At large positive \(s\), replacing the two \(f_j\) by their decaying exponentials and extending the integral to the half-line changes \eqref{eq:conversion} only by exponentially small terms. With \(K_s=s+(s^2+N^2)^{1/2}\), the ideal integral is \(N/(K_s^2-N^2)\). Therefore the derivative equals
+\[
+ e^{i\varphi}\left[-\frac{N}{8}+\frac{N^3}{32s^2}
+       +O(s^{-4})\right]+O(s^p e^{-c s L})
+\]
+for some fixed \(p,c>0\). A causal distribution with support only at lag zero and at lags at least \(\delta>0\) has a polynomial Laplace part from lag zero, and an exponentially delayed remainder. The nonzero inverse-square term rules out such a gap for the conversion derivative at every \(\delta>0\). Hence for any sufficiently short positive-lag interval some smooth temporal test detects the difference of this derivative between phases \(0\) and \(\pi/2\). Fixed-interval energy estimates on smooth histories imply differentiability of this measured entry in \(\epsilon\), so the chosen test detects a nonzero difference at sufficiently small nonzero \(\epsilon\). This argument witnesses a difference in the actual full delayed map, before any outer reflection. The perturbative computation is only a test of the omitted entry; the vacuum and compressed equality are exact.
+\end{proof}
+
+This construction uses the surviving finite cyclic symmetry and a fixed finite Fourier support. It does not prove nonuniqueness for arbitrary finite smooth sensor profiles with infinite Fourier support, or open-dense nonuniqueness for nonsymmetric metrics. It also does not show unmarked nonisometry. The angular obstruction is different from the conformal one: the observed tube here is nonumbilic at some points, so the marked phase pair is not even conformally equivalent under a boundary-pointwise identification. The finite data agree even for massive probes and with contacts; an angular conversion, rather than a local scalar calibration, distinguishes the candidates.
+
+
+\paragraph{Breaking continuous symmetry in both angular directions.}
+The ambiguity also occurs with no continuous isometry of the angular metric on each fixed interior orbit in the marked foliation. Replace \(H_\varphi\) by
+\[
+ \epsilon F(t-z)\sinh(Nx)\cos(Ny+\varphi),
+ \qquad F(w)=1+\delta\cos w
+\]
+for fixed sufficiently small nonzero \(\delta\). The local Brinkmann vacuum equation is unchanged: \(F\) depends on the null coordinate \(u=t-z\), and the transverse profile remains harmonic. The angular periodicities, common induced tube data, and cyclic \(y\)-selection all persist. The proof of compressed equality does not require separate \(z\)-conservation: equal \(y\)-indices have cancelling translation phases regardless of the two \(z\)-indices. A fixed positive-lag temporal test detecting the first variation at \(\delta=0\) also detects it for sufficiently small fixed \(\delta\ne0\), by smooth parameter dependence for the same hyperbolic Dirichlet problem. Choosing \(\epsilon\ne0\) sufficiently small then gives actual delayed discrimination as before.
+
+To check the lack of continuous angular isometries, fix \(t\) and \(x>0\). The angular metric is \(dy^2+(1+H_\varphi)dz^2\). Its Gaussian curvature is \(\mathcal K=-(\partial_y^2\sqrt{1+H_\varphi})/\sqrt{1+H_\varphi}\), and hence
+\[
+ \mathcal K=\epsilon C F(t-z)\cos(Ny+\varphi)+O(\epsilon^2),
+ \qquad C=\tfrac12N^2\sinh(Nx).
+\]
+At a point where \(\cos(Ny+\varphi)=0\) and \(F'(t-z)\ne0\), the leading \(y\)-derivative of \(\mathcal K\) is nonzero of order \(\epsilon\), its leading \(z\)-derivative vanishes, and the \(z\)-derivative of \(|d\mathcal K|_q^2\) has nonzero leading term \(-2\epsilon^2 C^2N^2 F F'\). Thus the differentials of these two intrinsic scalar invariants are independent on an open set for sufficiently small \(\epsilon\). An angular Killing field would annihilate both and would vanish there, hence everywhere on the connected orbit. This excludes continuous orbit isometries in the designated slicing, not all spacetime symmetries: the null spacetime Killing field proportional to \(\partial_t+\partial_z\) remains, as does the finite cyclic \(y\)-symmetry used in the construction. No generic nonuniqueness assertion follows.
+
+\begin{thebibliography}{99}
+\bibitem{StefanovYang} P. Stefanov and Y. Yang, The inverse problem for the Dirichlet-to-Neumann map on Lorentzian manifolds, \emph{Anal. PDE} \textbf{11} (2018), 1381--1414. \href{https://arxiv.org/abs/1607.08690}{arXiv:1607.08690}.
+\bibitem{LiimatainenOksanen} T. Liimatainen and L. Oksanen, Counterexamples to inverse problems for the wave equation, \emph{Inverse Problems Imaging} \textbf{16} (2022), 467--479. \href{https://doi.org/10.3934/ipi.2021058}{doi:10.3934/ipi.2021058}.
+\bibitem{AvdoninBelishevIvanov} S. A. Avdonin, M. I. Belishev and S. A. Ivanov, Boundary control and a matrix inverse problem for the equation \(u_{tt}-u_{xx}+V(x)u=0\), \emph{Math. USSR-Sb.} \textbf{72} (1992), 287--310. \href{https://www.mathnet.ru/eng/sm1296}{Math-Net}.
+\bibitem{GordonSchuethSutton} C. S. Gordon, D. Schueth and C. J. Sutton, Spectral isolation of bi-invariant metrics on compact Lie groups, \emph{Ann. Inst. Fourier} \textbf{60} (2010), 1617--1628. \href{https://doi.org/10.5802/aif.2567}{doi:10.5802/aif.2567}.
+\bibitem{Mostow} G. D. Mostow, Equivariant embeddings in Euclidean space, \emph{Ann. of Math.} \textbf{65} (1957). \href{https://webhomes.maths.ed.ac.uk/~v1ranick/papers/mostow.pdf}{Article}.
+\bibitem{Palais} R. S. Palais, Imbedding of compact, differentiable transformation groups in orthogonal representations, \emph{Proc. Amer. Math. Soc.} \textbf{8} (1957). \href{https://webhomes.maths.ed.ac.uk/~v1ranick/papers/palais.pdf}{Article}.
+\bibitem{Brinkmann} H. W. Brinkmann, Einstein spaces which are mapped conformally on each other, \emph{Math. Ann.} \textbf{94} (1925), 119--145. \href{https://doi.org/10.1007/BF01208647}{doi:10.1007/BF01208647}.
+\bibitem{GreenWald} S. R. Green and R. M. Wald, Examples of backreaction of small-scale inhomogeneities in cosmology, \emph{Phys. Rev. D} \textbf{87} (2013), 124037. \href{https://doi.org/10.1103/PhysRevD.87.124037}{doi:10.1103/PhysRevD.87.124037}.
+\end{thebibliography}
+\end{document}

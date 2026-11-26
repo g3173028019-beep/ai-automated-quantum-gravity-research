@@ -1,0 +1,174 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newcommand{\Om}{\Omega}
+\begin{document}
+\title{Normalizable Quadrupole States Off the Vacuum Stress Orbit}
+\author{}
+\date{}
+\maketitle
+\begin{abstract}
+In the chiral Virasoro vacuum Hilbert space with central charge $c\geq2$, we construct an entire family of nonzero vectors whose only nonzero positive-mode eigenvalue is that of $L_2$. Their normalized stress expectation is an exact constant plus a single quadrupole. Except at the vacuum, these expectations lie outside the full classical vacuum coadjoint orbit. The proof combines an orthogonal projection of a current coherent vector, a holomorphic rigidity theorem for the projective stabilizer of a highest-weight vector, and the unique ground state of the transformed rotation generator. This separates the vacuum Hilbert module from the vacuum diffeomorphism orbit already at the level of one-point functions, without assumptions about finite-level tomography. We also characterize, by a Hill spectral criterion, which prescribed smooth stress shapes admit a classical vacuum-orbit representative.
+\end{abstract}
+
+\section{Conventions and claim}
+Use $[L_m,L_n]=(m-n)L_{m+n}+\frac{c}{12}(m^3-m)\delta_{m,-n}$ and $L_n^*=L_{-n}$. The chiral vacuum representation $\mathcal H_{c,0}$ is the completed irreducible vacuum highest-weight module, with $L_0\Om=0$ and $L_{-1}\Om=0$. All stress expectations below are continuous as functionals of smooth real circle vector fields. Use the standard positive-energy projective implementation $U$ of smooth orientation-preserving circle diffeomorphisms \cite{carpi,fewster}. Infinitesimal generators can be complexified by combining those of the real and imaginary parts of the smearing field.
+
+\begin{theorem}\label{main}
+For every real $c\geq2$ and every $\lambda\in\mathbb C$ there is a unique vector $\Psi_{c,\lambda}$ with vacuum coefficient one, in the joint generator domain, satisfying
+\[
+L_2\Psi_{c,\lambda}=\lambda\Psi_{c,\lambda},\qquad
+L_n\Psi_{c,\lambda}=0\quad(n>0,\ n\ne2).
+\]
+It depends entirely holomorphically on $\lambda$ in the Hilbert space and in the graph topology of every power of $1+L_0$, with
+\[
+1\le\|\Psi_{c,\lambda}\|^2\le\cosh(2|\lambda|).
+\]
+For $\lambda\ne0$ its ray is not $[U(f)\Om]$ for any smooth orientation-preserving circle diffeomorphism $f$. Nor is the corresponding cylinder stress expectation on the coadjoint orbit of the vacuum constant $-c/24$:
+\[
+t_{c,\lambda}(\theta)=
+\frac{\langle\Psi_{c,\lambda},L_0\Psi_{c,\lambda}\rangle}{\|\Psi_{c,\lambda}\|^2}
+-\frac{c}{24}+2\operatorname{Re}(\lambda e^{-2i\theta}).
+\]
+\end{theorem}
+
+\section{Projection from a unitary current representation}
+In the zero-momentum $c=1$ chiral current Fock space write $[a_m,a_n]=m\delta_{m,-n}$ and $L_n^{(1)}=\tfrac12\sum_k:a_{n-k}a_k:$. Its vacuum is $\Om_1$. The vector
+\[
+\Xi_\lambda=\sum_{j\ge0}\frac{(2\lambda)^j}{(2j)!}a_{-1}^{2j}\Om_1
+\]
+is the even part of the oscillator exponential with squared coherent parameter $2\lambda$, without choosing a branch. Since the basis summands are orthogonal and $\|a_{-1}^{2j}\Om_1\|^2=(2j)!$, its squared norm is $\cosh(2|\lambda|)$; powers of the rotation generator introduce only polynomial factors in $j$. On the single-oscillator subspace only $\tfrac12a_1^2$ survives among the positive Virasoro modes: all other normal ordered terms contain either a higher annihilator or the zero-momentum $a_0$. Hence $L_2^{(1)}\Xi_\lambda=\lambda\Xi_\lambda$ and the other positive modes annihilate it.
+
+Tensor with the unitary central-charge $(c-1)$ vacuum representation, which exists for $c-1\ge1$. The diagonal stress modes generate from the tensor vacuum the closed cyclic copy of $\mathcal H_{c,0}$. The orthogonal projection $P$ onto this copy commutes with energy, level by level, and intertwines each mode on finite-energy states: $L_{-n}$ preserves the cyclic submodule, proving that its orthogonal complement is invariant under $L_n$. The standard stress energy bound \cite{carpi} extends the intertwining to the graph domain of $L_0$. Therefore $P(\Xi_\lambda\otimes\Om_{c-1})$ has the asserted properties. Its vacuum coefficient is exactly one because $P$ fixes the tensor vacuum. Uniqueness follows by pairing a putative eigenvector with the spanning negative-mode monomials on the vacuum: the pairings are determined by the vacuum coefficient and the joint eigenvalues. In a finite-level basis the even-level coefficient is the Gram dual to $(2^j)$, and the odd levels vanish. We do not assume that the algebraic Whittaker series, familiar from irregular conformal blocks \cite{whittaker,irregular}, converges for a general Verma module or for the unproved vacuum interval $1<c<2$.
+
+\section{Holomorphic rigidity of the diffeomorphism orbit}
+\begin{lemma}\label{rigidity}
+In a positive-energy irreducible Virasoro highest-weight representation with $c>0$ for which the smooth projective diffeomorphism action exists, let $v_h$ be its lowest vector. If $U(f)v_h$ is a joint eigenvector of all positive modes, it belongs to the ray of $v_h$.
+\end{lemma}
+\begin{proof}
+Write the lift of $f$ as $F$ with $F(\theta+2\pi)=F(\theta)+2\pi$ and $F'>0$. In the convention where the complex stress generator $L_n$ smears the angular vector field $e^{in\theta}\partial_\theta$ (a common overall factor is immaterial), covariance conjugates it by $U(f)^{-1}$ to the generator with pullback coefficient
+\[
+  g_n(\theta)=e^{inF(\theta)}/F'(\theta)
+\]
+plus a scalar central term. The same result in the inverse action convention uses $f^{-1}$. Covariance of the real generators follows by conjugating their one-parameter flows in the projective representation, which gives equality of the self-adjoint generators up to scalars; applying it to cosine and sine and then combining proves the complex formula on the vector in question. The transformed vector lies in their common domain: the smooth energy estimate bounds each smeared generator by a constant times $1+L_0$ on the original lowest vector. In the present application $\Psi_{c,\lambda}$ lies in that graph domain, and for the statement of the lemma conjugated smooth real-generator domains also follow directly from the flow identities.
+
+The Fourier coefficients of $g_n$ decrease faster than any power, because $F$ is smooth and $F'>0$ on the compact circle. For $k\ge2$,
+\[
+\|L_{-k}v_h\|^2=2kh+\tfrac{c}{12}(k^3-k)>0.
+\]
+These contributions have different energy levels, while positive modes kill $v_h$ and the central term is a scalar. Absolute convergence of the mode expansion on $v_h$ follows from the displayed polynomial norm bound and rapid Fourier decay. Since $T(g_n)v_h$ is proportional to $v_h$, its Fourier coefficients below $-1$ vanish. If $h>0$ the coefficient at $-1$ also vanishes, but that stronger fact is unnecessary.
+
+Consequently $A_n(e^{i\theta})=e^{i\theta}g_n(\theta)$ extends holomorphically to the disk and smoothly to its boundary, by the absolutely convergent nonnegative Fourier series. On the boundary $A_1$ never vanishes; hence it has no zeros in an annulus near the boundary. The boundary identities
+\[
+ A_n A_1^{n-2}=A_2^{n-1}\quad(n\ge2)
+\]
+extend throughout the disk by the maximum principle. Put $B=A_2/A_1$, initially meromorphic. If $B$ had a pole of order $p$ at a zero of $A_1$ of multiplicity $q$, then $A_n=A_1B^{n-1}$ would have that pole for $n>1+q/p$. Thus $B$ is holomorphic and continuous on the closed disk. Its boundary is $e^{iF(\theta)}$, so it has modulus one there and winding one. The argument principle gives precisely one simple zero in the disk. Dividing by the elementary Blaschke factor for that zero leaves a zero-free holomorphic function with modulus one on the boundary; applying the maximum principle to the quotient and its reciprocal makes it a unit scalar. Therefore $f$ is the circle restriction of a disk automorphism. The Möbius subgroup preserves the vacuum ray. For a non-vacuum weight, the additional zero of the $k=-1$ coefficient forces the automorphism to be a rotation: indeed for its Blaschke form $B(z)=e^{i\beta}(z-a)/(1-\bar a z)$ one has $g_1=B^2/(z B')$ on the circle, and its residue at zero is nonzero if $a\ne0$. Rotations preserve the weight-$h$ lowest ray. This proves the claim.
+\end{proof}
+
+\section{The stress expectation and exact orbit exclusion}
+The Whittaker equations and adjointness give $t_{c,\lambda}$ in Theorem~\ref{main}. The Schwarzian term in the transformation law is state independent; including the shift $-c/24$ gives the usual central-charge-$c$ affine action on normalized stress expectations \cite{fewster}. Accordingly, if some ray has expectation on the vacuum orbit, applying the inverse diffeomorphism maps the expectation to $-c/24$. For the transformed state the expectation of the nonnegative plane $L_0$ is then zero. The generator can equivalently be treated as a nonnegative closed quadratic form, whose zero expectation forces its spectral measure to be concentrated at zero; the vacuum ray is the unique such ray. Thus the original ray would be a vacuum diffeomorphism ray. By Lemma~\ref{rigidity} it would be the vacuum, incompatible with $\lambda\ne0$. This argument is global in $\lambda$ and requires no monodromy expansion or small-amplitude approximations. In fact the implication from orbit of expectations to orbit of rays holds equally for a general highest-weight module relative to its own minimum-energy expectation.
+
+\section{A strict all-amplitude energy comparison}
+\begin{corollary}\label{energy}
+Let $r=|\lambda|$ and $q=6r/c$. Write $a_*(q)$ for the lowest eigenvalue of
+$-\partial_\theta^2+2q\cos(2\theta)$ on a $\pi$-cell with $i$-quasiperiodic function and derivative boundary conditions. Among all normalized vacuum-module states with exactly the stress profile $E-c/24+2r\cos(2\theta)$ (no other nonzero harmonics), the sharp lower bound on $E$ is
+\[
+ E_*(r)=\frac c6\left(\frac14-a_*(q)\right).
+\]
+The minimum is attained by a vacuum diffeomorphism ray. The energy of the Whittaker state is strictly greater for every $r>0$.
+\end{corollary}
+\begin{proof}
+The twisted regular Sturm--Liouville operator is self-adjoint with compact resolvent. The $\pi$-cell monodromy is a real two-by-two matrix with determinant one; if $i$ is an eigenvalue, its conjugate $-i$ is the other, so the space of $i$-twisted eigenfunctions is one-dimensional at each eigenvalue. Thus its lowest eigenvalue is simple and a normalized eigenfunction $y_q$ can be continued locally in $q$ (the potential is a bounded analytic perturbation), and through every real $q\ge0$. Its sesquilinear Wronskian $W_q=\operatorname{Im}(\bar y_q y'_q)$ is constant and nonzero, since $y_q$ and its complex conjugate have different multipliers. At $q=0$, $y_0\propto e^{i\theta/2}$ is the lowest twisted eigenfunction, so $W_q>0$ for all $q$. The eigenfunction never vanishes. Its smooth lifted argument increases by $\pi/2+2k\pi$ on the cell; the integer $k$ is continuous in $q$ and vanishes at zero. Hence $F(\theta)=2\arg y_q(\theta)$ is an increasing degree-one lift on the $2\pi$ circle.
+
+Writing $y_q=R e^{iF/2}$ gives $R^2F'/2=W_q$, and substituting into the differential equation yields
+\[
+  -a_*(q)+2q\cos(2\theta)=\frac{y_q''}{y_q}
+  =-\frac{(F')^2}{4}-\frac12\{F,\theta\}.
+\]
+Here $\{F,\theta\}=F'''/F'-\frac32(F''/F')^2$. Multiplying by $c/6$ gives the vacuum coadjoint stress obtained by pullback with $F$, because
+$t\mapsto(F')^2(t\circ F)-(c/12)\{F,\theta\}$. Its profile is exactly $E_*(r)-c/24+2r\cos(2\theta)$, with the vacuum diffeomorphism ray supplying a state that realizes it.
+
+Any state with the postulated profile differs from this stress by the constant $\Delta=E-E_*(r)$. Applying the inverse diffeomorphism with lift $G=F^{-1}$ changes the transformed profile to $-c/24+\Delta(G')^2$ by cancellation of the scalar Schwarzian term. Its plane rotation expectation is
+$\Delta(2\pi)^{-1}\int_0^{2\pi}(G')^2d\theta$, nonnegative by the spectral condition, with equality only for the vacuum ray after the inverse transform. Thus the bound is sharp; the orbit exclusion in Theorem~\ref{main} proves the strict inequality for the Whittaker state. A rotation handles complex $\lambda$. This result fixes the entire profile except its average; it does not impose the same lower bound on states with unspecified higher harmonics.
+\end{proof}
+
+For a perturbative normalization check, write \(y=e^{i\theta/2}\sum_n u_ne^{2in\theta}\) and normalize \(u_0=1\). Elimination of the modes \(n=\pm1,\pm2\) through fourth order gives
+\[
+ a_*(q)=\frac14-\frac23q^2+\frac{22}{135}q^4+O(q^6).
+\]
+Indeed if \(d_n=1/4-(1/2+2n)^2\) and \(A=d_{1}^{-1}+d_{-1}^{-1}\), the fourth coefficient is
+\(\sum_{\sigma=\pm1} (d_\sigma^{-2}d_{2\sigma}^{-1}-A d_\sigma^{-2})\).
+Independently the level two and four inverse Gram entries give
+\(\|\Psi_\lambda\|^2=1+2|\lambda|^2/c+10|\lambda|^4/[c(5c+22)]+O(|\lambda|^6)\)
+and therefore
+\(a_\psi(q)=1/4-2q^2/3+22c\,q^4/[27(5c+22)]+O(q^6)\).
+The fourth coefficient of \(a_*\) exceeds that of \(a_\psi\) by \(484/[135(5c+22)]>0\), in agreement with the global strict inequality.
+
+
+\begin{corollary}[Arbitrary smooth \(k\)-fold stress shape]
+Let \(k\ge2\), \(\ell=2\pi/k\), and let \(S\) be any real smooth \(\ell\)-periodic zero-mean function. Set \(V=6S/c\), and let \(a_*(V)\) be the lowest eigenvalue of \(-\partial_\theta^2+V\) on \([0,\ell]\) with the function and derivative both multiplied by \(e^{i\pi/k}\) across the endpoints. Every normalized vacuum-sector state with cylinder mean stress \(E-c/24+S(\theta)\) satisfies
+\[
+ E\ \ge\ \frac c6\left(\frac14-a_*(V)\right).
+\]
+The minimum is attained, and equality holds precisely on the vacuum diffeomorphism ray with the minimizing profile.
+\end{corollary}
+\begin{proof}
+The proof of the quadrupole formula applies along the path \(tV\), \(0\le t\le1\). The twisted multiplier is nonreal (\(k\ge2\)), hence it is a simple eigenvalue of the real monodromy whenever it occurs and the ground eigenfunction can be continued. At \(t=0\) it is \(e^{i\theta/2}\); the constant Wronskian stays positive and its lifted phase increment over \(\ell\) stays \(\pi/k\). Consequently \(F=2\arg y\) is a smooth increasing degree-one map on the physical \(2\pi\) circle. It gives \(-a_*(V)+V=-\tfrac14(F')^2-\tfrac12\{F,\theta\}\), the exact vacuum coadjoint transform. Against any other mean stress at the same fixed \(S\), inverse pullback cancels the Schwarzian and multiplies the constant energy shift by the positive square of the inverse derivative. Nonnegativity of the transformed \(L_0\) proves the bound; its unique zero-energy ray proves the equality criterion.
+\end{proof}
+
+
+\subsection{A spectral obstruction for a general circle profile}
+Let \(S\) be any smooth real zero-mean \(2\pi\)-periodic stress shape, let \(V=6S/c\), and denote by \(\mu_0^{\rm anti}(V)\) the lowest antiperiodic eigenvalue of \(-\partial_\theta^2+V\) on the full circle. Every normalized vacuum-module state with stress \(E-c/24+S\) satisfies
+\[
+ E\ \ge\ \tfrac c6\bigl(\tfrac14-\mu_0^{\rm anti}(V)\bigr).
+\]
+A stress with this nonconstant shape lies on the classical vacuum orbit for some \(E\) if and only if the antiperiodic ground eigenspace is two-dimensional. In that case the bound is attained exactly on the corresponding vacuum diffeomorphism ray. No attainment by a quantum state is asserted when the lowest eigenvalue is simple.
+
+To prove the bound, set \(a=1/4-6E/c\). Positivity of the transformed \(L_0\), for every orientation-preserving circle diffeomorphism, is the conformal quantum energy inequality principle of \cite{fewster}. Under the change of variables by the inverse lift \(G\), it reads
+\[
+ \int_0^{2\pi}\left(|\psi'|^2+(V-a)|\psi|^2\right)d\theta\ge0,
+ \qquad \psi=(G')^{-1/2}e^{iG/2}.
+\]
+Indeed the integrated Schwarzian becomes
+\(\frac12\int \{G,\theta\}/G'=\frac14\int (G'')^2/(G')^3\)
+and the cylinder shift adds \(\frac14\int G'\). These are exactly the two terms of \(\int|\psi'|^2\). For a smooth positive periodic amplitude \(R\) choose \(G'\) proportional to \(R^{-2}\) with integral \(2\pi\); after an irrelevant constant rescaling, the trial function then has amplitude \(R\) and phase energy \(\pi^2/\int R^{-2}\). Let \(u\) be a real antiperiodic ground eigenfunction and put \(R_\epsilon=\sqrt{u^2+\epsilon^2}\). The amplitude and potential integrals converge to those for \(u\) by dominated convergence. The function \(u\) has a simple zero by antiperiodicity and ODE uniqueness, so \(\int R_\epsilon^{-2}\) diverges. Thus the trial bound approaches the lowest antiperiodic eigenvalue.
+
+A vacuum-orbit stress gives two independent antiperiodic solutions of the Hill equation at \(a\), by transforming the two vacuum solutions. The just-proved bound forces this eigenvalue to be the bottom. Conversely, if the ground is double, a complex linear combination \(y\) of two real ground solutions has positive constant Wronskian and no zeros. Its lifted phase increases by a positive odd multiple of \(\pi\). If the multiple exceeded one, keeping \(|y|\) and replacing the phase by the least-energy winding-\(\pi\) phase gives a strictly smaller Rayleigh quotient: the actual phase derivative is already proportional to \(|y|^{-2}\), so its phase energy scales as the square of the winding. Hence \(F=2\arg y\) is a smooth degree-one lift and \(y''/y=-\frac14(F')^2-\frac12\{F,\theta\}\), the vacuum coadjoint profile. The equality claim follows by inverse pullback and uniqueness of the zero-energy ray as before.
+
+\section{Gravity interpretation and limitations}
+With Brown--Henneaux boundary conditions the chiral stress is the asymptotic Virasoro charge density \cite{bh,cotler}; the constant $-c/24$ and its orbit model the classical vacuum boundary data \cite{orbit}. The theorem therefore identifies actual vacuum-sector Hilbert rays whose stress one-point functions cannot be represented by a classical boundary reparametrization of global AdS$_3$. This does not imply a new quantum superselection sector, semiclassical control of the state, a new bulk geometry, or hyperbolic monodromy. The orbit statement is kinematical and rests solely on this representation; it is not a proof of an AdS$_3$ quantum gravity Hilbert space beyond the vacuum sector. The formal Whittaker equations and the classical coadjoint orbit structure are known separately (including the Hill equation interpretation of mean stress \cite{vos} and classical irregular-block links with Mathieu theory \cite{piatek}); the claim here is the explicit normalizable family together with the exact projective-stabilizer obstruction for its mean stress.
+
+\begin{thebibliography}{9}
+\bibitem{carpi} S.~Carpi, D.~Del Vecchio, S.~Iovieno and Y.~Tanimoto,
+Positive energy representations of Sobolev diffeomorphism groups of the circle,
+\href{https://doi.org/10.1007/s13324-020-00429-5}{publisher DOI}.
+\bibitem{fewster} C.~J.~Fewster and S.~Hollands,
+Quantum Energy Inequalities in Two-Dimensional Conformal Field Theory,
+\href{https://arxiv.org/abs/math-ph/0412028}{math-ph/0412028}.
+\bibitem{whittaker} E.~Feli\'nska, Z.~Jask\'olski and M.~Koszto\l owicz,
+Whittaker pairs for the Virasoro algebra and the Gaiotto--BMT states,
+\href{https://arxiv.org/abs/1112.4453}{arXiv:1112.4453}.
+\bibitem{irregular} D.~Gaiotto and J.~Teschner,
+Irregular singularities in Liouville theory and Argyres--Douglas type gauge theories,
+\href{https://doi.org/10.1007/JHEP12(2012)050}{JHEP 12 (2012) 050}.
+\bibitem{bh} J.~D.~Brown and M.~Henneaux,
+Central Charges in the Canonical Realization of Asymptotic Symmetries,
+\href{https://doi.org/10.1007/BF01211590}{Commun. Math. Phys. 104 (1986) 207}.
+\bibitem{orbit} M.~M.~Sheikh-Jabbari and H.~Yavartanoo,
+On 3d Bulk Geometry of Virasoro Coadjoint Orbits,
+\href{https://doi.org/10.1140/epjc/s10052-016-4326-z}{Eur. Phys. J. C 76 (2016) 493}.
+\bibitem{vos} G.~Vos,
+Vacuum block thermalization in semi-classical 2d CFT,
+\href{https://doi.org/10.1007/JHEP02(2019)022}{JHEP 02 (2019) 022}.
+\bibitem{piatek} M.~Piatek and A.~R.~Pietrykowski,
+Classical irregular block, $\mathcal N=2$ pure gauge theory and Mathieu equation,
+\href{https://arxiv.org/abs/1407.0305}{arXiv:1407.0305}.
+\bibitem{cotler} J.~Cotler and K.~Jensen,
+A theory of reparameterizations for AdS$_3$ gravity,
+\href{https://arxiv.org/abs/1808.03263}{arXiv:1808.03263}.
+\end{thebibliography}
+\end{document}

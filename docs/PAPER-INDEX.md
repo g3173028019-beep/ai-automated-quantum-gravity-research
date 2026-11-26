@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 36 items: 20 original research packets, six later analytical Markdown manuscripts and ten typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 41 items: 20 original research packets, six later analytical Markdown manuscripts and fifteen typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–32 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–37 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -455,3 +455,43 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Evidence.** Exact Laurent selection rule, weighted interpolation and matching moment-cancellation witnesses. The seven-page PDF was independently rebuilt and the explicit witnesses checked in exact arithmetic.
 
 [Paper entry](../papers/32-typeii-scale-recovery/README.md) · [PDF](../papers/32-typeii-scale-recovery/manuscript.pdf) · [TeX](../papers/32-typeii-scale-recovery/main.tex)
+
+## 33. Time-resolved scalar returns from a marked timelike tube
+
+**Result.** Complete temporal kernels in finitely many angular channels recover a marked homogeneous-orbit metric and its twist. Vacuum eliminates the conformal ambiguity at a nonumbilic tube, but exact inhomogeneous vacuum ambiguity survives finite angular projection.
+
+**Scope.** Reconstruction assumes a regular marked wedge and homogeneous angular orbits. It uses complete delayed kernels, not finitely many time samples. The vacuum ambiguity examples keep the tube marking fixed.
+
+[Paper entry](../papers/33-vacuum-wave-returns/README.md) · [PDF](../papers/33-vacuum-wave-returns/manuscript.pdf) · [TeX](../papers/33-vacuum-wave-returns/manuscript.tex) · [Verification](../papers/33-vacuum-wave-returns/VERIFICATION.md)
+
+## 34. Normalizable quadrupole states off the vacuum stress orbit
+
+**Result.** An explicit normalizable quantum quadrupole family realizes stress one-point profiles outside the AdS₃ vacuum stress orbit. A Hill spectral criterion characterizes classical vacuum-orbit representatives of prescribed stress shapes.
+
+**Scope.** The specified states and stress profiles; not a general criterion for semiclassical bulk reconstruction.
+
+[Paper entry](../papers/34-ads3-vacuum-stress/README.md) · [PDF](../papers/34-ads3-vacuum-stress/manuscript.pdf) · [TeX](../papers/34-ads3-vacuum-stress/manuscript.tex) · [Verification](../papers/34-ads3-vacuum-stress/VERIFICATION.md)
+
+## 35. Positive string poles and indefinite finite-transfer graviton amplitudes
+
+**Result.** For the full 35-dimensional ten-dimensional physical projectile polarization space and a fixed real probe, positive Regge-subtracted massive poles coexist with an indefinite finite-transfer coefficient.
+
+**Scope.** Type-II tree amplitude and the prescribed real probe and subtraction. The coefficient is not a forward EFT Wilson coefficient.
+
+[Paper entry](../papers/35-typeii-full-polarization/README.md) · [PDF](../papers/35-typeii-full-polarization/manuscript.pdf) · [TeX](../papers/35-typeii-full-polarization/manuscript.tex) · [Verification](../papers/35-typeii-full-polarization/VERIFICATION.md)
+
+## 36. Full counting statistics of neutral emission in a quantum charged throat
+
+**Result.** A single-channel charged-throat emission kernel yields an exact scaled cumulant generator and a large-deviation rate for the emission count.
+
+**Scope.** The reduced deep-quantum cascade and a fixed channel; no claim about coherence or continuation outside that model.
+
+[Paper entry](../papers/36-charged-throat-emission/README.md) · [PDF](../papers/36-charged-throat-emission/manuscript.pdf) · [TeX](../papers/36-charged-throat-emission/manuscript.tex) · [Verification](../papers/36-charged-throat-emission/VERIFICATION.md)
+
+## 37. Winding rank and shape confinement in homogeneous Einstein–scalar tori
+
+**Result.** Full winding rank locks the classical shape and yields a compact fixed-clock quantum resolvent. Nonzero deficient rank leaves an escape direction and excludes point spectrum on the marked space.
+
+**Scope.** Flat homogeneous tori and the fully marked shape cover. The fixed-clock spectrum is not a theorem about inhomogeneous dynamics or a time-dependent propagator.
+
+[Paper entry](../papers/37-winding-rank/README.md) · [PDF](../papers/37-winding-rank/manuscript.pdf) · [TeX](../papers/37-winding-rank/manuscript.tex) · [Verification](../papers/37-winding-rank/VERIFICATION.md)

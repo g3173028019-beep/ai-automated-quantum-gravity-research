@@ -1,0 +1,395 @@
+\documentclass[11pt]{article}
+\usepackage[margin=.80in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Sym}{\operatorname{Sym}_0}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\I}{\mathbb 1}
+\newcommand{\cA}{\mathcal A}
+\title{Positive string poles and indefinite finite-transfer\\ graviton amplitudes on the full physical polarization space}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+In ten-dimensional Type-II sphere-tree graviton scattering, we give a
+center-of-mass transport for the full 35-dimensional real physical
+polarization space, including the eight states omitted by the common-transverse
+restriction. For a real probe carried with the same label on its incoming and
+outgoing legs, the crossed projectile block reduces to the identity, a
+rank-one probe projector and a double commutator. At fixed dimensionless
+spacelike transfer $-1/2\le y<0$, every massive pole and every pole weight
+after subtraction of its leading Regge asymptote is positive definite.
+Nevertheless the exact finite-transfer centered quadratic coefficient after
+Einstein subtraction is indefinite for every pure probe, and can be strictly
+negative in every channel for a positive mixture of probes. We classify its
+spectrum and find the sharp mixing threshold, rank five. The two sign
+statements coexist because removal of the infinite leading Regge tower and
+the massless exchange leaves a finite scalar term. No general nonforward
+optical-theorem inequality, forward Wilson-coefficient sign, or loop
+extension is assumed.
+\end{abstract}
+
+\section{Setup}
+We work at sphere tree level in flat ten-dimensional spacetime with
+mostly-plus signature. Write $x=a s$, $y=a t$, $z=a u$, $a=\alpha'/4$,
+and $x+y+z=0$. Our dimensionless matrix amplitude and its Einstein part are
+\begin{equation}
+ \cA=\frac{\mathcal N}{xyz}\mathcal V,\qquad
+ \cA_{\rm E}=\frac{\mathcal N}{xyz},\qquad
+ \mathcal V=\prod_{\xi=x,y,z}\frac{\Gamma(1-\xi)}{\Gamma(1+\xi)}.
+ \label{eq:amplitude}
+\end{equation}
+The physical amplitude equals $(8\pi G_{10}/a)\cA$ in the convention in
+which the universal forward $t$-channel residue on unit projectile and
+probe tensors is $-8\pi G_{10}s^2$ times the identity. The positive
+prefactor follows from canonically normalized Einstein exchange, and
+not from a conversion between coupling symbols in a polarization
+calculation. In particular $a$ and the positive prefactor do not enter
+any inertia count. We use the standard Type-II four-NS--NS tensor and
+Virasoro--Shapiro form factor \cite{pasukonis,t8review}. Previous
+gravitational dispersion theory already treats the string graviton pole
+and Regge term \cite{tokuda,noumi,hamada}; the result here concerns the
+complete tied physical polarization block and its sign structure, not
+a new amplitude or a universal positivity bound.
+
+For clarity we use all incoming momenta and COM energy one in computing
+the tensor. The momentum span has time and two spatial coordinates,
+in which
+\begin{equation}
+ \begin{split}
+ k_1=(1,0,1),&\quad k_2=(1,0,-1),\\
+ k_3=(-1,-r,-c),&\quad k_4=(-1,r,c),\qquad r^2+c^2=1 .
+ \end{split}
+\end{equation}
+The common spacelike orthogonal complement $U$ has dimension seven.
+On the four individual physical transverse spaces use the common $U$
+and the four real unit lines
+\begin{equation}
+ \ell_1=(0,1,0),\quad \ell_2=(0,-1,0),\quad
+ \ell_3=(0,c,-r),\quad \ell_4=(0,-c,r).
+ \label{eq:transport}
+\end{equation}
+Thus the outgoing pair is attached by the same spatial rotation and
+each vector label lives in an abstract $U\oplus\mathbb R$. This is not a
+common eight-dimensional subspace of spacetime. The graviton labels
+form the real Hilbert space $H=\Sym(\mathbb R^8)$, with
+$\langle E,F\rangle=\tr(EF)$ and $\dim H=35$. The real probe label $P$ is
+unit and the same on legs 2 and 4; the external projectile matrix
+pairs arbitrary labels on legs 1 and 3. Complex projectiles use the
+sesquilinear extension, with the conjugate outgoing coefficients.
+No claim is made for independently retuned probes on each leg or an
+arbitrary two-particle crossing matrix.
+
+\section{Full transverse transport and the operator numerator}
+Use $F_i=(k_i e_i^{\mathsf T}-e_i k_i^{\mathsf T})g$ as a mixed
+Lorentz-index field-strength matrix. For vector labels, the
+normalized chiral numerator is $-t_8(F_1,F_2,F_3,F_4)/4$ in the
+normalization of \eqref{eq:amplitude}. Here $t_8$ is eight times
+the sum of the three single traces with cyclic representatives
+$(1234),(1324),(1342)$, minus twice the sum of three double traces
+corresponding to the pairings $(12)(34),(13)(24),(14)(23)$. Overall
+normalization is fixed by the universal Einstein residue above.
+This contraction is gauge-safe before substitution: replacing any
+$e_i$ by $k_i$ gives zero. In the frames \eqref{eq:transport} it is
+\begin{equation}
+ yz (e_1\cdot e_2)(e_3\cdot e_4)
+ +xz (e_1\cdot e_3)(e_2\cdot e_4)
+ +xy (e_1\cdot e_4)(e_2\cdot e_3),
+ \label{eq:vector}
+\end{equation}
+where the dots are in the abstract label space.
+We give a finite verification of this identity. For zero planar
+labels, the three common-transverse pairing coefficients are
+$yz,xz,xy$. For one or three planar labels, reflection of $U$ changes
+the sign and the expression is zero. With two planar labels at legs
+$12,34$ the coefficient is $yz$; at $13,24$ it is $xz$; at $14,23$ it
+is $xy$. In each case the remaining labels contract by the Euclidean
+dot. With four planar labels the value is $yz+xz+xy$. These entries
+follow by substituting \eqref{eq:transport} into the mixed-index trace
+formula; for example $x=4,y=-2(1-c),z=-2(1+c)$ in the unit COM frame,
+so the three two-planar coefficients are
+$4(1-c^2),-8(1+c),8(c-1)$.
+For zero planar labels, $O(7)$ invariance leaves the three Euclidean
+pairings and two distinct common coordinate axes distinguish all
+coefficients. For two planar labels only the common dot is possible.
+Thus the elementary checks using two axes and one planar label exhaust
+the invariant tensor types, rather than sampling the full state space.
+The accompanying exact replay substitutes all $3^4$ corresponding
+multilinear cases, reducing polynomials modulo $r^2+c^2-1$.
+Homogeneity restores general scale. The polynomial
+\eqref{eq:vector} gives the analytic continuation with these labels
+held fixed; exchanging the same probe label implements $x\leftrightarrow z$
+in this block before any dispersion argument.
+
+For the closed tensor, apply \eqref{eq:vector} to left and right
+labels and contract with the symmetric traceless leg tensors. Write
+$Q=|P\rangle\langle P|$, $\mathcal G(E)=[P,[P,E]]$.
+For example, the diagonal pairing terms across both copies are
+$\tr(EP)\tr(FP),\tr(EF),\tr(EP)\tr(FP)$; the six crossed terms
+are four instances of $\tr(EF P^2)$ and two of $\tr(EPFP)$.
+Their coefficients sum to
+\[
+ \mathcal N=(xz)^2\I+y^2(x^2+z^2)Q-xzy^2\mathcal G.
+ \label{eq:numer}
+\tag{4}
+\]
+Indeed the two four-trace coefficients are $2xyz(x+z)$ and
+$2xy^2z$; using $x+z=-y$ and
+$\langle E,\mathcal G F\rangle=2\tr(EF P^2)-2\tr(EPFP)$ gives (4).
+The matrix numerator is on shell. If $p_i$ are the eigenvalues of $P$,
+then $\mathcal G$ vanishes on the commuting blocks and has
+eigenvalues $(p_i-p_j)^2$ between eigenspaces. In particular
+\begin{equation}
+ 0\preceq \mathcal G\preceq 2\I,\qquad Q\mathcal G=0,\qquad
+ Q+\mathcal G/2\preceq\I,
+ \label{eq:geom}
+\end{equation}
+since $2-(p_i-p_j)^2=(p_i+p_j)^2+
+2\sum_{k\ne i,j}p_k^2$.
+
+\section{Positive residues, including the Regge remainder}
+Put $v=x+y/2$. At $x=n\ge1$, $\delta=-y\in(0,1/2]$, recurrence
+for the gamma factors gives
+\[
+ -\Res_{x=n}\cA
+ =R_n(y)\,\mathcal N\big|_{x=n},\qquad
+ R_n(y)=\left[\frac{\Gamma(n+y)}
+                  {\Gamma(1+y)\Gamma(n+1)}\right]^2.
+\]
+The positive-$x$ Feynman prescription therefore has $+\pi$ times
+this matrix as the pole spectral coefficient. The crossed pole pair
+contributes $W_n=2R_n\mathcal N|_{x=n}/(n+y/2)^3$ to the centered
+twice-subtracted coefficient after the two massless $s,u$ poles
+are removed. Explicitly $W_n=w_n\I+\alpha_n Q+\beta_n\mathcal G$ with
+\begin{equation}
+ \begin{split}
+ w_n&=\frac{2R_n n^2(n+y)^2}{(n+y/2)^3},\\
+ \alpha_n&=\frac{2R_n y^2[n^2+(n+y)^2]}{(n+y/2)^3},\\
+ \beta_n&=\frac{2R_n y^2 n(n+y)}{(n+y/2)^3}.
+ \end{split}
+ \label{eq:weights}
+\end{equation}
+All are strictly positive. This is a property of the specific
+amplitude in this band, not a nonforward optical theorem.
+
+The leading large-$n$ term follows from the gamma ratio and (4):
+$L_n=\ell_n\I$, $\ell_n=2 n^{2y-1}/\Gamma(1+y)^2$.
+Let $D_n=W_n-L_n$. We prove $w_n>\ell_n$ independently of
+polarization. The ratio starts at one at $\delta=0$, and
+\begin{equation}
+ \partial_\delta\log(w_n/\ell_n)
+ =-\frac2{n-\delta}+\frac3{2n-\delta}
+      +2[\log n-\psi(n-\delta)]
+ > \frac{n-2\delta}{(n-\delta)(2n-\delta)}
+      -2\log(1-\delta/n)>0 .
+\end{equation}
+Here $\psi(u)<\log u-1/(2u)$ for $u>0$ by its standard positive
+integral representation \cite{nist}; this applies at the endpoint
+$n=1,\delta=1/2$ as well. Hence $D_n\succ0$.
+Moreover $\alpha_n-2\beta_n=2R_ny^4/(n+y/2)^3>0$.
+By \eqref{eq:geom} the sharp maximum of every $D_n$ is
+$w_n-\ell_n+\alpha_n$, attained uniquely on $P$ on the full space;
+the minimum is $w_n-\ell_n$. The same maximal direction holds for any
+tail sum with this pure probe. At fixed $y<0$ both series of
+$W_n$ and $L_n$ converge by their gamma asymptotics; the remainder also
+has scalar leading-size bound via the sharp maximum. We do not require
+a finite-level sign claim for the final subtracted contact.
+
+\section{A finite scalar term separates the two sign questions}
+The exact massless $s,u$ residues are $-y^2Q$, and the $t$-channel
+residue is $-x^2\I$. Define
+\begin{equation}
+ \cA_{su}=\cA+y^2Q(1/x+1/z),\qquad
+ C_P(y)=[v^2]\big(\cA-\cA_{\rm E}\big)
+       =[v^2]\cA_{su}+ \frac1y\I.
+ \label{eq:contactdef}
+\end{equation}
+The quantity $C_P$ is a finite-transfer centered analytic coefficient,
+not an isolated local EFT Wilson coefficient. At fixed $y<0$, applying
+Cauchy's theorem to $\cA_{su}/v^3$ and pairing crossed poles gives
+$[v^2]\cA_{su}=\sum_{n\ge1}W_n$. The large contour contribution vanishes:
+away from the real pole sequences and on contours crossing at a fixed
+distance from those poles, gamma reflection and ratio asymptotics
+bound $\cA/v^2$ by $O(|v|^{2y})$. The additional massless subtraction
+decays on the same contours. In particular the massive sum is taken
+before the forward limit. Therefore
+\begin{equation}
+ C_P(y)=\left(\frac{2\zeta(1-2y)}{\Gamma(1+y)^2}+\frac1y\right)\I
+            +\sum_{n\ge1}D_n(y).
+ \label{eq:counter}
+\end{equation}
+The coefficient of $\I$ is a finite term at fixed nonzero transfer.
+In particular it is not legitimate to discard it when drawing sign
+conclusions from the positive matrices $D_n$. Equation
+\eqref{eq:counter} sums a convergent positive tower at negative
+transfer and does not use zeta regularization.
+
+The exact sign analysis can also be derived directly without this
+contour. Define
+\begin{equation}
+ \begin{split}
+ V_0(y)&=\frac{\Gamma(1-y)}{\Gamma(1+y)}
+       \left[\frac{\Gamma(1+y/2)}{\Gamma(1-y/2)}\right]^2,\qquad
+ H_1(y)=\psi_1(1+y/2)-\psi_1(1-y/2),\\
+ U&=-\log V_0(-\delta),\qquad
+ A=\frac{1-e^{-U}}{\delta},\qquad b=\delta e^{-U} H_1(-\delta)>0 .
+ \end{split}
+ \label{eq:Ab}
+\end{equation}
+Here $\psi_1$ denotes the trigamma function, and
+$\mathcal V=V_0(y)(1+H_1(y)v^2+O(v^4))$.
+At the center $\cA_{\rm E}(0,y)=y(\I/4+2Q-\mathcal G)$ and
+$[v^2]\cA_{\rm E}=(-\I+16Q)/y$ by (4).
+Insert these into $[v^2](\mathcal V-1)\cA_{\rm E}$ to find
+\begin{equation}
+ C_P=c_0\I+(16A-2b)Q+b\mathcal G,\qquad c_0=-A-b/4 .
+ \label{eq:contact}
+\end{equation}
+
+\begin{theorem}[Full physical inertia]
+If the eigenspace dimensions of a unit real $P$ are $m_i$ with
+distinct eigenvalues $p_i$, the exact contact eigenvalues are
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Sector & Multiplicity & Value\\
+\midrule
+$P$ & $1$ & $15A-9b/4$\\
+Commutes with $P$, orthogonal to $P$ &
+ $\sum_i m_i(m_i+1)/2-2$ & $c_0$\\
+Between eigenspaces $i<j$ & $m_i m_j$ &
+ $b[(p_i-p_j)^2-\theta]$, \ $\theta=1/4+A/b$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every pure probe gives both signs. A probe with four eigenvalues
+$1/\sqrt8$ and four $-1/\sqrt8$ gives exactly one positive and 34 negative
+channels. In particular the two-positive floor on the narrower
+seven-axis common-transverse problem does not extend to this
+physical state space.
+\end{theorem}
+\begin{proof}
+Use the block decomposition of $\mathcal G$ above and that its kernel
+contains $P$. The two strict pure-probe signs follow from $A/b>1/4$
+proved below and the commuting complement of dimension at least six.
+For the stated probe every distinct squared gap is $1/2<\theta$.
+\end{proof}
+
+\section{Mixed probes and the sharp threshold}
+Let $\rho=\sum_jw_j|P_j\rangle\langle P_j|$ be a real positive trace-one
+density on $H$, implemented by using identical $P_j$ labels on the two
+probe legs at each member of the ensemble and averaging the resulting
+projectile block. Denote $\mathcal G_\rho=\sum_jw_j\mathcal G_{P_j}$.
+Equation \eqref{eq:geom} gives $\rho+\mathcal G_\rho/2\preceq\I$;
+in particular residue and subtracted-residue positivity persist.
+On the other hand
+\begin{equation}
+ C_\rho=c_0\I+(16A-2b)\rho+b\mathcal G_\rho,\qquad
+ \tr C_\rho=-19A-11b/4<0.
+\end{equation}
+The trace follows from $\tr_H\mathcal G_P=\sum_{i<j}(p_i-p_j)^2=8$.
+Thus no positive probe ensemble makes the contact positive semidefinite.
+
+\begin{theorem}[Sharp real mixing rank]
+For $1\le r\le 7$ the exact minimax is
+\[
+ \min_{\rho\succeq0,\ \tr\rho=1,\ \operatorname{rank}\rho\le r}
+       \lambda_{\max}(C_\rho)=c_0+\frac{16A-2b}{r}.
+\]
+The minimizing densities are exactly the normalized projections onto
+$r$-dimensional mutually commuting real symmetric subspaces of $H$.
+Rank five is the least rank for which all 35 contact channels can
+become strictly negative, at every fixed transfer in the band.
+\end{theorem}
+\begin{proof}
+Positivity of $\mathcal G_\rho$ and $\lambda_{\max}(\rho)\ge1/r$
+give the lower bound. An equal mixture on an $r$-dimensional
+traceless diagonal subspace attains it: the commuting sector is
+unchanged by $\mathcal G_\rho$, while
+$\mathcal G_\rho$ on the $(i,j)$ off-diagonal channel is
+$\|\Pi(e_i-e_j)\|^2/r\le2/r$, for $\Pi$ the corresponding diagonal
+projection. Since $16A-2b>2b$, this cannot surpass the top support
+value. If the lower bound is attained, $\rho$ must be the normalized
+projection of rank $r$. On that support each quadratic form
+$\sum_jw_j\|[P_j,E]\|_{\rm F}^2$ must vanish, proving the commuting
+condition. Conversely such a subspace diagonalizes simultaneously.
+
+For the signs, one needs precisely the strict uniform scalar estimate
+\begin{equation}
+  \frac14<\frac{A}{b}<\frac{13}{44}.
+ \label{eq:ratio}
+\end{equation}
+Indeed the upper bound gives strict negativity at rank five and
+the lower bound gives positivity at rank four. To prove \eqref{eq:ratio}, use
+the convergent series from \eqref{eq:Ab}:
+\[
+ U=\sum_{k\ge1}\frac{2(1-4^{-k})\zeta(2k+1)}{2k+1}\delta^{2k+1},
+ \qquad
+ \delta^2H_1(-\delta)=\sum_{k\ge1}8k4^{-k}\zeta(2k+1)\delta^{2k+1}.
+\]
+Their coefficient ratios are
+$(4^k-1)/(4k(2k+1))$, equal to $1/4$ at $k=1$ and
+strictly higher thereafter. Since $(e^U-1)/U>1$ the lower bound follows.
+For the upper bound put $t=\delta^2\le1/4$ and
+$w=t\zeta(5)/\zeta(3)\le1/4$. Bounding coefficients of the
+numerator after $k=2$ by $2\zeta(3)/7$ gives
+\[
+ \frac{U}{\delta^2 H_1}
+ \le \frac{1/2+3w/8+(2/7)t^2/(1-t)}{2+w}
+ \le \frac{1/2+3/32+1/42}{9/4}.
+\]
+The ratio increases in $w$ throughout this rectangle, including
+after maximizing the displayed tail. Separately
+$U\le\zeta(3)\delta^3/2+8\zeta(5)\delta^5/15<153/1600$
+by bounding the geometric tail and using
+$\zeta(3)<5/4,\zeta(5)<21/20$.
+Thus $(e^U-1)/U\le (1-U/2)^{-1}<3200/3047$ by the
+factorial series. The product bounds $A/b$ by
+$166000/575883<13/44$ as required.
+\end{proof}
+
+\section{Interpretation and limitations}
+The separation of signs uses the physical projected amplitude with
+a common real probe label, not a sum of positive on-shell probabilities.
+The analytically prescribed massless and Regge subtractions must be
+retained together. The actual sign-changing contact operator and the
+positive spectral remainder are both determined by the same full
+little-group data. The wider state space is therefore substantive:
+it changes the pure-probe inertia floor and supplies a complete
+polarization description of the cancellation mechanism.
+
+The transfer $y=0$ itself is not part of the fixed-transfer contour
+argument. In particular negative finite-transfer coefficients neither
+violate tree unitarity nor imply a negative forward coefficient.
+Likewise no universal sign for amplitudes on independent two-particle
+polarizations, a compactified dimension, or an interacting loop
+amplitude is inferred. The inverse scale-identification problem
+studied in a projected Type-II block \cite{scale} uses different
+observables and does not establish this polarization theorem.
+
+\begin{thebibliography}{9}
+\bibitem{pasukonis} J.~Pa\v{s}ukonis, \emph{Gravitational scattering of massless scalars in QFT and superstring theory}, \href{https://arxiv.org/abs/hep-th/0506065}{hep-th/0506065},
+Secs.~2--3.
+\bibitem{t8review} C.~R.~Mafra and O.~Schlotterer,
+\emph{Tree-level amplitudes from the pure spinor superstring},
+\href{https://arxiv.org/abs/2210.14241}{arXiv:2210.14241}, Sec.~8.
+\bibitem{tokuda} J.~Tokuda, K.~Aoki and S.~Hirano,
+\emph{Gravitational positivity bounds},
+\href{https://arxiv.org/abs/2007.15009}{arXiv:2007.15009}, Sec.~3.3.
+\bibitem{noumi} T.~Noumi and J.~Tokuda,
+\emph{Finite energy sum rules for gravitational Regge amplitudes},
+\href{https://arxiv.org/abs/2212.08001}{arXiv:2212.08001}.
+\bibitem{hamada} Y.~Hamada, R.~Kuramochi, G.~J.~Loges and S.~Nakajima,
+\emph{On (scalar QED) gravitational positivity bounds},
+\href{https://doi.org/10.1007/JHEP05(2023)076}{JHEP 05 (2023) 076}.
+\bibitem{nist} NIST Digital Library of Mathematical Functions,
+\href{https://dlmf.nist.gov/5.9.E15}{Eq.~5.9.15}.
+\bibitem{scale} \emph{Recovering Type-II string scales from nonforward
+five-dimensional graviton scattering},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/32-typeii-scale-recovery}{research archive, Paper 32}.
+\end{thebibliography}
+\end{document}

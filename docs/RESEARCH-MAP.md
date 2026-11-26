@@ -18,6 +18,10 @@ Suggested route: **04 → 06 → 03** for gate, apparatus and channel estimates.
 
 ## Coupled fields: states, stability and interactions
 
+[34 · Normalizable quadrupole states off the vacuum stress orbit](../papers/34-ads3-vacuum-stress/README.md) An explicit normalizable quantum quadrupole family realizes stress one-point profiles outside the AdS₃ vacuum stress orbit. A Hill spectral criterion characterizes classical vacuum-orbit representatives of prescribed stress shapes.
+
+[36 · Full counting statistics of neutral emission in a quantum charged throat](../papers/36-charged-throat-emission/README.md) A single-channel charged-throat emission kernel yields an exact scaled cumulant generator and a large-deviation rate for the emission count.
+
 **Question:** which compatible physical state, quadratic dynamics or finite interaction can actually be constructed?
 
 | Paper | Positive construction | Distinction to retain |
@@ -31,6 +35,8 @@ Suggested route: **04 → 06 → 03** for gate, apparatus and channel estimates.
 Suggested routes: **09 → 19** for physical state construction and its use in a local gauge benchmark; **07** for the distinct effective-model harmonic repair; **08** for native interactions and the split-signature finite solution. None substitutes for the hypotheses or conclusion of another.
 
 ## Gravity observables: from states to readouts
+
+[33 · Time-resolved scalar returns from a marked timelike tube](../papers/33-vacuum-wave-returns/README.md) Complete temporal kernels in finitely many angular channels recover a marked homogeneous-orbit metric and its twist. Vacuum eliminates the conformal ambiguity at a nonumbilic tube, but exact inhomogeneous vacuum ambiguity survives finite angular projection.
 
 ### Physical degrees of freedom and state comparisons
 
@@ -46,6 +52,8 @@ Suggested routes: **09 → 19** for physical state construction and its use in a
 | [21 · Weyl relative entropy](../papers/21-weyl-diamond-relative-entropy/manuscript.md) ↔ [24 · Calibrated de Sitter tidal diffusion](../papers/24-calibrated-tidal-diffusion/manuscript.md) | Both use linearized Weyl curvature rather than gauge-fixed metric components. | A local-algebra relative entropy in Minkowski does not determine a long-time de Sitter diffusion coefficient. |
 
 ## Moments, low-order data and reconstruction
+
+[35 · Positive string poles and indefinite finite-transfer graviton amplitudes](../papers/35-typeii-full-polarization/README.md) For the full 35-dimensional ten-dimensional physical projectile polarization space and a fixed real probe, positive Regge-subtracted massive poles coexist with an indefinite finite-transfer coefficient.
 
 [Paper 32](../papers/32-typeii-scale-recovery/README.md) applies sparse recovery to fixed-transfer graviton scattering: the nonforward coefficients expose scale moments absent at forward transfer, and an explicit ambiguity pair proves the optimal precision.
 
@@ -98,6 +106,8 @@ This provides a route into how the archive’s arguments were corrected, not a r
 
 ## The Einstein dynamics and correspondence limits
 
+[37 · Winding rank and shape confinement in homogeneous Einstein–scalar tori](../papers/37-winding-rank/README.md) Full winding rank locks the classical shape and yields a compact fixed-clock quantum resolvent. Nonzero deficient rank leaves an escape direction and excludes point spectrum on the marked space.
+
 - [27 · Parity-odd Weyl-cubic ADM gravity](../papers/27-parity-odd-weyl-cubic-adm/README.md) starts with a continuum curvature interaction and asks what remains of the geometric constraint algebra after order reduction. Compare [19](../papers/19-local-gauge-benchmarks/) for a distinct free gauge and causality question.
 - [28 · The Einstein tensor from Lorentzian Regge variation](../papers/28-lorentzian-regge-einstein-tensor/README.md) asks whether the complete signed variation converges along genuinely refining Lorentzian meshes. It extends the archive's finite Regge questions [11](../papers/11-causal-regge-transfer/), [17](../papers/17-cartan-regge-closure/) and [22](../papers/22-lorentzian-regge-airy/) in a different direction; those papers establish neither its hypotheses nor its limit.
 - [29 · Physical polarization in the vacuum high-frequency limit](../papers/29-high-frequency-graviton-polarization/README.md) asks what physical tensor information survives a high-frequency weak limit. [25](../papers/25-characteristic-data-symplectic-rank/) addresses a related loss of radiative information at a characteristic endpoint, using a different construction and no high-frequency limit.
@@ -115,4 +125,4 @@ The two manuscripts use different stocks. The Lorentzian universal-cover rigidit
 
 The [paper index](PAPER-INDEX.md) links all manuscripts and distinguishes the original PDF/source packets, later analytical Markdown manuscripts and typeset analytical articles. Use packet notes for commands and dependencies, and the [verification overview](../VERIFICATION.md) for the distinction between proof, exact finite checks, numerical diagnostics and retained inputs. No additional scientific rerun is implied by this navigation layer.
 
-The 32 archive items are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.
+The 41 archive items are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.

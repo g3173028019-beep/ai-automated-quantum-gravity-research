@@ -31,7 +31,7 @@ The proofs are in the Markdown manuscripts. These entries do not claim a new num
 
 ## Later analytical manuscripts
 
-Papers [25 and 26](docs/PAPER-INDEX.md#25-characteristic-data-and-radiative-symplectic-rank) are analytical Markdown manuscripts. Papers 27–31 and the separately indexed companions are standalone typeset articles:
+Papers [25 and 26](docs/PAPER-INDEX.md#25-characteristic-data-and-radiative-symplectic-rank) are analytical Markdown manuscripts. The first later standalone typeset articles, Papers 27–32 and their separately indexed companions, are listed below:
 
 - [27 · Parity-odd Weyl-cubic ADM gravity](papers/27-parity-odd-weyl-cubic-adm/README.md): Four-dimensional vacuum on the analytic perturbative branch, to first order in the Weyl-cubic coupling. No higher-order or quantum constraint algebra is asserted.
 - [28 · The Einstein tensor from Lorentzian Regge variation](papers/28-lorentzian-regge-einstein-tensor/README.md): Classical four-dimensional affine, quasi-uniform admissible meshes with uniform non-null margins and regular normal fans. It estimates variational consistency, not convergence of discrete solutions.
@@ -71,3 +71,11 @@ The historical umbrella synthesis is routed into these dedicated questions, not 
 ### 09+21
 
 [09+21 · Local curvature information and modular dynamics in coupled Einstein–scalar theory](papers/09-21-coupled-modular-kernel/README.md): **Edition 2.** The revised edition constructs positive physical Hadamard states for linearized canonical Einstein–scalar theory with arbitrary smooth potential on any smooth globally hyperbolic solution. The construction descends to the nondegenerate global physical quotient; for one chosen state per background, each local modular generator is reconstructed by a convergent series on compact physical tests. The original four-field example, its one-scalar local completion, exact compact preparations and two-sided finite information-loss bounds are retained. The modular generator is state-dependent. The general result is not a geometric closed-form kernel, a universal Weyl-only completion theorem, or a nonlinear quantum-gravity construction.
+
+## Papers 33–37
+
+- [33 · Time-resolved scalar returns from a marked timelike tube](papers/33-vacuum-wave-returns/README.md): Reconstruction assumes a regular marked wedge and homogeneous angular orbits. It uses complete delayed kernels, not finitely many time samples. The vacuum ambiguity examples keep the tube marking fixed.
+- [34 · Normalizable quadrupole states off the vacuum stress orbit](papers/34-ads3-vacuum-stress/README.md): The specified states and stress profiles; not a general criterion for semiclassical bulk reconstruction.
+- [35 · Positive string poles and indefinite finite-transfer graviton amplitudes](papers/35-typeii-full-polarization/README.md): Type-II tree amplitude and the prescribed real probe and subtraction. The coefficient is not a forward EFT Wilson coefficient.
+- [36 · Full counting statistics of neutral emission in a quantum charged throat](papers/36-charged-throat-emission/README.md): The reduced deep-quantum cascade and a fixed channel; no claim about coherence or continuation outside that model.
+- [37 · Winding rank and shape confinement in homogeneous Einstein–scalar tori](papers/37-winding-rank/README.md): Flat homogeneous tori and the fully marked shape cover. The fixed-clock spectrum is not a theorem about inhomogeneous dynamics or a time-dependent propagator.

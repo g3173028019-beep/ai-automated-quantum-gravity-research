@@ -134,3 +134,13 @@ Some papers include additional local TeX parts; use `main.tex` as the entry poin
 Saved `archive-checks.json` and the [verification history](VERIFICATION-HISTORY.md) record prior packaging work. `tools/check_archive.py` and `tools/render_review.py` are packaging/layout helpers, separate from scientific entry points; they need not be rerun for an unchanged calculation or a prose-only documentation update.
 
 This guide was updated by reading local packet instructions and relevant code. None of the scientific, heavy-producer, build or archive-check commands above was executed for this documentation-only revision.
+
+## Building Papers 33–37
+
+The TeX for these five articles is self-contained. In each paper directory run `latexmk -pdf -halt-on-error manuscript.tex` or run `pdflatex -halt-on-error manuscript.tex` twice. The build produces a local `manuscript.pdf`.
+
+- [33 · Time-resolved scalar returns from a marked timelike tube](../papers/33-vacuum-wave-returns/README.md)
+- [34 · Normalizable quadrupole states off the vacuum stress orbit](../papers/34-ads3-vacuum-stress/README.md)
+- [35 · Positive string poles and indefinite finite-transfer graviton amplitudes](../papers/35-typeii-full-polarization/README.md)
+- [36 · Full counting statistics of neutral emission in a quantum charged throat](../papers/36-charged-throat-emission/README.md)
+- [37 · Winding rank and shape confinement in homogeneous Einstein–scalar tori](../papers/37-winding-rank/README.md)

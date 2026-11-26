@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**36 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 10 typeset analytical articles**
+**41 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 15 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 36 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 41 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -18,7 +18,7 @@ Positive physical states for coupled fields, quantitative geometry–matter info
 | **What remains stable when discrete geometry is changed?** | [17 · Cartan–Regge closure](papers/17-cartan-regge-closure/) treats the finite first-order reduction; [11 · Causal Regge transfer](papers/11-causal-regge-transfer/) isolates a finite Lorentzian channel; [22 · Lorentzian Regge Airy asymptotics](papers/22-lorentzian-regge-airy/manuscript.md) resolves the behavior of a specific saddle merger. |
 | **Which radiative quantities can be transported or measured?** | [23 · Gravitational memory and boosts](papers/23-gravitational-memory-boost/manuscript.md) treats its stated memory sector; [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md) studies a separate finite-aperture record in a specified graviton vacuum. |
 
-These routes connect the 20 original packets with the sixteen later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
+These routes connect the 20 original packets with the twenty-one later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
 
 ## New TeX and PDF manuscripts
 
@@ -34,6 +34,11 @@ These routes connect the 20 original packets with the sixteen later analytical m
 | [30 · Nariai rigidity under null completeness](papers/30-nariai-null-completeness/README.md) | Under the stated four-dimensional Einstein vacuum, positive cosmological constant, two-sided null-completeness, compact nonspherical semidefinite Cauchy hypotheses, the Lorentzian universal cover is the Nariai product. |
 | [31 · Classically matched vacuum waves with opposite quantum transfer](papers/31-graviton-metaplectic-transfer/README.md) | Two smooth exact vacuum plane waves match full classical Jacobi and longitudinal returns but have opposite calibrated physical two-helicity band Weyl brackets. For (N) concatenated intervals, the adjacent brackets distinguish (2^N) relative lift histories while the exterior map retains their product. |
 | [32 · Type-II scale recovery](papers/32-typeii-scale-recovery/README.md) | For at most r Type-II tree scales with known common Newton normalization, 2r−1 strictly spacelike band averages recover the distribution of inverse first massive threshold. The sharp deterministic Wasserstein error for r ≥ 2 is δ^(1/(2r+2)) without an upper mass bound; the full real-transfer record cannot improve the exponent. | [PDF](papers/32-typeii-scale-recovery/manuscript.pdf) · [TeX](papers/32-typeii-scale-recovery/main.tex) |
+| [33 · Time-resolved scalar returns from a marked timelike tube](papers/33-vacuum-wave-returns/README.md) | Complete temporal kernels in finitely many angular channels recover a marked homogeneous-orbit metric and its twist. Vacuum eliminates the conformal ambiguity at a nonumbilic tube, but exact inhomogeneous vacuum ambiguity survives finite angular projection. | [PDF](papers/33-vacuum-wave-returns/manuscript.pdf) · [TeX](papers/33-vacuum-wave-returns/manuscript.tex) |
+| [34 · Normalizable quadrupole states off the vacuum stress orbit](papers/34-ads3-vacuum-stress/README.md) | An explicit normalizable quantum quadrupole family realizes stress one-point profiles outside the AdS₃ vacuum stress orbit. A Hill spectral criterion characterizes classical vacuum-orbit representatives of prescribed stress shapes. | [PDF](papers/34-ads3-vacuum-stress/manuscript.pdf) · [TeX](papers/34-ads3-vacuum-stress/manuscript.tex) |
+| [35 · Positive string poles and indefinite finite-transfer graviton amplitudes](papers/35-typeii-full-polarization/README.md) | For the full 35-dimensional ten-dimensional physical projectile polarization space and a fixed real probe, positive Regge-subtracted massive poles coexist with an indefinite finite-transfer coefficient. | [PDF](papers/35-typeii-full-polarization/manuscript.pdf) · [TeX](papers/35-typeii-full-polarization/manuscript.tex) |
+| [36 · Full counting statistics of neutral emission in a quantum charged throat](papers/36-charged-throat-emission/README.md) | A single-channel charged-throat emission kernel yields an exact scaled cumulant generator and a large-deviation rate for the emission count. | [PDF](papers/36-charged-throat-emission/manuscript.pdf) · [TeX](papers/36-charged-throat-emission/manuscript.tex) |
+| [37 · Winding rank and shape confinement in homogeneous Einstein–scalar tori](papers/37-winding-rank/README.md) | Full winding rank locks the classical shape and yields a compact fixed-clock quantum resolvent. Nonzero deficient rank leaves an escape direction and excludes point spectrum on the marked space. | [PDF](papers/37-winding-rank/manuscript.pdf) · [TeX](papers/37-winding-rank/manuscript.tex) |
 
 These are analytical manuscripts with scoped results in classical geometry, quantum fields, and tree-level scattering. Read the linked paper notes for the hypotheses and technical checks.
 
@@ -69,7 +74,7 @@ The connections are scientific reading routes across distinct models. The [resea
 
 ## Reproduce a result
 
-The original 20 packets have local READMEs, calculation files and verification records. Papers 21–26 are analytical Markdown manuscripts. Papers 27–31 and the separately indexed companions include source TeX and compiled PDFs; they do not require a numerical replay. A short exact example, using only Python's standard library, checks the corrected projection-fibre example:
+The original 20 packets have local READMEs, calculation files and verification records. Papers 21–26 are analytical Markdown manuscripts. Papers 27–37 and the separately indexed companions include source TeX and compiled PDFs; they do not require a numerical replay. A short exact example, using only Python's standard library, checks the corrected projection-fibre example:
 
 ~~~powershell
 cd papers/01-projection-sign-rigidity
@@ -106,7 +111,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All 33 questions, results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 41 manuscripts, with results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |

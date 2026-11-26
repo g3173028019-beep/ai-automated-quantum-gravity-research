@@ -1,0 +1,113 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.98in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\title{Full Counting Statistics of Neutral Emission in a Quantum Charged Throat}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+In the deep-quantum, secular neutral-scalar evaporation model of a near-extremal charged black hole, the emission rate decreases as a power of the remaining energy and each emission removes a random fraction of that energy. The count therefore grows logarithmically in physical time rather than linearly. We prove the exact scaled cumulant generating function of the count and its large-deviation rate. The proof uses a change of the energy-loss distribution alone: it leaves the waiting-time law at a given energy unchanged. Uniform estimates on the residual energy show why this change of measure controls full count fluctuations and not merely a formal eigenvalue. The stationary count is sub-Poissonian and exceptionally quiet windows depend on whether the initial energy is fixed or drawn from the late ensemble. The results concern the single-channel continuum Markov model, not coherent multi-emission or the final evolution of an actual discharging black hole.
+\end{abstract}
+
+\section{Neutral throat input and physical time}
+Let $E>0$ be the energy above extremality, and let $t$ be asymptotic proper time in the fixed external normalization. When the dominant open channel is the neutral scalar in the deep-quantum regime, the leading secular transition law has total rate
+\begin{equation}
+\lambda(E)=A E^{5/2},\qquad E\mapsto XE,\qquad
+X\sim\mathrm{Beta}(3/2,2),\quad A>0.
+\label{eq:physical}
+\end{equation}
+Inputs to this description include the near-throat Schwarzian dynamics, the appropriate greybody factors, and the secular evolution of energy populations. We take the rate and independent conditional fraction in \eqref{eq:physical} from the corresponding neutral continuum kernel; they are not new Hawking amplitudes. Biggs~\cite{Biggs} derives the energy master equation, its one-time evolution and late scaling law, in the context of quantum-corrected evaporation~\cite{IPU,BK}. Here the target is the joint path count, which is not determined by simply substituting the mean energy into a Poisson rate.
+
+Fix a starting time $t_*>0$. Define the elapsed logarithmic time $s=\log(t/t_*)$ and the dimensionless remaining intensity $Z_s=AtE(t)^{5/2}$. The same physical events are counted on this clock: $N_S$ counts emissions between $t_*$ and $t_*e^S$. This is a deterministic change of the time label, not a different evaporation law or a level-dependent experimental timing protocol. Between emissions $dZ/ds=Z$; the intensity per unit $s$ is $Z$; and an event maps $Z$ to $ZV$ with $V=X^{5/2}$. For $b=3/5$,
+\begin{equation}
+m(u)=\E V^u=\frac{b}{(1+u)(b+u)},\qquad u>-b.
+\label{eq:mellin}
+\end{equation}
+Equivalently $V$ is the product of independent uniform and $\mathrm{Beta}(b,1)$ variables. Thus the logarithmic energy decrements $Y=-\log V$ are a sum of independent exponentials of rates $1$ and $b$. The exact identity
+\begin{equation}
+\log Z_S-\log Z_0=S-\sum_{j=1}^{N_S}Y_j
+\label{eq:identity}
+\end{equation}
+encodes the depletion mechanism: a count consumes an order-one amount of the log clock. The residual state term cannot be neglected without a bound, particularly under exponential tilting. We also use the known late scaling ensemble, expressed as $Z_0\overset{d}=WU$ with $W\sim\mathrm{Exp}(1)$ and $U\sim\mathrm{Beta}(b,1)$ independent~\cite{Biggs}; in the homogeneous logarithmic process it is stationary.
+
+\section{Exact full-count growth}
+\begin{theorem}
+For a fixed $Z_0=z>0$, or for the stationary ensemble specified above, the real scaled cumulant generating function is
+\begin{equation}
+\lim_{S\to\infty}\frac{1}{S}\log\E e^{kN_S}
+ =\alpha(k)=\frac{-(1+b)+\sqrt{(1-b)^2+4be^k}}{2},
+ \qquad k\in\mathbb R.
+\label{eq:scgf}
+\end{equation}
+The moment generating function is bounded above and below by finite strictly positive $k$-dependent multiples of $e^{\alpha(k)S}$ uniformly in $S$. In physical time the growth factor is $(t/t_*)^{\alpha(k)}$. The exponent is independent of the prefactor $A$ of the transition rate but depends on the Mellin law of the energy-loss marks.
+\end{theorem}
+
+\begin{proof}
+The unique $\alpha>-b$ satisfying $e^k m(\alpha)=1$ is the stated root. Change the mark law to $\nu_{\alpha}(dv)=e^k v^\alpha\nu(dv)$, where $\nu$ is the original law of $V$. The jump rate at fixed $Z$ is unchanged, so the no-event likelihoods conditional on the path cancel. Nonexplosion on any finite interval follows from $Z_s\le z e^s$ at fixed start. The likelihood on a finite path and the resulting expectation identity are
+\begin{align}
+\frac{d\Pp_z^\alpha}{d\Pp_z}&=
+e^{kN_S}\Bigl(\prod_{j=1}^{N_S}V_j\Bigr)^\alpha
+=e^{kN_S-\alpha S}(Z_S/z)^\alpha,\\
+\E_z e^{kN_S}&=e^{\alpha S}z^\alpha\E_z^\alpha Z_S^{-\alpha}.
+\label{eq:change}
+\end{align}
+For the second line to control the exponent it remains to control both tails of $Z_S$ under the tilted law.
+
+The generator on a smooth test $f$ is
+\[
+\mathcal L_\alpha f(z)=zf'(z)+z\int (f(zv)-f(z))\,\nu_\alpha(dv).
+\]
+Choose $p>\max(0,-\alpha)$ and $0<q<b+\alpha$, with $q>\alpha$ for $\alpha\ge0$. Such a $q$ exists for every finite $k$. For $U_p(z)= z^p+z^{-q}$ and $m_\alpha(u)=m(\alpha+u)/m(\alpha)$,
+\[
+\mathcal L_\alpha U_p=pz^p-(1-m_\alpha(p))z^{p+1}
+-qz^{-q}+(m_\alpha(-q)-1)z^{1-q}.
+\]
+The strictly negative leading terms at infinity and zero show that $\mathcal L_\alpha U_p\le C-cU_p$ for $c>0$. Apply the integrating-factor Dynkin inequality on compact exit stops; then let the stops tend out to both ends and use nonexplosion, positivity and Fatou. This gives $\E_z^\alpha U_p(Z_S)\le e^{-cS}U_p(z)+C/c$. It bounds the terminal factor in \eqref{eq:change} above, and by uniform tightness inside a compact interval also bounds it below away from zero at each fixed start. The compact-uniform bounds also give a lower bound after averaging over a compact positive-probability set of stationary starts. The corresponding upper bound is integrable against the stationary law after multiplication by $z^\alpha$: all positive moments are finite, and the worst negative exponent $\alpha-q$ is greater than $-b$. This proves \eqref{eq:scgf} and the asserted finite factors.
+\end{proof}
+
+\section{Count fluctuations and quiet histories}
+The count density $N_S/S$ obeys a large-deviation principle with rate
+\begin{equation}
+I(j)=
+\begin{cases}
+ j\log(jD/b)+(1+b-D)/2,&j>0,\\
+ b,&j=0,\\
+ +\infty,&j<0,
+\end{cases}
+\qquad
+D=2j+\sqrt{(1-b)^2+4j^2}.
+\end{equation}
+Indeed $I$ is the Legendre transform of \eqref{eq:scgf}; differentiability on all real $k$ gives the interior bounds, positive exponential moments give exponential tightness, and the lower bound for relative neighborhoods of zero follows by approaching zero from positive densities. The law concentrates about $j=b/(1+b)=3/8$, so the leading number of events is $3\log(t/t_*)/8$ in the indefinitely continued ideal process.
+
+An independent variance check uses the physical depletion identity rather than assuming that derivatives commute with the cumulant limit. In the stationary ensemble the count intensity has finite expectation, and $\log Z$ has finite second moment. With $\mu_Y=1+1/b$, $\sigma_Y^2=1+1/b^2$, the compensated mark martingale $M_S=\sum_{j\le N_S}(Y_j-\mu_Y)$ has mean zero and variance $\sigma_Y^2\E N_S$, since each new mark is independent of its past conditional history. Equation \eqref{eq:identity} yields $\E N_S=S/\mu_Y$ and $\mu_Y N_S=S-M_S-(\log Z_S-\log Z_0)$. The endpoint term has bounded variance; its covariance with $M_S$ is $O(\sqrt S)$. Hence the asymptotic variance-to-mean ratio is $\sigma_Y^2/\mu_Y^2=(1+b^2)/(1+b)^2=17/32$. The sub-Poissonian result follows here from a classical stochastic depletion process with quantum-corrected input; it is not evidence of coherence by itself.
+
+Exactly zero events require additional care. For a fixed start the intensity keeps rising as $ze^s$ along the no-event path, giving $\Pp_z(N_S=0)=e^{-z(e^S-1)}$. At stationary start,
+\[
+\Pp(N_S=0)=b\int_0^1\frac{v^{b-1}}{1+(e^S-1)v}\,dv
+\sim\frac{\pi b}{\sin(\pi b)}e^{-bS}.
+\]
+Late time averaging allows rare very low initial intensities, explaining the different quiet-window behavior. Neither statement contradicts the large-deviation rate of neighborhoods of count density zero.
+
+\section{Interpretation and range of validity}
+The mechanism is not specific to the scalar's square-root formula. In the general single-channel kernel of Biggs~\cite[Eq. (34)]{Biggs}, the transition density from $E$ to $E'\in(0,E)$ is proportional to $(E')^{1/2}(E-E')^a$, where a fixed integer $a\ge0$ labels the power of the dominant neutral channel. Writing $\gamma=a+3/2$, the rate is $A_a E^\gamma$ and $X=E'/E$ has law $\mathrm{Beta}(3/2,a+1)$. On the same physical log clock, $V=X^\gamma$ and
+\[
+\E V^u=\prod_{j=0}^a\frac{b_j}{b_j+u},\qquad b_j=\frac{3/2+j}{\gamma}.
+\]
+Thus the logarithmic decrement is a sum of exponentials with rates $b_0,\ldots,b_a$. At fixed start, the same endpoint proof goes through with $b$ replaced by $b_0$ in the restriction on negative moments. The exact count exponent is the unique real root $\alpha>-b_0$ of $\prod_{j=0}^a(1+\alpha/b_j)=e^k$. This yields one dominant-channel law for each prescribed kernel (the scalar is $a=1$, photon $a=3$, and the di-photon transition $a=7$). In the last case the count is events, not photons, and the formula is not for concurrent channels or crossovers between them.
+
+The $S\to\infty$ result is a statement about the homogeneous effective process when continued throughout arbitrarily large $t/t_*$. A real measurement can test only windows for which the remnant stays in the deep-quantum near-extremal continuum and the chosen neutral scalar channel dominates. In particular spectral discreteness, coherent multi-quantum emission, other species or angular momentum, and charge discharge can end that window. No exchange of the large log-window limit with any of those physical limits is asserted. The result does not prescribe a physical endpoint, identify a microscopic unitary evaporation model, or rely on changing the physical clock as the energy falls.
+
+\begin{thebibliography}{9}
+\bibitem{Biggs}
+A.~Biggs, \emph{Following the state of an evaporating charged black hole into the quantum gravity regime}, \href{https://arxiv.org/abs/2503.02051}{arXiv:2503.02051}, especially Sec.~3.2.
+\bibitem{IPU}
+L.~V.~Iliesiu, G.~Penington and M.~Usatyuk, \emph{The evaporation of charged black holes}, JHEP \textbf{01} (2026) 109, \href{https://doi.org/10.1007/JHEP01(2026)109}{doi:10.1007/JHEP01(2026)109}.
+\bibitem{BK}
+Y.~Bai and M.~Korwar, \emph{Near-extremal charged black holes: greybody factors and evolution}, JHEP \textbf{03} (2023) 151, \href{https://doi.org/10.1007/JHEP03(2023)151}{doi:10.1007/JHEP03(2023)151}.
+\end{thebibliography}
+\end{document}

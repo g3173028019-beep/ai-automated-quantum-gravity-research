@@ -1,0 +1,125 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.90in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\title{Winding Rank and Shape Confinement in Homogeneous Einstein--Scalar Tori}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We consider toroidal homogeneous Einstein gravity coupled to compact massless scalars with fixed labeled windings. The windings contribute a genuine anisotropic stress, not just coordinate marks. In the expanding log-volume reduction, full winding rank makes every finite homogeneous trajectory converge in shape to the same geometry and gives compact resolvent for the fixed-clock shape operator. Every nonzero deficient rank instead admits an exact shape dilation that leaves the kinetic term invariant and rescales the potential. On the fully marked shape cover it transfers the free essential spectrum to the interacting operator and, by a form virial argument, excludes every eigenstate, including embedded eigenstates. The same potential thus explains the classical full-rank locking and the quantum rank transition. We work within the exact homogeneous sector and do not identify the spectrum of a deficient arithmetic quotient or claim time-dependent quantum relaxation.
+\end{abstract}
+
+\section{Einstein reduction with backreacting winding fields}
+
+Let $d\ge2$, $D=d+1$, and take a spatial torus of coordinate volume $V_0$ with a chosen ordered homology basis. In homogeneous coordinates use lapse $N>0$, zero shift, and spatial metric $e^{2\alpha}q$, where $q=q^{\mathsf T}>0$ and $\det q=1$. We use the Einstein--Hilbert action without cosmological constant and the ordinary minimally coupled massless action for compact scalars with positive constant target metric $k$. Their fields are
+\[
+ X^A=W^A{}_i x^i\quad \text{modulo target periods},\qquad
+ C=W^{\mathsf T}kW ,
+\]
+where $W$ is integer in the chosen period units. The time-dependent scalar zero modes are fixed with vanishing momenta. This is consistent with the scalar equations: the gradient is constant on each spatial slice, and the time component of the scalar current vanishes. The spatial momentum constraint is then identically satisfied because the metric and second fundamental form are homogeneous and the matter momentum flux vanishes. Thus a reduced solution yields homogeneous Einstein--scalar data and evolution, not a model with an imposed external anisotropic stress. Compact homogeneous canonical variables are discussed in~\cite{Kodama}; scalar gradients as anisotropic matter appear in other models, for example~\cite{Solid}.
+
+Set
+\[
+ T=\sqrt{\frac{d(d-1)}{8\pi G_D}}\,\alpha,\qquad
+ d\ell_{\mathcal S}^2=\frac{1}{32\pi G_D}
+      \tr(q^{-1}dq\,q^{-1}dq),\qquad
+ \mathcal S=SL(d,\mathbb R)/SO(d).
+\]
+The time label $T$ is proportional to log volume, not the CMC mean curvature. The spatial metric is flat on each homogeneous torus. In the ADM kinetic term the second fundamental form has mixed part $(\dot\alpha I+\tfrac12 q^{-1}\dot q)/N$, and $\tr(q^{-1}\dot q)=0$. Subtracting its squared trace gives $[-d(d-1)\dot\alpha^2+\tfrac14\tr[(q^{-1}\dot q)^2]]/N^2$. The reduced Lagrangian is therefore
+\[
+ \frac{V_0e^{d\alpha}}{2N}[-\dot T^2+|\dot q|_{\mathcal S}^2]
+ -\frac{NV_0e^{(d-2)\alpha}}{2}\tr(Cq^{-1}).
+\]
+After multiplying the lapse constraint by the positive factor $2V_0e^{d\alpha}$ one obtains
+\begin{equation}
+ -p_T^2+|p|_q^2+B(T)\tr(Cq^{-1})=0,\qquad
+ B(T)=V_0^2 e^{2\gamma T},\qquad
+ \gamma=(d-1)\frac{d\alpha}{dT}>0 .
+ \label{eq:constraint}
+\end{equation}
+Here $|p|_q$ is the cotangent norm of the shape metric. The expanding branch has $p_T=-H(T)$ and shape Hamiltonian
+\[
+ H(T)=\sqrt{|p|_q^2+e^{2\gamma T}U(q)},\qquad
+ U(q)=V_0^2\tr(Cq^{-1}).
+\]
+All symmetric tracefree shape components, including those that are off-diagonal in the chosen frame, are retained.
+
+\section{Nonlinear full-rank locking}
+
+\begin{theorem}
+If $C>0$, every finite initial condition on the expanding homogeneous branch exists for all future log-volume times. With $\pi=e^{-\gamma T}p$,
+\[
+ (q(T),\pi(T))\longrightarrow
+ \left(\frac{C}{(\det C)^{1/d}},0\right)
+ \quad\text{as }T\to\infty .
+\]
+This is convergence in the complete homogeneous shape space, not a small-shear statement. It does not assert that the unscaled canonical momentum $p$ tends to zero.
+\end{theorem}
+
+\begin{proof}
+In canonical local cotangent coordinates write $\mathcal E(q,\pi)=\sqrt{|\pi|_q^2+U(q)}$. Direct substitution into Hamilton's equations, not a canonical identification of $\pi$ with $p$, gives the autonomous damped system
+\[
+ \dot q=\partial_\pi\mathcal E, \qquad
+ \dot\pi=-\partial_q\mathcal E-\gamma\pi,\qquad
+ \frac{d\mathcal E}{dT}=-\frac{\gamma|\pi|_q^2}{\mathcal E}.
+\]
+The potential is bounded below by a positive constant and is proper. Indeed $C>0$ bounds $\tr(Cq^{-1})$ from below by a positive multiple of $\tr q^{-1}$, and a bound on $\tr q^{-1}$ bounds extreme eigenvalues in both directions because $\det q=1$. Each initial energy sublevel in the damped variables is therefore compact, with bounded cotangent fibers. The vector field is smooth on it, yielding forward completeness in $T$.
+
+Along the forward orbit the nonnegative $|\pi|_q^2/\mathcal E$ has finite time integral. Equivalently the energy is constant on its invariant omega-limit set, on which the same differential identity forces $\pi=0$. Since $\pi=0$ is invariant only where $dU=0$, the omega-limit set consists of stationary shape points. Variations tangent to $\det q=1$ show that $dU=0$ exactly when $C$ is proportional to $q$; the unique normalized solution is the point stated. It also minimizes $U$ by the arithmetic--geometric mean inequality for $q^{-1/2}Cq^{-1/2}$. Compactness then gives convergence of the whole orbit.
+\end{proof}
+
+The contraction here is in the rescaled, damped shape variables, not a failure of the original Hamiltonian flow to preserve its canonical volume. If $0<\operatorname{rank} C<d$ there is no stationary shape: the same critical-point condition would require positive definite $C$. As shown next, the potential can be driven to zero at infinity. We do not assert a common late trajectory for all deficient-rank classical data.
+
+\section{Fixed-clock spectral transition}
+
+Fix $T$ and write $B=B(T)>0$. On the fully marked cover $\mathcal S$ with its invariant measure consider the reduced Laplace--Beltrami quantization
+\[
+ L_B=-\eta^2\Delta_{\mathcal S}+B\tr(Cq^{-1}),\qquad
+ \widehat H_B=L_B^{1/2}.
+\]
+Here $\eta>0$ is the fixed action scale and $-\Delta_{\mathcal S}$ is nonnegative. The positive self-adjoint operator $L_B$ is defined by the closed form sum of the free gradient form and the nonnegative multiplication form. Smooth compact tests form a core for the form by compact cutoff and local smoothing on the complete symmetric space. The ordering is part of the stated reduced quantization.
+
+\begin{theorem}
+Full rank of $C$ gives compact resolvent. For $0<r=\operatorname{rank} C<d$, the essential spectrum of $L_B$ is the free essential spectrum and $L_B$ has no point spectrum. All $B>0$ are unitarily equivalent in the deficient case. If $C=0$ the operator is free. The corresponding statements for $\widehat H_B$ follow by taking the positive square root of the spectrum.
+\end{theorem}
+
+\begin{proof}
+For $C>0$, local Rellich compactness controls a bounded form sequence on each compact potential sublevel. Off that sublevel its squared $L^2$ mass is bounded by its form norm divided by the potential threshold. Together these give compact embedding of the form domain in $L^2$, hence compact resolvent.
+
+For $0<r<d$, choose an orthogonal basis splitting the support and kernel of $C$ and set
+\[
+ A_s=\diag(e^{s/2}I_r,e^{-rs/[2(d-r)]}I_{d-r}),\qquad
+ \Phi_s(q)=A_s q A_s^{\mathsf T}.
+\]
+This is an isometry, and $V(q)=B\tr(Cq^{-1})$ satisfies $V(\Phi_s q)=e^{-s}V(q)$ and $V(q)>0$ at every finite shape. Any fixed compact support escapes as $s\to\infty$ under $\Phi_s$, since the largest eigenvalue of the positive support block grows uniformly there. Translate a sequence of compact smooth approximate free Weyl vectors by pullback along $\Phi_{-s}$ for suitably large positive $s$ so that their supports escape and the potential times each vector tends to zero in norm. The free operator commutes with this translation. Thus every free spectral point is essential for $L_B$; compact smooth vectors suffice because the free Laplacian on this complete space has operator core $C_c^\infty$. The free spectrum is the continuous half-line from its spectral bottom, by the symmetric-space Fourier transform~\cite{Helgason}; positivity of the potential excludes any point below this bottom. This gives the asserted equality of essential sets.
+
+For the stronger no-eigenstate result let $U_s f=f\circ\Phi_s$ and let $\mathfrak l=\mathfrak l_0+\mathfrak v$ be the form of $L_B$. Congruence preserves $\mathfrak l_0$, and a change of variables gives
+\begin{equation}
+ \mathfrak l(U_s f,U_s g)=\mathfrak l_0(f,g)+e^s\mathfrak v(f,g).
+ \label{eq:forms}
+\end{equation}
+It follows also that $U_s^* L_B U_s=L_{e^s B}$. In the form domain $U_s$ acts strongly continuously, including in the $L^2(V\,dq)$ seminorm: this holds on compact smooth tests and extends by their form density and the uniform local bound from \eqref{eq:forms}. If $L_B\psi=\lambda\psi$, the two mixed forms $\mathfrak l(\psi,U_s\psi)$ and $\mathfrak l(U_{-s}\psi,\psi)$ are equal by the weak eigenvalue equation and unitarity. By \eqref{eq:forms} their difference is $(e^s-1)\mathfrak v(U_{-s}\psi,\psi)$. Dividing at $s\ne0$ and taking $s\to0$ gives $\int V|\psi|^2=0$; strict positivity implies $\psi=0$. Unlike a formal virial computation this uses no differentiability of $\psi$ for the dilation generator. It rules out embedded eigenvalues as well, without asserting absence of singular continuous spectrum. For comparison with general positive commutator methods see~\cite{Virial}.
+\end{proof}
+
+\section{Marking and interpretation}
+
+The conclusions isolate the effect of winding rank in a single exact homogeneous matter-gravity reduction. Full rank penalizes every escape direction on $\mathcal S$. A deficient matrix leaves kernel directions in which unit determinant can be maintained while all winding gradients lose norm. The dilation is an exact expression of this escape, and it is the reason for absence of bound states rather than merely an estimate of how much potential remains at large shear. Instantaneous spectra of the reduced operator do not imply quantum relaxation, a transition in physical time at fixed rank, or a statement about inhomogeneous Einstein--scalar stability.
+
+The ordered homology marking is essential to the spectral statement as posed. With no external marking and fixed labeled $W$, the remaining large torus diffeomorphisms are the integral stabilizer of $W$. There is no nonidentity stabilizer for full-rank $W$. At deficient rank the fields do not in general mark the kernel homology; the continuous congruence used here need not normalize the remaining arithmetic group. We therefore make no assertion about the point spectrum after that quotient. The spectral statements concern the declared instantaneous reduced operator and do not require a Wheeler--DeWitt ordering or assume that this instantaneous spectrum controls the nonautonomous quantization.
+
+\begin{thebibliography}{9}
+\bibitem{Kodama}
+H.~Kodama, \emph{Canonical structure of locally homogeneous systems on compact closed 3-manifolds of types $E^3$, Nil and Sol}, Prog. Theor. Phys. \textbf{99} (1998) 173, \href{https://doi.org/10.1143/PTP.99.173}{doi:10.1143/PTP.99.173}.
+\bibitem{Solid}
+J.~Motoa-Manzano, J.~B.~Orjuela-Quintana, T.~S.~Pereira and C.~A.~Valenzuela-Toledo, \emph{Anisotropic solid dark energy}, Phys. Dark Univ. \textbf{32} (2021) 100806, \href{https://doi.org/10.1016/j.dark.2021.100806}{doi:10.1016/j.dark.2021.100806}.
+\bibitem{Helgason}
+S.~Helgason, \emph{Groups and Geometric Analysis: Integral Geometry, Invariant Differential Operators, and Spherical Functions}, Academic Press, 1984.
+\bibitem{Virial}
+M.~M\u{a}ntoiu, S.~Richard and R.~Tiedra de Aldecoa, \emph{The method of the weakly conjugate operator: Extensions and applications to operators on graphs and groups}, \href{https://arxiv.org/abs/0810.1529}{arXiv:0810.1529}.
+\end{thebibliography}
+\end{document}

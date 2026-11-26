@@ -2,9 +2,11 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains 36 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and ten typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 41 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and fifteen typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
+
+Papers 33–37 joined the public archive as five separate typeset research manuscripts: [33 · Time-resolved scalar returns from a marked timelike tube](papers/33-vacuum-wave-returns/README.md), [34 · Normalizable quadrupole states off the vacuum stress orbit](papers/34-ads3-vacuum-stress/README.md), [35 · Positive string poles and indefinite finite-transfer graviton amplitudes](papers/35-typeii-full-polarization/README.md), [36 · Full counting statistics of neutral emission in a quantum charged throat](papers/36-charged-throat-emission/README.md), [37 · Winding rank and shape confinement in homogeneous Einstein–scalar tori](papers/37-winding-rank/README.md). Existing editions and source packets were retained.
 
 On 26 November 2026 (Beijing time), [Paper 32](papers/32-typeii-scale-recovery/README.md) joined the public collection as a new typeset article. Existing manuscripts and companion editions were retained.
 

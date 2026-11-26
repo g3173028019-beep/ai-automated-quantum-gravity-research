@@ -89,3 +89,11 @@ The recorded review consists of automated calculations and AI review. Human expe
 ### 09+21
 
 [09+21 · Local curvature information and modular dynamics in coupled Einstein–scalar theory](papers/09-21-coupled-modular-kernel/README.md): the revised TeX and compiled PDF contain the general state, radical descent and modular reconstruction proofs, followed by the retained original example. See the entry for the first edition. The arguments were checked internally; external peer review is not claimed.
+
+## Verification for Papers 33–37
+
+- [33 · Time-resolved scalar returns from a marked timelike tube](papers/33-vacuum-wave-returns/README.md): [manuscript verification](papers/33-vacuum-wave-returns/VERIFICATION.md).
+- [34 · Normalizable quadrupole states off the vacuum stress orbit](papers/34-ads3-vacuum-stress/README.md): [manuscript verification](papers/34-ads3-vacuum-stress/VERIFICATION.md).
+- [35 · Positive string poles and indefinite finite-transfer graviton amplitudes](papers/35-typeii-full-polarization/README.md): [manuscript verification](papers/35-typeii-full-polarization/VERIFICATION.md).
+- [36 · Full counting statistics of neutral emission in a quantum charged throat](papers/36-charged-throat-emission/README.md): [manuscript verification](papers/36-charged-throat-emission/VERIFICATION.md).
+- [37 · Winding rank and shape confinement in homogeneous Einstein–scalar tori](papers/37-winding-rank/README.md): [manuscript verification](papers/37-winding-rank/VERIFICATION.md).
