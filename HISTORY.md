@@ -2,9 +2,11 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains 43 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and seventeen typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 44 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and eighteen typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
+
+On 26 November 2026 (Beijing time), [40 · Null-volume shared-label rigidity](papers/40-null-volume-shared-label-rigidity/README.md) joined the public archive as typeset, internally reviewed research manuscripts. Earlier files and numbering are retained.
 
 On 26 November 2026 (Beijing time), [38 · From Euclidean tensor prices to EPRL amplitudes: a rank obstruction at the four-to-two move](papers/38-tensor-prices-eprl-boundary/README.md) and [39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](papers/39-real-tree-spectral-boundary-fields/README.md) joined the public archive as typeset, internally reviewed research manuscripts. The private source collection was consolidated by question; the existing archive was not renumbered.
 

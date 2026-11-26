@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 43 items: 20 original research packets, six later analytical Markdown manuscripts and seventeen typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 44 items: 20 original research packets, six later analytical Markdown manuscripts and eighteen typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–39 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–40 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -511,3 +511,11 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** A classical tree-indexed probability field and a tensor spectral encoding, with the existing finite Poisson model explicitly credited. No spacetime or gravity construction is asserted.
 
 [39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](../papers/39-real-tree-spectral-boundary-fields/README.md) · [PDF](../papers/39-real-tree-spectral-boundary-fields/manuscript.pdf) · [TeX](../papers/39-real-tree-spectral-boundary-fields/manuscript.tex) · [Verification](../papers/39-real-tree-spectral-boundary-fields/VERIFICATION.md)
+
+## 40. Finite Shared-Label Calibration of Lorentzian Volume: Constraint Rigidity in CGHS and Spherical Tubes in Schwarzschild
+
+**Result.** Classical CGHS constraints and a static-kernel classification fix when the chosen shared-label sampler can reproduce physical null volumes. In four dimensions, spherical flat tubes need exactly three labels, whereas every regular Schwarzschild exterior box has unbounded exact cost.
+
+**Scope.** The joint physical volume sampler is assumed, and the bound is on exact conditional-independence labels. It neither constrains arbitrary tensor encodings nor detects a horizon from rank alone.
+
+[40 · Null-volume shared-label rigidity](../papers/40-null-volume-shared-label-rigidity/README.md) · [PDF](../papers/40-null-volume-shared-label-rigidity/manuscript.pdf) · [TeX](../papers/40-null-volume-shared-label-rigidity/manuscript.tex) · [Verification](../papers/40-null-volume-shared-label-rigidity/VERIFICATION.md)

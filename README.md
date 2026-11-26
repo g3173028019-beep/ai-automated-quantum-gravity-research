@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**43 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 17 typeset analytical articles**
+**44 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 18 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 43 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 44 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -28,6 +28,7 @@ These routes connect the 20 original packets with the twenty-three later analyti
 |---|---|---|
 | [38 · From Euclidean tensor prices to EPRL amplitudes: a rank obstruction at the four-to-two move](papers/38-tensor-prices-eprl-boundary/README.md) | Coherent cut-price operators reproduce finite corrected Euclidean EPRL amplitudes and their gluing. A marked 4↔2 boundary block has rank five against a rank-one coarse seam, with exact cutoff-limit values at γ=1/3. | [PDF](papers/38-tensor-prices-eprl-boundary/manuscript.pdf) · [TeX](papers/38-tensor-prices-eprl-boundary/manuscript.tex) · [Verification](papers/38-tensor-prices-eprl-boundary/VERIFICATION.md) |
 | [39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](papers/39-real-tree-spectral-boundary-fields/README.md) | A compatible spectral assignment recovers real-tree distances and finite Steiner-hull lengths. A Poisson field has explicit non-Gaussian connected boundary kernels below threshold and a Gaussian white-noise limit at critical scaling. | [PDF](papers/39-real-tree-spectral-boundary-fields/manuscript.pdf) · [TeX](papers/39-real-tree-spectral-boundary-fields/manuscript.tex) · [Verification](papers/39-real-tree-spectral-boundary-fields/VERIFICATION.md) |
+| [40 · Null-volume shared-label rigidity](papers/40-null-volume-shared-label-rigidity/README.md) | Classical CGHS constraints and a static-kernel classification fix when the chosen shared-label sampler can reproduce physical null volumes. In four dimensions, spherical flat tubes need exactly three labels, whereas every regular Schwarzschild exterior box has unbounded exact cost. | [PDF](papers/40-null-volume-shared-label-rigidity/manuscript.pdf) · [TeX](papers/40-null-volume-shared-label-rigidity/manuscript.tex) · [Verification](papers/40-null-volume-shared-label-rigidity/VERIFICATION.md) |
 
 ### Earlier typeset work
 
@@ -120,7 +121,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All 43 manuscripts, with results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 44 manuscripts, with results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |

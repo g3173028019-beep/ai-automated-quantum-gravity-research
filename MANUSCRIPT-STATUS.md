@@ -84,3 +84,5 @@ The historical umbrella synthesis is routed into these dedicated questions, not 
 
 - [38 · From Euclidean tensor prices to EPRL amplitudes: a rank obstruction at the four-to-two move](papers/38-tensor-prices-eprl-boundary/README.md): Corrected Euclidean EPRL at the stated rational Immirzi parameters, weights and boundary marks. The spin-cutoff limit keeps the two complexes fixed; it is not a graph continuum limit.
 - [39 · Spectral Steiner costs on real trees and a Poisson field on the p-adic boundary](papers/39-real-tree-spectral-boundary-fields/README.md): A classical tree-indexed probability field and a tensor spectral encoding, with the existing finite Poisson model explicitly credited. No spacetime or gravity construction is asserted.
+
+- [40 · Null-volume shared-label rigidity](papers/40-null-volume-shared-label-rigidity/README.md): The joint physical volume sampler is assumed, and the bound is on exact conditional-independence labels. It neither constrains arbitrary tensor encodings nor detects a horizon from rank alone. [Internal verification](papers/40-null-volume-shared-label-rigidity/VERIFICATION.md).

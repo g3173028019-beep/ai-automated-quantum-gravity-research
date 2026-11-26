@@ -1,0 +1,199 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[expansion=false]{microtype}
+\usepackage[letterpaper,hmargin=1.02in,vmargin=0.94in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{1.5em}
+\allowdisplaybreaks[2]
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\rank}{rank}
+\newcommand{\vol}{\operatorname{Vol}}
+\newcommand{\dd}{\mathrm{d}}
+\hypersetup{pdftitle={Finite Shared-Label Calibration of Lorentzian Volume}}
+
+\title{Finite Shared-Label Calibration of Lorentzian Volume\\[0.25em]
+\large Constraint rigidity in CGHS and spherical tubes in Schwarzschild}
+\author{}
+\date{26 November 2026}
+
+\begin{document}
+\maketitle
+\vspace{-2em}
+\begin{abstract}
+Two null cuts of a common-label tensor have an exact coincidence response: it is the mass, under a supplied joint threshold measure, of the rectangular null envelope of its marked sites. We use this primitive to classify a calibration architecture in which the two cuts are conditionally independent given a finite classical label. In classical Callan--Giddings--Harvey--Strominger (CGHS) gravity, the constraint equations make the reciprocal volume density finitely separable. A units-on-products theorem then implies that the volume can have a finite label budget only in the local linear-dilaton vacuum. In any nonzero-mass vacuum patch, every ordered $n\times n$ grid of finite cells has exact budget $n$, and the sign of a $2\times2$ minor gives the mass sign. Independently, for smooth static warped products we characterize finite calibration on compact regular rectangles by the exponential-polynomial form of the Killing-coordinate volume profile. Full spherical tubes in four-dimensional Minkowski space require exactly three labels; no finite budget works on any regular exterior null rectangle in four-dimensional Schwarzschild. These results concern an exact conditional-independence sampler, not the information cost of arbitrary gravitational measurements or tensor encodings.
+\end{abstract}
+
+\section{The null-volume operation and the calibration budget}
+
+Fix oriented null labels $(u,v)$ in a two-dimensional orbit space, with both labels increasing to the future. Their origin and scale do not enter the basic measurement. A calibrated apparatus supplies a finite, positive joint measure $\mu$ of pairs of cut thresholds on a tested rectangle $I\times J$. In the gravity examples, $\mu$ is the physical volume measure of this rectangle or of tubes over it. We do not infer $\mu$ from the tensor data. If the apparatus gives probabilities, the normalized law $\mu/\mu(I\times J)$ suffices for all ranks and signs below.
+
+For a finite collection $S$ of marked sites let
+\begin{equation}
+ \Delta_S(q)=\sum_{a=1}^{q}\bigotimes_{x\in S}e_a
+\end{equation}
+be a $q$-valued common label with $q\ge2$. OpenAI's Euclidean tensor-price theorem prices this tensor by $\log_2 q$ times the mean width of the sites \cite{OpenAI}. On each of our one-dimensional labels this is the coordinate span. At the level of individual cuts the mechanism is particularly direct: a threshold $s$ in the $u$ direction flattens the tensor between sites with $u<s$ and sites with $u\ge s$. The flattening has rank $q$ precisely when the threshold separates at least two marked sites, and rank one otherwise. For nonzero $T$, write $r_u(T;s)$ for the base-two log rank, and define $r_v(T;t)$ similarly. Each fixed nontrivial bipartition gives a flattening-rank spectral point under the local tensor operations; a cut with an empty side contributes log rank zero. The joint observable is
+\begin{align}
+ \mathcal C_\mu(T)&=\int r_u(T;s)r_v(T;t)\,\dd\mu(s,t),\\
+ \mathcal C_\mu(\Delta_S(q))
+   &=(\log_2 q)^2\,
+   \mu\bigl([\min_S u,\max_S u]\times[\min_S v,\max_S v]\bigr).
+ \label{eq:cut}
+\end{align}
+Endpoints may be ignored for the continuous densities considered below. This is an operation on the original marked sites, not a placement of sites computed from a reconstructed metric. One binary common label attached to the opposite corners measures the cell. Adding more copies of that same label inside its envelope does not change either cut profile. The construction does not assert that independent readings at those sites can be compressed into the common bit. Nor is $\mathcal C_\mu$ itself a scalar spectral point: on taking a tensor power both log-rank factors grow linearly and the joint response grows quadratically.
+
+\paragraph{Physical model.}
+The two cuts are sampled conditionally independently if a random classical variable $Z$ with $R$ values suffices to realize
+\begin{equation}
+ \frac{\mu}{\mu(I\times J)}
+   =\sum_{a=1}^{R} w_a\,\alpha_a\otimes\beta_a,\qquad
+ w_a>0,\quad \sum_a w_a=1,
+ \label{eq:mixture}
+\end{equation}
+where $\alpha_a$ and $\beta_a$ are probability measures on the two axes. The budget is the least $R$ for this exact representation, or infinity if there is no finite representation. A tag in \eqref{eq:mixture} indexes product laws; it is distinct from the common label in the GHZ tensor used for each volume query. No claim is made about arbitrary encodings, about a physical procedure for broadcast across spacelike separation, or about entropy in bits. One possible calibration is an event sampler with a known constant mean intensity per invariant volume. The rank witness only uses coincidence probabilities, so the constant need not be known.
+
+In a rectangular cell experiment set $W_{ij}=\mu(I_i\times J_j)$ for disjoint intervals on each axis. Such a matrix has ordinary rank at most $R$ if \eqref{eq:mixture} holds. If a positive $n\times n$ matrix has ordinary rank $n$, its exact finite-grid budget is $n$: fewer product terms cannot give that rank, and $n$ terms suffice by using the row index as the conditionally independent tag. This statement is exact for the law conditioned on the selected grid; it is not an upper bound for the entire continuum box. Increasing reparametrizations of individual null labels push the two component measures forward, leaving the budget and the ordered cell-volume matrices unchanged.
+
+\begin{lemma}[From cells to kernels]\label{lem:cells}
+Suppose $\mu$ has continuous density $K$ on a rectangle. A finite budget $R$ implies that $K$ has ordinary separable rank at most $R$. Conversely, if $K$ has infinite ordinary separable rank on an open rectangle, for every $n$ there are disjoint ordered interval grids contained in it with nonsingular $n\times n$ volume matrix.
+\end{lemma}
+\begin{proof}
+Divide cell volumes by both interval lengths and shrink the cells to distinct sample points. Rank at most $R$ is closed for a fixed matrix size, so all point matrices have rank at most $R$. If the slices $K(u,\cdot)$ contained $R+1$ linearly independent functions, evaluation vectors on the second interval would span $\mathbb R^{R+1}$, giving a nonsingular point matrix. Finite rank therefore gives a basis of at most $R$ slices and, by evaluating at distinguishing points, continuous coefficient functions. The same argument shows that infinite rank gives nonsingular point matrices of every size. These determinants persist for sufficiently small finite cells, since the normalized volumes converge to the point values. Ordering the intervals changes only the determinant sign.
+\end{proof}
+
+\section{Classical CGHS: the constraints exclude intermediate budgets}
+
+Consider the classical CGHS equations with conformal matter in the physical metric frame of \cite{CGHS}. Use a regular connected Kruskal null box, set $\Phi=e^{-2\phi}=e^{-2\rho}>0$ and take $\lambda>0$. In the conventions of \cite[eqs.~(10)--(13)]{CGHS}, with stress factors absorbed into $t_u,t_v$, the equations used here are
+\begin{equation}
+ \dd s^2=-\Phi^{-1}\dd u\dd v,\qquad
+ \Phi_{uv}=-\lambda^2,\qquad
+ \Phi_{uu}=-t_u(u),\qquad \Phi_{vv}=-t_v(v).
+ \label{eq:cghs}
+\end{equation}
+The measured volume on a null rectangle is $\dd\mu=\Phi^{-1}\dd u\dd v/2$. In particular, the mixed constraint dictates the bulk from its values on two intersecting null characteristics:
+\begin{equation}
+ \Phi(u,v)=\Phi(u,v_0)+\Phi(u_0,v)-\Phi(u_0,v_0)
+    -\lambda^2(u-u_0)(v-v_0)
+   =F(u)+G(v)-\lambda^2uv .
+ \label{eq:datum}
+\end{equation}
+Thus the field equations enforce separable rank at most three for the \emph{reciprocal} metric density. This is not an assumption about the rank of the measured density itself.
+
+\begin{lemma}[Reciprocal finite-rank rigidity]\label{lem:recip}
+If a positive continuous kernel $f$ on a product of connected intervals and its reciprocal $1/f$ both have finite ordinary separable rank, then $f(u,v)=p(u)q(v)$ with $p,q>0$.
+\end{lemma}
+\begin{proof}
+By the evaluation-basis argument in Lemma~\ref{lem:cells}, one can use continuous one-variable factors for each kernel. Let $A$ and $B$ be the finitely generated unital $\mathbb C$-algebras of continuous functions on the respective intervals generated by all these factors. Both are reduced as algebras of pointwise functions. Both have no nonconstant idempotents because the intervals are connected. Hence their spectra are connected, reduced schemes of finite type over $\mathbb C$, with $\mathbb C$-points given by interval evaluation. Over this algebraically closed base they are geometrically connected and geometrically reduced. Integrality is not required.
+
+The map from $A\otimes_{\mathbb C}B$ to functions on the product interval is injective: take a linearly independent list in the second factor and evaluate the first variable. Thus the two kernels are inverses already in $A\otimes B$. The units-on-products theorem of Rosenlicht in the reduced connected form established by Conrad \cite[Theorem~1.1]{Conrad} makes the unit a product of pullbacks from the two factors. Evaluation then gives the real positive decomposition
+\[
+ f(u,v)=\frac{f(u,v_0)f(u_0,v)}{f(u_0,v_0)} .
+\]
+\end{proof}
+
+\begin{theorem}[CGHS budget dichotomy]\label{th:cghs}
+On a regular connected null box of finite positive volume obeying \eqref{eq:cghs}, the exact budget is finite if and only if the geometry is locally the zero-mass linear-dilaton vacuum. The budget in that case is one. For any other such box, finite cell experiments achieve exact budget $n$ for every positive integer $n$.
+\end{theorem}
+\begin{proof}
+On a bounded regular box of finite measure, a finite budget gives finite separable rank of $\Phi^{-1}$ by Lemma~\ref{lem:cells}. Equation~\eqref{eq:datum} supplies the hypothesis on its reciprocal in Lemma~\ref{lem:recip}. Hence $\Phi=P(u)Q(v)$ and $P'Q'=-\lambda^2$. Both derivatives must be nonzero constants, making both factors affine; the two null sources vanish. After translations the metric and dilaton are those of the zero-mass linear-dilaton vacuum, for which the volume factorizes. The converse follows. Otherwise the kernel on the box has infinite rank. Lemma~\ref{lem:cells} and the row-conditioning construction after \eqref{eq:mixture} give exact finite-cell budgets of every size. The assertion is local and also applies on each regular box when an unbounded domain is considered.
+\end{proof}
+
+\subsection{A finite-cell mass-sign test in source-free regions}
+
+In a source-free region write $\Phi=-\lambda^2uv+a u+b v+c$. Shifting $U=u-b/\lambda^2$ and $V=v-a/\lambda^2$ gives
+\begin{equation}
+ \Phi=C-\lambda^2 UV,\qquad C=c+ab/\lambda^2 ,\qquad M=\lambda C
+ \label{eq:cghsvac}
+\end{equation}
+in the original mass convention. Orient both families of intervals increasingly. For $p=n(n-1)/2$ and $C\ne0$ the Cauchy determinant identity gives
+\begin{equation}
+ \det\!\left[(C-\lambda^2 U_i V_j)^{-1}\right]
+   =\frac{C^p\lambda^{2p}
+      \prod_{i<j}(U_j-U_i)(V_j-V_i)}
+     {\prod_{i,j}(C-\lambda^2 U_iV_j)} .
+ \label{eq:cauchy}
+\end{equation}
+For instance one can factor $C$ and apply the identity for $(1-x_i y_j)^{-1}$; vanishing coordinate values are covered by continuity when all denominators are positive. By determinant multilinearity in independently integrated rows and columns,
+\begin{equation}
+ \det W=2^{-n}\int_{\prod I_i}\int_{\prod J_j}
+       \det\!\left[(C-\lambda^2U_i V_j)^{-1}\right]
+       \dd^n V\,\dd^n U .
+\end{equation}
+The integrand's sign is fixed and nonzero on any ordered disjoint, positive-length intervals within the regular box. Thus \emph{every} such $n\times n$ grid in a nonzero-mass vacuum has rank and budget $n$. For $C=0$ the density is separated and all nonempty grids have rank one. The sign of any $2\times2$ minor distinguishes positive, negative, and zero $C$ in this vacuum family. It is invariant under increasing relabelings of each null axis (and interchange of axes by transposition).
+
+Volume data alone cannot give the magnitude of the CGHS mass. For $C\ne0$, simultaneous rescalings $U=\sqrt{|C|}\,U'$ and $V=\sqrt{|C|}\,V'$ remove $|C|$ from the local line element but not from $\Phi$. With curvature convention $R_g=(4/h)\partial_u\partial_v\log h$ for $h=\Phi^{-1}$, the equations give
+\begin{equation}
+ R_g=4\lambda^2+4\Phi_u\Phi_v/\Phi
+     =4\lambda^2 C/\Phi
+\end{equation}
+in a vacuum region. An independent dilaton value at one point therefore supplies $M=R_g\Phi/(4\lambda)$. The metric-sign test does not assume such a reading. As a dynamical example, the classical incoming shock of \cite[eq.~(13)]{CGHS} gives $\Phi=-\lambda^2uv-\alpha(u-u_s)_+$ for $\alpha,u_s>0$. Before the shock one is in the rank-one vacuum; downstream, shifting $V=v+\alpha/\lambda^2$ gives $C=\alpha u_s>0$. The rank jump refers to regular boxes wholly on each side of the shock, not to measurements at the singularity or to uniform noise sensitivity as the shock strength vanishes.
+
+\section{Static warped exteriors: a complete one-variable test}
+
+Let a static region have metric
+\begin{equation}
+ \dd s^2=-A(r)\dd t^2+B(r)\dd r^2+R(r)^2\dd\Sigma_m^2,
+ \qquad A,B,R>0 ,
+\end{equation}
+with a fixed positive finite-volume coordinate patch $\mathcal P$ of the $m$-dimensional angular factor. Set $\dd r_*/\dd r=\sqrt{B/A}$ and $u=t-r_*$, $v=t+r_*$. A tube consists of a null rectangle in the orbit space times $\mathcal P$ in the angular factor. Its \emph{full spacetime volume} is
+\begin{equation}
+ \mu(I\times J)=\frac{\vol_{\Sigma_m}(\mathcal P)}{2}
+       \int_{I\times J} W(v-u)\,\dd u\,\dd v,\qquad
+ W(s)=A(r(s/2))R(r(s/2))^m .
+ \label{eq:tube}
+\end{equation}
+This follows from the volume form $\sqrt{AB}\,R^m\dd t\,\dd r\,\dd\vol_{\Sigma_m}$ and the null Jacobian. It is not the volume of the causal diamond between two individual spacetime events with unspecified angular motion; the angular patch is fixed in the tube protocol. The radial two-dimensional version corresponds to omitting the factor $R^m$ and the angular measure.
+
+\begin{theorem}[Static classification]\label{th:static}
+Let $W$ be smooth and strictly positive on a neighborhood of the difference interval of a compact regular product rectangle $I\times J$ with nonempty interior. The exact budget of \eqref{eq:tube} is finite if and only if $W$ is an exponential polynomial on the interval of tested differences: a finite sum of $s^k e^{\zeta s}$, with conjugate terms combined to give a real function. Ordinary rank need not equal the minimal positive budget in this general statement.
+\end{theorem}
+\begin{proof}
+If the budget is finite, Lemma~\ref{lem:cells} shows that $E=\operatorname{span}\{u\mapsto W(v-u):v\in J^\circ\}$ is finite dimensional as a subspace of $C^\infty(I^\circ)$. For interior $v$, differentiation with respect to $v$ is a limit in the local smooth topology of difference quotients of elements of $E$. A finite-dimensional subspace of that Hausdorff topological vector space is closed; hence $\partial_u=-\partial_v$ on these slices maps $E$ into itself. The characteristic polynomial of this linear endomorphism annihilates every slice. Thus $W$ obeys the same constant-coefficient ordinary differential equation on the connected difference interval, and is an exponential polynomial. The boundary identity follows by continuity. This is the one-dimensional truncated-convolution classification; see \cite{AC} for the general operator theory.
+
+Conversely an exponential-polynomial $W$ has finite ordinary separable rank by binomial expansion of $(v-u)^k$. To obtain positive factors, let $E_1\subset C(J)$ be the finite-dimensional right-slice span, and let $S_1\subset E_1$ be the compact image of $I$ under the right-slice map. The constant minimum of the kernel on $I\times J$ is strictly positive. In a fixed coordinate basis of $E_1$, choose a grid of cubes fine enough that every vertex of any cube meeting $S_1$ is a strictly positive function on $J$. This is possible by uniform positivity and equivalence of norms in finite dimensions. Only finitely many such cubes are needed because $S_1$ is compact. Every slice is a convex combination of the positive vertices of its cube, with nonnegative coefficients measurable in $u$ (choose cubes in a fixed order on shared faces, and use their multilinear interpolation weights). This gives a finite sum $\sum_a f_a(u)g_a(v)$ with nonnegative factors. Normalizing the nonzero factors by their integrals yields \eqref{eq:mixture}. This proves sufficiency for compact regular boxes without equating ordinary and nonnegative rank.
+\end{proof}
+
+\begin{corollary}[Horizon-to-end obstruction]\label{co:exterior}
+Suppose $r_*$ ranges over $\mathbb R$, $W(s)\to0$ as $s\to-\infty$, and $W(s)$ grows at most polynomially as $s\to+\infty$. If $W$ is nonzero and real analytic on the connected exterior, then no open exterior null rectangle has finite budget. The same conclusion holds if $W$ tends to zero at both ends.
+\end{corollary}
+\begin{proof}
+A finite budget on an open rectangle would also hold on its compact subrectangles, and by Theorem~\ref{th:static} give an exponential polynomial on a nonempty open difference interval. Real analyticity makes it equal to that same entire function along the entire real tortoise interval. Write it as $\sum_j P_j(s)e^{\zeta_j s}$ with distinct exponents and nonzero polynomials. The polynomial bound at $+\infty$ excludes all terms with positive real exponents: divide by the maximal real exponential and the highest polynomial power at that exponent, leaving a nonzero trigonometric polynomial plus a term tending to zero. The trigonometric polynomial cannot tend to zero because its long-interval mean square is positive. Applying the argument at $-\infty$ excludes negative real exponents. The prescribed decay there also excludes all remaining purely imaginary exponents, with or without polynomial factors, by the same leading-degree comparison. This contradicts $W\ne0$.
+\end{proof}
+
+Analyticity is used to draw a local conclusion from the exterior end conditions. A smooth nonanalytic profile could coincide with an exponential polynomial on an interior interval and deviate outside it. Infinite budget does not characterize horizons: many horizonless profiles also fail the exponential-polynomial test.
+
+\section{Full-dimensional Schwarzschild tubes versus the flat control}
+
+In spacetime dimension $D=m+2\ge4$, the Schwarzschild--Tangherlini exterior has
+\begin{equation}
+ A=F=1-(r_h/r)^{m-1},\qquad B=F^{-1},\qquad R(r)=r
+ \label{eq:std}
+\end{equation}
+for $r>r_h>0$ \cite{Tangherlini}. Its analytic inverse tortoise map is regular on the exterior, $r\to r_h$ at the negative end, and $r/r_*\to1$ at the positive end. Thus the full-dimensional tube profile $W(s)=r(s/2)^m F(r(s/2))$ tends to zero at the horizon and grows polynomially at infinity. Corollary~\ref{co:exterior} makes the budget infinite on every open exterior null rectangle. In $D=4$, $r_*=r+r_h\log(r/r_h-1)$ up to a constant, and the measured four-volume form is explicitly
+\[
+ \dd\vol_g=\tfrac12 r^2 F\,\dd u\dd v\,\dd\Omega_2 .
+\]
+In particular the statement concerns the four-volume, not just the volume of the radial orbit metric. Arbitrarily large finite budgets are witnessed by appropriate ordered finite cells via Lemma~\ref{lem:cells}; unlike the CGHS mass test, this does not assert that every grid is nonsingular.
+
+For Minkowski space in the \emph{same} spherical tube protocol take $A=B=1$, $R=r=(v-u)/2$. The profile is $((v-u)/2)^m$, whose ordinary rank on any regular rectangle with interior is exactly $m+1$: the binomial expansion pairs independent polynomial powers on the two intervals. Choose $c$ between $\sup I$ and $\inf J$ on a box lying entirely in $r>0$. The expansion of
+\[
+ (v-u)^m=\big((v-c)+(c-u)\big)^m
+\]
+has $m+1$ nonnegative product terms and so realizes the lower bound. The exact flat budget is $m+1=D-1$ (three in four spacetime dimensions). For the radial two-dimensional flat measure alone it would instead be one. Keeping the same angular construction on both sides is essential to the comparison.
+
+\section{What the comparison establishes}
+
+The common-label cut rule makes an invariant volume query precise, while the conditional-independence postulate makes the corresponding resource question falsifiable by rank. The CGHS constraints then produce an exact impossibility of finite intermediate calibration budgets under a reciprocal relation supplied by the field equations. The static result instead classifies the regular tubes by their one-variable volume profile and separates flat spherical tubes from Schwarzschild without presupposing an estimate of the lapse. Neither result derives the field equations or the joint volume law from tensor axioms. Neither is a lower bound for general-purpose measurement or quantum encodings. The results are for exact noise-free calibration at arbitrary resolutions, and give no conditioning bound uniform in grid size.
+
+\begin{thebibliography}{9}
+\bibitem{OpenAI} OpenAI, \emph{Euclidean geometry in the asymptotic spectrum of tensors}, preprint, 24 November 2026. \href{https://github.com/openai/math/blob/main/preprints/Euclidean-geometry-in-the-asymptotic-spectrum-of-tensors-November-24-2026/paper.pdf}{Author manuscript}.
+\bibitem{CGHS} C.~G.~Callan, Jr., S.~B.~Giddings, J.~A.~Harvey, and A.~Strominger, Evanescent black holes, \emph{Phys. Rev. D} \textbf{45}, R1005--R1009 (1992). \href{https://arxiv.org/abs/hep-th/9111056}{arXiv:hep-th/9111056}.
+\bibitem{Conrad} B.~Conrad, \emph{Units on product varieties}, Theorem 1.1. \href{https://math.stanford.edu/~conrad/papers/unitthm.pdf}{Author manuscript}.
+\bibitem{AC} F.~Andersson and M.~Carlsson, On general domain truncated correlation and convolution operators with finite rank, \emph{Integral Equations Operator Theory} \textbf{82}, 339--370 (2015). \href{https://doi.org/10.1007/s00020-015-2217-6}{doi:10.1007/s00020-015-2217-6}.
+\bibitem{Tangherlini} F.~R.~Tangherlini, Schwarzschild field in $n$ dimensions and the dimensionality of space problem, \emph{Il Nuovo Cimento} \textbf{27}, 636--651 (1963). \href{https://doi.org/10.1007/BF02784569}{doi:10.1007/BF02784569}.
+\end{thebibliography}
+
+\end{document}
