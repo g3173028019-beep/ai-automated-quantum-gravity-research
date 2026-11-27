@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**79 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 53 typeset analytical articles**
+**82 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 56 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 79 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 82 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -26,6 +26,9 @@ These routes connect the 20 original packets with the later analytical manuscrip
 
 | Paper | Result | Files |
 |---|---|---|
+| [67 · Gravitational phase beyond occupation counts on a half-turn vacuum branch](papers/67-half-turn-taub-curvature-phase/README.md) | Exact compact vacuum CMC lifts realize two Taub constraints. In the corresponding quadratic constrained theory, phase partners with identical occupation and trace laws give different marked curvature responses. | [PDF](papers/67-half-turn-taub-curvature-phase/manuscript.pdf) · [TeX](papers/67-half-turn-taub-curvature-phase/main.tex) · [Verification](papers/67-half-turn-taub-curvature-phase/VERIFICATION.md) |
+| [68 · What a retained-mode observer can recover in quantum Einstein–Rosen dynamics](papers/68-einstein-rosen-spectral-memory/README.md) | A positive operator-valued spectral measure exactly characterizes retained histories. A finite-width Ramsey protocol recovers it; every normal preparation with population outside the discarded-sector vacuum requires unbounded exact cut memory. | [PDF](papers/68-einstein-rosen-spectral-memory/manuscript.pdf) · [TeX](papers/68-einstein-rosen-spectral-memory/main.tex) · [Verification](papers/68-einstein-rosen-spectral-memory/VERIFICATION.md) |
+| [69 · Controlled noncompact sewing and fixed-colour rank in Lorentzian EPRL](papers/69-lorentzian-eprl-noncompact-sewing/README.md) | A joint Galerkin, radial, and quadrature limit controls fixed-colour finite foams. The same external sector has ranks 16 versus at most 2 and 81 versus at most 3 across the specified move. | [PDF](papers/69-lorentzian-eprl-noncompact-sewing/manuscript.pdf) · [TeX](papers/69-lorentzian-eprl-noncompact-sewing/main.tex) · [Verification](papers/69-lorentzian-eprl-noncompact-sewing/VERIFICATION.md) |
 | [64 · A sourced mixed Einstein–scalar response on a compact Cauchy slab](papers/64-active-einstein-scalar-mixed-response/README.md) | A finite retarded graviton–scalar response is nonzero on a genuinely coupled four-dimensional background. The Hessians of the actual marked sources cancel the two collapsed-leg Ward terms. | [PDF](papers/64-active-einstein-scalar-mixed-response/manuscript.pdf) · [TeX](papers/64-active-einstein-scalar-mixed-response/main.tex) · [Verification](papers/64-active-einstein-scalar-mixed-response/VERIFICATION.md) |
 | [65 · A sourced BRST cut charge and a finite graviton transition on compact Milne](papers/65-sourced-brst-cut-graviton-transition/README.md) | The marked sourced and improved Noether cut charges agree at the stated perturbative order. The same unswitched construction yields a positive cut-independent selected two-graviton transition. | [PDF](papers/65-sourced-brst-cut-graviton-transition/manuscript.pdf) · [TeX](papers/65-sourced-brst-cut-graviton-transition/main.tex) · [Verification](papers/65-sourced-brst-cut-graviton-transition/VERIFICATION.md) |
 | [66 · Odd azimuthal graviton pairs in the resonant dynamics of global AdS₄](papers/66-ads4-odd-azimuthal-graviton-pairs/README.md) | The actual Dirichlet gravitational quartic coefficient forces an odd-azimuthal daughter pair at sharp energy grade and axial charge. The selected rare-event law and an exact finite-block lower bound quantify the effect. | [PDF](papers/66-ads4-odd-azimuthal-graviton-pairs/manuscript.pdf) · [TeX](papers/66-ads4-odd-azimuthal-graviton-pairs/main.tex) · [Verification](papers/66-ads4-odd-azimuthal-graviton-pairs/VERIFICATION.md) |
@@ -162,7 +165,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All 79 manuscripts, with results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 82 manuscripts, with results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |

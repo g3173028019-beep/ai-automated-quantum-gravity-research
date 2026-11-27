@@ -1,0 +1,74 @@
+\section{The positive constrained quadratic theory}\label{sec:quantum}
+
+\subsection{Two generators, one expanding shell}
+
+For a real unit TT mode with coordinate \(Q\) and conjugate ADM momentum \(\Pi=-p/\cG\), use the oscillator symbol
+\[
+ \alpha=\sqrt{\frac{\omega}{4\cG}}\,Q+
+                 i\sqrt{\frac{\cG}{\omega}}\,\Pi .
+\]
+On a signed pair \(C,S\) at \(k_z>0\), put
+\(z_\pm=(\alpha_C\pm i\alpha_S)/\sqrt2\).
+The corresponding axial weights are \(+k_z,-k_z\): \(ZC=-k_zS\), \(ZS=k_zC\) gives rate \(-ik_z z_+\) for the positive-weight axial flow. The time flow is \(z_i(t)=e^{-i\omega_it}z_i(0)\). Include all of the orbit types in Section~\ref{sec:classical}, with \(\omega_i=|k_i|\) and integer weights \(w_i\). If \(P=2Vb/\cG\) and \(a=\cG/(6V)>0\), the two canonical generators in \eqref{eq:omega} become
+\begin{equation}\label{eq:gens}
+     C=E-aP^2,\qquad E=\sum_i\omega_i|z_i|^2,\qquad
+     J=\sum_iw_i|z_i|^2 .
+\end{equation}
+Thus \(\dot q_0=-2aP\) and \(P<0\) selects expansion. Only a common axial translation is a gauge generator. Independently setting every orbital current to zero is not forced by the constraint.
+
+At fixed \(\hc>0\) use \(L^2(\dd q_0)\otimes\mathcal F\) for the chosen oscillator stock. The constraints commute: with \(\hat N_i\) the occupation numbers use
+\[
+ E(n)=\hc\sum_i\omega_i n_i,\quad
+ J(n)=\hc\sum_i w_i n_i,\quad
+ P_n=-\sqrt{E(n)/a}.
+\]
+This energy is normally ordered with the same reference subtraction for every stock. No additional vacuum cosmological charge is inserted. A symmetrically ordered \emph{observable} below will not change this constraint ordering. We exclude \(n=0\) from the expanding branch, where the root is not simple.
+
+Use finite nonvacuum oscillator support and compact smooth wave functions of \(P<0\). Integrate the axial angle with its normalized circle Haar measure; integrate the time constraint with \(\dd t/(2\pi\hc)\) with exponential \(e^{itC/\hc}\). The latter integral converges absolutely for these paired tests after integrations by parts in \(P\) on their compact support away from \(0\). The two constraints yield
+\begin{equation}\label{eq:rigging}
+ \langle f,g\rangle_{\rm ph}
+   =\sum_{\substack{w\cdot n=0\\ n\ne0}}
+         \frac{\overline{f_n(P_n)}g_n(P_n)}{2a|P_n|}.
+\end{equation}
+This is positive: one is evaluating the single regular root with its absolute Jacobian. Its null space is vanishing weighted shell evaluation, and arbitrary finite neutral arrays can be attained by smooth test functions. Thus the physical space after completion is \(\ell^2\) on the nonvacuum neutral occupation lattice, with orthonormal physical number states in the shell-half-density convention. In this space the trace \(b=\cG P/(2V)\) is fixed by each energy outcome but its law may be a nontrivial superposition; \(q_0=s\) is the canonical complete-observable section, not a physical self-adjoint operator conjugate to the discrete \(P\). Section evolution is \(U(s)=e^{iPs/\hc}\).
+
+We use operators that truly act on the constraint space. On the nonempty branch let \(\omega_{\min}>0\) be the lowest admitted frequency. For \(|c|<\hc\omega_{\min}/2\) the common off-shell variable \(c=E(n)-aP^2\) has simple negative-branch root for every nonempty \(n\). In that strip
+\[
+    (Wf)_n(c)=
+      \frac{ f_n(-\sqrt{(E(n)-c)/a})}
+                 {\sqrt{2a\sqrt{(E(n)-c)/a}}}
+\]
+is the shell half-density isometry. A bounded neutral shift \(S_v:n\mapsto n+v\), set to zero when the target or initial index is invalid or vacuum, lifts by \(W^{-1}(1\otimes S_v)W\) on the strip and by zero off it. It commutes with both constraints and induces the stated physical shift. This strip is for each fixed \(\hc\), not uniformly in a semiclassical limit. Fixed polynomial shifts act on the finite number core (with vacuum omitted), with the analogous lifted matrix elements. We use only bounded Hermitian quadratures for the final binary test.
+
+\subsection{Resonance and exact same-law preparations}
+
+For \(v\in\ZZ^m\) the shift is neutral if \(w\cdot v=0\). Otherwise the axial group projection kills all its physical matrix elements. With both signs admitted for each nonzero weight, any neutral \(v\) can act nontrivially by adding a sufficiently large strictly positive neutral base index to satisfy all occupation and nonvacuum bounds. Its exact trace-momentum gap is
+\begin{equation}\label{eq:gap}
+  P_{n+v}-P_n
+     =\frac{\hc\,\Delta(v)}{a(P_{n+v}+P_n)},\qquad
+    \Delta(v)=\omega\cdot v .
+\end{equation}
+A complete unread trace measurement projects onto full eigenspaces of \(P\). It erases every nonzero-energy shift and preserves every resonant shift. Equal-energy degeneracies are not separately measured. On the square torus write \(\omega_i=d_i\sqrt{s_i}\) with positive integer \(d_i\) and square-free \(s_i\). The square-free radicals appearing in a fixed integer combination (including \(1\)) are rationally linearly independent by the sign characters of their multiquadratic field. Thus resonance amounts to \(\sum_{i:s_i=S}d_i v_i=0\) for each \(S\), in addition to \(w\cdot v=0\). This is a separate issue from the charge lattice and from any limiting Gaussian law.
+
+Let \(z_i=\sqrt{I_i}e^{i\theta_i}\) be radiative amplitudes. Take a coherent vector in the weighted shell representation and project it onto the neutral nonvacuum lattice. In the orthonormal physical number basis its normalized coefficient is
+\begin{equation}\label{eq:coherent}
+ \psi_z(n)=
+ \frac{\one_{\{w\cdot n=0,\ n\ne0\}}\,
+       e^{-\sum_i I_i/(2\hc)}
+       \prod_i(z_i/\sqrt{\hc})^{n_i}/\sqrt{n_i!}}
+      {\sqrt{\PP(D)}},\qquad
+ D=\{w\cdot X=0,\ X\ne0\},
+\end{equation}
+where \(X_i\) are independent Poisson with means \(I_i/\hc\). This is attainable by weighted shell evaluation; it is not projection onto a sharp common \(P\). For a charged centered stock with a positive action in each direction the event \(D\) has positive probability (multiply complementary integer weights to obtain a neutral positive occupation). The entire joint law of the occupations and trace is
+\[
+            (N,P) \ \stackrel{\rm law}{=}\ (X,P_X)\mid D .
+\]
+It is exactly unchanged by changing the phases at fixed individual moduli in the specified analyzer basis. The phase partner comparison below uses this fact, not a rotation changing the resolved polarization populations. A rotated polarization analyzer may of course register different populations in the same states.
+
+For a neutral monomial \(M=(\sqrt{\hc}\,a^\dagger)^r(\sqrt{\hc}\,a)^s\) with shift \(v=r-s\), its action on \eqref{eq:coherent} has, on the valid occupation indices, the exact ratio
+\begin{equation}\label{eq:factorial}
+             \frac{(M\psi_z)_n}{\psi_z(n)}
+                 = z^{\,s-r}\prod_i\hc^{r_i}(n_i)_{r_i}.
+\end{equation}
+This follows by multiplying the factorial ladder factor with the incoming-to-outgoing coefficient ratio. Missing vacuum or invalid legs remain projected out. The analogous ratio for \(S_v\) is the corresponding square-root factorial ratio times \(e^{-iv\cdot\theta}\). The conditional estimates in Section~\ref{sec:limits} show, on positive compact actions in the tested support, an \(O(\sqrt{\hc})\) norm error between \(M\psi_z\) and \(\bar z^r z^s\psi_z\), or between \(S_v\psi_z\) and \(e^{-iv\cdot\theta}\psi_z\). In a bounded interval of section \(s\), the latter scalar acquires \(e^{-i\Delta(v)s/(2aP_*)}\), \(P_*=-\sqrt{(\omega\cdot I)/a}\), by \eqref{eq:gap}. These estimates are statements about finitely supported observables, not the convergence of all modes of a moving state at once.
+

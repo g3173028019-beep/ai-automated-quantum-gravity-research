@@ -1,0 +1,96 @@
+\section{A curvature phase measured at genuine volume cuts}\label{sec:detector}
+
+\subsection{Geometric mark and its leading symbol}
+
+The linear electric Weyl coefficient of a unit TT mode is \(\omega^2 Q/2\), and its normal derivative is \(-\omega^2p\), by the flat wave equation with \(\dot h=-2p\). With the reference Weyl tensor zero, these are invariant first jets. A pair of smooth finite-width time samples with independent sine and cosine moments, and the corresponding screw-invariant spatial profiles, recover the two canonical quadratures. Smoothly extending the marked probes over the nearby exact geometries changes only the next order of these scaled leading readings. This is the calibration of the selected TT momentum coefficients.
+
+For a nonlinear curvature reading, choose the spatial carriers
+\[
+    k_1=(1,0,1),\quad k_2=(4,0,2),\qquad
+    w=(1,-1,2,-2),\qquad \omega_1=\sqrt2,\quad\omega_2=\sqrt{20}.
+\]
+For \(k_m=(p_m,0,m)\) take the unit plus-polarization tensor
+\(e_m=(e_y\otimes e_y-u_m\otimes u_m)/\sqrt2\) with
+\(u_m=(m,0,-p_m)/\omega_m\). Each signed pair also has a complementary orthogonal tensor analyzer. Let \(c_m\) be the complex spatial Fourier coefficient of the first-jet TT momentum in the selected analyzer at \(k_m\). The exact Hamiltonian constraint on the constructed CMC family is
+\(R(g_\epsilon)=|K_\epsilon-\tau_\epsilon g_\epsilon/3|^2-2\tau_\epsilon^2/3\), so
+\[
+             R(g_\epsilon)
+                  =\epsilon^2(p:p-2b^2/3)+O(\epsilon^3).
+\]
+For \(K_{\mathrm b}=(5,0,3)\) only \(k_1+k_2\) contributes to this coefficient on the selected stock, with its two orders: \(K_{{\rm b},z}=3\) forces \(1+2\), and \(K_{{\rm b},x}=5\) forces \(+1+4\). The polarization contraction is
+\[
+       D=e_1:e_2=\tfrac12(1+(u_1\cdot u_2)^2)=19/20.
+\]
+Hence the \(K_{\mathrm b}\) curvature coefficient at order \(\epsilon^2\) is \(2D c_1c_2\). The constant trace does not contribute at that harmonic.
+
+We specify its marking on the exact geometry. On the torus cover choose harmonic circle representatives \(x_g,y_g,z_g\) of the marked \(\dd x,\dd y,\dd z\) classes by solving scalar elliptic equations with mean-zero potentials before adjusting additive constants. Their differentials remain a coframe near the reference. Orthonormalizing it by the positive inverse square root of its \(g^{-1}\)-Gram matrix gives a smooth marked frame with the same deck sign matrix \(R\); use it for the tensor analyzers. The cover metric is deck invariant. Harmonic uniqueness gives
+\[
+        x_g\circ\sigma=-x_g \pmod {2\pi},\quad
+        z_g\circ\sigma=z_g+\pi \pmod {2\pi},
+\]
+after choosing the first constant; its remaining freedom is a shift by \(\pi\), while \(z_g\) has a free common axial constant. The \(\pi\) in the second equation is fixed by continuity and \(\sigma^2=1\). A deck-invariant test for the scalar curvature harmonic is
+\[
+ \tfrac12\!\left(e^{-i(5x_g+3z_g)}-e^{-i(-5x_g+3z_g)}\right);
+\]
+on the reference it reads the claimed Fourier coefficient because the paired curvature coefficients have opposite sign. Use the same harmonic marking for the Weyl momentum calibrations. The product of the curvature coefficient and \(\bar c_1^{\,3}\) is invariant under the residual \(x_g\mapsto x_g+\pi\) (both factors change sign) and under any common axial shift (the characters \(-3\) and \(+3\) cancel). Orientation and which homology classes are read are physical marking choices, not data to infer from an unmarked quotient. The correct leading geometric statistic is therefore
+\begin{equation}\label{eq:F}
+         F=2D c_1c_2\bar c_1^{\,3}.
+\end{equation}
+It is the \(\epsilon^{-5}\)-normalized leading part of the finite geometric statistic, since its curvature factor is quadratic and its three other factors have zero reference value and begin linearly. The mark, coframe and measure changes enter at \(O(\epsilon)\) in this scaled quantity. At fixed scaled volume the same error follows from the actual CMC time comparison \eqref{eq:geomvol}. The phase partners need not have exactly identical higher-order classical trace at finite \(\epsilon\); equality of their entire trace/count law refers to the retained quantum model.
+
+\subsection{An exact unequal-weight, nonzero-gap line}
+
+Write \(z_\pm\) for the first pair and \(y_\pm\) for the second. In the oscillator convention of Section~\ref{sec:quantum},
+\[
+    c_1=i d_1(z_- -\bar z_+),\quad
+    c_2=i d_2(y_--\bar y_+),\qquad
+    d_m=\frac{\sqrt{\cG\omega_m}}{2\sqrt{2V}}.
+\]
+For example \(p_C-ip_S=i\sqrt{\cG\omega_m}(z_--\bar z_+)/\sqrt2\); the Fourier coefficient of the unit real deck pair divides by \(2\sqrt V\). Along the quadratic Taub-time flow \(z_\pm\) have frequency \(-\omega_1\) and \(y_\pm\) frequency \(-\omega_2\). Since the two frequencies are incommensurate, the frequency
+\(\nu=\omega_2-2\omega_1\) part of \(F\) comes only from the \(+\omega_2\) factor of \(c_2\) and the \(-2\omega_1\) part of \(c_1\bar c_1^3\). Expanding gives
+\begin{equation}\label{eq:Fnu}
+     F_\nu=2iD d_1^4d_2\bigl(3|z_-|^2+|z_+|^2\bigr)
+                                   z_+^2\bar y_+ .
+\end{equation}
+It is neutral under the common axial group: \(z_+^2\bar y_+\) changes the two band weights by opposite amounts. It is not invariant under two independent band translations. Its phase changes when both second-orbit amplitudes are multiplied by \(-1\), while every modulus stays fixed. For an actual current-carrying regular stock take \(I=(3,1,1,2) I_0\), \(I_0>0\). The two band currents have opposite nonzero values, and \(\|Zh\|>0\) for suitable phases. The exact CMC lifts apply to both partners.
+
+Quantize the leading polynomial by symmetric ordering of the calibrated linear quadratures, then represent its neutral shifts on the expanding shell. With the sign convention above let \(v=(2,0,-1,0)\), order occupations as \(1+,1-,2+,2-\), and write
+\(L^\dagger=\hc^{3/2} a_{1+}^2 a_{2+}^\dagger\), a shift by \(-v\). On the finite shell number core the exact \(+\nu\) component is
+\begin{equation}\label{eq:operator}
+   \widehat F_\nu
+     =2iD d_1^4 d_2\,L^\dagger\,\hc(3N_{1-}+N_{1+}+1).
+\end{equation}
+Indeed the same-mode Weyl ordering gives
+\(\mathrm{Weyl}(\bar z z^3)=\hc^2(a^\dagger a^3+\tfrac32 a^2)
+=\hc^2 a^2(N-\tfrac12)\); the independent minus-mode intensity contributes \(3\hc(N_{1-}+\tfrac12)\). This observable ordering never changes the normally ordered constraint energy. The matrix element from \(n=(5,1,0,2)\) to \(n-v=(3,1,1,2)\) in \eqref{eq:operator} is nonzero: the intensity factor is \(9\hc\) and the ladder factor is \(\hc^{3/2}\sqrt{20}\); both states have exact zero total momentum and unit physical norm. This is a genuine trace transition since \(\nu\ne0\).
+
+More precisely \eqref{eq:operator} is the line \emph{compressed} to the selected analyzer stock. If the complementary polarizations are simultaneously included, the curvature harmonic contains other polarization entries. Each mixed term with an unobserved polarization has a spectator in one or both distinct orbits and vanishes between the exact occupation-zero spectator states after compression. The extra \(\bar c_1^3\) factors are in the selected analyzer, so there is no unobserved commutator contraction. The occupation-zero projector, calibrated by the orthogonal Weyl quadratures, commutes with \(E,J,P\) and is common to the compared preparations. We do not assert exact preservation of a one-polarization sector by the full curvature operator or the Einstein evolution.
+
+On the core a smooth compact temporal spectroscopy weight can isolate the line exactly for the algebraic transport \(e^{itE/\hc}\): the polynomial has only finitely many energy differences and one can interpolate its Fourier values by differentiating a compact bump with transform nonzero at those finitely many points. This constructs the line with \(E=aP^2\), not an identification of that time with the physical volume label. The polar part of \eqref{eq:operator} is \(T=iS_{-v}\) on the compressed sector; it is bounded. For the volume gate one uses instead the physical \(U(s)\) of Section~\ref{sec:quantum}, calibrated by \eqref{eq:geomvol}.
+
+\subsection{Finite aperture, phase partners and trace resolution}
+
+Let \(g(s)\) be a nonnegative smooth compact volume gate of integral one. For a fixed calibrated phase \(\vartheta\), define
+\begin{equation}\label{eq:povm}
+ A_g=\int g(s)U(s)^\dagger T U(s)\,\dd s,\qquad
+ E_\pm=\tfrac12\!\left(1\pm\Re(e^{-i\vartheta}A_g)\right).
+\end{equation}
+The strong integral has norm at most one, so \(E_\pm\) are a positive normalized binary measurement. For the pure projected coherent state \eqref{eq:coherent}, the moment converges to
+\[
+   \langle A_g\rangle
+   =\zeta\int g(s)e^{-i\nu s/(2aP_*)}\,\dd s+O(\sqrt{\hc}),
+             \qquad |\zeta|=1 ,
+\]
+by \eqref{eq:gap}, the phase norm estimate and \(\Delta(-v)=\nu\). Choose an even gate about \(s_0\), supported within half-width \(d>0\) inside the common calibrated CMC range, with \(|\nu|d/(2a|P_*|)\leq\pi/4\). Its Fourier magnitude is at least \(1/\sqrt2\) by the real cosine bound. Align \(\vartheta\) with the first state; the specified second-orbit sign flip reverses its bias exactly, without changing any occupation or trace probability. Their binary total-variation distance is at least \(1/\sqrt2-O(\sqrt{\hc})\). The leading geometric calibration error on actual nearby volume cuts is \(O(\epsilon)\) separately from this quantum error.
+
+Let \(Q_{\rm sep}\) project to zero directed current in each band. Then \(Q_{\rm sep}A_gQ_{\rm sep}=0\) exactly, since \(T\) changes each band current and \(U(s)\) commutes with them. An independent per-band phase dephasing has the same zero first moment. This is not a gauge fixing for the single global axial generator. One can use the centered stock \(I=(I_1,I_1,I_2,I_2)\) for the contrast with false separately projected preparations: their leading actions and trace can then agree, but their full joint diagonal law need not agree. They still give unbiased outcomes, and the distance from the true state is at least \(1/(2\sqrt2)-O(\sqrt{\hc})\). Exact equality of the joint law was claimed only for the two true phase partners, not for these false preparations.
+
+A finite trace-momentum resolution also has a closed formula. For standard deviation \(\sigma>0\), take the nonselective Gaussian spectral instrument
+\[
+        M_y=(2\pi\sigma^2)^{-1/4}
+                        \exp[-(y-P)^2/(4\sigma^2)] .
+\]
+It is normalized by \(\int M_y^\dagger M_y\,\dd y=1\), preserves the constraints and all diagonal occupation/trace laws, and multiplies the \(n\to n+u\) shift by
+\(\exp[-(P_{n+u}-P_n)^2/(8\sigma^2)]\) by one Gaussian integral. If \(\sigma/\hc\to s_\sigma\in(0,\infty)\), the coherent observable limit for this shift is attenuated by
+\(\exp[-\Delta(u)^2/(32 a^2 P_*^2 s_\sigma^2)]\). This follows from \eqref{eq:gap} and concentration; for \(\Delta(u)\ne0\) the sharp-resolution ratio limit zero kills the signal, and the large-ratio limit restores it. A resonant shift is left unchanged at every precision. This distinguishes an unread finite-resolution detector from complete trace dephasing. A resonant choice of mode \(k_2=(0,2,2)\) with \(\omega_2=2\omega_1\) permits the corresponding neutral \emph{Weyl-product} comparator; it is not the same nonlinear curvature harmonic as the nonresonant example \eqref{eq:F}. At the resolution \(\sigma=O(\hc)\), comparison using only the leading geometric calibration requires its independent \(O(\epsilon)\) error to be smaller; no detector for the unquantized higher-order geometry is being inferred. All these effects diagnose phase, not an Einstein interaction carrying occupation between bands. This proves Theorem~\ref{thm:phase}.
+

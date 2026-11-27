@@ -1,0 +1,61 @@
+\section{Countable completion and a controlled simultaneous limit}\label{sec:limits}
+
+\subsection{Fixed-\texorpdfstring{\(\hc\)}{hbar} completion and resonance}
+
+Take the full countable radiative TT oscillator space of the specified half-turn modes, still in the retained homogeneous scale/trace sector. A Fock number index is a finite-support sequence \(n\). Formula~\eqref{eq:rigging} applies to finite linear combinations of such indices with compact smooth negative-\(P\) amplitudes. The embeddings of the finite physical number arrays by extension with zero tail occupation are exact isometries: the normal-order subtraction is common and the root and Jacobian of each retained \(n\) are unchanged. The dense union completes to \(\ell^2\) of the nonempty neutral indices. Its cylinder projections converge strongly to the identity, and the same is true for compressions of fixed bounded diagonal observables, including resolvents and spectral projections of \(E,P\). On natural diagonal cores this also gives graph convergence. There is no bounded evaluation on arbitrary auxiliary \(L^2(\dd P)\).
+
+A fixed finite-support neutral shift and its adjoint agree on the supported number core once its carriers are retained; their finite compressions converge strongly by uniform boundedness. The common spectral-coordinate lift uses the gap \(\hc\omega_{\min}\) at fixed \(\hc\), not an \(\hc\)-uniform strip. The exact criterion \eqref{eq:gap}, including exact resonance under trace dephasing, is unchanged by newly admitted degeneracies. A fixed neutral polynomial has the corresponding graph statement on the finite number core, or one may use its bounded truncations. Neither a high-degree self-adjointness theorem nor a nonlinear gravity operator follows.
+
+For a square-summable coherent sequence \(z\), the independent Poisson occupations have finite total particle number almost surely at fixed \(\hc\). If the chosen support has a neutral nonempty occupation with positive probability, \eqref{eq:coherent} defines a physical state and retains exactly the full conditional joint occupation and trace law. Coherent vectors under tail truncation converge in norm at fixed \(\hc\); the same holds after application of the single neutral nonvacuum projection and normalization. More exactly the embedded truncated physical vector is the full one projected onto zero tail occupation and renormalized, since the removed tail vacuum multiplier is constant. Thus its squared overlap with the full state is
+\begin{equation}\label{eq:overlap}
+ \PP(X_{\rm tail}=0\mid D).
+\end{equation}
+The resulting pure density matrices and their trace-dephased matrices converge in trace norm (the unread projective instrument is contractive), so every bounded physical test converges at fixed \(\hc\). The joint diagonal law converges in total variation as well. This is not in general a simultaneous state-vector bound: the physical occupation cost of the missing tail can be large when \(\sum_{\rm tail} I_i/\hc\) is large, even if the action tail itself is small.
+
+\subsection{A uniform conditioned fluctuation and phase theorem}
+
+Consider nested finite stocks \(S_N\) containing a fixed charged core with both signed directions and with all its actions bounded uniformly away from zero. Let its positive weight gcd \(g_0\) be the gcd of every occupied weight in the entire considered sequence. Set \(\ell_i=w_i/g_0\). Impose the \emph{centering} condition \(\sum_{i\in S_N}\ell_i I_i=0\) at each retained cutoff, and suppose
+\[
+       \sum_i I_i e^{\beta\omega_i}\leq M
+       \quad\hbox{for some }\beta>0 .
+\]
+Positive actions on the finite support of each tested shift are bounded below. The regular geometric stock also stays a fixed distance from \(|P_*|=0\) and \(\|Zh\|=0\). Such genuine infinite stocks exist: the four-mode example of Section~\ref{sec:detector} supplies a centered primitive core, and balanced complete distant pairs can be added with exponentially decaying actions. No per-band projection is applied to the quantum state. If all weights are zero, the same proof reduces to the product Poisson limit with no arithmetic projection; here we give details for the charged case.
+
+Write \(\lambda_N=\sum_{S_N}\ell_i X_i\) and \(A_N=\sum_{S_N}I_i\ell_i^2\). Fourier inversion has exponent \(\sum I_i(e^{i\theta\ell_i}-1)/\hc\). Near \(\theta=0\) the finite primitive core alone bounds the characteristic function by \(e^{-c\theta^2/\hc}\); outside a small neighborhood it gives \(e^{-c'/\hc}\) on the reduced angle circle. Primitive gcd is what excludes other equal-modulus peaks in this reduced circle. Therefore
+\[
+     \sup_{m\in\ZZ}\PP(\lambda_N=m)\leq C\sqrt{\hc}
+\]
+uniformly. For any fixed integer \(m\), put \(\theta=\sqrt{\hc}y\). Centering cancels the linear term; on \(|y|\leq\hc^{-1/12}\) the exponent is \(-A_Ny^2/2\) plus an odd imaginary term of order \(\sqrt{\hc}\), including the fixed \(m\)-factor, and an \(O(\hc)\) Gaussian-integrable remainder after expanding the exponential. The absolute cubic and quartic moments are bounded by the action hypothesis and \(|\ell_i|\leq\omega_i/g_0\). The rest of the integral is negligible by the core modulus. Consequently
+\begin{equation}\label{eq:localclt}
+    \PP(\lambda_N=m)
+        =\frac{\sqrt{\hc}}{\sqrt{2\pi A_N}}\bigl(1+O(\hc)\bigr),
+\end{equation}
+with \(A_N\) bounded above and away from zero, uniformly for fixed \(m\) in any finite set. For the undivided weights only \(m g_0\) is possible. The excluded no-occupation atom at \(\lambda_N=0\) is exponentially small by the occupied core, so the same estimate holds for the normalizer \(\PP(D)\).
+
+For real linear tests \(f_i^r\) bounded by \(C(1+\omega_i)\), put
+\(Y_r=\sqrt{\hc}\sum_{S_N}f_i^r(X_i-I_i/\hc)\).
+Insert the moment-generating weight \(e^{u\cdot Y}\) in the same inversion. After rescaling \(\theta\), the joint exponent on bounded \(y,u\) tends uniformly to
+\[
+       \frac12\sum_{S_N} I_i \bigl(u\cdot f_i+i y\ell_i\bigr)^2 ,
+\]
+in the sense that its difference from this possibly \(N\)-dependent expression tends to zero. The uniform integrable bound also holds for complex \(u\) in a fixed neighborhood. To see this, its real tilt replaces \(I_i\) by \(I_i e^{\sqrt{\hc}\Re(u\cdot f_i)}\). The centered prefactor is bounded by the second Taylor remainder and the exponential action hypothesis. In the cosines of the finite core the imaginary shifts are \(O(\sqrt{\hc})\); on the small scaled neighborhood use \((x+y)^2\geq x^2/2-y^2\), and away the primitive damping remains exponential. The tails of the tilted moment integrals are bounded by this same core estimate. Divide by \eqref{eq:localclt}, omit the exponentially small empty-occupation term and integrate the limiting Gaussian in \(y\). This proves conditional Gaussian moment convergence, uniformly under these estimates, with covariance on the finite list
+\begin{equation}\label{eq:cov}
+ \Sigma_N(r,s)=\sum_{S_N} I_i f_i^r f_i^s
+        -\frac{\bigl(\sum_{S_N} I_i\ell_i f_i^r\bigr)
+                \bigl(\sum_{S_N} I_i\ell_i f_i^s\bigr)}{A_N}.
+\end{equation}
+Local uniform convergence of the analytic moment functions yields all fixed moments. The covariances converge as stocks increase by the weighted action bound. This is a finite-list result, not an infinite-dimensional central limit theorem. Center at the cutoff's actions for this statement; centering at an infinite-stock value on the same \(\sqrt{\hc}\) scale may require the relevant weighted tail to be \(o(\sqrt{\hc})\). Arbitrary unbalanced cutoffs or a disappearing primitive core do not obey this estimate.
+
+For energy take \(f=\omega\). The trace row of the fluctuation is the energy row multiplied by \(1/(2aP_{*,N})\), where \(P_{*,N}=-\sqrt{(\sum_{S_N}\omega_i I_i)/a}\). This follows by Taylor expansion on a fixed interior neighborhood of the central energy. The complementary probability is exponentially small times \(O(\hc^{-1/2})\), using a Poisson Chernoff bound and \eqref{eq:localclt}. To check the four-mode example, take \(I=(3,1,1,2)I_0\), \(d=(1,-1,0,0)\), and \(D_I=\operatorname{diag}(I)\). The action covariance is \(\Sigma=D_I-D_I ww^{\mathsf T}D_I/(w^{\mathsf T}D_Iw)\). It gives
+\[
+      d^{\mathsf T}\Sigma d=3I_0,\qquad
+      \omega^{\mathsf T}\Sigma d=(3\omega_1+\omega_2)I_0/2.
+\]
+The trace--band-current covariance is nonzero after the indicated trace factor, despite exact vanishing of total current.
+
+For the phase observables, \eqref{eq:factorial} on its fixed supports expands in the scaled occupations \(\hc n_i\) near their positive central values. Uniform conditional second and higher moments just proved give the \(O(\sqrt{\hc})\) norm estimate. The same argument with the square-root factorial ratios applies to the unit partial shifts and their adjoints. On the complementary set use reindexing (for a bounded shift) or finite polynomial growth and the exponentially small conditional tails; missing vacuum or invalid legs are negligible by the fixed core. Formula~\eqref{eq:gap} gives the same estimate for the bounded section interval and for the finite measurement gates of Section~\ref{sec:detector}. It also yields the scaled finite trace-resolution factors via bounded convergence. All these statements apply along \(N(\hc)\to\infty\) with the stated centered regular stocks. They require neither a uniform spectral spacing of the mixed energies nor full-vector convergence in that joint limit.
+
+One useful sufficient condition for joint vector convergence under a tail removal is the stronger \(\sum_{\rm tail}I_i=o(\hc)\). For the charge \(\lambda\) of the stock actually being conditioned (finite or full), Poisson shifting gives \(\EE[\hc X_i\mid D]=I_i\PP(\lambda=-\ell_i)/\PP(D)\). The same local bound and expansion \eqref{eq:localclt} apply to the full stock by summability and the unchanged finite core. They bound the missing-tail occupation probability in \eqref{eq:overlap} by \(C\sum_{\rm tail} I_i/\hc\). In that formula the shifted numerator correctly includes the original empty configuration when \(\ell_i=0\). No such bound vanishes for a general slowly removed tail, so the finite-observable theorem was kept separate.
+
+Finally the exponential action condition gives bounds on the corresponding classical TT data at each fixed Sobolev order: both the position and momentum coefficients have only polynomial frequency factors relative to \(\sqrt{I_i}\). The fixed-complement elliptic and divided Schur estimates in Section~\ref{sec:classical} are uniform on the core plus small such tails, away from the two regularity boundaries, and give the exact classical lifts. The explicit nonlinear \(K_{\mathrm b}\) harmonic is the clean four-mode witness; added arbitrary modes can contaminate that local harmonic. The phase can always be defined on the chosen fixed Weyl-quadrature support of the full quadratic tower, and the classical geometric contrast for the original nonlinear mark persists for sufficiently small smooth tails by continuity, not by an exact general single-line selection rule. These distinctions prove Theorem~\ref{thm:countable}. None of the three theorems constructs an all-order quantization of the exact vacuum constraints.
+

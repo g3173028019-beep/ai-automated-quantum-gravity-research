@@ -176,3 +176,11 @@ The associated proof and scope checks are recorded in the paper verification pag
 - [Paper 64 verification](papers/64-active-einstein-scalar-mixed-response/VERIFICATION.md)
 - [Paper 65 verification](papers/65-sourced-brst-cut-graviton-transition/VERIFICATION.md)
 - [Paper 66 verification](papers/66-ads4-odd-azimuthal-graviton-pairs/VERIFICATION.md)
+
+## Constraint phases, spectral memory, and noncompact foams (67–69)
+
+The associated proof and scope checks are recorded in the paper verification pages.
+
+- [Paper 67 verification](papers/67-half-turn-taub-curvature-phase/VERIFICATION.md)
+- [Paper 68 verification](papers/68-einstein-rosen-spectral-memory/VERIFICATION.md)
+- [Paper 69 verification](papers/69-lorentzian-eprl-noncompact-sewing/VERIFICATION.md)

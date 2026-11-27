@@ -222,3 +222,11 @@ Run ./build.sh in each selected paper directory with pdfLaTeX.
 - [64 · A sourced mixed Einstein–scalar response on a compact Cauchy slab](../papers/64-active-einstein-scalar-mixed-response/README.md)
 - [65 · A sourced BRST cut charge and a finite graviton transition on compact Milne](../papers/65-sourced-brst-cut-graviton-transition/README.md)
 - [66 · Odd azimuthal graviton pairs in the resonant dynamics of global AdS₄](../papers/66-ads4-odd-azimuthal-graviton-pairs/README.md)
+
+## Building Papers 67–69
+
+Run ./build.sh in each selected paper directory with pdfLaTeX.
+
+- [67 · Gravitational phase beyond occupation counts on a half-turn vacuum branch](../papers/67-half-turn-taub-curvature-phase/README.md)
+- [68 · What a retained-mode observer can recover in quantum Einstein–Rosen dynamics](../papers/68-einstein-rosen-spectral-memory/README.md)
+- [69 · Controlled noncompact sewing and fixed-colour rank in Lorentzian EPRL](../papers/69-lorentzian-eprl-noncompact-sewing/README.md)

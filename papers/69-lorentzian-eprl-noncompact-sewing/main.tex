@@ -1,0 +1,296 @@
+\documentclass[11pt]{article}
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.04in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\hypersetup{pdftitle={Controlled noncompact sewing and a fixed-colour rank obstruction in Lorentzian EPRL},pdfauthor={},pdfsubject={Fixed-colour Lorentzian spin-foam kernels}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Inv}{\operatorname{Inv}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\bH}{\mathcal H}
+\title{Controlled noncompact sewing and a fixed-colour rank obstruction in Lorentzian EPRL}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give a finite-channel construction for fixed-colour Lorentzian EPRL foam kernels with spacelike tetrahedra. Compact spin-network sewing is exact with the normalized boundary pairing on regular interface cuts. A joint logarithmic radial cutoff and boost Galerkin truncation converges in operator norm, uniformly with an explicit loss in a growing colour window. In contrast, removing the radial cutoff first makes a positive four-leg benchmark diverge for every finite Hermitian boost approximation. We then compare the two sides of a four-to-two move at the same exterior colour, resolving the four-side interior faces to spin zero. The full noncompact four-side flattening has rank 16 at exterior spin \(1/2\) and 81 at spin 1, while the two-side ranks are at most 2 and 3, respectively. The proof uses an exact reflected Gram kernel; spin zero on its Lorentzian internal links is a spherical principal-series channel, not the trivial Lorentz representation. These are finite fixed-colour results, not statements about convergence or invariance of the unrestricted interior spin sum.
+\end{abstract}
+
+\section{Model and questions}
+
+In Lorentzian EPRL the boundary spins carry compact \(\mathrm{SU}(2)\) representations, but the simplicial vertex averages products of compressed \(\mathrm{SL}(2,\CC)\) transfers over a noncompact group \cite{EPRL,EP,Barrett}. Compact boundary contractions and noncompact gauge integrals therefore have different convergence requirements. A finite intertwiner space does not give a finite description of Lorentzian boost propagation, and projecting onto finitely many unitary boost channels before removing the noncompact cutoff can even destroy integrability. This is distinct from truncating virtual spins in boosters that have already been integrated \cite{Speziale}.
+
+We first quantify that distinction for finite foams. Our starting absolute-integrability input is Kami\'nski's theorem for three-edge-connected Lorentzian vertex graphs \cite{Kaminski}; we use its slack to control the radial error and combine it with a uniform Galerkin estimate and finite quadrature. We then ask a separate question: after taking those regulator limits, does a four-to-two retriangulation preserve the boundary kernel in the lowest resolved interior sector? In the model below, even fixing \emph{every} exterior spin to the same value fails to give equality up to a scalar, or even up to invertible basis changes on the two halves of the boundary. The test is an exact finite-spin rank, not a saddle or a spin-cutoff support comparison.
+
+This setting differs from Pachner calculations for Riemannian holomorphic spin foams \cite{Banburski}, as well as from Lorentzian one-loop Regge calculus \cite{Borissova}. The earlier compact Euclidean EPRL rank comparison \cite{Euclidean} tests a one-dimensional seam with corrected compact edge operators and a different face measure. It does not supply the noncompact convergence or reflected principal-series Gram argument below. We use ordinary EPRL vertices, not a proper-vertex or orientation-sector projector \cite{Proper}. No nondegenerate classical simplex geometry is required of the colour data.
+
+\paragraph{Conventions.}
+Let \(G=\mathrm{SL}(2,\CC)\), \(K=\mathrm{SU}(2)\), and \(o\in G/K=\HH^3\). The geodesic radius \(r(g)=d(o,go)\) is the Cartan rapidity: \(g=u a_r v\) with \(u,v\in K\) and \(a_r=\mathrm{diag}(e^{r/2},e^{-r/2})\). Use compact Haar of mass one and one fixed normalization of hyperbolic measure throughout. In particular radial Haar is \(c_H\sinh^2r\,\dd r\) for a fixed positive \(c_H\). For half-integer \(j\ge0\) put \(d_j=2j+1\). At real \(\gamma\) we use the unitary principal series \(U_j=U_{(\rho_j,j)}\) with \(\rho_j=\gamma j\), the isometry \(Y_j:V_j\to\bH_{(\rho_j,j)}\) onto its lowest compact type, and
+\begin{equation}\label{eq:T}
+T_j(g)=Y_j^* U_j(g)Y_j,\qquad
+T_j(g^{-1})=T_j(g)^*.
+\end{equation}
+Conjugate leg representations implement reversed orientations. In particular \(T_0(g)=\Xi(r(g))\) where
+\begin{equation}\label{eq:Xi}
+\Xi(r)=\frac{r}{\sinh r},\qquad \Xi(0)=1.
+\end{equation}
+We keep the underlying graph when a colour is zero. Its compact leg is one-dimensional, but \(U_{(0,0)}\) is the spherical principal series, not the trivial representation of \(G\).
+
+\section{Normalized fixed-colour foams and cutting}\label{sec:sewing}
+
+At a local vertex \(v\), use a finite connected loopless boundary graph \(\Gamma_v\) with \(q_v\) nodes and \(m_v\) links. Each node carries the compact invariant space of its incident legs, with duals as specified by orientation. Given one group variable \(g_a\) at each node, a link \(a b\) contributes \(T_j(g_a^{-1}g_b)\) as a tensor with two leg slots. The product of these link tensors is projected to the product of node invariant spaces. Call the resulting tensor \(F_v\). In the vertex integration \(A_v=\int F_v\), omit exactly one group variable, set to \(1\). The remaining variables have independent copies of the fixed Haar measure. Changing the omitted node in the absolutely convergent integral is a unimodular change of relative variables. There is no further noncompact gauge integral at an interface.
+
+For a finite fixed-colour foam, form the kernel by contracting all internal tetrahedral or cellular edge slots with the identity in their compact intertwiner spaces. A fixed bounded internal edge insertion \(E_e\) is also allowed when stated, counted once. There are no internal edges that pair two slots of one vertex in the estimates below. External spaces are normalized spin-network Hilbert blocks, with incoming spaces dualized. Use one scalar face measure \(d_j\) per closed face; more generally the weight for a face with \(b\) external boundary link occurrences is
+\begin{equation}\label{eq:w}
+w_j(b)=d_j^{1-b/2}.
+\end{equation}
+This is the convention induced by the one-face trace with its single Peter--Weyl dimension factor \cite{BRR}. Each external leg converts an ordinary matrix entry to the orthonormal entry \(\sqrt{d_j}\,D^j_{mn}\), giving a factor \(1/\sqrt{d_j}\) in the corresponding coefficient. In detail,
+\begin{equation}\label{eq:pw}
+\int_K \overline{D^j_{mn}(h)}D^{j'}_{m'n'}(h)\,\dd h
+=\frac{1}{d_j}\,\delta_{jj'}\delta_{mm'}\delta_{nn'}.
+\end{equation}
+Contracting these normalized link entries with orthonormal invariants at the nodes therefore gives an orthonormal spin-network basis of the fixed-colour gauge-invariant subspace of \(L^2(K^{\mathrm{links}})\). The identity resolution on that space carries no additional factor of \(d_j\). Using unnormalized entries instead gives an inverse Gram factor \(\prod_l d_{j_l}\) in the corresponding resolution; it does not change the normalized kernel.
+
+\begin{proposition}[Exact sewing at a regular cut]\label{pr:sew}
+Consider a complete interface with matched links, spins and node valences, and opposite boundary orientations. At the interface each identified link joins two distinct face pieces; for every final merged face, the adjacency graph on its pieces induced by the identified links must be a tree. Then the glued fixed-colour linear kernel equals the operator composition of the two kernels, using the normalized compact boundary pairing. The same identity holds if every vertex retains the same specified local regulator before and after sewing.
+\end{proposition}
+\begin{proof}
+Joining two pieces gives \(b=b_1+b_2-2\), so \(w_j(b_1)w_j(b_2)=w_j(b)\). Iterating over a tree gives the same identity for a face with any number of pieces; in particular no repeated face factor is generated by a regular subdivision into such pieces. Contract the two kernel expressions on the interface using \eqref{eq:pw}. The result is exactly the sum over the common orthonormal intertwiner index. With a linear incoming-to-outgoing convention it is ordinary matrix multiplication; in a boundary-state convention the orientation reversal supplies the necessary dualization. There are no leftover noncompact integration variables introduced by this boundary pairing. At finite regulators the proof is the same finite-dimensional contraction after evaluating the local regulated tensors.
+\end{proof}
+
+The proposition is a composition statement for the specified cuts, not a rule for sewing a face to itself, changing its topology or creating an additional face identification cycle. A fixed foam may still be defined by the vertex contractions and the stipulated face weights even if a proposed decomposition into blocks would not satisfy the proposition. In particular the comparison in Section~\ref{sec:pachner} is computed directly on each fixed-colour triangulation with its actual closed-face factors, not by iterating a tree-face rule around an interior face. No inverse metric on distributional \(G\)-invariants is substituted for the stated compact edge pairing.
+
+\section{Joint boost and radial regularization}\label{sec:rates}
+
+In the unitary sphere picture, the magnitude of the boost pullback multiplier is the square root of its spherical Jacobian,
+\((\cosh r+z\sinh r)^{-1}\) up to reversal of the cosine coordinate \(z\). The principal-series phase has modulus one for real labels. The sum of squared pointwise magnitudes of an orthonormal basis of the minimum \(K\)-type is the constant \(d_j\): the sum is invariant under the transitive compact rotations and has mean \(d_j\) on the sphere of normalized area one. Cauchy--Schwarz bounds the supremum norm of a unit minimal section by \(\sqrt{d_j}\). Hence for any \(g\),
+\begin{equation}\label{eq:spherbound}
+\|T_j(g)\|_{\mathrm{op}}
+\le \min\!\left(1,\frac{d_j}{2}\int_{-1}^1\frac{\dd z}{\cosh r+z\sinh r}\right)
+=\min(1,d_j\Xi(r)).
+\end{equation}
+Compact rotations at both ends preserve the bound. The first entry follows also from compression of an exact unitary. For \(j=\rho=0\) the section is constant and the integral is the exact coefficient.
+
+\subsection{Sharp graph guarantee and the radial error}
+
+Let \(J\) bound the face spins and put \(D=2J+1\). The Hilbert tensor norm for a link transfer is its Hilbert--Schmidt norm, at most \(d_j^{1/2}\|T_j\|_{\mathrm{op}}\). Projecting to compact node invariants is norm decreasing. Thus
+\begin{equation}\label{eq:Fn}
+\|F_v\|_2\le D^{3m_v/2}\prod_{a b\in\Gamma_v}\Xi(d(x_a,x_b)),\qquad x_a=g_a o .
+\end{equation}
+Assume \(\Gamma_v\) is three-edge-connected, meaning that every nontrivial vertex separation crosses at least three links (with multiplicities). For \(\tau_v=1/(2m_v)\), the hyperbolic comparison integrand
+\(\prod_{a b}(\cosh d(x_a,x_b))^{-(1-\tau_v)}\), with one root \(x_0=o\), is integrable by Kami\'nski's Theorem 2 and Eq.~(2.10) \cite{Kaminski}. Since \(\Xi(r)\le C_v e^{-(1-\tau_v/2)r}\), one can set aside \(e^{-(\tau_v/2)\sum_{a b}d(x_a,x_b)}\) and bound the remaining product by a constant times this comparison integrand. If some \(x_a\) has distance \(>R\) from \(o\), a graph path from the root to \(a\) gives \(\sum_{a b}d(x_a,x_b)>R\). For the compact region \(\Omega_v(R)=\{g_a:r(g_a)\le R\text{ for all nonroot }a\}\), this proves
+\begin{equation}\label{eq:tail}
+\|A_v\|_2\le C_vD^{3m_v/2},\qquad
+\int_{\Omega_v(R)^c}\|F_v\|_2\,\dd g
+\le C_vD^{3m_v/2}e^{-\delta_vR},\qquad \delta_v=\tau_v/2.
+\end{equation}
+The simplicial graph \(K_5\) satisfies the hypothesis. In that case the finiteness input can also be seen by averaging over all spanning trees of \(K_5\): each link occurs with frequency \(2/5\), and the product \(\prod_{ab} e^{-s d(x_a,x_b)}\) for \(4/5<s<1\) is the geometric mean of the tree products with individual exponent \(5s/2>2\). Each tree integral is finite by integrating leaves using hyperbolic volume growth \(e^{2R}\); H\"older's inequality then gives the graph bound.
+
+\begin{proposition}[Sharpness for all colours]\label{pr:cut}
+For a connected loopless local graph with at least two nodes and the assignment \(\rho_j=\gamma j\), finiteness for every fixed colouring is guaranteed exactly by three-edge-connectivity. If an edge cut has size \(k\le2\), the all-zero colouring diverges after the one-node gauge fixing.
+\end{proposition}
+\begin{proof}
+Sufficiency is \eqref{eq:tail}. For necessity all intertwiner spaces in the all-zero colouring are lines, and the vertex integrand is the positive product of spherical coefficients. Place the root on one side of the cut. Keep all remaining nodes on that side within a small fixed-radius ball at the root. Take one representative \(y\) on the other side at distance \(r\) from the root and constrain all other nodes on its side to a fixed-radius ball at \(y\). Within each side the edge lengths stay bounded, while the \(k\) crossing lengths equal \(r+O(1)\). The positive integration region therefore contributes at least a fixed multiple of \(\int_{r\gg1}r^k e^{(2-k)r}\,\dd r\), which diverges. The cluster that moves away from the already fixed root is not an overall gauge orbit.
+\end{proof}
+
+\subsection{Galerkin channels and finite vertex quadrature}
+
+Write \(U_j(a_r)=e^{-irK_z}\) with self-adjoint \(K_z\), up to a sign convention for the generator. A magnetic value \(m\) is conserved. In its chain starting at \(|j,m\rangle\), write \(l=j+n\) for the compact spin, \(n\ge0\). After rephasing the compact types within this chain the generators are tridiagonal; the off-diagonal entry squared, in the normalization of \(a_r\), is \cite[App.~A]{Livine}
+\begin{equation}\label{eq:a}
+|a_n|^2=
+\frac{((l+1)^2-j^2)((l+1)^2+\rho_j^2)((l+1)^2-m^2)}
+     {(l+1)^2(4(l+1)^2-1)}.
+\end{equation}
+In particular \(|a_n|\le C_\gamma(j+n+1)\) uniformly in physical \(m\); the diagonal likewise is at most linear and does not enter the commutator estimate. Let \(P_N\) keep the full compact types \(j,\ldots,j+N-1\), and replace the boost by the finite unitary \(\exp(-irP_NK_zP_N)\) on that subspace. Its minimal compression is \(T_{j,N}(a_r)\). Use exact compact rotations for \(u a_r v\). This defines a compact-biequivariant transfer: the centralizer in the Cartan decomposition commutes with the truncated \(K_z\), and at \(r=0\) the transfer is the usual compact rotation. The Weyl half-turn conjugates the compressed generator to its negative, so the inverse/adjoint identity is preserved. This is not a finite-dimensional representation of \(G\).
+
+\begin{lemma}[Uniform compact-radius estimate]\label{lem:galerkin}
+For all \(j\ge0\), \(N\ge2\) and \(r\ge0\),
+\begin{equation}\label{eq:gal}
+\|T_{j,N}(a_r)-T_j(a_r)\|_{\mathrm{op}}
+\le C_\gamma(j+1)^2N^{-1}r e^{c_\gamma r},
+\end{equation}
+with constants independent of \(j,m,N\).
+\end{lemma}
+\begin{proof}
+Let \(u(r)=e^{-irK_z}e_0\) in a fixed magnetic chain. The weight \(w_n=\min(j+n+1,M)^4\) is constant except for finitely many sites. For its diagonal operator the nonzero commutator entries occur only on those adjacent pairs where the weight changes, and \eqref{eq:a} gives a uniform bound on
+\(
+|w_{n+1}-w_n|\,|a_n|/(w_nw_{n+1})^{1/2}.
+\)
+Indeed the ratio of successive fourth roots lies between one and \(1+1/(j+n+1)\). The evolution is differentiable on the domain of \(K_z\) for the initial finite-type vector; the truncated-weight commutator is finite rank there. Applying \(2|xy|\le |x|^2+|y|^2\) to the weighted components and using Gronwall, then monotone convergence in \(M\), yields \(\|(j+n+1)^2 u(r)\|\le(j+1)^2 e^{c_\gamma r}\). In the first \(N\) sites, the projected exact equation differs from the open truncated equation only by the forcing \(a_{N-1}u_N(r)\) on its final site. Its magnitude is at most \(C_\gamma(j+1)^2(j+N+1)^{-1}e^{c_\gamma r}\). Duhamel and unitarity bound the difference by the integral of this forcing, giving \eqref{eq:gal} for the bottom component. The transfer is diagonal in \(m\), so its operator norm is bounded by the same estimate.
+\end{proof}
+
+Let \(A_{v,N,R}\) be the integral on \(\Omega_v(R)\) with these transfers. Each \(r(g_a^{-1}g_b)\) is at most \(2R\), and the regulated volume is \(O_v(e^{2(q_v-1)R})\). All exact and approximate transfers are contractions. Telescope their tensor product, which has one changed factor with \eqref{eq:gal} and otherwise only Hilbert--Schmidt conversion factors. The resulting spin power is at most \(D^{m_v/2+2}\le D^{3m_v/2}\). Together with \eqref{eq:tail} this gives
+\begin{equation}\label{eq:local}
+\frac{\|A_{v,N,R}-A_v\|_2}{D^{3m_v/2}}
+\le C_{v,\gamma}\big[N^{-1}(1+R)e^{(2c_\gamma+2(q_v-1))R}+e^{-\delta_vR}\big].
+\end{equation}
+
+The integrated approximate tensor has a fully finite realization as well. Partition the compact domain \(\Omega_v(R)\) into finitely many measurable cells of diameter at most \(h\) in a fixed product left-invariant Riemannian metric, and take one sample per nonempty cell weighted by the cell's Haar volume. To estimate the quadrature error use the \emph{exact} integrand first. Moving an endpoint \(g\) along a length-controlled path differentiates \(U_j(g)Y_j\) on the right in a left-invariant frame. A Lie algebra generator applied to the fixed minimal type has operator norm into the full representation bounded by \(C_\gamma(j+1)\), from the compact rotations and the same boost formulas (any boost axis is a compact rotation of \(K_z\)). Writing a face matrix entry as an inner product of two such endpoint vectors gives a global Lipschitz bound in the two endpoints of the transfer, without a growing boost-radius factor. Telescoping over all links and projecting gives the Lipschitz constant \(C_{v,\gamma}D^{m_v/2+1}\) for \(F_v\). Thus the error of the finite quadrature on exact values is \(O_{v,\gamma}(D^{3m_v/2}he^{2(q_v-1)R})\). Replacing those sampled values by Galerkin ones then invokes the compact part of \eqref{eq:local}, since the weights are positive and sum to the domain volume. No Lipschitz estimate on finite transferred values is needed.
+
+\begin{theorem}[Finite foam error]\label{thm:foam}
+Take a fixed finite foam of the type in Section~\ref{sec:sewing}, whose local vertex graphs have at least two nodes and are three-edge-connected. Write \(m_* = \sum_v m_v\), \(f_*\) for the number of faces, and
+\[
+\delta=\min_v\delta_v,\quad
+b=2c_\gamma+2\max_v(q_v-1),\quad
+R_N=\frac{\log N}{b+\delta},\quad
+\beta=\frac{\delta}{b+\delta}.
+\]
+With \(N\) boost types per magnetic chain, radius \(R_N\) and finite quadrature of cell diameter \(h=N^{-1}\), the fixed-colour approximate kernel converges to the exact kernel and obeys
+\begin{equation}\label{eq:global}
+\|K_{F,N}-K_F\|_{\mathrm{op}}
+\le C_{F,\gamma}D^{f_*+3m_*/2}(1+\log N)N^{-\beta}
+\end{equation}
+uniformly for all colours in \(j\le J\). Fixed bounded edge insertions multiply the bound by \(\prod_e\|E_e\|_{\mathrm{op}}\).
+\end{theorem}
+\begin{proof}
+The local bound follows from \eqref{eq:local} and the quadrature estimate; the same estimates with \eqref{eq:tail} bound the local approximate norms by \(O_{v,\gamma}(D^{3m_v/2})\). Contracting two tensors along all their common slots has Hilbert tensor norm no greater than the product of their Hilbert norms, by treating the contracted slots as a matrix index. Merge connected components successively, contracting all mutual slots at each step. This applies equally when the original network contains loops through several distinct vertices. Change one vertex tensor at a time to estimate the difference, put every fixed inserted operator on an internal leg once, and multiply the scalar face weights bounded by \(D^{f_*}\). The exterior operator norm is no greater than its Hilbert--Schmidt norm. Since all exact local integrals converge absolutely, these contractions also commute with their independent local integrations.
+\end{proof}
+
+If the boundary spins are fixed and one sums up to \(J\) over the \(f_{\mathrm{int}}\) internal face colours, there are at most \(D^{f_{\mathrm{int}}}\) terms. For \(D=O(N^\alpha)\) with \(\alpha(f_*+f_{\mathrm{int}}+3m_*/2)<\beta\), the same estimate shows that this approximant differs by \(o(1)\) from the exact \emph{spin-cutoff kernel at the same} \(J\). It says nothing about the existence of the exact-spin-cutoff limit as \(J\to\infty\).
+
+\section{Why the radial cutoff cannot be removed first}\label{sec:recurrence}
+
+\begin{proposition}[Positive block with noncommuting regulator limits]\label{pr:recurrence}
+For any fixed physical spin \(j\) and real \(\gamma\), there is a compact-invariant four-leg boundary pairing for which the exact radial boost integral is finite, but the same integral with any finite Hermitian approximation to the boost generator diverges. In particular, first removing the radial cutoff at fixed \(N\) does not approximate the exact integral.
+\end{proposition}
+\begin{proof}
+Use the invariant tensor which pairs each of two copies of \(V_j\) with its conjugate by the unit vector \(d_j^{-1/2}\sum_m e_m\otimes\overline{e_m}\). The radial matrix element between these invariant tensors is
+\[
+B(r)=\left[\frac{1}{d_j}\Tr\big(T_j(a_r)^*T_j(a_r)\big)\right]^2.
+\]
+The outer compact rotations disappear in the pairing. By \eqref{eq:spherbound}, \(\sinh^2(r)B(r)=O_j(r^4e^{-2r})\) at infinity, giving a finite positive Haar integral. As one check, at \(\rho=j=0\) its value with the angular Haar constant divided out is
+\(\int_0^\infty r^4/\sinh^2(r)\,\dd r=3\zeta(4)\).
+
+Let \(H\) be a finite Hermitian boost generator on a space containing the boundary channels. Its unitary \(e^{-irH}\) returns arbitrarily close to the identity in norm at arbitrarily large positive \(r\): there are only finitely many eigenphases, to which simultaneous torus recurrence applies. Once the compressed transfer is sufficiently close to the identity at a return, \(B_H\) is uniformly bounded below on an interval of fixed width about that return, since \(e^{-irH}\) is \(\|H\|_{\mathrm{op}}\)-Lipschitz. The integral over a single such interval is bounded below by a positive constant times \(e^{2r}\) as the returns go to infinity. It follows that the nonnegative uncut radial integral is infinite. For the Galerkin generators, the same logarithmic joint cutoff as in Section~\ref{sec:rates}, with radial volume exponent 2, gives convergence on this block.
+\end{proof}
+
+In this example no cancellation of different orientations could restore the limit, since the radial integrand is nonnegative. Changing the approximation to a nonunitary one with a decaying tail, or integrating before truncating a virtual-spin expansion, would be a different operation. Even composing exact transfers solely within the minimal channel does not give the exact next boost: writing \(P=Y_jY_j^*\), the composition defect is
+\[
+T_j(a_{r+s})-T_j(a_r)T_j(a_s)=Y_j^*U_j(a_r)(1-P)U_j(a_s)Y_j .
+\]
+Its mixed derivative at zero is \(-Y_j^*K_z(1-P)K_zY_j\), with eigenvalues \(-|a_0|^2<0\) in the respective magnetic chains. This is a local way to see the effect of the omitted higher compact types; the recurrence result is a separate noncompact integration obstruction.
+
+\section{The four-to-two move at one exterior colour}\label{sec:pachner}
+
+Let \(A=\{a_0,a_1\}\) and \(B=\{b_1,b_2,b_3,b_4\}\) be the two complementary sets of vertices in the combinatorial move. Its two-side simplices are \(\{a_0\}\cup B\) and \(\{a_1\}\cup B\). Its four-side simplices are \(A\cup(B\setminus\{b_i\})\), \(i=1,\ldots,4\). The common boundary contains the eight tetrahedra \(\{a_\alpha\}\cup(B\setminus\{b_i\})\). Give every boundary triangle the same \(j>0\), and retain every boundary intertwiner. The four-side interior triangles \(A\cup\{b_i\}\) are all resolved to spin zero. These are fixed-colour coefficients in the standard model of Section~\ref{sec:sewing}. We split the boundary tensor between the four tetrahedra at \(a_0\) and the four at \(a_1\), and write the resulting matrices as \(K_4^{(0)}\) and \(K_2\).
+
+\begin{theorem}[Same-colour rank separation]\label{thm:rank}
+For every real \(\gamma\), and with normalized compact boundary and edge pairings as above,
+\[
+\begin{array}{c|ccc}
+\text{common exterior spin} & \dim(\text{each boundary half}) & \rank K_4^{(0)} &\rank K_2\\ \hline
+\tfrac12 & 16 & 16 & \le 2\\
+1 &81 &81 &\le 3 .
+\end{array}
+\]
+For each higher fixed \(j\) the same assertion \(\rank K_4^{(0)}=(2j+1)^4\), \(\rank K_2\le2j+1\) holds for real \(\gamma\) outside at most a discrete exceptional set depending on \(j\). Multiplying by nonzero scalar face or edge factors leaves the comparison unchanged. On the two side a fixed arbitrary operator on the internal tetrahedron still gives the same upper rank bound.
+\end{theorem}
+
+\subsection{Why the two interiors have different channel counts}
+
+The invariant space \(I_j=\Inv_K(V_j^{\otimes4})\) is of dimension \(d_j\): coupling the first two and last two equal spins, each pair can have intermediate spin \(\ell=0,1,\ldots,2j\), and the unique invariant for that pair of outputs occurs when the two \(\ell\)'s coincide. Dual legs give the same dimension. After normalized Fourier expansion there is one such label for each of the eight boundary tetrahedra, without a further constraint from the boundary links. The cut space therefore has dimension \(d_j^4\) on either side.
+
+On the two side the only interior edge slot comes from the shared tetrahedron \(B\), again with four spins \(j\). There are no internal triangles, so the matrix factors through \(I_j\) and has rank at most \(d_j\). On the four side every interior tetrahedron \(A\cup\{b_i,b_k\}\) has spins \((0,0,j,j)\), with a one-dimensional invariant space. Once the interior colours are fixed, the four-side tensor is thus the product of four local matrices on the pairs of apex-typed boundary tetrahedra. Tensor factors can be permuted and independently dualized or put into orthonormal bases on each half. The face weights and each one-dimensional normalized internal pairing are nonzero scalars. There are four common boundary triangles in \(B\) and twelve of the form \(\{a_\alpha,b_i,b_k\}\); each has one boundary link occurrence and contributes \(\sqrt{d_j}\). On the four side the four closed faces instead have \(d_0=1\). In particular no additional recoupling sum can lower the rank of this product. To reach rank \(d_j^4\) it suffices to prove invertibility of the local \(d_j\)-dimensional matrix.
+
+\subsection{Reflected Gram formula for the noncompact vertex}
+
+The local graph has apex nodes \(L,R\) and three interior nodes \(I_1,I_2,I_3\). The spin \(j\) links are the direct link \(L\)--\(R\) and the three length-two paths \(L\)--\(I_\ell\)--\(R\); the links between interior nodes carry zero. Orient the four nonzero paths from \(L\) to \(R\), and pair the apex invariant spaces as Hilbert duals. At each interior node its spin-\(j\) slots are a representation and its dual, with normalized identity pairing \(d_j^{-1/2}\id\). This orientation is equivalent to the usual invariant bilinear convention of the Lorentzian graphical calculus \cite[Sec.~2]{Barrett}: the invariant map to the conjugate representation is implemented by an antiunitary commuting with the group and preserving each compact type. Passing all four left legs to duals is one choice of conjugate basis on \(I_j\). The two possible identifications at a two-leg node differ by at most the fixed scalar square of this antiunitary on \(V_j\), \((-1)^{2j}\); it can be absorbed in that node's basis. Thus the rank computed in the reflected pairing is the rank of the original linear tensor, independently of its index conventions. Positivity below is for this explicit reflected convention, not for an arbitrary bilinear matrix presentation.
+
+Use group variables \(g,t\) at \(L,R\), and \(h_1=1,h_2,h_3\) at the interior nodes. The direct link contributes
+\((U_j(g)Y_j)^*U_j(t)Y_j\), and the \(\ell\)-th path contributes, apart from its normalized identity factor,
+\[
+T_j(g^{-1}h_\ell)T_j(h_\ell^{-1}t)=T_j(h_\ell^{-1}g)^*T_j(h_\ell^{-1}t).
+\]
+Define the Hilbert-valued map on \(I_j\)
+\begin{align}
+L_h(g)&=\big(U_j(g)Y_j\big)\otimes T_j(h_1^{-1}g)\otimes
+ T_j(h_2^{-1}g)\otimes T_j(h_3^{-1}g),\
+Q_h&=\int_G L_h(g)\big|_{I_j}\,\dd g,\\
+   &Q_h:\ I_j\longrightarrow\bH_{(\gamma j,j)}\otimes V_j^{\otimes3}.
+\end{align}
+This is a Bochner integral: the first factor has norm one, and the other three are bounded by \eqref{eq:spherbound}. When \(h\) ranges over a fixed compact set,
+\(\big|r(h_\ell^{-1}g)-r(g)\big|\le r(h_\ell)\) bounds the combined integrand by a constant times \((1+r)^3e^{-3r}\). This is integrable against radial Haar and also proves continuity in \(h\). For the full vertex, absolute integrability from \eqref{eq:tail} justifies integrating the \((g,t)\) factors first. The entire local matrix in these bases is therefore
+\begin{equation}\label{eq:gram}
+M_j=d_j^{-3/2}\int_{G^2}
+  \left[\prod_{1\le \ell<k\le3}\Xi(r(h_\ell^{-1}h_k))\right]
+  Q_h^*Q_h\,\dd h_2\,\dd h_3 .
+\end{equation}
+No vacuum factorization has been assumed: the three zero-spin links inside the vertex supply the strictly positive weight. Formula \eqref{eq:gram} makes \(M_j\) positive semidefinite. If \(Q_{(1,1,1)}\) is injective, its least singular value is positive and stays bounded below on a neighborhood by continuity. That neighborhood has positive Haar measure and positive spherical weight, proving \(M_j>0\).
+
+\subsection{Strict positivity and the exceptional set}
+
+To test \(Q_{(1,1,1)}\), project its first output to the lowest compact type and all four outputs to invariants. The result is
+\begin{equation}\label{eq:D}
+D_j=P_{I_j}\int_G T_j(g)^{\otimes4}\,\dd g\big|_{I_j}.
+\end{equation}
+Four spherical bounds suffice for absolute convergence. In a Cartan decomposition the outer compact factors disappear after the invariant compression, leaving radial integration with positive measure. Write
+\(f_m(r)=\langle j,m|U_j(a_r)|j,m\rangle\).
+A compact half-turn reverses both \(m\) and the direction of the boost, so \(f_{-m}=\overline{f_m}\), with \(f_m(0)=1\).
+
+At \(j=1/2\) every magnetic tuple of weight zero contains two plus and two minus entries. On the entire weight-zero subspace the product of the four boost coefficients is therefore \(|f_{1/2}|^4\) times the identity. It is positive on an interval next to \(r=0\). At \(j=1\) a zero-weight tuple has the same number of \(+1\) and \(-1\) entries and hence an even number of zero entries. Each diagonal product is nonnegative at all \(r\), since \(f_0\) is real, and all are strictly positive near zero. The invariant subspace is contained in the weight-zero subspace, so \(D_j>0\) in both cases. It follows successively that \(Q_{(1,1,1)}\) is injective, that \(M_j>0\), and that the four-side cut has full rank. This proves the two numeric ranks in Theorem~\ref{thm:rank}.
+
+For any fixed \(j\), let \(\rho\) denote its independently varied principal spectral parameter. At \(\rho=0\), in the usual homogeneous spinor realization \cite[Eqs.~(12)--(13)]{Barrett}, a minimal magnetic vector is a normalized monomial \(z_0^{j+m}z_1^{j-m}\) times a real positive radial weight \(\langle z,z\rangle^{-1-j}\). A positive diagonal boost rescales the monomial by a positive factor, and the transformed radial weight remains positive. Hence \(f_m(r;0)>0\) and \(D_j(0)>0\). The compact-picture boost coefficient is holomorphic in \(\rho\) for finite \(r\), since its \(\rho\)-dependent factor is \(\exp(\pm i\rho\log(\cosh r+z\sinh r))\) with \(|\log(\cosh r+z\sinh r)|\le r\). The compact basis itself may be fixed independently of \(\rho\) on the unit sphere. Thus \(|f_m(r;\rho)|\le d_j\Xi(r)e^{|\operatorname{Im}\rho|r}\). Four factors and radial Haar are locally uniformly integrable on \(|\operatorname{Im}\rho|<1/2\). In that connected strip \(\det D_j(\rho)\) is holomorphic and nonzero at 0; its potential real zeros are isolated. For real \(\rho=\gamma j\) away from them, \eqref{eq:gram} again proves full rank. We use \(\gamma=0\) here as a representation-theoretic anchor, without assigning it a nondegenerate gravitational geometric interpretation.
+
+\begin{corollary}[Robustness of the rank obstruction]\label{cor:robust}
+In either of the two constant-colour cases, no nonzero vacuum scalar or invertible changes of bases acting separately on the two boundary halves can make the resolved matrices agree. For four-side scalar normalization \(c_4\ne0\) (of magnitude \(d_j^8\) with the face weights in \eqref{eq:w} and no extra insertions), the operator-norm distance to \emph{any} matrix of rank at most \(d_j\) is at least \(|c_4|\,s_{\min}(M_j)^4>0\) in the normalized orthonormal bases. For fixed \(j,\gamma\) as in Theorem~\ref{thm:rank}, the ranks already separate at sufficiently large joint regulators from Theorem~\ref{thm:foam}.
+\end{corollary}
+\begin{proof}
+Ranks are invariant under the stated transformations. The bound follows from the min--max characterization of singular values and the product law for singular values of a tensor product; the exact lowest singular value of a product of four identical local matrices in these bases is \(s_{\min}(M_j)^4\). For operator-valued regulator convergence across the apex split, use the Hilbert tensor norm estimate before choosing the split, as in Theorem~\ref{thm:foam}. The four-side least singular value stays nonzero for sufficiently close approximants, while the two-side approximate matrix still factors through \(I_j\).
+\end{proof}
+
+A bipartite tensor rank price sees this difference whenever both exact cut tensors are nonzero, since their Schmidt ranks differ. The comparison is stronger than a change in the size of a boundary spin label. Conversely, it gives no lower bound on the rank of the sum over all other interior colours: such terms need not be positive in the same bases and rank is not monotone under addition. Even when a finite-spin test detects failure of equality of the resolved kernels, it cannot by itself decide unprojected refinement invariance.
+
+\section{Limits of the result}
+
+The normalization is the compact kinematical pairing with one \(d_j\) per closed face. The construction does not replace it with a distributional Lorentzian intertwiner metric, and does not infer equality for other model choices. The convergence theorem is for a fixed graph or foam and compares a growing regulated spin window only against the same exact cutoff. The move calculation compares a fixed, low exterior colour with the four-side internal colours set to zero, not a family in which the boundary spin grows past the interior cutoff. It concerns the full noncompact amplitudes within that fixed block, rather than a saddle contribution or a compact approximation. It neither removes the interior spin cutoff nor constructs a triangulation-independent or continuum dynamics.
+
+\begin{thebibliography}{99}
+\bibitem{EPRL} J. Engle, E. Livine, R. Pereira and C. Rovelli,
+  LQG vertex with finite Immirzi parameter, \emph{Nucl. Phys. B} \textbf{799}, 136--149 (2008).
+  \href{https://arxiv.org/abs/0711.0146}{arXiv:0711.0146}.
+\bibitem{EP} J. Engle and R. Pereira,
+  Regularization and finiteness of the Lorentzian loop quantum gravity vertices, \emph{Phys. Rev. D} \textbf{79}, 084034 (2009).
+  \href{https://arxiv.org/abs/0805.4696}{arXiv:0805.4696}.
+\bibitem{Barrett} J. W. Barrett, R. J. Dowdall, W. J. Fairbairn, F. Hellmann and R. Pereira,
+  Lorentzian spin foam amplitudes: graphical calculus and asymptotics, \emph{Class. Quantum Grav.} \textbf{27}, 165009 (2010).
+  \href{https://arxiv.org/abs/0907.2440}{arXiv:0907.2440}.
+\bibitem{Speziale} S. Speziale,
+  Boosting Wigner's \(nj\)-symbols, \emph{J. Math. Phys.} \textbf{58}, 032501 (2017).
+  \href{https://arxiv.org/abs/1609.01632}{arXiv:1609.01632}.
+\bibitem{Kaminski} W. Kami\'nski,
+  All 3-edge-connected relativistic BC and EPRL spin-networks are integrable.
+  \href{https://arxiv.org/abs/1010.5384}{arXiv:1010.5384}.
+\bibitem{BRR} E. Bianchi, D. Regoli and C. Rovelli,
+  The face amplitude of spinfoam quantum gravity, \emph{Class. Quantum Grav.} \textbf{27}, 185009 (2010).
+  \href{https://arxiv.org/abs/1005.0764}{arXiv:1005.0764}.
+\bibitem{Livine} E. R. Livine, Area propagator and boosted spin networks in loop quantum gravity,
+  \emph{Class. Quantum Grav.} \textbf{36}, 185009 (2019).
+  \href{https://arxiv.org/abs/1902.02722}{arXiv:1902.02722}.
+\bibitem{Banburski} A. Banburski, L.-Q. Chen, L. Freidel and J. Hnybida,
+  Pachner moves in a 4D Riemannian holomorphic spin foam model, \emph{Phys. Rev. D} \textbf{92}, 124014 (2015).
+  \href{https://arxiv.org/abs/1412.8247}{arXiv:1412.8247}.
+\bibitem{Borissova} J. N. Borissova and B. Dittrich, Lorentzian quantum gravity via Pachner moves: one-loop evaluation,
+  \emph{J. High Energy Phys.} 09, 069 (2023).
+  \href{https://arxiv.org/abs/2303.07367}{arXiv:2303.07367}.
+\bibitem{Proper} J. Engle and A. Zipfel, The Lorentzian proper vertex amplitude: Classical analysis and quantum derivation,
+  \emph{Phys. Rev. D} \textbf{94}, 064024 (2016).
+  \href{https://arxiv.org/abs/1502.04640}{arXiv:1502.04640}.
+\bibitem{Euclidean} \emph{From Euclidean tensor prices to EPRL amplitudes: A rank obstruction at the four-to-two move}, research archive, Paper 38.
+  \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/38-tensor-prices-eprl-boundary}{Public source and manuscript}.
+\end{thebibliography}
+\end{document}

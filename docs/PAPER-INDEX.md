@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 79 items: 20 original research packets, six later analytical Markdown manuscripts and 53 typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 82 items: 20 original research packets, six later analytical Markdown manuscripts and 53 typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–66 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–69 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -821,3 +821,27 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** Matched dressed mode readout for the retained quartic quantum resonant model on global AdS₄.
 
 [66 · Odd azimuthal graviton pairs in the resonant dynamics of global AdS₄](../papers/66-ads4-odd-azimuthal-graviton-pairs/README.md) · [PDF](../papers/66-ads4-odd-azimuthal-graviton-pairs/manuscript.pdf) · [TeX](../papers/66-ads4-odd-azimuthal-graviton-pairs/main.tex) · [Verification](../papers/66-ads4-odd-azimuthal-graviton-pairs/VERIFICATION.md)
+
+## 67. Gravitational phase beyond occupation counts on a half-turn vacuum branch
+
+**Result.** Exact compact vacuum CMC lifts realize two Taub constraints. In the corresponding quadratic constrained theory, phase partners with identical occupation and trace laws give different marked curvature responses.
+
+**Scope.** Marked compact half-turn branch and the specified retained quadratic rigging; classical constraint lifts are exact.
+
+[67 · Gravitational phase beyond occupation counts on a half-turn vacuum branch](../papers/67-half-turn-taub-curvature-phase/README.md) · [PDF](../papers/67-half-turn-taub-curvature-phase/manuscript.pdf) · [TeX](../papers/67-half-turn-taub-curvature-phase/main.tex) · [Verification](../papers/67-half-turn-taub-curvature-phase/VERIFICATION.md)
+
+## 68. What a retained-mode observer can recover in quantum Einstein–Rosen dynamics
+
+**Result.** A positive operator-valued spectral measure exactly characterizes retained histories. A finite-width Ramsey protocol recovers it; every normal preparation with population outside the discarded-sector vacuum requires unbounded exact cut memory.
+
+**Scope.** Polarized Einstein–Rosen quantization and the allowed low-mode instrument histories.
+
+[68 · What a retained-mode observer can recover in quantum Einstein–Rosen dynamics](../papers/68-einstein-rosen-spectral-memory/README.md) · [PDF](../papers/68-einstein-rosen-spectral-memory/manuscript.pdf) · [TeX](../papers/68-einstein-rosen-spectral-memory/main.tex) · [Verification](../papers/68-einstein-rosen-spectral-memory/VERIFICATION.md)
+
+## 69. Controlled noncompact sewing and fixed-colour rank in Lorentzian EPRL
+
+**Result.** A joint Galerkin, radial, and quadrature limit controls fixed-colour finite foams. The same external sector has ranks 16 versus at most 2 and 81 versus at most 3 across the specified move.
+
+**Scope.** Lorentzian principal-series fixed-colour foams; the rank comparison is for the designated resolved sector.
+
+[69 · Controlled noncompact sewing and fixed-colour rank in Lorentzian EPRL](../papers/69-lorentzian-eprl-noncompact-sewing/README.md) · [PDF](../papers/69-lorentzian-eprl-noncompact-sewing/manuscript.pdf) · [TeX](../papers/69-lorentzian-eprl-noncompact-sewing/main.tex) · [Verification](../papers/69-lorentzian-eprl-noncompact-sewing/VERIFICATION.md)

@@ -1,0 +1,64 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[margin=0.96in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Graviton Phase under Identical Occupation and Trace Laws on the Half-Turn Vacuum Quotient}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\divg}{\operatorname{div}}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\Lie}{\mathcal L}
+\newcommand{\vol}{\operatorname{Vol}}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\hc}{\hbar}
+\newcommand{\cG}{c_G}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\PP}{\mathbb P}
+\title{Graviton Phase under Identical Occupation and Trace Laws\\on the Half-Turn Vacuum Quotient}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Global constraints on a compact vacuum universe do not fix the relative phase of its traveling gravitons. On the orientable half-turn quotient of a flat three-torus we construct exact nearby constant-mean-curvature vacuum data at a regular point of the Taub cone. A homogeneous expansion balances the wave energy, while oppositely directed waves cancel only the total surviving momentum. In the quadratic quantum theory we impose both constraints by a positive single-branch group average. Two physical states can then agree on the entire joint law of every occupation number and the homogeneous trace momentum yet disagree on a neutral gravitational phase. The observable comes from a marked scalar-curvature harmonic of the exact constraints and a Weyl calibration of the tensor quadratures. Its nonzero frequency component produces a positive finite-volume-width detector, is erased by a complete trace measurement when the energy gap is nonzero, and is lost by incorrectly projecting each band separately. The compatible countable-mode completion and a conditioned simultaneous semiclassical limit are also established. The exact vacuum development and the retained quadratic quantization are distinct levels of the result.
+\end{abstract}
+
+\section{Setup and claims}
+
+Let \(M=\mathbb{T}^{3}/\langle \sigma\rangle\), where coordinates on the flat torus have periods \(2\pi\) and
+\[
+          \sigma(x,y,z)=(-x,-y,z+\pi).
+\]
+This action is free and orientation preserving. We fix the orientation and the torus homology marking used by the probes below. The reference spacetime is \((\RR\times M,-\dd t^2+\delta)\). The reference volume is \(V=(2\pi)^3/2\), the surviving spatial translation is \(Z=\partial_z\), and \(\cG=16\pi G\). Use \(K=-\tfrac12\Lie_n g\) and the ADM momentum sign in Section~\ref{sec:classical}. The regular expanding branch is the negative homogeneous trace-momentum branch. Write \(\epsilon\) for the amplitude of an exact classical family, and \(\hc\) for the Planck parameter of its quadratic coefficient theory. In a joint comparison with a physical Planck parameter, the symplectic scaling is \(\hc=\hbar_{\rm phys}/\epsilon^2\). We do not identify the quantum model with the full Einstein solution at finite \(\epsilon,\hbar_{\rm phys}\).
+
+\begin{theorem}[Exact compact vacuum stock]\label{thm:exact}
+The time and axial Killing generators produce two independent Taub equations on regular transverse trace-free (TT) data with homogeneous trace. Their vanishing is necessary for a first jet of exact vacuum data in the stated sector. On the branch with nonzero \(Zh\) and compensating trace, all such jets in a regular chart have exact constant-mean-curvature (CMC) lifts, with controlled dependence and an exact reference-volume section. The single nonzero orbit used below contains traveling waves of different polarizations and opposite momenta; it also has an explicit nonzero exact reduced symplectic pair. Close volume cuts of the exact developments calibrate the time of the geometric phase.
+\end{theorem}
+
+\begin{theorem}[Positive quadratic phase discriminator]\label{thm:phase}
+With one normal-order subtraction, the simultaneous axial and time rigging yields a positive physical Hilbert space on the expanding branch, with trace momentum determined by energy outcome by outcome. There are phase partners with exactly the same joint distribution of \emph{all} occupations in a fixed marked analyzer basis and the trace momentum, but distinct responses to a bounded finite-width detector. The measured line is obtained by quantizing the leading marked mixed-curvature coefficient on the exact family and taking a bounded polar normalization. For a neutral shift it survives complete unread trace measurement exactly when its energy change is zero. In the explicit unequal-weight, nonzero-gap case the detector also distinguishes the true total-neutral preparation from any state projected to zero directed current in each band separately.
+\end{theorem}
+
+\begin{theorem}[Countable quadratic sector]\label{thm:countable}
+The finite-mode riggings, neutral shifts, and conditioned coherent preparations have compatible limits at fixed \(\hc>0\) in the countable TT Fock sector. For centered growing stocks containing a fixed nondegenerate primitive charged core, with uniformly exponentially weighted actions, the finite measured phases and the constraint-conditioned occupation and trace fluctuations also have a simultaneous semiclassical limit. The assertion in this double limit is about the specified observables; it does not require whole-vector convergence along every moving cutoff.
+\end{theorem}
+
+\paragraph{Position relative to prior work.}
+The conical singularity of the Einstein constraint set at symmetric compact data and its relation to spacetime Killing fields are classical \cite{AMM,FMM,Moncrief}. The screw-character modes of flat orientable quotients, including half-turn spin-two modes, are known \cite{PLZ,COMPACT}. De Vuyst and collaborators identify the quadratic Taub constraints in covariant and canonical form and their role in physical algebras \cite[Secs.~2.4--2.5, 4]{DV}. Higuchi--Schmieding construct group-averaged states on static torus spacetime, including the oscillator mass shell and the discrete momentum projection, and discuss earlier pure-gravity work \cite[Secs.~2--4]{HS}. These facts, and the underlying pair-coherent coefficients \cite{AB}, are not novelty claims. Here the half-turn changes both the global generators and the permitted screw orbits. The new comparison uses analytic lifts of actual vacuum stock, a marked gravitational curvature readout changing a phase at identical total \emph{and} resolved trace/count laws, and a compatible controlled completion where the discrimination persists. We do not claim quantum dynamics beyond the retained quadratic model.
+
+\input{classical}
+\input{quantum}
+\input{detector}
+\input{limits}
+\input{references}
+\end{document}
+

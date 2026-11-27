@@ -1,0 +1,107 @@
+\section{Global charges and exact vacuum families}\label{sec:classical}
+
+\subsection{The actual half-turn orbits}
+
+The continuous Killing generators of the reference spacetime are precisely the time translation and \(Z=\partial_z\). Indeed a local Minkowski Killing field lifts to an affine one, and periodicity in the three spatial directions removes the affine coefficients. The half turn then removes the two transverse translations. Likewise the only conformal Killing vector of the flat reference Cauchy metric is \(Z\): on the torus the nonzero-frequency symbol of the conformal-Killing operator has no kernel, and the constant vectors must descend.
+
+Put \(R=\operatorname{diag}(-1,-1,1)\). A complex Fourier coefficient of a TT tensor at \(k\) has companion \((-1)^{k_z}ReR^{\mathsf T}\) at \(Rk\); reality supplies the other signs. For \(k_\perp\ne0\) and \(k_z\ne0\), choose a real unit TT polarization \(e\) at \(k\). Then the real and imaginary parts of
+\[
+ V^{-1/2}\left(e\, e^{ik\cdot x}
+                    +(-1)^{k_z}ReR^{\mathsf T}\,e^{iRk\cdot x}\right)
+\]
+are unit real orthogonal tensors \(C,S\) in quotient \(L^2\), with
+\(ZC=-k_zS\), \(ZS=k_zC\), and frequency \(\omega=|k|\). Each such pair gives two signed traveling oscillators per polarization. If \(k_z=0\) and \(k_\perp\ne0\), then \(Rk=-k\): imposing reality in the same deck condition leaves one real oscillator in each TT polarization, of axial weight zero. If \(k_\perp=0\) and \(k_z\ne0\), the polarizations are even under \(R\) and only even \(k_z\) are allowed; the surviving cosine/sine pair has signed weights \(\pm |k_z|\). The zero Fourier mode is not a radiative oscillator. Only the homogeneous scale and its trace momentum are included below; other homogeneous shape data can be fixed in this chosen sector.
+
+An explicit single-orbit classical witness takes \(k=(1,0,1)\), its deck companion \(k'=(-1,0,1)\), and \(\omega=\sqrt2\). Let \(e_1=(u\otimes u-v\otimes v)/\sqrt2\), \(e_2=(u\otimes v+v\otimes u)/\sqrt2\), where \(u=(0,1,0)\) and \(v=(1,0,-1)/\sqrt2\). The preceding construction gives orthonormal \(C_1,S_1,C_2,S_2\) with the \emph{minus} screw phase \((-1)^{k_z}\). For any \(A\ne0\), choose
+\begin{equation}\label{eq:travel}
+     h=A(C_1+C_2),\qquad
+     p=\frac{\omega A}{2}(S_1-S_2).
+\end{equation}
+Since the first-jet TT equation has \(\dot h=-2p\) in background proper time, the modes evolve as
+\(A(C_1\cos\omega t-S_1\sin\omega t)\) and
+\(A(C_2\cos\omega t+S_2\sin\omega t)\).
+Each polarization thus carries a genuinely directed wave, not a time-translated standing tensor; the two axial momenta cancel because they are equal and opposite. There is no assertion of nonzero total momentum on a compact slice.
+
+\subsection{Taub conditions from the exact constraints}
+
+Consider first jets of vacuum data of the form
+\[
+   g_\epsilon=\delta+\epsilon(h+q_0\delta)+O(\epsilon^2),\quad
+   K_\epsilon=\epsilon\left(p+\frac{b}{3}\delta\right)+O(\epsilon^2)
+\]
+with \(h,p\) flat TT and \(q_0,b\) spatial constants. Integrating the Hamiltonian constraint \(R-|K|^2+\tau^2=0\) against the constant lapse and the momentum constraint \(\divg_g(K-\tau g)=0\) against \(Z\) gives at order \(\epsilon^2\)
+\begin{equation}\label{eq:taub}
+ T=\|p\|^2+\tfrac14\|\partial h\|^2-\tfrac23 Vb^2=0,\qquad
+ J_0=\int_M p:Zh=0 .
+\end{equation}
+For the scalar condition, the linear scalar curvature of the second jet integrates to zero and the first curvature of the chosen TT and constant-scale jet vanishes. The second variation of \(\int\sqrt g R\) on a TT variation is
+\(-\int h: G'(h)=\int h:\Delta h/2\), since \(G'(h)=-\Delta h/2\) at flat data. Its second \emph{coefficient} is therefore \(-\|\partial h\|^2/4\). Constant scale adds no cross term. The extrinsic terms contribute \(\epsilon^2(2b^2/3-|p|^2)\). For momentum, integration by parts gives
+\(
+ -\tfrac12\int (K^{ij}-\tau g^{ij})(\Lie_Zg)_{ij}\dd v_g
+\);
+the background \(K\) and \(\Lie_Z\delta\) vanish, so no second jet contributes, and the trace term pairs to zero. On the torus cover the two excluded transverse KID charges are odd under the deck map on invariant data, hence vanish rather than allowing additional total transverse momenta. Here and below all norms and integrals are on the quotient.
+
+The radiative part of \(T\) is strictly positive on nonzero waves. Therefore a nonzero integrable radiative jet must contain the compensating first-order expansion or contraction \(b\); a second-order homogeneous correction to a purely radiative seed cannot supply it. A single directed carrier also fails the momentum equation even after compensating the energy. The stock \eqref{eq:travel} satisfies the momentum equation with both individual currents nonzero; choose the negative \(b\) solving the first equation for expansion.
+
+\subsection{Analytic lift despite the near-Killing vector equation}
+
+We give a direct ordinary-constraint construction of an exact CMC family on a regular cone chart, rather than applying a uniformly invertible vector equation across a near-zero eigenvalue. Fix Sobolev order high enough for metric curvature and standard multiplication. Work with small \(\epsilon\) and compact regular parameter sets with \(\|Zh\|\) and \(|b|\) bounded away from zero. The seed
+\(\bar g=\delta+\epsilon(h+q_0\delta)\) is positive. Let \(S=\epsilon p^{\mathrm{TF}_{\bar g}}\) and define
+\(\mathbb L_{\bar g}W=\Lie_W\bar g-\tfrac23(\divg_{\bar g}W)\bar g\).
+Solve the York equation
+\[
+      B_\epsilon(W,U)=-\int_M S:\mathbb L_{\bar g}U\,\dd v_{\bar g},
+       \qquad
+      B_\epsilon(W,U)=\int_M\mathbb L_{\bar g}W:
+                                    \mathbb L_{\bar g}U\,\dd v_{\bar g}.
+\]
+It enforces \(\divg_{\bar g}(S+\mathbb L_{\bar g}W)=0\). The fixed flat \(L^2\)-orthogonal complement of \(Z\) has an invertible elliptic restriction of \(B_0\) by the Fourier gap. It remains invertible with a bounded inverse on that complement for small \(\epsilon\). There solve for \(w_\epsilon\) with the given right-hand side and for \(v_\epsilon\) such that \(Z_\epsilon=Z+v_\epsilon\) is \(B_\epsilon\)-orthogonal to the complement. Both corrections begin at order \(\epsilon^2\): \(p\) is flat TT and \(\mathbb L_{\bar g}Z=\epsilon Zh+O(\epsilon^2)\) with \(Zh\) flat TT, so the first-order restricted pairings vanish. Then
+\[
+ W=w_\epsilon+\lambda_\epsilon Z_\epsilon,\qquad
+ \lambda_\epsilon=-\frac{\int S:\mathbb L_{\bar g} Z_\epsilon\,\dd v_{\bar g}}
+                           {B_\epsilon(Z_\epsilon,Z_\epsilon)} .
+\]
+The denominator is \(\epsilon^2(\|Zh\|^2+O(\epsilon))\), the numerator before the outer minus sign is \(\epsilon^2(J_0+O(\epsilon))\). Thus on \(J_0=0\) the divided quotient extends smoothly (analytically for analytic seed paths) and is \(O(\epsilon)\). Consequently the exact TT tensor \(\bar A=S+\mathbb L_{\bar g}W\) is \(\epsilon p+O(\epsilon^2)\) with its \emph{prescribed} first jet. At \(h=0\) the seed is a constant flat rescaling and \(S\) is already TT, so that direction can also be lifted without claiming smoothness of this Schur chart across it. A purely axial-invariant stock can solve on the fixed complement with \(Z\) an exact conformal Killing mode; for the main regular chart we stay in \(\|Zh\|>0\).
+
+Write \(\tau_\epsilon=\epsilon b_\epsilon\), \(\phi=1+d+u\) with \(u\) mean-zero relative to the reference volume. The CMC Lichnerowicz and volume equations are
+\begin{align}
+ -8\bar\Delta\phi+\bar R\phi
+ -|\bar A|_{\bar g}^{2}\phi^{-7}+\tfrac23\epsilon^2b_\epsilon^2\phi^5&=0,\label{eq:lich}\\
+ \int_M\phi^6\,\dd v_{\bar g}&=V(1+\epsilon q_0)^{3/2}.\label{eq:volume}
+\end{align}
+The volume derivative in \(d\) is \(6V\), so solve for \(d\); its linear variation in the given seed and mean-zero \(u\) is zero. Project \eqref{eq:lich} into the fixed mean-zero target; the derivative in \(u\) is \(-8\Delta\) there, invertible. The elliptic implicit-function theorem yields \(u,d=O(\epsilon^2)\), smoothly on the chosen parameters. The remaining constant residual, integrated against \(\dd v_{\bar g}\) and divided by \(\epsilon^2\), extends and has value
+\[
+     -\tfrac14\|\partial h\|^2-\|p\|^2+\tfrac23 Vb_\epsilon^2
+                \quad \text{at }\epsilon=0 .
+\]
+The curvature term follows from the variation used in \eqref{eq:taub}; its linear term vanishes. The Laplacian integrates to zero in the perturbed volume. The residual has derivative \(4Vb/3\ne0\) in \(b_\epsilon\), so a scalar implicit-function solve sets it to zero with \(b_\epsilon=b+O(\epsilon)\). The physical data
+\[
+ g_\epsilon=\phi^4\bar g,\qquad
+ K_\epsilon=\frac{\tau_\epsilon}{3}g_\epsilon+\phi^{-2}\bar A
+\]
+are exact and regular, with all the announced first jets; elliptic regularity and ordinary local vacuum evolution apply on the compact quotient. A pure homogeneous constant rescaling with \(h=p=b=0\) of course integrates as flat data. On the nonzero expansion branch the lapse of any KID solves \((-\Delta_g+|K|^2)N=0\) and so vanishes. A remaining spatial Killing vector would be conformal Killing for \(\bar g\); the complementary elliptic gap and the positive Schur term above exclude it when \(\epsilon\ne0\) and \(\|Zh\|>0\).
+
+\subsection{A nondegenerate physical pair and the actual volume label}
+
+With
+\(\pi^{ij}=-\sqrt g\,(K^{ij}-\tau g^{ij})/\cG\),
+the pullback of \(\int\delta g_{ij}\wedge\delta\pi^{ij}\) to coefficients is
+\begin{equation}\label{eq:omega}
+ \cG\Omega(1,2)=-\int_M(h_1:p_2-h_2:p_1)+
+                  2V(q_{01}b_2-q_{02}b_1).
+\end{equation}
+Its time and axial Hamiltonians in the convention \(\iota_{X_H}\Omega=\dd H\) are \(T/\cG\) and \(-J_0/\cG\). In particular the first evolution has
+\(\dot h=-2p\), \(\dot p=-\Delta h/2\), \(\dot q_0=-2b/3\), \(\dot b=0\).
+The gradients of the two constraints are independent on the regular chart by the \(b\) and \(p:Zh\) derivatives. Hence the kernel of the restricted form is exactly the span of the two flows in the finite parameter symplectic model. The section \(q_0=0\) is transverse to the time flow and axial rotation can be factored locally. A finite axial stabilizer may remain in a general stock with a nonprimitive active weight set; the main explicit stock contains weight one.
+
+For a concrete nonzero pair, in \eqref{eq:travel} vary the common coefficient of \(C_1+C_2\) in \(h\) and add \(D(C_1+C_2)\) to \(p\), holding the coefficient of \(S_1-S_2\) fixed. These directions stay momentum-neutral, and \(b\) is determined on the expansion branch. Equation~\eqref{eq:omega} on this two-plane is \(-2/\cG\) on the ordered coordinate pair. The exact two-parameter CMC families just built have this value times \(\epsilon^2\) plus \(O(\epsilon^3)\). The exact constraint-generated gauge directions on compact slices lie in the radical of the presymplectic form, since no boundary term is needed for the smeared generators. Thus the displayed pair on actual solutions cannot be gauged away. This does not make a finite Fourier truncation an invariant subspace of the full nonlinear Einstein evolution.
+
+The relation between the first-jet time flow and actual nearby volume cuts does not require inverting the constant flat lapse at the apex. Start from the \(q_0=0\) section, where the physical initial volume is exactly \(V\). On a short fixed Gaussian proper-time slab of the exact data, the first trace jet is spatially constant and \(\dot q_0=-2b/3\). To obtain actual CMC slices near each Gaussian slice, solve for a small mean-zero normal graph by projecting its mean-curvature equation on the complement of constants; the actual constant mean is then read from the result. At \(\epsilon=0\) the projected derivative is the invertible flat Laplacian on mean-zero functions (up to the fixed normal convention), and the projected source starts at \(O(\epsilon^2)\). Parametric elliptic implicit function and local vacuum regularity give a graph \(O(\epsilon^2)\), uniformly with its first time derivative on compact stock. It follows for the normalized geometric volume parameter that
+\begin{equation}\label{eq:geomvol}
+     s_\epsilon(t):=\frac{2[\vol(\Sigma_{t,\mathrm{CMC}})-V]}{3V\epsilon}
+           =-\frac{2b}{3}\,t+O(\epsilon)
+           =-2a P_*\,t+O(\epsilon),\qquad
+        P_*=\frac{2Vb}{\cG},\quad a=\frac{\cG}{6V}.
+\end{equation}
+Errors here are uniform with a time derivative, and the map is locally monotone with uniformly controlled inverse on the regular branch. Thus a fixed finite aperture in the scaled volume variable compares actual nearby exact CMC slices, not just a formal renaming of proper time. This completes Theorem~\ref{thm:exact}.
+
