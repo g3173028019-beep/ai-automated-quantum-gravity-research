@@ -1,0 +1,87 @@
+\section{Uniform level transfer for dense nonbipartite templates}
+\label{sec:joint}
+The exact collision above has no growth assumption. We now ask a different question: whether the real, possibly signed finite sum in \eqref{eq:charge} is controlled by the continuum saddle uniformly in the number of sites. No assumption on the seam signs will enter the transfer, by \eqref{eq:phase}.
+
+Let \(H\) be a fixed finite connected nonbipartite simple graph. Form a graph \(G_n^0\) by replacing each template vertex \(a\) with an independent class of size \(n_a\), and each template edge with all edges between its classes. Assume \(n=\sum_a n_a,\ n_a/n\to\alpha_a>0\). Call the proportions \emph{strict} if the template edges admit positive weights of incident sum \(\alpha_a/2\) at each \(a\). Let \(G_n\) result from deleting an arbitrary subgraph of maximum degree \(\Delta_n=o(n)\). Set \(\beta=\pi^2/6\). The continuum site theorem of \cite[Theorem~5.1]{P50} supplies a unique positive solution
+\begin{equation}
+ \frac{\beta}{n}m_i\sum_{j\sim i}m_j=\frac12,\qquad
+  {\cal A}_n=n^{-n/4}e^{n/4}
+                    \prod_i\frac{\sqrt\pi}{2\sqrt{a_i}},\qquad
+  a_i=(2m_i)^{-1}.
+ \label{eq:site}
+\end{equation}
+The \(m_i\) have uniform positive upper and lower bounds. We explicitly use that earlier theorem only for the site bounds and continuum limit; the finite-level approximation is proved here.
+
+\begin{theorem}[Simultaneous level and size]
+\label{thm:joint}
+Under these hypotheses there are constants \(C,c>0\), uniform over deletion patterns once \(\Delta_n/n\) and all \(|n_a/n-\alpha_a|\) are below fixed positive thresholds, such that for integer \(r\) of either parity with \(\log r\ge Cn\),
+\begin{equation}
+ \left|(2/\sqrt r)^nI_r(G_n)-J(G_n)\right|
+            \le n^{-n/4}e^{Cn}r^{-c},\qquad
+ J(G_n)=\int_{(0,\infty)^n}\prod_{ij\in E(G_n)}K(x_ix_j)\,\dd^n x .
+ \label{eq:transfer}
+\end{equation}
+Let \(t_a>0\) be the unique solution of
+\(\beta t_a\sum_{b:ab\in E(H)}t_b=\alpha_a/2\), and set \(\Sigma=\operatorname{diag}(2t_a^2/\alpha_a)\). For a sufficiently large fixed \(C_*=C_*(H,\alpha)\), take any integer sequence \(r\ge e^{C_*n}\), and any seam signs. Write \(E=|E(G_n)|\) and \(\varphi_r=(-1)^{rE}\kappa_r^{\sig A_\epsilon}\). Then
+\begin{align}
+ \frac{\tau_r(M_{G_n,\epsilon})}
+ {\varphi_r\,2^{\,n-(E+1)/2}\pi^{-(E+1)}
+         r^{3(E+1)/2-n/2}{\cal A}_n}
+ &\longrightarrow
+ \frac{\displaystyle
+    \exp\!\left[-\frac{\pi^4}{20}
+       \sum_{ab\in E(H)}\frac{t_a^2t_b^2}{\alpha_a\alpha_b}\right]}
+ {\sqrt{\det(I+\beta\Sigma^{1/2} A_H\Sigma^{1/2})}}>0 .
+ \label{eq:joint}
+\end{align}
+Here \(A_H\) is ordinary adjacency; the matrix under the determinant is positive definite. No optimal level threshold is claimed.
+\end{theorem}
+
+\subsection{A dimension-uniform tail}
+We need the signless estimate
+\begin{equation}
+       \sum_{ij\in E(G_n)}|y_i+y_j|
+                  \ge c_0 n\sum_i|y_i|,\qquad y\in\mathbb R^n .
+ \label{eq:coercivity}
+\end{equation}
+For a short proof, use a fixed closed odd walk from each template class, obtained by going to an odd cycle, around it, and back. For a fixed root site \(i\), lift the walk to cycles with distinct intermediate sites. At each step there are \(\Omega(n)\) admissible choices within the specified class, since at most \(\Delta_n\) neighbors are forbidden and only a bounded number of sites must be avoided. At the last intermediate site, exclude at most a further \(\Delta_n\) to close at the root. A walk of length \(\ell\) gives \(\Omega(n^{\ell-1})\) such lifts. On a lifted cycle the alternating sum of its edge values \(y_v+y_w\) is \(2y_i\). Average the triangle inequality over lifts and sum over roots. A given edge in a specified position fixes two of the \(\ell\) sites and is therefore used at most \(2n^{\ell-2}\) times over all roots. There are finitely many walk types and positions, so the total weight of an edge is \(O(1/n)\). This proves \eqref{eq:coercivity}. The continuum proof in \cite{P50} gives the same estimate by class means.
+
+Put \(w_{ij}=(2\beta/n)m_im_j\) for the retained edges. By \eqref{eq:site} these weights sum to one at each site and satisfy \(c_1/n\le w_{ij}\le c_2/n\). Define \(g(u)=(1+2\beta u^2)^{-1/2}\) and \({\cal G}(x)=\prod_{ij}g(x_i x_j)\). Then \(|K|\le g\) and \(|K'|\le Cg\). For \(|u|<1\), the first bound follows from Euler's sine product and \(\exp(-\beta u^2)\le g(u)\); for \(|u|\ge1\) it follows from \(1/(\pi |u|)\le g(u)\). The derivative bound follows by differentiation outside a neighborhood of zero and compactness inside it.
+
+Use the natural scale \(x_i=n^{-1/4}z_i\) and dyads \(2^{j_i}\le z_i<2^{j_i+1}\) with \(j_i\in\mathbb Z\). For an edge, set \(v=(j_i+j_j)\log2\) and
+\(\phi_n(v)=\frac12\log(1+2\beta e^{2v}/n)\). Uniformly in the edge and in \(v\),
+\begin{equation}
+        \phi_n(v)\ge w_{ij}v+\frac{\eta}{n}|v|-\frac{C_0}{n}
+ \label{eq:edgeweight}
+\end{equation}
+for some \(\eta>0\). For nonpositive \(v\) take \(\eta<c_1\). For positive \(v\) choose a fixed \(v_0\) large enough that \(n\phi_n'(v_0)\ge c_2+\eta\) for all large \(n\), then use convexity beyond \(v_0\) and enlarge \(C_0\) for \([0,v_0]\). The \(w\)-terms cancel the dyad volume exponent exactly. Combining \eqref{eq:edgeweight} over the edges and \eqref{eq:coercivity} gives
+\begin{equation}
+ \int_{\mathrm{dyad}}{\cal G}(x)\,\dd^n x
+           \le n^{-n/4}e^{C n}2^{-c\sum_i|j_i|}.
+ \label{eq:dyad}
+\end{equation}
+The same bound, with new constants, holds for the mesh sum of the envelope on that dyad when the mesh spacing is \(2/\sqrt r\), starting at either positive label \(1\) or \(2\) in units \(1/\sqrt r\). Indeed a nonempty dyad at any site has \(x\)-width at least \(1/(2\sqrt r)\), so its normalized count is at most a constant times its width.
+
+We now account for the upper charge endpoint, where the weights in \eqref{eq:charge} need not be bounded independently of degree. For each charge set \(s_i=\min(l_i,r-l_i)\). An edge numerator under reflection changes only by a sign: a single reflected endpoint against an unreflected odd label gives \(+1\), and two reflected endpoints give \((-1)^r\). Writing everything in \(s_i\) multiplies the edge quotient by \(\prod_{i:\text{upper}} (s_i/l_i)^{d_i}\). Those powers cancel with the upper denominators in \(Q(l_i/r)^{d_i}\). The exact weights remaining on reflected sites are thus
+\(\sin^2(\pi s_i/(2r))Q(s_i/r)^{d_i}\), while lower sites retain \(\cos^2(\pi s_i/(2r))Q(s_i/r)^{d_i}\). Either parity is permitted after reflection, and in a tie \(l_i=r/2\) use just the lower branch.
+
+For \(s_i\le r^{3/4}\), \(\log Q(s_i/r)\le C r^{-1/2}\), with a combined exponential gain \(\exp(Cn^2r^{-1/2})\) over those sites. Each other site has \(s_i/r\le1/2\), so its factor costs at most \(e^{Cn}\). But such a site lies at dyad index at least \((\log_2 r)/4-1\). For \(\log r\ge C'n\), absorb this cost in half of that site's dyad decay in \eqref{eq:dyad}. Summing over dyads and at most \(2^n\) choices of reflection branches gives
+\begin{equation}
+ \text{absolute rescaled mass with }\max_i |j_i|\ge J_0
+             \ \le\ n^{-n/4}e^{C n}2^{-cJ_0}.
+ \label{eq:tail}
+\end{equation}
+Indeed reserve a fixed fraction of the exponential decay to control the maximum and sum the remaining one-site series independently. The same bound applies to the continuum integral. In particular the integral is absolutely convergent, despite the signs of its factors.
+
+\subsection{Signed quadrature and the limit}
+Restrict the reflected centers to \(r^{-\delta}\le z_i\le r^\delta\), where \(\delta=1/10\). By \eqref{eq:tail} the discarded mass is bounded by \(n^{-n/4}e^{Cn}r^{-c}\) for a possibly smaller \(c\). On this body \(s_i/r\le r^{-1/2+\delta}\) and
+the combined lower-site cap weight is \(1+O(n^2r^{-1+2\delta})\). Every branch with an upper site has at least one sine square \(O(r^{-1+2\delta})\); its combined \(Q\)-gain is bounded uniformly. Summing using \eqref{eq:dyad}, both effects contribute at most \(n^{-n/4}e^{Cn}(1+n^2)r^{-1+2\delta}\) in absolute value.
+
+The remaining mesh has positive odd centers with spacing \(h=2/\sqrt r\). Let \(f(x)=\prod_{ij}K(x_ix_j)\). Direct differentiation, without division by \(K\) at its zeros, gives
+\[
+        |\partial_i f(x)|\le C\!\left(\sum_{j\sim i}x_j\right){\cal G}(x).
+\]
+On each midpoint cell the relative coordinate difference from its center is \(O(n^{1/4}hr^\delta)\). Since \(|\dd\log g(u)/\dd\log u|\le1\), the envelope ratio within the cell is bounded by \(\exp(Cn^{9/4}hr^\delta)\), hence by a fixed constant. The gradient bound gives total integrated quadrature error at most \(Cn^2hr^\delta\int{\cal G}\). The integral is bounded by \(n^{-n/4}e^{Cn}\) by \eqref{eq:dyad}. Finally the cells at all positive odd centers partition the positive orthant, and the complement of the retained cells lies in slightly enlarged tails of the form \eqref{eq:tail}. Here \(h\ll n^{-1/4}r^{-\delta}\), and the body is well below the original finite mesh cutoff. Adding the estimates proves \eqref{eq:transfer} for the signed scalar.
+
+The bounded means give \({\cal A}_n\ge n^{-n/4}e^{-C_A n}\).
+The continuum saddle of \cite[Theorem~5.1]{P50} evaluates \(J(G_n)/{\cal A}_n\) as the right hand side of \eqref{eq:joint} in the size limit. After division by \({\cal A}_n\), the transfer error decays if \(C_*\) is chosen sufficiently large. Inserting \eqref{eq:phase} and \(S_{11}=\sqrt 2\,\pi r^{-3/2}(1+O(r^{-2}))\) proves \eqref{eq:joint}. For example the hypotheses include equal-class blowups of an odd cycle, using equal template edge weights. They are not restricted to multipartite templates. The exponential condition is a sufficient uniform window; the argument neither implies a polynomial threshold nor resolves the regime where reflected endpoints contribute at leading order.

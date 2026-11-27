@@ -1,0 +1,58 @@
+\section{From the Jacobian scheme to the action}\label{sec:normal}
+
+The ideal identity alone does not imply equivalence of potentials. The next lemma removes higher terms \emph{after} the leading potential and its ideal have been determined. It applies also to a nonisolated germ.
+
+\begin{lemma}[Weighted analytic removal of higher terms]\label{lem:moser}
+Assign positive integer weights \(w_i\) to the coordinates. Let \(f_D\) be a weighted homogeneous polynomial of degree \(D\), and \(f=f_D+h\) an analytic germ with all monomials of \(h\) of weight greater than \(D\). If \(\Jac_f=\Jac_{f_D}\), the two functions are real analytically right equivalent.
+\end{lemma}
+\begin{proof}
+Write \(\nabla h=A\nabla f_D\) with analytic \(A\). In entry \(A_{ij}\) discard terms of weight \(\le w_j-w_i\); they give only weights \(\le D-w_i\) in the \(i\)-th derivative, which cancel identically because the generators are weighted homogeneous. The constant part of the remaining \(A\) is strictly triangular for coordinates ordered by weight. Thus \(I+tA\) is locally invertible uniformly on \(0\le t\le 1\). Weighted radial integration gives \(h=\sum_j b_j\partial_j f_D\) with \(b_j\) of weight \(>w_j\): insert \((\delta_u x)_j=u^{w_j}x_j\) in
+\[
+ h(x)=\int_0^1\sum_i w_i(\delta_u x)_i
+                     \partial_i h(\delta_u x)\,\frac{\dd u}{u}
+\]
+and use the coefficient weights just obtained. The analytic vector field defined by \((I+tA)^{\mathsf T} V_t=-b\) fixes the origin, and \(d(f_D+t h)(V_t)=-h\). Its local flow gives the desired right equivalence. When all weights are one, \(V_t=O(|x|^2)\).
+\end{proof}
+
+For the ordinary homogeneous case, if \(g\) has degree \(D\ge3\) and \(\Jac_f=\Jac_g\), the action has no positive terms of degree below \(D\). The leading part \(f_D\) has the same span of degree-\((D-1)\) derivatives as \(g\), so \(\Jac_{f_D}=\Jac_g\). We now determine \(f_D\) directly rather than assume it is \(g\).
+
+\subsection{Fully orthogonal trees}
+
+\begin{theorem}[Exact cubic]\label{thm:cubic}
+Suppose every neighboring pair of axes is orthogonal at the reference point, in addition to the hypotheses of Theorem~\ref{thm:flat}. The local Coulomb-reduced action is real analytically right equivalent up to a nonzero scalar, the constant action value, and spectator coordinates to \(\Phi_G\) in \eqref{eq:treephi}.
+\end{theorem}
+\begin{proof}
+All \(T_e\) vanish at the reference, and \(\Phi_G\) is the homogeneous cubic \eqref{eq:treephi}. The common gradient span in degree two consists of the edge pair monomials \(p_vp_w\) and of
+\[
+                   L_v=\sum_{w\sim v} T_{vw} p_w.
+\]
+A cubic with all derivatives in this span has no spectator terms and no terms with two or more edge variables, since one derivative would leave a forbidden monomial. A pure \(p\)-monomial with a repeated variable leaves a square in one derivative. Three distinct \(p\)'s would require all three pair edges for the three derivatives, impossible on a tree. Thus \(f_3=\sum_e T_e Q_e(p)\) with \(Q_e\) a combination of edge pairs. If \(e=vw\), the coefficient of \(T_e\) in a \(p\)-derivative lies in the span of \(p_v,p_w\), forcing \(Q_e=c_e p_vp_w\). In the derivative at \(p_v\) the terms \(T_{vw}p_w\) can occur only through \(L_v\), so their coefficients coincide at \(v\). Connectivity makes \(f_3=c\Phi_G\), and equality of ideals gives \(c\ne0\). Lemma~\ref{lem:moser} finishes the proof.
+\end{proof}
+
+\subsection{Perfectly matched spine with arbitrary pendant valence}
+
+Let \(H\) be a fixed tree, the \emph{spine}, with \(m\) vertices. Attach \(m_v\ge1\) terminal pendant vertices at each \(v\in V(H)\) to form the full plumbing tree \(G\). At the reference configuration let every terminal pendant dot vanish, and every spine dot be nonzero with nonparallel axes. These conditions are realizable by choosing child axes recursively. The entire enlarged graph is being plumbed, not only the spine. Write \(x_v\) for the spine defects and \(y_{va}\) for terminal pendant defects. If \(B\) is the signed adjacency of the corrected spine dots and \(d_{va}\) the terminal dot coordinates, the finite graph potential is
+\[
+          \tfrac12 x^{\mathsf T}B x+\sum_v x_v\sum_a d_{va}y_{va}.
+\]
+On a tree \(B=Q B_0 Q\), where \(B_0\) is the signed weighted spine adjacency at the reference and \(Q\) is diagonal with positive analytic entries and \(Q(0)=I\). Indeed fix the root scale to one and solve \(Q_v Q_w=B_{vw}/(B_0)_{vw}\) successively. Set \(X=Qx\), \(s_{va}=d_{va}/Q_v\), and \(z_v=\sum_{a=1}^{m_v}s_{va}y_{va}\). This gives the finite model
+\begin{equation}\label{eq:finitemodel}
+        F(X,s,y)=\tfrac12 X^{\mathsf T}B_0X+X^{\mathsf T}z ,
+\end{equation}
+with all corrected spine dot coordinates now passive. We use this same notation in the unmatched setting.
+
+\begin{theorem}[Exact quartic]\label{thm:quartic}
+Suppose \(H\) has a perfect matching. The actual reduced action is real analytically right equivalent, with its constant value understood, to
+\begin{equation}\label{eq:quartic}
+                    g(s,y)=-\tfrac12 z^{\mathsf T}B_0^{-1}z,
+           \qquad z_v=\sum_a s_{va}y_{va},
+\end{equation}
+with spectator coordinates. For a spine consisting of one edge and one pendant per site this is one product of four real variables, up to an invertible linear rescaling.
+\end{theorem}
+\begin{proof}
+A tree cannot have two distinct perfect matchings, because their symmetric difference would contain an even cycle. The bipartite cross block \(M_0\) of \(B_0\) therefore has a single nonzero matching term in its determinant. Completing the square in \eqref{eq:finitemodel} gives the model \eqref{eq:quartic} after splitting off an invertible quadratic form. By Lemma~\ref{lem:coulomb}, the analytic action has the same ideal as this quartic in local coordinates.
+
+Put \(C=-B_0^{-1}\). This symmetric matrix vanishes on its two diagonal color blocks. Its off-diagonal support graph is connected, since otherwise \(C\) and \(B_0\) would both be permutationally block diagonal. Each cubic derivative of \(g\) consists of one complementary factor from a given site times the corresponding field \(\sum_j C_{vj}z_j\). Consider a monomial of a homogeneous quartic \(f_4\) with the same cubic gradient span. All its derivatives must leave one full matched pair and one factor from a different site. With four variables the only permissible distribution over sites is \(2+2\); the distributions \(4\), \(3+1\), \(2+1+1\), and \(1+1+1+1\) each have a forbidden derivative. In the \(2+2\) case, differentiating on each side in turn shows that both pairs are complete products \(s_{va}y_{va}\). Spectator variables are likewise excluded.
+
+The coefficient of the product of pair \(a\) at \(v\) with pair \(b\) at \(w\) must be \(c_{va}C_{vw}\): differentiate with respect to \(s_{va}\) and use the fact that the unmatched factor \(y_{va}\) occurs in a unique gradient row with an outside complete pair. Symmetry then forces \(c_{va}=c_{wb}\) whenever \(C_{vw}\ne0\), for every \(a,b\). Connected support makes the scalar common. Equality of the leading ideals gives \(c\ne0\). Lemma~\ref{lem:moser} yields analytic right equivalence to \(cg\); dilating all \(s_{va}\) on one color absorbs \(c\) including its sign.
+\end{proof}

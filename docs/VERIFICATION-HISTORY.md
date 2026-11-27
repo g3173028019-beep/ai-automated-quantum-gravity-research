@@ -84,3 +84,11 @@ The three WRT manuscripts were assembled and internally checked for their stated
 - [Paper 48 verification](../papers/48-wrt-leading-logarithms/VERIFICATION.md)
 - [Paper 49 verification](../papers/49-wrt-semiclassical-sewing/VERIFICATION.md)
 - [Paper 50 verification](../papers/50-wrt-graph-detection-and-stability/VERIFICATION.md)
+
+## WRT follow-ups: analytical release
+
+Each article has an independent mathematical cross-review, a clean deterministic LaTeX build, and a final PDF inspection. The 50B package also includes an exact graph and integer-homology replay. The regular, singular and simultaneous limits use the distinct hypotheses recorded in the paper pages.
+
+- [Paper 49B verification](../papers/49b-cs-normal-forms/VERIFICATION.md)
+- [Paper 48+49 verification](../papers/48-49-wrt-torsion-bridge/VERIFICATION.md)
+- [Paper 50B verification](../papers/50b-wrt-topological-blindness/VERIFICATION.md)

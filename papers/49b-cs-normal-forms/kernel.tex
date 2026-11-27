@@ -1,0 +1,62 @@
+\section{Coupled unmatched kernel blocks}\label{sec:kernel}
+
+For an arbitrary spine let \(U=\ker B_0\), \(\Pi_U\) its orthogonal projection, and \(B_0^+\) the inverse of \(B_0\) on \(U^\perp\), extended by zero on \(U\). Splitting the nondegenerate variables of \eqref{eq:finitemodel} leaves the finite model
+\begin{equation}\label{eq:reduced}
+     G_{\rm red}(u,s,y)=u\cdot\Pi_U z-\tfrac12 z^{\mathsf T}B_0^+z,
+          \qquad u\in U.
+\end{equation}
+Its Jacobian ideal is exact for the flat deformation scheme by Theorem~\ref{thm:flat} and Lemma~\ref{lem:coulomb}. The rank of \(B_0\) is \(2\nu(H)\), where \(\nu(H)\) is the maximum matching size. Indeed a nonzero bipartite minor gives a matching, and every square bipartite minor admitting a matching has only one nonzero matching term, by the absence of cycles. The signature of the nonsingular part is zero by bipartiteness. The analytic equality of actions will now be shown on a specific family of unmatched spines.
+
+\begin{theorem}[Exact connected-block form]\label{thm:blocks}
+Start from any connected tree \(T_0\) of \(n\) centers and attach \(r_i\ge 2\) degree-one rays to center \(i\), forming \(H\). Subsequently attach \(m_v\ge1\) terminal pendants to each \(v\in H\), forming the full plumbing tree \(G\). Impose the reference conditions of Theorem~\ref{thm:quartic}, without requiring a perfect matching. Up to its constant action value and one nonzero real scalar, the actual Coulomb reduction is real analytically right equivalent to the weighted homogeneous function
+\begin{equation}\label{eq:blocks}
+      g=\sum_i\sum_{a<r_i} k_{ia}(z_{ia}-t_i)
+        +\sum_i Z_i t_i
+        +\sum_{ij\in E(T_0)}h_{ij}t_i t_j,\qquad t_i=z_{i,r_i}.
+\end{equation}
+Here \(Z_i\) is the terminal bilinear pairing sum at a center and \(z_{ia}\) is the terminal pairing sum at the corresponding ray. The signed weights \(h_{ij}\ne0\) are the reference center--center dot products. The weights of \(k_{ia}\) are two; all terminal pair variables have weight one. Spectator variables are allowed. The case \(n=1\) comprises all star spines with at least two rays.
+\end{theorem}
+\begin{proof}
+In \eqref{eq:finitemodel} write \(x_i,x_{ia}\) for the spine defects at centers and rays, \(b_{ia}\ne0\) for the center--ray edge weights. Replace \(x_{ia}\) by \(b_{ia}x_{ia}\) and \(z_{ia}\) by \(z_{ia}/b_{ia}\) as coordinates, preserving their product. With the new variables, set \(p_i=\sum_a x_{ia}\) and \(k_{ia}=x_{ia}\) for \(a<r_i\). The \(2n\) center--sum variables \((x_i,p_i)\) have a nonsingular split Hessian, due to \(\sum_i x_i p_i\). Eliminating them fixes \(x_i=-t_i\) and cancels the terms in \(p_i\). Reflecting one variable in every central pair changes \(-Z_i t_i\) to \(Z_i t_i\), yielding \eqref{eq:blocks}. Thus the reduced model and the actual action \(f\) have the same Jacobian ideal. It remains to establish rigidity under that equality.
+
+Write \(q_{ia}=z_{ia}-t_i\), \(P=(q_{ia})\), and let \(X_i,Y_{ia}\) denote all the pair variables at a center and at a ray, respectively. The \(k\)-linear forms in the ray derivatives of \(g\) are \(\ell_{ia}=k_{ia}\) for \(a<r_i\) and \(\ell_{i,r_i}=-\sum_{a<r_i}k_{ia}\). Each is multiplied by the complementary pair factor at that ray. The remaining gradient generators are the \(q_{ia}\) of weight two and the central derivatives \(t_i\partial_{X_i}Z_i\) of weight three. The passive variables have weight one.
+
+There is no term of positive weight below four in \(f\). A monomial with \(k\) of that weight or any monomial of weight below three would give a derivative of weight below two. A pure weight-one-variable cubic would have to leave a complete scalar pair after every nonzero differentiation, which is impossible because these pairs are disjoint; this includes repeated variables and spectators. In weight four, \(k^2\) is excluded by its \(k\)-derivative. The \(\partial_k f_4\) are thus a constant invertible recombination of the independent \(q_{ia}\), the only weight-two generators. In weight three, the \(k\)-linear part of each ray derivative has a distinct complementary factor, so its linear \(k\) form must be proportional to the same \(\ell_{ia}\) as for \(g\). Within each block \(i\) the unique relation among the \(\ell_{ia}\) involves every ray with nonzero coefficient, forcing these proportionality factors to be the same \(c_i\ne0\) on the whole block. Thus
+\[
+       f_4=\sum_{i,a<r_i}c_i k_{ia}q_{ia}+R(X,Y,\phi)
+\]
+for a quartic \(R\) in weight-one variables, with passive coordinates \(\phi\).
+
+Define \(W_{ia}=\mathbf 1_{a=r_i}(Z_i+\sum_j h_{ij}t_j)\). Comparing the pure weight-one-variable parts of the gradients gives, componentwise,
+\begin{align}
+ \partial_X R,\ \partial_\phi R
+       &\in P+\sum_i t_i\,\operatorname{span}(X_i),\\
+ \partial_{Y_{ia}}R-c_i W_{ia}\partial_{Y_{ia}}z_{ia}
+       &\in P+\sum_i t_i\,\operatorname{span}(X_i).\label{eq:blockres}
+\end{align}
+Indeed, after matching the \(k\)-linear coefficient, no combination of other ray rows can enter without a new \(k\)-linear monomial. Only the central derivatives and linear multiples of \(q\) can remain.
+
+The ideal \(P\) involves no center or spectator variable. Homogeneous integration in the center variables shows that
+\[
+ R=\sum_i t_i Q_i(X)+\Theta(Y,\phi)+\sum_{i,a<r_i}q_{ia}U_{ia}
+\]
+with \(Q_i,U_{ia}\) homogeneous quadratic polynomials. For a nonrepresentative ray \(a<r_i\), the center-degree-two part in \eqref{eq:blockres} is \(U_{ia,2}(X)\partial_{Y_{ia}}z_{ia}\) modulo \(P\). Its ray degree is one, so it vanishes as a polynomial, giving \(U_{ia,2}=0\). Comparing center degree two at the representative ray now gives \(Q_i=c_i Z_i\). The spectator derivative of \(\Theta\) is in \(P\), so \(\Theta\) is represented there by its purely ray-dependent part.
+
+Let \(E_i\) be Euler differentiation over all ray variables of group \(i\). It preserves \(P\), whose generators have degree two in their own group and zero in the others. In center degree zero, applying \(E_i\) in \eqref{eq:blockres} yields
+\[
+ E_i\Theta\equiv 2c_i t_i\sum_j h_{ij}t_j\pmod P.
+\]
+Summing this equation and using the total quartic degree gives
+\(\Theta\equiv \tfrac12\sum_i c_i t_i\sum_j h_{ij}t_j\pmod P\).
+Differentiating this expression by \(E_i\) and comparing the individual equation gives
+\[
+                  \sum_j(c_i-c_j)h_{ij}t_i t_j\equiv 0\pmod P.
+\]
+The \(t_i\) have no polynomial relation in this quotient: in each ray of group \(i\) assign one pair the coordinates \((1,t_i)\) and all others zero, satisfying every \(q=0\) for arbitrary real \(t_i\). Thus \(c_i=c_j\) on each center edge, and connectivity makes them one common scalar \(c\).
+
+It follows that \(f_4=cg+\sum_{ia}q_{ia}U_{ia}\) for a quadratic vector \(U\), and the weighted homogeneous change \(k\mapsto k+c^{-1}U\) absorbs its difference from \(cg\). Finally \(\Jac_{f_4}=\Jac_g\): compare degree two and then degree three. At degree three, constant multiples of the weight-two \(k\)-derivatives of \(f\) cannot produce a new generator by cancellation of their lower parts, since these parts form the independent basis of \(\operatorname{span}(q)\). Hence comparison at those two weights accounts for all the generators. Lemma~\ref{lem:moser} now gives the full analytic equivalence, including all higher weights.
+\end{proof}
+
+\begin{remark}
+When \(T_0\) has several vertices, its quartic coupling synchronizes the action scales of distinct cubic kernel blocks. The proof uses the disjoint ray groups and the specified form of the central gradient rows. It does not treat arbitrary overlapping kernel supports. For those spines \eqref{eq:reduced} remains an exact local \emph{scheme} and the integral statement below holds for the model.
+\end{remark}

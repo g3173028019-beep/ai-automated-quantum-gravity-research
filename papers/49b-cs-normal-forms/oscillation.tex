@@ -1,0 +1,73 @@
+\section{Local oscillation and the surviving logarithms}\label{sec:osc}
+
+Let \(H\) be any of the spines of \eqref{eq:finitemodel} and put \(D=\{v:m_v=1\}\), \(d=|D|\). The following polytope depends only on the subgraph induced by \(D\):
+\begin{equation}\label{eq:polytope}
+ {\cal P}_D=\{t\in[0,1]^D:t_i+t_j\le1
+                      \text{ for every }ij\in E(H[D])\}.
+\end{equation}
+Its volume is coordinate Lebesgue volume, set to one for \(D=\varnothing\). Reflecting one color gives the order polytope for the edge order from that color to the other.
+
+For each site define a positive measure \(\mu_v\) in the variables \((s_v,y_v)\). When \(m_v=1\), let \(\mu_v\) be point mass at \((s_v,y_v)=(0,0)\). When \(m_v\ge2\), let \(\mu_v\) be finite zero-pairing coarea on compact sets:
+\begin{equation}\label{eq:coarea}
+  \int a_v\,\dd\mu_v =
+       \int_{s_v\ne0}\frac{\dd s_v}{|s_v|}
+            \int_{s_v^\perp}a_v(s_v,y_v)\,\dd\sigma(y_v).
+\end{equation}
+Here \(\sigma\) denotes Euclidean surface volume in \(y_v\); local finiteness follows from the integrability of \(1/|s_v|\) in dimension \(m_v\ge2\). Let \(\Lambda(a)=\int a(0,s,y,\phi)\prod_v\dd\mu_v\,\dd\phi\), setting the spine-defect variable to zero while keeping the passive variables \(\phi\). The same notation will denote the analogous functional on an amplitude of the reduced model, setting \(u=0\) there.
+
+\begin{theorem}[Reference-density asymptotic]\label{thm:coefficient}
+Let \(a\) be a smooth compactly supported amplitude in the coordinates of \eqref{eq:finitemodel}. For the unreduced function \(F\),
+\begin{equation}\label{eq:fullasymp}
+ \lim_{\lambda\to\infty}
+ \frac{\int e^{\ii\lambda F}a\,\dd X\,\dd s\,\dd y\,\dd\phi}
+      {\lambda^{-m}(\log\lambda)^d}
+       =(2\pi)^m2^d\,\Vol({\cal P}_D)\,\Lambda(a).
+\end{equation}
+Set \(\nu=\nu(H)\), and let \(\det{}' B_0\) be the determinant on \((\ker B_0)^\perp\), with determinant one for the zero-dimensional space. For \eqref{eq:reduced}, the normalizing scale is \(\lambda^{-m+\nu}(\log\lambda)^d\), and the limit is
+\begin{equation}\label{eq:redasymp}
+  (2\pi)^{m-\nu}2^d|\det{}' B_0|^{1/2}
+                   \,\Vol({\cal P}_D)\,\Lambda(a).
+\end{equation}
+In the actual analytic normal-form regimes of Theorems~\ref{thm:quartic} and \ref{thm:blocks}, these give the local oscillation after transforming the smooth reference density to the stated coordinates and removing the constant action phase. A nonzero overall action scalar rescales \(\lambda\); its sign has no effect on the real coefficient for a real amplitude. For arbitrary unmatched spines the theorem is an integral of the polynomial model.
+\end{theorem}
+
+\begin{proof}
+First take a tensor product of smooth compact scalar cutoffs, including the \(X\) variables. At a single scalar product \(z=sy\) with cutoffs \(u(s),v(y)\), its pushforward \(\rho\) satisfies, with Fourier convention \(e^{\ii\xi z}\),
+\[
+  \widehat\rho(\xi)
+       =\int u(s)\widehat v(\xi s)\,\dd s
+       =\frac{2\pi u(0)v(0)}{|\xi|}+O(|\xi|^{-2}).
+\]
+To see this, scale \(s\) by \(|\xi|\), subtract \(u(0)\), and use a first derivative bound times a weighted Schwartz seminorm of \(\widehat v\). Both \(\widehat\rho\) and \(\xi\partial_\xi\widehat\rho\) are \(O((1+|\xi|)^{-1})\) for all real \(\xi\); for the derivative use the same expression with the Schwartz function \(t\widehat v'(t)\). At site \(v\), the sum of \(m_v\) independent scalar pairs has Fourier transform \(\widehat\rho_v\) equal to the product of the single-pair transforms. Thus its transform and first Euler derivative are \(O((1+|\xi|)^{-m_v})\).
+
+For \(m_v\ge2\) the Fourier transform is integrable, and
+\(\int\widehat\rho_v(\eta)\,\dd\eta=2\pi\rho_v(0)\), where \(\rho_v(0)\) equals \eqref{eq:coarea}. Indeed, for each \(s_v\ne0\) the conditional \(y_v\)-integral on the level \(s_v\cdot y_v=z_v\) has the \(1/|s_v|\) factor. It varies continuously at zero after integrating \(s_v\), by its integrable \(1/|s_v|\) majorant for compact cutoffs. This is ordinary coarea; no product of singular distributions at the origin is needed.
+
+Integrating all pair variables by these Fourier transforms leaves
+\[
+  e^{\ii\lambda\sum_{ij\in E(H)}(B_0)_{ij}X_iX_j}
+              \prod_i \widehat\rho_i(\lambda X_i)
+\]
+times the scalar \(X_i\)-cutoffs and the passive factor, to be integrated over \(X\). The multi-pendant variables localize on \(X_i=\eta_i/\lambda\). Restrict them temporarily to \(M^{-1}<|\eta_i|<M\), whose complement has \(o_{M\to\infty}(1)\) normalized mass by absolute Fourier integrability. For \(i\in D\), use independent signed dyadic intervals of absolute size \(b_i\). Let \(\ell=\log\lambda\) and \(t_i=-\log b_i/\ell\). The interior scales \(0<t_i<1\) have normalized single-coordinate mass bounded by \(C/\ell\) per dyadic interval, since before normalization a box has weight \(O(b_i/(1+\lambda b_i))\). Above this range there are only bounded outer intervals, and below the \(\lambda^{-1}\) scale the weights sum geometrically. Thus strips of width \(\delta\) at \(t_i=0,1\), at ties \(t_i=t_j\) and at edge walls \(t_i+t_j=1\) have combined normalized absolute mass \(O(\delta)+o(1)\): each is specified by an interval of \(O(\delta\ell+1)\) choices for one dyadic index. Multi-pendant compact annuli do not affect these bounds.
+
+On a remaining box for which every slow edge sum satisfies \(t_i+t_j>1+\delta\), all phase terms tend to zero uniformly, because \(\lambda |X_iX_j|\to0\). Edges meeting a fast variable have the same limit on the retained annuli. If some slow edge instead has \(t_i+t_j<1-\delta\), choose one endpoint \(i\) of such an edge and the largest neighbor scale \(b_{j_*}\) of \(i\). On the retained boxes the slow exponents differ by at least \(\delta\), and fast scales are strictly smaller than all such relevant slow scales. The \(j_*\)-term therefore dominates the quadratic-phase derivative in \(X_i\), uniformly over signs and each whole box; in absolute value it is bounded below by \(c b_{j_*}\). The derivative is independent of \(X_i\). Integration by parts in \(X_i\) on that interval, including its endpoints and the Euler derivative of the cutoff-transform product, bounds the box by its absolute majorant times \(C/(\lambda b_i b_{j_*})=O(\lambda^{-\delta})\). Summing the estimates makes all these boxes negligible. This step does not impose a sign on the transform or assume noncancellation near a wall.
+
+In the first set of boxes use the single-pair asymptotic and the actual continuous logarithmic coordinate \(t_i=-\log|X_i|/\ell\). Each sign yields \(2\pi u_i(0)v_i(0)\,\dd t_i\) after \(\lambda^{-1}\ell\) normalization. Replacing the logarithmic coordinate of a dyadic interval by that of a point in it changes the coordinate by \(O(1/\ell)\), harmless after removing the strips above. A fast variable gives \(2\pi\rho_i(0)\). The \(X_i\)-cutoffs tend to their values at zero on the retained region. Let \(\lambda\to\infty\), restore the strips by \(\delta\downarrow0\), then remove the fast cutoffs by \(M\to\infty\). The surviving set has \(t_i+t_j\ge1\) for every edge of \(H[D]\); reflecting every \(t_i\) gives \eqref{eq:polytope}. The two signs at each singleton give \(2^d\). This proves \eqref{eq:fullasymp} for a tensor amplitude.
+
+The estimates use finitely many smooth seminorms of the factors on fixed compact supports. To treat a general amplitude, integrate out the passive coordinates, expand the remainder in a larger periodic product box, and multiply each term by fixed scalar cutoffs equal to one on its support and zero near the larger boundary. The Fourier coefficients decay faster than every power and the relevant seminorms grow at most polynomially in the Fourier index. After normalization, the estimates justify summing the limits absolutely. The resulting multilinear functional is exactly \(\Lambda(a)\).
+
+Finally choose \(X=u+v\) in an orthogonal splitting of the kernel and its complement. Translating \(v\) by \(B_0^+ z\) gives a nondegenerate quadratic form in the translated variable plus \eqref{eq:reduced}. Given a reduced amplitude \(a\), multiply it by any smooth compact factor \(b\) of the translated variable with \(b(0)=1\), and apply \eqref{eq:fullasymp} exactly to this product in split coordinates. On the support of \(\prod_i\mu_i\), \(z=0\), so the right-hand side reduces to the same \(\Lambda(a)\). Ordinary stationary phase of the split quadratic factor gives \((2\pi)^\nu|\det{}' B_0|^{-1/2}\lambda^{-\nu}\) with signature zero. Dividing gives \eqref{eq:redasymp}. This use of ordinary stationary phase is only on the nondegenerate variables; the logarithms were computed directly, irrespective of general results on degenerate integrals such as~\cite{Duistermaat}.
+\end{proof}
+
+\subsection{Comparison with the closed invariant}
+
+Write \(N=|G|\) and \(r=k+2\) for shifted level. Let the sphere-normalized closed WRT invariant be \(\tau_r\), with \(\tau_r(S^3)=1\). The exact quantum face theorem of~\cite{Paper48}, in its unframed paired-cap tree case, gives power \(r^{3N/2-\nu(G)}\) and a leading logarithmic power equal to the dimension of its maximizing face, with an explicit positive coefficient after the parity sign \((-1)^{r(N-1)}\). The normalization differs from \(Z_r(S^2\times S^1)=1\) by \(Z_r=S_{11}\tau_r\)~\cite{Turaev,Paper48}. On trees the signed seam marks do not alter the closed contraction: the bare \(S\)-kernel is unchanged because the \(\SU\) labels are self-dual. In the oriented anomaly exponent \(-s-\operatorname{sig}Q\) of the exact modular contraction~\cite[Lemma~1.1]{Paper49}, the cap signs sum to \(s=0\) and \(Q\) is the negative signed adjacency. Its signature is zero by bipartiteness.
+
+For our \(G\), use all spine vertices as a vertex cover and choose one terminal pendant at each spine vertex for the matching. Then \(\nu(G)=m\). Any remaining terminal pendant forces its parent coordinate to zero in the maximizing face of the quantum theorem. A chosen matched pendant sees only its parent, so it induces no further ordering constraint. Thus the quantum free coordinates are exactly \(D\) and their residual inequalities are precisely \eqref{eq:polytope}. The bounded discrete sector of the closed coefficient is
+\[
+        K_G=\prod_{v:m_v>1}\left(\sum_{\substack{j\ge1\\j\ {\rm odd}}}j^{-m_v}\right)
+             =\prod_{v:m_v>1}(1-2^{-m_v})\zeta(m_v).
+\]
+Indeed each unmatched terminal pendant gives the one-neighbor zero-spin probability \(1/j\), and the matched one cancels its compensating \(j\). The equality of the scalar volume and the matching power deficit in the two calculations follows. The quantum \(K_G\) is a discrete bounded-charge weight; the corresponding reference-density factor in \eqref{eq:fullasymp} or \eqref{eq:redasymp} is a continuous coarea functional. They are not equated.
+
+For example, a one-edge spine with one pendant per vertex has \(m=2,\nu=1,d=2\), and \(\Vol({\cal P}_D)=1/2\). The exact local quartic produces \(\lambda^{-1}(\log\lambda)^2\). If either site acquires another pendant, it no longer contributes an independent logarithm: the same action mechanism now gives a finite local coarea constraint at that site. For a perfectly matched spine more generally, writing the quartic as \(z_L^{\mathsf T}Kz_R\) with \(K=-M_0^{-{\mathsf T}}\) yields the prefactor \((2\pi)^{m/2}2^d/|\det K|\) in \eqref{eq:redasymp}. The leading result therefore retains the exact shape volume even when the local density is not a product.

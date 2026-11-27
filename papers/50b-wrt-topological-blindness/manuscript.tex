@@ -1,0 +1,180 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{hyperref,xcolor}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,
+  citecolor=blue!50!black,pdfauthor={AI Automated Quantum Gravity Research},
+  pdftitle={All-level WRT collisions on fixed graph-manifold backbones}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\sig}{sig}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\rank}{rank}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\dd}{\mathrm d}
+\title{All-level WRT collisions on fixed\\ graph-manifold backbones}
+\author{AI Automated Quantum Gravity Research}
+\date{}
+\setlength{\emergencystretch}{1em}
+\begin{document}
+\maketitle
+\begin{abstract}
+We vary the signs of section--fiber exchanges on a fixed bipartite backbone to obtain closed oriented graph manifolds with identical uncolored \(\SU(2)\) Witten--Reshetikhin--Turaev invariants at every level. The torus involution acts trivially on self-dual labels, and the oriented Maslov correction vanishes for every signing. Nevertheless the first homology over \(\mathbb Z[1/2]\) depends on the signed adjacency matrix. One backbone yields arbitrarily many distinct first Betti numbers; another yields arbitrarily many different odd torsion groups at a common first Betti number. The known odd cyclic pointed invariant recovers exactly the rank and odd primary abelian-group data invisible in these examples. A separate uniform estimate transfers the continuum saddle for strict dense nonbipartite templates to a simultaneous level and size limit, allowing arbitrary sublinear maximum-degree deletions and keeping the signed framing phase exact.
+\end{abstract}
+
+\section{Introduction}
+An uncolored topological quantum field theory assigns one complex scalar to a closed oriented three-manifold. How much topology survives when the manifold is assembled along explicitly marked tori? We answer this question for a class of sign changes on section--fiber exchanges. The graph and all Seifert pieces are held fixed. The sign is invisible to the bare \(\SU(2)\) contraction, but a priori can change the oriented framing correction. It also changes the relations used to compute first homology. This tension gives exact collisions rather than agreement to any specified asymptotic order.
+
+Quantum-invariant collisions are known. In particular, Kania-Bartoszy\'nska constructed distinct three-manifolds with identical WRT invariants \cite{Kania}; Funar constructed collisions among Sol torus bundles, including pairs with equal RT invariants for every modular category \cite[Theorems~1.1 and~1.3]{Funar}. Andersen and J{\o}rgensen showed that the central involution acts trivially on \(\SU(2)\) torus states and gives equal invariants for a Dehn twist monodromy and its negative \cite[Eq.~(5)]{AJ}. For monodromies \(I\) and \(-I\) this already gives an all-level pair with \(b_1=3\) and \(b_1=1\), by the torus-bundle homology sequence. Our contribution is a fixed-backbone graph-manifold mechanism with a direct signed-adjacency computation, and with controllable rank and odd torsion in one family. We do not claim priority for non-detection of homology or for pointed cyclic detection of it.
+
+The earlier study \cite{P50} examined discrimination by connector motifs and proved a continuum saddle for dense unsigned backbones. It took the level limit at fixed graph before passing to large size for that saddle. Here the exact collision families are bipartite and do not invoke a limit; the final section instead treats a separate nonbipartite class and proves an explicit finite-level approximation uniform in size. In that class the oriented phase can vary with the signing.
+
+\section{Signed sewing and odd-localized homology}
+\label{sec:signed}
+Let \(G\) be a finite connected simple graph with at least one edge. At a vertex \(v\) of degree \(d_v\) take \(X_v=\Sigma_{0,d_v+2}\times S^1\) with base-then-fiber orientation. At each boundary let \(z\) be the base boundary section and \(h\) the regular fiber, with \(z\cdot h=1\). Fill two dedicated cap ports with meridians \(2z+h\) and \(-2z+h\). For each edge \(e=vw\) identify the remaining tori by
+\[
+        z_{ve}\longmapsto\epsilon_e h_{we},
+       \qquad h_{ve}\longmapsto\epsilon_e z_{we},
+       \qquad \epsilon_e\in\{1,-1\}.
+\]
+Both signs give orientation-reversing maps. Let \(M_{G,\epsilon}\) be the resulting oriented closed manifold. Write \(A_\epsilon\) for the symmetric signed adjacency matrix, \(R=\mathbb Z[1/2]\), and \(b_G=|E(G)|-|V(G)|+1\). We use the standard unitary \(\SU(2)\) theory at shifted level \(r=k+2\ge3\), with \(Z_r(S^2\times S^1)=1\), \(Z_r(S^3)=S_{11}\), and \(\tau_r=Z_r/S_{11}\).
+
+\begin{theorem}[Exact sign blindness]
+\label{thm:main}
+For any \(G,\epsilon\) as above,
+\begin{equation}
+ H_1(M_{G,\epsilon};R)\cong R^{b_G}\oplus\coker_R A_\epsilon .
+ \label{eq:hom}
+\end{equation}
+If \(G\) is bipartite, then for every \(r\ge3\)
+\begin{equation}
+ Z_r(M_{G,\epsilon})=Z_r(M_{G,+}).
+ \label{eq:collision}
+\end{equation}
+This is equality of oriented complex scalars. For each such \(G\) the common sequence is nonzero at \(r=3\).
+\end{theorem}
+
+\subsection{The charge trace and its oriented phase}
+Let \(a,b\) denote color labels \(1,\ldots,r-1\). The modular matrices and anomaly unit in our conventions are
+\[
+  S_{ab}=\sqrt{2/r}\sin(\pi ab/r),\qquad
+  \Theta_{aa}=\exp\!\bigl(\pi i(a^2-1)/(2r)\bigr),\qquad
+  \kappa_r=\exp\!\bigl(3\pi i/4-3\pi i/(2r)\bigr).
+\]
+Use the core basis dual to itself under the two-point sphere pairing. The \((d+2)\)-port coefficient of the product block is
+\(\sum_a S_{1a}^{-d}\prod_jS_{ab_j}\), by Verlinde. Inserting the cap states gives one factor \((S\Theta^{2}S)_{a1}\) and one \((S\Theta^{-2}S)_{a1}\); which port receives which sign is immaterial here. Each unweighted seam contraction gives the Hopf matrix \(S\). Changing the seam sign composes with \(-I\) on an oriented torus. This preserves the section Lagrangian and acts by charge conjugation, \(S^2\). Since all simple labels are self-dual, \(S^2=I\). Equivalently the two tested seam maps give oppositely clasped Hopf pairs, whose matrices are \(S\) and \(S^{-1}=S\). These facts give identical bare contractions for all signings of \(G\); they apply to traces along cycles without an additional dimension factor.
+
+We compute the global composition index, rather than using bare equality as a proxy for oriented equality. The extended TQFT gluing rule is used with a section Lagrangian at every port \cite{BHMV,GM,Turaev}. If \(q,p\) are the section and fiber coordinates on the full port space and \(U\) sums ports at each vertex, the actual block-side and cap/seam-side homology kernels are
+\[
+ L_X=\{(U^{\mathsf T}a,p):Up=0\},\qquad L_Y=\{(Tp,p)\}.
+\]
+The first formula follows from the one boundary sum at each vertex and the common class of its fiber copies. In the second, \(T\) is block diagonal: the caps give \(+2,-2\), and the two ports of seam \(e\) give off-diagonal entries \(-\epsilon_e\) and zero diagonal. For example its edge subspace is generated by \(z_{ve}-\epsilon_e h_{we}\) and \(z_{we}-\epsilon_e h_{ve}\). It follows that \(T\) is invertible, \(\sig T=0\), and \(UT^{-1}U^{\mathsf T}=-A_\epsilon\).
+
+The reference kernel is \(L_0=\{(q,0)\}\): at individual port tests it yields zero composition index. On \((L_X+L_0)\cap L_Y\), the Maslov form in the cap/seam-to-block convention of \cite[Section~2]{P50} is \(p^{\mathsf T}T\widetilde p\) on \(\ker U\), by writing \((Tp,p)=(0,p)+(Tp,0)\). Its signature is
+\[
+       \sig(T|_{\ker U})=\sig T-\sig(UT^{-1}U^{\mathsf T})
+                        =\sig A_\epsilon .
+\]
+Indeed the \(T\)-orthogonal complement of \(\ker U\) is \(T^{-1}\operatorname{im}U^{\mathsf T}\), with restricted form congruent to \(UT^{-1}U^{\mathsf T}\). If the restrictions are degenerate, their common radical splits off with a dual isotropic space as a hyperbolic summand, which contributes zero signature. Thus the weight-zero oriented contraction differs by the factor \(\kappa_r^{\sig A_\epsilon}\) in the anomaly convention above. For bipartite \(G\), conjugation of \(A_\epsilon\) by the diagonal \(+1,-1\) on the two parts gives \(-A_\epsilon\). The signature always vanishes, including when \(A_\epsilon\) has a kernel. This proves \eqref{eq:collision}.
+
+For use below we record the scalar explicitly. Put \(n=|V(G)|,\ E=|E(G)|\), define
+\[
+ K(u)=\frac{\sin(\pi u)}{\pi u},\qquad
+ Q(t)=\frac{\pi t}{\sin(\pi t)},\qquad
+ F_d(t)=\cos^2(\pi t/2)\,Q(t)^d ,
+\]
+where \(K(0)=1\). In the defect coordinate \(l=r-a\), the paired cap is \(4r^{-1}\cos^2(\pi l/(2r))\) for odd \(l\) and zero otherwise. To see this directly, expand the sine product in \((S\Theta^2S)_{a1}\). Up to a unit factor the result is
+\([G_r(a-1)-G_r(a+1)]/(2r)\), where
+\[
+ G_r(j)=\sum_{t\bmod 2r}\exp\!\bigl(\pi i(t^2+jt)/r\bigr).
+\]
+Translation gives \(G_r(a+1)=e^{-\pi i a/r}G_r(a-1)\).
+In \(|G_r(j)|^2\), the inner geometric sum retains only differences \(0,r\), giving \(4r\) when \(r+j\) is even and zero otherwise. Taking the squared modulus gives the paired cap. For odd defects on an edge the sine in \(S\) becomes \((-1)^r\sin(\pi l_il_j/r)\). Consequently
+\begin{align}
+ I_r(G)&=\sum_{\substack{1\le l_i<r\\l_i\ {\rm odd}}}
+ \prod_iF_{d_i}(l_i/r)\prod_{ij\in E(G)}K(l_i l_j/r),\label{eq:charge}\\
+ Z_r(M_{G,\epsilon})&=
+ (-1)^{rE}\kappa_r^{\sig A_\epsilon}\,
+ 2^{2n-E/2}\pi^{-E} r^{3E/2-n}\,I_r(G).\label{eq:phase}
+\end{align}
+The prefactor follows by collecting the \(S_{1a}^{-d}\) powers and then cancelling the charge powers against the edge numerators. At \(r=3\) only \(l_i=1\) contributes, and all its factors are nonzero.
+
+\subsection{Homological seam relations}
+With coefficients in \(R\), the two cap sections eliminate as \(-h_v/2,+h_v/2\). A filling does not add an independent longitude generator, since a complementary boundary longitude already represents the solid-torus core. Thus the block has generators \(h_v,z_{ve}\) with \(\sum_{e\ni v}z_{ve}=0\). Seam Mayer--Vietoris identifies \(z_{ve}=\epsilon_e h_w,\ z_{we}=\epsilon_e h_v\), eliminating all port sections. The remaining relations are \(\sum_w (A_\epsilon)_{vw}h_w=0\). The next term of the graph-of-spaces Mayer--Vietoris sequence is the kernel of the ordinary incidence map on \(H_0\); every seam identifies point classes with degree one. This kernel is \(R^{b_G}\). Since it is free, the corresponding short exact sequence splits, proving \eqref{eq:hom}.
+
+If \(G\) is bipartite, denote by \(B_\epsilon\) the signed biadjacency matrix (one part on rows and the other on columns). The two off-diagonal blocks of \(A_\epsilon\) are \(B_\epsilon,B_\epsilon^{\mathsf T}\). The rational nullity is \(n-2\rank_{\mathbb Q}B_\epsilon\). Smith invariants over \(R\) show that the odd torsion is the torsion of \(\coker_R B_\epsilon\) doubled. Conjugating all incident signs at one vertex corresponds to reversing the base and the fiber at that block. The simultaneous reversal preserves the orientation and takes each cap meridian to its negative, so extends over the fillings. It preserves every cycle sign product. On a tree every signing is equivalent by such reversals; the examples below have cycles.
+
+\section{Many homologies in a single WRT family}
+
+\subsection{Different first Betti numbers}
+For a single \(C_4\), the biadjacency has rank one when the cycle sign product is \(+1\) and rank two when it is \(-1\). The two manifolds have \(b_1=3\) and \(b_1=1\), respectively.
+
+For \(m\ge1\), take \(m\) disjoint copies of \(K_{2,2}\) and a shared vertex in the second part, joined to both vertices of the first part in each copy. The graph is connected with \(4m+1\) vertices and \(6m\) edges. In the \(j\)-th copy use the matrix \(\bigl(\begin{smallmatrix}1&1\\1&s_j\end{smallmatrix}\bigr)\), \(s_j\in\{\pm1\}\), and give all hub edges sign \(+1\). The hub column is the sum of the first columns of the separate blocks and does not change their overall rank. If \(k\) of the \(s_j\)'s equal \(+1\), the rank is \(2m-k\). Hence
+\[
+             b_1(M_{G,\epsilon})=2m+1+2k,\qquad 0\le k\le m.
+\]
+By Theorem~\ref{thm:main}, one fixed backbone realizes \(m+1\) distinct first Betti numbers at the same entire WRT sequence.
+
+These collisions do not use connected sums. The filled blocks are orientable Seifert pieces over a punctured sphere with two order-two cone points. The orbifold base admits a surface double cover: send the two exceptional loops to the nonzero element of \(\mathbb Z/2\), with ordinary boundary loops mapping to zero. The lifted total space is a product over a surface with boundary and nonpositive Euler characteristic; the boundary tori are incompressible. Equivalently one may use the usual irreducibility and boundary incompressibility of these Seifert pieces \cite{Hempel}. Gluing irreducible pieces along incompressible tori preserves irreducibility.
+
+\subsection{Prescribed odd torsion at fixed Betti number}
+Take the backbone \(K_{N,N}\). For a binary square matrix \(D\) of size \(N-1\), use the signing
+\[
+      B(D)=
+      \begin{pmatrix}1&\mathbf 1^{\mathsf T}\\
+             \mathbf 1&\mathbf 1\mathbf 1^{\mathsf T}-2D\end{pmatrix}.
+\]
+Subtract the first row from each of the remaining rows, then the first column from each of the remaining columns. This is integral equivalence to \(\operatorname{diag}(1,-2D)\), where the factor \(-2\) is a unit over \(R\). If \(D\) has full rank, Theorem~\ref{thm:main} gives
+\begin{equation}
+ b_1=(N-1)^2,\qquad
+ \operatorname{Tor}_{\rm odd}H_1(M_{G,\epsilon};\mathbb Z)
+        \cong(\coker_R D)^{\oplus2}.
+ \label{eq:torsion}
+\end{equation}
+For odd \(q\ge3\), the binary \((q+1)\)-square matrix
+\(\mathbf 1\mathbf 1^{\mathsf T}-I\) has integral cokernel \(\mathbb Z/q\): its relations identify all generators by subtraction, and the remaining relation is \(q\) times their common class. Block diagonal sums and identity padding therefore realize \(F\oplus F\) for any prescribed finite odd group \(F\), if \(N\) is large enough. At that same \(N\), \(D=I\) has no odd torsion. In \(K_{5,5}\), for instance, \(I_4\) and \(\mathbf 1\mathbf 1^{\mathsf T}-I_4\) give \(b_1=16\) and odd torsion \(0\) and \((\mathbb Z/3)^2\).
+
+Taking independent choices between the two blocks of size \(p_j+1\) for distinct odd primes \(p_1,\dots,p_m\), on \(K_{N,N}\) with \(N=1+\sum_j(p_j+1)\), gives \(2^m\) pairwise nonhomeomorphic manifolds at fixed Betti number and identical all-level WRT. Nonhomeomorphism here follows from ordinary homology and needs no comparison of marked graph presentations.
+
+\section{An independent pointed diagnostic}
+For an odd integer \(q\ge3\) and a unit \(u\bmod q\), take the pointed modular category with simple labels \(\mathbb Z/q\), trivial associator, braiding \(e^{2\pi i uab/q}\) and twist \(e^{2\pi i ua^2/q}\). Its double braiding is nondegenerate because \(2u\) is invertible; now charge conjugation sends \(a\) to \(-a\), and is nontrivial. Use the vacuum-divided invariant \(P_{q,u}\), so \(P_{q,u}(S^3)=1\).
+
+The odd cyclic modulus formula is known from Murakami--Ohtsuki--Okada \cite[Theorem~3.2]{MOO}; see also \cite[Lemma~7.1]{Funar}. We recall the proof to specify the normalization and applicability at positive Betti number. Given any integral surgery linking matrix \(L\) of size \(d\),
+\[
+ P_{q,u}(M)=\text{unit phase}\ \cdot\
+ q^{-d/2}\sum_{x\in(\mathbb Z/q)^d}\exp(2\pi i u x^{\mathsf T}Lx/q).
+\]
+In the squared modulus write \(x=y+c\); summation over \(y\) is zero unless \(Lc=0\bmod q\). In that case the remaining quadratic phase is one. Thus
+\begin{equation}
+  |P_{q,u}(M)|^2=|\ker(L\bmod q)|=|H_1(M;\mathbb Z/q)|.
+  \label{eq:pointed}
+\end{equation}
+No nonsingularity of \(L\) is required: kernel and cokernel have the same cardinality, and the surgery presentation computes the latter.
+
+On the \(C_4\) pair the moduli at any odd prime \(p\) have ratio \(p\). At \(q=3\) the \(K_{5,5}\) pair has ratio \(3\), at equal rational rank. More generally, if the \(p\)-primary cyclic exponents of the torsion are \(e_j\), then
+\[
+       \log_p |P_{p^a,u}(M)|^2=a b_1+\sum_j\min(a,e_j).
+\]
+The successive differences are \(b_1+\#\{j:e_j\ge a\}\). Their eventual value gives \(b_1\) and their decreases give the exponent multiplicities. Therefore the odd pointed moduli recover the full odd-localized \emph{abelian group} invisible to the \(\SU(2)\) scalar in our examples. This statement concerns moduli, not linking pairings, and the pointed theory is a separate measurement.
+
+\input{joint}
+
+\section{Scope of the comparison}
+At the trivial flat \(\SU(2)\) connection, the dimension of \(H^1(M;\mathfrak{su}(2))\) with trivial local coefficients is \(3b_1(M)\). The exact collision thus hides even the first-order deformation dimension at that distinguished classical connection. No equality of the full character varieties or of colored, spin-refined, or cohomology-refined invariants follows. The mechanism is torus charge conjugation together with an oriented anomaly cancellation on bipartite graphs. For nonbipartite graphs the bare contraction remains insensitive to seam signs but the signature phase in \eqref{eq:phase} must be retained. The asymptotic equality in the dense class after division by local normalization and the exact phase is logically separate from the equality of raw scalars in \eqref{eq:collision}.
+
+\begin{thebibliography}{10}
+\bibitem{Kania} J. Kania-Bartoszy\'nska, Examples of different 3-manifolds with the same invariants of Witten and Reshetikhin--Turaev, \emph{Topology} \textbf{32} (1993), 47--54. MR1204405.
+\bibitem{Funar} L. Funar, Torus bundles not distinguished by TQFT invariants, \emph{Geom. Topol.} \textbf{17} (2013), 2289--2344. \href{https://doi.org/10.2140/gt.2013.17.2289}{doi:10.2140/gt.2013.17.2289}.
+\bibitem{AJ} J.~E. Andersen and S.~F. J{\o}rgensen, On the Witten--Reshetikhin--Turaev invariants of torus bundles, \emph{J. Knot Theory Ramifications} \textbf{24} (2015), 1550055. \href{https://arxiv.org/abs/1206.2552}{arXiv:1206.2552}.
+\bibitem{P50} AI Automated Quantum Gravity Research, \emph{What graph structure survives WRT sewing? Hidden connector motifs and the stability boundary of dense cores}, Paper 50 (2026). \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/d23f0b109029d37a09a1b8758dd73f1e27a7ef72/papers/50-wrt-graph-detection-and-stability}{Archived source and PDF}.
+\bibitem{BHMV} C. Blanchet, N. Habegger, G. Masbaum and P. Vogel, Topological quantum field theories derived from the Kauffman bracket, \emph{Topology} \textbf{34} (1995), 883--927.
+\bibitem{GM} P.~M. Gilmer and G. Masbaum, Maslov index, Lagrangians, mapping class groups and TQFT, \emph{Forum Math.} \textbf{25} (2013), 1067--1106. \href{https://arxiv.org/abs/0912.4706}{arXiv:0912.4706}.
+\bibitem{Turaev} V.~G. Turaev, \emph{Quantum Invariants of Knots and 3-Manifolds}, De Gruyter, 1994, Chapter IV.
+\bibitem{Hempel} J. Hempel, \emph{3-Manifolds}, Annals of Mathematics Studies 86, Princeton University Press, 1976.
+\bibitem{MOO} H. Murakami, T. Ohtsuki and M. Okada, Invariants of three-manifolds derived from linking matrices of framed links, \emph{Osaka J. Math.} \textbf{29} (1992), 545--572. \href{https://doi.org/10.18910/4822}{doi:10.18910/4822}.
+\end{thebibliography}
+\end{document}

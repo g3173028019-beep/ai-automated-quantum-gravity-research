@@ -1,0 +1,53 @@
+\section{The macroscopic WRT measure}\label{sec:quantum}
+
+Define \(d\nu_0(x)=2\cos^2(\pi x/2)\,dx\) on \((0,1)\). For each \(b\in B\), choose \(h_b\) independently on its Haar conjugacy class of angle \(\pi(1-x_b)\), and let \(G_a\) be the ordered product of these \(h_b\)'s or their inverses at \(a\in A\) (central factors may be discarded). Set
+\begin{equation}\label{eq:haar}
+ K(g)=\frac{\pi}{4\sin(\arg g)},\qquad L_a(x)=\mathbb E K(G_a),\qquad
+ dM_B(x)=\prod_{b\in B}d\nu_0(x_b)\prod_{a\in A}L_a(x).
+\end{equation}
+Singular values are interpreted as positive extended densities; the regularity and integrability used below follow from the proof.
+
+\begin{theorem}[Macroscopic charge chart]\label{thm:macro}
+At every \(a\in A\) insert a smooth deficit cutoff equal to one near \(0\) and supported in \([0,\epsilon)\), where \(\epsilon\max_v\deg(v)<1/4\). At every \(b\in B\) insert a test \(\psi_b\in C_c^\infty((0,1))\) in its fibre Wilson deficit. Then along all integer levels
+\[
+ \frac{\tau_r^{\rm mark}(M_G)}
+ {(-1)^{r(N-1)}\,2^{3N/2-2\alpha}\pi^{-N}\,r^{N/2+\alpha}}
+ \ \longrightarrow\ \int\prod_b\psi_b(x_b)\,dM_B(x).
+\]
+The measure in \eqref{eq:haar} is also a direct compact-group sewing measure on the specified flat branch.
+\end{theorem}
+
+\begin{proof}
+In the classical branch, the sections of \(b\in B\) are central. Draw \(U_b\) by \(\SU\) Haar, then set \(h_b=U_b^{-2}\) and \(V_b\) by the product equation. Both cap squares hold; the Weyl density \((2/\pi)\sin^2\theta\,d\theta\) for \(\arg U_b=\theta\) pushes forward under \(x=|2\theta/\pi-1|\) to \(d\nu_0\), and its axis is uniform conditional on its class. At \(a\in A\) the caps are traceless. Their two independently Haar distributed unit imaginary quaternions have a product with uniform scalar part on \([-1,1]\). Its angle density \(\tfrac12\sin\phi\,d\phi\), divided by Haar's \((2/\pi)\sin^2\phi\,d\phi\), is exactly \(K\). Sewing the section product with a Haar delta therefore gives \(K(G_a)\).
+
+For any bounded class factors, their joint angular average is the product of their averages. Indeed the bipartite incidence graph on \(A,B\), with the \(A\)--\(A\) edges deleted, is a forest. There is a factor with at most one \(B\) variable shared with the remaining factors (prune degree-one \(B\) vertices first). Integrate its private \(B\) axes. By conjugation invariance the resulting conditional expectation depends only on the fixed conjugacy class of the remaining shared \(B\) variable. Remove this factor and iterate. Nonnegative approximation extends this to \(K\).
+
+For the quantum calculation put \(n_v=r-a_v\) and \(F_d(x)=\cos^2(\pi x/2)(\pi x/\sin\pi x)^d\). The tree surgery sum with the opposite caps is \cite{GPPV,P48}
+\begin{equation}\label{eq:capped}
+ \tau_r=(-1)^{r(N-1)}
+ \bigl(2^{3N/2}\pi^{-N}+o(1)\bigr)r^{N/2}
+ \sum_{\substack{1\le n_v<r\\ n_v\ {\rm odd}}}
+  \prod_v F_{\deg(v)}(n_v/r)\prod_{vw\in E}\sinc(\pi n_v n_w/r).
+\end{equation}
+Here and below \(\sinc t=\sin t/t\) and the common scalar can be used unchanged for marked sums. To see the factors, the two cap amplitude is \(\left|(S\Theta^2S)_{r-n,1}\right|^2=(4/r)\mathbf1_{n\ {\rm odd}}\cos^2(\pi n/(2r))\), with \(\Theta_{aa}=e^{\pi\ii(a^2-1)/(2r)}\). For example the sine-product expansion reduces to two quadratic Gauss sums with linear charges differing by two; shifting the variable relates them by \(e^{-\pi\ii a/r}\). Squaring the Gauss sum leaves only differences \(0,r\) on the \(2r\)-grid, giving the parity projection and the stated sine square in \(a/r\). The vertex factor in \(Z_r\) is \(S_{1a_v}^{-\deg(v)}\) after the two terminal vertices combine into this amplitude. Factor \(\pi n_v n_w/r\) from each edge sine, leaving the sign \((-1)^r\) per edge. The paired caps cancel in the Schur-complement signature and the remaining tree adjacency has bipartite spectrum, so there is no residual surgery-signature phase in \eqref{eq:capped}. Divide \(Z_r\) by \(S_{11}\) to obtain the displayed scalar asymptotic.
+
+The \(B\) sums are independent at fixed \(n_A\). Upon stripping \(r/4\) at each such vertex, the bracket is
+\[
+ U_{b,r}^{\psi}=\frac4r\sum_{\substack{l<r\\ l\ {\rm odd}}}
+ \psi_b(l/r)\cos^2(\pi l/(2r))
+ \prod_{a\sim b}\frac{\chi_{n_a}(\pi l/r)}{n_a},
+ \qquad \chi_n(\theta)=\frac{\sin(n\theta)}{\sin\theta}.
+\]
+For any fixed \(n_A\) it tends to the corresponding \(d\nu_0\) integral; the \(A\)--\(A\) sincs and cutoffs tend to one. Uniform summability in \(n_A\) is essential here. Expand the numerator sines at each \(b\) into exponentials of signed frequencies \(q=\sum_{a\sim b}\pm n_a\). Repeated discrete summation by parts gives \(C_M(1+|q|)^{-M}\) per frequency after the \(4/r\) normalization. The amplitude is smooth with interior support after dividing by the powers of \(\sin(\pi l/r)\); its \(M\)-th grid difference is \(O_M(r^{-M})\) and \(|1-e^{2\pi\ii q/r}|\gtrsim |q|/r\) for all permitted \(|q|\le r/4\). In particular \(b_j\)'s bracket has rapid decay in \(n_j\) whenever \(n_j>2\sum_{i\ne j,\ i\sim b_j}n_i\). Starting at a largest \(A\) index, if this fails, follow a predecessor \(i\to j\) with \(n_i\ge n_j/(2D)\), \(D=\max\deg(v)\). These arrows are the cross edges after contracting the matching, hence their underlying graph is a forest. The walk must terminate at a dominant anchor comparable to \(\max n_A\) with graph-dependent constants. Thus the whole product of brackets decays faster than any power of \(\max n_A\), proving summable domination.
+
+To identify the resulting continuum Fourier series, use the positive Abel kernels
+\[
+ K_t(g)=\sum_{\substack{n>0\\n\ {\rm odd}}}t^n\chi_n(\arg g)/n,\qquad 0<t<1.
+\]
+For \(\phi=\arg g\in(0,\pi)\),
+\[
+ K_t(g)=\frac{\arctan(2t\sin\phi/(1-t^2))}{2\sin\phi}
+ \nearrow K(g).
+\]
+Schur averaging gives \(\mathbb E\chi_n(G_a)=n\prod_{b\sim a}\chi_n(\pi x_b)/n\) for odd \(n\); the initial factor \(n\) cancels the \(1/n\) in \(K_t\). Use the forest factorization and integrate the \(B\) variables, then send \(t\uparrow1\). The same rapid-decay estimate on the integrated coefficients justifies termwise limits, and positive monotone convergence identifies the density for nonnegative tests. Differences of nonnegative smooth tests cover the signed case. Combining the \(r/4\) factors with \eqref{eq:capped} proves the stated normalization.
+\end{proof}

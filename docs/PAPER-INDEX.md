@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 56 items: 20 original research packets, six later analytical Markdown manuscripts and thirty typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 59 items: 20 original research packets, six later analytical Markdown manuscripts and thirty-three typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
 Numbering follows delivery order: 01–20 retain their original packet numbers; 21–50 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
@@ -629,3 +629,33 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** Fixed, mesoscopic, and sequential graph-size limits are stated separately. The density theorem assumes strict feasible proportions in a fixed template; it does not assert a general simultaneous level–size limit.
 
 [Paper notes](../papers/50-wrt-graph-detection-and-stability/README.md) · [PDF](../papers/50-wrt-graph-detection-and-stability/manuscript.pdf) · [TeX](../papers/50-wrt-graph-detection-and-stability/manuscript.tex) · [Verification](../papers/50-wrt-graph-detection-and-stability/VERIFICATION.md)
+
+## 49B. Exact Chern–Simons Normal Forms for Paired-Cap Tree Plumbings
+
+**Question.** When does the actual reduced Chern–Simons action have an exact graph-controlled normal form at a singular flat connection?
+
+**Result.** Analytic normal forms identify the reduced action and logarithmic mechanisms of matched spines, variable pendants and connected families of unmatched kernel blocks.
+
+**Scope.** Local irreducible branches of the specified paired-cap tree plumbings. The general singular-spine critical scheme is distinguished from the exact off-shell normal forms in the proved classes; the local reference amplitude is not a normalized quantum integration measure.
+
+[Paper notes](../papers/49b-cs-normal-forms/README.md) · [PDF](../papers/49b-cs-normal-forms/manuscript.pdf) · [TeX](../papers/49b-cs-normal-forms/main.tex) · [Verification](../papers/49b-cs-normal-forms/VERIFICATION.md)
+
+## 48+49. Adjoint torsion and a coupled logarithmic cutoff for paired-cap Witten–Reshetikhin–Turaev invariants
+
+**Question.** How does classical adjoint torsion match the quantum radial measure, and which singular scales does the action select?
+
+**Result.** The regular minimum-cover charts have the same radial dependence in adjoint torsion and the marked WRT limit. On a four-vertex path, classical and literal quantum radial marks select the same triangular logarithmic domain.
+
+**Scope.** Untwisted paired-cap trees on their regular irreducible minimum-cover charts, with a marked singular comparison for the four-vertex path. The absolute quantum normalization and the global sector assembly remain open.
+
+[Paper notes](../papers/48-49-wrt-torsion-bridge/README.md) · [PDF](../papers/48-49-wrt-torsion-bridge/manuscript.pdf) · [TeX](../papers/48-49-wrt-torsion-bridge/main.tex) · [Verification](../papers/48-49-wrt-torsion-bridge/VERIFICATION.md)
+
+## 50B. All-level WRT collisions on fixed graph-manifold backbones
+
+**Question.** Which topology can be lost at every level on a fixed backbone, and when do level and graph-size limits commute?
+
+**Result.** Bipartite signed sewings have identical oriented SU(2) WRT scalars even as first Betti number or odd-primary torsion changes. A separate signed transfer theorem treats simultaneous limits for strict nonbipartite dense templates at sufficiently large exponential level.
+
+**Scope.** The exact collisions concern uncolored SU(2) invariants. The odd cyclic diagnostic is classical and is applied to these families. The simultaneous theorem uses a sufficient exponential-level condition.
+
+[Paper notes](../papers/50b-wrt-topological-blindness/README.md) · [PDF](../papers/50b-wrt-topological-blindness/manuscript.pdf) · [TeX](../papers/50b-wrt-topological-blindness/manuscript.tex) · [Verification](../papers/50b-wrt-topological-blindness/VERIFICATION.md)

@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=.88in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!55!black]{hyperref}
+\hypersetup{pdftitle={Adjoint torsion and a coupled logarithmic cutoff for paired-cap WRT invariants},pdfsubject={Quantum topology, adjoint torsion, and singular Chern--Simons sewing}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\SU}{\mathrm{SU}(2)}
+\newcommand{\SO}{\mathrm{SO}(3)}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\sinc}{\operatorname{sinc}}
+\newcommand{\vol}{\operatorname{Vol}}
+\newcommand{\CS}{\operatorname{CS}}
+\newcommand{\Haar}{\mathrm{Haar}}
+\title{Adjoint torsion and a coupled logarithmic cutoff\\for paired-cap Witten--Reshetikhin--Turaev invariants}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+For an unframed tree plumbing with \(+2,-2\) caps at each site, we compute the leading \(\SU\) Witten--Reshetikhin--Turaev measure with the fibre conjugacy angles on one side of a minimum cover held away from the central values. The limit is the Haar convolution of the actual cap holonomies. Computing the adjoint determinant lines gives the same radial measure, up to a constant, from square-root Reidemeister torsion. This comparison holds for every minimum cover: a seam with both fibres central contributes a rotation gluing parameter rather than another radial or determinant factor. For the four-site path with its middle sites as the cover, an independent radial cutoff of the true torsion gives a square of logarithmic scales, with twice the exact quantum weight. The actual reduced Chern--Simons quartic instead resolves the two normal directions only when the product of the two exterior fibre deficits exceeds inverse level on the logarithmic scale. Projected classical marks and literal finite-level Wilson marks then give the same triangle in the physical radial exponents. This determines the coupled cutoff without assuming a globally normalized Chern--Simons integration measure.
+\end{abstract}
+
+\section{Introduction and conventions}
+In the semiclassical approximation to Chern--Simons theory, square-root adjoint torsion is the density at a smooth flat critical family; its role has been tested in lens spaces, torus bundles and finite-order mapping tori \cite{Jeffrey,AH,Charles}. At a singular endpoint this density can have a nonintegrable pole. Even if the density on the smooth branches is known, an independent cutoff on each endpoint variable need not reproduce the leading quantum coefficient. We give a family where the smooth density can be computed on all minimum-cover charts, and a closed example where the missing coupled cutoff is visible in both the actual Chern--Simons action and the exact modular sum.
+
+Let \(G=(V,E)\) be a connected finite tree with \(N\ge2\) vertices. At each vertex take the oriented Seifert block over a sphere with \(\deg(v)\) outer boundary circles and two order-two exceptional fibres, obtained by opposite \(+2,-2\) fillings. Sew the outer tori by the marked fibre--section exchange along the edges of \(G\), with zero backbone framing. This is the usual Hopf-plumbing convention of \cite{GPPV,P48}. Write the closed manifold as \(M_G\). We use shifted level \(r=k+2\), the sine matrix \(S_{ab}=\sqrt{2/r}\sin(\pi ab/r)\), and \(\tau_r(S^3)=1\); the alternative convention is \(Z_r=S_{11}\tau_r\), so \(Z_r(S^2\times S^1)=1\). Denote the block fibre by \(h_v\). In the matched graph marking the two cap holonomies satisfy \(U_v^2=h_v^{-1}\), \(V_v^2=h_v\); their product is the inverse of the ordered product of section holonomies. Section holonomies are the adjacent fibres, with the appropriate orientations. Central signs in these products will not affect the Haar convolutions. The spectrum of the fundamental fibre Wilson operator is \(2\cos(\pi a/r)\), \(1\le a<r\). Its negative-central deficit is the actual Wilson coordinate \(x=(r-a)/r\), with classical counterpart \(x=1-\arg(h)/\pi\), where \(\arg(h)\in[0,\pi]\) is the \(\SU\) conjugacy angle. At finite level, a radial mark can equivalently be inserted by polynomial interpolation on these distinct eigenvalues.
+
+Fix a minimum vertex cover \(A\), with independent complement \(B\). Put \(\nu=|A|\), \(\alpha=|B|=N-\nu\). A maximum matching pairs every \(a=j\in A\) with a distinct \(b_j\in B\): each of its \(\nu\) edges must use a cover vertex, hence no matched edge can use two cover vertices. Let \(B_*\) denote the unmatched vertices in \(B\). For the regular branch studied here, \(h_A=-1\), \(h_B\) is noncentral, and all \(A\) block representations are irreducible. At a given \(A\) site, reducibility can occur only when a signed sum of its noncentral boundary angles and the two cap angles \(\pi/2\) is a multiple of \(2\pi\) up to a fixed central shift. Thus away from finitely many proper angular hyperplanes all these block representations are irreducible. In particular the full stabilizer is the finite centre. Haar measures on compact groups and their conjugacy classes below are probabilities unless specified otherwise.
+
+Our comparison separates three limits: the fixed-radius quantum limit and the determinant-line calculation (Sections~\ref{sec:quantum}--\ref{sec:torsion}), the independent radial regulation of that measure (Section~\ref{sec:regulator}), and the joint singular limit that retains the middle seam of the four-site path (Section~\ref{sec:p4}). The last result uses a particular exact analytic CS normal form whose general proofs and extensions are treated in the companion \cite{CSNF}. Earlier closed asymptotics \cite{P48} and cap phases and degeneration results \cite{P49} are inputs or comparators, not new claims here.
+
+\input{quantum}
+\input{torsion}
+\input{regulator}
+\input{p4}
+
+\begin{thebibliography}{12}
+\setlength{\itemsep}{2pt}
+\bibitem{Jeffrey} L.~C.~Jeffrey, \emph{Chern--Simons--Witten invariants of lens spaces and torus bundles, and the semiclassical approximation}, Comm. Math. Phys. \textbf{147} (1992), 563--604.
+\bibitem{AH} J.~E.~Andersen and B.~Himpel, \emph{The Witten--Reshetikhin--Turaev invariants of finite order mapping tori II}, Quantum Topol. \textbf{3} (2012), 377--421, \href{https://arxiv.org/abs/1107.1813}{arXiv:1107.1813}.
+\bibitem{Charles} L.~Charles, \emph{On the Witten asymptotic conjecture for Seifert manifolds}, \href{https://arxiv.org/abs/1605.04124}{arXiv:1605.04124}.
+\bibitem{GPPV} S.~Gukov, D.~Pei, P.~Putrov and C.~Vafa, \emph{BPS spectra and 3-manifold invariants}, J. Knot Theory Ramifications \textbf{29} (2020), 2040003, \href{https://arxiv.org/abs/1701.06567}{arXiv:1701.06567}, Appendix A.
+\bibitem{AMW} A.~Alekseev, E.~Meinrenken and C.~Woodward, \emph{Duistermaat--Heckman measures and moduli spaces of flat bundles over surfaces}, Geom. Funct. Anal. \textbf{12} (2002), 1--31; \href{https://arxiv.org/abs/math/9903087v2}{arXiv:math/9903087v2}, listed as \emph{Duistermaat--Heckman distributions for group valued moment maps}.
+\bibitem{CM1} J.~Cheeger, \emph{Analytic torsion and the heat equation}, Ann. of Math. \textbf{109} (1979), 259--321, \href{https://annals.math.princeton.edu/1979/109-2/p02}{publisher page}.
+\bibitem{CM2} W.~M\"uller, \emph{Analytic torsion and R-torsion of Riemannian manifolds}, Adv. Math. \textbf{28} (1978), 233--305, \href{https://doi.org/10.1016/0001-8708(78)90116-0}{doi:10.1016/0001-8708(78)90116-0}.
+\bibitem{Milnor} J.~Milnor, \emph{Whitehead torsion}, Bull. Amer. Math. Soc. \textbf{72} (1966), 358--426.
+\bibitem{GM} W.~M.~Goldman and J.~J.~Millson, \emph{The deformation theory of representations of fundamental groups of compact K\"ahler manifolds}, Publ. Math. IH\'ES \textbf{67} (1988), 43--96, \href{https://numdam.org/item/PMIHES_1988__67__43_0/}{\S6 (flat holonomy)}.
+\bibitem{P48} \emph{Leading logarithms in closed \(\SU\) Witten--Reshetikhin--Turaev invariants of capped trees}, research manuscript 48, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/d23f0b109029d37a09a1b8758dd73f1e27a7ef72/papers/48-wrt-leading-logarithms}{release revision}.
+\bibitem{P49} \emph{Chern--Simons phases and degenerate sewing in \(\SU\) WRT invariants}, research manuscript 49, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/d23f0b109029d37a09a1b8758dd73f1e27a7ef72/papers/49-wrt-semiclassical-sewing}{release revision}.
+\bibitem{CSNF} \emph{Exact Chern--Simons normal forms for paired-cap tree plumbings}, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/49b-cs-normal-forms}{companion manuscript}.
+\end{thebibliography}
+\end{document}

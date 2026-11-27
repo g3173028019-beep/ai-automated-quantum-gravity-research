@@ -1,0 +1,85 @@
+\documentclass[11pt]{article}
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[expansion=false]{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Exact Chern--Simons Normal Forms for Paired-Cap Tree Plumbings}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\CS}{CS}
+\DeclareMathOperator{\Vol}{Vol}
+\newcommand{\R}{\mathbb R}
+\newcommand{\SU}{\mathrm{SU}(2)}
+\newcommand{\ii}{\mathrm i}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Jac}{\mathcal J}
+\title{Exact Chern--Simons Normal Forms\\for Paired-Cap Tree Plumbings}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We determine the local Chern--Simons action near an irreducible class of flat connections on closed \(\SU\) tree plumbings with opposite order-two caps. For nonparallel neighboring axes the analytic flat deformation scheme is the critical scheme of one explicit graph potential. At fully orthogonal configurations the actual Coulomb-reduced action is exactly cubic. For a perfectly matched spine with arbitrary pendant valence it is exactly quartic, and a connected family of unmatched spines has an exact weighted normal form with interacting kernel blocks. A Fourier calculation gives the leading local oscillation for smooth reference densities: a spine vertex with one pendant contributes a logarithm, whereas one with several pendants contributes finite coarea. The surviving logarithmic variables carry the same scalar order-polytope volume as an independent calculation of the closed Witten--Reshetikhin--Turaev invariant. No global quantum integration density is inferred from this agreement.
+\end{abstract}
+
+\section{Introduction}
+
+The semiclassical interpretation of Witten--Reshetikhin--Turaev (WRT) invariants starts from the critical points of Chern--Simons theory~\cite{Witten}. Ordinary quadratic stationary phase does not determine local contributions when flat connections have interacting singularities. One must determine the action away from its critical set; a list of flat characters, even including their tangent spaces, does not generally specify it. Conversely, a local normal form does not determine the density or orientation-sensitive phases of a quantum invariant.
+
+We study closed tree plumbings built from punctured-sphere circle products and two opposite order-two fillings per vertex. The exact finite WRT sum for these plumbings has a positive leading coefficient up to its known parity phase; its power and logarithmic degree are determined by a maximum matching and an associated polytope~\cite{Paper48}. An earlier \(\SU\) calculation related the two-vertex cubic to the closed leading logarithm and treated an adjoint spectral invariant, Weyl regrouping, and marked loop determinants in other regimes~\cite{Paper49}. Here we determine new \emph{actions} at singular characters: the exact cubic on any fully orthogonal tree, the exact quartic on perfectly matched spines with variable pendant valence, and a weighted homogeneous action with many connected unmatched blocks. The results are real analytic right equivalences up to the specified overall normalization, not just finite jets.
+
+Sections~\ref{sec:flat} and \ref{sec:normal} give the flat deformation equations and the analytic passage to the action. The critical scheme includes nilpotent deformations, which make its Jacobian ideal accessible. We use an explicit off-flat holonomy map, then compare the generators of that ideal rather than infer the potential from the critical set. Section~\ref{sec:osc} computes local oscillatory integrals by Fourier transformation and dyadic localization. This yields the leading coefficient as a product of an algebraic graph volume and a reference-density functional. The latter is not identified with a quantum measure.
+
+\input{flat.tex}
+\input{normal.tex}
+\input{kernel.tex}
+\input{oscillation.tex}
+
+\section{What the comparison determines}
+
+The exact potential proves that different logarithmic regimes can result from the local pairing map itself. A one-pendant spine site yields the \(1/|\xi|\) Fourier tail of the product of two real variables. Adding a second pendant makes that tail integrable and replaces the logarithm by a finite zero-pairing coarea integral. The surviving sites retain all spine inequalities between them in the coefficient. In the connected unmatched family the quartic center couplings also synchronize the action scale of otherwise independent cubic kernel blocks.
+
+The closed invariant and the local integral give the same scalar volume by separate computations. The logarithmic Fourier coordinates are not identified with Wilson defects or their physical distribution; adjoint torsion and a marked four-site path are treated in the companion analysis~\cite{TorsionBridge}. For arbitrary unmatched spines, only the exact flat scheme and its polynomial model asymptotic are established. Neither an exact off-shell normal form in that generality nor a normalized quantum contribution is asserted.
+
+\begin{thebibliography}{10}
+\bibitem{GoldmanMillson}
+W.\,M.~Goldman and J.\,J.~Millson,
+\emph{The deformation theory of representations of fundamental groups of compact K\"ahler manifolds},
+Publ.\ Math.\ IH\'ES \textbf{67} (1988), 43--96,
+\href{https://doi.org/10.1007/BF02699127}{doi:10.1007/BF02699127}.
+
+\bibitem{Duistermaat}
+J.\,J.~Duistermaat,
+\emph{Oscillatory integrals, Lagrange immersions and unfolding of singularities},
+Comm.\ Pure Appl.\ Math.\ \textbf{27} (1974), 207--281,
+\href{https://doi.org/10.1002/cpa.3160270205}{doi:10.1002/cpa.3160270205}.
+
+\bibitem{Turaev}
+V.\,G.~Turaev,
+\emph{Quantum Invariants of Knots and 3-Manifolds}, de Gruyter, 1994.
+
+\bibitem{Witten}
+E.~Witten,
+\emph{Quantum field theory and the Jones polynomial},
+Comm.\ Math.\ Phys.\ \textbf{121} (1989), 351--399,
+\href{https://doi.org/10.1007/BF01217730}{doi:10.1007/BF01217730}.
+
+\bibitem{Paper48}
+\emph{Leading logarithms in closed \(\SU\) Witten--Reshetikhin--Turaev invariants of capped trees},
+project manuscript 48; see the
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/blob/main/docs/PAPER-INDEX.md}{project manuscript index}.
+
+\bibitem{Paper49}
+\emph{Chern--Simons Phases and Degenerate Sewing in \(\SU\) WRT Invariants},
+project manuscript 49; see the
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/blob/main/docs/PAPER-INDEX.md}{project manuscript index}.
+\bibitem{TorsionBridge}
+\emph{Adjoint Torsion and a Coupled Logarithmic Cutoff for Paired-Cap Witten--Reshetikhin--Turaev Invariants},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/48-49-wrt-torsion-bridge}{companion manuscript and proof files}.
+\end{thebibliography}
+\end{document}

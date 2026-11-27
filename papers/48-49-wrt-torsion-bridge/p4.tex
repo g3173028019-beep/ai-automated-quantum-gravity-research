@@ -1,0 +1,77 @@
+\section{The four-site path and its coupled logarithmic cutoff}\label{sec:p4}
+Let the vertices be \(B_1-A_1-A_2-B_2\), with the middle sites as cover. The positive macroscopic density in Theorem~\ref{thm:macro} is
+\begin{equation}\label{eq:cot}
+ dM_B=\left(\frac{\pi}{4}\right)^2
+        \cot(\pi x_1/2)\cot(\pi x_2/2)\,dx_1\,dx_2 .
+\end{equation}
+Indeed each middle site has just one noncentral \(B\) neighbour. Theorem~\ref{thm:torsion} identifies the same shape from the true torsion, including the middle seam's \(\SO\) bending. Its independent cutoff \(x_i\ge 1/r\) near the negative endpoint gives \(\tfrac14(\log r)^2\). We now compare this to the actual off-shell action and the exact quantum joint limit in the same physical branch radii.
+
+\subsection{The physical branch in the exact quartic chart}
+Choose an all-negative fibre reference with each exterior pair of axes orthogonal and the middle cosine \(b\) with \(0<|b|<1\). The chamber \(h_{A_i}=-1\), both outer fibres regular near \(-1\) closes onto this locus. A signed exterior holonomy defect is \(p_{B_i}\) with \(h_{B_i}=-\exp(-2p_{B_i}u_{B_i})\). Its physical Wilson radius is \(x_i=(2/\pi)|p_{B_i}|\) near this endpoint.
+
+\begin{lemma}[Exact local CS input and preservation of branch scales]\label{lem:cs}
+In this reference chart the actual reduced \(\CS\) function has real analytic form
+\begin{equation}\label{eq:quartic}
+ \CS_0+\kappa s_1s_2 y_1y_2,\qquad \kappa\ne0,
+\end{equation}
+with three passive coordinates \(\phi\). The specified exterior-fibre branch is \(P=\{s_1=s_2=0\}\). On \(P\), the physical radius \(x_i\) is \(|y_i|\) times a positive analytic unit. Thus the logarithmic exponents of the two physical radii and of \(|y_i|\) differ by \(O(1/\log\lambda)\), uniformly even when their sizes are very unequal.
+\end{lemma}
+\begin{proof}
+The analytic normal-form construction is proved in the companion \cite{CSNF}. We recall the specific steps giving the needed preservation of the physical branch. In local holonomy variables take \(U_v=u_v\exp(p_vu_v)\) and \(h_v=U_v^{-2}\). Nonparallelity makes the exact commuting ideal \(J_0=(p_vp_w:vw\in E)\). Modulo it, the other cap square on a block is the component along its axis of the logarithm of the ordered section product; conjugation by \(U_v\) reduces to the half-turn about \(u_v\). Write that scalar as \(\sum_w p_w(B_{vw}+c_{vw})\), where \(B_{vw}\) are the signed edge cosines and \(c_{vw}\) vanish to first order in the neighbouring defects. The symmetric correction \(T_{vw}=B_{vw}+c_{vw}+c_{wv}\) changes this equation only by elements of \(J_0\). Since these edge angles are independent local tree coordinates, the flat analytic equations are exactly the Jacobian equations of \(\sum_{vw}T_{vw}p_vp_w\). This works as an identity of analytic ideals, not only on real points.
+
+In the \(P_4\) case put \(x_A=(p_{A_1},p_{A_2})\), \(y=(p_{B_1},p_{B_2})\), and write \(d_i\) for the corrected exterior dot. The graph function is \(\tfrac12 x_A^{\mathsf T}B x_A+x_A^{\mathsf T}(d\odot y)\), with \(B\) the invertible two-by-two adjacency of the middle edge and \(B_{12}\) nonzero near \(b\). Eliminating its split quadratic part leaves \(-d_1y_1d_2y_2/B_{12}\). An analytic unit change of the \(d\)'s freezes the denominator and leaves \(y\) intact. This is an elimination of the graph equations to compare critical ideals; it does not add two variables to the actual harmonic \(\CS\) chart.
+
+For clarity, the bridge from those equations to the function is as follows. On a Coulomb slice at this irreducible flat connection the coexact transverse \(*d_A\) is invertible, so analytic stationary reduction leaves a finite function on harmonic one-forms. Its critical equation is flatness, also over local Artin algebras: once the coexact and harmonic projections of \(*F\) vanish, Bianchi and invertibility on zero-forms eliminate the exact part. Holonomy gives an analytic coordinate map from the reduced harmonic variables to the retained graph variables, invertible on tangent spaces by the infinitesimal holonomy isomorphism. Over each Artin algebra, flat holonomy and the unique local Coulomb representative are inverse descriptions \cite[\S6]{GM}. Equality of the ensuing completed Jacobian ideals descends to the convergent local ring. In particular the actual reduced function \(f\), with its constant removed, has \(J_f=J_q\), \(q=s_1s_2y_1y_2\). The cubic gradient span forces its leading jet to be a nonzero scalar \(\kappa q\): every degree-four monomial whose derivatives belong to that span contains all four active coordinates, each to degree one, and no spectator. Terms of lower degree vanish. Finally \(\nabla(f-\kappa q)=A(z)\nabla(\kappa q)\) with \(A(0)=0\), subtracting any constant homogeneous syzygy. Radial Euler integration gives \(f-\kappa q\in\mathfrak m^2J_q\). Interpolating between \(\kappa q\) and \(f\), the gradients remain equivalent by \(I+tA(z)\); the corresponding analytic Moser vector field is \(O(|z|^2)\). Its flow gives an actual right equivalence tangent to the identity. This is the specialized quartic assertion used here.
+
+Before this final equivalence \(y_i=p_{B_i}\), and \(P\) represents the two noncentral exterior fibres with the middle fibres fixed and their exterior orthogonality conditions imposed. The quartic critical set is the union of six coordinate planes obtained by setting two of the four active coordinates to zero, times the passive space. The tangent-identity Moser equivalence preserves that set and fixes each component as a germ, since their tangent planes are distinct. It also preserves their intersections. Hence on \(P\) each of \(y_i=0\) is preserved, and the physical \(p_{B_i}\) is divisible on \(P\) by \(y_i\), with nonzero unit derivative. An earlier constant scale change can be kept in \(s\). This gives the asserted physical radii and the uniformly bounded log-scale error.
+\end{proof}
+
+\subsection{Conditional normal integration and a projected physical mark}
+Let \(a(s,y,\phi)\) be any smooth compactly supported amplitude in a sufficiently small local quartic chart with \(|y_i|<1\) and physical \(x_i<1\). For a bounded continuous test \(F\) of two nonnegative logarithmic exponents, take its mark in the physical \(x_i\) on \(P\), extended to the chart by projection \((s,y,\phi)\mapsto(0,y,\phi)\). Use the phase \(e^{\ii\lambda(\CS-\CS_0)}\), and denote the resulting integral by \(I_\lambda[F]\).
+
+\begin{proposition}\label{prop:classicalmark}
+Set \(\Delta=\{(u_1,u_2):u_i\ge0,\ u_1+u_2\le1\}\). Then
+\begin{equation}\label{eq:class}
+ \frac{\lambda I_\lambda[F]}{(\log\lambda)^2}
+ \longrightarrow
+ \frac{8\pi}{|\kappa|}
+  \left[\int a(0,0,0,0,\phi)\,d\phi\right]
+  \int_\Delta F(u_1,u_2)\,du_1\,du_2 .
+\end{equation}
+For a single \(y\)-sign quadrant the prefactor is \(2\pi/|\kappa|\). The physical crossover is \(\lambda x_1x_2\) of order one, rather than one independent cutoff per radius.
+\end{proposition}
+\begin{proof}
+At fixed exterior radii integrate the two \(s\) variables first. For \(T\in\RR\),
+\[
+ J(T;y,\phi)=\int a(s,y,\phi)e^{\ii T s_1s_2}\,ds,\qquad
+ J(T;y,\phi)=\frac{2\pi}{|T|}a(0,0,y,\phi)+O(|T|^{-2})
+ \quad (|T|\ge1).
+\]
+The remainder is uniform: take the Fourier transform in \(s_2\), set \(w=Ts_1\), and expand the smooth amplitude at \(s_1=0\). The first derivative has a uniformly integrable weighted Schwartz bound in \(w\). Direct integration for bounded \(T\) completes \(|J|\le C/(1+|T|)\). With \(T=\lambda\kappa y_1y_2\), this reproduces the \(1/(|y_1y_2|)\) resolved pole for large \(|T|\), as in \eqref{eq:cot}; it stays bounded in the unresolved region. In each sign quadrant put \(|y_i|=\lambda^{-u_i}\). After division by \((\log\lambda)^2/\lambda\) the absolute bound is
+\[
+ C\min\{1,\exp[-(\log\lambda)(u_1+u_2-1)]\}.
+\]
+For \(\log\lambda\ge1\) this has an integrable majorant on \(u_i\ge0\), and the passive support is fixed compact. On the interior of \(\Delta\) the leading resolved term applies; on its exterior the normalized integrand tends to zero. Lemma~\ref{lem:cs} gives the same limiting logarithmic exponents for the projected physical marks. Dominated convergence yields \eqref{eq:class}.
+\end{proof}
+
+The projection in this statement matters. Right equivalence preserving a critical scheme does not determine an original observable off the branch. For example \(q\) and \(q+\epsilon(s_1s_2y_2)^2\) have the same Jacobian ideal and are related by \(y_1\mapsto y_1+\epsilon s_1s_2y_2\). This is the identity on \(P\), but its changed \(y_1\) coordinate is not divisible by \(y_1\) off \(P\). We make no assertion comparing unprojected off-shell holonomies in such charts.
+
+\subsection{Literal finite Wilson marks and the exact triangle}
+Use the actual quantum exterior deficits \(x_i=l_i/r\), with \(l_i\) positive odd. Keep smooth fixed cutoffs on the middle deficits \(n_i/r\) near \(0\). Insert \(F= f_1(u_1)f_2(u_2)\), \(f_i\in C_c^\infty((0,1))\), with \(u_i=1-\log l_i/\log r\). In \eqref{eq:capped}, each pendant bracket after pulling out \(r/(4n_i)\) is
+\[
+ \frac4\pi\sum_{l\ {\rm odd}<r}\frac{F_1(l/r)}l
+     \sin(\pi n_i l/r)\,f_i(1-\log l/\log r).
+\]
+It is uniformly bounded and tends to \(f_i(t_i)\) uniformly on compact interior intervals of \(t_i=\log n_i/\log r\). To prove this, set \(v=n_i l/r\). On \(\delta<v<R\) the mesh is \(2n_i/r\), \(F_1(l/r)\to1\), and the mark tends to \(f_i(t_i)\). The small-\(v\) part is \(O(\delta)\) by the sine bound. The tail \(v>R\) is \(O(1/R)\) by geometric summation by parts: on \(l\ge L\) the weight involving \(F_1\), \(f_i\), and \(1/l\) has size and total variation \(O(1/L)\). Compact support in the mark puts \(l\le r^{1-\epsilon'}\) for some \(\epsilon'>0\), so there is no reflected upper endpoint. For a uniform bound outside the compact \(t_i\) range split at \(l\) of order \(r/n_i\) and apply the same two estimates. The limiting odd-grid integral is \((2/\pi)\int_0^\infty\sin(\pi v)\,dv/v=1\).
+
+The middle edge retains \(\sinc(\pi n_1n_2/r)\). Its limit is one for \(t_1+t_2<1\) and zero for \(t_1+t_2>1\), with a uniform bound of one. The odd harmonic measures, divided by \((\log r)/2\), converge to Lebesgue on the logarithmic unit interval. The bounded pendant brackets control arbitrarily small strips about the inequalities and endpoints. Writing \(\mathcal N_r=(-1)^r(4/\pi^4)r^4\) for the four-site macroscopic normalization, we get the literal Wilson-mark law
+\begin{equation}\label{eq:qmark}
+ \frac{\tau_r^{\rm mark}}{\mathcal N_r(\log r)^2}
+  \ \longrightarrow\ \frac14\int_\Delta F(u_1,u_2)\,du_1du_2 .
+\end{equation}
+\begin{samepage}A rapidly convergent tensor expansion of a smooth compact mark gives the same statement for non-product marks; the bracket bounds use only finitely many seminorms of the individual tests. The known exact unmarked result \cite{P48}, with both endpoints treated, gives the same full leading mass \(1/8\) in these units. In contrast an independent cutoff of the fixed macroscopic measure \eqref{eq:cot} gives \(\tfrac14\,du_1du_2\) on the entire unit square, of total mass \(1/4\). Thus taking a fixed macroscopic limit and independently truncating its torsion singularities does not commute with the joint quantum limit. The actual normal Hessian yields the coupled threshold \(\lambda x_1x_2\) in the same branch scales, not just a triangle of equal area in unrelated transform coordinates.
+
+\paragraph{What the comparison normalizes.}
+Fix a regular bending chart and one signed radial sheet. If the resolved normal contribution after removing \(\lambda^{-1}\) is calibrated to the actual local torsion density \(\rho_P\,dy\,d\phi\), then its normal amplitude trace is forced to be \(a|_{s=0}=|\kappa y_1y_2|\rho_P/(2\pi)\). This is smooth through the corner: \(x_i/|y_i|\) are units, \(x_i\cot(\pi x_i/2)\) is even analytic there, and the bending and coordinate Jacobians are smooth. Any smooth extension of this trace gives the same leading projected integral \eqref{eq:class}. This is a relative local calibration, not a derivation of the full quantum measure. The residual \(\CS\) density, the overall conversion from the local \(\lambda^{-1}(\log\lambda)^2\) to \(Z_r\) of order \(r^{5/2}(\log r)^2\), and the global accounting of other angular charts and overlapping strata are not computed by this argument. The result assumes a fixed nonzero, nonparallel middle cosine for the CS chart. The middle-normal Hessian used here has zero signature; absolute APS and framing phases are not inferred from this local cutoff.
+
+\par\end{samepage}

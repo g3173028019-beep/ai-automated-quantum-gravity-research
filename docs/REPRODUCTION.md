@@ -171,3 +171,11 @@ Build from each paper’s directory using the TeX entry listed in its README, wi
 - [48 · Leading logarithms of closed WRT invariants](../papers/48-wrt-leading-logarithms/README.md)
 - [49 · Semiclassical sewing and central WRT phases](../papers/49-wrt-semiclassical-sewing/README.md)
 - [50 · Graph detection and stability in WRT sewing](../papers/50-wrt-graph-detection-and-stability/README.md)
+
+## Building the WRT follow-ups
+
+The paper pages give the LaTeX entry point, build command and independent verification record.
+
+- [49B · Exact Chern–Simons normal forms](../papers/49b-cs-normal-forms/README.md)
+- [48+49 · Adjoint torsion and coupled WRT cutoffs](../papers/48-49-wrt-torsion-bridge/README.md)
+- [50B · All-level WRT collisions](../papers/50b-wrt-topological-blindness/README.md)

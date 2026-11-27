@@ -2,11 +2,13 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains 56 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and thirty typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 59 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and thirty-three typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
 
 On 27 November 2026 (Beijing time), [48 · Leading logarithms of closed WRT invariants](papers/48-wrt-leading-logarithms/README.md), [49 · Semiclassical sewing and central WRT phases](papers/49-wrt-semiclassical-sewing/README.md), [50 · Graph detection and stability in WRT sewing](papers/50-wrt-graph-detection-and-stability/README.md) joined the public archive as Papers 48–50. The existing papers and their numbers are preserved.
+
+On 27 November 2026 (Beijing time), the WRT follow-ups [49B · Exact Chern–Simons normal forms](papers/49b-cs-normal-forms/README.md), [48+49 · Adjoint torsion and coupled WRT cutoffs](papers/48-49-wrt-torsion-bridge/README.md), [50B · All-level WRT collisions](papers/50b-wrt-topological-blindness/README.md) joined the public archive. Papers 48, 49 and 50 remain available in their original entries.
 
 On 27 November 2026 (Beijing time), [44 · Gravitational region sewing](papers/44-gravitational-region-sewing/README.md), [45 · Vacuum stress and its massless pole](papers/45-vacuum-stress-massless-pole/README.md), [46 · The common Einstein light cone](papers/46-einstein-scalar-common-cone/README.md), [47 · Spacelike area tomography](papers/47-spacelike-area-tomography/README.md), joined the public archive as independent typeset papers (44–47). No previously published paper was replaced or renumbered.
 

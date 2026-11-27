@@ -1,0 +1,43 @@
+\section{An independent endpoint regulator}\label{sec:regulator}
+
+Put \(\beta(x)=\min(x,1-x)\). In \eqref{eq:haar} one can estimate each angular factor uniformly even when the incident radii are very unequal. Condition on all axes except that of one of the incident holonomies. Strip central signs so that its angle \(y=\pi\beta(x_b)\) and the angle \(z\) of the remaining product lie in \([0,\pi/2]\). The product has cosine \(\cos y\cos z-\sin y\sin z\,s\), where \(s\) is uniform on \([-1,1]\). Integration in this variable gives
+\begin{equation}\label{eq:shell}
+ \mathbb E\!\left[\frac1{\sin(\arg G_a)}\,\middle|\,\text{other axes}\right]
+ =\frac{y+z-|y-z|}{2\sin y\sin z}
+ =\frac{\min(y,z)}{\sin y\sin z}.
+\end{equation}
+In particular \(L_a\le C/\max_{b\sim a,\ b\in B}\beta(x_b)\). If \(x_{b_j}\to0\) and the other incident radii are \(o(x_{b_j})\), then \(x_{b_j}L_j\to1/4\). At any fixed noncentral anchor this conditional formula also gives continuity as other angles move or become central. The same estimates apply in all endpoint branches, with \(\beta\) for the distances.
+
+Define \(i\to j\) on \(A\) when \(i\ne j\) is adjacent to \(b_j\). Let \(F\) consist of the ancestors (including the sites themselves) of the neighbours of unmatched vertices in \(B_*\), and \(D=A\setminus F\). The arrows have no cycles. Set \(P_{\rm ord}=\{s\in[0,1]^D:s_i\le s_j\text{ on }i\to j\}\), and \(d=|D|\). For forced \(A\) indices, write \(Q_b(n)=\Pr(\sum_{a\sim b}q_a=0)\), where \(q_a\) is uniform among the integers between \(-(n_a-1)/2\) and \((n_a-1)/2\), independently, with odd positive \(n_a\). Only forced neighbours are used at \(b\in B_*\) or \(b_j\) with \(j\in F\). Define
+\[
+ K_G=\sum_{(n_a)_{a\in F}}\prod_{b\in B_*}Q_b(n)\prod_{j\in F}Q_{b_j}(n).
+\]
+This is the bounded-defect factor of the exact paired-tree leading asymptotic in \cite{P48}. Empty products and zero-dimensional volumes are one.
+
+\begin{proposition}\label{prop:reg}
+If all \(B\) radii are cut off independently by \(\beta(x_b)\ge\delta\), then
+\[
+ M_B\{\beta(x_b)\ge\delta\ \forall b\}
+ \ \sim\ 2^{-d}\vol(P_{\rm ord})K_G\bigl(\log(1/\delta)\bigr)^d
+ \qquad(\delta\downarrow0).
+\]
+For an independent cover, \(P_{\rm ord}\) is the entire free order-polytope face of the exact WRT theorem. In a cover with \(A\)--\(A\) seams it need not be: the exact face imposes \(s_i+s_j\le1\) on those free seams in addition.
+\end{proposition}
+\begin{proof}
+Write \(d_j=\beta(x_{b_j})\) and move \(d_j\) into the \(j\)-th factor \(L_j\) when rewriting its radial integration as \(dd_j/d_j\). Put \(\rho_j=d_j/\max_{b\sim j}\beta(x_b)\le1\). Each forced \(j\) has a directed path to a vertex adjacent to an unmatched \(b_*\). Along it the product of \(\rho\)'s telescopes to at most \(d_j/\beta(x_{b_*})\). Using these bounds and the trivial bound \(1\) gives
+\[
+ \prod_{j\in F}\rho_j\le
+ \prod_{j\in F}d_j^{1/(2|F|)}
+ \prod_{j\in F}\beta(x_{b_*(j)})^{-1/(2|F|)}
+\]
+when \(F\ne\varnothing\). This is integrable with the forced \(dd_j/d_j\) and unmatched ordinary measures. Keep those coordinates fixed and rescale the free logarithms by \(-\log d_j/\log(1/\delta)\). No free \(j\) is adjacent to an unmatched or a forced partner \(b_i\); otherwise it is forced. Outside the tie planes, \(d_jL_j\) tends to \(1/4\) when its own partner dominates all competitors, and to zero otherwise, by \eqref{eq:shell}. Simultaneously these conditions are precisely \(s_i<s_j\) on the free arrows \(i\to j\). The lower endpoint of the radial cap density tends to \(2\); the upper endpoint tends to zero and does not give a logarithmic coefficient. The uniform forced bound and bounded normalized free integrands give dominated convergence. Setting the free radii to their central limits in the forced factor is legitimate by \eqref{eq:shell} with their fixed noncentral anchors.
+
+The remaining forced integral is \(K_G\). Indeed apply \(K_t\) as in the proof of Theorem~\ref{thm:macro}, and integrate each forced or unmatched \(b\) over \(0<x<1\). The normalized product of odd-dimensional characters is a trigonometric polynomial with only frequencies \(2\pi\) times integers. Integrating against \(2\cos^2(\pi x/2)=1+\cos(\pi x)\) retains just its constant coefficient, \(Q_b(n)\) (the product is a cosine polynomial). All these integrated coefficients are nonnegative, so \(t\uparrow1\) preserves their sum. Finite integrability above proves convergence. Each surviving free factor is \(1/2\). This gives the stated result. The exact WRT comparison follows from the independent-set face rule: saturating the matching gives \(t_{b_j}=1-t_j\), and an edge within \(A\) is still a sinc with the product \(r^{t_i+t_j-1}\). In the smooth chart regulator the coordinate \(s_j\) is the corresponding complement of the \(B\) charge exponent.
+\end{proof}
+
+\paragraph{Power check independent of the modular sum.}
+Near the all-negative fibre locus with nonparallel adjacent axes, let \(S\) be the vertices with nonzero small signed fibre defects \(p_v\) in \(h_v=-\exp(-2p_vu_v)\). Commutation forces \(S\) to be independent. At each exterior neighbour \(a\in N(S)\), the other cap square is the one scalar constraint
+\[
+ u_a\cdot\log\!\left(\prod_{v\sim a}\exp(-2\epsilon_{av}p_vu_v)\right)=0 .
+\]
+The product order is the actual section order. Tree edge cosines are independent local coordinates off parallelity. Divide each row by the largest incident \(|p_v|\) and use its edge cosine as pivot. The linear-in-defect part gives a diagonal invertible selected derivative matrix; higher terms have \(O(\max|p|)\) derivative after division, since they each contain at least two defects from that row. Thus these are exactly \(|N(S)|\) independent equations in the small nonparallel chart. The stratum has dimension \(2N-3+|S|-|N(S)|\) where nonempty. It is at most \(3N-2\nu-3\): a largest independent set in the remaining forest has at least half of its \(N-|S|-|N(S)|\) vertices and can be added to \(S\). Equality is attained at \(S=B\) near a point with all cross cosines zero, by the same independent pivots and the implicit function theorem. Half the true maximum dimension agrees with the exact leading \(Z_r\) exponent \(N/2+\alpha-3/2\) in \cite{P48}. This is a stratum comparison within the stated chart, not an exclusion of other components.
