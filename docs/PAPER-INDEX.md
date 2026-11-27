@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 61 items: 20 original research packets, six later analytical Markdown manuscripts and thirty-five typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 62 items: 20 original research packets, six later analytical Markdown manuscripts and thirty-six typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–50 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–51 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -679,3 +679,13 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** A calibrated isolated shear channel, known retained temporal potential and exact indexed temporal gates. The ranks concern a causal force law; global spectral type, noisy inverse stability and lossless Hamiltonian realizations are separate.
 
 [Paper notes](../papers/44-47-gravitational-radiation-memory/README.md) · [PDF](../papers/44-47-gravitational-radiation-memory/manuscript.pdf) · [TeX](../papers/44-47-gravitational-radiation-memory/manuscript.tex) · [Verification](../papers/44-47-gravitational-radiation-memory/VERIFICATION.md)
+
+## 51. Singular semiclassical sewing for paired-cap Witten–Reshetikhin–Turaev invariants
+
+**Question.** Can one control the action-resolved radial expansion of the exact closed invariant and match its leading coefficients to the singular Chern–Simons strata with absolute normalization?
+
+**Result.** For fixed untwisted SU(2) paired-cap trees with at least two vertices, a two-action all-orders radial expansion is combined with absolute leading torsion normalization and a joint leading Wilson law on the specified Hall charts.
+
+**Scope.** Two Chern–Simons actions, smooth joint fibre-trace marks and the stated dormant Wilson routes. The leading comparison and selected transition laws do not assign higher angular coefficients to every individual stratum. Papers 48, 49, 49B and 48+49 are retained.
+
+[Paper notes](../papers/51-singular-wrt-semiclassical-sewing/README.md) · [PDF](../papers/51-singular-wrt-semiclassical-sewing/manuscript.pdf) · [TeX](../papers/51-singular-wrt-semiclassical-sewing/main.tex) · [Verification](../papers/51-singular-wrt-semiclassical-sewing/VERIFICATION.md)

@@ -112,3 +112,7 @@ The historical umbrella synthesis is routed into these dedicated questions, not 
 
 - [46+47 · Common Einstein cones and relational area probes](papers/46-47-common-cones-and-area-probes/README.md): First-derivative matter on regular local branches of four-dimensional Einstein gravity. Attained rank hypotheses, orientation domains, linearized equation equivalence and the scoped curved example are stated separately.
 - [44+47 · Causal memory of gravitational radiation](papers/44-47-gravitational-radiation-memory/README.md): A calibrated isolated shear channel, known retained temporal potential and exact indexed temporal gates. The ranks concern a causal force law; global spectral type, noisy inverse stability and lossless Hamiltonian realizations are separate.
+
+## Paper 51: singular semiclassical WRT sewing
+
+[Paper 51](papers/51-singular-wrt-semiclassical-sewing/README.md) is a separate synthesis and extension of 48, 49, 49B and 48+49. For fixed untwisted SU(2) paired-cap trees with at least two vertices, a two-action all-orders radial expansion is combined with absolute leading torsion normalization and a joint leading Wilson law on the specified Hall charts. Earlier portfolio entries and manuscripts are retained.

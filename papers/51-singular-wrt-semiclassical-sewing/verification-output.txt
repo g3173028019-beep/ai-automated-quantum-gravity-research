@@ -1,0 +1,4 @@
+r=17: absolute error 0.0
+r=18: absolute error 1.121e-44
+r=37: absolute error 0.0
+r=38: absolute error 0.0

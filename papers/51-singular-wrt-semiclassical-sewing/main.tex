@@ -1,0 +1,38 @@
+\pdfoutput=1
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype,xcolor}
+\usepackage[colorlinks=true,allcolors=blue!50!black]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\allowdisplaybreaks[1]
+\hypersetup{pdftitle={Singular semiclassical sewing for paired-cap Witten--Reshetikhin--Turaev invariants}}
+\title{Singular semiclassical sewing for paired-cap\\Witten--Reshetikhin--Turaev invariants}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study the closed \(\mathrm{SU}(2)\) Witten--Reshetikhin--Turaev invariants of tree plumbings capped at each vertex by opposite order-two fillings. For every fixed tree with at least two vertices we prove a two-action power--logarithm expansion of the exact invariant and its smooth joint fibre-trace marks, with errors to any prescribed algebraic order. The two action sectors are selected using bounded finite-level cap insertions and have coefficients supported on the corresponding projected flat loci. On the classical side, a matching decomposition of the actual flat-character space gives the exact reduced Chern--Simons action and absolute torsion normalization on the irreducible leading Hall charts. The resulting leading coefficient agrees with the closed invariant. Fixed, compatibly routed Wilson probes in the dormant part of these charts obey an ungated leading joint angular law, including on trees with macroscopically active branches. A separate signed transition law records the relative scales near overlap strata. The all-orders statement concerns the radial action sectors; the angular comparison determines leading weights and specified overlap limits.
+\end{abstract}
+\tableofcontents
+\input{intro}
+\input{geometry}
+\input{radial}
+\input{phases}
+\input{classic}
+\input{angular}
+\input{hall}
+\input{conclusion}
+\input{references}
+\end{document}

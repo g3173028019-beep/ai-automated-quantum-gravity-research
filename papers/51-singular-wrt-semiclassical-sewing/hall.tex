@@ -1,0 +1,735 @@
+\section{Hall reduction: absolute densities and the mixed angular law}
+\label{sec:hall}
+
+A deficient matching leaves macroscopic colors at sites that cannot be
+treated by the low-deficit angular expansion. We first identify the positive
+measure carried by these sites through an absolute determinant calculation.
+We then prove that the finite, signed angular transfer joins it to the
+dormant matching law. Throughout this section \(r=k+2\),
+\(Z_r=S_{11}\tau_r\), and the Lie algebra is in unit-quaternion coordinates,
+with inner product \(-\operatorname{Tr}(XY)/2\). In particular,
+\(\operatorname{Vol}(\mathrm{SU}(2))=2\pi^2\) and the unit axial circle has
+period \(2\pi\). All seam signs and fibre periods refer to the stated
+untwisted paired-cap surgery.
+
+\subsection{Intrinsic Hall data and the active cap measure}
+\label{sec:hall:data}
+
+Let \(N\) be the number of backbone vertices, \(\nu\) its matching number,
+and let \(S_*\) consist of the vertices exposable by some maximum matching.
+Set
+\[
+ T_*=N_G(S_*),\qquad I=G\setminus(S_*\cup T_*),\qquad
+ a=|T_*|,\quad b=|S_*|,\quad d=|I|/2,\qquad \nu=a+d .
+\]
+The inactive forest \(I\) has a unique perfect matching \(M_I\).
+Equivalently, begin with a maximum matching saturating a minimum cover
+and follow alternating paths from the unmatched vertices in its
+complement. The reached complement vertices are precisely \(S_*\), and
+their reached cover neighbors are \(T_*\). Each \(t\in T_*\) has at least
+two distinct neighbors in \(S_*\): its matching partner and its
+predecessor on a path from an exposed vertex. Also, no edge joins \(S_*\)
+to \(I\). These properties give the minimum cover \(T_*\cup A_I\), where
+\(A_I,B_I\) are the two bipartitions of the dormant forest. The
+bipartitions may be chosen independently in each component. If \(a_jb_j\)
+is the \(j\)-th matched edge, an unmatched \(a_i b_j\) gives the relation
+\(i\to j\). Write
+\[
+ \Omega_I=\{u\in[0,1]^d:u_i\le u_j\text{ whenever }i\to j\},\qquad
+ \iota_I(u)=(u_j,1-u_j)_{j=1}^d .
+\]
+The coordinates in \(\iota_I\) retain their physical vertex labels.
+Reversing a component's bipartition reflects its root coordinates and
+does not change any resulting labelled measure.
+
+For a noncentral fibre \(h_s\) put \(x_s=1-\arg(h_s)/\pi\).
+At \(t\in T_*\), denote by \(P_t\) the ordered product of the incoming
+noncentral conjugacy-class variables, with the prescribed central
+factors included. Set
+\begin{equation}
+ dM_*=\prod_{s\in S_*}2\cos^2(\pi x_s/2)\,dx_s\prod_{t\in T_*} L_t(x),
+ \qquad
+ L_t(x)=\mathbb E\!\left[\frac{\pi}{4|\operatorname{Im}P_t|}\right].
+ \label{eq:hall:weight}
+\end{equation}
+The expectation uses independent probability conjugacy-class variables at
+each cut active block. Successive tree gluing fixes the relative
+orientations; it does not replace \(P_t\) by the product of its traces.
+
+Here is the accompanying angular coarea rule. For the two trace-zero
+cap quaternions \(A=u,B=v\) with probability sphere law \(d\Pi\), the
+real part of \(Q=AB\) is \(-u\cdot v\), uniform on \([-1,1]\).
+The group-Haar density of \(Q\) is therefore
+\(\pi/(4|\operatorname{Im}Q|)\). At \(Q\ne\pm1\), rotation about its
+axis gives the conditional uniform law of \(u\) on its perpendicular
+equator. In a common local frame the resulting cap kernel at \(P_t\)
+can be written
+\begin{equation}
+              \frac{\pi}{2}\,
+          \delta\bigl(u_t\cdot\operatorname{Im}P_t\bigr)\,d\Pi(u_t).
+ \label{eq:hall:cap-coarea}
+\end{equation}
+In fact the integral of \(\delta(u\cdot q)\) against \(d\Pi(u)\) is
+\(1/(2|q|)\) for \(q\ne0\). At a central product this formula is used as
+coarea in the variables of the ordered group relation, not as a
+normalized pointwise equator. The conditional circle generally depends
+on the direction from which the product approaches the center.
+
+The same \(L_t\) is forced by the finite quantum characters. With
+\(\chi_n(h)=\sin(n\arg h)/\sin\arg h\), the coefficient of \(\chi_n\) in
+\(\pi/(4\sin\arg h)\) under probability group Haar is \(1/n\) for odd \(n\)
+and zero for even \(n\). Averaging a product character over independent
+conjugacy-class representatives gives
+\(n\prod_s(\chi_n(h_s)/n)\), where the product contains one factor
+\(\chi_n(h_s)/n\) per incoming active vertex. Thus on compact interior
+macro radii
+\begin{equation}
+ L_t(x)=\sum_{\substack{n\ge1\\ n\ {\rm odd}}}
+             \prod_{s\in S_*\cap N(t)}\frac{\chi_n(h_s)}n .
+ \label{eq:hall:characters}
+\end{equation}
+The convergence is absolute there because \(t\) has at least two incoming
+active neighbors. Formula \eqref{eq:hall:cap-coarea}, rather than the
+pointwise endpoint values of \eqref{eq:hall:characters}, defines the
+positive measure used in endpoint exhaustion.
+
+\subsection{The absolute adjoint determinant line}
+\label{sec:hall:torsion}
+
+We give the normalization on a slightly more general chart, in order to
+state the mixed-sign overlap without specializing the number of sites.
+Let \(S\) be an independent noncentral set, \(T=N_G(S)\) and
+\(I_0=V\setminus(S\cup T)\), of sizes \(b_0,a_0,n_0\).
+Assume each \(t\in T\) is negative central and its actual cap tuple is
+locally irreducible; this holds in particular for noncentral \(P_t\).
+Work first where its fixed-periphery volume is regular, and on globally
+irreducible characters. Let \(n_+\) be the number of positive centers in
+\(I_0\), fix their cap-root choices, and sum the two active roots at
+each \(s\). At each inactive site its invariant coefficient space \(V_i\)
+is the line of its negative cap axis or the full quaternion algebra at a
+positive center. Let \(\mathcal B_{I_0}\) be the symmetric projected
+adjacency on \(\bigoplus_{i\in I_0}V_i\) given by the marked seam maps,
+and set \(K=\ker\mathcal B_{I_0}\). All these spaces carry the indicated
+unit metric. Use \(dM_{S,T}\) for the analogue of \eqref{eq:hall:weight}
+and \(dP\) for the conditional normalized active-surface and bending
+Haar variables. The latter are genuine cut variables on the effective
+group quotient. In cohomology, use the dual \(H^2\) basis to the actual
+deformation basis of \(H^1\).
+
+\begin{theorem}[Absolute Hall determinant factorization]
+\label{thm:hall:torsion}
+The stack half-torsion in these coordinates is
+\begin{equation}
+ d\mu_{\rm stack}
+ =2^{a_0+N-1-4n_+}\pi^{\,2b_0+n_0-2-n_+}\,
+    dM_{S,T}\,dP\,
+    |\det{}'\mathcal B_{I_0}|^{-1/2}\,d\operatorname{vol}_{K}.
+ \label{eq:hall:torsion}
+\end{equation}
+Here \(\det{}'\) is the product of nonzero eigenvalues, with empty
+product one, and \(d\operatorname{vol}_{K}\) uses the actual unit
+quaternion fibre periods. The formula gives the density in all retained
+harmonic variables on a fixed-rank chart. It does not claim that each
+harmonic vector at a singular reference is tangent to a flat family.
+If the positive roots are also summed, multiply by \(2^{n_+}\).
+\end{theorem}
+
+\begin{proof}
+Use ordinary unit coefficient cellular cochains, in which a differential
+from degree \(j\) to \(j+1\) contributes the absolute determinant to
+power \((-1)^j\). A torus with a noncentral peripheral holonomy has only
+its invariant line in cohomology, in primitive section and fibre units;
+the perpendicular complex is acyclic with torsion one. A central seam
+has the same unit assertion in all three directions.
+
+At a noncentral vertex of valence \(k\), the cap-free piece is a
+punctured sphere times the fibre circle. The perpendicular fibre
+differential has determinant \(4\sin^2(\pi x)\), and its Euler exponent
+from the base is \(-k\). Each cap solid torus contributes a
+perpendicular determinant \(4\cos^2(\pi x/2)\). On the axis the product
+cochains have canceling degrees. At each filling the section difference
+has unit pivot and the primitive fibre evaluates by \(\pm2\) on the
+core. The degree-one cap mismatch therefore gives \(1/2\) in torsion
+per cap; the degree-zero and degree-two pivots are one. Thus the piece
+half-torsion is
+\[
+                  \frac{2\cos^2(\pi x/2)}{(2\sin(\pi x))^k}.
+\]
+At a negative central piece the two cap cores act by perpendicular
+half-turns, each with determinant \(4\). The same axial primitive
+subdeterminants give \(4/2\) per cap in torsion, hence the piece
+half-torsion is \(2\). In the inactive positive case the coefficient
+system is trivial and the axial cap calculation occurs in three
+directions, giving half-torsion \(1/8\).
+For a locally irreducible negative piece, choose the cap-free base
+cohomology in paired degrees using all peripheral traces, possible by
+relative duality since the invariants vanish. The cap determinants
+then remove exactly their own two trace lines. The same formula \(2\)
+holds, with fixed-periphery cohomology retained.
+
+The remaining Mayer--Vietoris calculation can be made with primitive
+half-edge section coordinates. In degree one augment each vertex
+restriction by its one section sum in the local invariant space.
+Eliminate the section mismatches with identity pivots. A noncentral
+vertex keeps its one common fibre period; its incident section values
+use a sum-zero basis such as \(e_i-e_k\), with unit complementary lift
+\(e_k\). A locally irreducible active center has no invariant fibre
+period. Since \(S\) is independent and no \(S\)--\(I_0\) edge exists, the
+remaining fibre adjacency is zero on the old \(S\) periods and is
+exactly \(\mathcal B_{I_0}\) on the inactive periods. In degree zero the
+map is the inclusion-difference \(U\) of vertex invariant lines or
+algebras in the transported seam spaces. The degree-two half-edge
+augmentation gives \(U^*\): one-sided lifts of the seam area sums have
+determinant one, so no norm of a diagonal or sum-zero lattice is
+inserted. The connecting collar cup product pairs each retained unit
+fibre period with its own unit quotient dual, and the fixed-periphery
+pairs use the Goldman form. Cross terms from alternate lifts are
+triangular, since the connecting collars pair through the indicated
+boundary periods. In the unit fibre metric the residual determinant is
+therefore \(|\det{}'\mathcal B_{I_0}|^{-1/2}\), with its induced kernel
+volume. This specifies the volume on a slanted kernel rather than
+replacing it by the volume of any selected coordinate coefficients.
+
+For completeness, put \(p=\sum_{s\in S}\deg s\) and \(q=N-1-p\). The
+\(p\) noncentral seam circles and \(q\) central seam groups contribute
+\((2\pi)^p(2\pi^2)^q\). Their effective quotient follows from the paired
+\(U,U^*\) determinants, or by inserting the vertex invariant generators
+as columns and taking the determinant complement. Divide by the
+\(b_0\) noncentral vertex circles,
+the \(n_0-n_+\) inactive circles and \(n_+\) inactive groups, and the
+\(a_0\) locally irreducible centers.
+The resulting stack angular factor is
+\[
+ \frac{2^{-a_0}(2\pi)^{p-b_0}(2\pi^2)^q}
+      {(2\pi)^{n_0-n_+}(2\pi^2)^{n_+}}.
+\]
+Indeed the kernel of the combined local conjugation is precisely the
+single global center when the closed tuple is irreducible. Dividing by
+the product of the full local stabilizers includes that final stack
+factor; dividing by it a second time would be incorrect.
+
+The active unit period changes to \(\pi\,dx_s\). If \(k_t\) is the
+number of active neighbors of a negative center, its absolute reduced
+Goldman volume is
+\[
+   2^{k_t+1}\pi^{k_t-2}
+        \left(\prod_{s\sim t,\ s\in S}\sin(\pi x_s)\right)L_t .
+\]
+For this last normalization use the group-valued volume formula
+\cite{AMW}: a noncentral conjugacy class has volume
+\(2\pi\sin\theta\); the two traceless classes each have volume \(2\pi\);
+and the coarse fixed-product reduction uses
+\(2/\operatorname{Vol}(\mathrm{SU}(2))^2\) times the convolution at
+identity in these probability-Haar conventions. Formula
+\eqref{eq:hall:cap-coarea} supplies its convolution factor.
+Equivalently this is the relative cup pairing on the punctured
+sphere followed by one primitive fibre product. Multiplying these
+volumes and all block factors, cancel the active incidence sines,
+use \(\sum_t k_t=p\) and \(p+q=N-1\), and include the \(2^{b_0}\)
+true noncentral root sheets. This gives \eqref{eq:hall:torsion}.
+\end{proof}
+
+In particular let \(S=S_*,T=T_*,I_0=I\), with all dormant signs
+negative. For each dormant edge let \(t_e\) be the actual signed cap
+axis dot. The determinant of the weighted bipartite adjacency of a
+perfectly matched forest satisfies
+\[
+          |\det\mathcal B_I|^{1/2}=\prod_{e\in M_I}|t_e| .
+\]
+Every nonzero determinant monomial gives a perfect matching and two
+different matchings on a forest would have an alternating cycle.
+On its resolved regular charts this gives
+\begin{equation}
+ d\mu_{\rm reg}
+      =C_{\rm abs}\,dM_*\,\frac{dP}{\prod_{e\in M_I}|t_e|},
+ \qquad C_{\rm abs}=2^{a+N-1}\pi^{\,2b+2d-2}.
+ \label{eq:hall:resolved-density}
+\end{equation}
+When a dormant matched component is orthogonal and both radial
+periods at every matched edge are retained, the block determinant is
+instead the corresponding literal \(\pi\,dy_i\) per signed fibre
+defect, using exactly the same angular density.
+
+Rooting the central seams makes the conditional joint dormant axes
+transparent. The incoming central relative rotation of a new dormant
+axis has independent group Haar law and so produces a uniform sphere
+axis conditional on earlier axes, local active cut shapes and active
+radii. The old ordered products see their dormant neighbors' central
+fibre signs, not these cap axes. Thus the pre-Fourier dormant axis
+measure is the product of spherical probabilities, modulo the common
+rotation and actual cap sign actions. Its dots on tree edges are
+independent uniform variables. Conditioning on \(t_e=0\) for each
+\(e\in M_I\) gives an ordered orthogonal frame on that edge and the
+joint law of independent Haar frames. A joint Wilson word is evaluated
+in these shared axes, not in separate angle marginals. This description
+does not impose independence conditional on arbitrarily prescribed
+global relative orientations of old active blocks.
+
+For the actual local action and its calibrated stable reduction
+through arbitrary dormant angles and interior active locks, see
+Theorems~\ref{classic:thm:hall-action} and
+\ref{classic:thm:hall-stationary}. In particular the \(2\pi^2\)
+conversion between the quaternion-unit curl and the action Hessian
+compensates the radial coarea factor \(\pi^{2d}\). Applying the
+Gaussian normalization to \eqref{eq:hall:resolved-density} gives the
+absolute factor that will occur in the joint quantum law:
+\begin{equation}
+ p_G=(3N-2\nu-3)/2,\qquad
+ c_G=C_{\rm abs}(2\pi^2)^{-p_G}
+    =2^{(1-N)/2+2a+d}\pi^{1-N}.
+ \label{eq:hall:normalization}
+\end{equation}
+The signed phase follows independently from the capped flat action;
+on this Hall stratum it is \((-1)^{r(N-1)}\).
+
+\subsection{Active endpoints and bounded-product overlap}
+\label{sec:hall:overlap}
+
+The cap measure has a useful uniform bound at genuine macro
+endpoints. Put \(\alpha_s=\min(x_s,1-x_s)\). On the open cube,
+\[
+       L_t(x)\asymp_G
+        \frac{1}{\max_{s\in S_*\cap N(t)}\alpha_s}.
+\]
+For the upper bound average last the class with largest reduced
+angle \(\alpha\), using radians for the following calculation. For a
+fixed other quaternion of angle \(\beta\), the angle of their product
+has density \(\sin\theta/(2\sin\alpha\sin\beta)\) on an interval of
+length \(2\min(\bar\alpha,\bar\beta)\), where a bar reduces angles to
+\([0,\pi/2]\) by central signs. This follows directly from the uniform
+relative axis dot, and extends to a central fixed input by
+continuity. The integral of \(1/\sin\theta\) is bounded by a constant
+times \(1/\sin\alpha\). The lower bound uses the triangle inequality
+on the distance of the product to the center.
+
+For \(\alpha_s\asymp2^{-k_s}\), let \(A_j=\{s:k_s\ge j\}\) and
+\(B(A_j)=\{t:N_{S_*}(t)\subset A_j\}\). The mass of the dyadic box in
+\eqref{eq:hall:weight} is bounded by a constant times
+\[
+ 2^{-\sum_s k_s+\sum_t\min_{s\sim t}k_s}
+       =2^{-\sum_{j\ge1}(|A_j|-|B(A_j)|)} .
+\]
+For nonempty \(A_j\), the forest on \(A_j\) and \(B(A_j)\) has at least
+\(2|B(A_j)|\) incidences and at most \(|A_j|+|B(A_j)|-1\).
+Thus the exponent is at least \(\max k_s\). Summing by that maximum
+gives, for \(b>0\),
+\begin{equation}
+ \int_{\{\min_s\alpha_s<\epsilon\}}dM_*
+ \le C_G\epsilon(1+|\log\epsilon|)^{b-1}.
+ \label{eq:hall:classical-end}
+\end{equation}
+The same absolute bound holds with any bounded joint classical angular
+mark. There is also no endpoint mass hidden at a lock of \(P_t\).
+On \(\alpha_s\ge\epsilon\) the product of two incoming classes has
+group-Haar density bounded by \(C\epsilon^{-2}/\sin\theta\).
+The remaining input products translate this bound. The integral of
+the translated inverse-distance factor times \(1/\sin\theta\) over a
+ball of radius \(\delta\) at either center is \(O(\epsilon^{-2}\delta)\),
+uniformly over the translate. If the two poles are close to the ball,
+apply Cauchy--Schwarz and the \(O(\delta)\) inverse-square integrals in
+dimension three; otherwise integrate directly. Bounding the other
+\(a-1\) cap factors by \(C\epsilon^{-(a-1)}\), and using
+\eqref{eq:hall:classical-end} on the complement, gives a uniform
+vanishing mass, for example
+\(O(\delta^{1/(a+2)}(1+|\log\delta|)^{b-1})\), for the union of these
+locks when \(a>0\). The statement does not require a pointwise choice
+of conditional angular law at a collapsed equator.
+
+We next make the normalization of all bounded physical transition
+regions explicit. Let \(W\) be a fixed collection of integer-spin
+Wilson words piercing only positive dormant cap disks. The words may
+join dormant components. Use the exterior-compatible tree-corridor
+routing: auxiliary tracks run on one side of each clasp corridor,
+above the old forced sublink, and descend only at their dormant cap
+ports. In the diagram with the external \(T_*\)--\(I\) Hopf clasps
+removed, the ordinary forced sublink can be placed below a plane
+separating it from the dormant and auxiliary ribbons. This is a
+specified class of actual framed links, not an identification of all
+embeddings of an abstract word. It satisfies the cut hypotheses of
+Lemma~\ref{lem:ang:network}. The cap-word evaluation on the central
+dormant axes is \(P_W\) in \eqref{eq:ang:angular-kernel}. In particular,
+there are no old active cap passages or deliberately retained
+linkings with a macroscopic ribbon in the separated diagram.
+
+There is also an exact stronger cut identity for words routed
+entirely inside individual connected dormant components. Contract
+those components to vertices of the incidence tree and prune leaves.
+Cut the one simple backbone ribbon at the exterior clasp, keeping
+the clasp outside the cut. A closed decorated leaf then gives an
+endomorphism of a simple object, hence its normalized standalone
+scalar. Reattaching contributes just the ordinary normalized Hopf
+factor. Repeating the cut gives exactly the product of the standalone
+decorated dormant transfers and the unchanged outside scalar Hopf
+factors, at every level. This argument never divides by a scalar
+Hopf entry, which can vanish. A connecting word can place a nonscalar
+auxiliary packet on that cut, which is why its proof uses the
+conditional forced exhaustion below.
+
+Let \(E'\) be any subset of the unmatched dormant arrows. Keep a fixed
+compact positive product annulus with smooth profile \(\psi_j(w_j)\)
+at each physical matched scale
+\(w_j=m_{a_j}m_{b_j}/r\), and a fixed compact positive profile
+\(\chi_e(v_e)\) at each \(v_e=m_{a_i}m_{b_j}/r\), \(e=(i\to j)\in E'\).
+Contract the \(E'\) arrows on the matching tree. Let \(p=d-|E'|\),
+let \(\Omega_{E'}\) be the order polytope on the \(p\) components, and
+let \(\iota_{E'}\) insert the corresponding exponent pair
+\((u_C,1-u_C)\) at every physical matched pair in its component $C$.
+At the other unmatched edges one may use fixed bounded upper-product
+gates equal to one near zero; alternatively support the smooth
+logarithmic mark \(F\) in the strict interior chamber for the
+remaining order comparisons. Use fixed negative-centre profiles
+equal to one near zero on the forced and dormant sites and a fixed
+smooth macro mark \(\eta\) with compact interior support.
+
+\begin{theorem}[Absolute mixed overlap at bounded physical products]
+\label{thm:hall:overlap}
+For the compatible literal words and these marks,
+\begin{align}
+ &\lim_{r\to\infty}
+ \frac{(-1)^{r(N-1)}Z_{r,W}[\eta,F,\psi,\chi]}
+      {2^d c_G\,r^{p_G}(\log r)^p}
+ =\left(\int\eta\,dM_*\right)
+  \left(\int_{\Omega_{E'}}F(\iota_{E'}(u))\,d^pu\right)
+ \notag\\[-0.2em]
+ &\quad{}\times
+  \int_{\mathbb R_+^{d+|E'|}}
+    \mathcal K_{W,I}(\mathbf w_M,\mathbf v_{E'},0_{\rm rest})
+    \prod_j\psi_j(w_j)\,dw_j
+    \prod_{e\in E'}\chi_e(v_e)\,\frac{dv_e}{v_e}.
+ \label{eq:hall:overlap}
+\end{align}
+Here \(\mathcal K_{W,I}\) is the actual joint kernel of
+Theorem~\ref{thm:ang:compact}, on the dormant sphere variables with the
+original shared words; it is not a product of single-edge observables.
+\end{theorem}
+
+The exhaustion proved below justifies first fixing a finite forced tuple,
+also for connecting words. To see the normalization, take
+\(A=T_*\cup A_I,\ B=S_*\cup B_I,\ \alpha=|B|=N-\nu\).
+If \(\mathcal S_{r,W}\) denotes the sum with vertex factors
+\(1+\cos(\pi m_v/r)\) and the normalized categorical kernel of
+\eqref{eq:ang:normalized-sum}, put
+\(X_{r,W}=(2/r)^\alpha 2^{-\nu}\mathcal S_{r,W}\).
+The exact external factor in this normalization is asymptotic to
+\[
+ (-1)^{r(N-1)}2^{(3N+1)/2-2\alpha}\pi^{1-N}r^{p_G}
+   =(-1)^{r(N-1)}2^d c_G r^{p_G}.
+\]
+At fixed forced labels the macro summations have ordinary odd-grid
+Riemann limits with conditional density
+\(2\cos^2(\pi x_s/2)\,dx_s\) and one normalized character for every old
+active incidence. Summing the forced characters gives
+\eqref{eq:hall:characters}. At every dormant matched partner, the
+odd grid of \(w_j\) has spacing \(2m_{a_j}/r\), and the normalized
+conditional mass is \(2\,dw_j/m_{a_j}\). The annuli on \(E'\) bound
+all ratios between anchors in each selected component. Keep its
+one root anchor and its remaining edge log ratios. Each nonroot
+anchor contributes \(dR_e/(2R_e)\), \(R_e=m_{a_i}/m_{a_j}\);
+the log-ratio incidence Jacobian is one, by successive leaf
+elimination on a tree. Each root yields \((\log r)\,du_C/2\).
+The replacement \(v_e=R_e w_j\) then gives the physical
+\(dv_e/v_e\), including when several arrows use the same matched
+partner. Since \(p+|E'|=d\), the powers of two cancel exactly.
+
+On separated compact log cells all these meshes tend to zero and
+all dormant products in the kernel are bounded. The true packet
+limit in Theorem~\ref{thm:ang:compact} is uniform there. On the
+allowed order chamber the other products tend to zero; on violated
+cells they are removed by the stipulated gates. The boundary strips
+have arbitrarily small normalized harmonic mass, with uniformly
+bounded compact-annulus conditional transfers. This gives
+\eqref{eq:hall:overlap}, first for separated smooth tests and then
+for smooth joint masks by the usual tensor expansion or mixed
+variation bounds. A single measured intersection of several
+positive annuli is integrated in its complete \(E'\) chart. Its
+contribution must not be replaced by the sum of independently
+integrated single-seam residues.
+
+\subsection{Ungated active-Hall angular gluing}
+\label{sec:hall:leading}
+
+\begin{theorem}[Ungated literal joint moments for the intrinsic Hall sector]
+\label{thm:hall:main}
+Let \(\eta\) be any fixed smooth joint test of the literal ordinary
+radii of \(S_*\), including both endpoints, and let \(F\) be any
+fixed smooth joint test of the \(2d\) literal logarithmic radii of
+\(I\). For the exterior-compatible literal words above,
+\begin{align}
+ Z_{r,W}[\eta,F]
+ &=(-1)^{r(N-1)}c_G\,r^{p_G}(\log r)^d
+ \left[
+       \left(\int\eta\,dM_*\right)
+       \left(\int_{\Omega_I}F(\iota_I(u))\,du\right)
+       \mathbb E_{\rm frame} P_W+o(1)\right].
+ \label{eq:hall:main}
+\end{align}
+There are no original forced-color prefixes, radial endpoint,
+product-scale, or Abel gates. The expectation is the genuine
+joint law of independent ordered orthogonal Haar frames on
+\(M_I\), modulo common rotation and the cap sign actions.
+Ordinary smooth radius arguments on \(T_*\cup I\), if included in a
+joint test, may be evaluated at their all-negative centres in the
+limiting coefficient. The theorem concerns fixed tests of the
+signed invariant, not convergence in unsigned total variation.
+\end{theorem}
+
+\begin{proof}
+Use the finite-rank network of Lemma~\ref{lem:ang:network} and the
+signed full-alcove prefix estimate of Lemma~\ref{lem:ang:prefix}.
+Expand in its finitely many rank labels. Fold each color independently
+into \([1,r/2]\); the reflected parity is fixed on each branch.
+The vertex factors have bounded sup and sampled variation, including
+any interval prefix, and the unaltered scalar cap profile is
+\(1\pm\cos(\pi n/r)\). Sum \(B\) conditionally first. In \(X_{r,W}\)
+normalization a \(B\)-site \(z\) contributes at most \(C/M_z\), where
+\(M_z\) is its largest folded neighbor. For its matched anchor
+\(n_j\) extract \(1/n_j\), leaving at most \(C n_j/M_z\le C\).
+All \(A\)--\(A\) coefficients are bounded. This is an estimate after
+each signed \(B\) transfer, not a claim about the absolute variation
+of the original color array.
+
+For every \(t\in T_*\) choose the alternating path towards an exposed
+vertex. Along that path a matched partner contributes at most a
+constant times \(n_{\rm next}/n_{\rm previous}\), and the final
+unmatched partner gives \(1/n_{\rm last}\). Their product is bounded
+by \(C/n_t\). The factors along each chosen path are distinct, and all
+of them lie in the old forced part. Take the geometric mean over
+\(T_*\) and restore the exterior harmonic factors. For \(a>0\) the
+resulting bound on the remaining \(A\)-summand is
+\begin{equation}
+ C\prod_{t\in T_*} n_t^{-1-1/a}\,
+            \prod_{j\in A_I}n_j^{-1}.
+ \label{eq:hall:uniform-forcing}
+\end{equation}
+If \(a=0\) only the dormant harmonic part is present. This holds on
+every folded parity and for all rectangular prefixes. In
+particular a forced folded prefix \(n_t\le H\) may be inserted at
+uniform normalized cost \(O(H^{-1/a})\). An originally reflected
+forced vertex within a bounded folded prefix carries its untouched
+\(1-\cos(\pi n_t/r)=O_H(r^{-2})\) factor and is negligible. Thus the
+relevant fixed tuple can be taken in the original low-deficit
+branch. Mixed variation expansion against prefixes gives the same
+statements for the fixed smooth joint tests in the theorem.
+
+This estimate also controls old macro endpoints without a compact
+interior assumption. With the other forced labels at most \(H\),
+the original endpoint condition at any \(s\in S_*\) restricts its
+independent \(B\)-sum to at most \(O(\epsilon r+1)\) entries. Its
+normalized transfer is then bounded by
+\(C(\epsilon+r^{-1})\le CH(\epsilon+r^{-1})/M_s\).
+Keep this improving factor in
+\eqref{eq:hall:uniform-forcing} and add the high-\(H\) tail.
+Optimizing gives, for \(a>0\), a bound on the normalized magnitude of
+the \emph{signed} endpoint contribution of
+\begin{equation}
+                       C(\epsilon+r^{-1})^{1/(a+1)} .
+ \label{eq:hall:quantum-end}
+\end{equation}
+Here the normalization is \(r^{p_G}(1+\log r)^d\). The bound
+includes a finite union of endpoint bands, possibly shrinking with
+the level. It is distinct from the positive classical exhaustion
+\eqref{eq:hall:classical-end}.
+
+At fixed forced \(H\), choose a dormant bipartition so that a given
+dormant endpoint is unsummed. Its folded harmonic strips
+\(n<r^\zeta\) and \(n>r^{1-\zeta}\) cost normalized
+\(O(\zeta+1/\log r)\). For intersections choose one such restriction
+as unsummed and use the signed prefix estimates for the other
+ones. If an originally reflected dormant site lies in the remaining
+mesoscopic rectangle, its untouched \(1-\cos\) supplies
+\(O(r^{-2\zeta})\) in the same orientation. Thus only the original
+negative mesoscopic rectangle remains. In a strict violation of one
+dormant Hall inequality by logarithmic gap \(\gamma>0\), the factor
+\(n_j/M_{b_j}\) loses \(O(r^{-\gamma})\); thin comparison strips cost
+their log width. On a strict allowed chamber each dormant matched
+anchor dominates its incident labels by a power, including the
+bounded forced ones. The signed tail estimate removes matched
+products \(w_j>K\) at normalized \(O(1/K)\) cost. The volume of
+\(w_j<1/K\) is \(O(1/K)+o(1)\) by the odd mesh on separated log
+cells. All of these cutoffs have now been justified in the
+original exact signed diagram, prior to any approximation of an
+attaching matrix.
+
+In a retained compact product cell each \(T_*\)--\(I\) attaching
+monodromy tends to the identity in the unitary ribbon category.
+For fixed forced color \(n\le H\) and dormant deficit \(m=o(r)\),
+the balancing phase on a fused spin \(j+s\), \(|s|\le(n-1)/2\),
+differs from one by \(O((Hm+H^2)/r)\). This bounds the operator
+norm because fusion channels are orthogonal. Replacing these
+finitely many monodromies therefore changes the normalized compact
+cell by \(o(1)\): the normalized quantum traces and the bounded
+fixed packets do not amplify the error, and the absolute
+compact-annulus radial count was already bounded. There is no
+absolute summation of this perturbation over unbounded products.
+With the chosen exterior routing the resulting old sublink is
+split and undecorated. The old macro bracket remains exactly the
+ordinary normalized Hopf bracket at its original values. The
+dormant calculation is now on the disconnected heavy forest with
+all original fixed auxiliary contractions, so the actual
+coherent-state kernel of Theorem~\ref{thm:ang:compact} retains their
+joint \(P_W\). This proves the fixed-prefix assertion in
+Theorem~\ref{thm:hall:overlap}, including connecting words.
+
+For each fixed old odd color \(n\) the normalized bracket is
+\[
+ \frac{\sin(\pi/r)}{\sin(\pi n/r)}
+                      \frac{\sin(\pi n x)}{\sin(\pi x)} .
+\]
+It is uniformly bounded for the fixed \(n\) on the full macro
+interval, with removable values at both endpoints. Thus its Riemann
+limit with the actual cap factor is the ordinary normalized
+character integral. The limit as \(H\to\infty\) is
+\eqref{eq:hall:weight} by \eqref{eq:hall:characters} on compact
+macro windows. On the full box the same identification follows
+from \eqref{eq:hall:uniform-forcing},
+\eqref{eq:hall:quantum-end}, and the positive exhaustion
+\eqref{eq:hall:classical-end}. This removes the old macro and
+fixed hub gates without referring to a limiting normalized active
+angle at a degenerate cap relator.
+
+Finally use the previously controlled signed dormant tails to
+let the compact products exhaust the positive half-lines in the
+strict Hall chamber. In the bounded-product joint kernel,
+independent cap sign flips realize any assignment of signs to
+the edge dots of a forest and leave \(P_W\) invariant. Thus the
+matched Fourier integrations may be taken with real cosines.
+For one matched edge the Abel kernel
+\[
+       \int_0^\infty e^{-\epsilon w}\cos(\pi wt)\,dw
+          =\frac{\epsilon}{\epsilon^2+\pi^2t^2}
+\]
+tends to \(\delta_0(t)\) with mass one on \(\mathbb R\). The signed
+tail bound identifies this auxiliary Abel value with the
+ungated physical leading integral. Each bare dot probability
+\(dt/2\) contributes \(1/2\), canceling the \(2^d\) in
+\eqref{eq:hall:overlap}. Conditional Haar at the matched zero
+dots gives precisely the joint frames specified in the theorem.
+Exhausting the compact chambers and the old forced tuples yields
+\eqref{eq:hall:main}. This is also the classical absolute
+normalization in \eqref{eq:hall:normalization}, obtained by a
+different computation.
+\end{proof}
+
+The genuine joint spin-one words of Section~\ref{sec:ang:main}
+therefore determine the normalized dormant law on its
+unprojected frame quotient, even across components in the
+compatible routing. For example, a single edge-band spin-one
+character \(4t^2-1\) has normalized leading mean \(-1\) on a
+matched edge and \(1/3\) on an unmatched dormant edge; products
+of distinct non-edge observables must still be taken in the shared
+frame law. In contrast, positive physical product gates
+\(\psi\) supported in \(1<w<2\) on a matched edge can give a
+negative vacuum overlap coefficient in
+\eqref{eq:hall:overlap}, from the negative sinc on that interval.
+The positive frame measure after signed integration is therefore
+not a positive joint measure of unintegrated product and angle
+data. The theorem does not include arbitrary active angular
+Wilson insertions, a route that truly links the separated forced
+sublink, or growing packet colors. Nor does it assign lower-order
+coefficients of a globally ungated integral to all other
+character strata.
+
+\subsection{A deficient five-vertex validation}
+\label{sec:hall:broom}
+
+The first mixed diagram with a nontrivial dormant matching is
+the five-vertex tree with edges
+\(s_1c,s_2c,cd,de\). Its intrinsic sets are
+\(S_*=\{s_1,s_2\}, T_*=\{c\}, I=\{d,e\}\).
+Here \(p_G=4\) and \(c_G=2/\pi^4\). At fixed compact old macro radii
+the measured dormant regular negative branch has half-torsion
+\[
+    32\pi^4\,dM_*\,
+       \frac{d\Pi(u_d)d\Pi(u_e)}{|u_d\cdot u_e|}.
+\]
+At the perpendicular overlap the replacement by \(\pi^2\,dy_d\,dy_e\)
+and the calibrated cubic integration give
+\((2/\pi^4)r^4\log r\,dM_*\).
+This is also a direct finite check without the packet theorem.
+The two compact old macro transfers decay rapidly in the odd hub
+index by ordinary sine summation. At fixed hub index \(n\), the
+remaining terminal transfer is
+\((1+O(1/m))/m\) at its adjacent dormant label \(m\) in negative
+trace windows equal to one at their endpoints. Its middle sinc
+changes the harmonic sum by \(O(1+\log(1+n))\), so the coefficient
+is the odd harmonic half-log times the old forced character
+sum. The latter is exactly \(\int dM_*\) with the chosen macro
+tests. This recovers the absolute coefficient and a remainder
+\(O(r^4)\).
+
+As a normalization check across a true positive end, let
+\(h_d=-1,h_e=+1\). For each fixed positive \(e\) root the dormant
+adjacency on the line and full Lie algebra has nonzero eigenvalues
+\(\pm1\). Its kernel is the actual plane
+\(v=\log(h_e)/\pi\perp u_d\); by
+\eqref{eq:hall:torsion} its boundary density is
+\(2\pi^5dM_*\,d\Pi(u_d)\,d^2v\).
+There are two positive root choices. Writing \(y=1-|v|\), the
+continued activated cover has exact radial stack density
+\(16\pi^5\cot(\pi y/2)\,dy\,dM_*\), whose endpoint agrees with
+the plane density after polar integration. With a smooth literal
+upper-end mark \(\eta_e(y)\) and the other dormant and hub
+negative windows as above, the exact quantum leading term is
+\[
+      \frac{r^4}{\pi^3}
+           \left(\int\eta\,dM_*\right)
+           \left(\int_0^1\eta_e(y)\cot(\pi y/2)\,dy\right)
+      +O(r^3).
+\]
+Indeed the \(e\)-transfer at upper \(y\) is the sine transform of the
+odd-reflected smooth cap profile and is rapidly summable in
+the remaining lower index. The attaching sinc can be replaced by
+one at \(O(r^{-1})\) cost in the normalized sum. The odd sine
+series gives the e integral and the same forced character
+factor as before. There is no new logarithmic residue.
+
+If the other dormant site is positive instead, its opening changes
+the hub product to the actual three-input ordered product. For the
+activated cover write
+\[
+ dM'=\left(\prod_{s=s_1,s_2,d}2\cos^2(\pi x_s/2)\,dx_s\right)
+          L_c(x_{s_1},x_{s_2},x_d)\,L_e(x_d),
+ \qquad L_e(y)=\frac{\pi}{4\sin(\pi y)} .
+\]
+For a literal \(d\) upper-end mark \(\eta_d\) and \(e,c\) negative
+windows the corresponding coefficient is
+\[
+                4\pi^{-4}r^4\int\eta\,\eta_d\,dM'+O(r^3).
+\]
+One can verify the exact coefficient directly: fold the upper \(d\)
+label \(m\) to \(r-m\) in the terminal transfer, whose error is
+\(O((r-m)^{-1})\). For odd hub \(n\) the middle sine is
+\(O(n(r-m)/r)\), so this error is summable at \(O(r^{-1})\) in the
+normalized sum. Its odd-mesh integral supplies the third normalized
+character at \(c\) with the factor \(2\cos^2(\pi y/2)L_e(y)\).
+The two old compact macro profiles make the resulting triple
+character series summable all the way to the positive \(d\) endpoint.
+
+If both dormant sites are positive they form a separate
+four-dimensional smooth chart: their full projected adjacency
+is invertible and there is no nearby noncentral dormant site.
+Equation~\eqref{eq:hall:torsion} gives total stack
+\((\pi^2/2)dM_*\) after the four positive roots. Its action is
+\(1/2\) modulo one. With both positive windows equal to one at
+their endpoints the exact coefficient is
+\((-1)^r r^2\int\eta\,dM_*/(8\pi^2)+O(r)\).
+For the finite check fold both dormant labels and write
+\(m=r-i\) on \(d\). The terminal sine transfer has the double
+reflection factor \((-1)^r\) and the folded transform of
+\[
+                 H(z)=\frac{\pi}{2}\eta_e(1-z)\tan(\pi z/2).
+\]
+The middle sinc supplies \(i/r+O(r^{-2})\) at fixed odd hub \(n\)
+and fixed \(i\), and the remaining dormant profile supplies
+\(\pi^2/(4r)+O(r^{-2})\). The fixed-parity sine derivative identity
+\[
+ \sum_{\substack{i>0\\ i\equiv r-1\ (2)}} i\,\frac2\pi
+      \int_0^1 H(z)\sin(\pi i z)\,dz
+            =\frac{H'(0)}{2\pi^2}=\frac18
+\]
+follows by reflecting the sine series and using \(H'(1)=0\).
+Smooth odd continuation at the reflected end makes the weighted
+transforms summable uniformly, so the same estimates give the
+indicated remainder. This separates the two-positive chart from
+the one-positive smooth endings of leading regular covers; it
+is not an additional Hall logarithmic residue.

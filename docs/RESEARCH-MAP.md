@@ -149,6 +149,8 @@ These are separate model-scoped results. No map edge identifies a finite canonic
 - [48+49 · Adjoint torsion and coupled WRT cutoffs](../papers/48-49-wrt-torsion-bridge/README.md): The regular minimum-cover charts have the same radial dependence in adjoint torsion and the marked WRT limit. On a four-vertex path, classical and literal quantum radial marks select the same triangular logarithmic domain.
 - [50B · All-level WRT collisions](../papers/50b-wrt-topological-blindness/README.md): Bipartite signed sewings have identical oriented SU(2) WRT scalars even as first Betti number or odd-primary torsion changes. A separate signed transfer theorem treats simultaneous limits for strict nonbipartite dense templates at sufficiently large exponential level.
 
+- [51 · Singular semiclassical WRT sewing](../papers/51-singular-wrt-semiclassical-sewing/README.md): For fixed untwisted SU(2) paired-cap trees with at least two vertices, a two-action all-orders radial expansion is combined with absolute leading torsion normalization and a joint leading Wilson law on the specified Hall charts.
+
 The closed WRT and Chern–Simons calculations are complementary to the marked open Turaev–Viro experiments in Papers 41, 42 and 42B. Their quantum invariants, normalizations and claims remain distinct.
 
 ## Using the routes

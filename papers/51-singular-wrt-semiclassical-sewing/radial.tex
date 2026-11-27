@@ -1,0 +1,400 @@
+\section{All algebraic orders of the signed radial sum}
+\label{rad:section}
+
+We first establish existence and a coefficient rule on the two level
+parities, before assigning coefficients to Chern--Simons actions.
+Beyond paths, the truncation walls at a branching vertex involve
+signed sums of several neighbouring colours. Such walls can intersect
+multiple endpoint poles. We neither replace them by an ordering of
+colours nor discard nonzero aliases.
+
+Let \(G=(V,E)\) be a fixed tree with \(N=|V|\ge2\), and put \(r=k+2\).
+Use reflected one-based colours \(a_v=r-n_v\), \(1\le n_v<r\).
+We write a radial test as \(F((n_v/r)_v)\). A smooth function of the
+original fibre traces is of this form, with \(F\) extending smoothly
+by even reflection at both endpoints of each coordinate. This
+endpoint condition, more generally, suffices for our argument.
+For \(d\ge1\) put \(W_d(x)=(1+\cos\pi x)/\sin^d(\pi x)\). For a fixed
+parity vector \(\boldsymbol p\in\{0,1\}^V\) the signed kernel is
+\begin{equation}
+ \mathcal W_{\boldsymbol p,r}[F]=
+ \sum_{\substack{1\le n_v<r\\n_v\equiv p_v\;(\mathrm{mod}\,2)}}
+ F((n_v/r)_v)
+ \prod_{v\in V}W_{\deg(v)}(n_v/r)
+ \prod_{vv'\in E}\sin\!\left(\frac{\pi n_vn_{v'}}r\right).
+ \label{rad:sum}
+\end{equation}
+The actual untwisted paired-cap amplitude is a finite signed linear
+combination of these kernels times \((2/r)^{(N+1)/2}\).
+The vacuum contribution uses only odd \(n_v\). A cap-product tag
+\(q\) uses half the odd weight plus \((-1)^q\) times half the even
+weight. Specifying an ordered pair of roots with that product
+adds a factor \(1/2\). These are the exact cap identities in the
+modular tree contraction \cite{GPPV}, not continuum replacements.
+Reflection of an edge contributes \((-1)^{r+n_v+n_{v'}}\), fixed
+on each parity choice. The untwisted surgery signature is zero:
+the two opposite caps have cancelling Schur contributions, and the
+unweighted bipartite backbone adjacency has spectrum symmetric
+about zero.
+
+\begin{theorem}[All-order radial expansion]\label{rad:thm}
+For each fixed tree, each fixed smooth joint radial test, and each
+fixed choice of physical cap projectors, the amplitude admits an
+expansion on each parity \(r\equiv\rho\pmod2\). Its terms are
+\(r^\alpha P_{\alpha,\rho,F}(\log r)\), where \(\alpha\) lies in a
+fixed half-integral translate of \(\mathbb Z\), the power scale is
+bounded above, and log degrees are bounded in terms of the tree.
+For every \(J>0\), retaining all terms with \(\alpha\ge-J\) leaves
+\(O(r^{-J})\); taking extra orders does not change these coefficients.
+No other arithmetic subsequence is needed. The coefficients are
+continuous linear functionals of finite order in \(F\). Finite
+identities between the original signed marked sums hold termwise
+in their expansions.
+\end{theorem}
+
+We prove this for \eqref{rad:sum}, then restore the prefactor and
+signs. Multiplication by the ordinary asymptotic Taylor series of
+\(S_{11}^{-1}\) gives the corresponding result for \(\tau_r=Z_r/S_{11}\).
+Removing residual parity after the physical action is extracted
+is a separate step.
+
+\subsection{Character elimination: one affine wall per branch}
+\label{rad:elimination}
+
+Choose a bipartition \(A,B\) of \(G\). Expand \(F\) in its smooth
+\(2\)-periodic Fourier series. By individual evenness we can use
+the product of cosines at a mode \(\boldsymbol\sigma\in\mathbb Z^V\),
+with the original joint Fourier coefficient
+\(\widehat F(\boldsymbol\sigma)\). These coefficients decrease
+rapidly. For any fixed \(\epsilon>0\), modes
+\(\|\boldsymbol\sigma\|>r^\epsilon\) contribute arbitrarily small
+powers of \(r^{-1}\), since the original finite sum in absolute
+value is bounded by a fixed power of \(r\) for all unit-bounded tests.
+
+At fixed \(A\)-colours and mode, the \(B\)-variables decouple.
+At \(b\in B\) with \(d=\deg b\), its sines and denominator combine
+into unnormalized characters, with continuous endpoint values:
+\[
+ \frac{\sin(\pi n_i m/r)}{\sin(\pi m/r)}
+  =\sum_{j_i=0}^{n_i-1}
+       \exp\!\left(\frac{i\pi(2j_i-n_i+1)m}r\right),
+ \qquad i\in N(b).
+\]
+Put \(h_b(x)=(1+\cos\pi x)\cos(\pi\sigma_b x)\) and let \(h_{b,s}\)
+be its coefficients in the basis \(e^{i\pi sx}\). Only
+\(s=\pm\sigma_b,\pm\sigma_b\pm1\) can occur. Reflecting
+\(m\mapsto 2r-m\) gives equal contributions. The possibly included
+\(m=r\) term is zero, whereas the full-period even grid adds
+\(m=0\). Exact finite orthogonality
+\[
+ \sum_{\substack{m\;(\mathrm{mod}\,2r)\\m\equiv p\;(\mathrm{mod}\,2)}}
+ e^{i\pi\ell m/r}=r(-1)^{p\ell/r}{\bf1}_{r\mid\ell}
+\]
+with the right side interpreted as zero off \(r\mid\ell\), gives
+the \(b\)-factor
+\begin{equation}
+ \begin{aligned}
+ &\frac r2\sum_s h_{b,s}\sum_{\lambda\in\mathbb Z}
+ (-1)^{p_b\lambda}{\bf1}_{L_b\in\mathbb Z}
+ \sum_{U\subseteq N(b)}(-1)^{|U|}
+ \binom{L_b-\sum_{i\in U}n_i+d-1}{d-1}_{+}\\
+ &\quad-{\bf1}_{p_b=0}\frac{h_b(0)}{2}\prod_{i\sim b}n_i,
+ \qquad L_b=\tfrac12\left(\lambda r-s+\sum_{i\sim b}(n_i-1)\right).
+ \end{aligned}
+ \label{rad:alias}
+\end{equation}
+The subscript \(+\) sets a binomial to zero if its upper argument
+is below \(d-1\). Indeed the lattice condition requires
+\(\sum_{i\sim b}j_i=L_b\), and excluding each event \(j_i\ge n_i\)
+gives the displayed binomial. The final term subtracts the
+artificial even-grid origin and must be kept for individual
+Fourier modes, even if its aggregate vanishes. The contributing
+aliases \(\lambda\) lie in a fixed finite interval if
+\(|\sigma_v|\le r\), since each character frequency is bounded
+by \(n_i-1\).
+
+Expand the product of \eqref{rad:alias} as a signed sum. An
+individual term selects one frequency, alias and subset, or
+the origin correction, at each \(b\). Thus it keeps at most
+\emph{one affine wall per \(b\)}: no common arrangement of all
+competing walls is needed. Set \(r=2R+\rho\) and \(n_i=2j_i+p_i\)
+for the retained labels. The integrality test for \(L_b\)
+concerns only the fixed parities and the parity of \(s\).
+For these allowed choices the binomial is a polynomial times
+\begin{equation}
+  \lambda_b R+\sum_{i\in N(b)}(1-2{\bf1}_{i\in U_b})j_i
+              +c_b(\rho,\boldsymbol p,s)\ \ge0 ,
+ \label{rad:wall}
+\end{equation}
+where the affine constant is integral. The other hard constraints
+are \(n_i\ge1,\ r-n_i\ge1\). The remaining trigonometric factors
+are smooth numerators times integer powers of those positive
+endpoint distances, since \([x(1-x)]^dW_d(x)\) is smooth on
+\([0,1]\). Polynomial weights and retained cosines multiply
+this macro numerator. This reduction includes high-valence
+walls as well as all signed aliases.
+
+\subsection{A lattice decomposition with integral level step}
+\label{rad:cone}
+
+Fix the signs of the Fourier shifts and set
+\(\upsilon_v=|\sigma_v|\). Homogenize \eqref{rad:wall}, the
+endpoint bounds, and \(0\le\upsilon_v\le 2R+\rho\) in
+\((R,(j_i)_{i\in A},(\upsilon_v)_{v\in V},H)\),
+multiplying constants by \(H\). Add \(R\ge H\ge0\); the physical
+slice has \(H=1\), and finitely many lowest levels are immaterial.
+Impose the shift congruences on the integer lattice coset.
+At \(R=0\) all variables vanish. The rational cone has compact
+cross-section at \(R=1\). Pulling-triangulate this cross-section
+with its original vertices and take the disjoint relative
+interiors of all the resulting simplicial cones, including
+lower-dimensional faces.
+
+In one relative interior, a lattice point has a unique expression
+\(u+\sum_i k_i e_i\) with independent integral ray vectors \(e_i\),
+\(k_i\in\mathbb Z_{\ge0}\), and
+\(u=\sum_i\theta_i e_i,\ 0<\theta_i\le1\). Scale rays if needed to
+preserve the shift congruences. Only finitely many \(u\) occur.
+At fixed \(H=1,\upsilon=|\boldsymbol\sigma|\), any \(k_i\) of a
+ray carrying positive \(H\) or shift is \(O_G(Q)\), where
+\(Q=1+\|\boldsymbol\sigma\|\), because these components are
+nonnegative. Enumeration of those coefficients gives at most
+polynomially many base points of size \(O_G(Q)\). Free rays have
+\(H=\upsilon=0\).
+
+Every free ray can be taken with \emph{unit \(R\)-component}.
+Indeed, on the recession face \(H=\upsilon=0,\ R=1\), the
+coefficient matrix in the \(j_i\) has entries \(\pm1\) supported
+on a subforest of the original incidence graph, with at most
+one row from each \(b\). A square minor cannot have two
+contributing perfect matchings, whose symmetric difference
+would form an alternating cycle. Consequently all square
+determinants are \(0,\pm1\), and adjoining the endpoint unit
+rows preserves this property. The right sides at \(R=1\) are
+integral, so every recession vertex is integral by the determinant
+formula for an independent subsystem of its active constraints.
+As \(H=\upsilon=0\) is a face, these vertices are among the
+original vertices of the full cross-section. The triangulation
+adds no rays, and a free ray needs no congruence scaling since
+its shifts vanish. This is where the forest and the single-wall
+expansion avoid a new arithmetic period.
+
+The lattice pieces at a fixed \(R\) are therefore simplexes
+\begin{equation}
+ k_i\in\mathbb Z_{\ge0},\qquad \sum_i k_i=R-R_0 .
+ \label{rad:simplex}
+\end{equation}
+Pieces without a free ray occur only when \(r=O_G(Q)\), outside
+the retained Fourier box for large \(r\). Each endpoint distance
+is a positive affine form in the free \(k_i\), with base value
+at least one and nonnegative slopes, by the recession box bounds.
+On each simplex use a smooth partition of unity in barycentric
+coordinates, choosing a pivot \(\ell\) with
+\(k_\ell/(R-R_0)\ge1/(2m)\) on its support, where \(m\) is the
+number of free rays. Eliminate \(k_\ell\) with
+\eqref{rad:simplex}. The pivot support is a fixed normalized
+distance from the omitted boundary and extends by zero; the
+remaining lattice variables now range independently over
+nonnegative integers. An endpoint distance seeing the pivot
+with positive slope is \(\gtrsim r\) on the support for
+\(r\gg_G Q\), so its inverse power gives a known power of \(r\)
+and a smooth factor. Other endpoint forms retain their
+nonnegative slopes.
+
+Up to explicit powers of \(r\), the resulting sums are
+\begin{equation}
+ \sum_{k\in\mathbb Z_{\ge0}^d} f(tk,t)
+       \prod_{j=1}^{D}\left(b_j+\sum_i a_{ji}k_i\right)^{-p_j}.
+ \label{rad:orthant}
+\end{equation}
+Here \(t=r^{-1}\), \(b_j\ge1\), \(a_{ji}\ge0\), and
+\(p_j\in\mathbb Z_{>0}\). The \(a_{ji},p_j\) belong to fixed finite families, and
+\(b_j=O_G(Q)\). The profile has a smooth extension to a fixed
+compact macro box for \(tQ\ll1\): the eliminated boundary is
+avoided, the other orthant walls allow ordinary smooth extension,
+and all offsets and retained frequencies are \(O_G(Q)\).
+Every fixed derivative order thus costs at most a power of \(Q\).
+
+\subsection{The positive affine orthant lemma}
+\label{rad:orthantsec}
+
+Smooth polytope Euler--Maclaurin formulas \cite{BV} and singular
+lattice formulas for point-type weights \cite{BK} address related
+settings. Here the needed estimate instead follows by resolving
+a continuous Laplace kernel after the lattice sum is performed
+exactly.
+
+\begin{lemma}\label{rad:lemma}
+The sum \eqref{rad:orthant} has an all-order expansion in integer
+powers of \(t\) and polynomials in \(\log(1/t)\) of degree at most
+\(D\). For each fixed output order both coefficients and remainder
+bounds have at most polynomial cost in \(Q\). The power scale is
+bounded below uniformly in the base and Fourier mode.
+\end{lemma}
+
+\begin{proof}
+It suffices initially to take a \(t\)-independent profile \(f(x)\).
+The general case follows by Taylor expansion in \(t\) with
+polynomial-in-\(Q\) bounds in each specified derivative norm.
+A remainder \(O(t^M Q^{C_M})\) costs only \(O(t^{-d})\) when summed
+over the original compact support since each affine denominator
+is at least one.
+
+For \(g(x)=e^{\sum_i x_i}f(x)\), Fourier-invert its Schwartz
+transform, Laplace-transform the denominator powers, and sum
+the independent geometric series. The initial exchanges converge
+absolutely for \(t>0\). Up to the Fourier convention, the sum is
+the integral against \(\widehat g(\xi)\) of
+\begin{equation}
+ K(t,\xi)=\int_{y_j\ge0} e^{-\sum_j b_jy_j}
+       \prod_j\frac{y_j^{p_j-1}}{\Gamma(p_j)}
+       \prod_{i=1}^d\frac{1}{1-e^{-z_i}}\,dy .
+ \label{rad:laplace}
+\end{equation}
+Here \(z_i=\sum_j a_{ji}y_j+t(1-i\xi_i)\). The real \(t\)-damping gives the convergent geometric sum and
+prevents cancellation of its leading real scale. Since
+\(\Re z_i\ge t\) and \(b_j\ge1\), we have
+\(|K(t,\xi)|\lesssim (1-e^{-t})^{-d}\) uniformly in \(\xi\).
+Insert a smooth cutoff \(\chi(t(1+|\xi|))\), equal to one near
+zero and supported below \(c<1/2\). The change after Fourier
+integration is \(O(t^M Q^{C_M})\) for any prescribed \(M\),
+by the kernel bound and Schwartz decay.
+
+Split the Laplace coordinates at one. In each region order all
+small \(y_j\)'s and \(t\) as \(1\ge z'_1\ge\cdots\ge z'_L\),
+ignoring null boundaries. Introduce ratios
+\(z'_\ell=v_1\cdots v_\ell\), \(0\le v_\ell\le1\). If \(t\)
+is in position \(u\), then \(t=\prod_{\ell\le u}v_\ell\).
+Denominators seeing a large \(y_j\) with positive coefficient
+have bounded smooth inverses with controlled derivatives.
+For any other denominator let \(m(i)\) be the position of the
+largest relevant variable, including \(t\). The quotient
+\(z_i/z'_{m(i)}\) is smooth in the ratios with uniformly
+positive real part, since one ratio is one with positive
+coefficient. On the cutoff \(|\Im z_i|<c\), so
+\(z/(1-e^{-z})\) is smooth, including at zero. It follows
+that \(z'_{m(i)}/(1-e^{-z_i})\) extends smoothly to the
+ratio cube, with derivative bounds polynomial in \(1+|\xi|\)
+at every fixed order. Differentiating the Laplace weights
+costs powers of \(Q\), and the large-coordinate integrals
+are dominated by \(e^{-\sum_{\rm large}y_j}\) times polynomials.
+The smooth cutoff allows extension by zero outside its region.
+
+For the pushforward use \(dt/t\) and \(dy_j/y_j\) on the small
+coordinates. The logarithmic change to the ratios has
+determinant one. The monomial weight is
+\(\prod_\ell v_\ell^{\beta_\ell}\), where
+\begin{equation}
+ \beta_\ell=\sum_{\substack{j\ {\rm small}\\{\rm pos}(j)\ge\ell}}p_j
+    -\#\{i:m(i)\text{ exists and }m(i)\ge\ell\}.
+ \label{rad:beta}
+\end{equation}
+The presence of \(t\) in every denominator gives \(m(i)\le u\).
+Hence \(\beta_\ell>0\) for \(\ell>u\), and those ratios and
+their required derivative bounds are integrable. Each sector's
+Mellin transform in \(t\) is therefore
+\begin{equation}
+ \int_{[0,1]^u}\prod_{\ell=1}^{u}v_\ell^{w+\beta_\ell}
+          A(v,\xi)\prod_{\ell=1}^{u}\frac{dv_\ell}{v_\ell}.
+ \label{rad:mellin}
+\end{equation}
+Here \(A\) is smooth on the closed cube with the stated
+seminorm bounds, and vanishes near the all-one corner by the
+\(t\)-cutoff.
+
+To control the remainder, apply a sufficiently long Taylor
+subtraction at each \(v_\ell=0\) and expand the product of
+Taylor and remainder operators. Polynomial terms supply
+factors \((w+\beta_\ell+j)^{-1}\); the remaining integrals
+are absolutely bounded on the prescribed strip. Poles thus
+lie at integers and have order at most \(u\).
+For vertical decay, split \(A\) into a finite smooth partition
+on each piece of which some \(v_i\) is bounded strictly below
+one. Such pieces cover its support. On the initial convergence
+half-plane, repeated integration by parts in \(v_i\) with
+\(v_i\partial_{v_i}\) has no boundary terms and divides each
+time by \(w+\beta_i\). The differentiated amplitudes satisfy
+the same Taylor/remainder strip estimates. Meromorphic
+continuation gives arbitrary vertical decay on each strip
+away from the poles with polynomial bounds in \(Q,1+|\xi|\)
+at each fixed order.
+
+Shift Mellin inversion to \(\Re w=-J-\tfrac12\). Residues
+give integer powers of \(t\) and log-degree at most
+\(u-1\le D\); the shifted integral gives \(O(t^{J+1/2})\)
+with the polynomial parameter bounds. Only finitely many
+poles are crossed, and \(\beta_\ell\ge-d\) gives the uniform
+upper location bound on the poles. Integrating against
+\(\widehat g\) preserves the expansion and its estimates.
+\end{proof}
+
+\subsection{Coefficient assembly and checks}
+\label{rad:checks}
+
+Apply Lemma~\ref{rad:lemma} to \eqref{rad:orthant} on
+\(Q\le1+r^\epsilon\) with any fixed \(0<\epsilon<1\),
+taking sufficiently many orders before restoring explicit
+powers of \(r\). The number of base pieces and all fixed-order
+bounds cost only polynomial powers of \(Q\), so the weighted
+\(\widehat F(\boldsymbol\sigma)\) sum preserves the remainder.
+The coefficient tails decay arbitrarily fast by the
+polynomial bounds, and the omitted exact finite-sum tail
+does so by the crude absolute bound on \eqref{rad:sum}.
+Only finitely many smooth seminorms of \(F\) occur at a fixed
+output order. This proves Theorem~\ref{rad:thm}.
+
+A coefficient rule is now explicit: expand \eqref{rad:alias},
+triangulate the affine cells, form \eqref{rad:laplace}, extract
+the appropriate Mellin residues from \eqref{rad:mellin}, and
+sum the Fourier coefficients absolutely. The exact partitions,
+even-grid subtraction and signed inclusion--exclusion account
+for the overlaps. Uniqueness of ordered power--log expansions
+on each parity subsequence shows independence from the
+triangulation, pivot partition and growing Fourier box.
+
+\paragraph{Path check.}
+For the unmarked four-vertex path, eliminating a leaf and a
+degree-two vertex gives the exact expression
+\begin{equation}
+ Z_r(P_4)=(-1)^r\sqrt{\frac2r}
+ \sum_{\substack{m,n<r\\ m,n\ {\rm positive\ odd}}}
+ W_2(m/r)W_1(n/r)\min\{m,n,r-m,r-n\}.
+ \label{rad:p4}
+\end{equation}
+The corresponding odd-grid \(W_1\) sine sum is \(r/2\);
+the \(W_2\) two-sine sum is \(r/2\) times the displayed folded
+minimum. These follow from \eqref{rad:alias}; for the latter
+the zero and reflected aliases count the overlap of two
+intervals of consecutive weights. The prefactor is
+\((2/r)^{5/2}(r/2)^2=\sqrt{2/r}\). This checks the full alias
+normalization, not a minimum-kernel hypothesis at higher
+valence.
+
+\paragraph{Intersecting branch walls.}
+Let the retained set comprise \(a_0,\ldots,a_4\). The eliminated
+vertices are two trivalent sites, with neighbours
+\(\{a_0,a_1,a_2\}\) and \(\{a_0,a_3,a_4\}\), and an extra
+leaf on \(a_0\). Both parts contain a trivalent site. In the
+unaliased odd palette write \(n_i=2j_i+1\). If \(j_0\ge j_1+j_2\),
+the first zero-weight count is
+\((2j_1+1)(2j_2+1)\). In the adjacent regime
+\[
+ j_0=j_1+j_2-d,\qquad 0\le d\le 2\min(j_1,j_2),
+\]
+it decreases by \(d(d+1)\),
+because each excluded signed tail has count \(1+\cdots+d\).
+The second branch has the analogous wall \(j_0=j_3+j_4\).
+They give simultaneous additive walls at the endpoint corner.
+The shared \(a_0\) column is precisely the forest pattern
+of Section~\ref{rad:cone}; outside the zero-weight window
+the formula still includes all aliases. Neither part satisfies
+a degree-two hypothesis, and no path estimate is needed at
+the intersection.
+
+The radial restriction is substantive. Angular Wilson
+insertions can carry recoupling not represented by any
+fixed smooth function of fibre traces; they need not reduce
+to \eqref{rad:alias}. Backbone twists likewise insert
+quadratic phases beyond this filter. This theorem also does
+not assign different angular components with the same radial
+projection their individual amplitudes.

@@ -138,3 +138,7 @@ Two independent technical reviews checked the mathematical claims, and both manu
 
 - [Paper 46+47 verification](papers/46-47-common-cones-and-area-probes/VERIFICATION.md)
 - [Paper 44+47 verification](papers/44-47-gravitational-radiation-memory/VERIFICATION.md)
+
+## Paper 51: singular semiclassical WRT sewing
+
+The 51-page PDF, multi-file LaTeX source, finite two-vertex replay and release scope are recorded in the [paper verification](papers/51-singular-wrt-semiclassical-sewing/VERIFICATION.md).

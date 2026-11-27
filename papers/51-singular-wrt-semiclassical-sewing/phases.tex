@@ -1,0 +1,268 @@
+\section{Physical phase separation and the support of radial coefficients}
+\label{phase:section}
+
+We use the original colour coordinate \(x_v=a_v/r\) in this section, so that the measured fundamental trace is \(2\cos(\pi x_v)\). In particular the positive central fibre is the endpoint \(x_v=0\). The reflected deficit is \(n_v=r-a_v\). All filters in this section are fixed smooth functions of the trace variables; in angle coordinates they extend smoothly and evenly across each endpoint.
+
+\subsection{The action and the bounded cap-product selectors}
+\label{phase:classical}
+
+Write \(N_-,P,S\) for the sets of negative central, positive central and noncentral fibres of a flat character. We use \(E_{--}\) and \(E_{S-}\) for the numbers of edges of the indicated types. At a positive central site the two actual cap roots have product \((-1)^{q_v}I\). The classical action is
+\begin{equation}
+ \operatorname{CS}=\tfrac12\left(E_{--}+E_{S-}+\sum_{v\in P}q_v\right)
+ \quad\bmod\mathbb Z .
+ \label{phase:cs}
+\end{equation}
+Here and below the level factor is \(e^{2\pi i(r-2)\operatorname{CS}}\). At either value in \eqref{phase:cs} this equals \(e^{2\pi i r\operatorname{CS}}\).
+
+By Theorem~\ref{geo:components}, every flat character has a path to an all-central abelian anchor with its locked products preserved. We may compute the action at that anchor because the variation of Chern--Simons vanishes along a flat path.
+
+For the abelian endpoint use any real eigenphase lift \(y\) in units \(2\pi\) for the full plumbing matrix \(Q_{\rm full}\), so that \(Q_{\rm full}y\) is integral. The fundamental abelian Chern--Simons invariant is the torsion linking self-pairing, up to the orientation sign; in these lifts it is \(y^{\mathsf T}Q_{\rm full}y\bmod\mathbb Z\), up to that sign \cite{Auckly}. This formulation also works for singular \(Q_{\rm full}\): the integral vector \(Q_{\rm full}y\) lies in the real image of \(Q_{\rm full}\), and changing a lift by an element of \(\ker Q_{\rm full}\) leaves the pairing unchanged. In the positive Hopf convention let \(b_v=1\) for a negative endpoint fibre and \(0\) otherwise, and \(L_v\) be the sum of neighbouring \(b\)'s. Take the lifts
+\[
+ y_v=-b_v/2,\qquad
+ y_{v,+}=b_v/4+j_v/2,\qquad y_{v,-}=-y_{v,+}+L_v/2.
+\]
+Here \(j_v\) records the cap-root choice. The spine entries of \(Q_{\rm full}y\) are zero and its two cap entries are \(j_v\) and \(j_v-L_v\). Therefore
+\[
+ y^{\mathsf T}Q_{\rm full}y\equiv\sum_v(b_vL_v/4-L_v^2/2)
+   \equiv \tfrac12(E_{--}+E_{-+})\pmod{\mathbb Z}.
+\]
+The orientation sign does not matter for a half-integer. An original noncentral vertex incident to a negative vertex contributes half an edge at the anchor regardless of its own central limit sign. At an originally positive vertex the cap product preserves the parity of its negative endpoint neighbours. Constancy of the action along flat paths now gives \eqref{phase:cs}.
+
+It is useful to isolate the action by bounded physical operations. Choose at each vertex a smooth \(\chi_v\) supported away from \(x_v=1\), equal to one near \(x_v=0\), and valued in \([0,1]\). At a site marked by \(\chi_v\), the two cap reciprocity summands can be combined to select the actual cap-product parity \(q_v=0,1\). Explicitly their selected factor, before the powers of \(S_{1a}\) are absorbed, is
+\begin{equation}
+ A_q(a)=\frac2r\sin^2\!\left(\frac{\pi a}{2r}\right)(-1)^{(r-a+1)q}.
+ \label{phase:tag}
+\end{equation}
+Thus \(A_0+A_1\) is the ordinary cap weight on odd deficits and zero on even deficits.
+
+Here is the Wilson realization of this selection. For an order-\(b\) cap, \(b=\pm2\), write \(C_{b}^{(m)}=(S\Theta^bS)_{a m}\) with cap-core colour \(m\) and with the gluing framing. Its two reciprocal terms \(c^{(m)}_{b,j}\), \(j=0,1\), have, with \(\vartheta=\pi a/(2r)\),
+\[
+ c^{(1)}_{b,j}=(-1)^{j(r-a+1)}c^{(1)}_{b,0},\qquad
+ c^{(2)}_{b,j}=e^{-3\pi i/(2rb)}\,2(-1)^j\cos\vartheta\,c^{(1)}_{b,j}.
+\]
+The second identity is the sine double-angle formula in the reciprocal sum. The first follows by translating its lift by \(2r\), including the lift's quadratic phase. For the vacuum colour the two opposite order caps have conjugate \(j=0\) terms with squared modulus \(r^{-1}\sin^2\vartheta\). Taking their separately selected \(j\)'s and summing the two choices with \(j_++j_-\equiv q\) gives \eqref{phase:tag}. In particular the single-cap term is
+\[
+ \tfrac12\left(C_b^{(1)}+
+      \frac{(-1)^j C_b^{(2)}}{e^{-3\pi i/(2rb)}\,2\cos\vartheta}\right).
+\]
+The centralizing roots have traces \(2(-1)^j\cos\vartheta\) on the chart where the fibre is not the negative centre; their product at a positive centre is indeed \((-1)^q I\). The divisor in this expression is uniformly bounded away from zero on the chosen \(\chi_v\) supports. These are signed linear combinations of framed Wilson insertions with a diagonal fibre multiplier, not positive or orthogonal projectors.
+
+Expand the exact tensor partition \(\prod_v(\chi_v+(1-\chi_v))\). Let \(T\) be the sites carrying \(\chi\), \(C=V\setminus T\), and write \(Z_r(T,q;F)\) for the contraction with the chosen \(q_v\)'s at \(T\) and an additional joint smooth trace test \(F\). Set
+\begin{equation}
+ p(T,q)=|E(G[C])|+\sum_{v\in T}q_v\pmod2,\qquad
+ Z_r^{[p]}[F]=\sum_{p(T,q)=p}Z_r(T,q;F).
+ \label{phase:split}
+\end{equation}
+The sum over both \(p\)'s is exact at each level. On the support of a given tag, actual positive centres are in \(T\) and negative centres in \(C\). A tagged noncentral vertex has \(q_v\) equal mod two to the number of its negative neighbours, since all its neighbours are central. Its contribution to \(E_{S-}\) in \eqref{phase:cs} can therefore be included in \(\sum_T q_v\). This proves \(2\operatorname{CS}=p(T,q)\) on every flat consistent with these marks.
+
+The arithmetic phase can also be removed directly from each finite contraction. Reflect the \(C\)-colours to their fixed odd deficits \(n\), and retain the full original grids \(a\) on \(T\). Each \(C\)--\(C\) sine gives \((-1)^r\), and each \(C\)--\(T\) sine gives \((-1)^{a_v+1}\) at its tagged end. Together with \eqref{phase:tag} the extracted factor is
+\begin{equation}
+ (-1)^{rp(T,q)}\prod_{v\in T}(-1)^{(a_v+1)\lambda_v},
+ \qquad
+ \lambda_v=q_v+\#\{w\sim v:w\in C\}\pmod2.
+ \label{phase:sign}
+\end{equation}
+Only the exterior phase depends on a moving parity. The remaining grids are fixed; the alternations in the second factor live on the fixed full grids.
+
+\subsection{Projected flat support, including higher valence}
+\label{phase:support}
+
+At a positive tagged site of degree \(d\), hold the neighbouring angles \(\theta_i=\pi a_i/r\) fixed. Let \(\nu_\theta\) be probability Haar on the \(SU(2)\) class of angle \(\theta\), and let \(\mu_\theta=\nu_{\theta_1}*\cdots*\nu_{\theta_d}\), using group convolution. Put
+\[
+ m(u)=\eta(u)u^{d-2}\frac{1-\cos(\pi u)}{\sin^d(\pi u)},\qquad
+ K_{r,m}(g)=\sum_{a\ge1} a\,m(a/r)\chi_a^{SU(2)}(g).
+\]
+Here \(\eta\) is the near-positive trace filter, possibly including a joint radial test evaluated with the other colours fixed. The function \(m\) is smooth, compactly supported away from \(u=1\), and has a smooth even extension at zero. After extraction of the common prefactors and the additional \(1/2\) in the tagged cap factor, the exact local sum is
+\begin{align}
+ &\sum_{a=1}^{r-1}\eta(a/r)\frac{1-\cos(\pi a/r)}{\sin^d(\pi a/r)}
+           (-1)^{(r-a+1)q}\prod_i\sin(a\theta_i) \nonumber\\
+ &\hspace{10mm}=
+   (-1)^{rq}r^{d-2}\prod_i\sin\theta_i\,
+                  (K_{r,m}*\mu_\theta)((-1)^q I).
+ \label{phase:convolution}
+\end{align}
+Indeed the central Fourier coefficient of \(\nu_{\theta_i}\) in the \(a\)-dimensional irreducible is \(\chi_a^{SU(2)}(\theta_i)/a\) by Schur averaging, while \(\chi_a^{SU(2)}((-1)^q I)=a(-1)^{(a-1)q}\). This is the probability normalization of the class-convolution formula in \cite[(29)--(32)]{AMW}, applied to the actual finite cap selector.
+
+Away from identity \(K_{r,m}\) is \(O(r^{-M})\) for every \(M\), uniformly on each fixed compact separated set. To see this, its numerator at angle \(\phi\) is \(\sum_{a\ge1} a m(a/r)\sin(a\phi)\). The odd smooth extension of \(u\,m(u)\) and ordinary Poisson summation give rapid decay away from \(2\pi\mathbb Z\), with the same estimate for any fixed number of \(\phi\)-derivatives. At the antipode the numerator vanishes, so the derivative estimate also controls the division by \(\sin\phi\). Smooth parameter dependence of joint filters is uniform on the compact angle domains.
+
+\begin{proposition}[Physical projected support]
+\label{phase:offsupport}
+For a given tag set and cap products, the radial projection of the flat locus consists exactly of the following data:
+\begin{enumerate}
+ \item the noncentral sites are independent, and every tagged noncentral site has its forced parity \(q_v=\#\{w\sim v:h_w=-I\}\bmod2\);
+ \item at every positive centre the product of the incoming \(SU(2)\) conjugacy classes contains the target \((-1)^{q_v}I\).
+\end{enumerate}
+For a fixed smooth marked support disjoint from these data the finite tagged contraction is \(O(r^{-M})\) for every \(M\).
+\end{proposition}
+
+\begin{proof}
+Necessity follows from the cap equations. For sufficiency, choose at each positive centre a tuple realizing its prescribed class product. The incidence graph between positive and noncentral sites is a forest. Having fixed one incoming noncentral element, simultaneously conjugate the next positive-site tuple so that its already assigned class representative agrees. The rooted tree propagation never inherits two such constraints. At a negative centre a pair of traceless roots can realize any given product \(g\): choose the first imaginary unit perpendicular to \(\operatorname{Im}g\), and the second root determined by the product is again an imaginary unit. At noncentral sites the incident fibres are central, and there are exactly the root choices with the forced product. These give an actual tree representation. The local class-product condition can, in particular, be checked by the \(SU(2)\) inequalities of \cite[Theorem 2.2]{JeffreyMare}.
+
+For the rapid estimate, expand the sine factors into signed exponentials where the noncentral labels are strictly interior. The slope of an untagged noncentral coordinate has to be integral in units of \(\pi r\) for the step-two grid, and the slope of a tagged coordinate before inserting its alternating factor has to be \(q_v\) modulo two for the step-one grid. A leaf of a nontrivial component of noncentral sites sees one strictly interior angle and otherwise integer endpoint angles. Every signed slope is bounded away from the corresponding lattice on a small neighbourhood. The same holds for an incorrectly tagged noncentral with only central neighbours. Discrete summation by parts in that eligible coordinate gives arbitrary inverse powers; other weights have at most fixed polynomial size at the lattice endpoints. If the class product instead fails at a positive centre, compactness of the class product gives a fixed distance from the central target on a neighbourhood. Apply \eqref{phase:convolution} and the rapid group kernel estimate at that site. A finite smooth partition in the trace coordinates on the disjoint support combines the estimates, without any endpoint differentiation of the other factors.
+\end{proof}
+
+The class product in Proposition~\ref{phase:offsupport} cannot be replaced by an abelian signed-angle equation. Three classes of angle \(\pi/2\) multiply to either centre by choosing \(i,j,\mp k\), but no signed sum of the three angles is \(0\) or \(\pi\) modulo \(2\pi\). Both targets are regular: the annihilator of the differential of the product map is the intersection of the transported axis lines, which vanishes unless all three axes coincide. The same test also explains why two different CS values can have the same fibre radii on a positive trivalent star.
+
+It now follows that the two phase sums in \eqref{phase:split} are independent of the choice of near-positive cutoffs to every algebraic order. Change one \(\chi_v\). Its difference is compactly supported inside the noncentral interval. Expand the untagged contribution there as \(A_0+A_1\). The two terms with \(v\) tagged and untagged are assigned the same phase exactly when \(q_v=\#\{w\sim v:w\in C\}\bmod2\), where \(C\) excludes the transition vertex. For this parity their changes cancel identically; the other parity is rapidly small by Proposition~\ref{phase:offsupport}. Telescoping over the sites gives cutoff independence. The identity is linear and applies with any \(F\).
+
+\subsection{Uniform resolution of a higher-valence positive wall}
+\label{phase:positive-walls}
+
+The local convolution also yields a signed formula useful at a positive-centre boundary. For \(d\ge3\), set \(k=d-2\),
+\[
+ u_{\epsilon,q}=\sum_i\epsilon_i\theta_i+\pi q,\qquad
+ B_k^{\mathrm{per}}(u)=\sum_{a\ne0}a^{-k}e^{iau},\qquad D=-i\partial_u.
+\]
+After dividing the left side of \eqref{phase:convolution} by \((-1)^{rq}r^{d-2}\), the resulting transfer is
+\begin{equation}
+ \frac{(-1)^q}{2(2i)^d}
+ \sum_{\epsilon_i=\pm1}\left(\prod_i\epsilon_i\right)
+       [m(D/r)B_k^{\mathrm{per}}](u_{\epsilon,q}).
+ \label{phase:bernoulli}
+\end{equation}
+This follows by extending the even summand to all nonzero integers and expanding every sine. Off \(2\pi\mathbb Z\) the periodic distribution is the Bernoulli polynomial of degree \(k\), with convention
+\(B_k^{\mathrm{per}}(2\pi t)=-(2\pi i)^k B_k(t)/k!\) for \(0<t<1\).
+Near a lifted wall \(u=2\pi j+w\), it is exactly \(P_-(w)+c_k w_+^{k-1}\), where \(P_-\) is the left polynomial continued across the wall and \(c_k=2\pi i^k/(k-1)!\). Use the step distribution when \(k=1\). With \(\check m(y)=(2\pi)^{-1}\int e^{isy}m(s)\,ds\),
+\begin{align}
+ [m(D/r)B_k^{\mathrm{per}}](2\pi j+w)
+ &=\sum_{\ell=0}^{k}\frac{m^{(\ell)}(0)}{\ell!\,r^\ell}D^\ell P_-(w)
+   +c_k r^{1-k}\int_{\mathbb R}\check m(y)(rw-y)_+^{k-1}\,dy
+   +O(r^{-\infty}).
+ \label{phase:wall}
+\end{align}
+The estimate is uniform on a sufficiently small fixed wall neighbourhood, including any fixed derivatives. In fact Poisson gives the periodized kernel \(r\sum_j\check m(r(u+2\pi j))\); only the nearby polynomial and truncated power survive modulo rapid error, with their displayed exact convolutions. On either tail the scaled truncated-power convolution agrees with its respective polynomial branch to rapid error. Simultaneous walls at the same vertex occur linearly in \eqref{phase:bernoulli}. Intersections of walls from different vertices are treated by the signed cell expansion of the full radial sum, rather than by adding independent wall contributions.
+
+\subsection{Complete phase-labelled expansions}
+\label{phase:all-orders}
+
+\begin{theorem}[Two-action radial expansion]
+\label{phase:main}
+For each fixed paired-cap tree and every fixed smooth joint trace test \(F\), the physical decomposition \eqref{phase:split} has
+\[
+ Z_r^{[p]}[F]\sim (-1)^{rp}
+     \sum_{\alpha,j}r^\alpha(\log r)^j\mathcal C_{\alpha,j}^{[p]}(F),
+       \qquad p=0,1,
+\]
+to arbitrary algebraic order. The power scale and log degrees are those of the all-tree radial expansion. There is no level-residue dependence after the displayed action phase. At every order \(\mathcal C_{\alpha,j}^{[p]}\) is a finite-order distribution in the trace coordinates, independent of the cutoff choices, supported on the radial image of the flat locus of action \(p/2\). The finer tagged coefficients have the support of Proposition~\ref{phase:offsupport}.
+\end{theorem}
+
+\begin{proof}
+The all-tree lattice expansion in Theorem~\ref{rad:thm} supplies existence to every algebraic order on the even and odd subsequences. The cap selection \eqref{phase:tag} is half the standard odd-deficit magnitude on each of the two grids, with the even grid carrying \((-1)^q\). Thus no new summation walls are introduced by the phase labels: one uses the exact parity-dependent local character transform, including its even-grid omitted zero term, before the affine orthant and Mellin steps. In particular the remainder and Fourier-mode coefficient bounds there apply to these same jointly marked physical contractions. It remains to remove the subsequence dependence after \eqref{phase:sign}.
+
+For a fixed tagged cell strip the factor \((-1)^{rp}\) and prolong the level continuously to \(R>1\) on the fixed grids of \eqref{phase:sign}, keeping all indices integral. All folded profiles have smooth support separated from their opposite endpoint \(x=1\), and have finite Laurent order at \(x=0\); no grid point at zero is used. The prolongation \(f(R)\) is smooth by locally finite sums. We establish, for a fixed small \(\varepsilon>0\) and some \(B\) independent of derivative order,
+\begin{equation}
+ |\partial_R^j f(R)|\le C_j R^{B-\varepsilon j}.
+ \label{phase:symbol}
+\end{equation}
+To prove this, expand the edge sines and split every folded coordinate smoothly into small and large at \(R^{-\varepsilon}\). Hold the small labels \(n\) on their fixed grids, so their scaled coordinates \(y=n/R\) are \(O(R^{-\varepsilon})\), and Poisson-sum all the large coordinates \(x\) after smooth extension by zero near their endpoint. Alternation factors on held labels are constant in \(R\). Each remaining integral has phase
+\[
+ \pi R \Phi(x,y),\qquad
+ \Phi=\sum_{vw\in E}\epsilon_{vw}\widetilde x_v\widetilde x_w
+                         +\sum_{\mathrm{large}\ v}c_v x_v ,
+ \qquad \widetilde x=(x,y),
+\]
+where \(c_v\in\mathbb Z\) are the remaining alternations and Poisson aliases. Shifted-grid factors are independent of \(R\). Unbounded aliases have gradient comparable to their size and give an absolutely summable rapidly small contribution by integration by parts, including after a fixed number of \(R\)-derivatives.
+
+For the finitely many bounded aliases, use a smooth cutoff to \(\lvert\nabla_x\Phi\rvert\lesssim R^{-\varepsilon}\). Its complement is similarly rapid: each integration by parts gains \(R^{-1}\), while differentiating the reciprocal gradient and scale cutoffs costs at most \(R^{3\varepsilon}\) per step, up to a fixed initial pole factor. The large-coordinate profile derivatives have this bound because their singular endpoint is at distance at least a constant multiple of \(R^{-\varepsilon}\). Take, for instance, \(\varepsilon<1/16\). These gains dominate any fixed finite number of differentiated factors and the fixed polynomial cardinality bound on the held-label sums.
+
+On the retained region set \(y=0\). The gradient then differs by \(O(R^{-\varepsilon})\) from zero and is affine in \(x\), with a fixed linear part for each alias. If its zero system is inconsistent the retained region is empty for large \(R\). Otherwise project to the affine zero set, moving \(x\) by \(O(R^{-\varepsilon})\). The projected coordinates have modulus strictly less than one, since all supports were separated from one. Their nonzero support is a forest-independent set: an induced leaf of a nontrivial component would give one nonzero neighbour of modulus less than one in a slope which must be integral. All edge products therefore vanish at the projected point, and the linear coefficient \(c_v\) is zero at each nonzero coordinate. The residual phase there is zero. Hence
+\(\Phi(x,y)=O(R^{-\varepsilon})\) throughout the retained region.
+
+At fixed \(x\) and fixed held \(n\), the first derivative of \(R\Phi(x,n/R)\) is
+\(\Phi-\sum y_v\partial_{y_v}\Phi=O(R^{-\varepsilon})\).
+Its \(j\)-th derivative for \(j\ge2\) is \(O(R^{1-j})\), since the phase is quadratic-affine. Held Laurent profiles differentiate by \(-y_v\partial_{y_v}/R\), which retains their fixed pole order. Scale cutoffs, Poisson prefactors and the near-gradient cutoff gain \(R^{-1}\) per \(R\)-derivative on their transition: the \(y\)-part of that scaled gradient is \(O(R^{-\varepsilon})\). Thus every exponential derivative gains at least \(R^{-\varepsilon}\), while the undifferentiated polynomial bound on amplitudes and held counts is independent of \(j\). This proves \eqref{phase:symbol}; if all labels are held small the initial phase products give the same bound directly.
+
+An additional parity-dependent coefficient in an all-orders power--log expansion of \(f(r)\) would contradict \eqref{phase:symbol}. Choose its largest exponent, and then its largest nonconstant logarithmic coefficient. A sufficiently high forward difference lowers all larger constant-coefficient terms in power, but acts invertibly on the mean-zero part of the two-periodic coefficient. The resulting term at the selected order survives on a subsequence. On the other hand arbitrarily high forward differences are bounded by integrating \eqref{phase:symbol} over unit increments. This contradiction proves residue independence after the actual exterior action.
+
+Finally, the fixed-order estimates of the lattice expansion have polynomial costs in Fourier-mode size, so only finitely many trace seminorms are required for each coefficient functional. This gives distributional continuity. Proposition~\ref{phase:offsupport} makes every such coefficient vanish on test functions with support disjoint from the corresponding projected flat set. The finite partition and the cutoff argument above give the stated support and cutoff independence.
+\end{proof}
+
+A fibre-only partition is insufficient even for the two actions at some radii. For example, on the path \(P_4\) a positive centre at site 2 and negative end at site 4 admit noncentral sites 1 and 3 with either \(h_3=h_1^{-1}\) or \(h_3=-h_1^{-1}\). At trace-zero \(h_1,h_3\) these have identical fibre radii but opposite values of \(q_2\) and of the action. The bounded cap-product test separates them. Even these tags do not separate all same-action angular configurations; all-negative fibres have trivial radial and cap-trace variation regardless of their relative axes.
+
+\subsection{Absolute adjoint eta and the sewing phase}
+\label{phase:eta}
+
+Use the positive mixed odd signature operator
+\(\mathcal D_A(\phi,a)=(d_A^*a,d_A\phi+*d_Aa)\).
+For every flat character the adjoint relative invariant in this convention is
+\begin{equation}
+ \rho_{\rm ad}(M_G,A)=
+       \eta(\mathcal D_A)-3\eta(\mathcal D_{\rm triv})=0 ,
+ \label{phase:rho}
+\end{equation}
+where zero eigenvalues are omitted. This is a real equality, including reducible and singular strata. The following computation also fixes the sign of the seam correction independently of the finite colour phase.
+
+Start with rational noncentral eigenphases and choose positive primitive filling slopes \(a_e z+b_e h\) at one end of each torus, with coefficients exchanged at the other and both fundamental meridian holonomies trivial. For two negative centres use \((1,1)\); for a positive--negative edge take \((2,1)\) at the positive end; for two positive centres use any positive primitive pair. If the noncentral eigenphase is \(m/(2n)\) in units \(2\pi\), coprime \(m,n\), take \((a,b)=(1,n)\) for odd \(m\) and \((2,n)\) for even \(m\) against a negative centre. Against a positive centre take \((1,2n)\). These choices ensure trivial holonomy at both swapped ends. Let \(K_v=\sum_{e\ni v} b_e/a_e>0\) in its own end coordinates. The single-site case has no seams and gives \(S^2\times S^1\) directly.
+
+Let \(I_v\) be the invariant adjoint subspace of the entire vertex representation and \(W_e\) the peripheral invariant subspace, of dimension three on central--central seams and one otherwise. Write \(i_v=\dim I_v\), \(w_e=\dim W_e\). In separately transported frames let \(J_{v,e}:I_v\to W_e\) be the inclusion and \(T_e\) the orthogonal transport between the two edge frames. In section/fibre coordinates the kernel of the boundary-to-block homology map is exactly
+\begin{equation}
+ x_{v,e}=J_{v,e}c_v,\qquad
+ \sum_{e\ni v}J_{v,e}^* y_{v,e}=0 .
+ \label{phase:boundary-kernel}
+\end{equation}
+On the invariant summand this is the ordinary section sum and common fibre, since the two cap Euler corrections cancel. If the fibre is noncentral its transverse system is acyclic. If the fibre is central, on the complement of \(I_v\) the product fibre classes vanish by \(H_0=0\), and the boundary section classes of the punctured base jointly inject by relative duality \(H_2(\Sigma,\partial\Sigma)=0\) with those coefficients. The two genuine cap fillings kill exactly their own section classes; the cap degree-zero maps are isomorphisms on their fixed subspaces. This gives \eqref{phase:boundary-kernel} without assumptions on neighbouring cap axes.
+
+To evaluate the triple Maslov indices in the filling comparison, put \(\beta=b/a\) at the first end of an edge and
+\(z_{v,e}=y_{v,e}-\beta x_{v,e}\), \(q_e=z_{v,e}/\sqrt\beta\). The seam kernel is the anti-graph of the marked swap, not its graph. With a simultaneous swap sign \(\epsilon_e\), the other end has \(z_{w,e}=\epsilon_e\beta^{-1}T_e z_{v,e}\). Define the incidence map \(A:\bigoplus W_e\to\bigoplus I_v\) by its two endpoint columns \(\sqrt\beta J_{v,e}^*\) and \(\epsilon_e \beta^{-1/2}J_{w,e}^*T_e\). Put \(K_I=\bigoplus K_v I_{I_v}\) and \(Q_I=K_I-AA^*\); the ordinary version \(Q\) is the negative signed backbone adjacency. Decomposing a seam-kernel vector into a filling-meridian part and \eqref{phase:boundary-kernel} gives \(K_I c=-Aq\). With the outward intersection convention \(\omega(z,h)=1\), their skew pairing is
+\(\langle Aq,K_I^{-1}Aq\rangle-\langle q,q\rangle\).
+Indeed the endpoint terms in \(\sum x z\) on each seam add to \(-\lVert q_e\rVert^2\), and the remaining part comes from \(c\). Two Schur complements of the block matrix with diagonal entries \(K_I,I\) and off-diagonal \(A,A^*\) give
+\[
+ \tau_{\rm ad}=\sum_v i_v-\sum_e w_e-\operatorname{sig}Q_I,\qquad
+ \tau_{\rm ord}=|V|-|E|-\operatorname{sig}Q .
+\]
+No nonsingularity of the last two forms is required.
+
+Apply the signature gluing formula \cite[Theorem 3.9]{Toffoli} to the blocks and seam cylinders with these meridian fillings. The auxiliary seam closures have equal meridians on both ends and are \(S^2\times S^1\) with flat extension over \(D^3\times S^1\); they contribute zero. At a central site compare the tilted fillings with fibre fillings \(h\). The fibre-filled comparison manifold is a connected sum of the two order-two cap lens pieces and copies of \(S^2\times S^1\): filling a boundary fibre splits the genus-zero base into the individual cap balls and ordinary handles. The cap relative invariants vanish, since the adjoint is trivial at a positive fibre and the order-two cotangent sum is zero at a negative fibre. The comparison Maslov form on the section vector \(c\) in \eqref{phase:boundary-kernel} is \(-K_v\lVert c\rVert^2\): decompose \((Jc,\beta Jc)\) into its fibre-filling part and section part. Thus the filled central contribution is \(3-i_v\) plus the comparison lenses.
+
+At a noncentral site the axis is trivial and the two transverse unitary lines are conjugate. Compare against section fillings \(z\) for these adjoint lines: the original sections are central in the fundamental system and hence trivial in the adjoint. The resulting bare two-cap Euler-zero piece is \(S^2\times S^1\); its transverse line extends over \(D^3\times S^1\). The twisted boundary tori of each line are acyclic, whereas the ordinary comparison form is
+\(\sum_e a_e b_e q_e^2\) subject to \(\sum_e b_e q_e=0\). This follows by writing the filling vector as \((a_e q_e,b_e q_e)\) and removing its common section part. Its signature is \(d_v-1\). The two-line contribution is consequently \(-2(d_v-1)\) plus its comparison lenses. A comparison lens for a mixed seam is orientation-reversed across the swap: the central pair of meridians \((b z+a h,h)\) matches the noncentral pair \((a z+b h,z)\). The surviving line character is transported or inverted, which gives the same relative invariant on the two conjugate lines. Thus all such lenses cancel, and comparison lenses on central--central seams have trivial adjoint coefficients.
+
+The remaining correction is \(3\operatorname{sig}Q-\operatorname{sig}Q_I\): substitute the local factors and \(\sum_e w_e=3|E|-2\sum_{v\in S}d_v\) into the two Maslov terms. Both signatures vanish by bipartite sign symmetry, also in the presence of null directions. This proves \eqref{phase:rho} at rational eigenphases.
+
+To pass to general eigenphases one can rationalize within constant local cohomology ranks. At a central tuple with a common invariant line the fixed axis lifts give affine rational angle equations; rational points are dense in their solution space. At a locally noncommuting central tuple the product map of the fixed input classes is a submersion: the annihilator of its differential is the intersection of the successive transported invariant axes, equal by induction over the factors to their common axis intersection. Thus the implicit-function theorem adjusts the axes when the input angles vary to rational values. Other local ranks and signed axis transports may be held fixed, since the gluing graph is a tree. The vertex \(H_1\) dimensions are \(3d_v+2i_v-c_{v,+}-c_{v,-}\) at central sites, where \(c_{v,\pm}\) are the fixed dimensions of the two genuine cap holonomies, and \(d_v\) on a noncentral site. These follow from the base Euler characteristic and the same cap section eliminations as \eqref{phase:boundary-kernel}. The kernel of the degree-one seam map is \(\ker Q_I\) by that equation and the anti-swap gluing; the degree-zero seam rank is that of the fixed transported inclusion-difference map. Hence the total \(h^0+h^1\), which is the odd-signature nullity, is constant on each local rationalizing path. Eta is continuous there, since the small eigencluster does not gain or lose nonzero modes. This proves \eqref{phase:rho} everywhere. The argument uses unreduced eta and makes no identification of the absolute determinants of different strata.
+
+\subsection{Regular positive covers and finite termination}
+\label{phase:regular-cover}
+
+There is a regular higher-valence regime in which one can compute the entire phase series without a singular lattice expansion. Let \(G=P\sqcup S\) be a bipartition and write \(p_0=|P|\), \(s=|S|\), \(N=p_0+s\), \(E=N-1\). Keep the \(S\)-radii in compact noncentral windows using any smooth joint \(F(x_S)\); mark each \(P\)-radius near \(+I\), with its cutoff equal to one near that centre, and fix its product \(q_v\). Assume throughout the compact angle support that the \(d_v\)-fold product of incoming classes at every \(v\in P\) has a nonempty regular fibre over \(z_v=(-1)^{q_v}I\). Its Haar probability density \(\rho_v\) is then smooth in a common neighbourhood of the target. This is a genuine higher-valence region; a nonempty regular product at the centre requires at least three noncentral inputs. Set
+\[
+ \mathcal J_q(x_S)=
+   \prod_{j\in S}(1-\cos\theta_j)\prod_{v\in P}\rho_v(z_v),
+ \qquad D_0=3s-3p_0-3.
+\]
+The exact leading coefficient in \(Z_r\) is
+\begin{equation}
+ (-1)^{r\sum_Pq_v}
+   2^{(1-N)/2-p_0}\pi^{\,2p_0-E}r^{D_0/2}
+       \int F(x_S)\mathcal J_q(x_S)\,d^s x .
+ \label{phase:regular-leading}
+\end{equation}
+After the displayed phase and power have been extracted, the full expansion is a finite polynomial in \(r^{-2}\), modulo \(O(r^{-\infty})\), of degree at most
+\(\sum_{v\in P}\lfloor(d_v-2)/2\rfloor\). In particular in the trivalent positive-cover regime the quadratic coefficient is the only algebraic term under these marks.
+
+To prove the quantum assertions note that \(P\) is independent, so its conditional colour sums \eqref{phase:convolution} factor with the \(S\)-colours held fixed. At a regular target the local multiplier expansion is
+\[
+ (K_{r,m_v}*\mu_v)(z_v)\sim
+       \sum_{\ell\ge0}\frac{m_v^{(2\ell)}(0)}{(2\ell)!\,r^{2\ell}}
+                                   (1-\Delta)^\ell\rho_v(z_v).
+\]
+Indeed the rest of the class measure is a fixed distance away and is rapidly small. A smooth extension of the local density has rapidly decreasing character coefficients, uniformly in the tested angles, and
+\(-\Delta\chi_a^{SU(2)}=(a^2-1)\chi_a^{SU(2)}\) in the unit quaternion metric. All signed-angle walls at the central target are excluded by regularity, since a hit would realize a collinear tuple. Hence \eqref{phase:bernoulli} acts on polynomials of degree at most \(d_v-2\), and the even multiplier terminates at the stated order, with a rapid remainder. In the remaining compact smooth \(S\)-sum the ordinary step-two Poisson density is \(r/2\) per site with no nonprincipal aliases to any algebraic order. The \(\sin\theta_j\) factors from \eqref{phase:convolution} cancel the sine denominators at \(S\). The common coefficient is consequently the product of
+\[
+ (2/r)^{(N+1)/2},\quad 2^{-p_0},\quad (r/2)^s,\quad
+       \prod_{v\in P}\bigl(r^{d_v-2}\pi^{2-d_v}/2\bigr),
+\]
+where \(m_v(0)=\pi^{2-d_v}/2\) and \(\sum_{v\in P}d_v=E\). This is \eqref{phase:regular-leading}.
+
+The absolute quadratic interpretation can be checked independently. In primitive section/fibre periods the noncentral block at \(j\in S\) has adjoint half-torsion
+\((1-\cos\theta_j)/(2\sin\theta_j)^{d_j}\): the perpendicular fibre determinant is \(4\sin^2\theta_j\), each cap core contributes \(4\sin^2(\theta_j/2)\), and the two primitive cap slopes give longitudinal half-torsion \(1/2\). At a positive regular block there are no common adjoint invariants. Its two true cap cores are adjoint-trivial. In base trace coordinates with the paired fibre-area copies the cap-free torsion cancels degree by degree; each cap has degree-one determinant \(2^3\) and unit remaining pivots. The local half-torsion is therefore \(1/8\). Each seam retains just its axial line. Differences about a noncentral star, one-sided lifts and the complementary sum-zero section periods have unit relative determinant. The oriented torus cup pairs the common radial period with its excluded error, and the fixed-class surface tangent with its fibre-area copy by the Goldman form. Thus there is a radial factor \(\pi\,dx_j\) per \(S\), and \(E-s\) bend circles of period \(2\pi\). The coarse fixed-class volume at \(v\in P\) is
+\[
+ \frac{2}{(2\pi^2)^2}\prod_{j\sim v}(2\pi\sin\theta_j)\rho_v(z_v);
+\]
+this is the regular class-convolution reduction formula of \cite[Section 5.1]{AMW}, in the unit quaternion metric. The identity of the seam determinants can also be read by taking relative periods \(t_i-t_{d_j}\); a one-sided lift complements each basis \(e_i-e_{d_j}\) with determinant of modulus one.
+
+There are \(2^{s+p_0}\) genuine cap-root sheets. The independent positive-block centres divide the bend volume by \(2^{p_0-1}\), because signs acting trivially through each noncentral star must coincide on the whole tree. Use a further \(1/2\) for the single global centre in the stack convention. The resulting stack half-torsion pushed to the radii is
+\[
+            2^{E-4p_0}\pi^{2E-4p_0}\mathcal J_q(x_S)\,d^s x.
+\]
+Here the dimensions are \(s\) radial, \(E-s\) bend, and \(\sum_{v\in P}(2d_v-6)\) fixed-class surface directions, adding to \(D_0\). The invariant quadratic factor \((r/(2\pi^2))^{D_0/2}\) in these metric units \cite{Adams}, with the action \eqref{phase:cs} and zero adjoint relative eta \eqref{phase:rho}, gives precisely the absolute coefficient and phase in \eqref{phase:regular-leading}. Finite termination is proved for the indicated marked quantum responses; it is not a statement about each angular or higher-loop coefficient of an unmarked path integral.

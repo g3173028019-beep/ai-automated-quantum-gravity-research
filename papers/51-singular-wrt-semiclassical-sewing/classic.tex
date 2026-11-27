@@ -1,0 +1,882 @@
+\section{The actual classical Hall action and its normalization}
+\label{classic:sec:action}
+
+We use the trace pairing \((a,b)=-\operatorname{Tr}(ab)/2\) on
+\(\mathfrak{su}(2)\), so that unit imaginary quaternions have norm one,
+\(\operatorname{Vol}SU(2)=2\pi^2\), and the metric effective group has
+\(\operatorname{Vol}SO(3)=\pi^2\).
+The exponent convention is \(e^{2\pi i r\,\mathrm{CS}}\), where \(r=k+2\).
+On the flat actions \(0,\frac12\), replacing \(k\) by \(r\) leaves the
+phase unchanged; in the leading normal integrals the level shift changes
+neither the scale nor the leading coefficient. All classical integrations
+below are finite residual integrals: the nondegenerate quadratic complement
+is integrated invariantly, the finite zero modes are retained, and no
+identification with a nonperturbative functional integral is assumed.
+
+Let \(S\) be the genuinely noncentral fibres in an all-negative-centre
+Hall chart, \(T=N(S)\), and let \(I\) be the induced forest on the other
+vertices. Here the Hall hypothesis on the chart is that \(I\) is balanced
+with a perfect matching (and \(S\) has the prescribed noncentral data).
+The case \(S=T=\varnothing\) with a perfectly matched tree is included.
+Write \(\alpha\) for the active parameters. For
+\(v\in I\), let \(u_v\) be its cap axis on the central plane,
+\(h_v=-\exp(\pi y_v u_v)\) to first order, and
+\(t_{vw}=\epsilon_{vw}u_v\cdot u_w\) be a signed physical dot in
+the marked seam frames. Put
+\[
+ B_I(u)_{vw}=
+ \begin{cases}t_{vw}&vw\in E(I),\\0&\text{otherwise}.\end{cases}
+\]
+Signs can equivalently be moved to the axes since the graph is a forest.
+All axis dots below refer to the common framed configuration, not to
+independently chosen frames for different tests.
+
+\begin{theorem}[All-angle cyclic Hall normal form]
+\label{classic:thm:hall-action}
+At every globally irreducible flat point in such a chart, the actual
+finite harmonic Chern--Simons reduction is stably real-analytically
+right equivalent to
+\begin{equation}
+ \mathrm{CS}_0+\frac{c}{2}y^{\mathsf T}B_I(u)y,
+ \qquad |c|=\tfrac12 .
+ \label{classic:eq:normal}
+\end{equation}
+Stability adds or removes only the finite gapped quadratic radial
+pivots of this graph form. The equivalence fixes the entire central
+section \(y=0\) pointwise in its literal angular and old active
+parameters. It is jointly analytic through central active product
+locks, including locally collinear locks, and through parallel as well
+as perpendicular dormant angles. A choice of orientation fixes the
+common sign convention for \(c\). The theorem does not identify all
+off-shell extensions of the period marks under the normal change.
+\end{theorem}
+
+\subsection{Analytic representation scheme in peripheral marks}
+\label{classic:sec:scheme}
+We first describe the true flat ideal, before drawing any conclusion about
+a potential. Use the graph-of-groups relations
+\[
+ [h_v,h_w]=1,\qquad A_v^2=h_v^{-1},\qquad
+ {\rm Ad}_{A_v}P_v=P_v^{-1},
+\]
+with \(P_v\) the actual ordered product of transported neighboring fibres
+(with their seam signs). The other cap root is
+\(A_v^{-1}P_v^{-1}\). Local logarithms are taken after dividing off a
+fixed central sign. All changes below use analytic units or invertible
+analytic matrices and therefore hold in the analytic relation ideal,
+not just on real points.
+
+Write \(h_t=-\exp(p_tu_t)\) at an active centre \(t\). If an old active
+neighbor of \(t\) is not parallel to \(u_t\), the corresponding
+commutator kills \(p_t\) with a unit coefficient. At a remaining
+\(t\), every incoming active axis is parallel to \(u_t\), and the
+negative-cap equation at the base point implies \(P_t\) is central.
+Thus each remaining column \(t\) touches at least two active
+neighbors. An active \(s\) has \({\rm Ad}_{A_s}+1\) invertible; its
+reversal equation kills \(\log(\pm P_s)\). Its longitudinal projection
+has derivative a nonzero real entry on each incident surviving column
+\(t\). This rectangular forest matrix has independent columns:
+the graph induced by any nonempty supporting columns, with all their
+neighboring rows, is a forest with every column degree at least two
+and therefore has a row leaf. That row rules out its sole supported
+column. Select a full-rank minor, including the earlier commutator
+pivots. Every selected equation vanishes identically when \(p_T=0\).
+Analytic division by that coordinate ideal and the invertible minor
+therefore give the exact ideal \((p_T)\).
+
+Once \(p_T=0\), all constraints at \(S\) are automatic. If \(P_t\)
+is noncentral the scalar \(u_t\cdot\operatorname{Im}P_t=0\) solves
+one angular coordinate. If \(P_t\) is central at the reference, use
+the \emph{whole ordered product} as a local group parameter. To do
+this simultaneously, root the product-incidence forest at old active
+vertices. At each locked centre reserve one child active vertex;
+its group element is solved from \(L h^\epsilon R=Q_t\) by actual
+multiplication, including the dormant factors in their original
+positions. Each reserved variable is used once. Hence all new
+\(Q_t\) are independent analytic parameters. The locked constraint
+is \(u_t\cdot\log(\pm Q_t)=0\); its two transverse product coordinates
+are free. The lock is their joint zero, not an additional critical
+factor. The result is an analytic product with the dormant critical
+scheme and smooth passive \(\alpha\), even when several locks coincide.
+A global effective rotation slice may be fixed at irreducibles.
+
+For the all-negative dormant forest the nonparallel edge commutators
+give \(q_e=p_vp_w\) in the ideal. The axial equation in the full
+angular domain is
+\[
+ F_v=\sum_{w\sim v}b_{vw}(p,u)p_w,\qquad
+ b_{vw}(0,u)=t_{vw}.
+\]
+Indeed, after removal of the fixed signs the product is an analytic
+product of \(\exp(\pm p_wu_w)\). At a negative cap the longitudinal
+projection of the reversal equation is identically a unit times its
+axial logarithm. Multiply \(F_v\) by \(p_v\), remove all already known
+\(q_e\), and peel the forest of edges parallel at the reference:
+each leaf row has a single remaining coefficient with value \(\pm1\).
+Thus all \(q_e\) belong to the ideal. Conversely the transverse
+reversal equations vanish modulo \((q_e,F_v)\); there \(p_v\log P_v=0\),
+and the transverse part is the pure half-turn equation. It follows
+that \((q_e,F_v)\) is exactly the remaining ideal.
+
+For use through parallel angles, write the row coefficients as
+\(b_{vw}=t_{vw}+c_{vw}\), with \(c_{vw}\) in the ideal of \(v\)'s
+neighboring periods, by radial integration of the ordered product
+expansion. In \(\sum_w c_{wv}p_w\) each monomial is divisible by an
+edge product \(p_wp_j\). Therefore
+\(\widetilde t_{vw}=t_{vw}+c_{vw}+c_{wv}\) is a symmetric coefficient
+whose radial rows agree with \(F_v\) modulo \((q_e)\). Differentiating
+\(\sum_e\widetilde t_e q_e\) shows that its Jacobian is contained in
+\((q_e,F_v)\). To reverse the inclusion use independent child-subtree
+rotations on nonparallel reference edges, affecting only that edge's
+literal dot, and add the rows \(p_v\partial_{p_v}\) on the parallel
+forest. These rows generate all \(q_e\) by an invertible coefficient
+minor: at zero periods the angular block is diagonal with nonzero
+entries on the nonparallel edges, and the parallel subblock is the
+same leaf-eliminable incidence matrix. The ordinary radial rows then
+recover \(F_v\). Finally on parallel edges solve recursively
+\(d_vd_w=\widetilde t_{vw}/t_{vw}\) with positive analytic units
+\(d_v=1\) on \(p=0\). Set \(p'_v=d_vp_v\). On each nonparallel edge
+use its independent relative subtree rotation to realize
+\(\widetilde t_e/(d_vd_w)\) as the corrected literal dot. The
+construction is invertible and fixes the central angular plane
+pointwise. Thus the true dormant ideal in these ambient coordinates
+is the Jacobian of
+\[
+ \frac12 p^{\mathsf T}B_I(u)p=\sum_e t_e p_vp_w .
+\]
+This is a graph-scheme statement only.
+
+For clarity, the identification with the analytic Coulomb critical
+scheme used here is the general holonomy correspondence on finite
+local Artin rings \cite[\S\S5--6]{GoldmanMillson}, not a quadratic
+formality theorem for this three-manifold. Fix an irreducible
+effective slice on both sides. On a small Coulomb slice the
+off-harmonic gradient equation has an invertible elliptic
+linearization and is eliminated by the analytic implicit function
+theorem (use Sobolev degree high enough for multiplication). The
+remaining gradient represents the flat functor. The holonomy
+comparison and the graph pivots identify these local quotient
+analytic rings. In the ambient comparison, first split the radial
+nondegenerate block of the graph Hessian at the reference. The
+minimal rings then have the same tangent dimensions; lifts of
+their analytic coordinate functions give inverse-function
+isomorphisms of the ambient germs. They may be chosen to retain
+the literal coordinate trace on the smooth common central section,
+by correcting lifts by their trace there. Restore the finite
+nondegenerate quadratic block on the Coulomb side. This gives a
+stable coordinate comparison with the same Jacobian ideal and the
+named central section, without claiming that equality of ideals
+alone determines the Chern--Simons value away from it.
+
+\subsection{Cyclic comparison of the actual radial Hessian}
+\label{classic:sec:cyclic}
+The extra input is a \emph{family} of symmetric radial differential
+comparisons; comparing torsion numbers or signatures pointwise would
+not suffice. First freeze the literal old active tuple \(\alpha_0\)
+and let the dormant axes vary. Active pieces see only fixed central
+dormant boundary holonomies on this plane, while each dormant piece
+has a constant flat local system up to analytic rotation of its
+cap axis. Seam changes of frame are their actual rotations. If the
+active tuple itself is collinear, use a dormant nonparallel axis
+for the residual azimuth; global irreducibility guarantees such an
+axis. Thus freezing is a restriction on actual holonomies, not a
+coordinate freeze that changes active holonomies when the dormant
+axes move.
+
+Use the twisted de Rham mapping cone of thickened pieces and collars.
+There are no triple overlaps. The ordinary restriction map to this
+cone is a chain map and induces the closed cohomology isomorphism
+by the partition-of-unity proof of Mayer--Vietoris. Locally
+analytic flat frames on a fixed cover can be patched with a smooth
+partition of unity to identify nearby coefficient bundles; the
+patched linear maps remain invertible near the base parameter and
+polar decomposition preserves the inner product. Contract the
+fixed-rank piece and seam complexes using analytic Hodge (or cellular)
+contractions within this frozen family. If \(\delta\) is the
+vertex-to-edge restriction difference and \(h\) is the block-diagonal
+contraction, \(\delta h\delta=0\) because \(\delta\) kills the edge
+summand. Thus the transferred differential is exactly the
+cohomological restriction cone, with no higher-transfer terms.
+
+Here is the precise radial part of its primitive elimination.
+Use the common fibre class at each piece in its invariant space,
+section periods \(c_{ve}\) with their primitive constraint
+\(\sum_e J_{ve}^{*}c_{ve}=0\), and complementary one-sided area
+lifts, where \(J_{ve}\) is the inclusion of the local invariant
+space into the seam invariant space in the seam frame. Noncentral
+torus complements are acyclic. At a central piece the
+non-invariant part has independent restrictions on its central
+exterior section planes, by the relative cohomology exact
+sequence and the absence of invariant vectors there. Hence those
+planes have unit elimination pivots. The swap identifies each
+half-edge section with its neighboring fibre period. Substitution
+in the section sum leaves the compressed signed adjacency.
+In degree zero the inclusion difference on invariant vectors
+and in degree two its adjoint are eliminated as injective and
+surjective maps respectively, since the closed reference is
+irreducible. They do not change the radial block. The connecting
+cup formula is explicit in a collar: take a normal bump of
+integral one and cup the associated section error with the
+original fibre form. A radial error consequently pairs with its
+own unit fibre period; a tangent with those dormant periods
+identically zero pairs to zero. The ordinary determinant version
+is also used in Theorem~\ref{thm:hall:torsion}.
+
+If every \(T\) piece has no invariants, the radial block is
+\(B_I\) plus the passive old active directions. At a locally
+collinear lock its invariant line must instead be retained. Let
+\(T_1\) consist of those lines in the frozen family. In the
+\(S,T_1,I\) order the radial block is exactly
+\begin{equation}
+ \begin{pmatrix}0&U^{\mathsf T}&0\\
+                 U&C&V\\
+                 0&V^{\mathsf T}&B_I
+ \end{pmatrix}.
+ \label{classic:eq:activeblock}
+\end{equation}
+The entries of \(U\) on the incidence forest are signed unit
+axis pairings; every \(T_1\) row has at least two old active
+neighbors. The leaf proof above again shows \(U^{\mathsf T}\)
+is injective. Split \(S=S'\oplus\ker U\) so the restriction
+\(U'\) to \(S'\) is square invertible. The inverse of the
+\(S'\oplus T_1\) block is
+\[
+ \begin{pmatrix}
+ -(U')^{-1}C((U')^{\mathsf T})^{-1}&(U')^{-1}\\
+ ((U')^{\mathsf T})^{-1}&0
+ \end{pmatrix}.
+\]
+In particular it has \emph{zero hub--hub block}. The dormant
+coupling reaches only that block, so the Schur correction is
+identically zero and the retained graph is \(B_I\) itself.
+A dormant tangent may acquire an \(S'\) correction, but its
+cup pairing with a dormant connecting error is still the unit
+dormant period. This is why local collinear locks do not induce
+a new dormant spring or rescale its radial units.
+
+On the true closed Hodge side, an analytic sufficiently small
+positive gap for the twisted Laplacian around the irreducible
+reference isolates degrees one and two, with star identifying
+the two low spaces. The analytic Hodge projection away from
+exact forms uses the nonzero scalar gap. The tangent to the
+central family gives analytic harmonic modes in the kernel of
+the corresponding coexact curl; split these angular modes,
+using the star-dual split in degree two. Similarly split the
+already nondegenerate radial block of \(B_I\) at the reference
+by ordinary analytic symmetric Gaussian elimination. The closed
+low complex and the model cone now give analytic chain maps
+\(T_1',Q_2'\) on their remaining radial blocks:
+\[
+       B\,T_1'=Q_2'D ,
+\]
+where \(B\) denotes the graph Schur block and \(D\) the low
+symmetric differential in physical units after the fixed
+conversion described below. The maps on radial blocks are
+invertible at the reference and hence nearby. At the base
+point the cone map is a cup isomorphism; in the splits just
+described the degree-one map sends angular tangents to angular
+tangents, which pair to zero with radial degree-two connecting
+errors. The induced quotient pairing of the radial tangents
+and radial connecting errors is the unit one by the primitive
+torus computation. Thus
+\((T_1')^{\mathsf T}Q_2'=1\) at the reference. No pointwise
+minimal basis is chosen as a function of the dormant rank.
+
+To compare with the \emph{nonlinear} harmonic reduction's Hessian,
+project from the static to the moving Coulomb slice along exact
+directions; on a flat connection the Hessian kills those
+directions. The static transverse high complement is a small
+analytic graph \(J\) over the moving high spectral complement.
+Writing the moving forms as \(D_L,D_H\), its static Schur
+Hessian is
+\[
+ D_L-D_LJ(D_H+J^{\mathsf T}D_LJ)^{-1}J^{\mathsf T}D_L.
+\]
+The gapped inverse is analytic in the elliptic Sobolev spaces
+and the correction acts through a finite-dimensional space.
+This form is \(A D_L\) with \(A\) analytic, equal to the
+identity at the reference and symmetric after multiplication
+by \(D_L\). Accordingly the analytic square root gives an
+actual congruence. The same square-root argument applies to
+the cone comparison: \(P=(T_1')^{\mathsf T}Q_2'\) is near
+one and \(PD=(T_1')^{\mathsf T}BT_1'\) is symmetric, so its
+analytic principal root obeys
+\(P^{1/2}D=D(P^{1/2})^{\mathsf T}\), even at rank changes.
+The Schur complement comparison extends back to the
+stabilized radial block by using the explicit nondegenerate
+pivot. Finally the primitive fibre period in \(y\) is
+\(\pi\,dy\), its degree-two partner is cup-dual, and the CS
+Hessian is \(\pm (2\pi^2)^{-1}\) times the coexact curl
+pairing, obtained by differentiating
+\((8\pi^2)^{-1}\int\operatorname{Tr}(A\,dA+2A^3/3)\).
+The symmetric Hessian in signed Wilson units is thus
+\(\pm\tfrac12 B_I\), independent of any WRT coefficient.
+
+It remains to extend the frozen comparison analytically in
+\(\alpha\), as the cut-piece cohomology need not remain
+constant. Write \(F(y,u,\alpha)\) for the actual stabilized
+germ in the common Jacobian chart, with its constant flat value
+subtracted and \(F_2=\tfrac12 y^{\mathsf T}D(\alpha,u)y\).
+Let \(G=\tfrac{c}{2}y^{\mathsf T}B_I(u)y\). The shared
+Jacobian ideal is generated in radial degrees one and two
+by the linear rows \(B_Iy\) and all edge products. At
+\(\alpha_0\) use the analytic radial congruence just obtained.
+It preserves the linear ideal by the degree-one equality.
+It also preserves the degree-two edge module modulo the
+linear ideal: \(\operatorname{Jac}F_2\subseteq
+\operatorname{Jac}F\) by radial homogeneity in the common
+graded ideal. The induced invertible symmetric-square map
+on quadratic polynomials therefore sends that module into
+itself. Its inverse is a polynomial in the map, by
+Cayley--Hamilton with unit constant term, so the inclusion
+reverses. This argument does not require the edge module to
+be locally free. Apply this one \(u\)-dependent coordinate
+change to all active parameters. Now
+\(D(\alpha,u)=A(\alpha,u)cB_I(u)\) for analytic \(A\), by
+the linear ideal equality, and \(D(\alpha_0,u)=cB_I(u)\)
+for every \(u\) in the chart. A forest with a perfect matching
+has determinant \((-1)^d\prod_{e\in M}t_e^2\) (only the
+matched two-cycles contribute). It is invertible at a dense
+set of literal angle configurations, including in a chart
+through a perpendicular or parallel reference. Hence
+\(A(\alpha_0,u)=1\) identically and its principal square root
+gives the analytic congruence jointly in \((\alpha,u)\).
+This avoids passing a cut-piece contraction through a jump.
+
+Lastly the radial-quadratic truncation has the same full
+Jacobian by the preceding degree-two argument. Use the
+straight homotopy \(F_s=G+s(F-G)\) after the congruence.
+The gradient differences express in the homogeneous graph
+generators with coefficient matrix whose value at \(y=0\)
+has only the radial-row/angular-column block possibly
+nonzero. Indeed the radial differences start at degree two,
+angular differences at degree three, and each edge product
+is a combination of angular rows and \(y\) times radial
+rows, as in the nonparallel/parallel pivots above. Thus
+the coefficient matrix for the gradients of \(F_s\) is
+uniformly invertible near \(y=0\), since its constant
+correction is strictly block triangular. Radial Euler
+integration of \(F-G\) supplies coefficients of order
+\(O(y^2)\) on radial gradient rows and \(O(y)\) on angular
+gradient rows. Applying the inverse preserves these orders.
+The analytic Moser vector field solving
+\(dF_s(X_s)=-(F-G)\) therefore has \(X_y=O(y^2)\) and
+\(X_{u,\alpha}=O(y)\). Its local flow fixes the entire
+central section; this proves Theorem~\ref{classic:thm:hall-action}.
+The preliminary radial congruence need not be the identity
+on all off-shell period directions.
+
+The ideal elimination at old active centres also works
+when some of them are positive. Use the three-vector
+period at a positive vertex; each genuinely noncentral
+neighbor kills the two transverse components, and any
+remaining axial column has at least two old active
+neighbors (its product must be central). The longitudinal
+forest minor again eliminates them all, and the locked
+positive product target is fixed in all three components.
+This is only a separation of the framed critical scheme.
+A positive \emph{dormant} component has vector periods and
+is not represented by \eqref{classic:eq:normal}.
+
+\subsection{Absolute density and what the leading angular law measures}
+\label{classic:sec:leading}
+Put \(a=|T|\), \(b=|S|\), \(2d=|I|\), \(N=a+b+2d\)
+and \(\nu=a+d\) on the intrinsic Hall family. Let
+\[
+ p_G=\frac{3N-2\nu-3}{2},\qquad
+ C_G=2^{(3N+1)/2-2b-3d}\pi^{1-N}.
+\]
+Write \(dM_*\) for the forced radial/ordered-product law of
+\eqref{eq:hall:weight}, and \(dP\) for its accompanying common
+normalized angular law. In particular every dormant seam dot
+has conditional marginal \(dt/2\) before test weights are inserted:
+a successive relative rotation along a tree produces fresh spherical
+probability independently of the previous seam dots. The other
+angles are \emph{conditioned jointly}, not recreated separately
+for each insertion. Let \(dP_\perp\) denote this law with the
+matched edge dots set to zero by conditional probability.
+
+Contract the unique dormant matching and write an unmatched
+edge \(a_i b_j\) as \(i\to j\), for a fixed bipartition within
+each component. The order polytope \(\Omega\) has one
+coordinate per matched pair, inequalities \(u_i\le u_j\)
+along these arrows, and \(0\le u_i\le1\).
+In the classical Fourier proof one can use
+\(u_i=1+\log|y_{a_i}|/\log r\); the use of
+\(-\log|y_{a_i}|/\log r\) instead reverses the inequalities
+and has identical volume.
+
+\begin{theorem}[The finite canonically normalized Hall coefficient]
+\label{classic:thm:hall-stationary}
+On the irreducible all-negative Hall charts of
+Theorem~\ref{classic:thm:hall-action}, the leading angular
+density of the finite CS residual model, after removing the
+phase \((-1)^{r(N-1)}\) and \(r^{p_G}(\log r)^d\), is
+\begin{equation}
+ C_G\operatorname{Vol}(\Omega)\,dM_*\,dP_\perp .
+ \label{classic:eq:hallleading}
+\end{equation}
+This is valid for fixed smooth tests on compact chart
+localizations; it patches on compact Hall interiors. If
+\(d>0\), a fixed smooth test whose trace on the indicated
+matched angular support vanishes is \(O(r^{p_G}(\log r)^{d-1})\)
+on a fixed compact localization. Exhausting the resolved
+leading measure in the forced variables gives the entire
+vacuum coefficient in Theorem~\ref{thm:hall:main}.
+Equality of those totals does not assign every other classical
+stratum a zero contribution.
+\end{theorem}
+
+\begin{proof}
+The invariant Gaussian factor for \(h\) retained irreducible
+zero modes, in cohomology frames of the stated metric, is
+\(\tfrac12(r/(2\pi^2))^{h/2}\sqrt{T_{\rm adj}}\); the factor
+\(1/2\) divides by the ineffective central stabilizer, not
+by a continuous rotation volume a second time.
+This is the quadratic integration and framing normalization
+of \cite[eqs.~(3.3), (3.6)--(3.7), (3.14), (4.5)]{Adams}.
+Use the analytic spectral gap before separating small eigenvalues:
+its complement determinant is smooth as flat parameters vary.
+If \(L\) is the Hessian of the finite reduced action on the
+normal quotient, the corresponding small coexact curl product
+has square root
+\((2\pi^2)^{\dim L/2}\sqrt{|\det L|}/\sqrt{\det G_N}\),
+where \(G_N\) is the normal quotient metric. One way to see
+the precise relative statement near degeneracy is the
+triangular Schur graph of the high block, followed by the
+invertible low spectral projection; it intertwines the
+bilinear forms up to factors tending to identity, rather
+than by an additive estimate of individual eigenvalues.
+The coordinate volume splits off exactly
+\(\sqrt{\det G_N}\) by the Schur identity. Thus the normal
+metric cancels out of the determinant-line restriction.
+This gives the usual stationary determinant law here
+\emph{also} as one approaches the rank-changing points
+through the regular chart.
+
+The independent regular coarea computation in
+Theorem~\ref{thm:hall:torsion} gives the coefficient with
+\(r^{p_G}\) removed,
+\[
+ D_G\,\frac{dM_*\,dP}{\prod_{e\in M}|t_e|},
+ \qquad
+ D_G=(2\pi^2)^{-p_G}\,2^{a+N-1}\pi^{2b+2d-2}.
+\]
+The stabilized graph's radial Gaussian at generic angles has
+factor \(2^d/(r^d\prod_M |t_e|)\) because \(|c|=1/2\),
+\(|\det B_I|^{1/2}=\prod_M|t_e|\), and its signature is zero.
+Hence the smooth stabilized amplitude at zero radii is
+\(2^{-d}D_G\,dM_*\,dP\), with common \(r^{p_G+d}\).
+It agrees first on an open dense angular set by the
+determinant comparison and extends therefrom by smoothness.
+For all negative fibres/centres the CS action is
+\((N-1)/2\bmod1\) and the relative adjoint eta phase is zero
+by the phase atlas. This also removes any putative extra
+signature from the comparison Gaussian.
+
+For the leading singular integration write
+\(x_i=y_{a_i}\), \(z_j=y_{b_j}\).
+First Fourier integrate the \(z_j\)'s of a smooth compact
+amplitude at the frequencies
+\(r c\sum_i t_{ij}x_i\). Repeated integrations by parts
+give arbitrary product decay in these frequencies. Integrate
+one dominant dot per \(b_j\); these dots are distinct and
+their product marginal is bounded. The resulting bound is
+\(\prod_j C/(1+r\max_{i\sim j}|x_i|)\).
+Each violating order ratio \(|x_i/x_j|>1\) then costs
+the integrable reciprocal ratio, thus at least one logarithm
+relative to \(d\) independent \(d|x_i|/|x_i|\) scales.
+At the short radial end \(|x_j|\lesssim r^{-1}\) the
+same bound gives one fewer log, and the finite upper end
+has the same property. On the ordered chamber set
+\(w_j=rx_j z_j\). Extending the compact radial domain in
+these Fourier coordinates and replacing the radial amplitude
+by its central trace have one-log error: the bounds
+are integrable with relative factors \(|x_i|\) and
+\((r|x_j|)^{-1}\), or the rapid Fourier moments of
+\(|w_j|/(r|x_j|)\). Writing the matched-frequency relation
+as
+\[
+ t_{jj}+\sum_{i\ne j}(x_i/x_j)t_{ij}=0
+\]
+shows that its matched-dot centres shift by
+\(O(\sum |x_i/x_j|)\), again integrable with one logarithm
+lost. One may first discard a bounded-width log strip near a
+tie to keep these centres in the interior of every matched
+dot interval. Fourier inversion there gives \(|c|^{-1}\)
+per matched dot and the product density \(dt/2\) supplies
+\(1/2\) per dot. This uses ordinary smooth conditional
+densities near the \emph{matched} dot zero only. Nonmatched
+angle poles can be handled by using spherical frames and
+bounded smooth tests throughout, without a coordinate
+singularity at a pole. The signed \(x_i\) ranges supply
+\(2^d\); the ordered absolute log region has volume
+\((\log r)^d\operatorname{Vol}(\Omega)+O((\log r)^{d-1})\).
+Multiplying these factors leaves \(D_G=C_G\) and the
+joint law \eqref{classic:eq:hallleading}, with the stated
+loss if its trace vanishes. For \(d=0\) this step is
+just regular evaluation. Relative exhaustion of the
+finite forced mass and its equality with the exact
+vacuum coefficient are the independent quantum estimates
+in the Hall theorem; the two limits are not interchanged.
+\end{proof}
+
+The smooth product resolution makes a negative active lock
+a real two-vector zero. Its mass on a compact fixed-rank
+resolved chart is \(O(\epsilon^2)\) when that vector lies
+in a ball of radius \(\epsilon\); a projection to active
+radii can instead have a cap-convolution singularity.
+One should use its independently resolved Haar estimate
+rather than infer bounded projected density from the smooth
+chart. When \(d>0\), a globally collinear all-negative
+Hall reference has \(|t_e|=1\) on every dormant edge;
+the graph block is invertible there and no dormant
+logarithm arises in its fixed compact residual gauge model.
+For \(d=0\) a collinear orbit has a circle stabilizer rather
+than a smooth ordinary quotient. In the fixed slice use
+Haar division before quotient: a generator of orbit speed
+\(v\) and its cup dual contribute a torsion square-root
+factor \(|v|\) on the nonfixed locus, the orbit-volume
+Jacobian of this division. The effective orbit period is
+half the circle's full period. This local pushforward
+adds no atom on fixed orbits. These observations are not
+uniform estimates near a change in the noncentral set.
+
+\subsection{Tied scales carry a different angular support}
+\label{classic:sec:overlap}
+There is a direct subleading test of the same actual
+normal phase. Choose any subset \(E'\) of unmatched arrows
+and insert compact smooth cutoffs on the signed ratios
+\(\rho_e=x_i/x_j\in\mathbb R^*\) for \(e=i\to j\) in \(E'\).
+The constrained pairs form a forest. Let \(p=d-|E'|\) be
+the number of its components, retaining isolated matched
+pairs, and let \(\Omega_{E'}\) be the order polytope of the
+roots under the unselected arrows. In any chart with smooth
+density in the matched dots on the selected support (in
+particular compact interior angular traces), the same
+finite model has order \(r^{p_G}(\log r)^p\); its
+coefficient is obtained by the replacements
+\[
+ \begin{gathered}
+  2^d\operatorname{Vol}(\Omega)
+      \longmapsto 2^p\operatorname{Vol}(\Omega_{E'}),\\
+  \delta(t_{jj})\longmapsto
+  \delta\!\left(t_{jj}+
+       \sum_{\substack{i\to j\\(i,j)\in E'}}\rho_{ij}t_{ij}\right),
+  \qquad
+  \prod_{e\in E'}\chi_e(\rho_e)\frac{d\rho_e}{|\rho_e|}.
+ \end{gathered}
+\]
+Here the densities and Fourier modulus per matched dot
+are the same as before, a delta outside the angular
+cutoff contributes zero, and the error has one fewer
+root logarithm on fixed compact supports. Indeed, change
+the absolute log coordinates to one root per selected
+component and one edge difference per selected edge.
+The incidence minor has determinant of modulus one;
+the selected ratios fix descendant signs so only \(2^p\)
+root signs remain. Unselected ratios have the same
+dominant-bound and Fourier-shift estimates as above.
+The selected coherent frequencies cannot be put equal
+to zero in the integrand. Fourier inversion gives the
+displayed deltas with unit matched-angular derivative.
+
+If all arrows in one dormant connected component are
+selected, the delta relations exhibit a genuine flat
+curve: set all \(z\)'s to zero, let the \(x\)'s be a
+common scalar times the vector of the selected signed
+ratios, and keep the indicated \(u\) fixed. Every edge
+period product vanishes and its only nontrivial radial
+row is the displayed balance. The inverse analytic
+chart therefore gives actual flat holonomies with this
+physical first-order direction. A single selected arrow
+in \(P_4\) can already have
+\(t_{11}=0,\ t_{22}=-\rho t_{12}\ne0\), away from the
+principal perpendicular-pair support. This is not a
+positive splitting of the full unmarked next
+coefficient; the normal off-shell ratios are not
+automatically the same tests as the literal finite
+quantum ratio marks.
+
+\subsection{The absolute two-vertex and four-vertex tests}
+\label{classic:sec:benchmarks}
+These computations compare independent quadratic normalization and
+exact finite level, so in particular check the volume of the effective
+rotation group and the finite centre factor. The all-negative
+\(P_4\) test also checks why an apparently singular intermediate
+angle does not create an extra leading logarithm.
+
+\paragraph{Two sites: the flat \(H\) model.}
+The two-site \(H\) is the didicosm. Its degree-four rectangular torus
+cover has lengths \(L_1,L_2,L_3\); the three nontrivial deck motions
+have linear half-turns about the coordinate axes and half-period
+translation on their fixed axis. These data, and the orthogonal
+quaternionic flat lift, follow from the two glide presentations
+in \cite[\S2]{P49}. Put \(V=L_1L_2L_3/4\).
+The twist is the three-dimensional linear representation of the
+deck quotient \(V_4\). Its harmonic one-forms are
+\(X\mathbf i\,dx_1+Y\mathbf j\,dx_2+Z\mathbf k\,dx_3\) and
+there is no invariant vector. These parallel forms close under the
+quadratic curvature followed by Hodge star, so the complement
+equation is solved identically by zero. The residual CS magnitude
+is \(V|XYZ|/\pi^2\), directly by the normalized trace of the cubic.
+
+The torsion can be computed without a seam convention. In the
+weighted heat trace
+\[
+ \sum_q(-1)^q q\operatorname{Tr}(e^{-s\Delta_q}),
+\]
+the identity deck insertion has zero weighted form character.
+A half-turn has form character \(-4\), and
+adjoint character \(-1\); deck averaging gives \(+1\).
+Its restricted Fourier sum is
+\(\sum_{n\in\mathbb Z}(-1)^n e^{-s(2\pi n/L_i)^2}\).
+Omitting its zero term gives in zeta variables
+\[
+ \zeta_i(z)=2(L_i/(2\pi))^{2z}
+       (2^{1-2z}-1)\zeta_{\rm R}(2z),\qquad
+ \zeta_i'(0)=4\log2-2\log L_i .
+\]
+Therefore \(T_{\rm adj}=\exp(\frac12\sum_i\zeta_i'(0))=16/V\).
+The coexact curl has equal opposite helicity multiplicities in
+both twisted and untwisted deck traces: on any nonidentity fixed
+wavevector the half-turn acts with the same sign on both
+transverse helicity lines. The scalar/exact parts also pair,
+so the relative eta is zero. The harmonic coordinate metric
+has volume \(V^{3/2}\,dX\,dY\,dZ\). The normalized zero-mode
+amplitude is thus \(r^{3/2}V/(\sqrt2\pi^3)\,dX\,dY\,dZ\).
+The cubic with \(\mathrm{CS}_0=\frac12\) gives
+\((-1)^r\sqrt{2r}\log r/\pi\). Here and below a split
+cubic \(cXYZ\), with a smooth cutoff around zero, has
+coefficient \(2/(r|c|)\log r\) times the amplitude at zero:
+Fourier transform one pair, integrate the remaining
+signed \(dX/|X|\) between \(r^{-1}\) and a fixed radius,
+and bound the two endpoint errors by the same rapid
+Fourier estimate as in the Hall proof. This agrees
+with the independent finite \(H\) computation in \cite{P48,P49}.
+
+\begin{theorem}[Two normalized singular \(P_4\) models]
+\label{classic:thm:p4}
+For the all-negative central \(P_4\), let \(s_1,s_2\) be its
+two outer cap-axis dots and \(t\) its middle dot. At
+\(s_1=s_2=0\) and \(0<|t|<1\), the physical reduced
+quartic magnitude in outer signed Wilson units is
+\[
+ \frac{|s_1s_2 y_1y_2|}{2|t|},\qquad
+ \sqrt{T_{\rm sing}}=
+ \frac{2\pi^4}{|t|}\,ds_1\,ds_2\,dy_1\,dy_2\,dt\,d\gamma .
+\]
+Here \(d\gamma\) denotes two passive azimuth probabilities
+and \(\sqrt{T_{\rm sing}}\) is the coarse half-torsion.
+After canonical gauge/framing normalization the leading
+central model and the independent exact finite middle-dot
+orbital law each give
+\[
+ \frac{(-1)^r\sqrt2}{4\pi^3}\,
+      r^{5/2}(\log r)^2\,dt
+\]
+after passive angular integration. Hence the closed coefficient
+is \((-1)^r\sqrt2/(2\pi^3)\) at \(r^{5/2}(\log r)^2\)
+in \(Z_r\). In the literal disjoint trace box with signs
+\((-,+,+,-)\), there is a phase-zero singular cubic at
+perpendicular negative endpoint caps. Its total normalized
+coefficient is \(+\sqrt2/(16\pi)\) at \(r^{1/2}\log r\),
+matching the exact finite trace-box contraction.
+\end{theorem}
+
+\begin{proof}
+For the all-negative corner, eliminate the two central
+radial variables in the exact graph action:
+the quadratic graph expression before its common coefficient
+\(c\) is \(tX_1X_2+s_1X_1y_1+s_2X_2y_2\).
+Its stationary value is \(-s_1s_2y_1y_2/t\), with retained
+signed outer period linear units on the singular stratum.
+For an independent absolute check, an all-central negative
+Seifert piece contributes adjoint torsion 4 in primitive
+peripheral bases. To see this, remove its genuine caps.
+The base--fibre product cochain complex cancels against its
+one-degree shift in the paired section/fibre bases. On the
+plane perpendicular to the cap axis both cap cores act by
+\(-1\), giving determinant 4 on each cap solid torus; their
+tori are acyclic on that plane. On the invariant line the
+two degree-one cap restrictions have determinants 2 and
+2 with unit section pivots. The degree-zero and degree-two
+pivots have modulus one; the opposite slopes cancel in
+the surviving section relation. Thus the local product is
+\(4^2/2^2=4\). The trivial positive central block, used
+below, has instead three line copies and torsion \(4^{-3}\).
+
+The same relative cone computation as in the Hall proof
+then leaves two angular maps \(U,U^*\) and the dot
+adjacency in degree \(1\to2\); the four piece contributions
+have product half-factor \(2^4\). The radial pivot scalar
+is \(|t|\) in half-torsion, and the retained two period
+units give \(\pi^2\). For the angular determinant, lift
+axis variations to \(\delta u_v=2a_v\times u_v\). Edge
+differences plus the root generator are a triangular
+unimodular change on the tree. Removing axial columns
+and the global rotation leaves
+\[
+  \frac{\prod_{v=1}^4 dA(u_v)}{4^4\pi^2}
+       =\frac{\pi^2}{8}\,ds_1\,ds_2\,dt\,d\gamma
+\]
+as a local quotient density, the right side using three
+uniform edge dots. This yields \(2\pi^4/|t|\) as stated.
+There is no second quotient by \(SO(3)\).
+The clean outer-active branch is an independent
+determinant check: per signed quadrant its coarse
+density is
+\(\pi^2\cot(\pi |y_1|/2)\cot(\pi |y_2|/2)
+\,d|y_1|\,d|y_2|\,d\operatorname{Vol}_{SO(3)}\),
+where \(d\operatorname{Vol}_{SO(3)}=(\pi^2/2)dt\,d\gamma\).
+Its residue is \(2\pi^2/|y_1y_2|\). Dividing the singular
+coarse density by the small curl product
+\(2\pi^2|\kappa y_1y_2|\), with \(\kappa\) the physical
+quartic coefficient, gives this residue exactly for
+\(|\kappa|=1/(2|t|)\). The small eigenvalues have opposite
+signs; the phase is \((-1)^r\) under
+Section~\ref{phase:classical}.
+
+For the finite quartic \(s_1s_2y_1y_2\), Fourier integrate
+\(s_1,s_2\) at fixed signed \(y_1,y_2\). The four signed
+quadrants each have logarithmic area \(1/2\) after the
+gate \(r|y_1y_2|\gtrsim1\), yielding coefficient
+\(2/(r|\kappa|)\,(\log r)^2\). The omitted gate strip and
+the lower radial ends are controlled by the same Fourier
+moments and lose one log. Combining the \(h=7\) Gaussian
+normalization with the independent singular density leaves
+the given constant multiple of \(dt\).
+
+There is a global exact angular check without uniform
+classical estimates at \(t=0,\pm1\). Use a smooth even
+middle orbital test \(\eta(t)\) and its kernel
+\(K_\eta(\xi)=\frac12\int_{-1}^1\eta(t)e^{i\xi t}dt\).
+In the finite reflected deficit sum eliminate both
+outer leaves by the odd sine identity
+\[
+ \sum_{\ell<r,\ \ell\ {\rm odd}}
+     \cot\!\bigl(\tfrac{\pi\ell}{2r}\bigr)
+                    \sin\!\bigl(\tfrac{\pi n\ell}{r}\bigr)
+     =\tfrac r2,\qquad 0<n<r,\quad n\ {\rm odd}.
+\]
+For instance the identity follows by subtracting adjacent
+odd frequencies using sine/cosine addition on the odd
+grid and evaluating the first frequency. Using the
+prefactor and vertex factors of \eqref{rad:sum}, the
+remaining exact expression is
+\[
+ (-1)^r\frac{4\sqrt2}{\pi^3}r^{5/2}
+ \sum_{\substack{n,m<r\\ n,m\ {\rm odd}}}
+ \frac{F_2(n/r)F_2(m/r)}{nm}\,
+ K_\eta(\pi nm/r),\qquad
+ F_2(x)=\left(\frac{\pi x/2}{\sin(\pi x/2)}\right)^2 .
+\]
+Indeed the leaf identity in sinc units is \(r/(4n)\);
+the middle vertex has precisely the bounded endpoint
+factor \(F_2\). The normalized odd harmonic measures
+converge to \(\tfrac12\,du\) with \(u=\log n/\log r\).
+Away from the endpoint strips and \(u+v=1\), the
+bounded kernel tends uniformly to \(K_\eta(0)\) on
+one triangle and 0 on the other. The strips have small
+normalized mass and \(F_2\) tends to one on interior
+logarithmic scales. The triangle's weight is \(1/8\).
+This gives the exact claimed density for even orbital
+tests, including exhaustions of the open generic
+angular set. The check does not substitute an orbital
+integral variable for a genuine finite Wilson operator.
+
+For the mixed sign box, fix one root sign at each positive
+site. Use signed radian endpoint periods \(p,q\), axes
+\(u,v\), and \(t=u\cdot v\). The positive centres' vector
+periods are eliminated by reversing their ordered
+products: their caps have \({\rm Ad}+1\) invertible,
+forcing the two middle periods to be \(-qv,-pu\).
+The edge commutators then give \(pq=0\), with a unit
+from a component of \(u\times v\) at perpendicular
+axes. The two negative caps' axial equations give
+\(pt=qt=0\); the transverse equations hold modulo these
+generators. Thus the exact critical scheme is
+\(\operatorname{Jac}(pqt)\). The genuine CS germ has no
+quadratic terms in these three retained coordinates.
+Only \(pqt\) can occur in its cubic with these gradient
+generators, and its coefficient cannot vanish.
+The analytic straight-homotopy argument for this
+graded ideal gives the exact cubic with a
+tangent-identity change (equivalently the normal-form
+argument of \cite{P49B}); there is no change in the
+physical period units. \(\mathrm{CS}_0=0\) since the
+two positive product bits are both one, and the
+relative rho vanishes by \eqref{phase:rho}.
+
+The singular half-torsion at \(p=q=t=0\) per root pair
+is \(dp\,dq\,dt/32\). In fact the four blocks now give
+product half-factor \(2^2(1/8)^2=1/16\).
+The degree-one compressed adjacency has half-block
+\((x,b)\mapsto(u\cdot x,x+bv)\); its nonzero singular
+values are \(\sqrt2,\sqrt2,1\).
+The two retained primitive radial tangent vectors
+have norm \(\sqrt2\) and are orthogonal, cancelling
+the determinant divisor 2. The two axis areas
+divided by \(4^2\pi^2\) have total weight one,
+with normalized dot density \(dt/2\). This verifies
+the stated singular factor. On the adjacent reflected
+smooth arm \(p\ne0,\ q=t=0\), the coarse half-torsion
+per root pair tends to \(dp/(32|p|)\).
+The compact-regular formula is
+\((\pi/64)\cot(\pi x/2)\csc^2(\pi(1-x)/2)\,dx\)
+with \(x=|p|/\pi\). Its primitive block computation
+has two ordinary noncentral factors
+\(\frac12(4\cos^2(\pi x_j/2))
+ (4\sin^2(\pi x_j))^{-d_j/2}\),
+the positive centre factor \(1/8\) and the negative
+end factor 2; the invariant radial path block has
+the common unit period in radians and all
+transverse section/area pivots have determinant
+one in coarea bases. Substituting \(d_j=1,2\) and
+\(x_j=x,1-x\) gives the displayed formula.
+The small-curl determinant comparison now yields
+\(|\kappa|=1/(2\pi^2)\) in \(pqt\) radian units.
+With the \(h=3\) canonical factor and the split
+cubic residue, the coefficient is
+\(1/(32\sqrt2\pi)\) per positive-root pair. The four
+such pairs are distinct. Ordered perpendicular
+negative axes form a single effective rotation
+orbit; the two signed period variables already
+include both adjacent Weyl directions. The total
+is \(+\sqrt2/(16\pi)\).
+
+For comparison the exact finite trace box can be
+reduced by the same two leaf sums with cutoffs.
+After reflecting the two small positive-centre
+labels \(a,b\), the middle sine changes by
+\((-1)^r\), cancelling the external parity.
+The remaining form is
+\[
+ \frac{4\sqrt2}{\pi^4}r^{-1/2}
+ \sum_{a,b\equiv r-1\, (2)} C_2(a/r)C_3(b/r)
+   \sin(\pi ab/r)\,Q_1^{(r)}(a)Q_4^{(r)}(b),
+\]
+where the positive-centre profiles are smooth with
+\(C_j(0)=\pi^2/4\), and cut leaves give
+\(Q_i^{(r)}(a)=1+O(1/a)\) on the sufficiently small
+positive arguments. The latter estimate follows by
+summation by parts in the smooth difference from
+the uncut cotangent identity. For \(a\) in this range,
+two geometric summations by parts in \(b\) give
+\[
+ \sum_{b\equiv r-1\, (2)} C(b/r)\sin(\pi ab/r)
+    =\frac{r\,C(0)}{2\pi a}+O_C(r/a^2+1):
+\]
+the first endpoint term is the imaginary part of
+\(C(s/r)e^{is\pi a/r}/(1-e^{2i\pi a/r})\),
+\(s=1\) or 2, and the second difference has total
+variation \(O(r^{-1})\). The single leaf errors cost
+\(O(r\sum a^{-2})\), the double error \(O((\log r)^2)\).
+Now the half-grid harmonic sum gives \(\frac12\log r+O(1)\)
+on either parity. The result is exactly
+\(+\sqrt2\,r^{1/2}\log r/(16\pi)+O(r^{1/2})\).
+It is a literal trace box, not a finite projector onto
+a single character, and two independently integrated
+smooth endpoint arms must not each be credited with
+the whole logarithm.
+\end{proof}

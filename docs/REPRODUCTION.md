@@ -184,3 +184,7 @@ The paper pages give the LaTeX entry point, build command and independent verifi
 
 - [46+47 · Common Einstein cones and relational area probes](../papers/46-47-common-cones-and-area-probes/README.md): see its LaTeX entry point, deterministic build and verification.
 - [44+47 · Causal memory of gravitational radiation](../papers/44-47-gravitational-radiation-memory/README.md): see its LaTeX entry point, deterministic build and verification.
+
+## Building Paper 51
+
+Run `./build.sh` from the [paper directory](../papers/51-singular-wrt-semiclassical-sewing/README.md) using pdfLaTeX. The included `python verify_h_tree.py` replay compares the two-vertex finite contraction with its cotangent formula. See the [verification record](../papers/51-singular-wrt-semiclassical-sewing/VERIFICATION.md).

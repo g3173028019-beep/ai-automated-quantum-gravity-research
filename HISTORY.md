@@ -2,9 +2,11 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains 61 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and thirty-five typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 62 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and thirty-six typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
+
+On 27 November 2026 (Beijing time), [51 · Singular semiclassical sewing for paired-cap Witten–Reshetikhin–Turaev invariants](papers/51-singular-wrt-semiclassical-sewing/README.md) joined the public archive as a separate synthesis and extension. The earlier WRT manuscripts are retained.
 
 On 27 November 2026 (Beijing time), [48 · Leading logarithms of closed WRT invariants](papers/48-wrt-leading-logarithms/README.md), [49 · Semiclassical sewing and central WRT phases](papers/49-wrt-semiclassical-sewing/README.md), [50 · Graph detection and stability in WRT sewing](papers/50-wrt-graph-detection-and-stability/README.md) joined the public archive as Papers 48–50. The existing papers and their numbers are preserved.
 

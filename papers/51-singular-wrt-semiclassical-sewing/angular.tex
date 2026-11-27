@@ -1,0 +1,254 @@
+\section{Actual Wilson insertions and their joint angular limit}
+\label{sec:ang:main}
+
+In this section we keep the inserted Wilson ribbons in the surgery diagram. In particular, a function of a relative cap angle is not inserted as an assumed diagonal multiplier in a backbone-color sum. The result is an ordinary, undamped level limit for every fixed finite collection of integer-spin Wilson words on a perfectly matched backbone. The construction and the uniform signed estimates also apply to the mixed Hall sector in the next section.
+
+\subsection{The marked diagram and its exact tree transfer}
+
+We use one-based colors \(V_m\), \(1\leq m<r\), and put
+\[
+ \theta=\pi/r,\qquad q=e^{i\theta},\qquad
+ d_m=\frac{\sin(\theta m)}{\sin\theta},\qquad
+ {\cal D}=\frac{\sqrt{r/2}}{\sin\theta}.
+\]
+The actual surgery backbone color at \(v\) is \(a_v=r-m_v\). The unpierced \(-2\) cap, at each vertex, enforces \(m_v\) odd. Draw the tree in disjoint planar vertex boxes and edge strips, with only the designated two-crossing positive Hopf clasp in each strip. At any positive cap disk mark finitely many passages parallel to the backbone; a fixed-color auxiliary ribbon then follows these passages in its specified word order. Between boxes it can use the outside side of the unique tree corridor, with distinct heights for different strands. An inverse letter may be implemented with the dual passage. Other twists and crossings in the auxiliary part are fixed, and no additional heavy-heavy crossing is introduced. These conventions define the framed representative to which all finite-level results below apply. No invariance under changing an auxiliary route while preserving only its free homotopy word is needed.
+
+A collection \(W\) can contain several ribbons, with arbitrary shared cap visits. Auxiliary spins are integers, so their representations are insensitive to the central sign in lifting an adjoint holonomy. On the all-negative flat slice, all backbone meridians are central and may be filled in the adjoint complement. The separated cap circles then have disjoint spanning disks, and reading a routed ribbon's crossings of those disks gives exactly its ordered cap word, up to a common conjugation and central lifts. Thus its classical evaluation is
+\begin{equation}
+ \label{eq:ang:word}
+ P_W(u)=\prod_{\ell\in W}
+   \chi_{j_\ell}\!\left(\prod_{v\text{ along }\ell}^{\rm ordered}
+                                   i u_v\cdot\boldsymbol{\sigma}\right),
+          \qquad u_v\in S^2 ,
+\end{equation}
+where \(\chi_{j_\ell}\) is the ordinary spin-\(j_\ell\) character and the \(\boldsymbol{\sigma}\) are the Pauli matrices. For integer \(j_\ell\), the inverse of a half turn has the same representation matrix. In particular \(P_W\) is a polynomial in the axes, invariant under their independent reversals and under simultaneous rotations.
+
+To see how the marking changes the finite sum, let
+\[
+ f_\pm(a)=\frac{(S\Theta^{\pm2}S)_{a1}}{S_{1a}},
+\]
+where the twists \(\Theta\) have the same convention as in the unmarked surgery sum. A positive cap through which a fixed auxiliary packet \(C\) passes acts on \(V_a\otimes C\) by \(f_+(x)\) on the total simple channel \(V_x\), including every multiplicity of that channel. Divide by the unpierced \(f_+(a)\); the surviving parity of \(a\) makes the denominator nonzero. The two-term quadratic Gauss sum for the \(+2\) cap gives the exact ratio
+\begin{equation}
+ \label{eq:ang:cap}
+ \frac{f_+(x)}{f_+(a)}
+  =\frac{\sin(\theta m/2)}{\sin(\theta(r-x)/2)}
+          \exp\!\left(-\frac{i\theta}{4}(x^2-a^2)\right),
+                     \qquad m=r-a .
+\end{equation}
+For example, on the nonzero parity, \((S\Theta^2S)_{a1}\) is a common nonzero scalar times \(\sin(\theta a/2)\exp(-i\theta a^2/4)\); the two Gauss translates of \(a\) differ by \(2r\). Dividing by \(S_{1a}\) and taking the ratio gives \eqref{eq:ang:cap}. Since \(|x-a|\) is bounded by the packet size, these ratios are uniformly bounded on all admissible charges.
+
+Now remove the invertible object \(\mathsf J=V_{r-1}\) from every \(V_a=\mathsf J\otimes V_m\). Its monodromy with every integer-spin object is the identity, so its crossings with both the stripped heavy wires and the bounded auxiliary packets can be switched as exact morphisms. The cap projector is carried from the \(x\)-channel to the \(r-x\)-channel by tensoring with \(\mathsf J\). The separated invertible-object link contributes one factor \(M_{\mathsf J,\mathsf J}=(-1)^r\) per heavy Hopf clasp, since \(d_{\mathsf J}=1\) and the heavy framings are zero. This reduction takes place in the unitary ribbon category before any magnetic-basis limit.
+
+Let \({\cal K}_{r,W}(\mathbf m)\) be the remaining diagram value with all positive caps normalized by \eqref{eq:ang:cap} and one normalized categorical trace on each heavy backbone. The physical marked invariant is
+\begin{equation}
+ \label{eq:ang:normalized-sum}
+ Z_{r,W}=(-1)^{r(N-1)}
+      (2/r)^{(N+1)/2}\sin(\theta)^{-(N-1)}
+      \sum_{\mathbf m\ {\rm odd}}
+        \prod_v \bigl(1+\cos(\theta m_v)\bigr)\,
+                            {\cal K}_{r,W}(\mathbf m).
+\end{equation}
+Any diagonal radial mark multiplies the summand in this formula. To check the scalar normalization, the normalized unpierced Hopf clasp at \(m,n\) is
+\[
+ \lambda_{r,0}(m,n)=
+ \frac{\sin\theta\,\sin(\theta mn)}{\sin(\theta m)\sin(\theta n)}
+   =D_r(m,n)\frac{\sin(\pi mn/r)}{\pi mn/r},
+ \qquad
+ D_r(m,n)=\frac{\pi mn}{r\,\sin\theta\, d_m d_n}.
+\]
+Thus factoring the original unmarked vertex weights
+\((1+\cos(\theta m))/\sin^{\deg(v)}(\theta m)\) against one sine per edge produces \eqref{eq:ang:normalized-sum}. Equivalently factor each unchanged scalar \(f_-(a)f_+(a)\) and the backbone surgery weight before evaluating the decorated diagram. In neither calculation is there division by a possibly vanishing Hopf entry.
+
+\begin{lemma}[Finite-rank tree reduction]\label{lem:ang:network}
+For the declared routes there is a fixed finite index set, independent of \(r\) and of the heavy charges, such that
+\begin{equation}
+ \label{eq:ang:network}
+ {\cal K}_{r,W}(\mathbf m)
+  =\sum_\alpha
+       \prod_v B_{v,\alpha}(m_v;r)\,
+       \prod_{e=vv'}\lambda_{r,L_e(\alpha)}(m_v,m_{v'}).
+\end{equation}
+Here each \(L_e(\alpha)\) is bounded in terms of \(W\), each \(B_{v,\alpha}\) is bounded, and \(\lambda_{r,L}\) is the one-port rank-\(L\) transfer through the true heavy Hopf clasp.
+\end{lemma}
+
+\begin{proof}
+At a tree cut, move its finitely many auxiliary strands to the outside of the clasp as in the declared route. Bend their outgoing duals; the resulting fixed packet \(C_e\) has finitely many simple components and fixed multiplicity spaces. Performing the subtree diagram up to that cut leaves the parent-facing heavy through-line and a morphism \(V_m\otimes C_e\to V_m\). This description does not bend either heavy leg through its neighbor. After selecting an auxiliary simple \(V_{2L+1}\), the space \(\operatorname{Hom}(V_m\otimes V_{2L+1},V_m)\) is zero or one-dimensional. In the latter case use a normalized coisometry \(T_{m,L}\), with \(T_{m,L}T_{m,L}^*=1_{V_m}\).
+
+The intervening clasp and normalized traced child heavy line take \(T_{n,L}\) to a scalar multiple of \(T_{m,L}\); the packet multiplicity is only an exposed finite index. Closing the other line against \(T_{m,L}^*\) identifies the scalar with the Hopf graph with the two normalized trivalent vertices and the rank-\(L\) bridge. This defines \(\lambda_{r,L}\), extended by zero when a channel is absent. Bending and routing the fixed packet uses only its braids with the appropriate heavy through-line, not another heavy monodromy. Recursing through the tree puts all couplings among packet indices at their respective vertices. The final normalized trace at a vertex includes only that vertex's own heavy \(m_v\), its cap and its finite auxiliary couplings. This gives the product and sum in \eqref{eq:ang:network}, even when several Wilson words use the same cut. The fixed packet dimensions and unitary categorical norm bound all factors. In a forest with shared auxiliary words the same local construction gives a finite tensor contraction coupling the components, rather than independent observables on them.
+\end{proof}
+
+We will need the following elementary strengthening of the vertex bound:
+\begin{equation}
+ \label{eq:ang:vertex-bv}
+ \sup_m|B_{v,\alpha}(m;r)|+
+      \operatorname{Var}_{m\ {\rm on\ its\ fixed\ parity}}B_{v,\alpha}(m;r)
+          \leq C_W .
+\end{equation}
+It holds on every physical interval or folded branch. One can see the finite complexity explicitly by evaluating each vertex through a fixed list of elementary recouplings. Only one heavy through-line occurs: its neighboring channel labels are all \(m+O_W(1)\) and the auxiliary labels are bounded. In the finite quantum Racah formula (e.g. \cite[Sec.~2, Eqs.~(6)--(7)]{TaylorWoodward2006}) for a one-small term \(\{A\,B\,E;\,J,E+\xi,B+\eta\}\), set \(T=A+B+E\), \(U=A+B-E\), \(V=A+E-B\), \(W_0=B+E-A\). The Racah summation parameter is \(T+\kappa\) with bounded \(\kappa\); its long factors have arguments \(U+\kappa-J-\xi,V+\kappa-J-\eta,W_0+\xi+\eta-\kappa,T+\kappa+1\). They cancel the corresponding long triangle factorials up to bounded shifts. Admissible denominators are nonzero below level; terms whose numerator reaches the zero quantum integer are omitted before cancellation. The remaining expressions have only fixed-length \(q\)-integer products and their square roots, on a bounded number of linear admissibility pieces. The same holds for the normalized trivalent gauge; its relative norm is given below in \eqref{eq:ang:macdonald}. Fixed-large braid phases and \eqref{eq:ang:cap} have fixed frequencies in \(m/r\) at each bounded shift; no heavy self-twist survives zero framing. In the normalized real Racah gauge there is no hidden sign alternating on the step-two progression. An elementary move with one heavy input has one heavy total spin, and the normalized Racah prefactor has sign exponent equal to the sum of the three external input spins and that total spin, so its slope in the heavy spin is two. The large triangle used for \(T+\kappa\) likewise has exactly two heavy labels and slope two. In a fixed-large braid the eigen-sign exponent contains the heavy input minus the heavy output, each with slope one. These signs, as well as the duality sign \((-1)^{2j}\), therefore remain constant on a physical parity progression. The trivalent gauge of \eqref{eq:ang:macdonald} takes the highest allowed coefficient positive up to the fixed duality and braid convention; only fixed-shift norm and fixed-frequency phase factors remain. After \(y=\tan(\theta m/8)\), the resulting real and imaginary parts are semialgebraic families of uniformly bounded complexity. Uniform monotonicity gives a bounded number of intervals, and on the sampled points of each such interval variation is controlled by the bounded sampled values. This yields \eqref{eq:ang:vertex-bv} for the gauge used below.
+
+\subsection{Joint compact-product limit}
+
+For \(e=vv'\) put \(w_e=m_vm_{v'}/r\), and let \(d\Pi=d\Omega/(4\pi)\) be spherical probability. The common limiting kernel is
+\begin{equation}
+ \label{eq:ang:angular-kernel}
+ {\cal K}_{W}(\mathbf w)=
+  \int_{(S^2)^V}P_W(u)
+    \exp\!\left(i\pi\sum_{e=vv'} w_e\,u_v\cdot u_{v'}\right)
+                                               \prod_v d\Pi(u_v).
+\end{equation}
+
+\begin{theorem}[Actual joint symbol]\label{thm:ang:compact}
+If \(\min_v m_v\to\infty\), \(\max_v m_v/r\to0\), and all \(w_e\) remain bounded, then
+\[
+       {\cal K}_{r,W}(\mathbf m)-{\cal K}_W(\mathbf w)\longrightarrow0
+\]
+uniformly on these scales. There is no comparable-spin requirement, and the theorem applies to any fixed number of simultaneous ribbons.
+\end{theorem}
+
+\begin{proof}
+After the exact \(\mathsf J\)-removal, every fixed cut of the reduced diagram contains a total highest weight \(o(r)\). The tensor products are inside the alcove, so we may use ordinary type-one \(U_q(\mathfrak{sl}_2)\) weight matrices without negligible summands. Elementary matrix norms in this basis, not transported categorical unitary norms, are used for the local norm limits.
+
+Let \(j=(m-1)/2\) and \(U=\mathbf J/j\), with \(\mathbf J\) the usual spin matrices. The \(q\)-raising and lowering entries differ from the ordinary normalized entries by \(O((j/r)^2)\). The triangular universal \(R\) from \cite[Sec.~7]{RT1990} has Cartan factor \(q^{2J_z\otimes J'_z}\), and its \(b\)-th nilpotent coefficient is \((q-q^{-1})^b/[b]!\) times a unit phase and the harmless \(q^{\pm J_z}\)-dressings of the symmetric coproduct. Up to the stopping index \([b]\geq c b\); raising and lowering norms give a dominating sequence \((Cw)^b/b!\) for \(w=mn/r\). For each fixed \(b\), the terms approach their ordinary exponential terms. Consequently the unflipped \(R\) is, in norm up to \(o(1)\), \(e^{2i\theta J_zJ'_z}e^{2i\theta J_+J'_-}\). The corresponding opposite-order factor and \([U_i,U_j]=O(1/j)\) then give
+\[
+                  R_{21}R
+                         =e^{\,i\pi w\,U\cdot U'}+o(1).
+\]
+The coefficient agrees with the physical balancing spectrum
+\(\exp(i\pi(x^2-m^2-n^2+1)/(2r))\) on the \(x\)-channel. Bounded auxiliary crossings become ordinary flips. The factorial bound gives uniformity for all bounded \(w\), even with widely separated heights of the two heavy labels.
+
+For a cap packet with fixed total ordinary spin matrices \(S\), use \(C_q=FE+[J_z+1/2]^2\) with its symmetric coproduct. The packet channel \(r-x=m+2s\) has eigenvalue \([j+s+1/2]^2\) for the coupled Casimir. On the entire tensor product,
+\[
+ \frac{\Delta C_q-[j+1/2]^2}{2j}
+                             = U\cdot S+O(j/r+j^{-1}).
+\]
+Indeed the change of the pure heavy raising-lowering term from multiplication by \(q^{2S_z}\) is \(O(j^2/r)\) before dividing, the mixed terms reduce to \(J_-S_++J_+S_-\), and the divided difference of the sine-squared Cartan term gives \((J_z/j)S_z\). Subtracting the exact single-spin Casimir cancels the large pure term. This is why no hypothesis on \(j^2/r\) is imposed. There are only finitely many bounded integer shifts \(s\), and their normalized eigenvalues approach these distinct integers. The ratio \eqref{eq:ang:cap} on each of them is \((-1)^s+o(1)\). Polynomial interpolation on this separated finite set gives its operator limit with symbol \(\exp(i\pi u\cdot S)\). On a full packet that is the tensor product of the same half turn in each constituent spin representation; hence the simultaneous words, not just their separate means, enter the calculation.
+
+Finally the spin-coherent resolution of the identity gives the normalized heavy trace of each fixed ordered polynomial of the \(U_i\)'s as its spherical integral up to \(o(1)\). Indeed rotation-averaging the highest-state projector gives \(1/(2j+1)\) times the identity by irreducibility, and its rotated coherent states have mean \(u\) and component variances \(O(j^{-1})\); apply Cauchy--Schwarz and telescope each ordered monomial. Bounded exponential factors can be approximated by fixed polynomial products uniformly at bounded \(w\). The magnetic pivotal trace factor differs from the ordinary one by \(O(j/r)\), and \(d_m/m\to1\). The finite auxiliary contractions now give exactly the prescribed characters \eqref{eq:ang:word}. This proves \eqref{eq:ang:angular-kernel} and the stated uniform limit.
+\end{proof}
+
+For later use, in a rooted tree the dot \(t_e=u_v\cdot u_{v'}\) of a fresh child with its parent has probability \(dt_e/2\) on \([-1,1]\), and the child's transverse azimuth is an independent circle variable. These variables are independent over all edges in the vacuum, but the inserted \(P_W\) is a joint function of the shared axes. Its conditional expectation \(p_W(\mathbf t)\) is a polynomial: successively average leaves using the transverse plane projector \(1-uu^{\mathsf T}\); odd powers of the transverse unit circle vanish and even powers give powers of \(1-t_e^2\) times projector tensors. This also makes the conditional formula regular across any seam \(t_e=0\).
+
+\subsection{Uniform signed tails from the punctured S-matrix}
+
+An absolute \(1/w\) estimate on one clasp cannot remove its radial tail, since the associated harmonic integral diverges. We now prove a signed prefix estimate in the whole physical alcove, including large and reflected colors.
+
+\paragraph{Two exact carriers.}
+The bulk-independent fixed-rank input is the once-punctured modular \(S\)-matrix. With the same bridge contraction as in Lemma~\ref{lem:ang:network}, bend the two through-heavy ports into the handle \(V_m\otimes V_m^*\). Applying the Hopf clasp and closing the second line is the punctured \(S\) morphism of \cite[Eqs.~(1.18), (2.1), (5.7)--(5.9)]{Kirillov1996}. In that formula the \(d_n/{\cal D}\) factor replaces the normalized partial categorical trace. Closing against the other normalized trivalent intertwiner adds the second dimension denominator. The highest-zero-weight basis in that paper has relative squared norms
+\(h_m=\prod_{\ell=1}^L [m+\ell]/[m-\ell]\), and bending preserves those relative norms with a common packet factor. Therefore in the normalized coisometry convention
+\begin{equation}
+ \label{eq:ang:macdonald}
+ \lambda_{r,L}(m,n)
+     =\frac{{\cal D}}{d_m d_n}\sqrt{\frac{h_m}{h_n}}\ S^{\rm raw}_{mn}
+     = c_{r,L}
+       \frac{\prod_{\ell=0}^L\sin(\theta(m-\ell))}
+            {\sin(\theta m)\sin(\theta n)}
+       \sqrt{\frac{h_m}{h_n}}\ P_{n-L-1}(q^{-m}).
+\end{equation}
+Here \(P_l\) is the monic \(A_1\) Macdonald polynomial at parameters \(q^2,q^{2(L+1)}\). In the raw convention its overall scalar is
+\[
+          c_{r,L}=\tfrac i2(-2i)^{L+1}q^{-L(L+1)/2}\sin\theta .
+\]
+Reversing the clasp conjugates the expression; a fixed puncture twist contributes a constant phase. The \(L=0\) case is exactly the normalized ordinary Hopf sine above, independently checking the overall dimension factor. A term is zero if one of \(m,n\) lies outside \(L+1,\ldots,r-L-1\).
+
+The reflection is exact: \(h_{r-m}=h_m^{-1}\), the sine product changes by \(h_m\), and monic polynomial parity and Weyl symmetry give
+\begin{equation}
+ \label{eq:ang:reflection}
+ \lambda_{r,L}(r-m,n)=(-1)^{n-L-1}\lambda_{r,L}(m,n).
+\end{equation}
+The normalized transfer is symmetric under interchanging the two boundary ports, equivalently by the norm identity for the raw matrices in \cite[Eq.~(5.12)]{Kirillov1996}, so the other reflection has the same form. Thus on each independent folding branch the signs are constant on the relevant parities. Every original interval mark becomes its corresponding folded interval. No endpoint is counted twice.
+
+Fold now \(m,n\leq r/2\). For fixed \(L\) the Rogers generating function \cite{IsmailStanton1988} takes a rational form. Writing \(l=n-L-1\),
+\begin{equation}
+ \label{eq:ang:rogers}
+ P_l(z)= B_L(l)^{-1}[t^l]\prod_{j=0}^{L}
+                  (1-q^{2j}zt)^{-1}(1-q^{2j}z^{-1}t)^{-1},
+ \quad B_L(l)=\prod_{j=1}^{L}
+                   \frac{1-q^{2(l+j)}}{1-q^{2j}} .
+\end{equation}
+The products telescope at integer parameter \(\beta=(q^2)^{L+1}\), and \(B_L(l)\) is exactly the highest Laurent coefficient by the finite binomial identity. It has magnitude comparable to \(n^L\) when the channel is present. Let \(z=q^{-m}\), and at \(m>4(L+1)\) group the simple poles into \(q^{2j}z\) and \(q^{2j}z^{-1}\) (reciprocal positions). The partial fraction coefficients of each group in \eqref{eq:ang:rogers} are \(z^{\pm l}\) times the order-\(L\) divided difference at \(u_j=q^{2j}\) of
+\[
+            \frac{u^{\,l+2L+1}}
+                      {\prod_{j=0}^{L}(u-q^{2j}z^{\mp2})}.
+\]
+This grouping is essential: estimating the individual poles first loses powers at the edge of the alcove. The opposite-group separations on the convex hull of the nodes are bounded below by \(c_Lm/r\). By the simplex formula for divided differences, differentiation \(p\) times in the numerator costs \(O_L(n^p)\) and the remaining derivatives cost \(O_L((r/m)^{2L+1-p})\). For \(w=mn/r\geq1\) this is \(O_L(n^L(r/m)^{L+1})\). Combining with \eqref{eq:ang:macdonald}, \eqref{eq:ang:rogers}, and the folded sine comparabilities proves the exact representation
+\begin{equation}
+ \label{eq:ang:carriers}
+ \lambda_{r,L}(m,n)=E_+(m,n;r)e^{i\theta mn}
+                         +E_-(m,n;r)e^{-i\theta mn},
+                 \qquad |E_+|+|E_-|\leq C_L/w\quad(w\geq1).
+\end{equation}
+After factoring those carriers, the remaining \(n\)-dependent exponentials in the pole expression are \(q^{2jl}\) with fixed \(j\leq L\). Thus the envelopes are fixed-complexity trigonometric rational families, with bounded-complexity square roots and feasibility intervals. Their sampled sup and total variation on \(w>K\geq1\) are both \(O_L(K^{-1})\) by uniform monotonicity. On \(w\leq1\) keep the carriers unsplit: their argument is in a fixed compact interval, so they are definable in the same restricted analytic family and have uniformly finitely many monotonicity intervals \cite{vdDMiller1996}. Their sampled norm is bounded by the unitary category, giving uniformly bounded variation. For \(m\leq4(L+1)\) one may use symmetry of \(\lambda_{r,L}\) in \eqref{eq:ang:macdonald}, which makes its polynomial degree uniformly bounded and therefore gives the same bounded variation on the whole folded interval without coincident-pole denominators.
+
+\begin{lemma}[Signed whole-alcove prefix estimate]\label{lem:ang:prefix}
+Fix a vertex of degree \(D\) with neighboring folded labels \(m_a\) and bounded ranks \(L_a\), and let \(M=\max_a m_a\). Let \(A(n)\) be any folded one-vertex weight of bounded sup and discrete total variation. On either folded parity, with any hard interval in \(n\leq r/2\), one has
+\begin{equation}
+ \label{eq:ang:prefix}
+ \left|\sum_{Mn/r>K} A(n)\prod_{a}\lambda_{r,L_a}(m_a,n)\right|
+          \leq C\,\frac{r}{MK}\quad(K\geq1),\qquad
+ \left|\sum_n A(n)\prod_a\lambda_{r,L_a}(m_a,n)\right|
+          \leq C\,\frac{r}{M}.
+\end{equation}
+The constant is linear in the sup-plus-variation bound on \(A\), and otherwise depends only on the fixed tree and ranks.
+\end{lemma}
+
+\begin{proof}
+If a second neighbor is at least \(M/(2D)\), two transfers give absolute \(O_D((1+w)^{-2})\) at \(w=Mn/r\), giving the tail estimate directly. In the remaining case the sum of the smaller neighbors is less than \(M/2\). Partition at their finitely many transitions \(m_a n/r=1\), and expand the carriers of the high-product factors. The maximizing edge has envelope sup and variation \(O(K^{-1})\); other high envelopes and low factors have bounded sup and variation. Any combined frequency satisfies \(M/2\leq|\nu|\leq3M/2\leq3r/4\); hence geometric summation of \(e^{i\theta\nu n}\) on the actual step-two lattice costs at most \(Cr/M\). Multiplying the envelope bound by this geometric bound and summing by parts proves the first inequality. Bounded exceptional neighbors can be kept unsplit; if the maximizing neighbor is bounded, the large tail is empty and the finitely bounded \(K\)'s are covered by absolute counting. Finally \(w\leq1\) costs \(O(r/M)\) in absolute counting. The same proof gives the bound with an interval prefix or suffix, and the reflection signs \eqref{eq:ang:reflection} are constant on each progression.
+\end{proof}
+
+This estimate is for an actual signed conditional sum, not the total variation of the full original multiple-color sum. In particular it remains valid after multiplying by finitely many one-variable BV profiles. For smooth joint radial tests we use the anchored mixed-variation representation by rectangular prefixes: iteratively apply the fundamental theorem of calculus in each variable, with its mixed derivatives or boundary values as coefficients. Uniform prefix estimates then extend with the corresponding finite mixed variation factor. The representation also applies to smooth functions of log radii, since coordinatewise monotone reparametrization preserves the bound.
+
+\subsection{Ungated angular law for a perfectly matched backbone}
+
+Let \(G\) have its unique perfect matching \(M\), \(N=2d\). Choose a bipartition and name the matched edges \(a_i b_i\), \(i=1,\ldots,d\). On their true log variables \(u_i=\log m_{a_i}/\log r\), put
+\[
+      \Omega_M=\{u\in[0,1]^d:\ u_i\leq u_j
+                               \text{ if }a_i b_j\notin M\}.
+\]
+Write \(\iota(u)\) for the full log-radius array with matched pairs \((u_i,1-u_i)\). Let \(\mathbb E_{\rm fr}\) denote independent Haar orthogonal frames on the matched pairs, with quotient by simultaneous rotation and individual axis reversals when evaluating even Wilson words. A matched frame means the two ordered perpendicular axes and their right-handed cross product.
+
+\begin{theorem}[Ungated joint Wilson law, balanced case]\label{thm:ang:perfect}
+For the declared finite collection \(W\), arbitrary fixed smooth joint marks \(F\) of all original log radii, and \(G_0\) of their ordinary radii \(m_v/r\), one has
+\begin{equation}
+ \label{eq:ang:perfect}
+ Z_{r,W}[F,G_0]
+  =(-1)^{r(N-1)}
+       \frac{2^{(N+1)/2-d}}{\pi^{N-1}}\,
+             r^{\,N-3/2}(\log r)^d
+       \left(G_0(0)\int_{\Omega_M}\! F(\iota(u))\,d^du\
+                        \mathbb E_{\rm fr}P_W +o(1)\right).
+\end{equation}
+No radial, product or Abel cutoff is present in the invariant on the left.
+\end{theorem}
+
+\begin{proof}
+First keep all original colors on the lower branch in a power box \(r^\delta\leq m_v\leq r^{1-\delta}\). Fix all \(a_i\)-labels and use \eqref{eq:ang:network}. The \(b\)-sums separate termwise. As a result of \eqref{eq:ang:prefix}, if an unmatched competitor \(a_i\) is larger than the matched \(a_j\) at \(b_j\) by \(r^\epsilon\), the conditional bound is suppressed by \(m_{a_j}/M_{b_j}\leq r^{-\epsilon}\) against the usual matched harmonic bound. The fixed finite union of order walls of width \(\epsilon\) has at most \(O(\epsilon)(\log r)^d+O((\log r)^{d-1})\) harmonic mass. Thus only strict allowed order chambers matter after sending \(\epsilon\) to zero. In those chambers the matched label maximizes the frequency at its partner. Lemma~\ref{lem:ang:prefix} discards \(w_i=m_{a_i}m_{b_i}/r>K\) at normalized cost \(O(1/K)\); the opposite \(w_i<\kappa\) has cost \(O(\kappa)+o(1)\) by absolute counting. Other \(b\)-sites are always kept as signed conditional sums. Prefix integration permits the same statements for the joint tests.
+
+Inside the fixed window \(\kappa\leq w_i\leq K\), the nonmatching products tend to zero uniformly in a strict chamber, and Theorem~\ref{thm:ang:compact} applies. At fixed \(a_i\), the odd \(b_i\)-mesh in \(w_i\) has spacing \(2m_{a_i}/r\); summing odd \(a_i\) against \(1/m_{a_i}\) gives \((\log r)\,du_i/2\). Thus each matched lattice pair contributes \(r\log r\,du_i\,dw_i/4\) before the cap profiles. Each of its two profiles tends to \(2\). Moreover \(\log m_{b_i}/\log r=1-u_i+\log w_i/\log r\), so the retained log mark approaches \(F(\iota(u))\) and the ordinary mark approaches \(G_0(0)\).
+
+With only the matched products nonzero in \eqref{eq:ang:angular-kernel}, independent sign flips turn the exponential in each \(w_i\) into a cosine. The undamped improper integrals have the same value as their Abel limits by the uniform signed tail just proved (or by the smooth conditional Fourier representation). For a single coordinate,
+\[
+       \int_0^\infty e^{-\varepsilon w}\cos(\pi wt)\,dw
+             =\frac{\varepsilon}{\varepsilon^2+\pi^2t^2}
+                          \longrightarrow\delta_0(t),
+\]
+with mass one on the real line. The dot density is \(dt/2\); each matched edge therefore supplies \(1/2\) and conditions its two axes to be perpendicular. These conditions are on disjoint pairs, leaving independent Haar frames and the one shared \(P_W\). The resulting raw lattice factor is \((r\log r/2)^d\). The common prefactor in \eqref{eq:ang:normalized-sum} gives \eqref{eq:ang:perfect} on the interior chambers.
+
+It remains to remove the initial radial power box. In any fold branch, sum one bipartition first and use \(\prod_b(r/M_b)\leq r^d\prod_a m_a^{-1}\), with folded labels. For any restricted endpoint vertex, choose the bipartite direction that leaves it unsummed; its folded harmonic mass outside \([r^\delta,r^{1-\delta}]\) is \(O(\delta\log r+1)\). Repeat on the finitely many intersections of endpoint restrictions. The same estimates apply to all radial prefixes, and to their mixed-variation combinations. A branch with an originally upper label but all folded labels in the power box has the original profile \(1-\cos(\theta m)\leq C r^{-2\delta}\) at that vertex. Keep it on the unsummed side; the corresponding branch is negligible. Sending \(\delta\) to zero removes every artificial radial restriction. The uncolored case gives the independently normalized signed top coefficient and no additional dihedral or radial sheet factor.
+\end{proof}
+
+\paragraph{Completeness of fixed Wilson tests.}
+The joint law is physically testable, not a completion of a collection of unrelated one-angle means. Set \(R_v=\operatorname{Ad}(i u_v\cdot\boldsymbol{\sigma})\) and \(Q_v=(1+R_v)/2=u_vu_v^{\mathsf T}\). For a cyclic list of distinct vertices \(v_1,\ldots,v_l\),
+\[
+ \prod_{j=1}^l(u_{v_j}\cdot u_{v_{j+1}})
+   =\operatorname{tr}(Q_{v_1}\cdots Q_{v_l})
+   =2^{-l}\sum_{A\subseteq\{1,\ldots,l\}}
+                      \operatorname{tr}\!\left(\prod_{j\in A}^{\rm ordered}R_{v_j}\right).
+\]
+Every term on the right is a literal spin-one ribbon word, or the empty trace \(3\). Using length two gives the squared pair dots; the sign of each simple nonzero Gram cycle fixes the remaining signs after choosing a spanning-forest sign gauge. The complete Gram matrix then fixes the axes up to an orthogonal transformation. An improper transformation may be made proper by reversing all the axes, already in the deck group; rank decline creates no ambiguity in this statement. Thus a finite set of actual spin-one linear combinations separates the compact deck quotient, including zero-dot seams. Their joint polynomial moments determine its limiting law. This does not require a growing-color approximation to a finite-level angle projector.
+
+For example, on the four-site path with two matched frames let \(R\) be their relative rotation. The simultaneous spin-one tests on \(R_{11},R_{12}\) have Haar limits
+\[
+       \mathbb E(4R_{11}^2-1)=\mathbb E(4R_{12}^2-1)=\tfrac13,\qquad
+       \mathbb E\bigl[(4R_{11}^2-1)(4R_{12}^2-1)\bigr]=-\tfrac35 .
+\]
+The second assertion uses the uniform first row of \(R\) on \(S^2\), with \(\mathbb E R_{11}^2R_{12}^2=1/15\). It rules out using independent angle marginals, which would instead give \(1/9\). This is a consequence of the true simultaneous marked invariant in \eqref{eq:ang:perfect}, not merely a calculation on a proposed classical model.

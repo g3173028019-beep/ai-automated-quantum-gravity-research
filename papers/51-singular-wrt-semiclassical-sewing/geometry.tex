@@ -1,0 +1,236 @@
+\section{Global flat strata and the marked resolution of their overlaps}
+\label{geo:sec}
+
+Let \(G\) be the fixed backbone tree with \(N\geq2\) vertices. The notation in this section uses the positive Hopf peripheral convention and untwisted backbone. Let \(A_v,B_v\) be, respectively, the marked \(+2,-2\) cap meridians, and \(h_v\) the regular fibre. The product
+\(P_v=\prod_{w\sim v}h_w\) is in the inherited section order. The local Seifert relations are \(A_v^2=h_v^{-1}\), \(B_v^2=h_v\), \(A_vB_vP_v=1\); the section--fibre exchange additionally identifies commuting edge pairs. In a tree every base transport can be chosen in the same spanning tree, so there are no stable letters, and simultaneous conjugation is the residual equivalence. In particular these are peripheral relations for the actual manifold, not its abelian plumbing presentation.
+
+\subsection{Exact characters, mixed signs, and incidence}
+Eliminating \(B_v=A_v^{-1}P_v^{-1}\), the full equations are
+\begin{equation}
+ h_v=A_v^{-2},\qquad [h_v,h_w]=1\quad(vw\in E(G)),\qquad
+ \operatorname{Ad}_{A_v}P_v=P_v^{-1}.
+ \label{geo:flat}
+\end{equation}
+Indeed the last equation is equivalent to the second cap square; the other requisite block commutators follow since neighboring fibres commute with \(h_v\). Use unit quaternions \(A_v=x_v+\mathbf a_v\). Then \(h_v=(2x_v^2-1)-2x_v\mathbf a_v\). At \(h_v=+1\), one has \(A_v=\pm1\) and \(P_v\) must be central. At \(h_v=-1\), one has \(A_v=u_v\in S^2\), and the last equation is
+\(u_v\cdot \operatorname{Im}P_v=0\), including the absence of a condition when \(P_v\) is central. If \(h_v\) is noncentral then the last equation forces \(P_v\) central: each neighboring fibre and \(A_v\) lie in the centralizer circle of \(h_v\). In this case the two cap roots have signs \(\operatorname{sgn}x_v\) and are smooth functions of \(h_v\) on the two sign sheets.
+
+\begin{theorem}[Global character atlas]\label{geo:character-atlas}
+The set \(S\) of noncentral fibres is independent. Fix \(S\), the signs of the central fibres, and the cap-root choices at \(S\) and at positive central sites. Put \(T=N_G(S)\), let \(P\) be the positive central sites, and choose which negative sites of \(T\) have central rather than noncentral product; call that subset \(C\). Assign the product sign at every site in
+\[
+                        L=(P\cap T)\cup C.
+\]
+The labels are realizable exactly when each site of \(L\) has at least two neighbors in \(S\). Before quotient by conjugation their realization is a connected smooth manifold of dimension
+\begin{equation}
+ D=2N+|S|-|T|-2|P|-2|P\cap T|-2|C|.
+ \label{geo:stratumdimension}
+\end{equation}
+The stabilizer is \(SU(2)\), a maximal torus, or the centre, according as the rank of the imaginary cap vectors is zero, one, or at least two. These rank refinements and their closure incidences are finite semialgebraic data. Within fixed fibre types, each negative active central product is a smooth codimension-two lock, and simultaneous such locks are independent.
+\end{theorem}
+
+\begin{proof}
+A leaf of a nontrivial component of \(G[S]\) would have exactly one noncentral neighbor. Its product could not be central. This proves independence without excluding parallel axes.
+
+For the realized labels use the incidence forest on variables \(h_s\), \(s\in S\), and equations \(P_v=\delta_v\), \(v\in L\). Root each component at an \(S\) variable, and at each equation vertex choose one child \(S\) variable. It exists because the equation has at least two incident variables. Solve uniquely for that child in the ordered product. This is a global word recursion on \(SU(2)^f\), \(f=|S|-|L|\). Every solved word contains its component root exactly once, with exponent \(+1\) or \(-1\); the remaining factors do not involve that root. It follows that each word is a submersion. An unlocked negative site in \(T\) meets distinct components of this incidence forest, by acyclicity, so its product is also a submersion by varying one component root. Remove all preimages of the two central values for the \(h_s\)'s and for these unlocked products. This removes a finite union of codimension-three closed submanifolds, leaving a nonempty path-connected base. For \(S=\varnothing\) the base is a point. An equation with exactly one noncentral input is impossible, establishing necessity of the label test.
+
+Over the base attach a circle for each unlocked negative site in \(T\), the perpendicular cap equator, and a sphere at every other negative site. This is a smooth locally trivial connected bundle. Counting its dimensions gives \eqref{geo:stratumdimension}. Since all generators are words in the \(A_v\)'s, the common stabilizer is determined by their imaginary span. To see the lock model, allow independently variable targets in the same word recursion at the sites of \(C\). Near the assigned centre write \(p_v=\operatorname{Im}(\delta_vP_v)\). The actual product equation is \(p_v\in u_v^\perp\); its lock is the zero section in this real two-plane bundle. These target coordinates are independent by the recursion. The central limits of fibre variables, unlike fixed-fibre product locks, need not satisfy the incidence rule obtained by merely weakening strict inequalities.
+\end{proof}
+
+Here is an exact way to retain all closing directions when fibre types change. Over a marked quaternion tuple use the simultaneous rotation invariants
+\[
+              x_i,\qquad d_{ij}=\mathbf a_i\cdot\mathbf a_j,\qquad
+              t_{ijk}=\det(\mathbf a_i,\mathbf a_j,\mathbf a_k).
+\]
+Gram data give an isometry of the spans; a marked nonzero triple fixes its orientation in rank three, and in lower rank one may extend the isometry with positive orientation. Thus these data embed the compact character quotient. They are literal Wilson words since
+\begin{align}
+ \tfrac12\operatorname{Tr}(A_iA_j)&=x_ix_j-d_{ij},\nonumber\\
+ \tfrac12\operatorname{Tr}(A_iA_jA_k)
+ &=x_ix_jx_k-x_i d_{jk}-x_j d_{ik}-x_k d_{ij}-t_{ijk}.
+ \label{geo:wilsontraces}
+\end{align}
+For a fixed pair of nonparallel cap pivots \(i,j\), let
+\(a=|\mathbf a_i|\), \(b=d_{ij}/a\), \(c=(|\mathbf a_j|^2-b^2)^{1/2}\).
+The three coordinates of \(\mathbf a_\ell\) in the common oriented pivot frame are
+\[
+                  d_{i\ell}/a,\quad
+                  (d_{j\ell}-b d_{i\ell}/a)/c,\quad
+                  t_{ij\ell}/(ac).
+\]
+They use the same frame on every approaching branch; the denominators need not vanish when a different fibre enters a centre. At a reducible with a nonzero cap axis, use one pivot instead: the transverse complex coordinates \(z_\ell\) are recovered modulo their common phase by the Hermitian Gram \(\overline z_\ell z_m\), whose real part is the perpendicular dot and whose imaginary part is \(t_{i\ell m}/a\). The rank-zero vertex of this cone is retained.
+
+The raw equations and all label/rank tests are polynomial in the lifted quaternion coordinates. Thus membership in the closure of a sector with predicate \(F_\lambda\), at an invariant tuple \(q\), is exactly the real quantifier test
+\[
+ \forall\delta>0\ \exists A:\quad F_\lambda(A),\quad
+                          |(x,d,t)(A)-q|^2<\delta^2 .
+\]
+Quantifier elimination gives a finite semialgebraic incidence test; common closure and sector overlap are intersections of these tests. One can refine them to smooth frontier strata. This is a decision procedure, not a claim of a closed combinatorial expression for every pointwise closure.
+
+For example, on \(P_4\) take \(S=\{1,3\}\), with \(h_2=h_4=-1\), and hold the two active radii and their cap signs fixed at equal noncentral angles. Taking \(h_3=h_1^{-1}\) makes \(P_2=+1\); tilting \(h_3\) makes \(P_2\) noncentral and permits a perpendicular cap at vertex 2. The local cap and fibre traces agree even between these different sectors. The literal ordered-product trace \(\operatorname{Tr}P_2\) detects the lock; pair and triple marks also distinguish its angular limits. Thus pointwise angular localization is not furnished by radial and cap-root labels alone.
+
+\begin{theorem}[Abelian anchors and components]\label{geo:components}
+Every sector in Theorem~\ref{geo:character-atlas} can approach every central fibre sign assignment compatible with its locked products and fixed root signs, and every connected component meets an abelian character. The components are exactly those of the following finite graph. A vertex is an all-central label at each backbone site: \(N\) for negative, \(P_+\) or \(P_-\) for positive with the indicated cap sign. An edge toggles \(N\leftrightarrow P_\pm\) at a nonempty independent set of vertices and is permitted precisely when every unchanged positive vertex has an even number of toggled neighbors.
+\end{theorem}
+
+\begin{proof}
+In the word recursion, choosing each free holonomy central solves all allowed central sign assignments. Approach a chosen central tuple by \(g_j(t)=g_j(0)\exp(tX_j)\) with generic \(X_j\). Each excluded word has surjective derivative, so every such imaginary derivative can be chosen nonzero simultaneously. The open base then approaches the desired tuple, with limiting emitted directions and hence limiting perpendicular cap axes. Connect to the arc from the original point in the connected base and lift in the circle/sphere bundles. At an all-central tuple negative cap axes are free; align them continuously to attain an abelian character.
+
+Two central assignments of one sector differ on an independent subset of \(S\); at every unchanged positive site the product parity must agree. Conversely a permitted toggle set gives a sector with those fibres noncentral, the required locked positive products, and unlocked negative products. Its admissibility follows from Theorem~\ref{geo:character-atlas}, so its closure joins the two indicated central labels. An actual incidence of sectors preserves membership in this graph component: the limiting noncentral set shrinks, original positive roots and original locked products persist, and a formerly noncentral root that becomes positive has its inherited sign. Therefore every allowed central endpoint of the limit sector is also an allowed endpoint of the original one. Partitioning the character space by graph component of its endpoint labels gives closed sets with closed complements by the finite incidence argument. Each is connected by the sector closures and the connected all-central sets of fixed labels. This proves the assertion.
+\end{proof}
+
+\subsection{Intrinsic Hall matching and the tangent deficit}
+Let \(I=G\setminus(S\cup T)\) be the inactive forest, and \(p=|P\cap T|\). At a negative centre let \(V_v=\mathbb R u_v\), and at a positive centre let \(V_v=\mathbb R^3\). The block adjacency \(\mathcal B_I\) has, on an edge \(vw\), the linear map \(V_w\hookrightarrow\mathbb R^3\to V_v\) given by inclusion and orthogonal projection. We write \(h^j=\dim H^j(M_G;\operatorname{ad}\rho)\). In particular \(h^0\) is the Lie dimension of the stabilizer.
+
+\begin{theorem}[Tangent rank at every character]\label{geo:tangent}
+At every character, including locks, collinear axes, and continuous stabilizers,
+\begin{equation}
+            h^1-h^0=3N-3-2|T|-4p-\operatorname{rank}\mathcal B_I .
+\label{geo:h1}
+\end{equation}
+Generically the rank in \eqref{geo:h1} is \(2\nu_b(I)\), where \(\nu_b\) is the maximum integral edge matching with vertex capacities \(b_v=3\) at positive centres and \(b_v=1\) at negative centres.
+\end{theorem}
+
+\begin{proof}
+Differentiate \eqref{geo:flat} in right-trivialized coordinates, stripping central signs from fibre derivatives. The map \(A_s\mapsto h_s\) at \(s\in S\) has invertible derivative, giving three variables per noncentral fibre. At a central vertex the fibre variables lie in \(V_v\), with two additional cap-axis variables precisely at negative vertices.
+
+An active-centre fibre variable lies along the axis of each noncentral neighbor by the edge commutator. A possibly nonzero such column therefore has all these axes on one line, and at a negative centre also its own cap axis on that line. Every such column has degree at least two in the incidence forest with row vertices \(S\): degree one is excluded at a positive site by its central-product condition, and at a negative one the cap axis would be perpendicular to its single noncentral neighbor. At \(s\in S\) the linearization forces its ordered-product derivative zero, because \(\operatorname{Ad}_{A_s}+I\) is invertible for a noncentral fibre. This is a scalar sum of the incident collinear columns. A nonempty support of nonzero columns in the resulting forest has a leaf on the row side, which would force the sole column there to vanish. Hence all active-centre fibre variables vanish.
+
+The \(p\) active-positive products impose three equations apiece. An active-negative product uses one cap-axis variable if noncentral, and otherwise uses one component of its product derivative. These latter derivatives together with all active-positive ones are independent, by the word recursion with freely varied targets. The inactive radial equations are exactly \(\mathcal B_I\xi=0\), since their neighbors outside \(I\) have zero fibre derivative and they have no noncentral neighbors. Thus, with \(n_-\) the number of negative centres, the cocycle count is \(3|S|-3p+2n_--(|T|-p)+\dim\ker\mathcal B_I\). Subtract \(3-h^0\) for infinitesimal conjugations to obtain \eqref{geo:h1}.
+
+For the generic rank, split \(\mathcal B_I\) bipartitely. In its rectangular block a nonzero determinant term gives a matching of coordinate slots, with the stated capacities. Conversely color the copies of edges in a capacity-maximizing multiset by three colors, greedily down the forest with distinct colors at every vertex. Specialize each selected negative axis to its assigned coordinate vector and use the matching coordinate vectors at positive vertices. The selected minor splits into one forest per color; each has a perfect matching and no second one, so its determinant is nonzero. Thus the polynomial minor is nonzero generically in the independent inactive axes. The same argument applies to rectangular forest maps with local domains or ranges of dimensions one and three, used below.
+\end{proof}
+
+The capacitated matching number is the minimum over covers \(A\) of \(I\) of
+\(|A|+2|A\cap P|\), by integral bipartite max-flow/min-cut \cite{FordFulkerson1956}. Let \(\nu=\nu(G)\), \(\delta=N-2\nu\), and
+\[
+                         p_G=(3N-2\nu-3)/2
+\]
+be the power in the physical \(Z_r\) leading theorem. The generic tangent deficit is exactly
+\begin{equation}
+ p_G-\tfrac12(h^1-h^0)
+ = (|T|+\nu(I)-\nu(G))+2p+\bigl(\nu_b(I)-\nu(I)\bigr)\geq0.
+ \label{geo:genericdeficit}
+\end{equation}
+A matching uses at most \(|T|\) edges incident to \(T\), and after deleting \(T\) only \(I\) contributes; this proves the first nonnegativity. The last term vanishes precisely when an ordinary minimum cover of \(I\) avoids all positive vertices. At exceptional axes the exact rank in \eqref{geo:h1} replaces its generic value. Neither an enlarged tangent space nor generic equality in \eqref{geo:genericdeficit} is a stationary-phase amplitude.
+
+\begin{theorem}[Leading-dimensional smooth sectors and their closure]\label{geo:matching}
+A smooth fixed-label sector attains the maximal dimension minus Lie stabilizer \(2p_G\) only when
+\begin{equation}
+ P=C=\varnothing,\qquad |S|-|N_G(S)|=\delta .
+ \label{geo:hall}
+\end{equation}
+The conditions are sufficient on a generic piece, which is smooth in the full character space. For any fixed-label sector, a generic point lies in the closure of such leading-dimensional smooth sectors if and only if
+\begin{equation}
+ p=0,\qquad \nu(G)=|T|+\nu(I),\qquad
+ \text{a minimum vertex cover of \(I\) avoids \(P\)}.
+ \label{geo:hallclosure}
+\end{equation}
+If any test in \eqref{geo:hallclosure} fails, no point of that label is in the closure, including exceptional tangent rank drops. Genericity in this theorem concerns only a finite list of rank tests on the inactive negative axes.
+\end{theorem}
+
+\begin{proof}
+Fix a maximum matching. The matched members of independent \(S\) inject into \(T\) by their partners, so \(|S|-|T|\leq\delta\), with equality exactly when \(S\) contains all unmatched vertices and \(T\) consists of the matched partners of its matched members. In that case the matching is perfect on \(I\). Formula \eqref{geo:stratumdimension}, followed by quotient at fixed stabilizer, proves the clean dimension necessity. If \eqref{geo:hall} holds, \(\mathcal B_I\) is generically invertible by Theorem~\ref{geo:tangent}; the fixed sector already exhausts the tangent count. A maximal-rank subset of the defining equations cuts out a local implicit-function manifold of this dimension, in which the smooth fixed sector of the same dimension is open. Thus no other local branch is lost. These sectors exist: the complement of a minimum cover is independent, every vertex of the cover meets its complement, and the matching equality follows. For nonempty \(S\) an unlocked active negative product forces irreducibility; for \(S=\varnothing\) generic negative axes are irreducible.
+
+For closure necessity an approaching leading sector has a fixed independent set \(S\cup J\) after passing to a subsequence, with \(J\subset I\) and \(P\subset J\). Thus \(p=0\). The equality in \eqref{geo:hall} gives
+\[
+ \delta=|S|-|T|+|J|-|N_I(J)|
+       \ \leq\ |S|-|T|+|I|-2\nu(I)\ \leq\ \delta .
+\]
+Both inequalities are equal. The partners of matched \(J\) exhaust \(N_I(J)\), and the remaining forest is perfectly matched. Append a minimum cover of that forest to \(N_I(J)\) to obtain a minimum cover of \(I\) disjoint from \(J\), and hence from \(P\).
+
+To prove sufficiency, choose a minimum cover \(A\) of \(I\) avoiding \(P\), and a maximum matching \(M\) that saturates \(A\) into its independent complement. Start at all unmatched vertices and all positives in that complement. Reach \(J\) by successively adding every neighbor in \(A\) and its partner in the complement. Put \(A'=N_I(J)\). The set \(A'\) consists exactly of the matched partners of the matched part of \(J\); hence \(|J|-|A'|=|I|-2\nu(I)\). If the root set is empty this part of the construction is unnecessary.
+
+At each \(j\in J\) write \(h_j=\epsilon_j\exp X_j\), with \(\epsilon_j\) the given centre and \(X_j\in\mathbb R u_j\) at negatives, \(X_j\in\mathbb R^3\) at positives. The cap roots can be chosen smoothly to approach the prescribed ones. At \(v\in A'\), which is negative, hold its cap axis fixed and impose the exact equation \(u_v\cdot\operatorname{Im}P_v(X)=0\). The derivative is the rectangular forest map \(W\) with \(v\)-row \(u_v\cdot\sum_{j\sim v} X_j\). The retained matching saturates its rows, so \(W\) has full row rank generically. We need a kernel vector with every block \(X_j\) nonzero and with \(\sum_{j\sim v}X_j\ne0\) at every row, not merely a dimension estimate.
+
+For a negative \(j\), deleting its column still permits a saturating matching of the rows: if it is reached, exchange along an alternating path from a root to expose it. An unmatched root has a spare slot, and a positive root has two slots beyond its ordinary matched slot. The same reasoning covers a root which is itself unmatched. The rank test in Theorem~\ref{geo:tangent} now shows a nonzero kernel projection on this column. Deleting the three columns at a positive site loses at most one row rank, using its ordinary match, so its kernel projection is nonzero as well. At any \(v\in A'\), replacing its scalar row by the full vector sum raises the rank generically by at least one: follow an alternating path from a root and augment at the additional slot of \(v\); if \(v\) is the matched positive root's immediate partner the augmentation is a second copy of the same edge. The rectangular minor criterion applies. Therefore on \(\ker W\) none of the required block or row-vector tests vanish identically. Avoid their finite union of proper linear subspaces. The implicit function theorem now integrates the resulting velocity to an actual curve opening every site of \(J\) and making every new \(A'\) product noncentral.
+
+Old active products that were already noncentral keep a smooth cap equator. Old central active-negative products can be prescribed small noncentral paths in their cap planes: apply the exact word recursion to old \(S\) inputs with the new fibers inserted at their marked places. This does not change equations at \(A'\), which have no neighbors in old \(S\). All remaining inactive centres are negative, since the root set for \(J\) included all positives. The resulting open \(S\cup J\) has Hall deficiency \(\delta\) by the two equalities above; its inactive forest is perfectly matched. Finitely many additional generic nonzero minor conditions at the original inactive axes make it smooth by the first part. This proves the real closure assertion.
+\end{proof}
+
+\begin{corollary}[The forced hull and the logarithm count]\label{geo:forced}
+Let \(S_*\) be the set of vertices which are exposed by some maximum matching, \(T_*=N_G(S_*)\), and \(I_*=G\setminus(S_*\cup T_*)\). The set \(S_*\) is Hall-maximal and is the intersection of all sets satisfying the matching equality in \eqref{geo:hall}. The forest \(I_*\) is perfectly matched. The exact WRT leading logarithm degree is \(d=|I_*|/2\).
+\end{corollary}
+\begin{proof}
+Use the preceding alternating reach with only unmatched roots. Exchange along an even alternating path to expose each reached vertex. Conversely the symmetric difference of two maximum matchings consists of balanced alternating paths (an unbalanced path would augment one of them); this puts every newly exposed vertex in the reach. The reach is itself Hall-maximal and is contained in every Hall-maximal independent set, which must contain all unmatched roots and the partners of all their reached neighbors. Thus all quantities are independent of the chosen matching and cover. In the minimum-cover contraction of the exact quantum coefficient, the forced cover vertices are the ancestors of the neighbors of the unmatched roots, via a cover vertex's partner and then another cover neighbor. This is exactly \(T_*\) by the same reach. The quantum log degree \(\nu-|T_*|\) is therefore \(|I_*|/2\). This is a combinatorial equality between two independently defined counts, not a reassignment of individual oscillatory weights.
+\end{proof}
+
+\subsection{The ambient overlap tube and the radial face forest}
+The exact flat character space is not by itself a carrier for literal nonzero edge-product overlap scales. Indeed, independent \(S\) gives
+\(\delta_v\delta_w=0\) on every edge of every flat character, where
+\(\delta_v=|\operatorname{Im}h_v|\). Any graph closure of these coordinates on the exact flat space, with \(\varepsilon=1/r>0\), still has \(\delta_v\delta_w/\varepsilon\equiv0\). In contrast a marked finite product threshold retains \(n_vn_w/r\) nonzero while both endpoint angular defects may tend to zero. The relevant enlargement here is an ambient approach to flatness, not a putative extra chart on the exact character space.
+
+On the ambient quotient of all unit cap quaternions keep \(h_v=A_v^{-2}\), the same ordered \(P_v\), and \(B_v=A_v^{-1}P_v^{-1}\). Set
+\[
+ R_{vw}=[h_v,h_w],\qquad R_v=A_vP_vA_v^{-1}P_v,
+   \qquad p_v=\operatorname{Im}P_v .
+\]
+The useful estimates are in fact identities:
+\begin{align}
+ \|R_{vw}-1\|
+   &=2|\operatorname{Im}h_v\times\operatorname{Im}h_w|
+     =8|x_vx_w|\,|\mathbf a_v\times\mathbf a_w|,\nonumber\\
+ \|R_v-1\|^2
+   &=4\bigl(x_v^2|p_v|^2+(\mathbf a_v\cdot p_v)^2\bigr).
+ \label{geo:errors}
+\end{align}
+For an edge multiply the difference by unit factors to get
+\(h_vh_w-h_wh_v\); for a vertex multiply by \(P_v^{-1}\) to get the imaginary vector \((\operatorname{Ad}_{A_v}+I)p_v\), with singular values \(2\) axially and \(2|x_v|\) transversely. The second cap-square error has the same norm, by multiplying \(B_v^2-h_v\) on the left by \(A_v^2\) and inverting \(P_v\) in the displayed comparison. The error in commutation of \(B_v\) with \(h_v\) is bounded by twice that error, as \(B_v\) commutes with \(B_v^2\).
+
+All factors in \eqref{geo:errors} are finite marked Wilson data, using \eqref{geo:wilsontraces} and
+\[
+ |p_v|^2=1-(\operatorname{Tr}P_v/2)^2,\qquad
+ \mathbf a_v\cdot p_v=x_v\operatorname{Tr}P_v/2-\operatorname{Tr}(A_vP_v)/2.
+\]
+The cross norm is a Gram minor. In particular \(\|R_v-1\|=O(\varepsilon)\) retains a true cap-plane lock near a negative centre, but near a positive centre, where \(|x_v|\) is bounded below, it forces the full vector \(p_v=O(\varepsilon)\). This single residual description distinguishes both cases. It is gauge invariant. For fixed marked generators, replacing the finite relator presentation by an equivalent one changes uniform \(O(\varepsilon)\) bounds only by fixed constants, since a relator expressed as a finite product of conjugates of other relators is bounded by their summed errors.
+
+\begin{theorem}[Global radial overlap tube]\label{geo:ambient}
+Let \(\epsilon_*=\max(\|R_{vw}-1\|,\|R_v-1\|)\) over the graph. Uniformly on the ambient compact cap quotient,
+\begin{equation}
+          \max_{vw\in E}\delta_v\delta_w\ \leq\ C_G\epsilon_*.
+ \label{geo:globalproduct}
+\end{equation}
+At the negative endpoint, write \(h_v=-\exp(s_v u_v)\) and take angular deficits \(d_v=|s_v|/\pi\) in a fixed small endpoint collar. The projection of the \(O(\varepsilon)\) relator tube to power rates \(d_v\asymp\varepsilon^{\alpha_v}\), \(0\leq\alpha_v\leq1\), is exactly
+\begin{equation}
+                         \alpha_v+\alpha_w\geq1\quad(vw\in E).
+ \label{geo:rates}
+\end{equation}
+At any such rate vector, every assignment of finite positive values for \(d_vd_w/\varepsilon\) on a chosen tight subforest can be realized. In the physical log-defect variables \(t_v=1-\alpha_v\) the projected polytope is the exact quantum radial polytope \(t_v+t_w\leq1\). No angular law or signed weight is asserted for this ambient projection.
+\end{theorem}
+
+\begin{proof}
+Put \(D=\max_{vw}\delta_v\delta_w>0\), \(m=|E|\), and \(B=8(\Delta+1)\), where \(\Delta\) is the maximum degree. The subforests of edges with product at least \(D/B^j\), \(0\leq j\leq m\), have two consecutive equal members, since the first is nonempty and there are at most \(m-1\) strict increases. Take a leaf \(v\) of a nontrivial component of that forest and its sole selected neighbor \(w\). At every other neighbor \(j\), \(\delta_j\leq\delta_w/B\). If \(D>B^{m+1}\epsilon_*\), the selected edge product exceeds \(B\epsilon_*\); its axis angle has sine at most \(1/(2B)\) by \eqref{geo:errors}. In the ordered \(P_v\), replace each other \(h_j\) by its nearest centre with error at most \(\sqrt2\,\delta_j\), and telescope the unit factors. Thus
+\[
+             p_v=\pm\operatorname{Im}h_w+O(\sqrt2\,\Delta\,\delta_w/B).
+\]
+Both its magnitude and the absolute component along the \(v\) cap axis are at least \(\delta_w/2\). By \(x_v^2+|\mathbf a_v|^2=1\), the vertex identity forces \(\|R_v-1\|\geq\delta_w>B\epsilon_*\), contradiction. This proves \eqref{geo:globalproduct}, also for parallel limits. A cycle does not have the required leaf: on a quadrilateral, commuting noncentral \(h_1=h_3^{-1}\), \(h_2=h_4^{-1}\) satisfy both kinds of relator with nonzero adjacent products.
+
+Necessity of \eqref{geo:rates} follows since \(\delta_v\) and \(d_v\) are uniformly comparable in the endpoint collar. For sufficiency choose two orthogonal fixed axes for the bipartition of \(G\), put \(h_v=-\exp(s_v u_v)\) on its assigned axis and \(A_v=\pm u_v\exp(-s_v u_v/2)\). Neighbors at each vertex now lie in a common opposite torus, so their ordered product is a central sign times \(\exp(L_v u_w)\), \(L_v=\sum_{w\sim v}s_w\). The two errors are exactly \(2|\sin s_v\sin s_w|\) and \(2|\sin L_v\sin(s_v/2)|\). The latter is bounded by \(|s_v|\sum_{w\sim v}|s_w|\). Taking the indicated powers realizes every rate. This does not say every prescribed angular configuration with those rates is in the tube.
+
+Along each tight subforest, \(\alpha\)'s alternate as \(\alpha,1-\alpha\). Prescribed constants \(w_e>0\) are realized by solving, successively from a root, \(\log c_v+\log c_w=\log w_e\) for the coefficients \(d_v\sim c_v\varepsilon^{\alpha_v}\). These equations are independent with one free scale in each connected component. If \(\alpha=0\) occurs there, it is confined to one bipartition and that free scale makes its fixed defects fit the collar. This proves the finite-constant statement; the \(O(\varepsilon)\) bound can depend on those chosen constants.
+\end{proof}
+
+There is a corresponding signed model showing why the positive strata are not additional copies of this negative forest. In the same orthogonal-axis construction let
+\(h_v=\epsilon_v\exp(s_vu_v)\), \(\epsilon_v=\pm1\), and use \(A_v=\pm\exp(-s_vu_v/2)\) at positive sites. At a positive site the vertex norm is now
+\(2|\sin L_v\cos(s_v/2)|\). For strictly positive rate exponents \(\alpha_w\), prescribe the signs of \(s_w\). In this two-axis model a signed rate assignment obeying \eqref{geo:rates} is realizable exactly when every positive site with minimum neighboring exponent less than one has both signs among neighbors of that minimum rate. Necessity is the leading term of \(L_v\). For sufficiency, solve \(L_v=0\) exactly at these rows. The relevant incidence graph splits into the forests of one row color and the opposite variable color. Root each at a variable; for each row solve for one child of minimum exponent. When the incoming variable has minimum exponent choose an opposite-sign child, taking other minimum coefficients small; when it is higher order choose two opposite minimum children and solve for one of them. At least two minimum variables of opposite signs exist by the test, and all solved variables are new children. This gives the desired signs and rates by a finite recursion, with exact cancellations. No such scalar criterion is asserted for arbitrary axes.
+
+\subsection{A relative marked compactification}
+For a finite inventory of marks use the raw invariants in \eqref{geo:wilsontraces}, ordered-product and mixed traces, Gram rank minors, both endpoint distances, and the error factors in \eqref{geo:errors}. Directions at a closing lock or emitted axis, such as \(p_v/|p_v|\) or \(\mathbf a_v/|\mathbf a_v|\) where defined, are retained by their Gram/triple data with the other marked vectors. Stabilizer rank can be recorded both before and after these directions are added. For the exact boundary point its phase is the phase of its base flat character; no off-shell Chern--Simons value is assigned by this construction.
+
+\begin{proposition}[Finite relative overlap models]\label{geo:compactification}
+Fix any finite list of comparisons \(M/(M+N)\) of nonnegative monomials of marked magnitudes and \(\varepsilon\). Include, in particular, comparisons of the raw edge products and relator errors with \(\varepsilon\). On the finite support and sign sheets, the marked graph closures give minimal compact extensions over the corresponding raw closures on which these prescribed ratios and directions extend. They are covered by finitely many normal-crossings charts. On each chart the finite visible scaling rates are linear images of a rational polyhedron; actual finite ratio constants belong to the marked boundary, not to the rates alone.
+\end{proposition}
+
+\begin{proof}
+Embed the simultaneous-conjugation quotient by its quaternion invariant data. Use separate support sheets to distinguish an undefined direction or a comparison with both entries identically zero, from any approached nonzero direction or ratio. The graph closure in the product of the compact raw space, direction data and a ratio cube is compact. A compact extension with these same maps and the given dense sheet maps onto that closure by joint evaluation, uniquely by density. This proves minimality relative to the chosen marks; forgetting marks is compatible with common refinements of the support sheets.
+
+The graph data and all label predicates have finite semialgebraic descriptions; for norms add their nonnegative square-root graph coordinates. Endpoint angular distance is an analytic positive unit times the semialgebraic proxy \(|\operatorname{Im}h|\) in each endpoint neighborhood. The exact ratio after multiplying two magnitudes by units \(u,v>0\) is recovered from proxy ratio \(R\) as \(uR/(uR+v(1-R))\). Thus the proxy does not discard finite comparison data.
+
+Apply real embedded normal crossings to the product of the finite nonzero polynomials defining the graph sheets and the chosen magnitude and rank coordinates, including \(\varepsilon\), as in real rectilinearization \cite{BierstoneMilman1988}. After pullback each factor is a signed unit times a monomial; each Boolean sign predicate is consequently constant on its relevant coordinate orthants, including the lower-dimensional ones. Keep only closures of lifts from the original positive-level sheet. Properness supplies lifts of all its actual graph limits and excludes artificial boundary components; compactness gives a finite cover. The dominating charts are not claimed canonical.
+
+On each such orthant a positive marked magnitude is \(u_\ell z^{m_\ell}\), with \(u_\ell>0\), and the same holds for \(\varepsilon\) with row \(m_\varepsilon\). Thus the normalized logarithmic rates are
+\[
+ m_\varepsilon\cdot\lambda=1,\qquad
+ \lambda_j\geq0,\qquad \operatorname{ord}_\varepsilon f_\ell=m_\ell\cdot\lambda.
+\]
+A convergent sequence lifts after a subsequence, giving these equations for all finite visible rates; an infinitely fast coordinate invisible to every retained exponent row does not affect them. Conversely choose power paths in the vanishing coordinates, with subpower approaches for a prescribed vanishing coordinate of zero rate. One obtains the indicated rates and retains the actual angular and ratio limits on the graph. A common polyhedral refinement makes the finite rate images compatible. Ties of rates alone do not distinguish finite nonzero ratios from zero or infinite limits at subpower speed; this is why the raw marks and ratio coordinates are retained.
+\end{proof}
+
+Theorem~\ref{geo:ambient} therefore identifies the exact radial projection of a concrete ambient approach to flatness, and Proposition~\ref{geo:compactification} retains its intersection and stabilizer data. Neither implies that a signed WRT remainder is supported in the \(O(1/r)\) tube. In particular divergent residual ratios can remain on other approach faces over a flat point, and literal angular insertions need not be diagonal in the unmarked color contraction. The analytic comparisons below require estimates on the actual sewing kernels rather than a replacement by the geometry alone.
