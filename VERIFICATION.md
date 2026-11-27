@@ -192,3 +192,11 @@ The associated proof and scope checks are recorded in the paper verification pag
 - [Paper 70 verification](papers/70-tt-six-scalar-phase-test/VERIFICATION.md)
 - [Paper 71 verification](papers/71-hadamard-states-einstein-wave-maps/VERIFICATION.md)
 - [Paper 72 verification](papers/72-radiative-data-newtonian-projection/VERIFICATION.md)
+
+## Regge crossing, gravitational polarization, and five-dimensional dispersion (22B, 29C, 73)
+
+The associated proof and scope checks are recorded in the paper verification pages.
+
+- [Paper 22B verification](papers/22b-regge-airy-open-boundary/VERIFICATION.md)
+- [Paper 29C verification](papers/29c-high-frequency-polarization-symplectic-form/VERIFICATION.md)
+- [Paper 73 verification](papers/73-d5-gauss-bonnet-dispersive-reconstruction/VERIFICATION.md)

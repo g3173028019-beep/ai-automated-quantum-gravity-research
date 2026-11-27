@@ -238,3 +238,11 @@ Run ./build.sh in each selected paper directory with pdfLaTeX.
 - [70 · Finite scalar tests of matched tensor dynamics](../papers/70-tt-six-scalar-phase-test/README.md)
 - [71 · Positive Hadamard states for linearized Einstein wave maps](../papers/71-hadamard-states-einstein-wave-maps/README.md)
 - [72 · Radiative data lost by the Newtonian projection](../papers/72-radiative-data-newtonian-projection/README.md)
+
+## Building Papers 22B, 29C, 73
+
+Run ./build.sh in each selected paper directory with pdfLaTeX.
+
+- [22B · An open-boundary Lorentzian Regge saddle crossing with a curvature insertion](../papers/22b-regge-airy-open-boundary/README.md)
+- [29C · A polarization symplectic form at fixed two-stream null-dust limit](../papers/29c-high-frequency-polarization-symplectic-form/README.md)
+- [73 · Crossed dispersion from real-transfer graviton data in five dimensions](../papers/73-d5-gauss-bonnet-dispersive-reconstruction/README.md)

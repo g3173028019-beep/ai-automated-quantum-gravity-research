@@ -1,0 +1,238 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.01in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\hypersetup{pdftitle={An open-boundary Lorentzian Regge saddle crossing with a curvature insertion},pdfauthor={},pdfsubject={Four-to-two Regge move and localized Airy asymptotics}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Ai}{\operatorname{Ai}}
+\newcommand{\I}{\mathrm i}
+\newcommand{\calD}{\mathcal D}
+\newcommand{\diag}{\operatorname{diag}}
+\title{An open-boundary Lorentzian Regge saddle crossing\\with a curvature insertion}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct a causally regular Lorentzian four-to-two Regge move for which the flat and a genuinely curved stationary edge coalesce on a smooth hypersurface of all fourteen independent marked boundary squared lengths. The base tetrahedron and every boundary tetrahedron are spacelike, with the two apexes on opposite time sides of the base. We compute the discriminant normal in the fourteen length coordinates and the signed cubic of the relative Regge action. On the localized real contour the Airy control is a smooth positive multiple of the square of the stationary-edge separation, so both saddles remain real on either side of the crossing. An insertion of the actual signed boost deficit of one spacelike hinge vanishes on the flat branch and at coalescence has a nonzero Airy-derivative coefficient of order \(\hbar^{2/3}\). This extends an earlier symmetry-restricted Lorentzian example; it does not evaluate the unrestricted Pachner integral.
+\end{abstract}
+
+\section{The problem and conventions}
+
+In a Lorentzian \(4\to2\) Pachner move the refined complex has one interior edge. The flat stationary point of a single-edge integral can cease to be Gaussian when its interior-edge Hessian vanishes. The four-dimensional flat Hessian and its six-vertex co-sphericity factor are known \cite{BD,DKS}, and the Euclidean \(4\to2\) move already exhibits the competing hinge-area extremum \cite{BahrDittrich}. In Lorentzian signature a second stationary value must still be shown to lie in the same physically admissible real length chamber. The earlier archive example \cite{Paper22} did so for a reflection-symmetric family with a timelike shared tetrahedron and both spacelike and timelike boundary edges. It also gave the Airy law for that family. Here the base, the boundary tetrahedra, and all triangles are spacelike; some interior tetrahedra are timelike. Neither a reflection-symmetric variation nor an infinitesimal variation restricted to flat data is imposed. The main point is an actual open boundary length domain, a transverse discriminant with explicit normal, and a localized semiclassical coefficient measured by a physical bulk deficit.
+
+We use signed squared edge lengths \(s_{ij}\) and signature \((-+++)\). The dimensionless action \(S\) is the difference of refined and coarse Regge actions, including the same boundary-angle prescription and with no cosmological term. The sign of the boost deficit is fixed in Section~\ref{sec:chamber}; all signs below refer to that choice. If a common physical length unit \(L_*\) is restored with \(c=1\), the conventional action is \(L_*^2S/(8\pi G)\), and the small parameter \(H\) in \(e^{\I S/H}\) is \(8\pi G\hbar/L_*^2\). The labels of the six vertices and the opposite apex time signs are held fixed. All comparisons are in that marked branch, not on a quotient identifying its distinct completions.
+
+\section{An open causal boundary chamber}\label{sec:chamber}
+
+Let the apex labels be \(0,1\) and the base index set \(B=\{2,3,4,5\}\). The refined four-simplices are \(01(B\setminus\{i\})\) for \(i\in B\); the coarse pair is \(0B,1B\). Their common boundary has eight tetrahedra with one apex and one base face, and the refined interior edge is \(01\). Write \(s=s_{01}\) and denote the fourteen boundary coordinates by
+\[
+ b=(a_i,b_i,c_{mn}),\qquad
+ a_i=s_{0i},\quad b_i=s_{1i}\quad(i\in B),\qquad
+ c_{mn}=s_{mn}\quad(m<n,\ m,n\in B).
+\]
+Here the subscript distinguishes a single apex-to-base length \(b_i\) from the whole boundary vector \(b\).
+
+Take the flat marked stock in \(\RR^{1,3}\) with
+\[
+\begin{gathered}
+ q_i=(0;\eta_i/\sqrt3),\qquad
+ \{\eta_i\}=\{(1,1,1),(1,-1,-1),(-1,1,-1),(-1,-1,1)\},\\
+ p_0=h w,\qquad p_1=-h w,\qquad w=(\sinh u;\cosh u,0,0).
+\end{gathered}
+\]
+Fix \(u>0\) sufficiently small and vary \(h\) near \(1\). Write \(b(h)\) for its boundary data, \(b_*=b(1)\), and \(s_*=4\). The unit spacelike vector \(w\) has future time component, \(q_i^2=1\), and \(q_i\cdot q_j=-1/3\) for \(i\ne j\). The internal flat length is \(4h^2\). There is a strict Radon relation \(p_0+p_1=\frac12\sum_i q_i=0\), the interior segment \(01\) meeting the interior of the base tetrahedron. Because both apexes are off the base plane, this is the unique affine dependence up to scale. The two triangulations of its convex bipyramid are therefore the two listed above. Equivalently cutting along the base gives two cones with distinct apexes, and using the interior segment instead cones it over each of the four base faces.
+
+\begin{lemma}[Open causal data and unique marked flat completion]\label{lem:chamber}
+There is a product neighborhood of \((s_*,b_*)\) with consistent Lorentzian simplex metrics, all triangles spacelike, all tetrahedra non-null, and a common continuous piecewise affine time function whose gradient is timelike in each simplex. On a neighborhood of \(b_*\) in the full fourteen-dimensional length space there is a unique nearby marked flat completion \(s=s_f(b)\), real analytic in all fourteen coordinates. Each refined interior hinge is light-cone regular throughout the neighborhood.
+\end{lemma}
+\begin{proof}
+At the stock, the absolute four-volume of each refined simplex is
+\begin{equation}\label{eq:V}
+ V(h)=\frac{h\sinh u}{9\sqrt3}.
+\end{equation}
+Indeed the determinant with the apex-edge column and three base columns reduces, after adding a multiple of the apex-edge column to each base column, to \(2h\sinh u\) times the determinant of three spatial \(q_i\). The latter has absolute value \(4/(3\sqrt3)\); divide by \(4!\). The two coarse volumes are each \(2V(h)\), by taking the time height over the base tetrahedron. Thus the full simplices have genuine Lorentzian Gram matrices.
+
+To check lower faces first let \(u=0,h=1\) wherever their Euclidean spatial Gram is already nondegenerate. The base is a regular tetrahedron. Its face opposite \(q_i\) lies in \(x\cdot q_i^{\rm sp}=-1/3\); either apex has dot product \(\pm1/\sqrt3\) with \(q_i^{\rm sp}\), so every one-apex/three-base tetrahedron is spacelike at small \(u\). Two base points have either independent \(yz\)-projections or opposite projections and the same nonzero \(x\)-coordinate. In the first case a two-apex/two-base tetrahedron is spatially nondegenerate at \(u=0\), and remains spacelike. In the second case the base sum and difference give a nonzero pure \(x\) direction and a nonzero \(yz\) direction. With \(w\) they span a Lorentzian three-space for \(u>0\), and the tetrahedron is timelike and non-null. For triangles with one apex and two base points, independence of the two \(yz\)-projections prevents collinearity with the apex at \(u=0\); if those projections are opposite the two points lie on a line of constant \(x=\pm1/\sqrt3\), also not containing an apex. Every internal triangle \(01i\) is spacelike, with area squared \(h^2[1-(w\cdot q_i)^2]\), positive for \(\cosh^2 u<3\). This accounts for all faces. The signs persist after fixing small \(u>0\) and varying all the lengths in a neighborhood.
+
+To realize nearby, possibly nonflat, data, give each simplex its stock affine chart with the same labeled vertices and equip it with the constant metric determined by the lengths. With edges from a vertex as basis, the Gram entries are half the sum of the two corresponding length squares minus the square of their connecting edge. Thus the metric depends analytically on the lengths and has matching restrictions to shared faces. On both complexes the stock coordinate \(t\), interpolated from these vertex values, is a common continuous piecewise affine function. Its gradient remains timelike in each of the finitely many simplices after shrinking the neighborhood, and fixes compatible local future cones. It increases on future-directed nonconstant causal curves, so this construction does not introduce causal loops.
+
+For flat completion with \(b\) free, first use the six base squares to realize a Euclidean tetrahedron in \(t=0\). Its positive spatial Gram matrix gives analytic marked coordinates by Cholesky decomposition. For each apex separately, differences of its four assigned apex-to-base squares determine its spatial projection by three nonsingular linear equations. One of the four squares then determines its time coordinate squared. This square is strictly positive at the stock, so choose the positive analytic square root for apex 0 and the negative one for apex 1. This is an analytic realization for arbitrary nearby values of the fourteen numbers, not an equality-constrained subfamily. The opposite-time marking fixes the nearby flat completion, and strictness of the Radon signs keeps both triangulations admissible. In particular \(s_f(b(h))=4h^2\).
+
+Finally take a small transverse normal disk through an interior point of any refined internal triangle \(01i\) in the flat embedded bipyramid. Its normal plane has Lorentzian signature. The \emph{three} incident four-simplices partition this disk into wedges, whose bounding rays are non-null by the tetrahedron check. Their union crosses exactly four null rays. The local wedge counts are unchanged under the nearby length perturbations since the bounding rays stay non-null and the wedge Gram is nondegenerate. This is precisely the light-cone regularity condition at a spacelike hinge \cite[Eq.~(32)]{ADP}.
+\end{proof}
+
+For the relative action take the \(\theta^+\) prescription of \cite[Eqs.~(1)--(3), (29)--(32)]{BD}, with square root \(+\I V_\sigma\) for the negative signed volume square of a Lorentzian four-simplex. For a refined internal hinge \(01i\) put \(\widetilde\epsilon_i=2\pi+\sum_{\sigma\supset 01i}\theta^+_{\sigma,01i}\). Each null-ray crossing contributes the real constant \(-\pi/2\) to \(\theta^+\). The four crossings cancel \(2\pi\), so
+\(\epsilon_i=\widetilde\epsilon_i/\I\) is the signed real boost deficit; with the orientation just fixed it is the marked normal-plane holonomy rapidity near the identity. For a boundary hinge the coarse and refined constants are compared by subtraction, with identical boundary corner prescription. At the flat completion at the same \(b\), both triangulations partition the same normal sector of the embedded boundary wedge, hence have the same total angles by additivity and the same null-ray counts. The counts cannot change in the local chamber. Since all hinges are spacelike, these equal constants cancel in the relative action. Consequently
+\begin{equation}\label{eq:real}
+ S(s,b)=S_4(s,b)-S_2(b)\quad\text{is real analytic},\qquad
+ S(s_f(b),b)=0,\qquad \epsilon_i(s_f(b),b)=0 .
+\end{equation}
+This does not require the unsubtracted action at an arbitrary boundary corner to be individually real.
+
+\section{Exact geometry of the stationary crossing}
+
+\subsection{The signed determinant and boost slopes}
+
+Write \(C=\begin{psmallmatrix}0&\boldsymbol 1^T\\ \boldsymbol 1&(s_{ij})\end{psmallmatrix}\) for the Cayley--Menger matrix, with first index \(*\) distinct from vertex 0, and let \(\calD=\det C\). On the flat stock \(b(h)\), the kernel has vector
+\[
+ z=\big(2-2h^2;\ 1,1,-\tfrac12,-\tfrac12,-\tfrac12,-\tfrac12\big).
+\]
+Indeed the vertex coefficients sum to zero, their signed position sum vanishes by Radon, and their signed square sum is \(2h^2-2\). A principal minor omitting any vertex is nonzero because it represents a nondegenerate four-simplex. Thus \(\operatorname{adj}C=Lzz^T\). The sign of the minor deleting an apex is positive: the Cayley--Menger determinant for a four-simplex is \((-1)^5 2^4 (4!)^2\) times its signed volume square, which in Lorentzian signature is \(-(2V(h))^2\). Consequently
+\[
+ L=2^4(4!)^2(2V(h))^2>0,\qquad
+ \calD_s=2L=\frac{8192}{27}h^2\sinh^2u.
+\]
+The squared-length variation in a general signature uses the same determinant identity, obtained by subtracting reference-vertex rows and columns to produce the Gram matrix. At the flat stock the derivative in any signed length \(s_{ij}\) is \(2L z_i z_j\) because the entry occurs twice. In particular \(\calD_{c_{mn}}/\calD_s=1/4\) and \(\calD_{a_i}/\calD_s=\calD_{b_i}/\calD_s=-1/2\). Here \(\calD\) is the flat-embeddability determinant, not the co-sphericity factor multiplying the flat Hessian in \cite{BD,DKS}.
+
+On the actual open marked chamber, \(\calD(s,b)=(s-s_f(b))d(s,b)\) with \(d>0\). Indeed \(\calD\) vanishes on the flat completion graph, and division by \(s-s_f(b)\) is analytic by integrating its \(s\) derivative from that graph; shrink the neighborhood to retain \(\calD_s>0\). Likewise each \(\epsilon_i=(s-s_f(b))e_i(s,b)\) because of \eqref{eq:real}.
+
+At a flat stock fix an interior hinge \(01i\) and two base vertices \(m,n\) different from \(i\). Only the simplex \(01imn\) contributes to \(\partial_{c_{mn}}\epsilon_i\): \(mn\) is its edge opposite the hinge, and the other two incident simplices do not contain \(mn\). The signed opposite-edge identity of \cite[Eqs.~(39), (45), App.~A.7]{BD} gives \(\partial_{c_{mn}}\widetilde\epsilon_i=-A_i/(24\I V(h))\) on the refined side, with positive spacelike area \(A_i\). Equivalently, after projecting \(m,n\) to the hinge normal plane, their inner product varies by \(-\dd c_{mn}/2\), and the magnitude of the oriented angle derivative is \(1/(2\sqrt{(x\cdot y)^2-x^2y^2})\) for their two projected vectors \(x,y\). The volume identity \(24 V=2A_i\sqrt{(x\cdot y)^2-x^2y^2}\) gives the same magnitude, while the stated branch fixes its sign. Therefore
+\begin{equation}\label{eq:slopes}
+ \partial_{c_{mn}}\epsilon_i=\frac{A_i}{24V(h)},\qquad
+ \partial_s\epsilon_i\big|_{(s_f(b(h)),b(h))}
+    =\frac{A_i}{6V(h)}>0 .
+\end{equation}
+The second equality follows by comparing the \(\epsilon_i\) and \(\calD\) divisions at the flat locus and using their opposite-edge cofactor ratio. This verifies that all \(e_i>0\) throughout a common smaller neighborhood. In particular changing only \(s\) from its flat value produces four genuine nonzero oriented bulk holonomies, not a different marking of a flat geometry.
+
+\subsection{Exact Regge equation on the open chamber}
+
+The Lorentzian simplex Schläfli identity with the prescribed branches is
+\(\sum_{h\subset \sigma}\sqrt{\mathbb V_h}\,\dd\theta_{\sigma h}=0\) \cite[App.~A.6]{BD}; here \(\mathbb V_h\) denotes signed squared area. Summing over refined simplices cancels all angle derivatives in the full action including its boundary terms. Boundary areas depend on \(b\) only, and the coarse action is independent of \(s\). Thus the exact stationarity equation in the internal squared length is
+\begin{equation}\label{eq:Ss}
+ S_s(s,b)=\sum_{i\in B} A_{i,s}\epsilon_i
+     =(s-s_f(b))G(s,b),\qquad G(s,b)=\sum_{i\in B} A_{i,s}e_i(s,b).
+\end{equation}
+The area identity on the spacelike hinge is
+\begin{equation}\label{eq:area}
+ 16 A_i^2=2(a_i+b_i)s-s^2-(a_i-b_i)^2,\qquad
+ A_{i,s}=\frac{a_i+b_i-s}{16A_i}.
+\end{equation}
+It follows from the two-vector Gram determinant with signed squared lengths. On the stock curve \(a_i+b_i=2(h^2+1)\) for each \(i\), without requiring \(a_i=b_i\). Hence the second root of the stationarity equation on this curve is \(s_c(b(h))=2(h^2+1)\): at that edge each \(A_{i,s}\) vanishes. Both edges are in the verified real chamber for \(h\) near 1. For \(h\ne1\) the second root is curved by \eqref{eq:slopes}, while the first is the flat completion. The flat Hessian on this curve is \(S_{ss}(s_f,b(h))=(1-h^2)/(12V(h))\). As a normalization check, \cite[Eqs.~(55), (78)]{BD} gives \(D^{(4-2)}=(h^2-1)V(h)\) and the same Hessian \(-D^{(4-2)}/(12V(h)^2)\), using the coarse-to-refined volume ratio two.
+
+\begin{theorem}[Crossing on a full marked boundary domain]\label{thm:crossing}
+Set \(V_*=V(1)\). There is a neighborhood of \((s_*,b_*)\) throughout which the two analytic stationary sections \(s_f(b)\) and \(s_c(b)\) are the only stationary edges, counted with multiplicity. They obey
+\begin{equation}\label{eq:fact}
+ S_s(s,b)=(s-s_f(b))(s-s_c(b))g(s,b),\quad
+ g(s,b)<0,\quad
+ g(s_*,b_*)=-\frac{1}{24V_*},\quad
+ S_{sss}(s_*,b_*)=-\frac{1}{12V_*}.
+\end{equation}
+The signed coalescence control \(\Delta=s_c-s_f\) has normal covector at \(b_*\)
+\begin{equation}\label{eq:normal}
+ \dd\Delta=\frac14\left(\sum_{m<n,\ m,n\in B}\dd c_{mn}
+                       -\sum_{i\in B}(\dd a_i+\dd b_i)\right).
+\end{equation}
+Its zero set is a smooth hypersurface of all fourteen boundary controls. Off it the stationary points are real, occupy the same causal chamber, and have opposite Hessian signs; the curved one has all four \(\epsilon_i\ne0\). Their signed action separation is
+\begin{equation}\label{eq:gap}
+ S(s_c,b)-S(s_f,b)
+   =\Delta^3\!\int_0^1 y(y-1)\,g(s_f+\Delta y,b)\,\dd y .
+\end{equation}
+The cubic coefficient in \(\Delta\) at \((s_*,b_*)\) is \(1/(144V_*)\).
+\end{theorem}
+
+\begin{proof}
+At the merger all \(A_{i,s}=0\), and \(A_{i,ss}=-1/(16 A_i)\) by \eqref{eq:area}. Equation \eqref{eq:slopes} yields
+\[
+ G_s(s_*,b_*)=\sum_i\frac{-1}{16A_i}\frac{A_i}{6V_*}
+        =-\frac1{24V_*},\qquad S_{sss}(s_*,b_*)=2G_s(s_*,b_*).
+\]
+The implicit function theorem gives the analytic zero section \(s_c(b)\) of \(G\), unique locally because \(G_s<0\) throughout a smaller product neighborhood. Dividing \(G\) by \(s-s_c(b)\) gives \eqref{eq:fact} and the negativity of \(g\). The derivative of the flat section, computed by differentiating \(\calD(s_f(b),b)=0\) using the cofactor ratios, is
+\[
+ \dd s_f=\tfrac12\sum_i(\dd a_i+\dd b_i)-\tfrac14\sum_{m<n}\dd c_{mn}.
+\]
+Since all \(A_{i,s}=0\) at the merger, the total differential of \(G\) there is
+\((96V_*)^{-1}[\sum_i(\dd a_i+\dd b_i)-4\dd s]\). Hence \(\dd s_c=\frac14\sum_i(\dd a_i+\dd b_i)\), giving \eqref{eq:normal}. It is nonzero, and on the stock curve \(\Delta=2(1-h^2)\). The \(s\) derivative of \eqref{eq:fact} gives opposite Hessian signs at the simple roots, exchanged when \(\Delta\) changes sign. The existence of two analytic real sections rules out an adjacent region with neither saddle in this particular unfolding. At \(\Delta=0\) the stationary equation has a double zero rather than a gauge orbit. The uniqueness of the nearby flat completion at fixed \(b\) and the nonzero holonomies at the other configuration distinguish the two saddles. Finally integrate \eqref{eq:fact} from \(s_f\) to \(s_c\), allowing either order, to get \eqref{eq:gap}. The integral at the merger equals \(-g(s_*,b_*)/6\).
+\end{proof}
+
+\section{A real-contour normal form and curvature coefficient}
+
+We use a smooth density \(\mu(s,b)\,\dd s\) and a smooth compact cutoff \(\chi(s)\) supported in the common cubic coordinate chart inside the real chamber and equal to one on a fixed neighborhood of both saddles, after shrinking the boundary neighborhood. The integral is only this local contribution. In particular the density is not defined by the inverse of the degenerate Hessian. The positive smooth density hypothesis for a nonzero leading coefficient will be imposed only at the coalescence point. The Airy mechanism is classical \cite{CFU}; we give the exact cubic change of real coordinate and a uniform error for the present boundary family.
+
+\subsection{Exact analytic preparation through the signed crossing}
+
+Write \(m=(s_f+s_c)/2\), \(r=(s_c-s_f)/2\) (signed), \(x=s-m\), and \(\sigma=-1\). Define
+\[
+\begin{gathered}
+ C_0(b)=-6\int_0^1 y(y-1)g(s_f+\Delta y,b)\,\dd y,\\
+ \kappa=(\sigma C_0)^{1/3}>0,\qquad z=\kappa^2r^2,\qquad
+ S_0=\frac{S(s_c,b)+S(s_f,b)}2 .
+\end{gathered}
+\]
+In particular \(C_0<0\), and
+\(S(s_c,b)-S(s_f,b)=-(4/3)\sigma\kappa^3 r^3\).
+The residual obtained by subtracting \(S_0+\sigma\kappa^3(x^3/3-r^2x)\) from \(S(m+x,b)\) vanishes together with its \(x\) derivative at \(x=\pm r\). It is analytically divisible by \((x^2-r^2)^2\): first divide by \((x-r)^2\) using Taylor's integral formula. The quotient and its derivative vanish at \(-r\) whenever \(r\ne0\), hence also when \(r=0\) by continuity and \(\dd r\ne0\). Divide by the other square in the same way. Call the analytic quotient \(B_0(x,b)\).
+
+Set \(t=\kappa x+(x^2-r^2)k\). Substitution into the cubic shows that the exact identity
+\begin{equation}\label{eq:cubic}
+ S=S_0+\sigma(t^3/3-zt)
+\end{equation}
+holds if
+\(\kappa^2 k+\kappa x k^2+(x^2-r^2)k^3/3=\sigma B_0\).
+At the merger \(x=r=0\) this equation has its solution \(k=\sigma B_0/\kappa^2\), with nonzero derivative \(\kappa^2\) in \(k\), so the analytic implicit function theorem solves it jointly. The new coordinate is increasing locally; at the merger \(t_s=\kappa_*=(24V_*)^{-1/3}\). It sends \(s_f\) to \(-q\) and \(s_c\) to \(q\) with \(q=\kappa r\) signed. In particular \(z=q^2\) is smooth and nonnegative, vanishing quadratically with the physical gap \(\Delta\); taking \(z\) to be a linear signed boundary perturbation would describe a different family.
+
+\subsection{Uniform Airy law}
+
+For a real or complex smooth multiplier \(F(s,b)\) define the local integral
+\[
+ I_F(H,b)=\int \chi(s)\mu(s,b)F(s,b)\exp(\I S(s,b)/H)\,\dd s .
+\]
+In the increasing \(t\) coordinate put \(a(t,b)=\chi\mu F\,\partial s/\partial t\). On a common compact local domain in \(b\) this amplitude is smooth with compact \(t\)-support, extending by zero as necessary. At \(q\ne0\) set
+\[
+ a_0=\frac{a(q,b)+a(-q,b)}2,\qquad
+ a_1=\frac{a(q,b)-a(-q,b)}{2q},
+\]
+with the smooth limits \(a(0,b),\partial_t a(0,b)\) at \(q=0\). Then uniformly on that domain
+\begin{equation}\label{eq:airy}
+ I_F(H,b)=2\pi e^{\I S_0/H}
+ \left[
+   H^{1/3}a_0\,\Ai\!\left(-\frac{z}{H^{2/3}}\right)
+   -\I\sigma H^{2/3}a_1\,\Ai'\!\left(-\frac{z}{H^{2/3}}\right)
+ \right]+O(H).
+\end{equation}
+To prove the estimate, subtract \(a_0+a_1t\) multiplied by a cutoff equal to one on a common neighborhood of both roots in the \(t\) chart. Smooth divided differences divide the compact remainder by \(t^2-q^2\), with derivatives uniformly bounded when the roots coincide. This factor is \(\sigma\) times the derivative of the reduced phase, so one integration by parts gives an \(O(H)\) remainder. The constant and linear cutoff terms may be replaced by the full-line oscillatory integrals: outside the cutoff the phase derivative is separated from zero, and the amplitude divided by it decays as \(O(t^{-2})\) or \(O(t^{-1})\), respectively, with integrable derivative. Repeated integration by parts applies there uniformly for the bounded \(z\) under consideration. The full-line constant integral is the standard Airy integral, and differentiation in \(z\) (in the oscillatory sense) gives the linear integral with the factor \(-\I\sigma\) in \eqref{eq:airy}. All transformations preserve the real contour.
+
+\begin{corollary}[A signed curvature insertion]\label{cor:insertion}
+Take \(F=\epsilon_i\) for one marked interior hinge, and suppose \(\mu(s_*,b_*)>0\). At the merger \(a_0=0\), and
+\begin{equation}\label{eq:insertion}
+ a_1=\mu(s_*,b_*)\,\frac{A_i(s_*,b_*)}{6V_*}\,(24V_*)^{2/3}>0.
+\end{equation}
+Thus \(I_{\epsilon_i}(H,b_*)=2\pi \I\,a_1\Ai'(0)H^{2/3}+O(H)\) with a nonzero coefficient. Away from merger the inserted saddle amplitude is zero at the flat point and nonzero at the curved point whenever the density there is nonzero.
+\end{corollary}
+\begin{proof}
+At \(s_*\) the deficit vanishes; the derivative of the inserted amplitude is the uninserted density times \(\epsilon_{i,s}(\partial s/\partial t)^2\) at that point. Apply \eqref{eq:slopes} and \(t_s=(24V_*)^{-1/3}\). Since \(S_0=0\) at coalescence by \eqref{eq:real} and \(\sigma=-1\), \eqref{eq:airy} gives the formula. At separated saddles use \(\epsilon_i(s_f,b)=0\) and \(\epsilon_i(s_c,b)=e_i(s_c,b)\Delta\).
+\end{proof}
+
+The uninserted coefficient at merger is instead \(a_0=\mu(s_*,b_*)/\kappa_*>0\); its leading order is \(H^{1/3}\). When \(|\Delta|=O(H^{1/3})\), both terms of the inserted approximation can be of order \(H^{2/3}\): the inserted saddle value is \(O(\Delta)\) and the coefficient of \(\Ai'\) is smooth. No division by the uninserted integral is justified near its Airy zeros. For fixed separated saddles the leading ordinary stationary-phase terms have factors \(e^{\I\pi\,\operatorname{sgn}(S_{ss})/4}\). Indeed at the two cubic stationary points the signed second derivatives are \(2\sigma t\), and the increasing coordinate transports their signs and density Jacobians unchanged. Thus the flat saddle flips its Gaussian sign when the branches cross, without sending either saddle off the real chamber.
+
+\section{Scope}
+
+The fourteen controls above are genuine independently set boundary lengths of a specified marked local Lorentzian move. The paper does not change the earlier reflection-symmetric calculation \cite{Paper22}; it extends it to an open chamber on a different stock and calibrates a one-hinge curvature insertion. It neither changes the previous flat one-loop result \cite{BD} nor relies on a global large-interior-edge regime such as \cite{Spines}. Only a smooth localized real contour on one branch at fixed \(u>0\) is controlled. No exterior saddles, complex-cycle prescription, unique quantum measure, unrestricted Pachner integral, or subdivision invariance is implied.
+
+\begin{thebibliography}{99}
+\bibitem{BD} J. N. Borissova and B. Dittrich, Lorentzian quantum gravity via Pachner moves: one-loop evaluation,
+\emph{J. High Energy Phys.} 09, 069 (2023). \href{https://arxiv.org/abs/2303.07367}{arXiv:2303.07367}.
+\bibitem{DKS} B. Dittrich, W. Kami\'nski and S. Steinhaus, Discretization independence implies non-locality in 4D discrete quantum gravity,
+\emph{Class. Quantum Grav.} \textbf{31}, 245009 (2014). \href{https://arxiv.org/abs/1404.5288}{arXiv:1404.5288}.
+\bibitem{BahrDittrich} B. Bahr and B. Dittrich, (Broken) gauge symmetries and constraints in Regge calculus,
+\emph{Class. Quantum Grav.} \textbf{26}, 225011 (2009), App.~A.1. \href{https://arxiv.org/abs/0905.1670}{arXiv:0905.1670}.
+\bibitem{Paper22} \emph{Airy asymptotics at a Lorentzian Regge 4--2 degeneracy}, research archive, Paper 22.
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/blob/main/papers/22-lorentzian-regge-airy/manuscript.md}{Public manuscript}.
+\bibitem{ADP} S. K. Asante, B. Dittrich and J. Padua-Arg\"uelles, Complex actions and causality violations: Applications to Lorentzian quantum cosmology.
+\href{https://arxiv.org/abs/2112.15387}{arXiv:2112.15387}.
+\bibitem{CFU} C. Chester, B. Friedman and F. Ursell, An extension of the method of steepest descents,
+\emph{Proc. Cambridge Philos. Soc.} \textbf{53}, 599--611 (1957).
+\href{https://doi.org/10.1017/S0305004100032655}{doi:10.1017/S0305004100032655}.
+\bibitem{Spines} J. N. Borissova, B. Dittrich, D. Qu and M. Schiffer, Spikes and spines in 4D Lorentzian simplicial quantum gravity,
+\emph{J. High Energy Phys.} 10, 150 (2024). \href{https://arxiv.org/abs/2407.13601}{arXiv:2407.13601}.
+\end{thebibliography}
+\end{document}

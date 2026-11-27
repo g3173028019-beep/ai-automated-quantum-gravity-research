@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 85 items: 20 original research packets, six later analytical Markdown manuscripts and 53 typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 88 items: 20 original research packets, six later analytical Markdown manuscripts and 53 typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–72 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–73 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -309,6 +309,8 @@ Numbering follows delivery order: 01–20 retain their original packet numbers; 
 [Read the Markdown manuscript](../papers/21-weyl-diamond-relative-entropy/manuscript.md) · [See the research routes](RESEARCH-MAP.md)
 
 ## 22. Lorentzian Regge Airy asymptotics
+
+[22B · Open-boundary Lorentzian companion](../papers/22b-regge-airy-open-boundary/README.md).
 
 **Question.** What replaces the separate Gaussian saddle approximation near a concrete Lorentzian 4–2 saddle coalescence?
 
@@ -869,3 +871,27 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** Fixed-radius coefficient extraction on the specified initial family; the radiation limit is taken afterward.
 
 [72 · Radiative data lost by the Newtonian projection](../papers/72-radiative-data-newtonian-projection/README.md) · [PDF](../papers/72-radiative-data-newtonian-projection/manuscript.pdf) · [TeX](../papers/72-radiative-data-newtonian-projection/main.tex) · [Verification](../papers/72-radiative-data-newtonian-projection/VERIFICATION.md)
+
+## 22B. An open-boundary Lorentzian Regge saddle crossing with a curvature insertion
+
+**Result.** An open set with all 14 independent marked boundary controls has a real Lorentzian saddle crossing. A marked curvature insertion gives an explicit nonzero Airy-derivative coefficient.
+
+**Scope.** Local real contour near the stated Lorentzian crossing with fixed causal marking; a companion to Paper 22.
+
+[22B · An open-boundary Lorentzian Regge saddle crossing with a curvature insertion](../papers/22b-regge-airy-open-boundary/README.md) · [PDF](../papers/22b-regge-airy-open-boundary/manuscript.pdf) · [TeX](../papers/22b-regge-airy-open-boundary/main.tex) · [Verification](../papers/22b-regge-airy-open-boundary/VERIFICATION.md)
+
+## 29C. A polarization symplectic form at fixed two-stream null-dust limit
+
+**Result.** Two exact gravitational-wave families have the same scalar null-dust weak limit. The wavelength-rescaled Einstein symplectic form retains independent, explicitly weighted polarization pairings on their two streams.
+
+**Scope.** Fixed marked characteristic sheets and same-edge cuts of the constructed double-null developments; a companion to 29B.
+
+[29C · A polarization symplectic form at fixed two-stream null-dust limit](../papers/29c-high-frequency-polarization-symplectic-form/README.md) · [PDF](../papers/29c-high-frequency-polarization-symplectic-form/manuscript.pdf) · [TeX](../papers/29c-high-frequency-polarization-symplectic-form/main.tex) · [Verification](../papers/29c-high-frequency-polarization-symplectic-form/VERIFICATION.md)
+
+## 73. Crossed dispersion from real-transfer graviton data in five dimensions
+
+**Result.** Reconstructs a smeared crossing-symmetric all-polarization sum rule from real-transfer data and supplies a signed Gauss–Bonnet test.
+
+**Scope.** Weak/tree order under the stated ordinary low-energy contour, Ward locality and positive partial-wave inputs.
+
+[73 · Crossed dispersion from real-transfer graviton data in five dimensions](../papers/73-d5-gauss-bonnet-dispersive-reconstruction/README.md) · [PDF](../papers/73-d5-gauss-bonnet-dispersive-reconstruction/manuscript.pdf) · [TeX](../papers/73-d5-gauss-bonnet-dispersive-reconstruction/main.tex) · [Verification](../papers/73-d5-gauss-bonnet-dispersive-reconstruction/VERIFICATION.md)

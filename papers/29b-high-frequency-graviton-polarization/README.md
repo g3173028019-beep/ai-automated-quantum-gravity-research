@@ -11,3 +11,7 @@ What information about gravitational waves survives once their effective stress 
 The one-stream rotating Rosen example checks circular sign and absolute normalization. The characteristic construction is not an application of the generalized-wave derivative bounds. It does not assert pointwise, unfiltered curvature recovery or a quantum-state result. Paper 29, including its source and PDF, is retained unchanged.
 
 Rebuild with TeX Live: `latexmk -pdf main.tex`.
+
+## Companion result
+
+[29C · A polarization symplectic form at fixed two-stream null-dust limit](../../papers/29c-high-frequency-polarization-symplectic-form/README.md) extends the geometric setting or identifies a distinct physical structure; this edition remains available.

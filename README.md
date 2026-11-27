@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**85 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 59 typeset analytical articles**
+**88 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 62 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 85 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 88 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -26,6 +26,9 @@ These routes connect the 20 original packets with the later analytical manuscrip
 
 | Paper | Result | Files |
 |---|---|---|
+| [22B · An open-boundary Lorentzian Regge saddle crossing with a curvature insertion](papers/22b-regge-airy-open-boundary/README.md) | An open set with all 14 independent marked boundary controls has a real Lorentzian saddle crossing. A marked curvature insertion gives an explicit nonzero Airy-derivative coefficient. | [PDF](papers/22b-regge-airy-open-boundary/manuscript.pdf) · [TeX](papers/22b-regge-airy-open-boundary/main.tex) · [Verification](papers/22b-regge-airy-open-boundary/VERIFICATION.md) |
+| [29C · A polarization symplectic form at fixed two-stream null-dust limit](papers/29c-high-frequency-polarization-symplectic-form/README.md) | Two exact gravitational-wave families have the same scalar null-dust weak limit. The wavelength-rescaled Einstein symplectic form retains independent, explicitly weighted polarization pairings on their two streams. | [PDF](papers/29c-high-frequency-polarization-symplectic-form/manuscript.pdf) · [TeX](papers/29c-high-frequency-polarization-symplectic-form/main.tex) · [Verification](papers/29c-high-frequency-polarization-symplectic-form/VERIFICATION.md) |
+| [73 · Crossed dispersion from real-transfer graviton data in five dimensions](papers/73-d5-gauss-bonnet-dispersive-reconstruction/README.md) | Reconstructs a smeared crossing-symmetric all-polarization sum rule from real-transfer data and supplies a signed Gauss–Bonnet test. | [PDF](papers/73-d5-gauss-bonnet-dispersive-reconstruction/manuscript.pdf) · [TeX](papers/73-d5-gauss-bonnet-dispersive-reconstruction/main.tex) · [Verification](papers/73-d5-gauss-bonnet-dispersive-reconstruction/VERIFICATION.md) |
 | [70 · Finite scalar tests of matched tensor dynamics](papers/70-tt-six-scalar-phase-test/README.md) | A six-scalar measurement distinguishes two prescriptions with the same Gaussian tensor influence, using the Einstein transverse-traceless cubic. A separate tagged protocol cancels a prescribed finite list of mixed contact templates exactly. | [PDF](papers/70-tt-six-scalar-phase-test/manuscript.pdf) · [TeX](papers/70-tt-six-scalar-phase-test/main.tex) · [Verification](papers/70-tt-six-scalar-phase-test/VERIFICATION.md) |
 | [71 · Positive Hadamard states for linearized Einstein wave maps](papers/71-hadamard-states-einstein-wave-maps/README.md) | Positive physical Hadamard covariances with exact Green CCR for curved targets; a separate massive asymptotically flat construction realizes them on a fixed weighted base. | [PDF](papers/71-hadamard-states-einstein-wave-maps/manuscript.pdf) · [TeX](papers/71-hadamard-states-einstein-wave-maps/main.tex) · [Verification](papers/71-hadamard-states-einstein-wave-maps/VERIFICATION.md) |
 | [72 · Radiative data lost by the Newtonian projection](papers/72-radiative-data-newtonian-projection/README.md) | On attainable Einstein–Euler initial data the fast outgoing graviton pairs are absent in the Newtonian projection. The positive finite-radius escape coefficient equals the normalized mixed ADM mass Hessian. | [PDF](papers/72-radiative-data-newtonian-projection/manuscript.pdf) · [TeX](papers/72-radiative-data-newtonian-projection/main.tex) · [Verification](papers/72-radiative-data-newtonian-projection/VERIFICATION.md) |
@@ -168,7 +171,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All 85 manuscripts, with results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 88 manuscripts, with results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |

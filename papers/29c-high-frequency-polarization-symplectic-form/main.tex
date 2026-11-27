@@ -1,0 +1,636 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A polarization symplectic form at a fixed two-stream null-dust limit}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\supp}{\operatorname{supp}}
+\title{A polarization symplectic form at a fixed two-stream null-dust limit\\
+\large An exact characteristic high-frequency construction}
+\author{}
+\date{Paper 29C}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We construct two independently variable gravitational-wave
+polarizations in exact vacuum developments with a single
+double-null weak limit and the same two resolved scalar
+null-dust measures. The two streams can overlap in the
+interior. On the marked characteristic Cauchy surface the
+unscaled Einstein Lee--Wald form tends to zero on the
+selected bounded profile tangents, but division by the
+reduced wavelength leaves two independent weighted projective
+polarization forms. A slow amplitude correction cancels an
+otherwise nonzero first-order focusing term in the exact
+null constraint. This gives the differentiated area
+estimates used in the proof of the symplectic limit. The
+limiting form is intrinsic to the specified rank-one
+polarization data on the two initial sheets and transports
+to a spacelike cut with the same edges. A scalar-dust
+description omits these pairings.
+\end{abstract}
+
+\section{Statement and relation to prior work}
+
+Use intersecting null sheets \(H_1=\{u=0,\,0\leq v\leq L_1\}\)
+and \(H_2=\{v=0,\,0\leq u\leq L_2\}\), with spherical
+sections and the same marked initial sphere. On each sheet
+\(s_i\) is its own fixed increasing affine parameter
+(\(v\) on \(H_1\), \(u\) on \(H_2\)). The generator labels,
+the outer-cut embeddings and the incident lapse are fixed.
+We take the incident lapse equal to one. All spacetime
+comparisons use the same double-null identification; no
+wavelength-dependent relabeling enters a variation.
+
+On \(H_i\) fix a smooth positive slow screen metric
+\(\sigma_i\), with \(\partial_{s_i}\dd A_{\sigma_i}=0\),
+and a real smooth envelope \(F_i\) supported in an angular
+frame patch and away from both generator endpoints.
+The slow data agree on the common sphere, and the
+corner expansions and torsion are fixed. The polarized
+profiles \(z_i\) are smooth maps to the unit vectors in
+\(\mathbb C^2\) in a fixed smooth orthonormal frame of real
+tracefree symmetric screen endomorphisms. Only their
+values on the envelope support are used. We take bounded
+smooth profile charts, allowing arbitrary localized
+variations in \(s_i\) and angle and compact finite-dimensional
+families of such variations. At each wavelength a tangent
+means a derivative of the exact polarized families, not a
+substitution of an unconstrained test strain.
+
+\begin{theorem}[Two-stream polarization pairing]\label{thm:main}
+There are fixed data of the stated kind and a common
+regular double-null rectangle for which, for every
+sufficiently small reduced wavelength \(\lambda>0\) and profiles
+in the chosen bounded charts, the following hold.
+\begin{enumerate}
+\item One obtains smooth exact vacuum metrics \(g_\lambda(z_1,z_2)\).
+They have a common double-null limit, in \(C^0\) and weak
+\(W^{1,2}\) on the common rectangle, independent of both
+profiles. The two resolved scalar null-dust measure
+families in that limit are independent of both profiles.
+The data can be chosen so that both dusts have positive
+density on a common open region.
+\item Let \(\mathfrak S_\lambda\) be the bare Einstein
+Lee--Wald two-form on the pair of initial sheets, with the
+future Cauchy orientation specified in
+Section~\ref{sec:current}. Write \(a_{0,i}^2\sigma_i\)
+for the limiting induced metric there. On the selected
+profile tangents,
+\begin{equation}\label{eq:theorem}
+ \lim_{\lambda\downarrow0}\lambda^{-1}\mathfrak S_\lambda
+ =\sum_{i=1}^2\int_{H_i}
+     \frac{a_{0,i}^2 F_i^2}{64\pi G}\,
+     \dd_{\!P}\im(z_i^\dagger\dd_{\!P}z_i)\,
+     \dd s_i\dd A_{\sigma_i}.
+\end{equation}
+Here \(\dd_{\!P}\) is exterior differentiation on profile
+space. The unscaled form converges to zero on these tangents.
+\item On \(F_i\ne0\), the two integrands descend to the
+projective lines \([z_i]\in\mathbb{CP}^1\); with
+\(z_i=e^{i\chi_i}(\sqrt{1-p_i},e^{i\phi_i}\sqrt{p_i})\)
+the projective two-form is
+\(\dd_{\!P}p_i\wedge\dd_{\!P}\phi_i\).
+The two blocks have nonzero pairings for compactly
+supported projective variations separately, with zero
+cross pairing between the incident sheets. Pullback of the
+same Lee--Wald current to an interior spacelike surface
+with the same two outer cuts gives the same formula.
+\end{enumerate}
+\end{theorem}
+
+The geometric data and the bounded family are chosen
+on the short, noncaustic branch of the characteristic
+existence theorem. The proof does not use a symmetry
+reduction. The formula is local where the density is
+positive, and it is not a prescription for a pointwise
+bulk Jones polarization field. The normalization of
+the projective form in \eqref{eq:theorem} has total
+area \(2\pi\) on \(\mathbb{CP}^1\).
+
+\paragraph{Prior results and the new comparison.}
+Luk and Rodnianski construct and characterize
+double-null high-frequency limits with two
+measure-valued dusts \cite{LR}. Their exact constraints,
+uniform existence, compactness, transport and uniqueness
+are analytic inputs here. In the associated public Paper
+29B \cite{paper29B}, exact two-stream data and directed
+Hermitian polarization measures at fixed scalar trace
+already appear, including a broader smooth factorizable
+matrix class and an optical readout. We use a single
+coherent carrier per incident face. This paper adds an
+Einstein symplectic comparison on actual constrained
+tangents, rather than another claim of two-stream
+realizability. The complementary marked-cut result
+was already mentioned without a proof in Paper 29
+\cite{paper29}; the standalone derivation is given here. The relation to the finite-band
+metaplectic probe transfer of \cite{transfer} is likewise
+not an identification: that work concerns a probe on an
+exact sandwich, whereas the form here compares
+derivatives of the rapidly oscillating vacuum background.
+The null gravitational symplectic form is prior work
+\cite{Reisenberger,HF}; the calculation below fixes its
+normalization and edge convention for the data used here.
+The basic projective two-form is the standard one for
+unit complex rays \cite{AS}; the new result is its
+calibrated occurrence as a degenerate high-frequency
+limit of the Einstein form at fixed effective geometry.
+
+\section{Exact vacuum characteristic data}\label{sec:data}
+
+We first work on one sheet and suppress its index.
+Fix \(\sigma\) and the envelope \(F\).
+Let \(E_1,E_2\) be the chosen real orthonormal tracefree
+screen endomorphisms, and put
+\[
+ Z=z^1 E_1+z^2 E_2,\qquad \tr(Z^\dagger Z)=1,\qquad
+ A=\sigma^{-1}\sigma'.
+\]
+A prime is the derivative in the stated generator
+coordinate. The parameter \(\lambda\) is inverse affine
+angular frequency: one phase period has length \(2\pi\lambda\). The metric-compatible derivative on
+endomorphisms is \(D_s Z=Z'+[A,Z]/2\) in fixed
+angular coordinates. Define
+\begin{align}
+ \beta&=\im\tr(Z^\dagger D_s Z),\nonumber\\
+ H_\lambda&=\lambda F(1-\lambda\beta)
+                    \re(Z e^{is/\lambda}),\qquad
+ \widehat q_\lambda=\sigma e^{H_\lambda},\qquad
+ q_\lambda=a_\lambda^2\widehat q_\lambda .
+ \label{eq:ansatz}
+\end{align}
+The expression is extended as zero strain outside the
+angular frame patch. The real strain is
+\(\sigma\)-self-adjoint and tracefree, so the conformal
+metric is positive and has the stated fixed determinant.
+The compensating factor is a slow real change of
+amplitude at order \(\lambda\), not a change of carrier
+phase. The overall intensity to leading order is fixed.
+We may take \(\lambda\) so small that this factor is
+positive throughout the chosen profile chart.
+
+The reduced vacuum affine Raychaudhuri equation is
+\begin{equation}
+ B_\lambda=\widehat q_\lambda^{-1}\widehat q_\lambda',
+ \qquad
+ a_\lambda''+Q_\lambda a_\lambda=0,\qquad
+ Q_\lambda=\tfrac18\tr(B_\lambda^2).
+ \label{eq:ray}
+\end{equation}
+It is precisely \cite[Eqs.~(3.1)--(3.2)]{LR} with incident
+lapse one. The positive initial area and its initial slope
+are fixed at the corner. This equation is solved
+exactly, with no replacement of the shear by a weak
+limit in the vacuum data.
+
+\subsection{Canceling the first-order focusing drift}
+
+At fixed slow coordinates write \(\vartheta=s/\lambda\),
+\(U=F\re(Ze^{i\vartheta})\), and
+\(V=F\re(iZe^{i\vartheta})=\partial_\vartheta U\).
+Let \(U'_0\) denote a slow derivative holding
+\(\vartheta\) fixed.
+Expanding
+\(e^{-H_\lambda}A e^{H_\lambda}
+ +e^{-H_\lambda}(e^{H_\lambda})'\)
+in~\eqref{eq:ray} gives
+\begin{equation}
+ B_\lambda=A+V+
+   \lambda\bigl(U'_0+[A,U]+\tfrac12[V,U]-\beta V\bigr)
+   +O(\lambda^2).
+ \label{eq:B}
+\end{equation}
+The expansion and the error bound hold after any fixed
+angular number and two profile derivatives on a fixed
+bounded smooth chart. In particular one must retain the
+\(-\beta V\) term from differentiating the corrected
+strain. At fixed \(\sigma\), each of \(A,V,U\) is
+self-adjoint (the last two are real), so the commutators
+in \eqref{eq:B} are skew-adjoint and do not contribute
+at order \(\lambda\) to \(\tr(B_\lambda^2)\). Replacing
+\(U'_0\) by \(D_s U\) in that contraction is legitimate
+for the same reason.
+
+Let angled brackets mean averaging over \(\vartheta\)
+only, at fixed slow \(s,\theta\) and profile. Then
+\[
+ \langle \tr(V^2)\rangle=\tfrac12 F^2,\qquad
+ \langle\tr(V D_sU)\rangle
+  =\tfrac12 F^2\im\tr(Z^\dagger D_s Z)
+  =\tfrac12F^2\beta .
+\]
+The \(F'\) term in the second average has zero real
+contraction with \(iZ\). The mean from \(V D_sU\)
+would add \(\lambda F^2\beta/8\) to \(Q_\lambda\)
+without the compensator. The term \(-\lambda\beta V\)
+cancels it exactly at this order. Therefore
+\begin{equation}
+ Q_\lambda-Q_0
+ =\sum_{0<|m|\leq 2} (q_m+\lambda\widetilde q_m)
+                         e^{ims/\lambda}+O(\lambda^2),
+ \qquad Q_0=\tfrac18\tr(A^2)+\tfrac1{16}F^2 .
+ \label{eq:average}
+\end{equation}
+The harmonic coefficients are slow, smooth and supported
+away from the generator endpoints. The same bounds as in
+\eqref{eq:B} hold for the error and the specified
+differentiated coefficients. In particular the mean
+\(Q_0\) and the initial data do not depend on either
+polarization.
+
+\begin{lemma}[Differentiated area estimate]\label{lem:area}
+Let \(a_0''+Q_0a_0=0\) with the same initial conditions.
+On a fixed finite interval where \(a_0\) is positive,
+\begin{equation}
+   a_\lambda-a_0=O(\lambda^2),\qquad
+   a'_\lambda-a'_0=O(\lambda).
+ \label{eq:area}
+\end{equation}
+The estimates hold through two profile derivatives and
+any fixed angular order. Beyond the generator support of
+\(F\), the slope estimate is \(O(\lambda^2)\).
+\end{lemma}
+
+\begin{proof}
+Write the difference as the retarded Volterra integral
+with source \(-(Q_\lambda-Q_0)a_0\) and kernel
+\(G_\lambda(s,t)\) of \(\partial_s^2+Q_\lambda\).
+Construction from two homogeneous solutions and
+their constant Wronskian gives
+\(G_\lambda(s,s)=0\), \(\partial_sG_\lambda(s,s)=1\),
+and, for \(t<s\),
+\(\partial_t^2G_\lambda=-Q_\lambda(t)G_\lambda\).
+The last identity holds for \(\partial_sG_\lambda\)
+as well. Since \(Q_\lambda\) and the stipulated
+angular and profile derivatives are bounded, direct
+first-order ODE estimates bound the kernels and
+their first two \(t\)-derivatives, with those same
+parameter derivatives. This argument does not
+differentiate the rapid source in \(t\).
+For each nonzero harmonic in \eqref{eq:average},
+integrate by parts twice in \(t\) for the area;
+the first boundary term vanishes by the corner
+buffer and \(G_\lambda(s,s)=0\). For the slope one
+integration is always sufficient, and its first
+boundary term also vanishes beyond the envelope
+support. The remainder in \eqref{eq:average}
+has \(O(\lambda^2)\) contribution even without
+integration by parts. Differentiate the integral
+with respect to the smooth parameters and angles:
+the oscillatory phase is unchanged and all the
+required kernel identities remain bounded by the
+same ODE argument. This proves the lemma.
+\end{proof}
+
+Consequently the exact \(a_\lambda\) stay uniformly
+positive on a short common interval, and the variation
+obeys \(\delta a_\lambda=O(\lambda^2)\),
+\(\delta a_\lambda'=O(\lambda)\).
+These are differentiated estimates for the exact
+constraint solution, not an inference merely from
+strong convergence of \(q_\lambda\).
+
+\subsection{The remaining constraints and the common limit}
+
+We use the double-null gauge of \cite[Eq.~(2.2) and
+Def.~2.10]{LR}, with \(e_3=\Omega^{-1}(\partial_u+b)\)
+and \(e_4=\Omega^{-1}\partial_v\). In the following description
+all equation numbers except ours refer to \cite{LR}.
+On \(H_1\), the intrinsic \(q_\lambda\) fixes the outgoing
+expansion and shear. Solve the torsion equation (2.15) with
+its fixed corner value, recovering the conjugate torsion
+from their prescribed sum \(2\nabla\log\Omega=0\). Then
+reconstruct \(b\) by (2.9), solve the opposite expansion
+and shear using (2.17) and (2.19), and finally use (2.21)
+for the opposite lapse coefficient. On \(H_2\), \(b=0\)
+by the initial gauge; use (2.16), (2.18), (2.20), and
+finally (2.22) in the corresponding order. The last
+equation uses the already reconstructed mixed shear.
+The incident lapse is identically one on each initial
+face, so its generator is affine. The opposite quantities
+start at their fixed corner values, not at a separately
+varying slice of the other wave. The reduced data agree
+with the fixed slow data on an entire corner buffer; the
+joint is exactly compatible.
+
+Here is the convergence check for these additional
+traces. The intrinsic metrics and generator expansions
+converge strongly with every fixed reserved angular
+derivative. The generator shear is the common slow
+shear plus a bounded first harmonic and \(O(\lambda)\);
+an angular derivative preserves that description. In the
+subsequent triangular equations the incident fast shear
+and its angular derivatives occur linearly. They can
+multiply opposite-shear or other preceding transport
+quantities; the Raychaudhuri term already treated is
+the only same-face fast shear square. In fixed angular
+components the connection along a generator also
+contains only first metric derivatives, and therefore
+has this same decomposition. At a transport step write
+the difference from the common averaged transport
+solution in integral form
+\[
+ e_\lambda(s)=\int_0^s C_\lambda(t)e_\lambda(t)\,\dd t+
+ R_\lambda(s).
+\]
+The coefficients \(C_\lambda\) are uniformly bounded.
+Terms from previously solved differences are
+\(O(\lambda)\), and terms linear in the fast harmonics
+against the common smooth slow solution have
+\(O(\lambda)\) primitives by one integration by parts.
+Thus \(R_\lambda=O(\lambda)\) uniformly, and Gronwall
+closes the step. Angular differentiation gives the same
+estimates with finitely many derivatives reserved for the
+curvature, divergence and gradient terms. This argument
+gives the common boundary traces, including the shift
+and both opposite expansions and the incoming torsion
+difference, not just the common induced metric.
+
+Choose a fixed smooth corner stock of positive radius
+and bounded angular geometry, and take the strips short
+enough for all areas and the limiting metric to stay
+regular. Lemma 3.1 and Theorems 3.2--3.3 of \cite{LR}
+give exact smooth vacuum developments on one common
+rectangle: the initial angular norms and generator
+\(L^2\) shear bounds are uniform; second generator
+derivatives of the conformal data need not be uniform.
+We place the packets in that common short existence
+window. Concretely, fix angular norms and amplitude
+bounds on broader initial strips, use the uniform
+existence estimates to choose a common short output,
+and put the envelope supports in its interior. Shrinking
+a chosen support does not increase the leading shear
+bound. Terms involving its slow generator derivatives
+are multiplied by positive powers of \(\lambda\) in
+the conformal derivative, and are bounded by decreasing
+the wavelength cutoff. This does not assert that
+arbitrarily long prescribed envelopes are reached by the
+short-time theorem. At fixed \(\lambda\), smooth
+finite-dimensional profile variations yield actual
+linearized vacuum tangents by smooth characteristic
+dependence (or equivalently by its differentiated
+characteristic equations). No uniform differentiated
+interior convergence theorem is being assumed.
+
+In the affine normalization the incident shear square is
+\(\tr(B_\lambda^2)/4\). The cross term with the common
+slow shear tends weakly to zero and the squared fast
+part has mean \(F_i^2/2\). Thus the additional measure on
+each incident sheet is exactly
+\begin{equation}\label{eq:dust}
+ \nu_i^{\rm in}
+ =\frac{F_i^2}{8}a_{0,i}^2\,\dd s_i\,\dd A_{\sigma_i}.
+\end{equation}
+This is the normalization for
+\(\Omega^2|\widehat\chi|^2\,\dd s\,\dd A_q\) (and its
+ingoing counterpart) in \cite{LR}. The smooth slow
+shear square is not part of the additional measure.
+The explicit initial square is uniformly bounded and
+does not concentrate at the initial corners. Use the
+two-sheet compactness theorem (Theorem 4.1 of \cite{LR})
+with its auxiliary transport equations, and the initial
+trace comparison of its Theorem 4.4 and Section 9.4
+(in particular the strong/weak trace inputs in (9.61)--(9.62)):
+the strong initial transports just established supply the
+same opposite expansion and torsion traces and
+\eqref{eq:dust} supplies the two identical measure
+traces. No trace of a differentiated interior weak limit
+is inferred by formally differentiating its induced
+metric. Uniqueness in that class makes the metric and
+both complete measure families common to all
+subsequential limits. Compactness and this uniqueness
+give the claimed \(C^0\) and weak \(W^{1,2}\)
+convergences of the family.
+
+For actual two-stream overlap, use
+\cite[Prop.~7.7]{LR}: the measure from \(H_1\) is
+transported by the angular flow of the limiting shift
+at fixed \(v\), and the measure from \(H_2\) by the
+unchanged angular labels at fixed \(u\). Pick intervals
+in the common rectangle where each envelope is positive
+on a common angular patch, with a smaller patch separated
+from its edge by more than the flow displacement.
+The two positive densities then persist in one common
+open interior set. Angular dependence is allowed
+throughout; no symmetry removes the mutual evolution
+of the dusts.
+
+\section{The exact null current at fixed edges}
+\label{sec:current}
+
+For \(h=\delta g\) use the bare Einstein Lee--Wald
+potential, with vector components
+\begin{equation}\label{eq:theta}
+ \theta^\mu(g;h)
+ =\frac{1}{16\pi G}
+   \left(\nabla_\nu h^{\mu\nu}-\nabla^\mu\tr_g h\right).
+\end{equation}
+The associated spacetime form contracts this vector into
+the metric volume form, and the two-form on solutions is
+its exterior derivative in the indicated family
+\cite{LW}. We use no additional exact boundary shift
+of this potential. On one initial face let \(s\) be its
+fixed affine generator label and \(r\) its transverse
+null coordinate. In particular the reconstructed shift
+on \(H_1\) lies in \(g_{rA}\) and \(g_{rr}\), not in
+\(g_{sA}\) or \(g_{ss}\). On either face,
+\[
+ g_{ss}=g_{sA}=0,\qquad g_{sr}=-c,\qquad
+ g^{r\mu}=-c^{-1}\delta_s^\mu,\qquad c=2\Omega^2=2 .
+\]
+The shift and transverse metric can vary, but
+\(h_{s\mu}=h^{r\mu}=0\) on the face. Affineness gives
+\(\partial_r g_{ss}=0\), and a tangent of the affine
+family has \(\partial_r h^{rr}=c^{-2}\partial_r h_{ss}=0\)
+there. Terms from differentiating the inverse metrics in
+this last identity vanish because \(h_{s\mu}=0\).
+The connection terms with a lower \(s\) vanish:
+\(\Gamma^r_{ss}=\Gamma^r_{sA}=0\). The remaining
+component is \(\Gamma^r_{AB}=q'_{AB}/(2c)\).
+Also \(-\nabla^r\tr_g h=c^{-1}\partial_s
+\tr(q^{-1}\delta q)\) and the metric density is
+\(c a^2\sqrt{\det\sigma}\). Thus the integrand, in
+units \(1/(16\pi G)\) and relative to
+\(\dd s\,\dd A_\sigma\), is
+\[
+ a^2\left\{\frac12\tr\big[
+       (q^{-1}q')(q^{-1}\delta q)\big]
+       +\partial_s\tr(q^{-1}\delta q)\right\}.
+\]
+Since \(q=a^2\widehat q\) and the conformal determinant
+is fixed, both \(B_\lambda=\widehat q^{-1}\widehat q'\)
+and \(B_\delta=\widehat q^{-1}\delta\widehat q\) are
+traceless and \(\tr(q^{-1}\delta q)=4\delta a/a\).
+The expansion-cross term from the product cancels the
+derivative of the denominator in the last trace.
+
+To be explicit about signs, orient the null base by
+\(\dd u\wedge\dd v\) and the sphere by its marked
+orientation. The pullback on \(H_1\) selects
+\(+\theta^u\,\dd v\), while on \(H_2\) it selects
+\(-\theta^v\,\dd u\), with the area densities understood.
+A consistently oriented Cauchy arc runs in decreasing
+\(u\) along \(H_2\) and increasing \(v\) along \(H_1\).
+Thus, when both integrals are written in their own
+increasing \(s_i\), the signs agree. We obtain the exact
+null primitive and its derivative
+\begin{align}
+ \Theta_i
+ &=\frac{1}{16\pi G}\int_{H_i}
+ \left(4a_i\,\dd_{\!P}a_i'
+   +\frac{a_i^2}{2}\tr(B_{\lambda,i}B_{P,i})\right)
+   \dd s_i\,\dd A_{\sigma_i},
+ \qquad
+ B_{P,i}=\widehat q_i^{-1}\dd_{\!P}\widehat q_i ,
+ \label{eq:primitive}\\
+ \mathfrak S_\lambda&=\dd_{\!P}(\Theta_1+\Theta_2).
+ \nonumber
+\end{align}
+This is a direct affine specialization of the
+area and shear pairings in \cite{Reisenberger,HF},
+with no field-dependent angular relabeling of the
+marked sheets.
+
+The full spacetime symplectic current is closed for
+vacuum solutions and their linearized solution tangents.
+A monotone base arc with \(\dot u\dot v<0\) and the same
+two endpoints, fibered by the sphere, is a homologous
+spacelike surface: on the orthogonal lift of the arc its
+metric is \(-4\Omega^2\dot u\dot v>0\), and the angular
+metric is positive. The region between it and the initial
+two-face surface has no lateral face. Stokes' theorem
+therefore transports \(\mathfrak S_\lambda\) to this cut
+at every fixed wavelength. The joint contributes no
+additional corner term in this bare-current prescription.
+The outer embeddings are fixed, not all metric or
+transverse corner jets. Diffeomorphisms vanishing in
+neighborhoods of the retained outer edges are null
+directions by the boundary Noether identity. We do not
+use such a degeneracy for diffeomorphisms which move or
+act nontrivially at the edges. Differently cut surfaces
+require their actual lateral flux and any specified
+corner prescription.
+
+\section{Limit and the data retained by it}\label{sec:limit}
+
+It is the derivative of the area one-form that is
+negligible: in \eqref{eq:primitive} its exterior derivative
+is \(4\dd_{\!P}a\wedge\dd_{\!P}a'=O(\lambda^3)\) by
+the area lemma. The primitive itself need not be
+\(o(\lambda)\). For the shape block,
+\[
+ B_P=\lambda F\,\re((\dd_{\!P}Z)e^{is/\lambda})
+          +O(\lambda^2),\qquad
+ B_\lambda=A+F\re(iZe^{is/\lambda})+O(\lambda).
+\]
+The remainders have the required differentiated bounds
+on the selected profile families. Use
+\(a_\lambda=\bar a+O(\lambda^2)\).
+The product involving \(A\) is a first harmonic whose
+integral, after division by \(\lambda\), is \(O(\lambda)\).
+The two fast factors have common zero harmonic
+\begin{equation}\label{eq:shape-mean}
+ {\rm av}_{\vartheta}\,
+ \tr\!\left[\re(iZ e^{i\vartheta})
+            \re((\dd_{\!P}Z)e^{i\vartheta})\right]
+   =\tfrac12\,\im\tr(Z^\dagger\dd_{\!P}Z)
+   =\tfrac12\,\im(z^\dagger\dd_{\!P}z).
+\end{equation}
+The other harmonics integrate to \(O(\lambda)\) after
+scaling. These estimates hold also after one profile
+derivative of the scaled shape primitive, so exterior
+differentiation gives \eqref{eq:theorem}. In particular
+the unscaled two-form vanishes in the limit on these
+bounded tangents.
+
+On a regular projective chart,
+\(\im(z^\dagger\dd_{\!P}z)=\dd_{\!P}\chi+
+p\dd_{\!P}\phi\); its differential is
+\(\dd_{\!P}p\wedge\dd_{\!P}\phi\), the global curvature
+of the unit-vector phase bundle. Choose the ordered
+tangents with \(\delta_1p=\psi,\delta_2\phi=\psi\)
+and other coordinates fixed on a patch where
+\(0<p<1\) and \(F\ne0\). The pairing is a positive
+constant times the integral of \(\psi^2\) against
+the positive fixed intensity, hence nonzero for
+nonzero compactly supported \(\psi\). A tangent
+on one sheet and one on the other have zero
+cross pairing already in the exact pullback
+\eqref{eq:primitive}. Each primitive depends only
+on the intrinsic geometry of its own face and the
+fixed marks. It does not follow that the two streams
+have decoupled vacuum or dust dynamics in the interior.
+
+The positive-generator-frequency polarization matrix
+on each face is proportional to \(zz^\dagger\); its
+normalized rank-one part fixes the ray \([z]\). The
+density of \eqref{eq:theorem} is precisely
+\((8\pi G)^{-1}\nu_i^{\rm in}\) multiplying the
+projective form. In this sector, scalar dust therefore
+supplies the weight but not the variables that carry
+the pairing. The exact solution family has invisible
+directions for the scalar-dust map and a nonzero
+normalized canonical pairing between selected such
+directions. Keeping the projective field on each
+incident sheet restores this pairing. The local
+overall carrier phases are radical directions of the
+normalized restriction; no finite-wavelength pure
+gauge conclusion is drawn from this fact.
+
+This theorem is on marked, fixed-edge cuts and a chosen
+coherent single-carrier sector. It neither constructs a
+pointwise Jones field of a general spacelike weak limit
+nor asserts a multi-eikonal symplectic limit, a theory of
+arbitrary moving edges, or a quantum-state construction.
+
+\begin{thebibliography}{9}
+
+\bibitem{LR}
+J.~Luk and I.~Rodnianski,
+\emph{High-frequency limits and null dust shell solutions
+in general relativity}, \href{https://arxiv.org/abs/2009.08968}{arXiv:2009.08968}.
+
+\bibitem{LW}
+J.~Lee and R.~M.~Wald,
+\emph{Local symmetries and constraints},
+J.\ Math.\ Phys.\ \textbf{31}, 725--743 (1990),
+\href{https://doi.org/10.1063/1.528801}{doi:10.1063/1.528801}.
+
+\bibitem{Reisenberger}
+M.~P.~Reisenberger,
+\emph{The symplectic 2-form for gravity in terms of free
+null initial data}, \href{https://arxiv.org/abs/1211.3880}{arXiv:1211.3880}.
+
+\bibitem{HF}
+F.~Hopfm\"uller and L.~Freidel,
+\emph{Gravity degrees of freedom on a null surface},
+\href{https://arxiv.org/abs/1611.03096}{arXiv:1611.03096}.
+
+\bibitem{AS}
+A.~Ashtekar and T.~A.~Schilling,
+\emph{Geometrical formulation of quantum mechanics},
+\href{https://arxiv.org/abs/gr-qc/9706069}{arXiv:gr-qc/9706069}.
+
+\bibitem{paper29}
+\emph{Polarization transport in the high-frequency limit of the vacuum Einstein equations},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/29-high-frequency-graviton-polarization}{companion Paper 29}.
+
+\bibitem{paper29B}
+\emph{Physical polarization of high-frequency vacuum gravity: transport, exact preparation, and curvature readout},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/29b-high-frequency-graviton-polarization}{companion Paper 29B}.
+
+\bibitem{transfer}
+\emph{Polarization defects and opposite graviton transfers in exact vacuum sandwiches with identical geodesic returns}, edition 2,
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/29b-31-polarization-defects-graviton-transfer}{companion Paper 29B+31+Q19}.
+
+\end{thebibliography}
+\end{document}

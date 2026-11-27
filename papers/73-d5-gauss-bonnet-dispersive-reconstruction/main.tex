@@ -1,0 +1,419 @@
+\pdfoutput=1
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amsthm,amssymb,mathtools,booktabs}
+\usepackage[margin=28mm,top=24mm,bottom=26mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Crossed Dispersion from Real-Transfer Graviton Data in Five Dimensions}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{assumption}[theorem]{Assumptions}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\dS}{\mathrm{d}}
+\newcommand{\GB}{\alpha_{\mathrm{GB}}}
+\newcommand{\IR}{\mathrm{IR}}
+\newcommand{\sinc}{\operatorname{sinc}}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[1]
+\title{Crossed Dispersion from Real-Transfer Graviton Data in Five Dimensions\\
+\large An all-polarization Gauss--Bonnet test at tree order}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We reconstruct a smeared crossing-symmetric sum rule for a full-polarization five-dimensional graviton contraction from ordinary spacelike fixed-transfer data. The inputs are ordinary real Cauchy identities (including the twice-subtracted arc), analyticity on finite low-energy contours, an absolute real norm of the coherent heavy cut, and compatible positive physical tensor partial waves. A positive angular approximate identity first yields the finite fourth-order forward moment. Analyticity of that moment then gives exponential control of spin in units of the heavy mass. This controls the cut on shrinking complex-transfer discs and justifies a masswise reconstruction, without a large moving-transfer contour for the full amplitude. A separate compact signed test is positive on every physical partial-wave block and removes local contaminants while retaining the Newton pole. A conditional weak/tree pure-metric Gauss--Bonnet inequality illustrates the construction; it is not an optimized bound. Type-II and heterotic sphere data check different steps at tree level, including nonzero Gauss--Bonnet matching in the latter after its light states are accounted for.
+\end{abstract}
+
+\section{Statement and conventions}\label{sec:main}
+Use all-incoming massless momenta, with $s+t+u=0$ and $s>0$, $t,u<0$ in the physical $s$ channel. In five flat spacetime dimensions normalize
+\begin{equation}\label{eq:action}
+ S_{\rm EFT}=\frac{1}{16\pi G}\int \dS^5x\,\sqrt{-g}
+ \left[R+\GB\bigl(R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}
+           -4R_{\mu\nu}R^{\mu\nu}+R^2\bigr)+\cdots\right].
+\end{equation}
+The four-graviton light channel is pure metric: the light pole data are those of parity-even on-shell graviton cubics, with no extra massless or subthreshold matter poles. We work at leading weak/tree order, so the light terms are meromorphic, not loop cuts. $M>0$ is the heavy spectral threshold in this channel, $S\ge\mu=M^2$ is squared heavy mass, and $\dS\lambda(S)$ denotes a positive, transfer-independent dominating measure (it need not be Lebesgue measure). The gauge-invariant scalar contraction $\mathcal A$ is defined in Section~\ref{sec:projection}; it is divided by $25$ so the forward polarization test is the normalized full trace. Write $\rho_S(t)$ for its \emph{coherent}, spin-summed absorptive density in the convention below. Individual angular terms need not be positive at $t<0$.
+
+Set
+\begin{equation}\label{eq:coords}
+ \nu=s+t/2,\qquad x=-st-su-tu=\tfrac12(s^2+t^2+u^2)
+     =\nu^2+3t^2/4,\qquad y=-stu=tx-t^3 .
+\end{equation}
+At ordinary fixed negative $t$, take the finite low Laurent coefficients
+$B(t)=[\nu^4]\mathcal A$ and $C_m(t)=[x^m]\mathcal A$ for $m\ge1$, using the even $s/u$ branch. A bracket here denotes a Cauchy coefficient on a finite low contour that accounts for all light and projector poles; it is not Taylor expansion through a moving light pole.
+
+\begin{assumption}\label{ass:main}
+\leavevmode
+\begin{enumerate}
+\item Full crossing of the amplitude, and genuine ordinary fixed-real-spacelike-transfer Cauchy identities on some band adjoining $t=0$:
+\begin{align}
+ B(t)&=2\int_{\mu}^\infty
+       \frac{\rho_S(t)}{(S+t/2)^5}\,\dS\lambda(S),\label{eq:B}\\
+ C_m(t)&=\int_{\mu}^\infty
+       \frac{(2S+t)\rho_S(t)}{X_S(t)^{m+1}}\,\dS\lambda(S),
+       \qquad X_S(t)=S^2+St+t^2,\quad m\ge1.\label{eq:C}
+\end{align}
+The Cauchy assumption includes the ordinary arc condition at $m=1$; it is not inferred from the more-subtracted $B$. The two $\nu$ cuts are combined in \eqref{eq:B} and quotiented by the even coordinate in \eqref{eq:C}. Identities almost everywhere in transfer with the prescribed low analytic representative suffice.
+\item Joint tree EFT holomorphy near common finite low contours after accounting for the simple Newton $t$-pole. In particular the $t$-pole residue on the $\nu$ contour is at most quadratic in $\nu$, so $B(t)$ extends holomorphically to $0$. On a fixed, subthreshold $x$ circle the scalar is holomorphic in a small punctured transfer disc with a bound $O(|t|^{-1})$; poles in the energy variable inside the circle remain included. It would suffice on the $x$ circle to have this bound and joint holomorphy on the shrinking transfer neighborhoods used below.
+\item The coherent cut obeys the absolute real norm
+\begin{equation}\label{eq:real}
+ \int_0^{Q_0}q^2\,\dS q\int_\mu^\infty
+ S^{-3}|\rho_S(-q^2)|\,\dS\lambda(S)<\infty
+\end{equation}
+on a nonzero band. Neither a sum of angular absolute values at real nonzero transfer nor a mass-integrated forward trace is assumed.
+\item The heavy cuts have positive semidefinite physical $SO(4)$ partial-wave matrices. They define the same angular pairing as $\rho_S$ in the fixed-transfer identities. Finite positive forward trace at almost every individual mass is sufficient; it is automatic for meromorphic levels with finitely many finite-spin contributions. Alternatively, for an angular distribution the positive expansion must pair with the compact physical-angle tests in Section~\ref{sec:tauberian} and give the same tested values as the coherent density. This includes any forward-supported term; off-forward values alone do not establish compatibility.
+\end{enumerate}
+\end{assumption}
+
+\begin{theorem}[Real-to-crossed reconstruction]\label{th:reconstruct}
+Under Assumptions~\ref{ass:main}, the ordinary moment \(B(0)\) equals the finite positive forward trace integral \eqref{eq:forward}. The normalized physical spin weights satisfy the exponential estimate \eqref{eq:spinmoment}, and the coherent cut has the weighted local holomorphic control \eqref{eq:disc}. For sufficiently small \(A>0\), the crossing-symmetric low coefficient defined by \(a=y/x\) satisfies \eqref{eq:cs} for every measurable \(W\) supported in \((-A,0)\) with \(|W(a)|\leq C_W|a|^{1/2}\). The exterior contour in its proof is only for an auxiliary resolvent at a single spectral mass.
+\end{theorem}
+
+\begin{theorem}[Gauss--Bonnet application]\label{th:main}
+Under Assumptions~\ref{ass:main}, assume also the local tree EFT expansion for the uncontracted amplitude: after its listed light exchanges are separated, the remainder is a polynomial Ward-transverse contact amplitude or a normally convergent sum of such terms in a common complex neighborhood of the chosen finite low contours. Then there is a sufficiently small transfer bandwidth $Q>0$ for which
+\begin{equation}\label{eq:bound}
+ 0\le 8\pi G\left[\frac{C_{10}}{Q^2}+\frac23\GB\right],
+ \qquad
+ \GB M^2\ge-\frac{3}{2}C_{10}(M/Q)^2,
+ \qquad 0<C_{10}<990 .
+\end{equation}
+Here $C_{10}$ is the exact pole cost of the compact signed profile in Section~\ref{sec:matching}. Its angular positivity certificate works at every $0<Q/M\le10^{-5}$. The qualitative hypotheses imply some such $Q$, not a uniform numerical lower bound on $Q$. The displayed bandwidth for the angular certificate is not a uniform bandwidth for the reconstructed spectral identity.
+\end{theorem}
+
+No auxiliary forward regulator is introduced and the Newton pole is not subtracted. The finite transfer bandwidth \(Q\) is part of the signed test. Theorem~\ref{th:reconstruct} is proved in Sections~\ref{sec:tauberian}--\ref{sec:reconstruction}; Section~\ref{sec:matching} gives the separate lower-subtraction test and the application. None of these steps proves the ordinary Regge/Cauchy inputs. The two angular tests have different purposes and are not interchangeable.
+
+\section{The full-polarization scalar and its Gram comparison}\label{sec:projection}
+Put $r_i=\sum_j(k_i\cdot k_j)k_j$, $D_i=k_i\cdot r_i=(s^2+t^2+u^2)/4$ and $P_i=1-k_i\otimes r_i/D_i$. Replace $e_i$ by $E_i=P_i e_i P_i^T$, in which longitudinal shifts are killed since $P_i k_i=0$. The representative is still transverse and tracefree on shell. Let $\mathcal A$ be the graviton amplitude contracted against the three ambient tensor pairings of the $E_i$, each multiplied, for its channel $v=s,t,u$, by
+\begin{equation}\label{eq:weight}
+ W_v=1-\frac{2v^2}{s^2+t^2+u^2},
+\end{equation}
+and divide by $25$. The channel weights permute with pairings, so the contraction is fully crossing symmetric and rational. The complex kinematic poles of the projection at $x=0$ are real features of the chosen contraction and are included in the low contours. At real forward transfer $W_t=1$ and $W_s=W_u=0$. The transverse little-group spin-two fiber has dimension five; the forward test is $I/25$ on the ordered two-particle fiber.
+
+Here and in the angular proof it is convenient to call the \emph{undivided} matrix test $T$ ($T(0)=I$). The normalization of its trace, $\rho_S$ and the corresponding forward quantity $F_S$ always includes the common factor $1/25$; it can instead be put in the positive spectral weights. Positivity is unaffected.
+
+Use the CM direction sphere $S^3\simeq SU(2)$ and quaternion left frames for the transverse real three-plane. Embed the ordered transverse spin-two pair at $n$ isometrically into the spatial ambient four-vector tensor product, using the pointwise embedding $I_n$. Its entries are polynomial of degree four in the unit quaternion $n$. The matrix
+\begin{equation}\label{eq:gram}
+ G(n,m)=I_n^*I_m
+\end{equation}
+is a positive-type Gram kernel. It is not the kernel obtained by imposing unitary parallel transport between moving screens. In an axial frame put $z=n\cdot m=\cos\theta$ and $\gamma=z\sin\theta/(3+z^2)$. The corrected one-vector contractions for the three pairings have plane factors
+\[
+ a_s=1+2\gamma^2,\qquad
+ a_t=z+2\gamma\sin\theta+\gamma^2(1-z),\qquad
+ a_u=z+2\gamma\sin\theta-\gamma^2(1+z),
+\]
+and act as identity on directions orthogonal to the plane. The induced spin-two operator for the plane factor $a$ is the traceless-symmetric part of $e\mapsto L(a)eL(a)^T$ with $L(a)=\operatorname{diag}(a,1,1)$. These expressions follow by substituting the four CM momenta in $P_i$. In the near $t$ pairing the frame rotation is the same as in $G$, where the plane factor is $z$. Thus $T-G=O(\theta^2)$ in local Cartesian angular coordinates. The two other weighted pairings start at order $\theta^2$ by \eqref{eq:weight}. This quadratic agreement, rather than merely the forward identity, is used twice below.
+
+For a radial cap profile $g(r)$, $r=\theta/\Theta$, the scalar $SU(2)$ convolution with Haar measure normalized to one has degree-$J$ eigenvalue
+\begin{equation}\label{eq:central}
+ \frac{\Theta^3}{2\pi^2}\,
+ \mathcal F_{\mathbb R^3}\{g(r)\sinc(\Theta r)\}((J+1)\Theta),
+\end{equation}
+where the radial Euclidean transform is $4\pi\int r^2g(r)\sinc(kr)\dS r$. Multiplication by $\sinc(\Theta r)$ averages the Euclidean transform over a positive momentum shell of radius $\Theta$. The operator with kernel $g(r)G(n,m)$ is the scalar convolution acting on the embedded sections $I_n f(n)$. Multiplication by this degree-four polynomial changes spherical degree by at most four. By Parseval and $I_n^*I_n=I$, a lower bound on the Euclidean transform for $|k'-(J+1)\Theta|\le5\Theta$ bounds the entire normalized degree-$J$ Gram block from below. Applying this result before restriction to Bose sections covers all physical $SO(4)$ multiplicity blocks; no scalar subset of polarizations is used.
+
+\section{The ordinary forward fourth-order moment}\label{sec:tauberian}
+\begin{lemma}[Positive angular approximate identity]\label{lem:tauberian}
+Under Assumptions~\ref{ass:main}, the positive forward trace $F_S$ of the normalized heavy cut satisfies
+\begin{equation}\label{eq:forward}
+       B(0)=2\int_\mu^\infty S^{-5} F_S\,\dS\lambda(S)<\infty .
+\end{equation}
+This is a $k=4$ statement, not a finite forward $k=2$ moment.
+\end{lemma}
+\begin{proof}
+Use the nonnegative probability profile
+\[
+ w_\epsilon(q)=168\epsilon^{-3}q^2(1-q/\epsilon)^5
+ \mathbf1_{[0,\epsilon]}(q).
+\]
+We first establish positivity on every physical block after exact ordinary fixed-transfer smearing, including the factor $(1-q^2/(2S))^{-5}$ in \eqref{eq:B}. Here
+$\Theta=2\arcsin(\epsilon/\sqrt S)$ and
+$r\mapsto \sin(\Theta r/2)/\sin(\Theta/2)$ gives the exact $q/\epsilon$. On the scaled cap the reference radial profile is $g=168(1-r)_+^5/(4\pi)$. Its Euclidean transform has lower bound $c(1+k)^{-4}$. Indeed the transform of $(1-r)_+^2$, omitting the common $4\pi$, is
+$2[k(2+\cos k)-3\sin k]/k^5$. The bracket is positive on $0<k\le\pi$ by differentiating and using $\tan(k/2)>k/2$, and on $k>\pi$ it is bounded below by $k-3>0$. The integral gives positivity at zero, and a positive interior scale mixture of $(v-r)_+^2$ gives the stated lower bound for $(1-r)_+^5$.
+
+With the exact transfer and Haar Jacobians the kernel differs from $gG$ by a term of scaled $L^1$ norm $O(\Theta^2)$ and scaled distributional bi-Laplacian total variation $O(\Theta^2)$. To see the derivative budget, the radial reparametrization is $r+O(\Theta^2)$ in right $C^4$, and its measure ratio
+\[
+ (q/(\epsilon r))^2 (q/\epsilon)'\,\sinc(\Theta r)^{-2}
+                      (1-q^2/(2S))^{-5}
+\]
+is $1+O(\Theta^2)$ in these norms. Use $T-G=O(\theta^2)$ in the smooth Cartesian factor. The profile vanishes to order five at the cap edge, so no endpoint term survives. At the origin a right radial cusp has $\Delta^2r=-8\pi\delta_0$ in three dimensions plus an integrable curved-metric remainder; its coefficient in the error is $O(\Theta^2)$. Other derivative terms are integrable in the radial $r^2\dS r$ measure. The norm estimates and the Casimir $J(J+2)$ bound the normalized error by $C\Theta^2(1+k)^{-4}$ at $k=(J+1)\Theta$, using $L^1$ near $k=0$. The comparison \eqref{eq:central} has lower bound $c'(1+k)^{-4}$. Small enough $\epsilon/M$ makes the exact operator positive, uniformly in mass and spin.
+
+For each fixed $\epsilon$, $w_\epsilon$ is bounded by a constant times $q^2$, so \eqref{eq:real} and \eqref{eq:B} justify Fubini and identify the mass integral of the positive block test with $\int w_\epsilon(q)B(-q^2)\dS q$. This tends to $B(0)$. Each positive block test tends to its forward trace. Compatibility in Assumption~\ref{ass:main} permits Fatou either masswise, or directly over the tested positive block expansion for distributional cuts. Hence $2\int S^{-5}F_S\dS\lambda\le B(0)$. In particular the forward trace is finite at almost every mass even in the alternative distributional case. Bounded real-angle matrices times this newly finite positive weight now justify dominated convergence, yielding equality. A forward delta that was not present in the angular pairing would invalidate this step, not provide a counterexample to the claimed implication.
+\end{proof}
+
+\section{An analytic \texorpdfstring{$k=4$}{k=4} moment gives exponential spin control}\label{sec:spin}
+\begin{proposition}\label{prop:spin}
+There is $c>0$ such that the actual polarization-block forward weights obey
+\begin{equation}\label{eq:spinmoment}
+ \int_\mu^\infty S^{-5}\sum_{\varrho=(j_L,j_R)}
+       F_{S,\varrho}
+       \exp\!\left(c\frac{j_L+j_R}{\sqrt S}\right)
+       \dS\lambda(S)<\infty .
+\end{equation}
+No hard spin bound or uniform analyticity of the full high-energy amplitude in transfer is used.
+\end{proposition}
+\begin{proof}
+The key is to obtain a common positive Fourier measure even though the true transfer cut is a contracted tensor. Let $\eta=\mu/S$, $n_0=(\sqrt\eta,0,\sqrt{1-\eta},0)$, and let $n_\phi$ rotate $n_0$ through angle $\phi$ in the first two ambient coordinates. Then
+\begin{equation}\label{eq:latitude}
+ n_0\cdot n_\phi=1-\eta(1-\cos\phi),\qquad
+ t(\phi)=-\frac\mu2(1-\cos\phi).
+\end{equation}
+In particular $t(\phi)$ is the same at all masses. For a positive physical block, include the positive square root of its absorptive matrix in the production map $V_n$ from the ordered spin-two fiber to the intermediate representation. Vectorize $V_n I_n^*$ as a vector $\Psi_n$ in the intermediate representation tensored with the dual ambient tensor space. Equivariance gives $\Psi_{n_\phi}=e^{i\phi L}\Psi_{n_0}$, where $L$ is the rotation generator on this tensor product. The Gram contraction \eqref{eq:gram} produces
+$\langle\Psi,e^{i\phi L}\Psi\rangle$, a positive characteristic with integer circle-frequency weights $\|\Psi_m\|^2$. Its value at zero is precisely the positive block forward weight. The common normalization is included in $\Psi$. Sum the blocks and integrate with $2S^{-5}\dS\lambda(S)$ to obtain an even characteristic $F(\phi)=\int e^{im\phi}\dS\sigma(m)$ of a finite positive measure, by Lemma~\ref{lem:tauberian}. Evenness follows from the Gram scalar's rotational invariance and parity.
+
+Lift the difference of physical tests to the ambient slot as
+$I_m[T(m,n)-G(m,n)]I_n^*$ (here $m$ denotes the second direction in this formula). This is an operator insertion on the finite ambient space, not on the intermediate representation. It is analytic on a common small complex $\phi$ disc, uniformly in $S$ by the rational screen formula; there is no denominator zero near the common nonzero dimensionless forward value. The difference is $O(\phi^2)$ by the quadratic agreement above. Multiplying by the energy factor $(1+t(\phi)/(2S))^{-5}$ has the same ordinary quadratic effect. Consequently
+\begin{equation}\label{eq:ambient}
+ B(t(\phi))=F(\phi)+\phi^2 E(\phi)
+\end{equation}
+on the real interval, where $E$ is an integral of the same rotating vectors with an inserted analytic ambient operator $N_S(\phi)$. Its Taylor coefficients have a common bound $CR^{-l}$. The ambient slot has circle weights in $[-4,4]$; an insertion therefore couples frequencies only with $|m-m'|\le8$. Cauchy--Schwarz in each adjacent pair bounds its order-$d$ differentiated rotation sum by
+$17\|N\|\sum_m (|m|+8)^d\|\Psi_m\|^2$.
+The derivative cost is of order $d$, not $2d$.
+
+Let $u_j=\int |m|^j\dS\sigma(m)/j!$ and $b_k=u_{2k}$. Inductively suppose moments through order $2k-2$ exist. The bounded shift estimate makes $E$ of class $C^{2k-2}$ on the real interval. Equation~\eqref{eq:ambient} then gives a Peano expansion of $F$ to order $2k$. If $T_h$ denotes real translation by $h$, the positive difference
+\[
+ h^{-2k}(2-T_h-T_{-h})^kF(0)
+   =\int\left(\frac{2-2\cos(mh)}{h^2}\right)^k\dS\sigma(m)
+\]
+has a finite limit from this expansion. Fatou gives the moment of order $2k$; subsequently $2-2\cos z\le z^2$ identifies the coefficient $[\phi^{2k}]F=(-1)^kb_k$. The induction starts with the finite mass in \eqref{eq:forward}.
+
+This induction also gives a uniform analytic radius for the positive moments. Indeed, the coefficient bound for $E$ through order $2k-2$ is the convolution of the coefficients of
+$17C(1-z/R)^{-1}e^{8z}$ and $\sum_{j\le2k-2}u_jz^j$.
+Use $u_{2l+1}\le u_{2l}+u_{2l+2}$ (Cauchy--Schwarz with factorials) and sum
+$b_k\le|[\phi^{2k}]B(t(\phi))|+|[\phi^{2k-2}]E|$
+with weight $h^{2k}$ through $k=K$. The second sum is bounded by a common multiple of
+\[
+       h^2(1-h/R)^{-1}e^{8h}(1+h+h^{-1})
+                      \sum_{k=0}^{K-1}b_kh^{2k}.
+\]
+For $h>0$ small it can be absorbed, while the $B$ sum is finite by the assumed analyticity. Thus $\int\cosh(hm)\dS\sigma(m)<\infty$.
+
+To turn this circle estimate into \eqref{eq:spinmoment}, decompose the scalar Gram coefficient on $S^3$ into zonal harmonics with positive weights. A degree-$J$ zonal harmonic $P_J$ is normalized by $P_J(1)=1$. Its latitude frequency distribution has second moment
+$A_J=\eta J(J+2)/3$ and fourth moment $A_J+3\eta^2P_J''(1)\le A_J+3A_J^2$. The formulas follow by differentiating the normalized $D=5$ Gegenbauer polynomial at one in \eqref{eq:latitude}. For $A_J\ge1$, Paley--Zygmund on the squared frequency gives mass at least $1/16$ at $|m|\ge\sqrt{A_J/2}$; the complementary case has bounded $J/\sqrt S$. The Gram vector is invariant under the stabilizer $SO(3)$ of the reference direction. Hence its decomposition in $\varrho\otimes U^*$, with $U$ the ambient slot, uses only spherical $SO(4)$ types $(j,j)$, $J=2j$. The shifts of the two spins from $\varrho=(j_L,j_R)$ are at most two, since $U$ is contained in four vector factors. Thus $J\ge j_L+j_R-4$ on every contributing spherical type. This proves \eqref{eq:spinmoment} by positivity.
+\end{proof}
+
+\begin{lemma}[Coherent shrinking-disc norm]\label{lem:disc}
+After shrinking the band to $0<-a\le A\le\mu/64$, the actual heavy cut has a per-mass holomorphic extension on
+$|t-a|\le64|a|^3/S^2$, almost everywhere, with
+\begin{equation}\label{eq:disc}
+ \int_{-A}^0 |a|^{1/2}\dS a\int_\mu^\infty S^{-3}
+       \sup_{|t-a|\le64|a|^3/S^2}|\rho_S(t)|\,\dS\lambda(S)<\infty .
+\end{equation}
+\end{lemma}
+\begin{proof}
+Near real physical transfer $a<0$, the angle satisfies $t=-S\sin^2(\theta/2)$. The disc displacement in angle is $O(|a|^{5/2}S^{-5/2})$, uniformly by the local derivative of this change of variables. The scattering-plane generator has norm at most a constant times $j_L+j_R$ on a block. The analytic tensor projector has uniformly bounded first angular derivative. Thus its complex change on the disc is dominated blockwise by
+\[
+ C|a|^{5/2}S^{-2}F_{S,\varrho}
+ \left(1+\frac{j_L+j_R}{\sqrt S}\right)
+       e^{c'(j_L+j_R)/\sqrt S}.
+\]
+Choose $A$ so that $c'<c$ in \eqref{eq:spinmoment}; the polynomial factor is then absorbed on a smaller exponential margin. Combining the $S^{-3}$ weight of \eqref{eq:disc} with $S^{-2}$ pays for the entire change from the real base value. The base value is the \emph{coherent} $\rho_S(a)$ and is integrable by \eqref{eq:real}; no absolute termwise estimate of the real angular sum is substituted for it. The exponential moment also gives absolute analytic convergence of the block series on inner discs and identifies the extension with the real density on overlaps.
+\end{proof}
+
+\section{Crossing-symmetric reconstruction from ordinary cuts}\label{sec:reconstruction}
+Let $a=y/x$ and choose the branch
+$t=a+t^3/x$ near $t=a$. Define $C_{\rm cs}(a)$ as the $x$-linear Cauchy coefficient on the finite low $x$ circle with this substituted transfer. This operation accounts for the same interior light and kinematic poles; it does not take a high-energy moving-transfer contour for the full amplitude.
+
+Introduce $\zeta$ by $t=a+\zeta t^3/x$. By Assumption~\ref{ass:main}, on a common finite subthreshold $|x|=R_{\rm low}$ the amplitude is holomorphic for $|t-a|\le |a|/2$ with norm $O(|a|^{-1})$, for all sufficiently small real $a<0$. This assumption does not follow from the analyticity of $B$ alone. For $|\zeta|\le2$ and smaller $A$, the implicit map contracts into that disc. Lagrange--B\"urmann inversion and Cauchy then give
+\begin{equation}\label{eq:lagrange}
+ C_{\rm cs}(a)=C_1(a)+
+ \sum_{n\ge1}\frac1{n!}\partial_a^{n-1}
+                       [a^{3n}\partial_a C_{n+1}(a)].
+\end{equation}
+The low-circle error at order $n$ is bounded by a common constant times $2^{-n}/|a|$. This is integrable against any $|W(a)|\le C_W|a|^{1/2}$.
+
+For the spectral side, use the auxiliary one-mass resolvent
+\begin{equation}\label{eq:resolvent}
+ R_S(x,t)=\frac{(2S+t)\rho_S(t)}{X_S(t)-x}.
+\end{equation}
+On $|x|=S^2/2$ and $|\zeta|\le2$ the implicit map sends the disc of Lemma~\ref{lem:disc} strictly into itself. In fact $|t|\le(1+1/64)|a|$, the displacement is below $5|a|^3/S^2$, and the derivative of the fixed-point map is below $1/100$. The denominator on that circle is greater than $(2/5)S^2$ in modulus. Therefore the $x$-linear coefficient of $R_S(x,t(x,a;\zeta))$ is bounded by
+$16S^{-3}\sup_{|t-a|\le64|a|^3/S^2}|\rho_S(t)|$.
+Cauchy in $\zeta$ bounds its $n$th term by the same expression times $2^{-n}$. Lemma~\ref{lem:disc} permits all mass and transfer interchanges in the resulting series. For the differentiation of the fixed-transfer coefficients in \eqref{eq:lagrange}, on any compact interval away from $a=0$, Cauchy's estimate for the integrand of $C_{n+1}$ gives order-$j$ derivative bound, $j\le n$, by a constant times
+$S^{-2n-3+2j}\sup |\rho_S|\le C_n S^{-3}\sup |\rho_S|$.
+Thus weak differentiation of the ordinary identities against compact tests suffices; the low side selects their analytic representatives. No series of derivatives of the compact smearing profile is needed.
+
+For a fixed $S$, the branch is holomorphic throughout $|x|\ge S^2/2$, and the auxiliary resolvent there decays like $x^{-1}$ at infinity. Its only exterior pole is simple near $X_S(a)$: the small uniform transfer displacement makes $X_S(t(x,a))-X_S(a)$ less than $S^2/100$, so Rouch\'e's theorem on a surrounding circle gives one simple root and the same bound excludes any exterior root outside it. At the pole the invariants give
+\[
+  x_S(a)=\frac{S^3}{S-a},\qquad
+  t_S=t(x_S(a),a).
+\]
+Differentiate $x_S=X_S(t(x_S,a))$ in $S$ at fixed $a$. The factor $1-(S+2t_S)t_x$ is the moving-pole correction, and
+\[
+ \frac{2S+t_S}{x_S^2[1-(S+2t_S)t_x]}=
+        \frac{\partial_S x_S}{x_S^2}=\frac{2S-3a}{S^4}.
+\]
+The positive sign is the low coefficient's negative of the exterior resolvent residue. Inserting the masswise computation into the justified series proves the exact smeared equality
+\begin{equation}\label{eq:cs}
+ \int W(a)C_{\rm cs}(a)\,\dS a
+  =\int W(a)\,\dS a\int_\mu^\infty
+      \frac{2S-3a}{S^4}\rho_S(t_S(a))\,\dS\lambda(S).
+\end{equation}
+The exterior contour used here is only for \eqref{eq:resolvent} at a fixed $S$, not for the physical amplitude. The analytic continuation was likewise a local extension of the coherent cut, not a high-energy complex-transfer assumption. On the real branch, $t_S$ is physical and $q^2=-a=S\sin^2\theta/(3+\cos^2\theta)$.
+
+\section{Signed all-wave test and Gauss--Bonnet matching}\label{sec:matching}
+\subsection{Compact profile with exactly the required moments}
+Let $B_{10}(k)$ be the normalized three-dimensional Euclidean Fourier transform of $(1-r^2)^{10}\mathbf1_{r\le1}$. It is a constant multiple of $J_{23/2}(k)/k^{23/2}$. Let $P_{10}(k^2)$ be the Taylor polynomial of $B_{10}(k)^{-2}$ through $k^{20}$. The real-zero Bessel product gives nonnegative coefficients of this polynomial. Choose a positive smooth scale probability $\chi$ by convolving a beta$(4,4)$ density on $[17/64,30/64]$ with a nonnegative smooth unit mass supported in $[-1/64,1/64]$. Put
+\begin{equation}\label{eq:H}
+ H_{10}(k)=\int \chi(v) B_{10}(vk)^2P_{10}((vk)^2)\,\dS v.
+\end{equation}
+The radial inverse transform $g(r)$ is real and signed, supported in $r\le31/32$. It is obtained by the scaled lens convolution of the two ball profiles, application of the finite differential operator $P_{10}(-\Delta)$ with the corresponding scales, and scale averaging. It is an ordinary radial density and has a finite right derivative at zero. The measure $\dS w(r)=4\pi r^2g(r)\dS r$ is absolutely $r^{-2}$ integrable. Expanding its transform $H_{10}(k)=1+O(k^{22})$ gives
+\begin{equation}\label{eq:nulls}
+       \int\dS w=1,\qquad \int r^{2j}\dS w=0
+                      \quad(1\le j\le10).
+\end{equation}
+Scale this measure to $q=Qr$. With $a=-q^2$ its signed density $W(a)$ obeys the bound required in \eqref{eq:cs}.
+
+\subsection{Finite-energy positivity of the exact tensor functional}
+The spectral measure in \eqref{eq:cs} has the positive mass factor $2S^{-3}$ times $1+3q^2/(2S)$. On each mass let $\Theta$ be the near-forward angle with $q=Q$, and put
+\[
+ \delta=Q/\sqrt S,\quad r=\theta/\Theta,\quad
+ \varrho(r)=q(\Theta r)/Q,\quad k=(J+1)\Theta .
+\]
+In the range $\delta\le10^{-5}$, $\Theta\le(9/4)\delta\le9/400000$. The exact normalized angular kernel on the cap is $A(r)g(\varrho(r))T$, where
+\begin{equation}\label{eq:aratio}
+ A=(\varrho/r)^2\varrho'\,\sinc(\Theta r)^{-2}
+                  (1+3Q^2\varrho^2/(2S)).
+\end{equation}
+The normalization drops only common positive mass/angle factors. By \eqref{eq:central}, the operator with kernel $g(r)G$ has normalized lower bound $1/256$ at $k\le21$ and $19/k^4$ at $k\ge21$. These constants use the Euclidean estimates
+$H_{10}(k')>1/256$ for $k'\le 21+45/400000$ and
+$H_{10}(k')>20/k'^4$ for $k'\ge20$, followed by the shell and degree shift $|k'-k|\le5\Theta$.
+
+For clarity, the transform estimates can be verified without sampling spins. Alternating rational Taylor bounds give
+$B_{10}(11)>1/16$, $B_{10}(13)>1/60$ and
+$B_{10}(14.1)>1/160$ in the initial monotonic region. The first bounds the low $k$ interval since $v\le31/64$. Positive scale subintervals and the top coefficients of $P_{10}$ give the lower bound on each of $[20,32]$, $[32,40]$ and $[40,45]$. For $k\ge45$ take $11/32\le v\le7/16$ where the scale density exceeds $6/25$. For the corresponding $z=vk$ interval, the Riccati--Bessel function
+$u(z)=\sqrt{\pi z/2}J_{23/2}(z)$ has energy
+$u'^2+(1-132/z^2)u^2$ between $1-132/z^2$ and one. Integrating its identity
+$E=(uu')'+2(1-132/z^2)u^2$ gives mean square $u^2>1/32$ there. Together with $(23!!)^2[P_{10}]_{10}>1600$, this proves the stated tail lower bound. The exact rational short-interval and derivative checks are specified in the supplement.
+
+Here are the estimates on the \emph{difference} that make this a tensor certificate. Set $p=\pi g$, $D=T-G$, $f=A p(\varrho)$ and $h=f-p$, so the scaled difference is $(hG+fD)/\pi$. From
+$\varrho=rL(\Theta r)/L(\Theta)$,
+$L(z)=\sin z/[z\sqrt{3+\cos^2z}]$, and \eqref{eq:aratio},
+\[
+ |\varrho-r|\le\Theta^2r/10,\qquad
+ \|\varrho-r\|_{C^4}\le\Theta^2,\qquad
+ \|A-1\|_{C^4}\le2\Theta^2.
+\]
+The corresponding Cartesian bounds for derivatives of $D$ of orders $0,\ldots,4$ are $16\Theta^2 r^{2-d}$ at order $d$. They follow by expanding the exact axial expressions of Section~\ref{sec:projection} through quartic order and bounding the remainder on a common small complex angular chart. In particular the quadratic term is the spin-two plane derivative on each near leg plus the weighted flip-minus-Bell term. This is an actual Cartesian quadratic form, not just a directional norm bound. The common frame rotation keeps the $O(\Theta)$ transport entirely in $G$.
+
+For the weighted profile derivatives let
+$U_{d,b}$ bound $\int r^b|p^{(d)}(r)|\dS r$. Compute these bounds by a Bernstein majorant of the exact lens polynomial and its differentiated endpoint terms. In the scale average the endpoint terms start at $d=3$, because the raw lens profile vanishes together with its first derivative at its outer radius. They are controlled by $\|\chi'\|_1<32$ and $\|\chi''\|_1<1024$, already valid before the smooth convolution. This gives, for the required pairs $(d,b)$,
+\[
+ \int r^b|h^{(d)}(r)|\dS r\le
+ \Theta^2\left[U_{d+1,b+1}/4+
+                          100\sum_{j=0}^d U_{j,b}\right].
+\]
+Here the first term integrates the literal displacement from $r$ to $\varrho(r)$ via Fubini, and the remaining terms bound the exact chain-rule and Jacobian differences. Contracting Cartesian derivatives in the curved normal-coordinate bi-Laplacian, with the rescaled metric
+$\sinc^2(\Theta r)\delta_{ij}+[1-\sinc^2(\Theta r)]x_ix_j/r^2$,
+gives the following verified budgets, in the normalization of the Gram lower bound:
+\[
+  \|E\|_1<2^{20}\Theta^2,qquad
+  \|\Delta^2 E\|_{\rm TV,ord}<2^{35}\Theta^2 .
+\]
+The second norm is the ordinary part of the scaled bi-Laplacian (not a bound discarding a negative distribution). Its sole origin delta is favorable: its coefficient is
+$-8\pi g'(0)(\varrho'(0)^4-1)I\succeq0$,
+as $g'(0)<0$ and $\varrho'(0)=\Theta/(2\delta)\ge1$. The $D$ term kills its cusp distribution quadratically, and scale smoothing removes outer boundary terms. The supplement gives the separate radial, matrix and curvature budgets and the exact replay for the displayed arithmetic inequalities.
+
+For $k\le21$ the $L^1$ budget is strictly below $1/256$. For $k\ge21$, Casimir division gives error at most
+$2^{35}\Theta^2/(k^2-\Theta^2)^2<19/k^4$.
+This proves positivity of the exact operator on every physical block. Contracting with the PSD absorptive matrices and using \eqref{eq:cs} now gives a nonnegative low-side functional. This result requires only $Q/M\le10^{-5}$ for angular positivity; the analytic reconstruction can require a smaller $Q$.
+
+\subsection{The retained pole and local terms}
+By homogeneity and the unit-normalized forward trace, Einstein gives $-8\pi G/a$ in the $x$-linear coefficient. The pure-metric four-derivative Gauss--Bonnet term gives $(2/3)(8\pi G)\GB$. To see its trace normalization, the forward invariant for two unit spin-two polarizations $E,F$ is
+\[
+ 1+2\Tr(E^2F^2)-2\widehat q\cdot(E^2+F^2)\widehat q ,
+\]
+multiplying $2(8\pi G)\GB s^2$ \cite[Eq.~(56) in the HTML edition]{BCR}. Independent normalized traces on the two screen fibers give $\langle E^2\rangle=\langle F^2\rangle=I/3$. The average of the invariant is therefore $1/3$. This uses a forward coefficient of local EFT data, never an assumed forward $k=2$ dispersive identity.
+
+To bound the remaining local contamination, use strongly Ward-transverse polynomial representatives of the four-graviton tensor module \cite[Eq.~(8), App.~A.2]{CHLPS}. The physical spin-two completeness tensor is the trace-subtracted symmetrizer built from \(\pi_{\mu\nu}=\eta_{\mu\nu}-k_\mu n_\nu-n_\mu k_\nu\), with \(k\cdot n=1,\ n^2=0\). Every correction to the covariant symmetrizer contains a \(k\) on either the amplitude side, where the polynomial Ward identity kills it, or the test side, where \(P_i k_i=0\). The remaining two \(P_i\)'s on the test side of each leg have at most \(D_i^{-2}\propto x^{-2}\) in total, including its trace term. The weight adds at most \(x^{-1}\), so each projected local contact has denominator at worst \(x^9\). Its crossing-symmetric polynomial numerator is a polynomial in \(x,y\). A monomial $x^i y^j/x^9$ can contribute to $[x]$ at $y=ax$ only for $i+j=10$, so $j\le10$. Derivative homogeneity ensures $j=0$ is the four-derivative sector already matched above. The remaining on-shell parity-even pure-graviton cubic structures have momentum degrees $2,4,6$. Exchange poles can therefore occur only through degree ten; at fixed $a$ their remaining $[x]$ terms have $1\le j\le3$ after the Einstein and single-GB orders. This uses meromorphic pure-metric tree locality, not mere contour holomorphy or a generic loop EFT. Normal convergence of the uncontracted local expansion on the low contours permits termwise extraction after the bounded projector there. Equation~\eqref{eq:nulls} then removes the full local tower without dropping the $x=0$ projector poles.
+
+Finally the dimensionless Newton-pole cost is
+\begin{equation}\label{eq:cost}
+ C_{10}=\int r^{-2}\dS w(r)=\int_0^\infty bH_{10}(b)\dS b .
+\end{equation}
+The identity is Abel regularization of the sinc transform, justified by absolute $r^{-2}$ smearing. The transform is positive and gives $C_{10}>0$. Direct integration of the rational raw lens profile gives
+\[
+ C_{\rm raw}=
+ \frac{5372874714177540760015498375447}
+      {59863441286320708007812500000}<90 .
+\]
+Averaging scales gives $C_{10}=C_{\rm raw}\,\mathbb E[v^{-2}]$. For the parent symmetric beta scale $v_0$ one has $v\ge v_0-1/64$. Convexity on $[1/4,29/64]$ bounds the expectation by the mean of the endpoint inverse squares, less than 11. This proves \eqref{eq:bound} with the Newton pole integrated in the physical band and no subtraction removing it.
+
+\section{Two scoped sphere-amplitude checks}\label{sec:string}
+\subsection{Type-II tree levels and the transfer window}
+Consider the zero-mode external graviton sphere amplitude of Type II reduced on a fixed torus to five dimensions, in string units $4/\alpha'=1$ \cite[App.~C]{CHLi}. Use the projection of Section~\ref{sec:projection}; strip an overall weak/tree coupling $g>0$. For this subsection write $a_0=q^2$ (not the negative $a$ of the crossing coordinate). Let $w_n(q)$ be the level-$n$ absorptive residue times the ordinary even $k=2$ Jacobian, divided by $g$, including the two ordinary crossed copies. Write the normalized Newton term as $N_{\rm pole}/q^2$.
+
+The gamma reflection at the simple $s=n$ pole of the Virasoro--Shapiro factor gives the level-dependent multiplier
+\[
+  n^{-2}\prod_{j=1}^{n-1}(1-a_0/j)^2
+    =n^{-2}\left[
+        \frac{\Gamma(n-a_0)}
+             {\Gamma(n)\Gamma(1-a_0)}\right]^2 .
+\]
+The remaining projected Type-II kinematic tensor has the form
+$n^4k(-a_0/n)$ with $k$ regular near zero: it is homogeneous of degree four in the Mandelstam variables, and the normalized scalar projector is regular at the real forward ratio. The ordinary even $k=2$ Jacobian is $2(n-a_0/2)^{-3}$. Uniform Stirling on a small fixed $0\le a_0\le Q^2$ gives
+\begin{equation}\label{eq:level}
+  w_n(q)=c(q^2)n^{-1-2q^2}
+               +O_Q(n^{-2-2q^2}),\qquad c(0)=2N_{\rm pole}>0 .
+\end{equation}
+Here $c(a_0)$ is analytic near the band and is proportional to $\Gamma(1-a_0)^{-2}$. The last normalization also follows by isolating the pole of $\zeta(1+2a_0)$ from the ordinary tree identity; the error sum is regular at zero. The same leading term holds for the reconstructed fixed-$a$ kernel: its relative Jacobian change is $O(a_0/n)$ and the real transfer displacement is $O(a_0^3/n^2)$.
+
+Define $\|f\|_{\rm band}=\int_0^Q q^2 |f(q)|\dS q$. Monotone integral comparison in \eqref{eq:level} gives, for $q>0$ down to the small-$q$ layer,
+\[
+ T_N(q)=\sum_{n\ge N}w_n(q)
+   =\frac{c(q^2)}{2q^2}e^{-2q^2\log N}
+                  +O_Q(N^{-1-2q^2}).
+\]
+Scaling $q$ by $1/\sqrt{\log N}$ gives
+\begin{equation}\label{eq:tail}
+ \sqrt{\log N}\,\|T_N\|_{\rm band}
+      \longrightarrow \frac{c(0)\sqrt\pi}{4\sqrt2}.
+\end{equation}
+In particular the $k=2$ cut is summable in the relevant real transfer norm while its unmodified pointwise forward sum diverges. This illustrates why the finite forward trace in Lemma~\ref{lem:tauberian} is a higher-subtraction statement. On the shrinking discs used in Lemma~\ref{lem:disc} the gamma reflection and uniform ratio estimate also bound the corresponding coherent residue by a constant times $n^2\exp(-c_1q^2\log n)$ for some $c_1>0$. Thus the weighted integrated norm is bounded by a summable level sequence $O(n^{-1}(1+\log n)^{-3/2})$ on a fixed sufficiently small band.
+
+For fixed $0<A_1<A_2<\infty$ let
+$L=\log(1/g)$ and $H_g=\sum_{A_1\le gn\le A_2}w_n$. Integral comparison at both rounded endpoints, with the same summable error, gives uniformly on the original band
+\[
+ H_g(q)=c(q^2)e^{-2q^2L}
+           \int_{A_1}^{A_2}v^{-1-2q^2}\dS v
+                    +O_{A_1,A_2,Q}(g e^{-2q^2L}).
+\]
+Consequently, after extension by zero past $Q\sqrt L$,
+\[
+ \begin{aligned}
+ H_g(p/\sqrt L)&\longrightarrow
+   c(0)\log(A_2/A_1)e^{-2p^2}
+       &&\text{in }L^1(p^2\dS p),\\
+ L^{3/2}\|H_g\|_{\rm band}&\longrightarrow
+      \frac{c(0)\log(A_2/A_1)\sqrt\pi}{8\sqrt2}.
+ \end{aligned}
+\]
+Dominated convergence uses a uniform Gaussian bound in $p$. The normalized mass tail $gn\ge A_1$ is $O(L^{-1/2})$ in the original band by \eqref{eq:tail}. The pole-subtracted total tree quantity is regular at zero; the sector $gn<A_1$ carries that quantity \emph{if the global Newton subtraction is assigned to that sector}. Assigning the full pole to the compact interior window instead gives a limit of minus the pole in the original norm, not a regular pointwise forward limit.
+
+Type II gives $\GB=0$ at this order. The results above concern the explicit projected sphere data and do not establish a limit for the interacting cut with widths, eikonal resummation or multi-string channels. Compactification can introduce light fields; the residue asymptotic itself does not assert the absence of additional light exchanges in another four-point process. The logarithmic angular layer is consistent with the tree-string and eikonal scale comparison of \cite[Secs.~2.1 and 2.4]{HZ}; it is not a replacement for a resummed window theorem. For the distinct ten-dimensional maximally supersymmetric dispersive bootstrap of the same tree amplitude, see \cite{Xu}.
+
+\subsection{Heterotic sphere amplitude with nonzero Gauss--Bonnet}
+\label{sec:heterotic}
+There is also a nonzero-coupling check of the \emph{functional}, distinct from the Type-II level-window asymptotic. Take zero-internal-charge external gravitons on a flat, flux-free heterotic torus with constant moduli, and use the full arbitrary-polarization sphere tensor \cite[App.~C, Eqs.~(119)--(121)]{CHLi}. In units $M_s^2=4/\alpha'=1$ its tensor factor is the supersymmetric and bosonic open factors multiplied together, the latter divided by $(1+s)(1+t)(1+u)$. The extra factors must be interpreted in the complete tachyon-free amplitude. Individually they are not extra physical exchange poles.
+
+On the near-forward bounded polarization chart of Section~\ref{sec:projection}, each of those two tensor factors is $O(|s|^2)$ after the bosonic rational division. For the potentially largest bosonic term the factor $su-t-1$ multiplies the near-transfer contraction $H_{14}H_{23}=O(t^2)$ in the conventions of \cite{CHLi}; the other ratios retain at most the same energy power. The four-leg representative shifts are $O(\sqrt{|t|/|s|})$ and do not increase it. Gamma reflection and the ratio asymptotic give decay of the normalized fixed-negative-transfer arc as $|s|^{2\Re t}$ on contours avoiding the pole cells. At level $n$ the same reflection supplies a zero proportional to $t$ that cancels the apparent forward $1/t$ before estimating the residue. On the small real band and the shrinking transfer discs this yields a coherent bound $C n^2\exp(-c_1 q^2\log n)$. After the $n^{-3}$ weight, its $q^2\dS q$ integral is at most a constant times $1/[n(1+\log n)^{3/2}]$. The physical finite-level block matrices are positive by sphere factorization. Thus the small-band angular and residue arguments test this actual tensor amplitude, rather than a scalar proxy. We do not infer the Type-II leading window prefactor from these bounds.
+
+The low-side check must account for every light state that can be exchanged. At a massless pole the two external gravitons have only noncompact momenta and polarizations. An internal index on either open-vector side then has no contraction in the corresponding cubic; a single internal gauge current also has zero sphere correlator with the two internal identity factors. Charge conservation excludes a single state of nonzero momentum, winding or gauge charge. Fermion parity excludes single fermion exchange. The remaining tensor product of noncompact transverse vector polarizations decomposes into graviton, two-form and trace scalar. The latter is the five-dimensional dilaton combination, not necessarily the ten-dimensional dilaton with the volume frozen. This counts states that can have a coupling to two such gravitons, not the spectrum of the compactification.
+
+At three massless points the open-vector parity-even structures have one or three momentum powers. Higher scalar momentum contractions vanish on shell; the supersymmetric factor has only the one-derivative structure. Possible closed cubics thus have two or four derivatives. In canonical five-dimensional Einstein frame the two-derivative graviton kinetic term is scalar independent, while the scalar and two-form kinetic terms are at least quadratic in the companion fields about this background. There is no two-derivative on-shell two-graviton--one-companion vertex. Any companion exchange therefore begins with two four-derivative vertices and a massless propagator, at homogeneous momentum degree six; associated local terms have the same degree. With $y=ax$ and $x=a^2 X$, the projected degree-six amplitude scales as $a^3$, whereas $\dS x/x^2$ scales as $a^{-2}$. This makes its low $[x]$ contour contribution linear in $a$, with all scaled light and projector poles still inside the contour. The first existing signed null in \eqref{eq:nulls} removes it exactly. Neither the Newton nor the four-derivative coefficient is shifted by this subtraction of a higher-degree moment.
+
+The on-shell string normalization is $\alpha_2 M_s^2=2$ \cite[Table~1]{CHLi}. Restricting to noncompact polarizations and normalizing the Einstein term by the same torus volume gives $\GB M_s^2=1/2$ in \eqref{eq:action}, since $\alpha_2=4\GB$. This yields a nonzero-Gauss--Bonnet tensor sphere test of the same signed matching after explicit light-state accounting. It does not turn the heterotic compactification into a pure-metric theory, enlarge Theorem~\ref{th:main} to arbitrary light sectors, or make a finite-coupling claim.
+
+\section{Relation to prior work and sharp limits}\label{sec:scope}
+Bellazzini--Cheung--Remmen already derived the polarization-dependent Gauss--Bonnet term and a cutoff obstruction \cite{BCR}. Caron-Huot--Li--Parra-Martinez--Simmons-Duffin give the full graviton partial-wave matrices and substantially stronger two-sided numerical bounds from optimized fixed-transfer tensor sum rules, with controlled low-spin light exchanges and a higher-spin threshold \cite{CHLPS}. Their convention is $\alpha_2=4\GB$, and their analysis also retains the Newton pole. The threshold definitions differ. The finite-resolution primal method of Peng et al.\ \cite{Peng} supplies separate numerical EFT bounds with a retained graviton pole; it does not substitute for the fixed-transfer reconstruction argument here. The point here is the explicit full-polarization Gram certificate and the route from a low analytic ordinary $k=4$ moment to a crossing-symmetric cut-only reconstruction, not the first graviton bound or an optimal value.
+
+Crossing-symmetric dispersion, the orbital crossing variable, and finite low contact sensitivity have their own literature \cite{SZ,SpinCSDR,CPM,Pas}, including spinning and four-dimensional helicity applications. Bhat--Saha--Sinha relate manifest crossing and fixed-transfer dispersive representations via a parametric contour \cite[Secs.~2--3]{BSS}. In contrast, the present reconstruction takes the exterior contour only for each auxiliary resolvent, with the interchange certified by \eqref{eq:disc}. The finite ordinary same-scalar extraction problem is not an obstruction to the established tensor superconvergence methods. H\"aring--Zhiboedov use a positive Tauberian smearing for the \emph{singular} forward $k=2$ pole \cite[Sec.~3.2]{HZ}; here the approximate identity obtains a \emph{finite} $k=4$ trace which then supplies exponential spin control. We claim neither priority for these established methods nor numerical improvement over them.
+
+The real-norm assumption, analytic $B$, and true angular pairing are separate inputs. Mere real smoothness need not give the shrinking-disc estimate: positive very-large-spin examples in the supplement have smooth real densities and ordinary even $s/u$ crossing but do not satisfy the required analytic/crossing premises together. Likewise an off-forward sample cannot see an omitted Bose-forward positive identity kernel supported at forward transfer. Neither example is offered as a physical fully crossing UV completion. No step here derives the ordinary $C_1$ large-circle input, removes threshold or transfer branches in loops, or identifies finite-coupling graviton physics from a weak/tree amplitude. General light scalar or mixed channels require a separate low-side accounting and are not used to prove Theorem~\ref{th:main}.
+
+\paragraph{Reproduction.}
+The accompanying supporting information contains the exact rational angular-bandwidth calculation, the physical screen check, the positive-difference/latitude algebra and the Lagrange-resolvent check. The main proof uses the bounds and the analytic arguments stated above; the replays check finite algebraic ingredients rather than assume full-amplitude convergence. See the accompanying verification guide for file names and commands.
+
+\input{references}
+\end{document}
