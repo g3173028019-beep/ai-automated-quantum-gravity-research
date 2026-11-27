@@ -214,3 +214,11 @@ Run `./build.sh` in each paper directory with pdfLaTeX. Paper 63 also includes a
 - [61 · A nonzero scalar shift charge in perturbative de Sitter gravity](../papers/61-de-sitter-scalar-shift-charge/README.md)
 - [62 · Nonlinear vacuum curvature coordinates at a compact Milne cut](../papers/62-nonlinear-milne-curvature-coordinates/README.md)
 - [63 · Action asymptotics for Einstein–Dehn fillings at a compact hyperbolic mirror](../papers/63-einstein-dehn-filling-action/README.md)
+
+## Building Papers 64–66
+
+Run ./build.sh in each selected paper directory with pdfLaTeX.
+
+- [64 · A sourced mixed Einstein–scalar response on a compact Cauchy slab](../papers/64-active-einstein-scalar-mixed-response/README.md)
+- [65 · A sourced BRST cut charge and a finite graviton transition on compact Milne](../papers/65-sourced-brst-cut-graviton-transition/README.md)
+- [66 · Odd azimuthal graviton pairs in the resonant dynamics of global AdS₄](../papers/66-ads4-odd-azimuthal-graviton-pairs/README.md)

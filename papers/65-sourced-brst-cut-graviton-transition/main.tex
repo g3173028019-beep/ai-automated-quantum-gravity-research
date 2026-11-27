@@ -1,0 +1,73 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A Sourced BRST Cut Charge and a Finite Graviton Transition on Compact Milne}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\Cq}{Q_{\mathrm c}}
+\newcommand{\Db}{D_{\mathrm{bulk}}}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\Lie}{\mathcal L}
+\title{A Sourced BRST Cut Charge\\and a Finite Graviton Transition on Compact Milne}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A source-dependent master identity, a conserved interior charge, and an observed transition are different objects in perturbative gravity. We compare them in a single causally renormalized pure Einstein theory. With the ordinary local constant-coupling quantum master normalization as input, a coherent coupling profile admits a local jet descent of its master defect. The past part of the actual defect corrects the free BRST charge. On the dynamical quotient the result equals the independently varied, smoothly smeared Noether charge and is nilpotent at the retained formal orders. On compact hyperbolic Milne we construct a compatible full graded Hadamard realization and three smooth, geometrically marked tensor packets for which finite unswitched Einstein evolution has a nonzero connected one-to-two coefficient. Smooth exterior samplers select a positive two-graviton contribution of order \(\hbar\kappa^2\). It uses one state and retains the cross interference when a bookkeeping cut is moved. The result is a finite perturbative test, not an asymptotic scattering rate, a separately quantized boundary theory, or a full elastic one-loop amplitude.
+\end{abstract}
+
+\section{Setup and claims}\label{sec:setup}
+
+We use perturbative algebraic quantum field theory for four-dimensional pure Einstein gravity. The reference spacetime \(M\) is a regular globally hyperbolic vacuum slab with compact oriented Cauchy surface. The explicit experiment uses a subslab of compact hyperbolic Milne
+\[
+       g_0=-\dd t^2+t^2\gamma,\qquad
+       \operatorname{sec}(\gamma)=-1,\qquad t>0 .
+\]
+The interaction is expanded in a canonically normalized metric perturbation with parameter \(\kappa\); the first Einstein interaction is cubic in the tensor sector. We use the gauge-fixed nonminimal Batalin--Vilkovisky (BV) splitting, including the free field BRST term, on a single Epstein--Glaser time-ordering prescription \(T\). Ghost, antighost, multiplier and antifield insertions are kept until the graded dynamical quotient. In particular \(Q_0=\delta_0+\gamma_0\), including the Koszul--Tate term \(\delta_0\). We keep the classical Einstein BV action fixed and put the loop normalizations in \(T\). We assume the usual causal, local covariant, real and field-equation normalizations, the free Ward compatibility of the covariances, and the ordinary local pure-gravity quantum master equation (QME) normalization on constant-coupling germs, in the sense of \cite[Sec.~3.4]{BFR}, in this same split. These are finite-order hypotheses on \(T\) and its local marked family, not claims to remove an anomaly for arbitrary matter content or globally on arbitrary off-shell sectors. All statements below are coefficientwise through the orders used: the once-interacting observable and its first nonzero selected norm-square, and the local Ward identities through the first loop and second coupling order. The strict square refers to its leading coefficient; no norm-convergent series is asserted.
+
+A smooth compact temporal function \(f\) is \(1\) on an open plateau containing all preparations, samplers and bookkeeping cuts. It changes only in two disjoint exterior collars. Use the localized interaction
+\[
+           V_f=\sum_{n\geq1}\kappa^n V_n[f^n],
+           \qquad R_f=R_{V_f},
+\]
+with the free quadratic operator unchanged. The locality tests and profiles needed in the marked Ward family use the same \(T\). No physical source or intervention is applied at an interior cut. A superscript \(-\) on an exterior insertion denotes only its past collar part, not a negative-frequency projection. We use left graded commutators \([A,B]_{\star}\) and \(D_q=(i/\hbar)[q,\cdot]_{\star}\), choosing the free charge \(q_0\) to implement \(\gamma_0\) after imposing the free equations. All on-shell statements below take this quotient, including removal of external antifields as dynamical symbols.
+
+\begin{theorem}[Same-theory sourced charge]\label{thm:charge}
+The full local master defect of \(V_f\) admits a local representative supported in the two switching collars. Write \(J_f\) for the negative of that defect, in the common causal prescription. On interior on-shell dynamical insertions the physical bulk differential is implemented by
+\begin{equation}\label{eq:keycharge}
+       \Cq=q_0-R_f(J_f^-).
+\end{equation}
+In this equation \(\Cq\) is also the retarded image of the independently varied, renormalized interior Einstein Noether charge, smeared by a compact unit temporal one-form in the plateau. More generally one may use closed compact one-forms of the same cut cohomology class there. It is the same on-shell element for all such smearings; \(\Cq\star\Cq=0\) at the retained orders. Equality is not claimed between off-shell Noether densities or between separately renormalized theories on two sides.
+\end{theorem}
+
+\begin{theorem}[Finite Milne experiment]\label{thm:experiment}
+On compact hyperbolic Milne one can choose a compatible graded free Hadamard realization with positive physical cohomology, one associated formal physical preparation, and three smooth orthogonal tensor packet labels \(a,b,c\). There are disjoint, positive-width, smoothly sampled exterior times, both in the plateau, for which the connected, earlier-readout-subtracted \(a\)-to-\((b,c)\) coefficient of the unswitched Einstein dynamics has the form
+\begin{equation}\label{eq:cubicform}
+   -i\kappa\sqrt{\hbar}\,\mathfrak a,\qquad \mathfrak a\ne0 .
+\end{equation}
+The resulting selected two-graviton contribution at order \(\hbar\kappa^2\) is \(\hbar\kappa^2|\mathfrak a|^2\). All intermediate smooth artificial cut presentations give this same coefficient with the same physical pairing. Splitting the interval before taking the norm-square retains the interference between its two pieces.
+\end{theorem}
+
+\paragraph{Antecedents and distinction.}
+Rejzner identifies the on-shell interacting BV differential as a commutator with the interacting BRST charge, including general relativity \cite{Rejzner,BFR}. Hollands and Taslimi Tehrani develop local Ward, renormalized current and switched-charge arguments in Yang--Mills theory \cite{Hollands,TT}; Rejzner--Schiavina give the smooth-boundary modified quantum master equation and the retarded past-source term \cite[Thm.~4.16, Lemma~5.1 and Sec.~5.4]{RS}. We use these identities rather than asserting the BRST commutator or the modified master equation as new. The additions here are their comparison in the same coherent Einstein prescription with explicit source support, the compatible graded Milne benchmark, and a nonzero measured Einstein tree with its physical interference in the common cut representation. A separate local Einstein--scalar benchmark treated free gauge transport and a classical matter subcocycle \cite{P19}; a free shear example compared positive covariance and coherent sewing \cite{P53}. Neither supplies the finite interacting Einstein process considered here.
+
+\input{ward}
+\input{state}
+\input{benchmark}
+\input{references}
+\end{document}
+

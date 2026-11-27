@@ -1,0 +1,694 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A sourced mixed Einstein--scalar response on a compact Cauchy slab}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Lie}{\mathcal L}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\divg}{\operatorname{div}}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\supp}{\operatorname{supp}}
+\numberwithin{equation}{section}
+\title{A sourced mixed Einstein--scalar response on a compact Cauchy slab\\
+\large The physical cubic form and its marked source contacts}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct a nonzero connected retarded mixed tensor--scalar
+tree coefficient on a genuinely coupled compact Einstein--massless-scalar
+background. The preparation and the probe are closed, time-compact
+joint metric--scalar currents for the same action. Their nonlinear
+completions are defined by geometric constant-mean-curvature slices
+and spatial harmonic marks. A differentiated Ward identity shows why
+the bare cubic evaluated on retarded and advanced packets is not gauge
+invariant: the sourced equations collapse two of its legs. The
+second variations of the actual marked preparation and readout
+cancel those two terms. A finite-frequency test is nonzero at a
+vacuum reference and persists on a branch with nonconstant active
+matter. With one positive physical Hadamard covariance, it gives a
+normalized coherent one-vertex coefficient. The result treats one
+sourced perturbative response; it does not construct a positive
+interacting state or a sewing of independently prepared regions.
+\end{abstract}
+
+\section{The response to be tested}
+
+Consider the four-dimensional action, in units \(8\pi G=1\),
+\begin{equation}
+ S[g,X]=\frac12\int_M (R_g-|dX|_g^2)\dd\mu_g
+ \label{eq:action}
+\end{equation}
+with signature \((-+++)\). All action derivatives are relative
+derivatives with fixed outer collar data, or equivalently
+integrals on the compact temporal overlap when evaluating the
+sourced trilinear coefficient below. We use real fields and real
+linear sources. At an exact solution \(\bar Y=(\bar g,\bar X)\), put
+\(H=S''_{\bar Y}\) and \(C=S'''_{\bar Y}\). We write
+\(\langle Hv,w\rangle=H(v,w)\), using the dual pairing of a
+field variation and a density. The gauge differential is
+\(K\xi=\Lie_\xi\bar Y=(\Lie_\xi\bar g,\xi(\bar X))\).
+A current \(J\) is \emph{closed} if \(\langle J,K\xi\rangle=0\)
+for every smooth compactly supported \(\xi\).
+Use a matched geometric chart to extend \(J\) to an invariant
+source functional \(O_J\) with \(O_J'(\bar Y)=J\).
+Its Hessian is \(Q_J\).
+
+Our incoming variation is a homogeneous physical Jacobi field \(U\).
+A retarded leg \(r\) solves \(Hr=J_1\) and an advanced leg \(a\)
+solves \(Ha=J_2\), for two closed currents in separated time
+collars. We take both legs in one compatible wave gauge.
+The coefficient of interest, with source action \(S-\lambda O_{J_1}\)
+and readout \(O_{J_2}\), is
+\begin{equation}
+ {\cal R}(U;J_1,J_2)
+ =-C(U,r,a)+Q_{J_1}(U,a)+Q_{J_2}(U,r).
+ \label{eq:response}
+\end{equation}
+We derive this formula, the actual Hessians, and a nonzero
+instance below. Changing the sign of the preparation term
+changes the overall sign of the response.
+
+\begin{theorem}\label{thm:main}
+There are smooth compact Cauchy slabs of four-dimensional
+Einstein--massless-scalar spacetimes with \(d\bar X\ne0\) on the
+open witness patch in the tested slab, and a geometric marking such that the following hold.
+\begin{enumerate}
+ \item One common exact action and one positive physical
+ Hadamard representation admit a nonzero incoming physical
+ tensor-like Jacobi packet and compact-in-time closed preparation
+ and probe currents. The two currents have scalar-like physical
+ classes but generally contain metric as well as scalar parts.
+ Their sourced retarded coefficient is \eqref{eq:response}
+ with both actual marked Hessians.
+ \item The coefficient is invariant under compactly supported
+ vertical gauge changes of any one of its three arguments
+ supported in the tested interior plateau.
+ It is strictly nonzero for real smooth finite packets with the
+ prescribed normalization. Both Hessian terms are required in
+ the Ward identity, even though the selected test is obtained
+ by continuity from a limit in which they vanish.
+ \item With the same centered physical Hadamard reference,
+ \eqref{eq:response} is the normalized connected coefficient
+ of one Wick-ordered tree vertex with a coherent incoming
+ perturbation and the matched source/readout derivatives.
+ Partitioning the same cubic vertex by a smooth accounting
+ cut, retaining its source contacts, does not change the result.
+\end{enumerate}
+\end{theorem}
+
+This construction uses the physical linearized Einstein--scalar
+algebra of the kind studied in \cite{hack}, and a positive compact
+Cauchy covariance from \cite{hadamard,modular}. The differentiated
+Ward identity is the classical, one-vertex level of the usual
+locally covariant framework \cite[Sec.~3.4]{bfr}. The additional
+claim is the actual normalized mixed retarded test on one
+active background, with its two genuine source contact terms.
+No all-order Ward identity, ultraviolet coincidence theorem,
+or independent subregion composition follows from it.
+
+\section{Exact coupled stock and physical linear packets}
+
+Let \((\Sigma,\gamma_*)\) be a closed orientable hyperbolic
+three-manifold of sectional curvature \(-1\).
+Use \(K_{ij}^{\rm ext}=-\tfrac12\Lie_n\gamma_{ij}\) for the
+second fundamental form, distinct from the gauge differential
+\(K\). At a marked slice with mean curvature \(\tau=-3\), take
+\[
+  \gamma=u^4\gamma_*,
+  \qquad K^{\rm ext}=\tfrac{\tau}{3}\gamma,
+  \qquad X=\epsilon f,\qquad \Pi_X=n(X)=0 ,
+\]
+where \(f\) is a fixed real smooth function nonconstant on a
+small chosen patch. The exact Hamiltonian and momentum constraints
+reduce to
+\begin{equation}
+ -8\Delta_*u-6u+6u^5-\epsilon^2|df|_{\gamma_*}^2u=0,
+ \qquad 0=0 ,
+ \label{eq:conformal}
+\end{equation}
+respectively. The derivative in \(u\) at \((u,\epsilon)=(1,0)\)
+is \(-8\Delta_*+24\), with \(\Delta_*\le0\), an isomorphism.
+The implicit function theorem gives a positive smooth
+\(u=1+O(\epsilon^2)\). This is the elementary CMC conformal
+construction for this stock \cite{cbip,icb}.
+There are no conformal Killing fields on the compact negative
+constant-curvature reference: the York operator is strictly
+negative by the integrated identity using \(\operatorname{Ric}(\gamma_*)=-2\gamma_*\).
+The property is conformally invariant. At the displayed cut the
+tracefree first Killing-initial-data equation would make the
+shift conformal Killing, hence zero. Its trace with \(\tau=-3\)
+then makes the lapse zero. There is therefore no infinitesimal
+Killing stabilizer on this stock.
+
+The smooth Einstein--scalar Cauchy evolution gives a common
+short slab after shrinking uniformly near \(\epsilon=0\);
+the limiting solution is compact Milne,
+\(\bar g_0=-\mathrm dt^2+t^2\gamma_*\) near \(t=1\), with
+\(\bar X_0=0\). For the construction below, all intervals and
+initial smooth profiles are chosen at finite order first, then
+\(\epsilon>0\) is chosen sufficiently small. On the chosen
+patch \(d\bar X\) is nonzero already on the initial surface
+and remains nonzero in a short neighborhood.
+
+We need actual tangents of the constraint surface. First vary
+\(\gamma_*\) in a nonzero smooth TT tensor \(h_*\), keeping
+\(\tau\) fixed, and solve the conformal equation again, now with
+the varied scalar curvature \(\operatorname{Scal}(\gamma_*)\)
+in place of \(-6\). This yields a metric-like Jacobi field \(U\).
+At \(\epsilon=0\), the scalar-curvature derivative of a TT tensor
+is zero, so the derivative of the conformal factor is zero.
+The vacuum Milne tensor perturbation evolves in synchronous
+spatial TT form; the spatial divergence and trace constraints
+are preserved by the constant-curvature tensor wave operator.
+In particular that perturbation is also in the harmonic wave
+gauge used below. Nonzero smooth TT tensors are available, for
+example as the linearized Cotton--York tensor of suitable compact
+smooth metric variations on the constant-curvature reference
+\cite{beig}; its TT identity follows by differentiating the
+trace and divergence identities at the Cotton-flat metric.
+
+Independently vary the scalar initial position by either
+\(s_{1,0}\) or \(s_{2,0}\), leaving \(\Pi_X=0\); solve the same
+scalar conformal constraint. This gives two smooth true
+Jacobi fields \(s_1,s_2\). At \(\epsilon=0\) they are pure
+scalar with zero initial normal derivative. For small nonzero
+\(\epsilon\) they have the metric parts determined by the
+coupled constraints and evolution. To verify that the selected
+three fields are not null on the physical phase space, include
+their symplectic mates: an independent TT shear-momentum
+perturbation for \(U\), and independent scalar initial
+velocity variations for \(s_1,s_2\). These can be completed
+to constrained data. In the CMC conformal system the
+linearized momentum return at the reference is the invertible
+operator \(\Delta_*-2+\tfrac13 d\divg_*\) on one-forms.
+At the reference maximal nonsingular splitting it has
+\(-\|\nabla V\|^2-2\|V\|^2-\tfrac13\|\divg V\|^2\)
+as its quadratic form. Together with the scalar block
+\(-8\Delta_*+24\), it gives a split inverse for the constraints,
+and hence the completed variations persist in the small
+coupled branch. At \(\epsilon=0\), each of the three
+canonical pairings is a nonzero multiple of the squared
+norm of its real initial profile. The coupled reduced
+pairings vary continuously, so they stay nonzero for small
+\(\epsilon\).
+
+\section{Exact closed currents and their Green representatives}
+
+The linearized Noether relations are \(HK=0\) and \(K^*H=0\).
+We use the harmonic wave gauge with
+\[
+ F(h,\sigma)_a
+   =\nabla^b h_{ba}-\tfrac12\nabla_a\tr_{\bar g}h
+                         -2\sigma\nabla_a\bar X .
+\]
+Let \(D=FK\) be its normally hyperbolic ghost operator.
+For clarity about the field--density identification, use the
+action pairings with trace-reversal on the metric field and
+the scalar pairing, normalized so that
+\(K^\dagger=-F/2\). For example the field pairing is
+\(\tfrac14 h:I\tilde h+\sigma\tilde\sigma\),
+\(Ih=h-\tfrac12\bar g\,\tr_{\bar g}h\), with the common
+volume density. In this identification the wave-gauge Hessian
+is \(P=H^\natural+KF\), where \(H^\natural\) denotes \(H\)
+with its first slot raised using the action pairing.
+Then \(PK=KD\) and \(FP=DF\). The Einstein--scalar
+linearization cancels derivative mixing in \(P\) and gives
+scalar wave principal symbols; these are the canonical
+positive-kinetic wave-gauge identities of \cite{modular}.
+They also follow directly by differentiating
+\(\Ric=d\bar X\otimes d\bar X\), \(\Box\bar X=0\):
+the tensor derivatives of \(\sigma\) cancel those in
+\(K(-2\sigma\,d\bar X)\), and the scalar derivative of \(h\)
+combines with \(F(h,0)(\bar X)\). Sources are lowered
+or raised by this fixed real pairing, not by a choice of
+normalization fitted to the output.
+
+Take smooth time ramps \(b_-\) increasing from zero to one
+and \(b_+\) decreasing from one to zero on two disjoint
+compact subintervals, with the incoming ramp earlier.
+Define the exact densities
+\begin{equation}
+ J_1=H(b_-s_1),\qquad J_2=H(b_+s_2).
+ \label{eq:currents}
+\end{equation}
+Since \(Hs_i=0\), they are supported on their ramps;
+compact \(\Sigma\) makes these spacetime-compact.
+The exact identity \(K^*H=0\), not merely a principal
+transversality test, proves they are closed. A scalar-only
+function inserted in their place would usually fail this
+condition when \(d\bar X\ne0\).
+
+Writing \(G_D^R,G_D^A\) for the retarded and advanced inverses,
+the actual one-sided wave-gauge representatives are
+\begin{align}
+ r&=b_-s_1-KG_D^R F(b_-s_1),\\
+ a&=b_+s_2-KG_D^A F(b_+s_2).
+ \label{eq:legs}
+\end{align}
+In these formulas the ghost inverses also act on functions
+supported to one time side within the regular slab, by their
+ordinary vanishing Cauchy conditions on the other side.
+They make \(Fr=Fa=0\) and \(Hr=J_1,\ Ha=J_2\), with the
+required one-sided support. In particular \(r\) and \(a\)
+are not solutions of the homogeneous Hessian on their own
+ramps. A compatible homogeneous gauge representative of
+\(U\) is obtained by the same wave-gauge correction with
+fixed initial gauge data. At the Milne endpoint the correction
+is unnecessary for \(U\), and both scalar legs in \eqref{eq:legs}
+are exactly \(b_-s_1,b_+s_2\).
+
+For later normalization the same ramp realization applies to
+any smooth physical homogeneous field \(v\) on the slab.
+Choose \(Fv=0\) and a rising ramp \(b\). The retarded
+and advanced solutions for the single current \(H(bv)\)
+are built from \(bv\) and \((b-1)v\), respectively, plus
+their one-sided gauge corrections. Their difference is
+\(v\) modulo gauge. For the declining probe ramp the same
+statement holds with the opposite sign. Thus the fields
+and the two labelled packets have actual compact sources
+on the physical Weyl phase space. Their positive
+one-particle norms follow from the quasifree uncertainty
+inequality and the nonzero symplectic pairings above.
+
+\section{Geometric attachment and the two Ward contacts}
+
+We now construct the source functional, so \(Q_J\) is fixed
+before calculating the response. On a smaller common slab
+label the CMC cuts by \(\tau(t)=-3/t\) near the marked slice.
+For nearby smooth metric configurations, including off-shell
+ones, first take their nearby CMC graph at each assigned
+\(\tau(t)\). The graph derivative at Milne, with our choice
+of future normal, is \(-\Delta_{\gamma(t)}+3/t^2\) (an
+overall lapse sign has no effect on invertibility). Then fix
+coordinates on that graph by the harmonic map to its
+corresponding marked stock slice near the identity. The target
+metric is the induced stock metric \(\bar\gamma_{\epsilon,t}\),
+held fixed in all variations at this stock; the identity is
+harmonic at the stock, also when \(\epsilon\ne0\). The targets
+at \(t,\epsilon\) can be chosen as a smooth family using the
+first CMC graph construction and a fixed near-identity spatial
+identification. At Milne the map-variable derivative is the
+invertible Jacobi operator given by a positive rescaling of
+\(\Delta_*-2\), with \(\Delta_*\le0\). The normal equation
+is solved first; the tangential dependence on that solution
+does not enter the diagonal blocks of the combined derivative.
+
+For the perturbed stock these inverses persist on
+the compact interior family of cuts. The graph and harmonic
+map equations are elliptic on each slice; the usual local
+implicit-function construction gives smooth dependence for
+the finite smooth metric families and Taylor directions used
+here. Concretely one can first take a sufficiently high
+Sobolev order on each cut and a finite number of derivatives
+in the time parameter; the graph equation evaluates the
+smooth nearby metric and its first derivatives, and its
+first and second jets at a fixed cut depend only on the
+corresponding jets of those metric data there. The harmonic
+section likewise uses only the induced data on that cut.
+We need this cutwise construction and two Taylor orders,
+not smoothness of an undifferentiated same-order Sobolev
+diffeomorphism group action. With the sign of the lapse
+kept near the reference the ordered graphs form a smooth
+slice family on a smaller slab. Elliptic uniqueness in the
+chosen near-identity neighborhoods and identical markings
+give covariance under sufficiently small diffeomorphisms
+trivial near the fixed outer collars, since the geometric
+conditions defining the slice and the marked map are
+covariant. See \cite{am} for the CMC spatial-harmonic
+elliptic gauges. Nonlinear relational pullbacks are
+standard \cite{relational}; the particular
+preparation/readout below use their two-jet.
+
+Let \(\Psi(Y)\) denote the actual pullback of \(Y\) to
+this marked chart, using markings fixed at the stock.
+Thus \(\Psi(\bar Y)=\bar Y\) in the fixed reference
+coordinates and \(\Psi(\varphi^*Y)=\Psi(Y)\) for the
+local vertical gauge changes under discussion. Put
+\[
+ O_J(Y)=\langle J,\Psi(Y)-\bar Y\rangle .
+\]
+The density \(J\) is in the fixed marked chart. This is
+not a bare tensor component with an external probe frozen
+in a gauge-variant manner. The first displacement of the
+pullback can be written \(-Z(v)\) for a variation \(v\),
+with \(Z(K\xi)=\xi\) for interior gauge directions.
+Thus \(O'_J=J\) at the stock by closure. Expanding the
+actual pullback through second order gives
+\begin{align}
+ Q_J(v,w)=\big\langle J,\;&-\Lie_{Z(v)}w-\Lie_{Z(w)}v
+ \nonumber\\
+  &+\tfrac12
+      (\Lie_{Z(v)}\Lie_{Z(w)}+\Lie_{Z(w)}\Lie_{Z(v)})
+                                                \bar Y\big\rangle .
+ \label{eq:hessian}
+\end{align}
+The second displacement generator multiplies \(K\) and
+drops out against \(J\). This is just a Taylor expansion
+of the pullback; it does not require the geometric
+diffeomorphism to be the exponential of a time-independent
+vector field. The chart may be spatially nonlocal on a
+cut. For these Hessians the dependence on time remains in
+the current's marked collar: both Taylor variations at a
+given assigned cut use only the fields and a finite number
+of their derivatives at that cut, with elliptic inverses
+on the same spatial surface. In particular the Hessian
+viewed as a source in its second slot is temporally compact
+when \(J\) is. The measured supports are therefore
+time collars on compact spatial surfaces, not claims about
+spatially local apparatus.
+
+For any allowed compactly supported gauge vector \(\xi\),
+differentiate invariance of \(O_J\) and of the action with
+all variations in their actual positions:
+\begin{align}
+ Q_J(K\xi,v)&=-\langle J,\Lie_\xi v\rangle ,
+                                  \label{eq:wardsource}\\
+ C(K\xi,v,w)&=-\langle Hv,\Lie_\xi w\rangle
+                    -\langle Hw,\Lie_\xi v\rangle .
+                                  \label{eq:wardaction}
+\end{align}
+In \eqref{eq:wardaction} the first variation of \(S\)
+vanishes at the stock. No use of \(Hv=Hw=0\) is made
+in forming this identity. In particular the two source
+terms for \(v=r,w=a\) are both essential. The identities
+remain exact in the tested compact time region; if one
+inserts a fixed cubic cutoff, it is chosen to be one on
+a neighborhood of the full compact overlap of \(r,a\),
+including both ramps, and gauge changes are supported
+inside the same plateau, with the same anchor.
+The action derivatives with a tested compact gauge
+argument then agree with those of the uncut
+relative action. A cutoff changed where those variations
+are supported would describe a different test.
+
+\section{The sourced causal coefficient}
+
+Prescribe the first homogeneous incoming variation
+\(\alpha U\) and turn on \(-\lambda O_{J_1}\) in the
+same action. The first retarded variation in \(\lambda\)
+is \(r\) from \eqref{eq:legs}. At order
+\(\alpha\lambda\), the field variation \(z\) solves the
+retarded equation
+\begin{equation}
+ Hz=-C(U,r,\cdot)+Q_{J_1}(U,\cdot).
+ \label{eq:z}
+\end{equation}
+The right side is itself a closed density:
+\eqref{eq:wardaction} with \(HU=0,Hr=J_1\) and
+\eqref{eq:wardsource} cancel on \(K\xi\).
+This supplies a legitimate retarded Green prescription for
+\(z\), modulo gauge. Only its part in the past of the probe
+is used, so the one-sided retarded equation on the slab
+suffices. Pairing with the probe by retarded--advanced
+duality and differentiating the output \(O_{J_2}\) give
+\begin{align}
+ \partial_\alpha\partial_\lambda O_{J_2}\big|_0
+ &=\langle J_2,z\rangle+Q_{J_2}(U,r)\nonumber\\
+ &=-C(U,r,a)+Q_{J_1}(U,a)+Q_{J_2}(U,r).
+ \label{eq:derivation}
+\end{align}
+All three terms are determined by the same action and
+the same geometric attachment.
+
+For \(U\mapsto U+K\xi\) the variation of the negative
+cubic in \eqref{eq:derivation} is
+\(\langle J_1,\Lie_\xi a\rangle+\langle J_2,\Lie_\xi r\rangle\).
+The two Hessians cancel it separately.
+For the change of \(r\) only the \(J_2\) term remains in
+the cubic Ward relation (because \(HU=0\)), and the
+change of \(Q_{J_2}\) cancels it. For \(a\), the identical
+argument uses \(J_1\). These are changes of representatives
+of the same fields in the tested support class; in a fixed
+wave gauge the one-sided Green representatives themselves
+are unique. In particular no assertion of a nontrivial
+freedom to add a past-zero homogeneous wave-gauge ghost
+to a retarded solution is needed.
+
+These contact terms are not merely a formal option.
+For example at the Milne endpoint on the early ramp,
+\(J_1\) has scalar component \([\Box,b_-]s_1\)
+while the advanced scalar leg is \(s_2\) there.
+The time profiles can be chosen so that this component
+is nonzero on an open set where \(\nabla s_2\) is
+nonzero. A smooth spatial \(\xi\) supported inside
+that set with suitable sign gives
+\(\langle J_1,\Lie_\xi a\rangle\ne0\), and \(J_2\)
+has no contribution there. The analogous late-ramp
+choice isolates \(J_2\). For the real oscillatory initial
+profile below, one can choose these open sets where
+both the profile and its first spatial derivative are
+nonzero, and choose the ramps to have a nonzero
+second-derivative term there. These nonzero variations
+persist for fixed choices at small positive \(\epsilon\).
+The active scalar background may be chosen with
+\(df\ne0\) in the common region. Thus the bare
+uncompleted cubic does not define this representative-independent
+test, even when the particular value of a Hessian
+happens to vanish in a special gauge or at a limiting
+background.
+
+\section{An attained nonzero finite packet}
+
+Select a point and a real coordinate direction \(x^1\)
+where the contravariant component \(U^{11}\) of the
+reference tensor mode is positive. Such a direction
+exists because \(U\) is nonzero and trace-free.
+Choose a small chart and nonzero real
+\(\chi\in C_c^\infty\) supported where \(U^{11}>0\).
+Take both initial scalar profiles
+\(s_{1,0}=s_{2,0}=\chi\cos(Lx^1)\) and both
+initial velocities zero. Then
+\[
+ \int_{\Sigma} U^{ij}\partial_i s_{1,0}
+                 \partial_j s_{2,0}\,\dd\mu_{\gamma_*}
+ =
+ L^2\int_{\Sigma} U^{11}\chi^2\sin^2(Lx^1)
+                 \,\dd\mu_{\gamma_*}+O(L).
+\]
+The leading integral tends to half the strictly positive
+integral of \(U^{11}\chi^2\). Choose one large but finite
+\(L\) so the displayed result is strictly positive,
+then choose a short regular interval on which its evolved
+version remains strictly positive. Take the ramps, with
+\(0\le b_\pm\le1\), inside that interval, with nonzero
+overlap \(b_-b_+\). The packet fields have their usual
+finite physical supports on the Cauchy slab;
+there is no plane wave or limit narrowing a detector
+with \(\epsilon\).
+
+At \(\epsilon=0\), the synchronous TT mode has zero
+first displacement under the geometric marking:
+its linear \(\tau\) is zero because it has zero
+normal and trace perturbations and the reference
+extrinsic curvature is pure trace; its spatial
+harmonic tension vanishes by being TT on each cut.
+The scalar legs at that endpoint have zero metric
+variation. Hence \(Z(U)=Z(r)=Z(a)=0\) and both
+Hessians in \eqref{eq:derivation} vanish there.
+With the signs of \eqref{eq:action} the unique mixed
+cubic is the derivative of the scalar kinetic term,
+\[
+ C(U,r,a)=\int_M
+ \left(U^{ab}-\tfrac12\tr_{\bar g}(U)\bar g^{ab}\right)
+             \partial_a r_X\,\partial_b a_X\,\dd\mu_{\bar g}.
+\]
+This \(hXX\) tensor vertex is familiar, for example
+from inflationary cubic calculations \cite{maldacena}.
+For the present finite test the trace and normal
+components of \(U\) vanish and \(r_X=b_-s_1\),
+\(a_X=b_+s_2\). The integral becomes
+\[
+ \int\! b_-(t)b_+(t)\dd t\int_{\Sigma_t}
+ U^{ij}\partial_i s_1\,\partial_j s_2\,
+                                   \dd\mu_{\gamma(t)}>0.
+\]
+There are no ramp derivatives left in this expression.
+Consequently the full sourced coefficient is strictly
+negative at the vacuum endpoint in our sign convention.
+
+All amplitudes, causal solutions, gauge corrections,
+and marked Hessians vary continuously in the sufficiently
+smooth exact background family. Keeping the profiles and
+all windows fixed gives \({\cal R}\ne0\) for
+sufficiently small positive \(\epsilon\). One can choose
+\(f\) and the chart with \(df\) nonzero on the initial
+witness patch, so the resulting construction uses the
+active scalar of the exact background, not a separate
+spectator. The two scalar directions may be perturbed
+independently if distinct profiles are wanted. The
+nonzero result is at fixed finite settings of all
+apertures and carrier frequencies in the perturbative
+coefficient, not an asymptotic scattering claim.
+
+\section{The normalized one-vertex coefficient}
+
+Fix one of the allowed positive \(\epsilon\) backgrounds.
+Use a centered positive quasifree Hadamard state on its
+physical linear Einstein--scalar phase space, with
+the physical Green CCR as in \cite{hadamard,modular}.
+The scalar potential is zero and the Cauchy surface
+compact, so the hypotheses of that construction are
+satisfied. One may divide the three real packet
+directions by their independently determined positive
+one-particle covariance norms. For the two sourced
+directions use the causal classes of the actual
+\(J_1,J_2\); the realization following
+\eqref{eq:legs} fixes their signs and supports.
+Both criteria, finite norm and strict positivity,
+hold on the selected smooth packet classes by
+Hadamard covariance and their nonzero symplectic
+mates. This changes \({\cal R}\) by a fixed nonzero
+factor. No limit or continuity of these state norms
+as \(\epsilon\) varies is needed.
+
+For precision about which quantum coefficient is
+meant, use one relative perturbation around the free
+physical Gaussian algebra. Give its cubic vertex
+a bookkeeper \(\kappa\), and Taylor-expand the same
+marked source and probe at the same perturbative order:
+\begin{align*}
+ S_2(u)&+\frac{\kappa}{6}C(u,u,u)
+      -\lambda\big(J_1(u)+\tfrac{\kappa}{2}Q_{J_1}(u,u)\big),\\
+ {\cal O}_{2}(u)&=J_2(u)+\tfrac{\kappa}{2}Q_{J_2}(u,u).
+\end{align*}
+Constants and terms not contributing at order
+\(\kappa\alpha\lambda\) are suppressed. A compact
+physical source representing \(U\) implements a
+unitary Weyl displacement; choose the Peierls sign
+so its adjoint shifts the free field by \(\alpha U\),
+and hence its displaced preparation is normalized.
+The free linear drive of strength \(\lambda\)
+shifts the retarded mean by \(\lambda r\).
+Normal ordering is taken in the single fixed
+Hadamard reference. At the fully connected
+\(\kappa\alpha\lambda\) coefficient each surviving
+slot is a smooth external packet or a causal leg:
+one contraction with the linear readout takes the
+last cubic leg to \(a\), and the two mean shifts
+occupy the other two. The \(1/6\) is canceled by
+the choice of readout leg and the permutation of the
+two shifts. The quadratic marked source and probe
+give the two cross terms, each with its \(1/2\)
+canceled by symmetry. The coefficient is thus
+exactly \eqref{eq:response}, with the stated
+physical norms. This can equally be read as the
+first connected retarded Bogoliubov coefficient of
+the completed tested functional: its commutator
+with a linear leg is the common causal propagator.
+It uses no products of singular distributions
+between two interaction vertices. We only assert
+this finite tested tree multilinear form, not an
+operator-valued extension of the entire relational
+nonlinear functional in the free representation,
+and certainly not positivity of an interacting
+Hilbert-space representation. The closed density
+in \eqref{eq:z} and the complete Ward cancellation,
+rather than positivity on redundant metric
+components, are what let the tested form descend
+to the physical classes. Equivalently apply the linear marked projection
+\(1-KZ\) to the three smooth external solutions on the
+tested region. \(H\) is unchanged and \(Z\) annihilates
+the projected representatives. The projection is local
+in the cut label, so it preserves early/late vanishing;
+its gauge generators can be smoothly cut off identically
+one near the full tested overlap and both source supports.
+Equation~\eqref{eq:hessian} then vanishes on every pair
+of these marked directions, while Ward invariance gives
+exactly the same coefficient as in wave gauge. This
+expresses the smooth tested polynomial directly on the
+positive physical solution range, without treating an
+uncompleted redundant cubic as an operator.
+
+Finally, write the same cubic profile as its
+product with \(\theta\) plus with \(1-\theta\)
+for a smooth accounting cut. The single vertex
+is linear in its profile, so the two compactly
+tested cubic integrals add to the original one.
+The preparation and probe Hessians remain at
+their original ramps (or can be partitioned as
+the same distributions). If a split Ward
+derivation differentiates the two complementary
+switches, those terms cancel on addition.
+This is an identity for one sourced functional
+with fixed Green operator and fixed state;
+it neither factors a transition into independently
+prepared cut amplitudes nor changes a boundary
+polarization.
+
+\section{What the construction establishes}
+
+The result is one nonzero mixed causal response of
+ordinary Einstein--scalar dynamics on an attained
+active background, computed with both source Hessians
+and a common positive physical reference.
+It tests a concrete interaction beyond the free
+tensor and scalar covariance, but only at one vertex.
+It does not supply quantum source backreaction,
+separate gauge-constraint enforcement on the two
+sides of a cut, closed interacting field algebras,
+or a renormalized multivertex Ward identity.
+
+\begin{thebibliography}{10}
+\small\setlength{\itemsep}{1pt}
+
+\bibitem{hack}
+T.-P. Hack, Quantization of the linearised Einstein--Klein--Gordon
+system on arbitrary backgrounds and the special case of perturbations
+in inflation, \emph{Class. Quantum Grav.} \textbf{31}, 215004 (2014),
+\href{https://arxiv.org/abs/1403.3957}{arXiv:1403.3957}.
+
+\bibitem{hadamard}
+Positive physical Hadamard states for critical Einstein--scalar
+multiplets, research archive paper 09,
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/09-canonical-einstein-scalar-hadamard}{source and proof}.
+
+\bibitem{modular}
+Physical Hadamard states and bare modular kernels for coupled
+Einstein--scalar systems, research archive companion 09+21,
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/09-21-coupled-modular-kernel}{source and proof}.
+
+\bibitem{bfr}
+R.~Brunetti, K.~Fredenhagen and K.~Rejzner,
+Quantum gravity from the point of view of locally covariant quantum
+field theory, \href{https://arxiv.org/abs/1306.1058}{arXiv:1306.1058}.
+
+\bibitem{cbip}
+Y.~Choquet-Bruhat, J.~Isenberg and D.~Pollack,
+The constraint equations for the Einstein--scalar field system on
+compact manifolds, \href{https://arxiv.org/abs/gr-qc/0610045}{arXiv:gr-qc/0610045}.
+
+\bibitem{icb}
+Y.~Choquet-Bruhat, J.~Isenberg and D.~Pollack,
+Applications of theorems of Jean Leray to the Einstein--scalar
+field equations,
+\href{https://arxiv.org/abs/gr-qc/0611009}{arXiv:gr-qc/0611009}.
+
+\bibitem{beig}
+R.~Beig, TT-tensors and conformally flat structures on 3-manifolds,
+\href{https://arxiv.org/abs/gr-qc/9606055}{arXiv:gr-qc/9606055}.
+
+\bibitem{am}
+L.~Andersson and V.~Moncrief,
+Elliptic-hyperbolic systems and the Einstein equations,
+\href{https://arxiv.org/abs/gr-qc/0110111}{arXiv:gr-qc/0110111}.
+
+\bibitem{relational}
+R.~Brunetti, K.~Fredenhagen, T.-P. Hack, N.~Pinamonti and K.~Rejzner,
+Cosmological perturbation theory and quantum gravity,
+\href{https://arxiv.org/abs/1605.02573}{arXiv:1605.02573}.
+
+\bibitem{maldacena}
+J.~Maldacena, Non-Gaussian features of primordial fluctuations in
+single field inflationary models,
+\href{https://arxiv.org/abs/astro-ph/0210603}{arXiv:astro-ph/0210603}.
+
+\end{thebibliography}
+\end{document}

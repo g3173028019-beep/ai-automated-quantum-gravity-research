@@ -1,0 +1,100 @@
+\section{The finite graviton benchmark}\label{sec:benchmark}
+
+\subsection{A fixed geometric canonical readout}
+
+Use a single local constant-mean-curvature (CMC) branch on compact Milne, with its reference hyperbolic marking, and the near-identity harmonic map to fix the spatial identification. The CMC graph derivative is \(-\Delta_q+3/t^2\), since \(K=-q/t\) on the background and the slice is vacuum. It is invertible. The negative-Ricci harmonic-map Jacobi operator is likewise invertible at the reference. The effective time label in the benchmark is the CMC label reparametrized by background Milne proper time. These local elliptic gauge inverses select the same regular branch for preparation, dynamics and both exterior readouts; we assume no global CMC foliation beyond this patch.
+
+For compactly supported diffeomorphisms near the identity the marked geometric Cauchy data in this gauge are invariant, since both elliptic gauge equations transform naturally on their domain with the target marking fixed. Their first metric and momentum coordinates are the physical TT variables. Use the exponential trace-free tensor coordinate \(q=t^2\gamma\exp(\kappa h)\) on the tensor tangent, extending by the orthogonal York scalar/longitudinal coordinates. Use its Legendre-dual momentum from the pullback of the matched ADM boundary potential \(\int\pi^{ij}\delta q_{ij}\); the intrinsic quadratic terms of these canonical coordinate functions are retained in the endpoint marks.
+
+The first gauge compensators vanish on physical linear TT data. A second-order change of slice or spatial coordinates, acting on the reference itself, contributes a symmetrized gradient, a normal Hessian or a pure trace in the metric/momentum pair. A reference TT test annihilates all such terms by integration by parts on the compact slice. This is not a justification for dropping the quadratic terms intrinsic to the chosen canonical chart. It gives a simple form for each first nonlinear packet mark: its corrections use the first elliptic gauge inverses, differential operators, and multiplication by smooth background coefficients and packet coefficients. After pairing with a smooth packet, terms with two elliptic legs are spatial bilinear kernels of finite compositions of such operators and their transposes. At a smoothly sampled exterior time these quadratic kernels are finite sums with the form
+\[
+   w(t)\,\delta(t-t')\,A_t(x,x')
+\]
+and finite derivatives, where \(A_t\) is a smooth family of spatial pseudodifferential kernels (smoothing allowed). Their temporal wavefront components are opposite. A nonzero tuple therefore cannot have all entries future-causal or all past-causal, even if a spatial component vanishes. When the spatial part is singular on the slice diagonal its components are also opposite. These kernels are compact microcausal Wick test kernels, including spatially nonlocal terms; no sharp-time nonlinear Wick restriction is made.
+
+The leading local gauge law and the geometric first dressing give \(s_0F_1+s_1F_0=0\) on shell, by expanding invariance under the domain diffeomorphisms. The BRST-compatible Wick convention in Section~\ref{sec:state} implements the free part exactly on these Wick coefficients. At this tree order the retarded product of an interaction with \(F_0\) has just one contraction into a smooth linear packet; \(F_1\) is only a free Wick insertion. Thus the first-order marks represent physical classes in the tree-order truncation of the common quotient. No time-ordered product of a higher-order elliptic marker with another interaction, or quantum completion of the marker to all orders, is needed for the first nonzero norm-square.
+
+The classical Peierls--canonical identification needed for the retarded tree follows from the Green identity for the gauge-fixed Jacobi operator: for compact sources the Peierls pairing is the conserved symplectic pairing of their causal variations. The Einstein variational boundary form on the chosen compact cut is the matched ADM symplectic form; on the physical quotient the gauge doublets drop out. Solving the same field equations and then pulling to the unique near-reference marked gauge is therefore equivalent to reduced canonical evolution for the designated readings. At first order in the interaction this equivalence is also the tree part of the retarded single contraction. It does not equate actions with different canonical endpoint observables.
+
+\subsection{An exact compact tensor triad with nonzero Einstein cubic}
+
+The Einstein vertex used here is the true reduced bulk cubic at this background. The linear scalar and momentum constraints vanish on exact TT metric and mixed extrinsic-curvature perturbations: the background metric and Ricci endomorphism are isotropic, scalar curvature varies by a double divergence and trace on this sector, and the momentum variation is its divergence. Consequently lapse/shift corrections starting at second order only multiply the first constraints at the cubic level. The quadratic variational form has no mixed TT/complement terms on these compact constant-curvature slices. To see this, split the metric and momentum into the reference TT sector, trace parts and symmetrized gradients, integrate by parts on the closed slice, and use the constant-curvature commutators for the spatial second-order operators, which preserve TT. Time differentiation in the fixed reference chart also preserves TT. The background solves the bulk equations, so the first action variation has only the matched boundary terms. Thus solving the complementary variables at second order introduces no further bulk cubic from the quadratic form. The boundary potential fixes the canonical endpoint normalization. In the exponential metric the only possible tensor kinetic cubic with two time derivatives has factor \(\tr(\dot h[\dot h,h])=0\), since
+\(e^{-\kappa h}\partial_t e^{\kappa h}=\kappa\dot h+
+(\kappa^2/2)[\dot h,h]+O(\kappa^3)\).
+The pullback to Legendre-dual momentum yields the same absence of a principal \(h\pi^2\) cubic; quadratic trace/longitudinal fixes pair to zero with a reference TT momentum, and the \(D\exp\) variation is the same trace commutator. The nonzero background extrinsic curvature and spatial curvature contribute only lower-derivative symbols here.
+
+At a fixed time, up to a nonzero common Einstein factor (including the Hamiltonian sign), the spatial principal cubic in the exponential coordinate is
+\begin{equation}
+ \int_\Sigma (2h_{ik}h_{jl}-h_{ij}h_{kl})
+                           D_kD_l h_{ij}\,\dd v_q .
+ \label{eq:vertex}
+\end{equation}
+This is the expansion of the spatial intrinsic curvature density at unit determinant after integrating spatial divergences; the flat two-derivative polynomial is, for example, the Einstein tensor action contribution in \cite[Eq.~(3.1)]{Cabass}. Moving to the hyperbolic slice changes the connection, volume and lower symbols but not the normal-coordinate principal symbol. No temporal integration by parts with unmatched readouts is used.
+
+Here is a finite nonzero test of \eqref{eq:vertex}. At the center of a spatial normal chart choose covectors \(k_1=(1,0,0)\), \(k_2=(0,1,0)\), \(k_3=(-1,-1,0)\). Choose their transverse trace-free polarizations
+\[
+ P_1=\operatorname{diag}(0,1,-1),\quad
+ P_2=\operatorname{diag}(1,0,-1),\quad
+ P_3=v\otimes v-e_z\otimes e_z,\quad v=\frac{e_x-e_y}{\sqrt2}.
+\]
+The ordered coefficient in \eqref{eq:vertex} for entries \(a,b,c\) is
+\[
+ -\bigl(2(P_a)_{ik}(P_b)_{jl}-(P_a)_{ij}(P_b)_{kl}\bigr)
+                         k_{c,k}k_{c,l}(P_c)_{ij}.
+\]
+For \(123,132,213,231,312,321\) these six values are \(5/2,1/2,5/2,1/2,3/2,3/2\), so the symmetrized polynomial coefficient is \(9\). For instance the two terms can be written as
+\(-2(P_ak_c)^{\mathsf T}P_c(P_bk_c)+
+ \tr(P_aP_c)\,k_c^{\mathsf T}P_b k_c\), allowing direct verification. These are spatial data for a finite-time experiment, not an assertion of energy conservation of an infinite-time three-graviton scattering amplitude.
+
+To produce exact smooth compact TT data, use the derivative \(\mathsf C'\) of the Cotton--York tensor on \((\Sigma,\gamma)\) \cite{Beig}. Cotton--York vanishes on this conformally flat background and is identically symmetric, trace-free and divergence-free in dimension three. Its derivative therefore lands in exact TT tensors. On the TT polarization symbol at nonzero spatial covector it is a nonzero constant times the second-order scalar principal symbol of the Schouten derivative followed by symmetrized curl. In a frame with \(k\) on the third axis the remaining two entries are a traceless symmetric \(2\times 2\) matrix; multiplication by the alternating tensor rotates them with complex eigenvalues of nonzero modulus proportional to \(|k|\). Thus the order-three Cotton symbol is invertible on the two-dimensional physical symbol space for every \(k\ne0\).
+
+Use linear coordinate phases \(\phi_1=x\), \(\phi_2=y\), \(\phi_3=-x-y\) in the normal chart and a nonnegative smooth compact envelope \(a_0\). Extend each polarization smoothly over a small chart in the TT principal subspace for \(d\phi_j\), and choose a smooth seed tensor \(u_j\) with Cotton principal image \(a_0P_j(x)\). For finite large carrier \(\lambda\) set
+\begin{equation}
+        h_j=\lambda^{-3}\mathsf C'(u_j e^{i\lambda\phi_j}) .
+        \label{eq:cotton}
+\end{equation}
+These are exactly TT and compactly supported. After factoring out the phase their leading amplitude is \(a_0P_j\) with a smooth expansion in \(\lambda^{-1}\). Choose mixed extrinsic-curvature or equivalently normalized canonical TT momentum on each leg of the form \(-i\omega_jh_j\) with \(\omega_j\) positive of order \(\lambda\); for the physical incoming mode use the conjugate spatial phase of the third leg and choose its positive polarization frequency. All legs evolve by the actual free equations. At the chosen slice the phases in the coefficient between the incoming mode and the two outgoing conjugates multiply to one (the triple of signs in the symbol may be reversed together). Continuity and a sufficiently small common support give a real principal integral with a strict positive sign in the convention of the displayed symbol. Thus it is \(\lambda^2 c_0+O(\lambda)\) with \(c_0\ne0\), before nonzero individual mode normalizations. Connection, Cotton lower-order and envelope terms give the indicated lower order; no long-time high-frequency estimate is needed.
+
+The projections of these Cauchy packets onto one another and onto conjugate packets at the initial slice are rapidly small after scaling, by nonstationary phase and compact supports. Each chosen pair has nonzero symplectic normalization because \(\omega_j>0\) with the positive-frequency sign. A finite-dimensional symplectic Gram adjustment makes the three smooth pairs mutually canonical and changes the local leading coefficient by a rapidly small error. They have the exact finite-mode vacuum of Section~\ref{sec:state}. One fixes a sufficiently large \emph{finite} \(\lambda\), relative to background and envelope scales. If the result is interpreted within an effective theory the scale hierarchy can be maintained, for example by taking a sufficiently large Milne radius. The proof does not require a carrier beyond the regime of the fixed Einstein tree description.
+
+\subsection{Unswitched evolution, finite samplers, and interference}
+
+Let \(a,b,c\) now denote the normalized incoming and two outgoing packet annihilators in that common free convention, with \(a\) orthogonal to both \(b\) and \(c\), and \(b\perp c\). Backtransport the free labels in both exterior samplers to the same canonical reference. Choose smooth nonnegative unit time densities \(w_a,w_b\) with disjoint ordered supports inside the plateau, each of fixed positive width; the subscript on a density is an exterior-window label. Let \(B_b\) be the product of the two outgoing annihilator marks sampled in the later window, and \(B_a\) the corresponding early comparison, with the same free labels. Their zeroth-order parts both equal \(bc\). We use a product of the sampled one-packet marks; at first order the product's response is the sum of the individual responses on the same profile. Thus in the connected coefficient of
+\[
+             \omega_{\rm ph}\bigl((B_b-B_a)a^\dagger_{\rm in}\bigr)
+\]
+the first correction of the one chosen state and the first correction of the incoming mark multiply zero. This is a relative readout in one theory, not the assertion that interacting vacua at both times are the same Gaussian.
+
+The unswitched retarded equation for a fixed interaction-picture canonical label has first coefficient the past integral of its commutator with the interaction-picture cubic \(H_3^{I}(s)\). Averaging the observation time against \(w_r\) inserts \(\int_s^\infty w_r(t)\dd t\) at time \(s\). Subtracting early from late gives the nonnegative difference
+\begin{equation}
+ \chi_{ab}(s)=\int_{-\infty}^s(w_a(t)-w_b(t))\,\dd t .
+ \label{eq:window}
+\end{equation}
+It is one between the two supports and zero outside their common exterior interval. This is a retarded response to the selected external measurements, not an inserted switch of the gravitational interaction. At the retained order the normalization and tree identification in Section~\ref{sec:benchmark} give the amplitude
+\begin{equation}
+ -\frac{i\kappa}{\hbar}
+   \left\langle bc\left|\int\chi_{ab}(s)H_3^{I}(s)\,\dd s\right|a\right\rangle .
+ \label{eq:amplitude}
+\end{equation}
+Indeed the term with \(bc\) acting on a one-particle incoming vector is zero, leaving the indicated commutator component. A linear normal-order contraction could only leave the incoming packet as a spectator after creating one additional packet; the two tested outgoing modes are orthogonal to it, so this and disconnected contractions vanish. The vacuum Wick normalization of the three selected free modes is exact, and unobserved free modes may be in a mixed reference covariance.
+
+With \(\sqrt{\hbar}\) per canonically normalized external quantum leg, write \(f_3(s)=\hbar^{-3/2}\langle bc|H_3^{I}(s)|a\rangle\). It is smooth and nonzero at the slice of the tensor calculation. There is therefore a constant phase \(\theta\) and a short open interval in which \(\Re(e^{i\theta}f_3(s))\) is strictly positive. Place both fixed-width samplers and their gap inside that interval. Then
+\[
+       \mathfrak a=\int\chi_{ab}(s)f_3(s)\,\dd s\ne0 .
+\]
+This proves \eqref{eq:cubicform}; no sharp-width limit, asymptotic rate, or noncollinear infinite-time scattering is required. In particular, the cancellation of first-order incoming and state corrections is sufficient here. The nonlinear brackets of averaged coordinates need not equal those of the central time coordinates, and we do not use such an equality.
+
+For the retained positive contribution take the physical pairing on the normalized outgoing two-packet vector. The number is the squared leading matrix element, \(\hbar\kappa^2|\mathfrak a|^2\), or equivalently the evaluation of the leading transition followed by the finite-rank projection in this tested physical representation. A rank-one projection in the local field algebra is not needed. Both legs of this selected intermediate pairing are smooth finite-rank Wightman contractions. With zero zeroth-order overlap, second-order changes of the amplitudes or local first-loop contacts in an unrelated elastic amplitude do not change this leading square. This does not evaluate or impose a normalization on all other one-loop graphs.
+
+If \(c\) labels an internal sampling profile, the elementary identity
+\(\chi_{ac}+\chi_{cb}=\chi_{ab}\) yields \(\mathfrak a=\mathfrak a_{ac}+\mathfrak a_{cb}\). Hence a middle bookkeeping cut produces, in the same physical pairing,
+\[
+ |\mathfrak a|^2=|\mathfrak a_{ac}|^2+|\mathfrak a_{cb}|^2+
+                     2\Re\bigl(\overline{\mathfrak a_{ac}}\mathfrak a_{cb}\bigr).
+\]
+For example, all three ordered samplers can be concentrated in a smaller fixed-phase interval where both partial integrals lie in a sector of width strictly less than \(\pi/2\); the cross term is then strictly positive. The equality of charge and one-state transport in Sections~\ref{sec:ward}--\ref{sec:state} explains why there is no projection or reset at an imagined intermediate cut. This verifies Theorem~\ref{thm:experiment} and distinguishes coherent causal recutting from a protocol with an actual intermediate measurement.
+
+\section{Scope and outlook}
+
+The construction identifies a source-dependent quantum Ward correction with an interior charge only on the dynamical quotient, under a fixed local anomaly-normalized pure Einstein prescription. The finite radiative witness additionally uses compact hyperbolic Milne, chosen geometric endpoint data, and smooth finite-order Wick tests. It proves a same-theory, cut-independent positive process, not a nonperturbative quantum gravity Hilbert space, independently defined boundary-face constraints, a complete elastic loop calculation, or all higher products of nonlocal CMC readouts.
+

@@ -1,0 +1,61 @@
+\section{One graded realization and a shared physical preparation}\label{sec:state}
+
+\subsection{An exact compatible extension of the reduced covariance}
+
+Use the trace-reversed de Donder Einstein--Faddeev--Popov linearization. Its physical Jacobi operator \(P_{\rm E}\) has gauge map \(K\) (trace-reversed symmetrized gradient); \(D=P_{\rm E}+KK^*\) and \(R=K^*K\) are the normally hyperbolic tensor and vector operators in this normalization, and \(P_{\rm E}K=0\). Let \(E_2,E_1\) be their Cauchy data spaces at one compact Milne slice and \(q_2,q_1\) their conserved nondegenerate Hermitian Green forms. Write \(\mathcal K:E_1\to E_2\) for the induced gauge map; \(^{\dagger}\) denotes the adjoint relative to these (generally indefinite) forms. The Green identities identify \(\mathcal K^\dagger\) with the induced constraint and give \(\mathcal K^\dagger\mathcal K=0\). The reduced phase space is \(\ker\mathcal K^\dagger/\operatorname{ran}\mathcal K\).
+
+Here \(\mathcal K\) is injective. If \(K\xi=0\), its invertible trace reversal implies that \(\xi\) is Killing. A Killing lapse on the CMC slice obeys \((-\Delta_q+3/t^2)u=0\), since it preserves the constant mean curvature, and vanishes by compactness. The tangential part would then be a spatial Killing field, excluded by the Bochner integral for negative Ricci curvature. The principal symbol of the Cauchy map is injective on either characteristic sign at nonzero spatial covector: in each sign it is the trace reversal of the symmetrized product of a nonzero null covector with the gauge amplitude. That product vanishes only when the gauge amplitude is zero. Thus \(\mathcal K\) is left elliptic in balanced Cauchy Sobolev orders.
+
+The compact Einstein result of G\'erard provides positive physical Hadamard covariances; its microlocal split gives Cauchy projections \(c_j^\pm\) self-adjoint for \(q_j\) with
+\(
+ c_2^\pm\mathcal K-\mathcal K c_1^\pm\in\Psi^{-\infty}
+\)
+\cite[Thm.~1.1, Lemma~3.2]{Gerard}. To turn this into an \emph{exact} Ward-compatible full free covariance, take positive auxiliary Cauchy Sobolev scalar products in which the two complementary \(c_j^\pm\) are orthogonal. One may use the sum of the positive balanced norms of \(c_j^+u\) and \(c_j^-u\), symmetrized under real conjugation. This choice does not change \(q_j\). For its positive Hilbert adjoint \(^{\sharp}\), ellipticity and injectivity give the pseudodifferential left inverse
+\[
+ L=(\mathcal K^\sharp\mathcal K)^{-1}\mathcal K^\sharp .
+\]
+The smoothing intertwining error, its Hilbert adjoint, and inversion show that \(L\) intertwines signs modulo smoothing. So does \(B=L^\dagger\), since the \(c_j^\pm\) are Green-self-adjoint. Now set
+\begin{equation}
+ J=B-\tfrac12\mathcal K B^\dagger B,\qquad
+ \Pi=1-\mathcal K J^\dagger-J\mathcal K^\dagger .
+ \label{eq:nullsplit}
+\end{equation}
+From \(L\mathcal K=1\) and \(\mathcal K^\dagger\mathcal K=0\) we get
+\(\mathcal K^\dagger J=J^\dagger\mathcal K=1\) and \(J^\dagger J=0\). Thus \(\Pi\) is an exact Green-orthogonal projection, and
+\[
+     E_2=\Pi E_2\oplus\mathcal K E_1\oplus J E_1 .
+\]
+The last two summands are isotropic and paired by \(q_1\); \(\Pi E_2\) represents the physical quotient. All these splittings intertwine the appropriate microlocal signs modulo smoothing, and can be chosen real.
+
+Transport the positive reduced covariance to \(\Pi E_2\), denoting its operators by \(C_{\rm ph}^\pm\) with two-point forms \(\pm q_{\rm ph}C_{\rm ph}^\pm\). With \(c_1^\pm\) for the vector sector, put
+\begin{equation}
+      C_2^\pm=C_{\rm ph}^\pm\Pi+
+                \mathcal K c_1^\pm J^\dagger+
+                J c_1^\pm\mathcal K^\dagger .
+      \label{eq:covariance}
+\end{equation}
+The metric two-point forms are \(\pm q_2 C_2^\pm\). Green adjoints, their full commutator, and the identity \(C_2^\pm\mathcal K=\mathcal K c_1^\pm\) follow exactly from \eqref{eq:nullsplit}. To see the Hadamard property, compare the physical block to \(\Pi c_2^\pm\Pi\). The latter has correct signs modulo smoothing and the same physical commutator; the difference in the plus forms equals the minus difference, so its propagated wavefront is contained in both disjoint sign relations and is empty. The null-pair terms in \eqref{eq:covariance} match the corresponding compressions of the reference modulo smoothing by the sign intertwiners. Propagate by the Cauchy Green maps. Now \cite[Prop.~3.4, Eqs.~(3.27)--(3.28)]{WZ} gives the full metric, multiplier and ghost/antighost covariance, including the mixed terms, with the exact total commutator and free BRST compatibility. There is no positive norm asserted on the ghost sector.
+
+A chosen finite smooth real symplectic span of packet pairs may be given an exact compatible oscillator vacuum while leaving the rest Hadamard: decompose its physical symplectic orthogonal complement, restrict the original positive covariance to that complement, use the pure finite oscillator block on the span, and set the cross terms to zero. This preserves the commutator and positivity, and changes the two-point distribution only by smooth finite-rank terms. The smoothness follows from the smooth selected Cauchy data and their images under the Hadamard Cauchy operators. In particular purity of the initial infinite-dimensional reference is not assumed. The finite change is made in \(C_{\rm ph}^\pm\) in \eqref{eq:covariance}, without changing the exact null-pair construction.
+
+\subsection{Finite-order domain and one physical state}
+
+In the free graded realization, the null-pair and Faddeev--Popov blocks have the standard quartet form. In the matched \(E_1\) coordinates the BRST arrows and their elementary contracting maps act between the paired copies. For example one chooses an auxiliary Hilbert majorant from the absolute value of the nondegenerate \(q_1\) blocks on the two microlocal signs, in the balanced orders; identical choices on the pairs give the same smooth contraction on each copy. Taking the graded sum on the finite-particle tensor powers and dividing by the quartet number on its positive sectors gives a free homotopy \(H_0\) with
+\begin{equation}
+     q_0 H_0+H_0 q_0=1-\iota P .
+     \label{eq:homotopy}
+\end{equation}
+Here \(P\) projects to the free physical sector, of ghost number zero, and the normalization of \(H_0\) follows that of free charge left multiplication. The one-particle maps in the quartet preserve smooth Cauchy data and intertwine microlocal signs; any doubled realization for a mixed physical covariance needs no contraction on its physical summands.
+
+We specify the domain used for the retained Wick coefficients. Free smooth data admit compactly time-supported representatives: if \(S\) is free solution propagation, \(\rho\) its Cauchy trace, \(E_{\rm c}\) the causal propagator, and \(\zeta\) is a temporal step, set \(j(u)=[P_{\rm kin},\zeta]Su\) for the relevant normally hyperbolic kinetic block. Then \(\rho E_{\rm c}j(u)=u\), with the common sign convention for \(E_{\rm c}\). Eliminate the multiplier first by its algebraic equation; it can then be recovered by its differential expression. A free Cauchy map \(M\) in the split is represented by \(jM\rho E_{\rm c}\). The two Cauchy propagation relations are null Fourier integral relations preserving the chosen characteristic sign, and the spatial pseudodifferential maps in \eqref{eq:nullsplit} have diagonal Cauchy relation. Their compositions, with the smooth compact time cutoff, have no one-sided null leg with a zero cotangent on the other side. Smoothing errors have no surviving such relation. For products the absence of a common future or past orientation includes tuples with zero entries, other than the simultaneous zero.
+
+At the finitely many retained orders the ordinary local Epstein--Glaser interacting charge coefficients are compact polynomial Wick kernels with the microcausal exclusion. Acting on smooth finite-particle coefficients gives smooth output Cauchy coefficients within each tested finite degree. Explicitly, contract the annihilation variables against smooth propagated inputs and push the creation legs to their Hadamard Cauchy sign. A singular output would require a forbidden all-oriented nonzero tuple of the original kernel with zeros in the already smoothly tested legs. Compactness of the temporal support and of the spatial section ensures proper pushforward. The same reasoning allows the sign-preserving free maps just described on these coefficient vectors. It does not establish an interacting unbounded operator domain at fixed nonzero coupling or a general renormalized time product of nonlocal insertions.
+
+One may therefore lift a free physical vector on the retained smooth domain using the actual charge of Theorem~\ref{thm:charge}. Write \(\Cq=q_0+\sum_{m\geq1}\kappa^m Q_m\). With \(\Omega_0\) the chosen physical free state vector, define coefficientwise
+\[
+   \Omega_n=-H_0\sum_{m=1}^n Q_m\Omega_{n-m}.
+\]
+The argument of the homotopy is free-closed by nilpotence of \(\Cq\), and has zero free physical projection by ghost number. Equation~\eqref{eq:homotopy} proves \(\Cq\Omega=0\) to the retained order; the formal normalization fixes the leading free norm. For the finite test the pairing is the induced positive free physical pairing at leading nonzero order, in agreement with the formal BRST positivity deformation \cite[Thm.~4]{DF}. One does not assume the bare free cyclic functional is already invariant under the interacting physical generator. Nor does covariance under \(R_f^{-1}Q_0R_f\) suffice for this purpose: the sourced commutator in \eqref{eq:RS} must first be identified and subtracted.
+
+Restrict this \emph{same} global state through any of the causal embeddings at the end of Section~\ref{sec:ward}. The on-shell charge, state pairing, and the external observable classes agree under these maps. On cyclic classes the induced map is the identification of the same polynomial applied to the same vector in the common realization. It intertwines the differential and preserves its radical quotient, hence preserves the physical pairing. In particular successive recuts compose without a change of state or a new projection at the middle cut.
+

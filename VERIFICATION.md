@@ -168,3 +168,11 @@ All three analytical proofs received internal cross-review. Their paper notes li
 - [Paper 61 verification](papers/61-de-sitter-scalar-shift-charge/VERIFICATION.md)
 - [Paper 62 verification](papers/62-nonlinear-milne-curvature-coordinates/VERIFICATION.md)
 - [Paper 63 verification](papers/63-einstein-dehn-filling-action/VERIFICATION.md)
+
+## Sourced gravity and resonant graviton dynamics (64–66)
+
+The associated proof and scope checks are recorded in the paper verification pages.
+
+- [Paper 64 verification](papers/64-active-einstein-scalar-mixed-response/VERIFICATION.md)
+- [Paper 65 verification](papers/65-sourced-brst-cut-graviton-transition/VERIFICATION.md)
+- [Paper 66 verification](papers/66-ads4-odd-azimuthal-graviton-pairs/VERIFICATION.md)

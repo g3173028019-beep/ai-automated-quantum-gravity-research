@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 76 items: 20 original research packets, six later analytical Markdown manuscripts and fifty typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 79 items: 20 original research packets, six later analytical Markdown manuscripts and 53 typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–63 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–66 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -797,3 +797,27 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** Orientable hyperbolic four-manifold with toral cusps and compact connected geodesic boundary; long primitive fillings and converging induced boundary metrics.
 
 [Paper notes](../papers/63-einstein-dehn-filling-action/README.md) · [PDF](../papers/63-einstein-dehn-filling-action/manuscript.pdf) · [TeX](../papers/63-einstein-dehn-filling-action/main.tex) · [Verification](../papers/63-einstein-dehn-filling-action/VERIFICATION.md)
+
+## 64. A sourced mixed Einstein–scalar response on a compact Cauchy slab
+
+**Result.** A finite retarded graviton–scalar response is nonzero on a genuinely coupled four-dimensional background. The Hessians of the actual marked sources cancel the two collapsed-leg Ward terms.
+
+**Scope.** One normalized tree coefficient on a marked compact CMC slab; active Einstein–massless-scalar backgrounds on the constructed branch.
+
+[64 · A sourced mixed Einstein–scalar response on a compact Cauchy slab](../papers/64-active-einstein-scalar-mixed-response/README.md) · [PDF](../papers/64-active-einstein-scalar-mixed-response/manuscript.pdf) · [TeX](../papers/64-active-einstein-scalar-mixed-response/main.tex) · [Verification](../papers/64-active-einstein-scalar-mixed-response/VERIFICATION.md)
+
+## 65. A sourced BRST cut charge and a finite graviton transition on compact Milne
+
+**Result.** The marked sourced and improved Noether cut charges agree at the stated perturbative order. The same unswitched construction yields a positive cut-independent selected two-graviton transition.
+
+**Scope.** Perturbative pure Einstein gravity on compact Milne, with local anomaly normalization and the specified compact sampler.
+
+[65 · A sourced BRST cut charge and a finite graviton transition on compact Milne](../papers/65-sourced-brst-cut-graviton-transition/README.md) · [PDF](../papers/65-sourced-brst-cut-graviton-transition/manuscript.pdf) · [TeX](../papers/65-sourced-brst-cut-graviton-transition/main.tex) · [Verification](../papers/65-sourced-brst-cut-graviton-transition/VERIFICATION.md)
+
+## 66. Odd azimuthal graviton pairs in the resonant dynamics of global AdS₄
+
+**Result.** The actual Dirichlet gravitational quartic coefficient forces an odd-azimuthal daughter pair at sharp energy grade and axial charge. The selected rare-event law and an exact finite-block lower bound quantify the effect.
+
+**Scope.** Matched dressed mode readout for the retained quartic quantum resonant model on global AdS₄.
+
+[66 · Odd azimuthal graviton pairs in the resonant dynamics of global AdS₄](../papers/66-ads4-odd-azimuthal-graviton-pairs/README.md) · [PDF](../papers/66-ads4-odd-azimuthal-graviton-pairs/manuscript.pdf) · [TeX](../papers/66-ads4-odd-azimuthal-graviton-pairs/main.tex) · [Verification](../papers/66-ads4-odd-azimuthal-graviton-pairs/VERIFICATION.md)
