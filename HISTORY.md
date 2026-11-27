@@ -2,9 +2,11 @@
 
 [Home](README.md) · [Paper index](docs/PAPER-INDEX.md) · [Verification history](docs/VERIFICATION-HISTORY.md)
 
-The current collection contains 62 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and thirty-six typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
+The current collection contains 71 manuscripts: 20 original packets, six later analytical Markdown manuscripts, and forty-five typeset analytical articles. Historical research dates, manuscript assembly, private repository delivery and public disclosure are distinct provenance facts.
 
 ## Scientific deliveries
+
+On 27 November 2026 (Beijing time), nine cross-cluster analytical manuscripts were added as Papers 52–60. Prior manuscripts and numbering are retained. See the [paper index](docs/PAPER-INDEX.md#52-relational-area-commutators-distinguish-matter-couplings-on-the-same-einstein-light-cone) for the release entries.
 
 On 27 November 2026 (Beijing time), [51 · Singular semiclassical sewing for paired-cap Witten–Reshetikhin–Turaev invariants](papers/51-singular-wrt-semiclassical-sewing/README.md) joined the public archive as a separate synthesis and extension. The earlier WRT manuscripts are retained.
 

@@ -99,3 +99,7 @@ Two independent technical reviews checked the mathematical claims, and both manu
 
 - [Paper 46+47 verification](../papers/46-47-common-cones-and-area-probes/VERIFICATION.md)
 - [Paper 44+47 verification](../papers/44-47-gravitational-radiation-memory/VERIFICATION.md)
+
+## Papers 52–60
+
+The analytical cross-cluster release was internally reviewed and rebuilt from the archived sources. The [reproduction section](REPRODUCTION.md#building-papers-5260) links the individual notes. No external peer review was reported.

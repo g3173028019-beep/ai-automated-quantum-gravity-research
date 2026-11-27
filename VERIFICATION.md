@@ -142,3 +142,17 @@ Two independent technical reviews checked the mathematical claims, and both manu
 ## Paper 51: singular semiclassical WRT sewing
 
 The 51-page PDF, multi-file LaTeX source, finite two-vertex replay and release scope are recorded in the [paper verification](papers/51-singular-wrt-semiclassical-sewing/VERIFICATION.md).
+
+## Cross-cluster analytical release (52–60)
+
+These releases received an internal technical scope and source review, three-pass PDF builds, and artifact checks. Individual notes record the distinction between those checks and independent external validation.
+
+- [Paper 52](papers/52-relational-area-commutators/VERIFICATION.md)
+- [Paper 53](papers/53-coherent-quantum-shear-sewing/VERIFICATION.md)
+- [Paper 54](papers/54-virasoro-whittaker-semiclassical-limit/VERIFICATION.md)
+- [Paper 55](papers/55-regge-high-frequency-noncommutation/VERIFICATION.md)
+- [Paper 56](papers/56-causal-parity-odd-gravity-coupling/VERIFICATION.md)
+- [Paper 57](papers/57-throat-counts-and-quantum-coherence/VERIFICATION.md)
+- [Paper 58](papers/58-vacuum-stress-spectral-thresholds/VERIFICATION.md)
+- [Paper 59](papers/59-wilson-recovery-sign-holonomy/VERIFICATION.md)
+- [Paper 60](papers/60-graviton-nonabelian-holonomy/VERIFICATION.md)

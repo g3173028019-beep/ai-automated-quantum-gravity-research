@@ -1,0 +1,266 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=.95in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage[hidelinks,pdftitle={Gravitons distinguish non-Abelian transport at fixed local curvature}]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\TF}{\mathrm{TF}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\vol}{\mathrm{vol}}
+\newcommand{\Div}{\operatorname{div}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\TT}{\mathrm{TT}}
+\title{Gravitons distinguish non-Abelian transport\\at fixed local curvature}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Two gravitational probes traversing identical local curvature data need not have identical propagation. We construct exact four-dimensional Einstein--Yang--Mills plane-wave sandwiches with the same metric, stress tensor, Yang--Mills curvature and every local covariant curvature derivative. Two active slabs fix color frames on either side of a flat-connection gap. The gravitational response depends on the relative adjoint transporter between those frames: interchanging two ordered \(\mathrm{SU}(2)\) rotations changes the sign of the crossed outgoing gravitational polarization, and a commutator sequence changes the total outgoing gravitational power. No gauge-field wave is incident and only the metric is read at the exit. The mechanism is the physical leading transport of the coupled linearized equations. For a general smooth on-shell background we derive its positive screen bundle and skew-adjoint graviton--color mixing, including its matrix polarization transport and gauge quotient. We give exact constrained linear preparations for the plane-wave comparison and a second local benchmark using localized non-Abelian collision data. The results concern linear geometric optics on exact backgrounds, not a nonlinear weak-limit theorem.
+\end{abstract}
+
+\section{What local curvature cannot predict}
+
+Gravitational and electromagnetic waves are known to convert into one another in a background electromagnetic field \cite{gert}. In the weak, short-wave Einstein--Maxwell limit, the exchange of ray currents and conservation of their sum are already explicit in \cite{tokuoka}. Yang--Mills Gertsenshtein conversion has been treated for specific backgrounds \cite{prym}, and analogous gravitational and gauge-field tensor oscillations occur in cosmological \(\mathrm{SU}(2)\) configurations \cite{bc,cdm}. The question here is which background information is actually needed to predict the gravitational part of the outgoing wave, not whether such conversion exists.
+
+Our comparison keeps the entire background metric fixed, not simply its null cone or its stress. It even keeps the Yang--Mills curvature fixed in a common gauge, together with all local covariant derivatives. The background connections are nevertheless distinguished by parallel transport between two active regions. This is a curvature-fixed comparison of an open transporter, not an assignment of physical meaning to a pure gauge potential in isolation. We realize its effect using purely gravitational initial data and a purely gravitational detector.
+
+The exact backgrounds are of Coleman--G\"uven type \cite{coleman,guven}. Equal field strength need not determine a non-Abelian connection \cite{dw}; for Einstein--Yang--Mills plane waves specifically, G\"urses, \c{S}i\c{s}man and Tekin give equal-curvature, gauge-inequivalent examples and distinguish their colored test-particle behavior \cite[Sec.~IV]{gst}. Our pair is locally gauge equivalent near every point. Its difference cannot be found from covariant curvature jets, and it is read by the coupled wave rather than a prescribed colored particle. The transport equation below also clarifies the difference from a nonlinear high-frequency limit of solutions and from comparing separate gauge and gravitational scattering problems under double copy \cite{sandwich}.
+
+\section{Physical transport on the common characteristic}
+
+Use signature \((-+++)\) and
+\[
+ S[g,A]=\frac1{2\kappa}\int R\,\dd\vol_g
+       -\frac14\int \langle F_{ab},F^{ab}\rangle\,\dd\vol_g,\qquad
+ F=\dd A+A\wedge A,\qquad \kappa=8\pi G_N>0.
+\]
+The Lie algebra has a positive invariant inner product, with any fixed gauge-coupling normalization included in it. We use \(D\) for the covariant derivative on fields carrying color and spacetime indices. A smooth solution of the coupled equations is fixed throughout the linearization. Set \(k=\xi^\sharp\) at a nonzero null phase-space point and let \(\mathcal S=k^\perp/\mathbb R k\) be the positive screen. Its parallel frame along a null geodesic can be represented by spacelike vectors \(e_A\), \(A=1,2\). The physical bundle on this null cone and the relevant coupling are
+\begin{equation}\label{eq:bundle}
+ \mathcal V=\mathrm{Sym}^2_0\mathcal S^*
+               \oplus(\mathcal S^*\otimes\ad P),\quad
+ f_A=F(k,e_A),\quad
+ C_f a=\big(\langle f_{(A},a_{B)}\rangle\big)^{\TF},\quad
+ (C_f^*H)_A=H_{AB}f_B .
+\end{equation}
+Parentheses include the factor \(1/2\). The screen and color inner products fix the adjoint; \(f_A\) is independent of the representative of \(e_A\) in the screen quotient.
+
+\begin{theorem}[Physical polarization transport]\label{thm:transport}
+ Let \(\phi\) be a real optical phase without a caustic on the observation patch, and \(k=(\dd\phi)^\sharp\). Suppose a coupled linearized solution has local leading amplitudes \((h,a)\) in the convention \(\eps\operatorname{Re}[(h,a)e^{i\phi/\eps}]\). With \(v=(H,a_{\mathcal S})\), \(H=h_{\mathcal S}^{\TF}/(2\sqrt{\kappa})\), the leading physical amplitudes satisfy
+ \begin{equation}\label{eq:transport}
+ \left(\nabla^{\mathcal V}_k+\tfrac12\Div k\right)v
+    =\mathcal A_f v,\qquad
+ \mathcal A_f=\sqrt{\kappa}
+      \begin{pmatrix}0&-C_f\\ C_f^*&0\end{pmatrix}.
+ \end{equation}
+ Here the connection on the color slot is the actual adjoint connection. The normalized covariance \(\rho=vv^\dagger\), or a sum of such covariances, satisfies
+ \begin{equation}\label{eq:density}
+ (\nabla^{\operatorname{End}\mathcal V}_k+\Div k)\rho
+          =[\mathcal A_f,\rho].
+ \end{equation}
+ Removing the common geometric spreading gives orthogonal transport for real amplitudes and its unitary complexification. The total scalar trace is transported as a null density, but the gravitational and color powers generally are not separately conserved.
+\end{theorem}
+
+\subsection{Gauge and differentiated field equations}
+In a compensated diffeomorphism and gauge convention the infinitesimal generator is
+\[
+ K(\zeta,\chi)=(\mathcal L_\zeta g,\ D\chi+\iota_\zeta F).
+\]
+This differs from the uncompensated diffeomorphism of \(A\) by a Yang--Mills gauge transformation. The principal parts are \(2\xi_{(a}\zeta_{b)}\) and \(\xi_a\chi\), respectively. On shell the Euler Hessian \(P\) has \(PK=0\) and \(K^\dagger P=0\), with the variational pairings. One can impose compatible wave gauges with principal terms the de Donder divergence of the trace-reversed metric and the covariant Lorenz divergence of the connection perturbation. For example, take the action adjoint of \(K\) with constant normalization of its two gauge rows. The additional term in the de Donder row from \(\iota_\zeta F\) is algebraic. The gauge-added Hessian has scalar wave principal part on both field slots, and the ghost operator has wave principal part on both gauge slots. The identities \(PK=K^\dagger P=0\) give a homogeneous subsidiary system for the gauge violations. Thus ordinary local normally hyperbolic Cauchy uniqueness propagates zero gauge data if the linearized constraints hold. This uses the same variational gauge argument as in general linear gauge quantization \cite{hs}, not a choice of gauge-dependent observables.
+
+At the characteristic the leading gauge conditions are \(k^a(h_{ab}-g_{ab}\tr h/2)=0\) and \(k^aa_a=0\). In a null frame \(k,\ell,e_A\) with \(k\cdot\ell=-1\) they imply \(h_{k\ell}=-\tr h/2\), \(h_{AA}=0\), and \(h_{kA}=h_{kk}=0\). This makes the screen readings independent of representatives \(e_A+\alpha_Ak\). Residual principal gauge transformations remove the nonphysical components without changing these readings. In particular the compensated \(\iota_\zeta F\) does not change the leading screen mode: the bounded high-frequency metric amplitude fixes the gauge parameter to one order lower by injectivity of the symbol \(\zeta\mapsto k_{(a}\zeta_{b)}\). Background Yang--Mills gauges act by simultaneous conjugation, and the screen/color connection preserves the inner products in \eqref{eq:bundle}.
+
+The differentiated matter variation of \(T_{AB}\) on the screen is
+\(2i(C_f a)_{AB} e^{i\phi/\eps}\) up to the real-part convention and an \(O(\eps)\) correction: in the curvature variation \(\delta F_{A c}=-ik_c a_A e^{i\phi/\eps}+O(\eps)\), and the metric trace term is irrelevant after screen trace removal. The Einstein wave term is \(-i(\nabla_k+\Div k/2)h^{\TF}_{AB}\) at this order. Thus the gravity row for the unnormalized field is
+\((\nabla_k+\Div k/2)h^{\TF}=-2\kappa C_f a\).
+
+For the second row, varying the Yang--Mills density gives the metric part
+\[
+ \frac{\delta(\sqrt{|g|}F^{ab})}{\sqrt{|g|}}
+  =\delta F^{ab}
+    +\tfrac12(\tr h)F^{ab}-h^a{}_cF^{cb}-h^b{}_cF^{ac},
+\]
+where \(\delta F^{ab}\) here raises the \emph{curvature} variation with the fixed metric. In the derivative along the fast wave \(k_a\), the first metric term and the second cancel by de Donder. The last term reduces on the physical screen to the insertion \(-i C_f^*h^{\TF}\); a possible longitudinal part of \(h_{Ac}\) is proportional to \(k_c\) and gives zero on \(F(k,\cdot)\). Commuting the derivatives in the connection variation only makes zeroth-order terms, so the Lorenz condition gives \(2i(D_k+\Div k/2)a_{\mathcal S}\) as the wave transport term. Consequently the raw color transport sources \(\frac12 C_f^*h^{\TF}\). The algebraic term from the metric gauge adjoint makes no screen TT transport contribution, because its differentiated index then lies in the screen and \(k_A=0\). These calculations yield exactly the canonical rescaling and both signs in \eqref{eq:transport}. Taking a product and using \(\mathcal A_f^*=-\mathcal A_f\) proves \eqref{eq:density}.
+
+\subsection{Matrix defect transport}
+There is also a local microlocal version. Work away from the zero section in compact cotangent bands with a semiclassical scale \(\eps\), rescaling the metric and connection perturbations by \(1/\eps\) as above. Assume these rescaled fields are locally bounded in the corresponding semiclassical energy norm and solve the reduced equations with \(o(\eps)\) residual after multiplying the equations by \(\eps^2\), and satisfy the leading gauge constraints. The positive matrix weak limits, projected to \(\mathcal V\), are supported on \(p=g^{ab}\xi_a\xi_b=0\). In the half-density convention let \(\mu\) be such a limit. For compact smooth physical matrix tests \(B\) on the cone,
+\begin{equation}\label{eq:micro}
+ \int \tr\!\left[
+  \left(\nabla^{\operatorname{End}\mathcal V}_{H_p}B+
+         2[B,\mathcal A_f]\right)\,\dd\mu\right]=0.
+\end{equation}
+To see this, parallel-transport the null and screen frame in a Hamiltonian flowbox, extend the matrix test off the null surface, and cut off in a slightly larger compact band. The scalar principal equation gives support on \(p=0\), and the constraint symbols impose the physical quotient there. The standard wave commutator pairing, divided by \(\eps\), gives the derivative along \(H_p\) and the projected first-order matrix; the two explicit physical projection calculations above give that matrix. Leading pure gauge components contribute zero to these rows, so choosing a different extension or gauge representative there leaves the equation unchanged. The factor two is \(H_p=2k\) in a parallel frame. This is the polarization version of the usual real-principal-type commutator argument \cite{dencker,gerard}. It is a statement about the specified bands; it does not claim tightness at zero or at infinite scaled frequency. On a single eikonal sheet the spreading form is \eqref{eq:density}. In particular a real symmetric physical density remains real symmetric under this leading transport: an imaginary circular Stokes component is not created from real initial data by the real transport alone.
+
+\section{Exact sandwiches with identical local fields}
+
+Choose an orthonormal adjoint basis \(T_1,T_2,T_3\) with
+\([T_i,T_j]=\epsilon_{ijk}T_k\) for the comparison. On a bounded coordinate laboratory, take
+\begin{align}\label{eq:ansatz}
+ g&=-2\dd u\,\dd v+\delta_{AB}\dd x^A\dd x^B
+                         +\mathcal H(u,x)\dd u^2,\\
+ A&=\big[C(u)-x^1 X(u)-x^2 Y(u)\big]\dd u,\qquad
+ \mathcal H=-\tfrac{\kappa}{2}
+   (\|X\|^2+\|Y\|^2)\big((x^1)^2+(x^2)^2\big).\nonumber
+\end{align}
+The functions are smooth and compactly supported in \(u\). Their dimensions and norms are fixed by the action above. The curvature has only \(F_{u1}=X,F_{u2}=Y\); in particular \(\|F\|^2=0\). The Yang--Mills equation is identically satisfied: the only raised components are \(F^{vA}=-F_{uA}\) and their skew partners, \(\det g=-1\), and \(A_u\) cannot contribute to \([A_a,F^{ab}]\) because \(F^{ub}=0\). The stress has only \(T_{uu}=\|X\|^2+\|Y\|^2\), and the metric satisfies \(\Ric_{uu}=-\Delta_\perp\mathcal H/2=\kappa T_{uu}\). Its Ricci scalar is zero. This proves exact nonlinear attainment for every \(C\), not just a background satisfying a reduced matter equation.
+
+Let \(f_i\ge0\), \(i=1,2\), be ordered smooth compact, nonzero disjoint pulses. In all compared laboratories choose \(X=(f_1+f_2)T_1\), \(Y=(f_1+f_2)T_2\) and place \(C\) strictly in the intermediate gap. The metric and \(F\) agree everywhere in the displayed gauge. The potentials agree where \(F\) can be nonzero and both are flat wherever they differ. Consequently their covariant curvature derivatives \(D^mF\) agree in that gauge for every \(m\ge0\), and the backgrounds are gauge equivalent on a neighborhood of any individual point. This does not imply a common gauge equivalence on the two-slab laboratory.
+
+Use the marked central ray \(k=\partial_u\) at \(x^A=0,v=v_0\), counterpropagating against the background null beam with covector \(\dd u\). It is affine with parallel transverse frame because all first derivatives of \(\mathcal H\) vanish there. Along the ray the color connection is \(A(k)=C(u)\). At either endpoint in an active slab the ordered pair \((F(k,e_1),F(k,e_2))\) fixes two independent color directions and their bracket fixes the third. Write \(W=\mathcal P\exp(-\int C\,\dd u)\) and \(\mathsf U=\Ad_W\) in those endpoint frames. A gauge transformation taking one compared curvature to the other must fix two independent noncommuting adjoint vectors at each marked endpoint, hence is central there. Such factors cannot change \(\mathsf U\). An arbitrary gauge instead transforms the transporter and frames together, with the same relative adjoint matrix. The relative transporter is therefore physical in the marked comparison; the gap alone has no absolute open-Wilson-line observable. The whole comparison can be performed in a pre-caustic region: a parallel incident transverse separation solves \(y''+\kappa(f_1+f_2)^2 y=0\) with \(y=1,y'=0\) at entry. If the maximal integral of \((u-s)\kappa(f_1+f_2)^2(s)\) over the fixed forward interval is \(\delta<1/2\), its Volterra equation gives \(\|y-1\|_\infty\le\delta/(1-\delta)<1\). Small active envelopes suffice; the gap rotation has no gravitational focusing cost.
+
+\section{A purely gravitational discrimination experiment}
+
+Define the transfer after factoring out the common optical spreading in \eqref{eq:transport}. Use the screen basis
+\[
+ H_+=\frac{1}{\sqrt2}\begin{pmatrix}1&0\\0&-1\end{pmatrix},
+ \qquad
+ H_\times=\frac{1}{\sqrt2}\begin{pmatrix}0&1\\1&0\end{pmatrix}.
+\]
+On the central ray the map \(C^*_{(T_1,T_2)}=J\) is an isometry, with two columns \(j_+=(T_1,-T_2)/\sqrt2\) and \(j_\times=(T_2,T_1)/\sqrt2\). Put \(\Theta_i=\sqrt\kappa\int f_i\,\dd u\), \(s_i=\sin\Theta_i\), \(c_i=\cos\Theta_i\).
+
+\begin{theorem}[Gravitational readout of ordered relative color]\label{thm:main}
+ For a purely gravitational incident wave in the common flat region, the normalized outgoing graviton symbol of \eqref{eq:ansatz} on the marked central ray is
+ \begin{equation}\label{eq:trans}
+ H_{\mathrm{out}}
+    =\big[c_1c_2\Id-s_1s_2 J^*(\mathsf U\oplus\mathsf U)J\big]H_{\mathrm{in}}.
+ \end{equation}
+ The color connection in the gap can be chosen so that interchanging two rotations changes the sign of the nonzero crossed exit polarization at fixed \(+\) input. There is also a commutator-versus-identity choice for which the total outgoing gravitational power differs. Both comparisons retain the same metric, stress, curvature and all local covariant curvature derivatives.
+\end{theorem}
+
+\begin{proof}
+ On active slab \(i\) the coupling is \(f_i J\), and \(A(k)=0\). In the gravitational plane and the color plane \(J(\mathcal V_{\rm grav})\) the generator is a constant skew matrix times \(f_i\); it annihilates the orthogonal color complement. Thus after the first slab, with no incident color, \(H=c_1H_{\rm in}\), \(a=s_1 JH_{\rm in}\). In the gap the gravity stays fixed and the color is transported by \(\mathsf U\) in each slot. Applying the analogous rotation at the second slab gives \eqref{eq:trans}. The projected matrix is
+ \begin{equation}\label{eq:proj}
+ J^*(\mathsf U\oplus\mathsf U)J=
+ \frac12\begin{pmatrix}
+  \mathsf U_{11}+\mathsf U_{22} & \mathsf U_{12}-\mathsf U_{21}\\
+  \mathsf U_{21}-\mathsf U_{12} & \mathsf U_{11}+\mathsf U_{22}
+ \end{pmatrix},
+ \qquad \mathsf U_{ab}=\langle T_a,\mathsf U T_b\rangle .
+ \end{equation}
+
+ Let \(R_1,R_2\) be positive quarter-turn adjoint rotations about \(T_1,T_2\). Each is realized by a smooth disjoint pulse of \(C\) along its fixed generator; choose its integral with the sign required by the parallel equation \(D_k a=0\). For \(R_1R_2\) the upper off-diagonal of \eqref{eq:proj} is \(-1/2\), and for \(R_2R_1\) it is \(+1/2\). The two diagonals vanish in both cases: direct rotation sends the first two basis vectors to \((T_2,T_3)\) in the first product and to \((-T_3,T_1)\) in the second. Thus the two crossed exit amplitudes for \(H_{\rm in}=H_+\) have opposite signs and common absolute size \(s_1s_2/2\). The background fields are identical throughout both active slabs, not only at the two frames.
+
+ For the power discrimination compare the same four rotations, in one order giving \(\Id\), and the other giving \(R_1R_2R_1^{-1}R_2^{-1}\). Both use zero net integral of \(C\), and differ only in the sequence of the same pulse areas. The commutator sends \(T_1,T_2,T_3\) to \(T_3,-T_1,-T_2\); \eqref{eq:proj} is then an antisymmetric matrix with off-diagonal entries \(-1/2,1/2\). Its identity-case value is \(\Id\). For equal small nonzero \(\Theta=\Theta_1=\Theta_2\) and unit input, the squared powers are respectively \((c^2-s^2)^2\) and \(c^4+s^4/4\), where \(c=\cos\Theta,s=\sin\Theta\). Their difference \(2c^2s^2-3s^4/4\) is nonzero for small \(\Theta\). This last measurement is independent of which orthonormal polarization basis is used. In a commuting group the zero-integral four-pulse sequence could not give the commutator response.
+\end{proof}
+
+\subsection{Constrained launch and metric-only detection}
+The signal in Theorem~\ref{thm:main} is achieved by smooth constrained linear solutions, not just by abstract vectors in a symbolic screen quotient. A small laboratory around the finite passage of the central ray can be chosen so that the \emph{larger} initial spacelike slice, for example a portion of \(t=(u+v)/\sqrt2=\mathrm{constant}\), covers the past domain needed for the exit patch. Only the support of the perturbation is restricted to a flat incoming subpatch of that slice. The rest of the initial data, including on the curved portion of the slice, are zero. This distinction matters: a slice confined to \(u\) below the first slab need not have a domain of dependence reaching beyond it, since constant-\(u\) null generators may miss it. Choose a coordinate laboratory with a common strictly timelike time covector and a uniform bound on coordinate causal speeds. Then choose the total laboratory-time interval short relative to its spatial margin. The causal past of the exit probe on the initial slice lies strictly inside the enlarged buffer. This realizes the whole passage in an ordinary local domain of dependence; no global plane-wave Cauchy surface is assumed.
+
+In the flat incoming subpatch construct compact exactly TT spatial data using
+\begin{equation}\label{eq:tt}
+ Q_{ij}=-\Delta\delta_{ij}+\partial_i\partial_j,\qquad
+ \mathbb T_{ij}[b]=Q_i{}^kQ_j{}^\ell b_{k\ell}
+                           -\tfrac12 Q_{ij}Q^{k\ell}b_{k\ell}.
+\end{equation}
+The spatial divergence vanishes identically, and the trace vanishes by
+\(Q^2=(-\Delta)Q\), \(\tr Q=-2\Delta\). Apply this differential operator to a compact smooth, high-frequency optical seed; it preserves support and on a transverse trace-free polarization its principal symbol is the fourth power of the spatial wave number. With a unit incoming spatial wave covector, \(\eps^5\mathbb T\) gives a metric amplitude of size \(\eps\) in the convention of Theorem~\ref{thm:transport}. For a constant nonunit covector include the corresponding inverse fourth power. Choose the normal velocity similarly at order one with the sign of the outgoing phase. Both configurations and velocities are exactly TT; the temporal gauge components and the Yang--Mills data may be taken zero. The constraint equations in the flat support subpatch are the flat linear vacuum constraints, and the zero extension solves the linear constraints elsewhere because all data vanish near the subpatch boundary. The subsidiary wave argument of Section~2 supplies exact physical evolution on the common domain of dependence.
+
+For clarity about geometric-optics attainment, solve the full reduced wave transport, including any longitudinal representatives, along the pre-caustic congruence. In the normalization \(\eps e^{i\phi/\eps}v\), an eikonal phase and transported leading vector give an \(O(\eps)\) residual in the reduced wave equations on a fixed compact observation region. The prepared data agree in wave energy with this ansatz up to \(O(\eps)\), since the principal symbols and the incoming branch have been matched by \eqref{eq:tt}. Ordinary local energy estimates give an \(O(\eps)\) error in first derivatives in \(L^2\). Applying the same estimate to one further derivative weighted by \(\eps\) bounds the error in the scaled second-derivative reading: scale derivatives of the smooth coefficients and the oscillatory residual remain controlled, and the initial optical preparation can be matched to that order as well. This argument is local and independent of the carrier frequency once the background and laboratory are fixed. A small transverse aperture about the central ray gives smooth transfer nearby, so the strict separation in Theorem~\ref{thm:main} persists under a localized output probe.
+
+The receiver is in the common flat region beyond the second slab. There the linearized Weyl tensor is invariant under metric gauge transformations even off shell, since the background Weyl tensor vanishes. For a fixed timelike observer \(n\) with \(k\cdot n\ne0\), the leading positive-frequency coefficient of \(\eps\,\delta W(n,e_A,n,e_B)^{\TF}\) has absolute factor \((k\cdot n)^2 h^{\TF}_{AB}/2\) (the sign follows the chosen curvature convention). The metric phase-locked tidal readout therefore measures the crossed sign, and its squared two-polarization norm measures the power variant. All optical and normalization factors are common. These statements describe a leading high-frequency symbol and controlled wavepacket measurements, not an identity for arbitrary finite frequencies.
+
+\section{A local same-stress criterion and cosmological check}
+
+\subsection{A collision with two available color directions}
+The matrix law also separates different initial polarized waves on one exact background, without changing its connection. At a point where \([f_1,f_2]\ne0\), the positive color metric and invariance imply that \([f_1,f_2]\) is orthogonal to both screen colors. A unit color screen amplitude in this direction, for instance in the first screen slot alone, gives \(a_D\) with \(C_fa_D=0\). By contrast let \(a_B=C_f^*H_\bullet/\|C_f^*H_\bullet\|\) for any real TT tensor with \(C_f^*H_\bullet\ne0\); then \(C_fa_B\ne0\) by the adjoint pairing. Both have zero gravity on entry, identical total scalar traces and the same wave covector. Along affine distance \(s\) from the point, after removing common area spreading, \eqref{eq:transport} gives
+\[
+ \|H_B(s)\|^2=\kappa s^2\|C_fa_B\|^2+O(s^3),\qquad
+ \|H_D(s)\|^2=O(s^4).
+\]
+The dark direction need not stay in the kernel on longer stretches. This is a finite short-distance difference of leading graviton powers for the same scalar incoming null data, not a comparison of two different backgrounds.
+
+A genuine instance occurs on localized smooth Einstein--Yang--Mills characteristic developments of \cite{p43}, based on \cite{my}. On the flat corner disk take equal admissible profiles \(\alpha=\beta=\dd x+\dd y\) on a smaller neighborhood, with equal nonzero slopes \(c_0\) and orthogonal noncommuting colors \(X,Y\) of equal norm. At the corner the incoming fields obey \(F(l,e_A)=c_0\alpha_A X\), \(F(n,e_A)=c_0\beta_A Y\), whereas the corner normal and transverse two-form values vanish. Here \(l\cdot n=-1\) and \(e_A\) are the corner orthonormal screen axes. Use the oblique null direction \(k=l+n+\sqrt2e_2\) and its spacelike screen \(E_1=e_1,E_2=(l-n)/\sqrt2\). The two screen colors are \(c_0(X+Y)\) and \(c_0(-X+Y)\), with commutator \(2c_0^2[X,Y]\ne0\). Both null-normal coefficients of \(k\) are positive, and by smoothness the noncommutation persists on a small interior Cauchy patch. This uses the actual localized development, not a frozen off-shell incident field. Unlike the mixed nonlinear collision curvature in \cite{p43}, the observable here is the linear-probe transport on the attained background.
+
+The two seed amplitudes can be attained to their leading order by exact constraints even on this curved, color-bearing patch. For this purpose take a sufficiently small spacelike ball and use the spatial connection and canonical electric density as independent Yang--Mills data. Choose the leading electric variation transverse to the nonzero spatial phase gradient of a compact optical seed, with the future traveling-wave velocity. The leading \(1/\eps\) Gauss term then vanishes. The remaining Gauss, Hamiltonian and momentum residuals are \(O(1)\) oscillatory sources, since they take at most one derivative of the \(O(\eps)\) spatial connection and at most zero derivatives of the \(O(1)\) Yang--Mills contribution to the stress. Any transport coefficient is compared only in a smaller domain of dependence.
+
+One support-local leading-order preparation is obtained by an elliptic correction on this ball. Write the unknown metric correction as \(2\varphi q\) for spatial metric \(q\), the extrinsic curvature correction as the trace-free conformal Killing derivative of \(W\), and the electric density correction as \(\sqrt q\,D^i\chi\). In the linearized Hamiltonian, momentum and Gauss rows the second-order diagonal parts are
+\[
+ -4\Delta_q\varphi,\qquad
+ \Delta_q W_i+\tfrac13\nabla_i\nabla^jW_j,\qquad
+ \sqrt q\,D_iD^i\chi .
+\]
+The off-diagonal terms have at most one derivative of these three potentials. For example in the momentum and stress rows the background extrinsic curvature and electric field are smooth coefficients, and the densitized Gauss row has no metric derivative. The Dirichlet form of the three principal blocks is coercive after using the corresponding row signs, and a small ball absorbs all lower terms by Poincar\'e's inequality. Therefore there is an exact local Dirichlet inverse. For the compact oscillatory residual construct its particular inverse first by multiplying by \(\eps^2\) times the inverse of the leading symbol at the spatial phase gradient; continue to finitely many orders and invert the small final error with the exact inverse. Recursion coefficients are compactly supported in the preparation aperture. The three potentials are \(O(\eps^2)\) with first derivatives \(O(\eps)\) in \(L^2\); the last exact remainder may have tails on the ball but leaves the principal packet compact. Hence neither incoming screen amplitude changes. Set the initial time components and their gauge velocities by the wave gauge. The normal Einstein and Gauss equations, together with the vanishing initial gauge functions, force vanishing first normal derivatives of the gauge functions, so the same subsidiary system gives exact physical waves. The preceding local geometric-optics estimates apply on a smaller patch. Measuring the output with the scaled screen tidal Weyl tensor again gives the claimed power difference; on a curved seed its fast gauge error is lower order since the diffeomorphism vector producing an \(O(\eps)\) fast metric variation is \(O(\eps^2)\). At the flat exit of the sandwich no such scaling argument is even needed for diffeomorphism invariance.
+
+\subsection{Locked homogeneous triad}
+As a check rather than a new conversion effect, take the conformally flat metric \(a(\eta)^2(-\dd\eta^2+\dd\mathbf x^2)\) and locked field \(A_i=f(\eta)T_i,A_0=0\), now writing \([T_i,T_j]=g_{\rm YM}\epsilon_{ijk}T_k\) in canonical color units. Then \(F_{0i}=f'T_i\), \(F_{ij}=g_{\rm YM}f^2\epsilon_{ija}T_a\), and \(f''+2g_{\rm YM}^2f^3=0\). The constant \(\mathcal E=f'^2+g_{\rm YM}^2 f^4\) gives density \(3\mathcal E/(2a^4)\), pressure a third of that, and \(a'^2=\kappa\mathcal E/2\). These are the exact Einstein and Yang--Mills equations on this isotropic branch. For \(k=(\dd(z-\eta))^\sharp\) the two screen colors are
+\[
+ a^{-3}(f'T_x+g_{\rm YM} f^2T_y),
+ \quad a^{-3}(f'T_y-g_{\rm YM} f^2T_x).
+\]
+Both have norm \(a^{-3}\sqrt{\mathcal E}\) and the orthogonal \(T_z\) color line is preserved by \(A(k)=a^{-2}fT_z\). The leading converted fraction from an initially pure graviton over conformal time \(\Delta\eta\) is \(\kappa\mathcal E(\Delta\eta)^2/a(\eta_0)^2+O((\Delta\eta)^3)\). This remains nonzero at a magnetic turning point \(f'=0\), \(f\ne0\), and agrees with known tensor conversion in locked backgrounds \cite{bc,cdm}. It does not turn the above real leading transport into a claim about finite-frequency helicity dispersion.
+
+\section{Scope}
+
+The joint transport is a matrix connection on the physical characteristic bundle. Scalar stress retains the sum of graviton and gauge intensities, not their coherent exchange. The plane-wave comparison isolates a further limitation: even the full local geometric and Yang--Mills curvature jets do not determine the outgoing gravitational transfer, because relative color transport through an intervening gap can matter. The detectable information is a projected part of an adjoint holonomy, not reconstruction of an arbitrary connection from a two-polarization observation.
+
+The proofs use smooth exact backgrounds, the constrained \emph{linearized} equations, and finite pre-caustic optical windows. They neither take a nonlinear high-frequency limit of fully interacting Einstein--Yang--Mills fields nor identify a quantum scattering probability. Vacuum high-frequency theorems and the two-helicity vacuum comparison of \cite{p29b} concern different hypotheses \cite{hl,touati}. The exact pp-wave background, known conversion and curvature ambiguity are separated from the new gravity-only ordered benchmark.
+
+\paragraph{Working provenance.} This analytical draft was prepared with AI assistance and internally cross-checked. No external peer review or priority certification is asserted.
+
+\begin{thebibliography}{20}
+\bibitem{gert} M.~E. Gertsenshtein,
+Wave resonance of light and gravitational waves,
+Sov. Phys. JETP \textbf{14}, 84 (1962),
+\href{https://jetp.ras.ru/cgi-bin/dn/e_014_01_0084.pdf}{journal copy}.
+\bibitem{tokuoka} T. Tokuoka,
+Interaction of electromagnetic and gravitational waves in the weak and short wave limit,
+Prog. Theor. Phys. \textbf{54}, 1309--1317 (1975),
+\href{https://doi.org/10.1143/PTP.54.1309}{doi}.
+\bibitem{prym} A.~Palessandro and T.~Rothman, \emph{Autocatalysis of graviton production via the Gertsenshtein effect for the Yang--Mills field}, Phys.\ Dark Univ.\ \textbf{42} (2023) 101341, \href{https://arxiv.org/abs/2301.12801}{arXiv:2301.12801}.
+\bibitem{bc} J. Bielefeld and R.~R. Caldwell,
+Cosmological consequences of classical flavor-space locked gauge field radiation,
+Phys. Rev. D \textbf{91}, 124004 (2015),
+\href{https://arxiv.org/abs/1503.05222}{arXiv:1503.05222}.
+\bibitem{cdm} R.~R. Caldwell, C. Devulder and N.~A. Maksimova,
+Gravitational wave--gauge field oscillations,
+Phys. Rev. D \textbf{94}, 063005 (2016),
+\href{https://arxiv.org/abs/1604.08939}{arXiv:1604.08939}.
+\bibitem{coleman} S. Coleman, Non-Abelian plane waves,
+Phys. Lett. B \textbf{70}, 59--60 (1977),
+\href{https://doi.org/10.1016/0370-2693(77)90344-6}{doi}.
+\bibitem{guven} R. G\"uven, Solution for gravity coupled to non-Abelian plane waves,
+Phys. Rev. D \textbf{19}, 471 (1979),
+\href{https://doi.org/10.1103/PhysRevD.19.471}{doi}.
+\bibitem{dw} S. Deser and F. Wilczek, Non-uniqueness of gauge-field potentials,
+Phys. Lett. B \textbf{65}, 391--393 (1976),
+\href{https://doi.org/10.1016/0370-2693(76)90250-1}{doi}.
+\bibitem{gst} M. G\"urses, T.~\c{C}. \c{S}i\c{s}man and B. Tekin,
+Einstein--Yang--Mills plane waves: uniqueness and an exact curvature double copy,
+\href{https://arxiv.org/abs/2611.12204}{arXiv:2611.12204}.
+\bibitem{sandwich} T. Adamo, E. Casali, L. Mason and S. Nekov\'a\v{r},
+Scattering on plane waves and the double copy,
+Class. Quantum Grav. \textbf{35}, 015004 (2018),
+\href{https://arxiv.org/abs/1706.08925}{arXiv:1706.08925}.
+\bibitem{hs} T.-P. Hack and A. Schenkel,
+Linear bosonic and fermionic quantum gauge theories on curved spacetimes,
+Gen. Relativ. Gravit. \textbf{45}, 877--910 (2013),
+\href{https://arxiv.org/abs/1205.3484}{arXiv:1205.3484}.
+\bibitem{dencker} N. Dencker,
+On the propagation of polarization sets for systems of real principal type,
+J. Funct. Anal. \textbf{46}, 351--372 (1982).
+\bibitem{gerard} P. G\'erard, Microlocal defect measures,
+Comm. Partial Differential Equations \textbf{16}, 1761--1794 (1991).
+\bibitem{my} P. Mondal and S.-T. Yau,
+Einstein--Yang--Mills equations in the double null framework,
+\href{https://arxiv.org/abs/2205.01101}{arXiv:2205.01101}.
+\bibitem{p43} Research archive, Gravitational readouts of a localized non-Abelian null-beam collision,
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/43-localized-nonabelian-null-collision}{Paper 43}.
+\bibitem{p29b} Research archive, Physical polarization of high-frequency vacuum gravity,
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/29b-high-frequency-graviton-polarization}{Paper 29B}.
+\bibitem{hl} C. Huneau and J. Luk, Burnett's conjecture in generalized wave coordinates,
+\href{https://arxiv.org/abs/2403.03470}{arXiv:2403.03470}.
+\bibitem{touati} A. Touati, Geometric optics approximation for the Einstein vacuum equations,
+\href{https://arxiv.org/abs/2206.12318}{arXiv:2206.12318}.
+\end{thebibliography}
+\end{document}

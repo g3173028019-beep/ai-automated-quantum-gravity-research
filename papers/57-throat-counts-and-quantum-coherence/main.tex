@@ -1,0 +1,178 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\HH}{\mathcal H}
+\title{Identical Emission Counts, Different Quantum Coherence\\
+\large Exact instruments for a near-extremal charged throat}
+\author{}
+\date{}
+\hypersetup{pdftitle={Identical Emission Counts, Different Quantum Coherence},pdfauthor={}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We show that the complete time- and energy-marked neutral-scalar emission process of a deep-quantum charged throat does not determine its quantum channel. Using the actual secular rate density, we construct normal energy-conserving instruments with identical ordered records for every initial density operator, including final remnant energy. After one observed click one completion admits exact heralded coherent recovery, whereas another erases the same logical phase from the remnant. A radiation--reference experiment detects their difference at order one on the throat's low-energy time scale. Separately, an intrinsic two-emission history phase leaves the counts fixed but changes a radiation-only effect commuting with total radiated energy. A finite scalar Pauli--Fierz model realizes this phase comparison in the extended weak-coupling limit. The constructions identify missing microscopic transition data; they do not select the physical channel of an evaporating Reissner--Nordstr\"om black hole.
+\end{abstract}
+
+\section{Physical rate and scope}
+A population master equation determines the diagonal output of a marked measurement, but it need not determine the quantum state of the remnant or the outgoing radiation. Here the starting process is the specific quantum-corrected evaporation model of \cite{biggs,paper36}, based on the fixed-charge Schwarzian throat and the exterior matching of \cite{brown,bai,it}. The emitted scalar is \emph{neutral}; the charge thus stays fixed throughout what follows.
+
+Use asymptotic proper time and energy \(E>0\) above extremality. The deep-quantum neutral scalar model has total emission rate \(\Lambda(E)=AE^{5/2}\), \(A>0\), and conditional remaining fraction \(E'/E\sim\mathrm{Beta}(3/2,2)\). Hence with \(\omega=E-E'\) the exact effective rate density is
+\begin{equation}
+ W(E,\omega)=\frac{15 A}{4}\,\omega\sqrt{E-\omega}\,1_{\{0<\omega<E\}},
+ \qquad \int W(E,\omega)\,\dd\omega=\Lambda(E).                   \label{eq:kernel}
+\end{equation}
+The comparison below retains \cite{paper36}'s whole log-time counting process, including its exact scaled cumulants, \(3/8\) leading count coefficient and \(17/32\) stationary Fano factor. We restrict to a finite near-throat continuum window \(0<E<E_{\max}\), invariant under the downward transitions, with no competing channels. The model's formal continuation to arbitrarily small energy does not determine the first microscopic level or endpoint of physical evaporation. The construction also applies one channel at a time to the power rates \(W_a(E,\omega)=A_a\omega^a\sqrt{E-\omega}/B(3/2,a+1)\) on that support; in a two-particle event the gap mark then refers to its total energy, not its internal spectrum.
+
+\section{Normal continuum completions with the same whole path}
+
+On \(\HH=L^2((0,E_{\max}),\dd E)\), let \(H=M_E\). A strictly positive Schwarzian spectral density can equivalently be included in the wave-function normalization; \(W\) here is always a rate density relative to \(\dd\omega\). The scalar realization is an admissible effective completion and makes no assertion that black hole energy multiplicities equal one. For measurable unit \(v(E,\omega)\in\mathbb C^d\) on the support of \(W\), define
+\begin{align}
+ (J_{\omega,j}\psi)(F)
+ &=1_{\{F+\omega<E_{\max}\}}\sqrt{W(F+\omega,\omega)}
+                v_j(F+\omega,\omega)\psi(F+\omega), \label{eq:jump}\\
+ K_t&=e^{-itH-t\Lambda(H)/2}, \qquad
+ \mathcal J_\omega(\rho)=\sum_j J_{\omega,j}\rho J_{\omega,j}^*.\nonumber
+\end{align}
+The tag sector has zero energy and charge. In particular \(HJ_{\omega,j}=J_{\omega,j}(H-\omega)\); with the scalar retained, this is exact conservation of total energy.
+
+\begin{theorem}[Count-equivalent normal instruments]
+\label{thm:count}
+The operations in \eqref{eq:jump} define a normal completely positive trajectory instrument. For every initial density operator its full joint law of ordered times, emitted gap energies, and the terminal remnant energy is independent of \(v\). At each fixed gap the quantum output depends on the generally undetermined Gram \(G_\omega(E,E')=\langle v(E',\omega),v(E,\omega)\rangle\).
+\end{theorem}
+\begin{proof}
+For a multiplication operator \(M_f\),
+\begin{equation}
+ \mathcal J_\omega^*(M_f)=M_{W(E,\omega)f(E-\omega)},\qquad
+ K_t^*M_fK_t=M_{e^{-t\Lambda(E)}f(E)}.                              \label{eq:mult}
+\end{equation}
+The explicit shifts are strongly measurable. Tonelli on positive trace-class inputs gives \(\tr\int\mathcal J_\omega(\rho)\dd\omega=\tr(\rho\Lambda(H))\le\Lambda_{\max}\|\rho\|_1\). The bounded predual integral extends by linear decomposition. The positive ordered trajectory series is norm convergent, with \(n\)-jump term bounded by \((T\Lambda_{\max})^n/n!\), where \(\Lambda_{\max}=AE_{\max}^{5/2}\). The loss in the no-click trace is canceled by the integrated jump trace, so the full instrument preserves traces. This is an ordinary continuous instrument \cite{davies}, with no normalized sharp energy vectors.
+
+Set \(t_0=0,t_{n+1}=T,E_0=E\) and \(E_k=E-\sum_{\ell\le k}\omega_\ell\). For a marked path \(0<t_1<\cdots<t_n<T\) and a final energy multiplier \(f\), backward iteration of \eqref{eq:mult} gives exactly
+\[
+ \int p_\rho(\dd E) f(E_n)
+       \exp\!\left[-\sum_{k=0}^n (t_{k+1}-t_k)\Lambda(E_k)\right]
+       \prod_{k=1}^n W(E_{k-1},\omega_k),\qquad
+ p_\rho(B)=\tr(\rho\,1_B(H)).
+\]
+Invalid histories have zero weight. This is the actual nonexplosive secular process. It is equality for the unmodified instrument, not for inserted noncommuting controls. On an off-diagonal integral kernel the two energy coordinates are shifted by \(-\omega\) and multiplied by
+\(\sqrt{W(E,\omega)W(E',\omega)}G_\omega(E,E')\).
+Rank-one kernels verify this directly and trace norm gives the extension. The diagonal count determines \(G_\omega(E,E)=1\), not its cross entries.
+\end{proof}
+Only finite tags are needed here. An exact different orthogonal tag for every energy in a diffuse spectrum would not produce a normal density operator diagonal on the original Hilbert space. Nonzero multiplication operators on this diffuse \(L^2\) space are not compact and therefore not trace class.
+
+\section{One click: recoverability and radiative visibility}
+Choose disjoint compact input energy bands \(I_0\), \(I_1=I_0+\Delta\), with width less than \(\Delta\) and positive lower endpoints. Compare \(v=e_0\) everywhere with \(v=e_j\) on \(I_j\), where \(e_0,e_1\) are orthogonal. Let \(\phi_j\) be normalized packets in these bands. For almost every mark in a first-click window of finite times and compact gaps strictly within \((0,\inf I_0)\), the coherent outputs \(b_j=J_\omega K_t\phi_j\) are nonzero and orthogonal. If \(p_j=\|b_j\|^2\), the normalized outputs of encoded signs \((\phi_0\pm\phi_1)/\sqrt2\) have trace distance in norm convention
+\[
+ \|\rho_+-\rho_-\|_1=\frac{4\sqrt{p_0p_1}}{p_0+p_1}>0.
+\]
+In the tagged model the two inputs produce the same conditional remnant density. Equality persists under all subsequent remnant maps and the entire subsequent marked record. It does not concern a receiver given the discarded tag.
+
+In the coherent case the entire qubit has exact heralded recovery. The first-click multiplication factor is bounded below in modulus on both compact bands uniformly for the stated admissible marks. Reverse the shift and divide by that factor on the image bands, multiply by a constant to make this inverse a contraction, and extend it by zero. The resulting measurable trace-nonincreasing completely positive filter, conditioned on the observed mark, composes with the jump to a scalar times the identity on the code, even with external entanglement. The full successful path weight is independent of logical input. The energy increase can use a register of the known gap (or the inverse can be viewed as a fixed-shift covariant Kraus operator). This is not generally a deterministic recovery. Compare \cite{paper03}, where recovery is evaluated in a distinct JT model with an actual Hamiltonian prescribing its quantum channel.
+
+Alternatively take the first-click dilation keeping the radiation coherent instead of reading its exact gap:
+\begin{equation}
+ (V_t\psi)(F,\omega,j)
+ =\sqrt{W(F+\omega,\omega)}K_t(F+\omega)
+                  v_j(F+\omega,\omega)\psi(F+\omega).             \label{eq:dilate}
+\end{equation}
+The triangle \(F,\omega>0,F+\omega<E_{\max}\) sits in a genuine product of remnant and scalar radiation spaces. Direct integration gives \(V_t^*V_t=M_{\Lambda e^{-t\Lambda}}\) and \((H_{\rm rem}+H_{\rm rad})V_t=V_tH\). Add a Hilbert flag for \(t\in[0,T]\) and the vacuum no-click block \(K_T\); \(\int_0^T\Lambda e^{-t\Lambda}\dd t+e^{-T\Lambda}=1\) gives an isometry. Its timing label is a specified Markov instrument record, not simultaneous exact time and frequency readout of one bare outgoing particle. One may either measure the gap in \eqref{eq:dilate} or preserve it for the following alternative receiver.
+
+\begin{proposition}[Covariant first-click contrast]
+There are compact spectral wave packets and a bounded receiver commuting with total radiation--reference energy that distinguish the encoded signs in the coherent completion but not in the tagged one. For \eqref{eq:kernel}, the visibility and acceptance are invariant under scaling all energy marks and packets by \(\varepsilon\) and all times by \(\varepsilon^{-5/2}\) within the effective window.
+\end{proposition}
+\begin{proof}
+Give the reference positive spectral energy \(R\) in \(L^2(\mathbb R_+,\dd R)\). Choose real nonnegative normalized compact packets \(\phi(E)\) in \(I_0\) and \(\chi(P)\) strictly above \(\sup I_1\). Put
+\[
+ \Phi_0(E,R)=\phi(E)\chi(E+R),\qquad
+ \Phi_1(E,R)=\phi(E-\Delta)\chi(E+R),\qquad
+ \Phi_\pm=(\Phi_0\pm\Phi_1)/\sqrt2.
+\]
+These branches are orthogonal with the same total-energy marginal. The shift \((E,R)\mapsto(E+\Delta,R-\Delta)\) allows their relative phase to be manipulated within a common energy fiber. Equivalently use the normal direct-integral state on the total-energy commutant with weights \(|\chi(P)|^2\dd P\); no exact-energy delta vector is required.
+
+Take a compact \(\Omega\subset (0,\inf I_0)\) narrower than \(\Delta\) and let \(S_\Delta\) be the partial isometry \((\omega,R)\mapsto(\omega+\Delta,R-\Delta)\) from \(\omega\in\Omega,R>\Delta\). Its domain and range are disjoint; \(B=S_\Delta+S_\Delta^*\) is selfadjoint, has norm one, and commutes with radiation plus reference energy \(R+\omega\). Tracing the remnant identifies the same \(F\) in the two branches. Only the forward pair \(E_0=F+\omega,E_1=F+\omega+\Delta\) can overlap at the shifted mark. Including the reference free evolution \(e^{-itR}\) cancels the free phase between these matched total-energy fibers. On a first-click interval \(\mathcal T\) of positive length the coherent unnormalized expectations are \(\pm\mathcal I\), where
+\begin{align}
+ \mathcal I &=\int_{\mathcal T}\!\dd t\int_{\Omega}\!\dd\omega
+          \int_{F>0,R>\Delta}\!\dd F\,\dd R\
+       \phi(F+\omega)^2\chi(F+\omega+R)^2 \nonumber\\
+ &\quad{}\times\sqrt{W(F+\omega,\omega) W(F+\omega+\Delta,\omega+\Delta)}
+       e^{-t[\Lambda(F+\omega)+\Lambda(F+\omega+\Delta)]/2}>0 .
+                                                                  \label{eq:interference}
+\end{align}
+The strict inequality holds on an actual positive-measure product window and the integral is finite by the cutoffs. The tag overlap erases exactly this term in the tagged model; acceptance of a first-click time window is common. This is a bounded output test, not a distinction in its diagonal gap records.
+
+With unitary dilation of the two-variable input, \eqref{eq:interference} has scale factors
+\(\varepsilon^3\) from energy measures, \(\varepsilon^{-2}\) from the squared packet, \(\varepsilon^{3/2}\) from the rate factor, and \(\varepsilon^{-5/2}\) from time. These cancel exactly and \(t\Lambda\) is unchanged. The same computation applies to first-click acceptance.
+\end{proof}
+
+\section{Two emissions: an observable history phase without a reference}
+Tracing the remnant identifies histories at the same final energy. Distinct intermediate energies can still leave a detectable phase in the radiation alone. Take \(d=1\) in \eqref{eq:jump} with \(v(E,\omega)=e^{i\varphi(E-\omega,E)}\). The ordered trajectory dilation has \(n\)-component
+\begin{equation}
+ (V_T^\varphi\psi)(\mathbf t,\boldsymbol\omega)=
+ K_{T-t_n}J_{\omega_n}^\varphi K_{t_n-t_{n-1}}\cdots
+ J_{\omega_1}^\varphi K_{t_1}\psi,\qquad 0<t_1<\cdots<t_n<T.        \label{eq:traj}
+\end{equation}
+Here each component is an ordinary vector-valued \(L^2\) function of the ordered variables, equivalent to the symmetric output space when simultaneous time arguments are discarded as null sets. Norms sum to one by Theorem \ref{thm:count}. Multiplication by the coordinates generates the common classical record. The alternative radiation effects below act on the coherent output vectors.
+
+Take disjoint compact gap bands \(I_a,I_b\) about \(0<a<b\), and a sufficiently narrow initial \(I_i\) with \(E>a+b\) for all selected marks with a strict margin. There are four pairwise disjoint compact sets of ordered transition pairs
+\[
+       i\xrightarrow{I_a}A\xrightarrow{I_b}f,\qquad
+       i\xrightarrow{I_b}B\xrightarrow{I_a}f,
+\]
+by continuity from their four distinct limiting energy pairs. Choose \(\varphi_+=0\) and a smooth \(\varphi_-\) equal to \(\pi\) on the leg \(i\to B\) and zero on the other three. Rephasing energy eigenrays changes transition phases by endpoint ratios, which telescope along each path with the same endpoints. It cannot change their relative product. The two assignments therefore do not represent a choice of energy basis.
+
+In the two-output sector let \(P_A,P_B\) project onto orders \(u\in I_a,v\in I_b\) and the reverse. Let \(U\) send the first order to the second by exchanging \(u,v\) at fixed \(t_1,t_2\) and multiplying by \(e^{i(v-u)(t_2-t_1)}\). This norm-one partial isometry preserves total radiated energy \(u+v\). The effects
+\[
+     Q_\pm=\tfrac12(P_A+P_B\pm U\pm U^*)
+\]
+are orthogonal projections, complemented by \(1-P_A-P_B\). They compare coherent bands of positive measure. Both paths have exactly the same output \(E-u-v\) and input coefficient \(\psi(E)\). The relative free phase from the intermediate dwell interval in \eqref{eq:traj} is canceled by the chosen factor in \(U\). Thus for nonzero input supported in \(I_i\) the reference assignment gives
+\begin{equation}
+ J_*=\operatorname{Re}\langle V_T^{\varphi_+}\psi,
+                     (1\otimes U)V_T^{\varphi_+}\psi\rangle
+     =\int |\psi(E)|^2 c_Ac_B\,\dd E\,\dd t_1\,\dd t_2\,\dd u\,\dd v>0 . \label{eq:diamond}
+\end{equation}
+The ordered simplex and the two finite bands are understood. The \(c\)'s are products of the corresponding positive rate square roots and the three no-click survival factors. All rates are strictly positive on a positive-measure region. The other assignment flips the sign of \(J_*\) while leaving all diagonal weights unchanged, so the \(Q_+\) probabilities differ by \(2J_*\). The receiver measures the coherent record, not previously performed destructive time and frequency measurements. No phase reference between different total output energies is required.
+
+\section{A finite scalar-bath calibration in the extended weak-coupling limit}
+The exact continuum instruments above do not provide a Davies limit for the continuum black-hole spectrum. Here is a genuinely Hamiltonian finite calibration of the history phase. Choose four nondegenerate interior energies \(E_f,E_f+a,E_f+b,E_f+a+b\), with \(0<a<b\) and \(b\ne2a\). Let \(O_\pm\) be real symmetric scalar dipoles nonzero on the four diamond legs only. Their absolute values agree, calibrated to selected positive discretized weights of \eqref{eq:kernel} by \(2\pi|g(\omega)O_{E'E}|^2\); reverse one leg sign with its transpose in \(O_-\). With vacuum bath use the Pauli--Fierz Hamiltonian
+\[
+ H_\epsilon=K+\dd\Gamma(\omega)
+               +\epsilon O_\pm\otimes(a(g)+a^\dagger(g)).
+\]
+Here \(K\) is the diagonal four-level Hamiltonian, with identity factors implicit. Choose the real scalar \(g(\omega)\propto\sqrt{\omega}\) with smooth compact cutoffs away from zero, nonzero in neighborhoods of both carriers. Uncoupled bands factor out. The system is finite, the spectral coupling is continuous at the relevant Bohr frequencies, and its scalar correlations are time integrable by smooth compact support. These verify the hypotheses of the extended weak-coupling result \cite[Assumptions 4.2--4.4 and Theorem 5.4]{dere} at microscopic times \(T/\epsilon^2\).
+
+At a nonzero coupled carrier the bath has multiplicity one. Its downward jump is the coherent sum of equal-Bohr-frequency system transitions, not one independent noise per source. For nondegenerate \(K\), the Lamb correction is diagonal and depends on the mass-shell diagonal of \(OP_{E'}O\), hence on the squares of the respective matrix elements; the off-shell principal-value factor also does not change these squares. Thus the compared secular evolutions have identical waiting times and the same entire ordered counts. Two emissions starting at \(i\) can finish at \(f\) through either order. The decay envelopes are positive; their remaining diagonal intermediate phase is a known function of the time difference from the Lamb energies. Define on the whole asymptotic two-particle time line the order-exchange effect used above, with this diagonal dwell phase. The order-sector overlap is again strictly nonzero for positive scaled duration and changes sign. Restricting the state to a finite observation interval does not require restricting the effect's definition to that interval.
+
+The effect has a lift to the original physical free bath that commutes with its energy exactly at each sufficiently small \(\epsilon\). In the extended weak-coupling identification the physical frequency in carrier \(a\) is \(a+\epsilon^2x\) with detuning \(x\), and likewise for \(b\) \cite[Eq.~(4.14)]{dere}. Simultaneous translations of the two full-line time coordinates leave the order-exchange effect invariant: ordering and its dwell factor only depend on a difference of times. The effect hence preserves total detuning as well as total carrier \(a+b\). Compress it in the two detunings by \(|x_1|,|x_2|\le M\); this commutes with both total quantities. The compressed effects converge strongly to the original one as \(M\to\infty\), so some fixed finite \(M\) retains the nonzero contrast. For small \(\epsilon\) the two compact frequency identifications embed them isometrically into disjoint real bands. Extend the effect by zero outside that sector. It now commutes with \(a+b+\epsilon^2(x_1+x_2)\), the physical radiated energy there. The extended-limit strong convergence of the identified states proves convergence of the expectations of these bounded effects, including the free interaction-picture conjugations which commute with the same total energy. This argument uses an identified bounded effect and the evolved vacuum input, not an assertion about convergence of all detector algebras. At finite coupling we do not assert equality of all bare unmonitored photon counts.
+
+\section{The microscopic information still required}
+In the neutral scalar effective interaction of \cite{brown,biggs}, a dimension-one throat transition operator \(O\) couples to the scalar bath with spectral form \(g(\omega)\). At first nontrivial amplitude order and for a smooth switching envelope \(\chi\), a transition from \(E\) to \(E'\) has the factor
+\[
+       g(\omega)\widehat\chi(E'+\omega-E)\,O_{E'E}
+\]
+up to an overall phase. Golden-rule weights use \(2\pi\rho(E-\omega)|g(\omega)|^2|O_{E-\omega,E}|^2\). The density of the outgoing deep-quantum throat sector is proportional to \(\sqrt{E-\omega}\), and the squared vertex tends to a constant, giving the leading rate in \eqref{eq:kernel}. These squared rates do not contain either the same-gap overlap in Theorem \ref{thm:count} or the path product in \eqref{eq:diamond}. Actual energy multiplicities make \(O_{E'E}\) a matrix; same external bath ray for an exact shared gap does not make the residual throat states identical. Conversely there is no automatic orthogonal bath tag merely because initial energies differ when their gaps agree.
+
+Actual finite wave packets also require more than a shared nominal gap. For otherwise identical packets translated in time by \(\delta\), the normalized overlap is the Fourier transform at \(\delta\) of the normalized positive weight \(|g(\omega)\widehat\chi(\omega-\omega_0)|^2\), up to a phase. If integrable and positive on an interval, its modulus is strictly less than one for nonzero \(\delta\) by strictness of the triangle inequality, and it decays at large translations by Riemann--Lebesgue. A strictly monochromatic idealization can give a pure phase instead. It is the actual histories, retained output algebra and inaccessible registers that select the cross terms.
+
+For physical branch maps \(A_h\) the needed data include \(A_h\rho A_{h'}^*\), contracted with the retained effects and traced over declared inaccessible modes. Higher Schwarzian correlators and their recouplings \cite{mtv} or a specified microscopic model give possible additional inputs. Our positive completions need not agree on those inputs. The general distinction between counting and coherent monitoring is familiar \cite{gm}; here the main results are exact normal completions of a calibrated physical throat law, a scale-invariant energy-covariant contrast, and a radiation-only history-phase test with finite Hamiltonian calibration. It also provides a continuum instance of the distinction between positive boundary data and their sewing operations \cite{paper18}. No change to the known neutral rates, charge crossover, or global black-hole recovery claim is inferred.
+
+\begin{thebibliography}{99}
+\bibitem{biggs} A.~Biggs, \emph{Following the state of an evaporating charged black hole into the quantum gravity regime}, \href{https://arxiv.org/abs/2503.02051}{arXiv:2503.02051}, especially Sec.~3.2 and Eq.~(34).
+\bibitem{brown} A.~R.~Brown, L.~V.~Iliesiu, G.~Penington and M.~Usatyuk, \emph{The evaporation of charged black holes}, JHEP \textbf{01} (2026) 109, \href{https://arxiv.org/abs/2411.03447}{arXiv:2411.03447}.
+\bibitem{bai} Y.~Bai and M.~Korwar, \emph{Near-extremal charged black holes: greybody factors and evolution}, JHEP \textbf{03} (2023) 151, \href{https://arxiv.org/abs/2301.07739}{arXiv:2301.07739}.
+\bibitem{it} L.~V.~Iliesiu and G.~J.~Turiaci, \emph{The statistical mechanics of near-extremal black holes}, JHEP \textbf{05} (2021) 145, \href{https://arxiv.org/abs/2003.02860}{arXiv:2003.02860}.
+\bibitem{mtv} T.~G.~Mertens, G.~J.~Turiaci and H.~L.~Verlinde, \emph{Solving the Schwarzian via the conformal bootstrap}, JHEP \textbf{08} (2017) 136, \href{https://arxiv.org/abs/1705.08408}{arXiv:1705.08408}.
+\bibitem{davies} E.~B.~Davies and J.~T.~Lewis, \emph{An operational approach to quantum probability}, Commun.\ Math.\ Phys.\ \textbf{17} (1970) 239--260, \href{https://doi.org/10.1007/BF01647093}{doi:10.1007/BF01647093}.
+\bibitem{dere} J.~Derezi\'nski and W.~De Roeck, \emph{Extended weak coupling limit for Pauli--Fierz operators}, Commun.\ Math.\ Phys.\ \textbf{279} (2008) 1--30, \href{https://arxiv.org/abs/math-ph/0610054}{arXiv:math-ph/0610054}.
+\bibitem{gm} S.~Gammelmark and K.~M{\o}lmer, \emph{Fisher information and the quantum Cram\'er--Rao sensitivity limit of continuous measurements}, Phys.\ Rev.\ Lett.\ \textbf{112} (2014) 170401, \href{https://arxiv.org/abs/1310.5802}{arXiv:1310.5802}.
+\bibitem{paper03} \emph{Energy-weighted JT channel recovery}, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/03-jt-energy-weighted-recovery}{Paper 03}.
+\bibitem{paper36} \emph{Full counting statistics of neutral emission in a quantum charged throat}, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/36-charged-throat-emission}{Paper 36}.
+\bibitem{paper18} \emph{Positive boundary systems and completely positive sewing}, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/18-positive-boundary-sewing}{Paper 18}.
+\end{thebibliography}
+\end{document}

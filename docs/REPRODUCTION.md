@@ -188,3 +188,17 @@ The paper pages give the LaTeX entry point, build command and independent verifi
 ## Building Paper 51
 
 Run `./build.sh` from the [paper directory](../papers/51-singular-wrt-semiclassical-sewing/README.md) using pdfLaTeX. The included `python verify_h_tree.py` replay compares the two-vertex finite contraction with its cotangent formula. See the [verification record](../papers/51-singular-wrt-semiclassical-sewing/VERIFICATION.md).
+
+## Building Papers 52–60
+
+Run `./build.sh` from each paper directory in a standard pdfLaTeX installation. Each directory has an editable self-contained `main.tex`, the archived PDF, a verification note, and checksums. The sources state the mathematical inputs and derivations; a successful build is not a proof verification.
+
+- [Paper 52](../papers/52-relational-area-commutators/VERIFICATION.md)
+- [Paper 53](../papers/53-coherent-quantum-shear-sewing/VERIFICATION.md)
+- [Paper 54](../papers/54-virasoro-whittaker-semiclassical-limit/VERIFICATION.md)
+- [Paper 55](../papers/55-regge-high-frequency-noncommutation/VERIFICATION.md)
+- [Paper 56](../papers/56-causal-parity-odd-gravity-coupling/VERIFICATION.md)
+- [Paper 57](../papers/57-throat-counts-and-quantum-coherence/VERIFICATION.md)
+- [Paper 58](../papers/58-vacuum-stress-spectral-thresholds/VERIFICATION.md)
+- [Paper 59](../papers/59-wilson-recovery-sign-holonomy/VERIFICATION.md)
+- [Paper 60](../papers/60-graviton-nonabelian-holonomy/VERIFICATION.md)

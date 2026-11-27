@@ -1,0 +1,219 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.95in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,needspace}
+\linespread{0.98}
+\addtolength{\textheight}{0.16in}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\F}{\mathbb F_3}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Tr}{\operatorname{tr}}
+\newcommand{\rank}{\operatorname{rank}}
+\hypersetup{pdftitle={Wilson Recovery of Sign Holonomy in Paired-Cap Graph Manifolds},pdfauthor={}}
+\title{Wilson Recovery of Sign Holonomy in Paired-Cap Graph Manifolds}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+In paired-cap graph manifolds, self-duality makes the unpunctured \(\mathrm{SU}(2)\) torus sewing blind to the signs of section--fiber exchanges. We recover the marked switching class using two pointed-theory protocols. For any finite odd metric group the paired caps give an exact charge-sum tensor, so physical Wilson projectors isolate a cycle relay; one calibrated binary outcome reads one fundamental sign. On bipartite graphs the same sign has a literal closed Wilson-skein test requiring no replacement of a gluing map. Independently, in untwisted \(\mathbb Z_3\) gauge theory, magnetic defects on the existing cap cores produce an affine constraint with source the magnetic label and coefficient the signed adjacency. Electric fiber projectors read its full marked graph, including singular matrices. An eight-vertex example has four sign classes, the same uncolored amplitudes at every \(\mathrm{SU}(2)\) level and in every odd cyclic pointed theory, and the same passive electric data for fixed marked fibers and graph cycles. One magnetic line gives two deterministic binary observables separating all four classes. We distinguish closed amplitudes from prepared channels and from two-terminal tensor-price rank tests.
+\end{abstract}
+
+\section{Signed graph manifold and result}
+
+Let \(G\) be a connected finite simple graph with at least one edge. At a vertex \(v\) of degree \(d_v\) use \(X_v=\Sigma_{0,d_v+2}\times S^1\), base-first oriented. Each boundary has an oriented section \(z\) and fiber \(h\) with \(z\cdot h=1\). Fill two dedicated tori by the meridians \(2z_v^++h_v\) and \(-2z_v^-+h_v\). On the remaining tori glue along every seam \(e=vw\) by the actual orientation-reversing map
+\begin{equation}
+ z_{ve}\longmapsto\epsilon_e h_{we},\qquad h_{ve}\longmapsto \epsilon_e z_{we},
+ \qquad \epsilon_e\in\{+1,-1\}.
+ \label{eq:seam}
+\end{equation}
+Write \(M_\epsilon\) for this closed oriented manifold, \(A_\epsilon\) for the symmetric signed adjacency, and \(b=|E|-|V|+1\). Graph, port identities and slope types are marked. A simultaneous reversal of base and fiber at \(v\) preserves the oriented block, maps each cap slope to its negative, and extends over its filling. Thus allowable frame changes switch signs by \(\epsilon_{vw}\mapsto \sigma_v\epsilon_{vw}\sigma_w\).
+
+For a spanning tree of \(G\), one may fix a root and switch signs recursively to make every tree edge positive. Each remaining sign is then the product of the original signs on that chord's fundamental cycle. The \(b\) independent products run over all \(2^b\) choices and classify the switching class \([\epsilon]\in H^1(G;\Z_2)\). No identification of an unmarked decomposition or of arbitrary oriented three-manifolds is intended.
+
+The uncolored \(\mathrm{SU}(2)\) result of \cite{p50b} is the starting comparison: on bipartite \(G\) all signings have identical oriented uncolored amplitudes at every level. In the unpunctured torus representation the central map \(-I\) is charge conjugation. It is the identity on self-dual \(\mathrm{SU}(2)\) labels, and the bipartite Maslov signature is zero. An uncolored odd cyclic pointed diagnostic can recover odd-primary abelian-group information \cite{moo,p50b}; as shown below, that diagnostic does not generally determine the marked cycle products either.
+
+\Needspace{6\baselineskip}
+\begin{theorem}[Two Wilson identifications]\label{thm:main}
+\leavevmode
+\begin{enumerate}
+\item In the pointed modular theory of any finite nontrivial odd metric group, the actual filled vertex and seam tensors give a nonzero Wilson-filtered transfer. Preparing a nonzero charge on a cut traversing one fundamental cycle and measuring its calibrated outgoing charge determines the sign product deterministically conditional on the fixed side filters. Exactly \(b\) classical binary outputs suffice and are necessary for worst-case exact recovery in this readout model. On bipartite \(G\) the same bits can instead be queried by exact closed Wilson-skein amplitudes on the unmodified filled background.
+\item In the untwisted finite gauge theory \(D(\Z/3)\), let \(s_v\in\F\) be a physical pure magnetic label on the existing positive cap core and \(t_v\in\F\) a pure electric label on a regular fiber. With \(\zeta=e^{2\pi i/3}\), the actual decorated closed amplitude is
+\begin{equation}
+ Z_\epsilon(s,t)=3^{b-1}\sum_{x:\,A_\epsilon x=s}\zeta^{\,t^{\mathsf T}x}.
+ \label{eq:sum0}
+\end{equation}
+Thus the family of exact flux choices and electric Wilson projections determines the marked \(A_\epsilon\) over \(\F\), not merely its nullity. This applies whether or not the matrix is invertible. The frame-invariant output includes every cycle product on bipartite \(G\), even with independent unknown sign conventions for the magnetic and electric variables at each port.
+\end{enumerate}
+\end{theorem}
+
+Readout protocols are operational inputs. A projector below is explicitly a finite Fourier linear combination of ordinary Wilson insertions, and is a positive projector when used on its stated physical Hilbert space. A closed complex amplitude is not assigned a Born probability merely because it has a Wilson decoration. The untwisted magnetic example in Section~\ref{sec:two} does admit a positive conditioned ensemble, by a separate argument.
+
+\section{The charge-sum vertex and an exact cycle relay}
+\label{sec:cycle}
+
+Let \((\mathcal A,q)\) be a finite Abelian metric group of odd order \(N>1\), with symmetric nondegenerate bicharacter \(B(a,b)=q(a+b)/(q(a)q(b))\) and \(q(-a)=q(a)\). We use the usual pointed ribbon theory \cite{dgno,rt} with orthonormal core labels \(a\in\mathcal A\) and matrices
+\[
+ S_{ab}=N^{-1/2}B(a,b),\quad
+ \Theta_{aa}=q(a),\quad C|a\rangle=|-a\rangle,\quad S^2=C.
+\]
+The complex-conjugate Hopf convention uses \(S^{-1}\) throughout. For \(D(\Z/3)\) one has \(\mathcal A=(\Z/3)^2\), \(q(x,y)=\exp(2\pi i xy/3)\) and the Drinfeld-center state-sum realization \cite{balsam}. For a three-object example use \(\mathcal A=\Z/3\), \(q(a)=\exp(2\pi i a^2/3)\), with the \(\mathrm{SU}(3)_1\) modular ribbon conventions up to the corresponding Hopf orientation.
+
+A meridional collar Wilson with label \(x\) acts in core sector \(b\) by \(S_{xb}/S_{0b}=B(x,b)\). This follows by forming the Hopf link with the core and dividing by its unlinked core value. Fourier inversion then gives the actual collar charge projector
+\begin{equation}
+ P_b=\frac1N\sum_{x\in\mathcal A}\overline{B(x,b)}\,W_x
+ =|b\rangle\langle b|.
+ \label{eq:proj}
+\end{equation}
+The two cyclic coordinates of \((\Z/3)^2\) correspond to two commuting Wilson characters when one wants to realize the projector by individual character records. No puncture is added to the underlying seam geometry by this known collar operation.
+
+\begin{lemma}[Paired caps]\label{lem:vertex}
+In all-outgoing core coordinates the filled block at a vertex has coefficient
+\(V_v(b_1,\ldots,b_{d_v})=\mathbf 1_{\{\sum_j b_j=0\}}\).
+With all but two collars projected to vacuum the remaining two-port coefficient is \(C\) (or the identity after the known orientation duality).
+\end{lemma}
+\begin{proof}
+With the two cap tori still open, the product block tensor is
+\[
+ \sum_{a\in\mathcal A} S_{0a}^{-d_v}S_{ab_+}S_{ab_-}
+                                      \prod_{j=1}^{d_v} S_{ab_j}.
+\]
+This is the genus-zero Verlinde expression: after capping each torus with a core label, it is the trace of identity on the sphere conformal block for those charges. The paired \(\pm2\) meridians replace the last two cap factors by \((S\Theta^{\pm2}S)_{a0}\) in the same matched-lift seam convention as \cite{p50b}. Each is \(N^{-1}G_a^\pm\), \(G_a^\pm=\sum_x q(x)^{\pm2}B(a,x)\). Since \(q\) is even, conjugation and \(x\mapsto-x\) show \(G_a^-=\overline{G_a^+}\). Also
+\[
+ |G_a^+|^2=\sum_c q(c)^2 B(a,c)
+                 \sum_y B(c,y)^2=N ,
+\]
+by setting \(x=y+c\) in the squared modulus and using invertibility of multiplication by \(2\) in \(\mathcal A\). Thus the cap product is \(1/N\). The remaining powers of \(S_{0a}\) cancel the normalizations of the \(S_{ab_j}\). Character orthogonality gives the asserted vertex delta. Leg reversal simply negates the relevant charge labels. With two remaining labels \(b,b'\) the delta is \(b'=-b\).
+\end{proof}
+
+Let \(\gamma\) be a simple cycle. Put \(P_0\) on both half-ports of every seam outside \(\gamma\), including any chords. Each such seam contributes \(N^{-1/2}\), since \(C|0\rangle=|0\rangle\) and \(S_{00}=N^{-1/2}\). Completely unused vertices contribute one by Lemma~\ref{lem:vertex}. This is an explicit nonzero constraint reduction on the whole graph, not the assumption that arbitrary branches are transparent. Keep the original caps.
+
+Cut in a collar on one side of a chosen base seam, so the unknown base seam is still traversed. Each cycle seam has the known reference exchange \(S\) or \(S^{-1}\), multiplied by \(C^{\alpha_e}\) with \(\alpha_e=(1-\epsilon_e)/2\). Indeed composing the two torus identifications in \eqref{eq:seam} differs by the mapping class \(-I\). Each adjacent vertex relay is \(C\) or the oriented identity. All known factors and all charge conjugations commute. Denote their all-positive product by \(K_\gamma\). The actual filtered, cut transfer is
+\begin{equation}
+ M_\gamma=\eta_{\gamma,\epsilon}\,c_\gamma\,K_\gamma C^{p_\gamma},
+ \qquad c_\gamma=N^{-(|E|-|\gamma|)/2},\quad
+ p_\gamma=\sum_{e\in\gamma}\alpha_e\pmod 2 ,
+ \label{eq:transfer}
+\end{equation}
+where \(\eta_{\gamma,\epsilon}\) is a unit from projective lifts. Both \(c_\gamma\) and \(K_\gamma\) are known and the transfer is nonzero. Equivalently one can choose the uniform outgoing contraction with \(K_\gamma=(SC)^{|\gamma|}\). Using \(K_\gamma\) as the calibrator avoids requiring that this convention identify every half-port as the same Hilbert adjoint.
+
+Because \(N\) is odd, any \(a\ne0\) has \(a\ne-a\). Prepare \(|a\rangle\), and compare the outgoing ray with the two orthogonal effects \(K_\gamma P_{\pm a}K_\gamma^\dagger\). These are known calibrated Wilson effects; conjugating a geometrically marked slope by the corresponding known torus map implements the conjugation. The conditioned output is exactly one of those rays, while the overall transfer norm is \(c_\gamma\), independent of the sign. This is the binary readout of \(\prod_\gamma\epsilon_e\). Reversing the charge convention in both preparation and readout gives the same bit. If one cannot distinguish the two output sectors, merely retaining a nontrivial \(-I\) in the category is insufficient: for true input/output density data any final effect commuting with \(C\) after calibration has the same expectation before and after \(C\). Likewise a \(C\)-invariant input cannot separate them. These statements do not concern an additional coherent reference branch with separate controlled phases.
+
+\paragraph{Closed test, not a new gluing.}
+On a bipartite graph \(|\gamma|=2m\). The same side projectors can be inserted in the collars of the original closed geometry. In the uniform outgoing convention \(K_\gamma=C^m\) (because \(S^2=C\)). Contracting the remaining cycle gives a known nonzero factor \(c_\gamma\) times
+\[
+ \Tr(C^{m+p_\gamma})=\begin{cases}N&m+p_\gamma=0\bmod2,\\1&m+p_\gamma=1\bmod2.\end{cases}
+\]
+In a consistent opposite Hopf convention \(S^{-1}\) gives the same parity, or calibrate against the all-positive case in the same marks. For a literal closed support test insert \(P_a+P_{-a}\) at one cycle collar, with all side filters retained: the trace is now \(2\) or \(0\), respectively. Each term of the Fourier expressions \eqref{eq:proj} is an ordinary framed Wilson link on the same closed manifold. The \(P_a+P_{-a}\) insertion is unaffected by inversion of the base charge. The bipartite Maslov signature of the cap/seam gluing is zero as in \cite{p50b}; collar lines do not modify the Lagrangian gluing problem. Known projective unit phases, even if retained in the presentation, cancel from the support dichotomy and from trace magnitudes. No compensating \(S\) mapping cylinder is put into a fixed closed background. In particular “3” is not intrinsically a positive sign for \(N=3\); when \(m\) is odd the all-positive reference is the \(C\) case. Odd cycles need not have this purely closed trace test, but their calibrated open output remains covered by \eqref{eq:transfer}.
+
+\paragraph{Bit count.}
+The fundamental cycle probes give \(b\) classical bits. A binary decision tree of depth less than \(b\) has fewer than \(2^b\) terminal transcripts. For exact randomized control with an almost sure correctness guarantee for each of the finitely many signings, an independent random seed can be fixed in the common probability-one success set; intrinsic random outputs cannot share a positive-probability terminal transcript between different correct outputs. The same cardinality lower bound applies in the stated exact worst-case binary model. We do not bound the number of constituent Wilson lines, side-filter trials, continuous precision, or general coherent or multi-output measurements.
+
+\section{Literal finite-gauge response of a cap-core flux}
+\label{sec:response}
+
+We now prove \eqref{eq:sum0}, which uses different operations from the cycle relay. Let a flat \(\Z/3\) bundle on the marked background be written additively as \(a\). In the untwisted theory the weight of an isomorphism class is the inverse order of its automorphism group \cite{fq,dw}. For a connected manifold and this abelian group it is \(1/3\). Every additive homomorphism to \(\F\) is a distinct isomorphism class, since conjugation is trivial.
+
+A pure magnetic ribbon of label \(s\) constrains the holonomy of the oriented small meridian to \(s\) and has trivial electric character along its longitude. A pure electric ribbon of label \(t\) along a curve \(\gamma\) contributes \(\zeta^{t\,a(\gamma)}\). One way to see the normalization directly is to use the physical torus holonomy basis \((\mu,\lambda)\). An untwisted \((s,t)\) core state is represented by the function
+\(\mathbf 1_{\{\mu=s\}}\zeta^{t\lambda}\). With boundary inner product \(3^{-1}\sum_{\mu,\lambda}\overline{f}g\), these nine states are orthonormal. Glue this state to the ribbon exterior using the finite-gauge gluing measure. For pure electric and pure magnetic labels the topological spin is one; reversing a magnetic meridian or an electric oriented curve inverts its corresponding mark. There is no background phase or additional insertion weight in the chosen convention. In particular \(Z(S^3)=1/3\) and \(Z(S^2\times S^1)=1\).
+
+Put a magnetic ribbon on the original positive-cap core at each \(v\) with label \(s_v\). A zero label is the vacuum and can be omitted. Put an electric ribbon on a distinct regular fiber inside \(X_v\) with label \(t_v\). If a tubular neighborhood of the positive cap core is removed to describe the defect, the rest of its originally filled solid torus is a thickened torus. Its inner meridian is the original \(2z_v^++h_v\) up to the fixed orientation. This is an insertion on a \emph{fixed closed manifold} with no altered Dehn slope, auxiliary switch of a cap, or modification of the seam. Each of these ribbons is a different simple object from the boundary operations of Section~\ref{sec:cycle}.
+
+Putting \(x_v=a(h_v)\), the abelianized port equations are
+\begin{align*}
+ 2a(z_v^+)+x_v&=s_v,\qquad -2a(z_v^-)+x_v=0,\\
+ a(z_{ve})&=\epsilon_e x_w \quad (e=vw),\\
+ \sum_{e\ni v}a(z_{ve})+a(z_v^+)+a(z_v^-)&=0.
+\end{align*}
+Eliminating the port values gives \(A_\epsilon x=-s/2=s\) over \(\F\). Conversely these equations account for the \(H_1\) of each block and every edge identification. A spanning tree graph-of-groups presentation has one stable letter for each edge outside the tree; abelianization kills the conjugation in the corresponding seam relations and leaves those \(b\) variables free. The negative caps and any thickened positive cap are leaves, so add no stable letter. For each allowed \(x\) there are therefore \(3^b\) distinct assignments with the same electric fiber weight. Multiplying by \(1/3\) proves \eqref{eq:sum0}. This is intrinsic to the marked graph-of-spaces construction; no surgery matrix presenting a different manifold with the same abelian homology is substituted.
+
+By Fourier inversion the fixed-background correlators in \eqref{eq:sum0} give
+\begin{equation}
+ 3^{-|V|}\sum_{t\in\F^V}
+    \zeta^{-t^{\mathsf T}y} Z_\epsilon(s,t)
+ =3^{b-1}\mathbf1_{\{s=A_\epsilon y\}} .
+ \label{eq:source}
+\end{equation}
+Equivalently the electric operator under this sum is the joint projector onto \(x=y\): the factor at \(v\) is \(\frac13\sum_{t_v}\zeta^{t_v(x_v-y_v)}\). Taking \(y\) in the coordinate basis reads every column of \(A_\epsilon\) using the known flux choices \(s\). Formula \eqref{eq:source} compares absolute amplitudes, not normalization by a possibly zero \(Z_\epsilon(s,0)\) on an incompatible source. It does not prescribe how to choose a single optimal source on an arbitrary graph.
+
+If the cap and fiber marks are reversed together at vertex \(v\), the result changes \(s,y\) by the same entrywise sign and \(A_\epsilon\) by vertex switching. If the magnetic and electric conventions are independent, the reconstructed matrix is \(D_{\rm m}A_\epsilon D_{\rm e}\) with two diagonal sign matrices. On an even cycle, take the alternating bipartition vertices as row and column indices in the product of the corresponding entries. Each unknown row or column sign cancels exactly twice, so every even sign product is still recovered. This assumes the identities of ports and the magnetic/electric slope types are known; arbitrary unrecorded changes mixing these two axes are not covered.
+
+\paragraph{Why a passive cycle loop fails.}
+For \(s=0\), the normalized fiber correlator is the character average over \(\ker_{\F} A_\epsilon\), hence
+\[
+ \frac{Z_\epsilon(0,t)}{Z_\epsilon(0,0)}
+ =\mathbf1_{\{t\in(\ker_{\F} A_\epsilon)^\perp\}} .
+\]
+An ordinary electric Wilson following a marked graph cycle sees a free stable-letter coordinate. If its coefficient is nonzero modulo three, averaging that coordinate gives zero. If all stable-letter coefficients disappear, the word reduces in abelianization to a combination of the fibers, since all remaining sections and filled-cap longitudes are determined. This is a statement about a fixed marked electric word, not an insertion chosen using the unknown signs. In particular a pure electric graph-cycle Wilson does not automatically implement the charge relay of Section~\ref{sec:cycle}.
+
+\section{Four indistinguishable bare backgrounds and a one-flux test}
+\label{sec:two}
+
+Take \(K_{2,3}\) with parts \(\{u,v\}\), \(\{x,y,z\}\). Attach leaves \(u'\) to \(u\), \(x'\) to \(x\), and \(y'\) to \(y\). This graph has eight vertices, nine edges and \(b=2\). Its unique perfect matching is
+\(\{uu',xx',yy',vz\}\), forced by the leaves and the remaining pair. Its signed biadjacency \(B_\epsilon\) therefore has determinant \(\pm1\) over the integers for every signing. In particular \(A_\epsilon\) is invertible modulo three, the bare finite-gauge value is \(3^{b-1}=3\), and every passive electric fiber observable has the same value on all four sign classes. For the spanning tree \(ux,uy,uz,vz,uu',xx',yy'\), the two chord cycle products are
+\[
+ p_x=\epsilon_{vx}\epsilon_{ux}\epsilon_{uz}\epsilon_{vz},\qquad
+ p_y=\epsilon_{vy}\epsilon_{uy}\epsilon_{uz}\epsilon_{vz}.
+\]
+They run through all four possibilities. At every \(\mathrm{SU}(2)\) level all four have the same bare value by the bipartite theorem of \cite{p50b}.
+
+In fact the bare values also agree in every odd cyclic pointed theory used for the homology diagnostic. Put \(\mathcal A=\Z/Q\) with \(Q\) odd and \(q(a)=\exp(2\pi i \nu a^2/Q)\), \(\nu\) any unit. Use the weight-zero convention of Lemma~\ref{lem:vertex} and the fixed orientation of \eqref{eq:seam}. Insert one Fourier variable \(a_v\) for each vertex delta and sum the two half-port charges \(b,c\) of each seam. For \(\chi_Q(z)=\exp(2\pi i z/Q)\) the elementary edge sum is
+\[
+ \sum_{b,c\in\Z/Q}\chi_Q\big(2\nu(a_v b+a_w c+\epsilon_e bc)\big)
+ =Q\,\chi_Q(-2\nu\epsilon_e a_v a_w).
+\]
+Multiplying the \(Q^{-|V|}\) from the deltas and \(Q^{-|E|/2}\) from the seam matrices gives
+\begin{equation}
+ Z_{Q,\nu}^{\rm cyc}(M_\epsilon)
+ =Q^{|E|/2-|V|}\sum_{a\in(\Z/Q)^V}
+             \chi_Q\left(-2\nu\sum_{vw\in E}\epsilon_{vw}a_v a_w\right).
+ \label{eq:chibare}
+\end{equation}
+The oriented Maslov correction vanishes on the bipartite graph as before. Changing to the opposite Hopf convention conjugates the expression, without changing the value. In this example the sum over one four-vertex part forces the other part's coordinates to be zero since \(B_\epsilon\) is unimodular, giving \(Q^4\). Thus the physical value is \(\sqrt Q\), the same \emph{oriented} complex number in all four cases; divided by \(Z_{Q,\nu}^{\rm cyc}(S^3)=1/\sqrt Q\) it is \(Q\). This is stronger than a single equal pointed modulus.
+
+For a nonzero closed diagnostic in \(D(\Z/3)\), choose \emph{one} pure magnetic label \(s_{u'}=1\) and keep all others zero. Use \(r_v\) for the unique solution of \(A_\epsilon r=s\) in this fixed source. The rows at \(u'\) and \(z\) give
+\[
+ r_u=\epsilon_{uu'},\qquad
+ r_v=-\epsilon_{vz}\epsilon_{uz}\epsilon_{uu'} .
+\]
+Substituting these into the \(x\)-row and the \(y\)-row gives
+\begin{align*}
+ r_{x'}&=-\epsilon_{xx'}\epsilon_{uu'}\epsilon_{ux}(1-p_x),\\
+ r_{y'}&=-\epsilon_{yy'}\epsilon_{uu'}\epsilon_{uy}(1-p_y).
+\end{align*}
+In \(\F\) any nonzero unit prefactor is harmless and \(1-p_j=0\) exactly when \(p_j=1\). The joint fiber test therefore consists of the two commuting electric observables \((I+W+W^\dagger)/3\) at \(x'\) and \(y'\), where \(W\) is the charge-one electric loop. In the positive conditioned flat-bundle distribution with this source each projector outcome is deterministic; the free stable letters do not alter \(r\), and \(Z_\epsilon(s,0)=3>0\) in every case. Thus \((p_x,p_y)\) is separated by two real binary outcomes with one fixed physical cap-core defect. No tree sign needs to be known and a reversal of the flux mark changes neither predicate. This is not an inference of nonhomeomorphic \emph{unmarked} manifolds from four marked probe tuples, or a claim about globally optimal preparation or measurement cost.
+
+\section{Channel kernels, tensor prices, and limit of scope}
+
+There are two distinct kernels. The \emph{category kernel} is present in \(\mathrm{SU}(2)\): \(-I\) acts trivially on the same unpunctured torus spaces. On a bipartite 50B graph the framing phase also does not distinguish the signing. Merely composing these same seam maps with any other fixed operations on these spaces cannot recover an overwritten choice. This statement does not cover changes to punctured or colored state spaces. The \emph{measurement kernel} remains even in a pointed category: unfiltered ranks of \(K_\gamma\) and \(K_\gamma C\) agree, and conjugation-invariant output effects applied to the calibrated prepared transfer miss the switch. The passive kernel of \eqref{eq:sum0} is another restriction, not a statement that the full untwisted gauge theory is blind.
+
+A native two-terminal tensor price \cite{p41,price} requires making a Choi tensor from a \emph{physical} marked linear map. Use the whole input and output torus, at prescribed site separation \(L\), in the filtered cut experiment. The projected map
+\[
+ \mathcal B_\gamma=P_a K_\gamma^\dagger M_\gamma P_a
+\]
+has rank one for a positive cycle sign and zero for negative. Its two-site price is exactly \(L\log_2\rank\mathcal B_\gamma\), with \(\log_2 0=-\infty\); to keep both prices finite one may append a known rank-one protected branch by direct sum, yielding ranks two and one. The operation is on the composed map, not on the sum of separate prices. In particular \(P_{\rm nz} K_\gamma^\dagger M_\gamma P_{\rm nz}\), \(P_{\rm nz}=P_a+P_{-a}\), has rank two in both cases and is not the rank test, even though a closed trace with that projector can distinguish. An orientation-invariant version uses the direct sum of the two \emph{separately recorded equal-charge branches}; charge reversal simply swaps them. No phase of an isolated nonzero scalar is inferred from its tensor price.
+
+The literal \(D(\Z/3)\) support operation \eqref{eq:source} also has a finite positive open realization if the entire positive cap surfaces are made available. On each torus the coordinates \((a(\mu),a(h))\) are invertible over \(\F\), because the matrix of \((2z+h,h)\) has determinant \(2\), a unit in \(\F\). This is not asserted to be an integral torus framing. The state of the actual cap exterior has constant nonzero amplitude on the holonomy records \((s,x)=(A_\epsilon x,x)\), with value fixed by the common groupoid convention. This follows from the same count (before attaching the core states). Prepare its rank-one outer product and average over conjugations by the diagonal finite group of pure electric Wilson characters on those tori. Character orthogonality dephases it into a positive multiple of
+\(\sum_x|A_\epsilon x,x\rangle\langle A_\epsilon x,x|\). Projecting to a marked record \((s,y)\) tests precisely the support in \eqref{eq:source}. The unfiltered rank \(3^{|V|}\) itself is entirely independent of signs. The state preparation and dephasing are allowed open controls here; they are not an extra step required for the already closed fixed-background amplitude. No factorization of each single torus into separately placed physical terminals is assumed.
+
+The finite modular and groupoid rules are standard \cite{rt,dgno,fq,dw,balsam}. The new information comes from the charge-sum reduction for the actual paired cap geometry and the sourced cap-core response on a fixed closed background; the data are not an unmarked invariant, a new classification of arbitrary three-manifolds, or a Lorentzian gravitational transport law. The graph cycle quotient uses the usual elementary frame gauge, while the physical composition rather than raw scalar rank supplies its new test. Even the spectral part is the existing rank specialization of the Euclidean price theorem applied to a new physical map.
+
+\begin{thebibliography}{99}
+\bibitem{p50b} \emph{Topological blindness of Witten--Reshetikhin--Turaev invariants}, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/50b-wrt-topological-blindness}{source and verification}.
+\bibitem{p41} \emph{Physical gluing and Wilson constraints from Euclidean tensor prices}, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/41-tensor-prices-tv-fusion-and-wilson}{source and verification}.
+\bibitem{moo} H. Murakami, T. Ohtsuki and M. Okada, \emph{Invariants of three-manifolds derived from linking matrices of framed links}, \href{https://doi.org/10.18910/4822}{Osaka J. Math. 29 (1992), 545--572}.
+\bibitem{dgno} V. Drinfeld, S. Gelaki, D. Nikshych and V. Ostrik, \emph{On braided fusion categories I}, \href{https://arxiv.org/abs/0906.0620}{arXiv:0906.0620}.
+\bibitem{rt} N. Reshetikhin and V. G. Turaev, \emph{Invariants of 3-manifolds via link polynomials and quantum groups}, \href{https://doi.org/10.1007/BF02102060}{Invent. Math. 103 (1991), 547--597}.
+\bibitem{fq} D. Freed and F. Quinn, \emph{Chern--Simons theory with finite gauge group}, \href{https://arxiv.org/abs/hep-th/9111004}{arXiv:hep-th/9111004}.
+\bibitem{dw} R. Dijkgraaf and E. Witten, \emph{Topological gauge theories and group cohomology}, \href{https://doi.org/10.1007/BF02096988}{Commun. Math. Phys. 129 (1990), 393--429}.
+\bibitem{balsam} B. Balsam, \emph{Turaev--Viro invariants as an extended TQFT III}, \href{https://arxiv.org/abs/1012.0560}{arXiv:1012.0560}.
+\bibitem{price} OpenAI, \emph{Euclidean geometry in the asymptotic spectrum of tensors}, \href{https://github.com/openai/math/blob/main/preprints/Euclidean-geometry-in-the-asymptotic-spectrum-of-tensors-November-24-2026/README.md}{primary preprint}.
+\end{thebibliography}
+\end{document}

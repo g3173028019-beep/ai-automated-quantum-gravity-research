@@ -1,0 +1,822 @@
+\pdfoutput=1
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=.95in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[colorlinks=true,allcolors=blue!55!black]{hyperref}
+\usepackage{xcolor}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\R}{\mathbb R}
+\newcommand{\scrL}{\mathcal L}
+\newcommand{\eps}{\varepsilon}
+\setlength{\emergencystretch}{1em}
+\allowdisplaybreaks[1]
+\title{Vacuum stress spectroscopy with double pulses\\ and two-scale thresholds}
+\author{}
+\date{}
+\hypersetup{pdftitle={Vacuum stress spectroscopy with double pulses and two-scale thresholds},pdfauthor={}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We reconstruct the connected Wightman two-point function of a specified
+conserved stress tensor in four-dimensional Minkowski space from a
+restricted family of vacuum variance measurements. A single compact
+spatial profile and one compact time pulse are fixed; the time pulse is
+used twice with a variable delay. The energy-density scan determines
+a positive mass-squared measure including its null atom, and a trace or
+spatial transverse-traceless scan separates the timelike spin channels.
+The exact inverse is not uniformly stable: free Klein--Gordon stresses
+with the same linear curvature improvement have arbitrarily close
+fixed-window scans but different null residues. We derive sharp
+asymptotics when spatial size and time duration both vary, including
+the slowly varying transition at threshold index \(1/2\). A converse
+recovers the threshold index and normalization from the regular
+variation of the reference scan and convergence of the delay ratios.
+\end{abstract}
+
+\section{Stress data and measurement model}
+
+A positive-energy stress Wightman function has a spectral
+decomposition fixed by covariance and conservation up to two
+positive timelike measures \cite{CFL,Karateev}. If access is limited
+to compact stress windows, it is not evident whether the measure is
+identifiable or whether a measured infrared power is a property of the
+detector rather than the threshold. We keep the stress prescription,
+detector calibration, and state fixed. All data below are vacuum norms
+of smeared stress vectors. Neither a time-ordered correlator nor an
+independent measurement of a Fourier phase is needed.
+
+Use signature \((-+++)\), \(p=(\omega,\mathbf p)\),
+\(q=|\mathbf p|\), and \(s=-p^2\).
+Let \(T_{\mu\nu}\) be a centered, Hermitian, symmetric, conserved
+operator-valued tempered distribution in a positive Hilbert space
+with a Poincar\'e invariant vacuum vector and spectrum in the future
+cone. Throughout the main results the centered vacuum columns have
+no component at zero \emph{four}-momentum; this is automatic in a
+unique invariant vacuum after centering. We use the Fourier inverse
+measure \(\dd^d k/(2\pi)^d\). In the timelike region let
+\[
+ D_{\mu\nu}=p_\mu p_\nu+s\eta_{\mu\nu},\qquad
+ P^{(0)}_{\mu\nu,\rho\sigma}=\tfrac13D_{\mu\nu}D_{\rho\sigma},
+\]
+\[
+ P^{(2)}_{\mu\nu,\rho\sigma}=
+ \tfrac12(D_{\mu\rho}D_{\nu\sigma}+D_{\mu\sigma}D_{\nu\rho})
+ -\tfrac13D_{\mu\nu}D_{\rho\sigma}.
+\]
+The nonnegative measures \(\rho_0,\rho_2\) are in the normalization
+where the rest-frame factors \(s^2\) are included in these tensors.
+Indeed in the rest frame conservation removes time components,
+and the symmetric spatial tensor decomposes into its trace and
+traceless irreducible parts. Positivity of the Wightman matrix
+measure fixes the sign of each spectral weight.
+
+The punctured future null cone contributes only a nonnegative
+coefficient \(a\) times \(p_\mu p_\nu p_\rho p_\sigma\) with the
+invariant shell measure \cite{P45}. Recall the reason: on that
+homogeneous orbit the positive matrix range carries a unitary
+action of the little group. Null translations, unipotent in the
+finite tensor representation, must act as identity on the range.
+Conservation leaves the symmetric square of the span of \(p\) and
+two transverse vectors \(e_i\). Under the independent shifts
+\(e_i\mapsto e_i+c_i p\), invariance first eliminates the transverse
+quadratic terms and then the mixed terms, leaving \(p\otimes p\).
+Thus the energy contraction is
+\begin{equation}
+ \widehat W_{00,00}(\omega,\mathbf p)
+ =2\pi\theta(\omega)q^4\int_{[0,\infty)}
+        \delta(\omega^2-q^2-s)\,\nu(\dd s),\qquad
+ \nu=a\delta_0+\tfrac13(2\rho_2+\rho_0)|_{s>0}.
+ \label{eq:wightman}
+\end{equation}
+The origin atom excluded above is different from \(a\). All these
+mass-squared measures are locally finite and have a finite
+polynomially weighted tail. For \(\nu\), this follows by testing
+\eqref{eq:wightman} on a compact spatial annulus with \(q>0\) and
+frequencies covering the indicated mass interval. The shell weight
+is bounded below on a smaller such annulus. At large frequency
+take a sufficiently decaying polynomial test and use temperateness
+of the positive matrix measure. Positivity of the two contributions
+then gives the same bounds on \(\rho_j\) on \(s>0\).
+
+Fix real \(0\ne w\in C_c^\infty(\R^3)\), and real
+\(g\in C_c^\infty(\R)\) with \(\int g=1\). For a time gate \(f\)
+write \(V_\nu(f;w)\) for the squared norm of
+\(\int f(t)w(\mathbf x)T_{00}(t,\mathbf x)\dd t\,\dd^3x\)
+applied to the vacuum. In the first experiment neither \(w\) nor the
+shape \(g\) is changed. At delay \(\theta\) we use
+\[
+            g^{[\theta]}(t)=\tfrac12[g(t)+g(t-\theta)].
+\]
+These are actual normalized compact gates. Below we also dilate
+their physical duration and spatial aperture.
+
+\section{Exact inversion with one fixed spatial profile}
+
+For a nonnegative integer \(j\) used in a given detector, define
+the known positive spatial measure
+\[
+ \eta_{w,j}=(q^2)_*\bigl(q^j |\widehat w(\mathbf p)|^2
+                              \dd^3\mathbf p/(2\pi)^3\bigr).
+\]
+Only \(j=0,4\) will be needed. For \(r>0\) its density is
+\begin{equation}
+ h_{w,j}(r)=\frac{r^{(j+1)/2}}{2(2\pi)^3}
+          \int_{S^2}|\widehat w(\sqrt{r}\,\vartheta)|^2\,\dd\vartheta .
+ \label{eq:spatialdensity}
+\end{equation}
+This measure is nonzero, absolutely continuous, and rapidly decaying
+at infinity. In particular it has no atom at the origin.
+Directly integrating the positive shell in \eqref{eq:wightman}
+gives the energy frequency measure \(\xi_\nu\):
+\begin{equation}
+ V_\nu(f;w)=\int_0^\infty |\widehat f(\omega)|^2\,\xi_\nu(\dd\omega),
+ \qquad
+ (\omega^2)_*\xi_\nu(\dd u)=
+       \frac{1}{2\sqrt u}(\eta_{w,4}*\nu)(\dd u).
+ \label{eq:detector}
+\end{equation}
+The shell factor \(1/(2\sqrt u)\) appears before the pushforward;
+there is no further Jacobian when \((\omega^2)_*\) acts on measures.
+
+\begin{theorem}[Fixed-window inverse]
+\label{thm:inverse}
+For the stated \(g,w\), the exact values \(V_\nu(g^{[\theta]};w)\)
+at a countable dense set of nonnegative delays together with
+\(V_\nu(g;w)\) determine \(\nu\). This includes the null residue,
+positive-mass atoms, gaps, and singular continuous components.
+The same inversion applies to \eqref{eq:detector} when \(4\)
+is replaced by \(0\) and \(\nu\) by any positive locally finite
+mass measure with a polynomially weighted finite tail.
+\end{theorem}
+
+\begin{proof}
+The temporal Fourier modulus gives
+\begin{equation}
+ 2V_\nu(g^{[\theta]};w)-V_\nu(g;w)=
+        \int_0^\infty \cos(\theta\omega)\,\beta_\nu(\dd\omega),
+ \qquad \beta_\nu=|\widehat g|^2\xi_\nu .
+ \label{eq:cosine}
+\end{equation}
+The right side is continuous in \(\theta\) and is the Fourier
+transform of the even symmetrization of a finite positive measure.
+Thus the data recover \(\beta_\nu\). Its finiteness follows from
+the spectral tail and the rapid temporal decay.
+
+The zeros of \(\widehat g\) on the real axis are isolated, since
+\(\widehat g\) is entire and \(\widehat g(0)=1\). They lose no
+measure information. In fact \(\eta_{w,j}*\nu\) is locally
+absolutely continuous by \eqref{eq:spatialdensity} and Tonelli,
+even for an atomic \(\nu\). Near zero the convolution density is
+\(O(u^{(j+1)/2})\), using local finiteness of \(\nu\).
+Multiplication by \(u^{-1/2}\) is therefore locally integrable;
+the resulting frequency measure remains absolutely continuous
+and has no origin atom. Divide by \(|\widehat g|^2\) off its zeros,
+push to \(u\), and multiply by \(2\sqrt u\). This recovers the
+convolution of measures, denoted \(\Upsilon_\nu\).
+
+For every \(p>0\) one can now form
+\begin{equation}
+       \scrL\nu(p)=
+        \frac{\scrL\Upsilon_\nu(p)}{\scrL\eta_{w,j}(p)}.
+ \label{eq:laplace}
+\end{equation}
+Both transforms in the quotient are finite; the denominator is
+strictly positive. Exponential tilting reduces uniqueness of
+\(\scrL\nu\) to finite-measure Fourier uniqueness: two Laplace
+transforms agreeing on \(p>0\) agree in the open right half-plane
+by analyticity, and the vertical line through any positive
+\(p\) is the Fourier transform of the tilted measures.
+\end{proof}
+
+For example \(a=\lim_{p\to\infty}\scrL\nu(p)\).
+For a nonzero remaining measure its lower support is
+\(-\lim_{p\to\infty}p^{-1}\log(\scrL\nu(p)-a)\).
+The latter fact follows by exponential tilting and bounding
+above and below using any neighborhood of the lower support.
+The unbounded delay family and exact readings are substantive.
+Section~\ref{sec:noise} gives discontinuity for the inverse
+question of the presence of the null atom.
+
+\begin{remark}[Separating a possible zero-momentum component]
+If a centered vacuum column can have an atom at \(p=0\), its
+positive Lorentz-invariant tensor is \(b\,\eta_{\mu\nu}
+\eta_{\rho\sigma}\) with \(b\ge0\). To see this, the finite
+positive range carries a unitary Lorentz action. Each boost in
+the symmetric tensor representation is diagonalizable with
+positive real eigenvalues, hence acts trivially on this range.
+Boost commutators also generate the rotations, leaving the
+invariant metric line. For a nonzero spatial mean the energy
+gate records this atom as \(b|\widehat w(0)|^2\delta_0\)
+in \(\beta\) of \eqref{eq:cosine}; the null shell instead
+produces an absolutely continuous frequency distribution.
+Subtract the measured frequency atom before using
+\eqref{eq:laplace}. A zero-mean spatial profile cannot see
+this origin component. For the trace gate the corresponding
+origin weight is sixteen times the energy weight.
+\end{remark}
+
+\section{Resolving the timelike spin channels}
+
+The energy family determines \(2\rho_2+\rho_0\) but does not
+separate the two measures by itself. A second fixed contraction
+of the physical stress suffices.
+
+\begin{proposition}[Two compact detector families suffice]
+\label{thm:spin}
+Under the stated hypotheses the \(T_{00}\) double-pulse scan,
+together with either the trace double-pulse scan at the same
+\(w\) or a scan with one fixed nonzero compact spatial
+transverse-traceless tensor, determines both timelike measures
+and \(a\). These data fix the entire specified connected stress
+two-point function.
+\end{proposition}
+
+\begin{proof}
+For the trace \(\Theta=\eta^{\mu\nu}T_{\mu\nu}\),
+\(\eta^{\mu\nu}D_{\mu\nu}=3s\) and the spin-two tensor is
+traceless. Its full double contraction with \(P^{(0)}\)
+is \(3s^2\), and the null-pole tensor has zero trace.
+Thus the trace scan has formula \eqref{eq:detector} with
+spatial measure \(\eta_{w,0}\) and mass measure
+\(3s^2\rho_0(\dd s)\). Reconstruct the latter using
+Theorem~\ref{thm:inverse}, divide on \(s>0\), and use
+\eqref{eq:wightman} to obtain \(\rho_2\).
+
+For the other option take a real symmetric compact spatial tensor
+\(f_{ij}\) such that \(\partial_i f_{ij}=0\),
+\(\delta^{ij}f_{ij}=0\), with no time components in the test.
+These profiles exist by applying the local polynomial tensor
+operator with symbol
+\[
+ \mathcal P_{ij,ab}(\mathbf k)=
+  \tfrac12(P_{ia}P_{jb}+P_{ib}P_{ja})-\tfrac12P_{ij}P_{ab},
+ \qquad P_{ij}=|\mathbf k|^2\delta_{ij}-k_i k_j
+\]
+to a compact smooth template whose transverse-traceless part
+is not identically zero. The identities
+\(\mathbf k^iP_{ij}=0\), \(P^2=|\mathbf k|^2P\),
+and \(\operatorname{tr}P=2|\mathbf k|^2\) give the constraints
+and preserve compact support because the operator is differential.
+Then \(D:\widehat f=0\) and direct contraction gives
+\(\overline{\widehat f}:P^{(2)}:\widehat f
+=s^2|\widehat f|^2\). Its spatial blur is formed from
+\(|\widehat f|^2\), with the tensor norm summed over the indices,
+and its mass measure is \(s^2\rho_2(\dd s)\).
+The same inversion and division recover \(\rho_2\); the energy
+record supplies \(\rho_0\) and the null residue.
+\end{proof}
+
+These are restricted-access measurements rather than a new
+spectral decomposition. The distinction between the timelike
+spin-zero measure and the null helicity-zero atom matters:
+the trace is blind to the latter despite the name of the
+timelike sector. For example the mixed energy--trace contraction
+has weight \(q^2s\,\rho_0\), with no null response.
+
+\begin{proposition}[An obstruction to a universal scalar-only null probe]
+\label{thm:nullblind}
+Let \(F_{\mu\nu}(p)\) be a detector tensor continuous to a fixed
+nonzero future null \(p_0\), as for a compact smooth test. If
+its timelike spin-two norm vanishes on the nearby timelike
+orbit directions tending to \(p_0\) with fixed spatial momentum,
+then \(F_{\mu\nu}(p_0)p_0^\mu p_0^\nu=0\).
+Thus exact blindness of one such probe to arbitrary timelike
+spin-two spectral data implies blindness to the null atom there.
+\end{proposition}
+
+\begin{proof}
+Write \(p_0=(q,qn)\), \(q>0\), and
+\(p_s=(\sqrt{q^2+s},qn)\). Positivity of the timelike projector
+forces the transverse-to-\(p_s\) three-dimensional block of \(F\)
+to be proportional to the identity. Evaluate it on a fixed
+unit purely spatial \(e_1\perp n\) and on the spacelike unit
+vector \(e_L=(q,\sqrt{q^2+s}\,n)/\sqrt s\) perpendicular to \(p_s\).
+Their evaluations agree. Multiply by \(s\) and pass to the
+limit. The right side from \(e_1\) tends to zero while
+\(\sqrt s\,e_L\to p_0\), proving the claim.
+\end{proof}
+This does not preclude separating the null atom after combining
+different scans. Nor does it preclude choosing a probe adapted to
+a known spectrum with no timelike masses accumulating at zero.
+
+\section{The fixed-window inverse has no uniform noise margin}
+\label{sec:noise}
+
+\begin{theorem}[Physical instability at a null threshold]
+\label{thm:noise}
+For any fixed \(w,g\) as above, even the two full delay scans
+of the energy and the trace have no uniformly positive
+noise margin for the presence of a nonzero null atom over
+this stress class. There is a family of free Klein--Gordon
+stresses for which both scans converge uniformly in all delays
+as \(m\downarrow0\), whereas the null residue is positive at
+\(m=0\) and zero at every \(m>0\).
+\end{theorem}
+
+\begin{proof}
+First compare the norm of the gated measures that appear in
+\eqref{eq:cosine}. In the spectral cone, replacing
+\(a\delta_0\) by \(\rho_0=3a\delta_\eps\), \(\eps>0\),
+changes the energy weight to \(a\delta_\eps\)
+and the trace weight to \(9a\eps^2\delta_\eps\).
+For a mass atom at \(\eps\), the direct squared-frequency
+density of the gated measure, per unit mass weight, is
+\[
+ b_g(u)h_{w,j}(u-\eps),\qquad
+       b_g(u)=\frac{|\widehat g(\sqrt u)|^2}{2\sqrt u} .
+\]
+The spatial density is taken to vanish at negative arguments.
+These densities converge in \(L^1(\dd u)\) to the expression
+at \(\eps=0\). Indeed \(h_{w,j}(u-\eps)=O(u^{(j+1)/2})\)
+uniformly near zero; away from zero use continuity and rapid
+temporal decay. Hence the displaced energy atom gives uniform
+convergence of its whole scan: the double-pulse multiplier
+\((1+\cos(\theta\sqrt u))/2\) has absolute value at most one,
+independently of \(\theta\). The trace contribution vanishes
+in the same norm with its additional \(\eps^2\) factor. A
+positive mixture of masses in a vanishing interval above zero
+gives the same instability, with no isolated positive-mass
+atom required at the measure level.
+
+This behavior occurs for actual local conserved stresses.
+Let \(\varphi_m\) be a real free scalar in four dimensions,
+and prescribe the same linear curvature improvement at each
+mass:
+\[
+ T_{\mu\nu}^{(m)}=:T_{\mu\nu,\mathrm{can}}^{(m)}:
+  +\ell(\eta_{\mu\nu}\Box-\partial_\mu\partial_\nu)\varphi_m,
+ \qquad \ell\ne0 .
+\]
+The improvement is a background-curvature coupling and changes
+the translation charge only by a spatial boundary term in the
+usual test domain. The mixed Wightman term between the canonical
+quadratic stress and this linear one vanishes by free-field
+parity. On a one-particle shell the improvement contributes
+\(\ell D_{\mu\nu}\) in canonical scalar normalization.
+Consequently the energy mass measure includes precisely
+\(\ell^2\delta_{m^2}\) from the one-particle term, and its
+trace measure includes \(9\ell^2m^4\delta_{m^2}\).
+At \(m=0\) this gives a null-shell residue \(a=\ell^2\).
+
+The two-particle continuum from the canonical stress converges
+in the same gated total-variation norm. For \(s\ge4m^2\), in the
+pair rest frame the two momentum magnitudes are
+\(\sqrt{s-4m^2}/2\) and their energies are \(\sqrt s/2\).
+The quadratic stress form factor is a fixed polynomial of
+degree two in the momenta and \(m\), bounded by \(Cs\);
+after division by \(s\) it converges for every fixed \(s>0\).
+The invariant two-particle phase space gives a fixed constant times
+\(\sqrt{1-4m^2/s}\,\mathbf1_{s\ge4m^2}\) after angular integration.
+Thus in the \(s^2\)-factored convention of
+\eqref{eq:wightman} the positive canonical spin densities
+are uniformly bounded, and converge pointwise for \(s>0\).
+The trace density is bounded by \(Cs^2\). The weighted output
+total variation of either density difference is bounded, by
+Tonelli, by the integral of its absolute value against
+\(\int_0^\infty b_g(r+s)\eta_{w,j}(\dd r)\).
+This kernel is locally bounded, since
+\(b_g(r+s)\le C/\sqrt{r}\) there, and is rapidly decreasing
+at large \(s\). Dominated convergence proves the claimed
+uniformity of the full records.
+\end{proof}
+
+For these physical examples one can also bound the approach
+to the limiting record. The energy spatial blur density
+extended by zero has bounded first derivative near zero
+and at infinity: the explicit formula gives
+\(h_{w,4}'(r)=O(r^{3/2})\) as \(r\downarrow0\).
+The one-particle energy change is thus
+\(O(m^2)\) in gated total variation, using the fundamental
+theorem of calculus under \(b_g(u)\dd u\). The rest-frame
+canonical contractions, divided by \(s^2\), are smooth
+functions of \(m^2/s\) on \(0\le m^2/s\le1/8\): the
+polynomial form factors contain spatial quadratic
+momenta, and the phase-space square root is smooth on
+this interval. On the remaining allowed region they
+are uniformly bounded. Their differences from the
+massless densities are consequently bounded by
+\(C\min(1,m^2/s)\). Pairing with the same gated kernel gives
+uniform errors \(O(m^2(1+|\log m|))\) in the energy scan
+and \(O(m^2)\) in the trace scan as \(m\downarrow0\); the latter
+uses the additional trace weight \(s^2\). The bounds are
+only upper bounds and do not supply an optimal resolution.
+
+The theorem excludes a uniformly correct null-atom decision
+at any fixed positive worst-case error on the fixed-window
+records. It does not say that a specified finite spectral family
+is always hard to distinguish, or that scaling up the spatial
+window cannot separate the cases. In particular it does not
+conflict with exact uniqueness in Theorem~\ref{thm:inverse}.
+
+\section{Two different threshold experiments}
+\label{sec:thresholds}
+
+We distinguish the threshold law of the recovered additive
+convolution at a fixed window from the multiplicative scaling law
+of the raw variance. These use different observations.
+
+\subsection{The additive spatial blur at an arbitrary mass threshold}
+
+Write \(\Upsilon=\eta_{w,j}*\mu\), where \(\mu\) is the mass measure
+for one detector, with \(j=4\) for the energy and \(j=0\) for the
+trace or compact spatial tensor. In the latter case use the
+tensor norm in the spatial profile. Let \(s_0=\inf\operatorname{supp}
+\mu<\infty\) for nonzero \(\mu\). If \(P_m\) is the first nonzero
+homogeneous Taylor polynomial at zero of the spatial Fourier profile,
+\eqref{eq:spatialdensity} gives
+\[
+ h_{w,j}(r)\sim c_{w,j} r^{\gamma-1},\qquad
+ \gamma=(j+3)/2+m,\qquad
+ c_{w,j}=\frac{1}{2(2\pi)^3}\int_{S^2}|P_m(\vartheta)|^2\dd\vartheta>0 .
+\]
+The finite minimal order \(m\) exists by analyticity.
+Positivity therefore gives
+\(\inf\operatorname{supp}\Upsilon=s_0\);
+it is also the square of the lower frequency support of
+the gated output, since isolated zeros of \(\widehat g\) carry
+no output mass.
+
+\begin{proposition}[The exact threshold shift of the additive blur]
+\label{thm:additive}
+For \(\alpha\ge0\), \(C>0\), and \(L\) positive and slowly
+varying at infinity, the following two asymptotics are equivalent:
+\begin{align*}
+ \mu([s_0,s_0+x])&\sim Cx^\alpha L(1/x),\\
+ \Upsilon([s_0,s_0+x])&\sim
+ \frac{C c_{w,j}\Gamma(\gamma)\Gamma(\alpha+1)}
+      {\Gamma(\alpha+\gamma+1)}
+       x^{\alpha+\gamma}L(1/x).
+\end{align*}
+This includes an atom at \(s_0\).
+\end{proposition}
+
+\begin{proof}
+Translate to \(s_0=0\). The Laplace--Stieltjes Karamata
+equivalence \cite{Karamata,BGT} changes a positive cumulative
+asymptotic \(Cx^\alpha L(1/x)\) into
+\(C\Gamma(\alpha+1)p^{-\alpha}L(p)\), and conversely.
+For clarity, the forward implication follows by positive
+rescaling and tail bounds. For the converse rescale the
+measure under \(x\mapsto px\) with factor \(p^\alpha/L(p)\).
+Its Laplace transforms converge at every positive test
+parameter, giving compact mass control and exponentially
+weighted tails from half that parameter. Uniqueness of the
+positive limiting Laplace transform gives the power-law
+measure (or the origin atom for \(\alpha=0\)), so evaluation
+at \([0,1]\) gives the cumulative constant.
+Also
+\(\scrL\eta_{w,j}(p)\sim c_{w,j}\Gamma(\gamma)p^{-\gamma}\)
+by its explicit density. Applying the equivalence to
+\(\scrL\Upsilon=\scrL\eta_{w,j}\scrL\mu\) proves the proposition
+in both directions.
+\end{proof}
+
+\subsection{The balanced dilation law}
+
+For the energy measurement now let
+\(w_R(\mathbf x)=w(\mathbf x/R)\) and
+\(g_\tau(t)=\tau^{-1}g(t/\tau)\).
+Put \(b=\tau/R\). For \(j\ge0\) write
+\(W_j=\int |\mathbf k|^j|\widehat w(\mathbf k)|^2\dd^3\mathbf k/(2\pi)^3\).
+A direct change of variables in the exact shell integral gives
+\begin{equation}
+ V(R,\tau)=\int F_b(R^2s)\nu(\dd s),\qquad
+ F_b(y)=\frac12\int\frac{\dd^3\mathbf k}{(2\pi)^3}
+       \frac{|\mathbf k|^4|\widehat w(\mathbf k)|^2}{\sqrt{|\mathbf k|^2+y}}
+       \left|\widehat g\bigl(b\sqrt{|\mathbf k|^2+y}\bigr)\right|^2 .
+ \label{eq:scale}
+\end{equation}
+The factor \(R^3\) from the two spatial profiles and volume,
+the \(R^{-4}\) from \(q^4\), and the \(R\) from the shell
+denominator cancel. For each \(b>0\), \(F_b\) is continuous
+and positive on \([0,\infty)\), with rapid decay at infinity.
+The rapid bounds and local continuity are uniform on compact
+subintervals of \(b>0\). Positivity holds even for a time
+gate with notches: the frequency zero set is discrete and
+the spatial integral is not supported on it.
+
+For the following results let \(U(s)=\nu([0,s])\).
+One can instead study only the continuum by removing the exact
+atom term \(a F_b(0)\) from all the variances and using
+\(U(s)=\nu((0,s])\). Assume
+\begin{equation}
+             U(s)\sim s^\alpha L(1/s),\qquad s\downarrow0,
+             \quad \alpha\ge0,
+ \label{eq:rv}
+\end{equation}
+where \(L\) is slowly varying and positive at infinity.
+
+\begin{theorem}[Balanced time and spatial dilation]
+\label{thm:balanced}
+If \(R\to\infty\) and \(b\to b_0\in(0,\infty)\), then
+\[
+ V(R,\tau)\sim U(R^{-2})\,\mathcal M_{b_0}(\alpha),\qquad
+ \mathcal M_b(\alpha)=
+ \begin{cases}
+ \displaystyle\alpha\int_0^\infty F_b(y)y^{\alpha-1}\dd y,
+             &\alpha>0,\\[2pt]
+ F_b(0),&\alpha=0.
+ \end{cases}
+\]
+The constants are finite and strictly positive. There is no
+saturation of the threshold index at \(1/2\) in this experiment.
+\end{theorem}
+
+\begin{proof}
+Set \(X=R^2\) and \(m_X(A)=\nu(A/X)/U(1/X)\).
+The cumulative ratios give vague convergence on \([0,\infty)\)
+to \(\alpha y^{\alpha-1}\dd y\) for \(\alpha>0\) and
+\(\delta_0\) for \(\alpha=0\).
+By Potter bounds \cite[Thm.~1.5.6]{BGT},
+\(m_X([0,y])\le C_\delta y^{\alpha+\delta}\) for
+\(1\le y\le s_* X\), with \(s_*>0\) sufficiently small.
+The remaining integral \(y>s_*X\) against a rapidly decaying
+kernel is negligible by the original polynomially weighted
+finite tail and slow variation of \(U(1/X)\).
+Dyadic tail estimates and local uniform kernel convergence
+now give the formula. At \(\alpha=0\), an atom-free continuum
+with slowly vanishing cumulative also has a zero-scale
+tangent atom; its absolute variance still tends to zero.
+\end{proof}
+
+\subsection{Short and long time gates}
+
+\begin{theorem}[Anisotropic asymptotics]
+\label{thm:anisotropic}
+Keep \eqref{eq:rv} and take \(R\to\infty\).
+\begin{enumerate}
+\item If \(b\to0\), \(\tau\) is bounded away from zero, and
+\(0\le\alpha<1/2\), the formula of Theorem~\ref{thm:balanced}
+holds with \(b_0=0\) and \(F_0\) given by \eqref{eq:scale}
+with the last factor replaced by \(1\).
+\item If \(b\to0\), \(\tau\to\infty\), and \(\alpha>1/2\), then
+\begin{equation}
+ V(R,\tau)\sim R^{-1}\tau^{1-2\alpha}L(\tau^2)
+       \frac{\alpha W_4}{2}\int_0^\infty
+                     y^{\alpha-3/2}|\widehat g(\sqrt y)|^2\dd y .
+ \label{eq:shortsuper}
+\end{equation}
+\item If \(b\to0\), \(\tau\to\infty\), and \(\alpha=1/2\), then
+\begin{equation}
+       V(R,\tau)\sim\frac{W_4}{4R}
+                     \int_{\tau^2}^{R^2} L(t)\,\frac{\dd t}{t}.
+ \label{eq:shortcritical}
+\end{equation}
+For \(L(t)\to c>0\), this is
+\(cW_4(2R)^{-1}\log(R/\tau)\).
+\item If \(b\to\infty\) (so \(\tau\to\infty\)), let \(P_m\) be the first nonzero
+homogeneous Fourier jet of \(w\) at zero as above. Then
+\begin{equation}
+ V(R,\tau)\sim b^{-6-2m}U(\tau^{-2})\,\mathcal M_*(\alpha),
+ \label{eq:long}
+\end{equation}
+where \(\mathcal M_*\) is defined as in Theorem~\ref{thm:balanced}
+using the kernel
+\[
+ F_*(y)=\frac12\int\frac{\dd^3\boldsymbol l}{(2\pi)^3}
+ \frac{|\boldsymbol l|^4|P_m(\boldsymbol l)|^2}
+           {\sqrt{|\boldsymbol l|^2+y}}
+          |\widehat g(\sqrt{|\boldsymbol l|^2+y})|^2 .
+\]
+Even an actual null atom is suppressed by the factor
+\(b^{-6-2m}\) in this regime.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+For the first case the kernels converge locally to \(F_0\)
+and are bounded by \(C(1+y)^{-1/2}\) uniformly in \(b\).
+On \(1\le y\le s_*R^2\), choose \(\delta\) with
+\(\alpha+\delta<1/2\) in the dyadic estimate in the previous
+proof. On the original tail \(s>s_*\) the normalized temporal
+gate with \(\tau\) bounded below gives an integrable bound
+\(C_NR^{-1}s^{-1/2}(1+s)^{-N}\) in \eqref{eq:scale},
+hence an \(O(R^{-1})=o(U(R^{-2}))\) contribution. This also
+shows finiteness of the limiting integral with \(F_0\).
+
+For \eqref{eq:shortsuper}, set \(y=\tau^2s\) and write
+\(F_b(y/b^2)=bK_b(y)\), where
+\[
+ K_b(y)=\frac12\int\frac{\dd^3\mathbf k}{(2\pi)^3}
+ |\mathbf k|^4|\widehat w(\mathbf k)|^2
+ \frac{|\widehat g(\sqrt{b^2|\mathbf k|^2+y})|^2}
+            {\sqrt{b^2|\mathbf k|^2+y}}.
+\]
+This tends on \(y>0\) to \(W_4|\widehat g(\sqrt y)|^2/(2\sqrt y)\)
+and is uniformly bounded by \(C_N y^{-1/2}(1+y)^{-N}\).
+Near zero, Potter gives
+\(\nu([0,y/\tau^2])/U(\tau^{-2})\le C_\delta
+ y^{\alpha-\delta}\) with \(\alpha-\delta>1/2\), which
+controls the inverse square root. At infinity use the rapid
+bound as before. The limiting integral at scale \(\tau^2\)
+and the extra factor \(b=\tau/R\) give \eqref{eq:shortsuper}.
+
+For the critical case fix \(K>1\). On
+\(K/R^2\le s\le 1/(K\tau^2)\) the ratio of the kernel to
+\(W_4/(2R\sqrt s)\) is uniformly \(1+o_K(1)\), with the
+error tending to zero as \(K\to\infty\). To see this truncate
+to a compact \(\mathbf k\)-set using the Schwartz spatial
+tail, take \(R^2s\ge K\) in the denominator and use
+\(\tau^2s\le1/K\) and \(b\to0\) in the temporal gate.
+The lower and upper discarded ranges contribute,
+respectively, \(O_K(R^{-1}L(R^2))\) and
+\(O_K(R^{-1}L(\tau^2))\).
+The first estimate uses the bounded \(F_b\) and the cumulative
+measure at \(K/R^2\); the second uses \(bK_b(y)\) for
+\(y\ge1/K\) and rapid decay. Integrating \(s^{-1/2}\)
+against the cumulative \(U(s)\) between the two cutoffs gives
+\(\frac12\int L(1/s)\dd s/s\), up to endpoint terms of the
+same two orders before the common \(R^{-1}\).
+The asymptotic assumption on \(U\) is uniform once both
+endpoints are small. Finally
+\(\int_{\tau^2}^{R^2}L(t)\dd t/t\)
+dominates \(L(\tau^2)+L(R^2)\): an arbitrary fixed logarithmic
+length at each end is eventually present and yields that
+length times its endpoint value by uniform convergence of
+slow variation. Thus the discarded terms and fixed-width
+strips are negligible for each \(K\); letting \(K\to\infty\)
+gives \eqref{eq:shortcritical}.
+
+For the last case substitute \(\mathbf k=\boldsymbol l/b\)
+in \eqref{eq:scale}. The spatial powers and denominator
+give \(b^{-6}\); the remaining profile
+\(b^m\widehat w(\boldsymbol l/b)\) tends to \(P_m(\boldsymbol l)\)
+and is bounded globally by \(C|\boldsymbol l|^m\), by Taylor
+expansion near zero and boundedness of \(\widehat w\) away
+from zero. This gives the extra \(b^{-2m}\) and normalized
+kernels uniformly rapid in \(\tau^2s\). The proof of the
+balanced limit at scale \(\tau^2\) applies.
+\end{proof}
+
+If \(\tau\) is fixed and the nonzero-mass part satisfies
+\(\int_{(0,1)}s^{-1/2}\nu(\dd s)<\infty\), then \(R\)
+times its variance converges to
+\[
+ \frac{W_4}{2}\int_{(0,\infty)}
+       s^{-1/2}|\widehat g(\tau\sqrt s)|^2\nu(\dd s),
+\]
+by dominated convergence in the shell formula. This sees
+the full gated mass rather than only the low-end cumulative
+measure, and its coefficient can vanish at temporal notches.
+In particular an atom of weight \(A>0\) at \(s=m^2>0\), with a
+zero of order \(h\) of \(\widehat g\) at \(\tau m\) (order zero
+means nonzero), contributes precisely
+\[
+ \frac{A W_{4+4h}}{2m}
+  \left|\frac{\widehat g^{(h)}(\tau m)}{h!}\right|^2
+  \left(\frac{\tau}{2m}\right)^{2h} R^{-1-4h}(1+o(1)).
+\]
+Indeed the departure of the gate's argument from \(\tau m\)
+is \(\tau|\mathbf k|^2/(2mR^2)+O(R^{-4})\) at fixed
+\(\mathbf k\), and a global bound by the leading power in
+\(|\mathbf k|/R\) gives domination by the Schwartz window.
+
+For the weighted spin measures of Proposition~\ref{thm:spin},
+the analogous formulas replace the spatial factor \(q^4\)
+by \(1\). Removing the exact prefactor \(R^4\) gives
+\eqref{eq:scale} with \(|\mathbf k|^4\) omitted; the long-time
+exponent on this normalized variance is then \(2+2m\),
+not \(6+2m\), from the same change of variables. If an
+unweighted spin cumulative has positive index \(\beta\),
+weighting it by \(s^2\) changes the index to \(\beta+2\), with
+cumulative factor \(\beta/(\beta+2)\) by integration by parts.
+The index-zero case requires its own slow-variation data.
+
+\section{A Tauberian converse using delay ratios}
+\label{sec:converse}
+
+A measured log-slope alone does not force a regularly varying
+threshold. For example, for \(\alpha>0\) a sufficiently small
+positive log-periodic modulation of \(s^{\alpha-1}\dd s\)
+near zero gives a non-regularly-varying cumulative while
+preserving the log-slope of \eqref{eq:scale}. In general
+inverse regular variation through a single transform depends
+on its Mellin cancellation properties \cite{JMRS}. The
+positive delay family gives a converse without a zero-free
+assumption on one Mellin kernel.
+
+For example, if a single chosen kernel happened to satisfy
+\(\int_0^\infty F_1(y)y^{\alpha+i\beta-1}\dd y=0\) at
+\(\alpha>0\), \(\beta\ne0\), consider the positive measure
+\(s^{\alpha-1}[1+\delta\cos(\beta\log s)]\dd s\) on \((0,1)\),
+\(0<\delta<1\), in fixed units. Its cumulative divided by
+\(s^\alpha\) has a nonconstant log-periodic part, since the
+integral of the oscillatory density contributes
+\(\operatorname{Re}[s^{i\beta}/(\alpha+i\beta)]\).
+However its reference variance under \(y=Xs\) has leading
+term \(X^{-\alpha}\int F_1(y)y^{\alpha-1}\dd y\): the leading
+oscillation vanishes by the assumed Mellin zero and the
+finite upper cutoff contributes only a rapid error. This
+conditional obstruction explains why the proof below brings
+in a separating family; we do not assert that a given
+physical choice of \(w,g\) has such a zero.
+
+Fix \(w,g\) and use balanced cutoff \(R\) for both scales.
+At scale \(X=R^2\), let \(V_\theta(X)\) denote the energy
+variance with temporal shape \(g^{[\theta]}\) dilated by
+\(R\), i.e. the laboratory delay is \(\theta R\).
+The reference is \(A_X=V_0(X)\) (or its atom-subtracted
+version, if all tested data have also had that atom term
+removed).
+
+\begin{theorem}[Delay-family Tauberian equivalence]
+\label{thm:converse}
+Suppose the reference \(A_X>0\) is regularly varying at
+infinity with index \(-\alpha\) and the ratios
+\(V_\theta(X)/A_X\) have limits on a dense set of nonnegative
+\(\theta\). Then \(\alpha\ge0\) and the corresponding mass
+cumulative satisfies
+\[
+             U(s)\sim
+            \frac{A_{1/s}}{\mathcal M_1(\alpha)},\qquad s\downarrow0.
+\]
+Conversely \eqref{eq:rv} gives regular variation of the
+reference and all of these ratio limits.
+\end{theorem}
+
+\begin{proof}
+Boundedness of the balanced variance implies
+\(\alpha\ge0\). Put \(\mu_X(B)=\nu(B/X)/A_X\).
+Strict positivity of the reference kernel on \([0,1]\)
+gives \(\nu([0,t^{-1}])\le C A_t\) for all large \(t\).
+There is therefore uniform mass control on compact sets,
+and for \(1\le y\le X/X_0\) Potter applied to
+\(A_{X/y}/A_X\) gives
+\(\mu_X([0,y])\le C_\delta y^{\alpha+\delta}\).
+On the remaining tail the original polynomially
+weighted spectral bound suffices against the rapid
+test, after dividing by \(A_X\).
+The delay kernels have the same uniform tail bound because
+\(|\widehat{g^{[\theta]}}|\le|\widehat g|\).
+Any vague subsequential limit is thus a locally finite
+positive measure of polynomial growth with
+\(\int F_1\,\dd\mu=1\) and the same family of limiting
+integrals. Its delay transform is continuous, so
+uniqueness for the dense set extends to all delays.
+
+Apply Theorem~\ref{thm:inverse} to these tangent measures
+at fixed dimensionless profiles: its proof only requires
+local finiteness and polynomially weighted integrability,
+which the growth bound gives. Hence all subsequential
+limits coincide. The identity
+\[
+ \mu_{cX}(B)=(A_X/A_{cX})\,\mu_X(B/c),\qquad c>0,
+\]
+then forces \(\mu([0,y])=\mu([0,1])y^\alpha\).
+For \(\alpha=0\) this is a delta at the origin; otherwise
+it is the homogeneous power-law measure. Testing with
+\(F_1\) fixes \(\mu([0,1])=1/\mathcal M_1(\alpha)\).
+Its boundary at \(1\) has zero mass, proving the stated
+cumulative equivalence. The converse is Theorem~\ref{thm:balanced}
+applied to each compact double pulse separately.
+\end{proof}
+
+The fixed-profile inverse and the scaling equivalence answer
+different questions. Exact lag data reconstruct the positive
+mass measure, but Section~\ref{sec:noise} prevents uniform
+fixed-window mass discrimination. The scaling asymptotics
+separate a null atom from a slowly vanishing continuum only
+when its absolute rather than its normalized limiting
+amplitude is used. The results do not identify a stress spectrum
+with a scattering pole measure or determine the nonlinear
+gravity fluctuations of a total charge.
+
+\begin{thebibliography}{99}
+\small
+\bibitem{P45}
+A massless stress pole from the variance of a spatially scaled vacuum energy,
+companion manuscript 45,
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/45-vacuum-stress-massless-pole}{repository version}.
+\bibitem{CFL}
+A.~Cappelli, D.~Friedan, and J.~I.~Latorre,
+C-theorem and spectral representation,
+\emph{Nucl. Phys. B} \textbf{352} (1991), 616--670,
+\href{https://doi.org/10.1016/0550-3213(91)90102-4}{doi:10.1016/0550-3213(91)90102-4}.
+\bibitem{Karateev}
+D.~Karateev, Two-point functions and bootstrap applications in quantum field theories,
+\emph{JHEP} \textbf{02} (2022), 186,
+\href{https://arxiv.org/abs/2012.08538}{arXiv:2012.08538}.
+\bibitem{Karamata}
+J.~Karamata, Neuer Beweis und Verallgemeinerung der Tauberschen S\"atze, welche die Laplacesche und Stieltjessche Transformation betreffen,
+\emph{J. Reine Angew. Math.} \textbf{164} (1931), 27--39,
+\href{https://geodesic.mathdoc.fr/item/JRAM_1931__164_149745/}{archive edition}.
+\bibitem{BGT}
+N.~H.~Bingham, C.~M.~Goldie, and J.~L.~Teugels,
+\emph{Regular Variation}, Encyclopedia of Mathematics and its Applications, vol.~27, Cambridge University Press (1987),
+\href{https://doi.org/10.1017/CBO9780511721434}{doi:10.1017/CBO9780511721434}.
+\bibitem{JMRS}
+M.~Jacobsen, T.~Mikosch, J.~Rosi\'nski, and G.~Samorodnitsky,
+Inverse problems for regular variation of linear filters, a cancellation property for \(\sigma\)-finite measures, and identification of stable laws,
+\emph{Ann. Appl. Probab.} \textbf{19} (2009), 210--242,
+\href{https://arxiv.org/abs/0712.0576}{arXiv:0712.0576}.
+\end{thebibliography}
+\end{document}

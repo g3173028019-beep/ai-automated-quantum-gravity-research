@@ -1,0 +1,202 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Distinguishing a parity-odd gravity coupling from unknown Schwarzschild boundary returns},
+  pdfsubject={Compact retarded measurements on the perturbative Einstein branch},pdfauthor={}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Lie}{\mathcal L}
+\newcommand{\Sch}{g_{\rm S}}
+\setlength{\emergencystretch}{1.5em}
+\title{Distinguishing a parity-odd gravity coupling\\from unknown Schwarzschild boundary returns}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+A reflecting environment can convert a polar Schwarzschild perturbation into an axial one even when the interior action is Einstein gravity. We show how to distinguish this effect from a parity-odd Weyl-cubic term on the first-order Einstein branch. The detector applies the adjoint Regge--Wheeler operator to a compact smearing of the actual axial metric master field, thereby removing any homogeneous axial return. A simultaneous compact polar readout calibrates the forcing using the known odd insertion. Their ratio determines the coupling to first order whenever the measured polar forcing is nonzero, even after returns and for environments that mix parities at tree level. We construct a compact conserved polar drive and an earlier-than-return experiment with strictly positive, known calibration independent of the exterior. We also identify the corresponding direct-front coefficient between two marked collars and exhibit an exact one-port ambiguity when only total interface force, rather than the two internal histories, is measured. The results concern a fixed physical metric, smooth waveform tests, and coefficientwise causality, not a resummed higher-derivative evolution.
+\end{abstract}
+
+\section{Introduction}
+
+Parity breaking in a Schwarzschild experiment need not be intrinsic to the local equations. A local odd interaction transfers polar perturbations to the axial channel. The same local observer can later receive axial waves reflected from a wall that mixes the two channels even at zero odd coupling. A finite measurement should distinguish these mechanisms without inferring an unknown exterior load from the axial waveform. We use two complementary facts. Before the first possible return, the response cannot depend on exterior dynamics. In a source-free interior window at any time, an equation-filtered axial detector kills homogeneous waves; a polar detector measures the actual local driving term and does not require that the returned polar field be predicted.
+
+The Schwarzschild odd insertion and its calibrated finite-collar non-removability were analyzed in \cite{P27}. We use that analytic insertion rather than a quasinormal frequency shift. The roles of timed controls and of causal boundary return are related to the inverse problems of \cite{P33,P44}, but we neither reconstruct the outer medium nor import a global inverse-theory criterion. The essential observable is a compact, gauge-invariant response of the original metric, and the normalization is fixed on both channels.
+
+\section{Interior equations and the physical master calibration}\label{sec:operators}
+
+Fix $M>0$, Schwarzschild time $t$, and an oriented retained shell $a<x=r_*<b$ with $2M<r<\infty$. Write $f_{\rm S}=1-2M/r$ and $\dd x/\dd r=1/f_{\rm S}$. The fixed physical field is the original metric, not the auxiliary canonical metric after EFT order reduction. Let the coupling be $\tau\eta$, with $\tau$ a formal expansion parameter and $\eta$ the numerical coefficient in the calibrated odd insertion, of length dimension four. An equivalent convention uses the odd Weyl invariant $\operatorname{Im}\operatorname{tr}(E+iB)^3$ and a fixed nonzero conversion of units as in \cite{P27}. We use unit calibration in the specified master equations and keep the same action and source units for all compared experiments.
+
+The seed is the exact Schwarzschild solution for every pure odd coefficient considered here. The odd Euler tensor transforms with a sign under reversal of the spacetime orientation by the antipodal isometry on the spheres. Every stationary spherically symmetric symmetric two-tensor on this seed is antipodally even. Consequently the odd Euler tensor vanishes, and there is no drift of the background or of the observation clocks. In particular its linearized Noether identity on this common solution annihilates $\Lie_\xi\Sch$ separately.
+
+Fix a real $(\ell,m)$ angular harmonic with $\ell\ge2$ and calibrate its orientation. The two linear physical metric master readings are $Z=\mathcal M_+h$ (Zerilli--Moncrief) and $X=\mathcal M_-h$ (Regge--Wheeler). Both kill a linearized diffeomorphism for arbitrary smooth compactly tested variations. Let $L=\ell(\ell+1)$ and $n=(L-2)/2$. In tortoise coordinates their tree operators are
+\begin{align}
+ L_\pm&=\partial_x^2-\partial_t^2-V_\pm,\nonumber\\
+ V_-&=f_{\rm S}(L/r^2-6M/r^3),\nonumber\\
+ V_+&=\frac{2f_{\rm S}[n^2(n+1)r^3+3n^2Mr^2+9nM^2r+9M^3]}{r^3(nr+3M)^2}.
+ \label{eq:potentials}
+\end{align}
+We use the normalized physical master system of \cite{P27,Cano}. An invariant definition of the local axial insertion is valuable here. Let $E_0$ and $E_{\rm odd}$ be the metric linearizations of the Einstein and calibrated odd Euler equations. There is a local Einstein-to-axial source map $\mathcal C_-$ such that
+\begin{equation}\label{eq:source-reduction}
+ L_-\mathcal M_-h=\mathcal C_-(E_0h).
+\end{equation}
+In the gauge-invariant convention of \cite[Eqs.~(5.17)--(5.20)]{MartelPoisson}, $\mathcal M_-h=r^{-1}r^a\widetilde h_a=f_{\rm S}\widetilde h_r/r$, where the tilde is the invariant odd vector component. The source map is their local orbit-space Regge--Wheeler source formula multiplied by $f_{\rm S}$ to obtain the tortoise wave equation and converted to the fixed action units. It contains no time inverse. With $\mathcal R_+$ a local finite differential reconstruction of a vacuum polar metric from its Zerilli master \cite{Moncrief,MartelPoisson}, define on tree polar solutions
+\begin{equation}\label{eq:intrinsic}
+ \mathcal B Z=-\mathcal C_-E_{\rm odd}\mathcal R_+Z.
+\end{equation}
+The exact common background and the linearized odd Noether identity make this independent of a pure gauge addition in the reconstruction. This local formula also specifies which insertion and which detector to use if metric or source conventions are changed.
+
+In the marked Schr\"odinger normalization of \cite{P27}, the analytic coefficient supplied by \cite[App.~C, Eqs.~(C17),(C19)]{Cano} takes the form
+\begin{equation}\label{eq:insertion}
+ \mathcal B=U_3(r)\partial_t^3-U_1(r)\partial_t-W_1(r)\partial_t\partial_x,
+ \qquad U_3(r)=-144\frac{M f_{\rm S}(r)}{r^5}.
+\end{equation}
+The Fourier convention is $e^{-i\omega t}$, so $i\omega^3=\partial_t^3$ and $i\omega=-\partial_t$ on a mode. The lowering of the higher derivatives uses the tree Zerilli equation and is only asserted on vacuum polar input. For the actual $\ell=2$ experiment below, the other two real coefficients in these conventions reduce to
+\begin{align}
+ U_1&=\frac{288M(r-2M)(30r^4+112Mr^3-99M^2r^2-564M^3r-342M^4)}{r^{10}(2r+3M)^2},\nonumber\\
+ W_1&=-\frac{288M(r-2M)(5r^2+Mr-15M^2)}{r^8(2r+3M)}.                       \label{eq:ell2}
+\end{align}
+These are obtained simply by setting $L=6$ in the static odd expressions, factoring their radial numerators, and retaining the coefficient of $i\omega$ in each. The proof below only needs the nonzero $U_3$ to design the drive; the complete $\mathcal B$ is used for calibration. The absence of a time inverse in \eqref{eq:source-reduction} also makes the time-domain meaning precise. If the comparison of two representatives is derived first at nonzero Fourier frequency, divide the difference of the stationary differential operators by the monic radial tree equation. The remainder, polynomial in $\omega$, vanishes on both independent local radial data for an open frequency set and therefore vanishes identically. This comparison adds no exclusion at $\omega=0$.
+
+There are two relevant scope checks. First, the odd Weyl and odd Riemann cubics need not have identical Hessians on sourced variations. In the chiral two-form decomposition their difference linear in Ricci is proportional to $R C{*}C$: a single traceless Ricci factor is off-diagonal and has zero trace against the diagonal odd Weyl contraction. The other terms contain two or more Ricci factors. On Schwarzschild $R_{ab}=C{*}C=0$; on a vacuum tree polar input $\delta R_{ab}=0$ and $\delta(C{*}C)=0$, the latter by antipodal parity for a pseudoscalar in the given irrep. This kills the difference of mixed variational insertions on the only input for which \eqref{eq:insertion} is used. Second, the radial prefactor in \cite[Eq.~(40)]{Cano}, if read as a formula for the raw $rA$ coefficient, is reciprocal to the physical Regge--Wheeler normalization in \cite{MartelPoisson}. A nonconstant radial rescaling $X\mapsto c(x)X$ must conjugate $L_-$ to $cL_-c^{-1}$ and rescale its right-hand side; it cannot leave the same Schr\"odinger operator. The benchmark \eqref{eq:insertion} uses the master equation calibration checked in \cite{P27}, not a direct identification of the literal raw-component prefactor. Equations \eqref{eq:source-reduction}--\eqref{eq:intrinsic} state the physical calibration independently of that notation. The proof is not a separate rederivation of all covariant Weyl-Hessian coefficients.
+
+\section{An exterior-independent interior defect measurement}\label{sec:filter}
+
+Suppose the coefficients of the linearized retarded solution are $h=h_0+\tau h_1+O(\tau^2)$ in the fixed shell. The exterior is allowed to differ between experiments, to be time dependent, or to mix harmonics and parities, provided each candidate has a well-defined coefficientwise solution of the specified interior equations. Only the measurement window $O\Subset\mathbb R_t\times(a,b)$, with the corresponding full sphere for the angular projections, must be free of drive and of any uncontrolled \emph{interior} forcing. Then
+\[
+ E_0h_0=0,\qquad E_0h_1=-\eta E_{\rm odd}h_0\qquad\text{on }O.
+\]
+The antipodal action on the polar and axial components in the chosen irrep has eigenvalues $(-1)^\ell$ and $(-1)^{\ell+1}$. The odd operator anticommutes with this action and commutes with rotations on the interior seed. Its axial diagonal block is thus zero as a local operator. There need not be a global parity decomposition of the unknown boundary condition; only the interior projection is used. In particular a returned tree axial wave does not enter the first-order \emph{axial} insertion. Equations \eqref{eq:source-reduction}--\eqref{eq:intrinsic} give
+\begin{equation}\label{eq:master-orders}
+ L_-X_0=0,\qquad L_-X_1=\eta\mathcal B Z_0,
+ \quad Z_i=\mathcal M_+h_i,\quad X_i=\mathcal M_-h_i.
+\end{equation}
+Here any order-one axial wing of an exterior return satisfies the homogeneous equation locally except for the known polar forcing. That homogeneous contribution is exactly what the detector removes.
+
+\begin{samepage}
+\begin{theorem}[Matched interior histories]\label{thm:filter}
+For any real $\varphi\in C_c^\infty(O)$, define the following two linear detectors on the actual metric response, with the known density $\dd t\,\dd x$ after the angular projection:
+\begin{align}
+ \mathcal A_\varphi(\tau)&=\int (L_-^*\varphi)\,\mathcal M_- h(\tau),&
+ \mathcal D_\varphi(\tau)&=\int (\mathcal B^*\varphi)\,\mathcal M_+ h(\tau).
+ \label{eq:detectors}
+\end{align}
+Then $\mathcal A_\varphi(0)=0$ and
+\begin{equation}\label{eq:readout}
+ [\tau]\mathcal A_\varphi=\eta\,\mathcal D_\varphi(0).
+\end{equation}
+Equality of both measured histories forces equality of the coupling if $\mathcal D_\varphi(0)\ne0$, regardless of the exterior's effects on either separate history. Both of the compared profiles are compact physical Ward sources and can be represented by finite types of marked area histories in a common metric chart.
+\end{theorem}
+\end{samepage}
+
+\begin{proof}
+Integrating \eqref{eq:master-orders} against $\varphi$ gives \eqref{eq:readout} with no cut term because $\varphi$ is compact interior. In particular the returned polar tree history is measured in $\mathcal D_\varphi(0)$ rather than assumed unmodified. The two differential adjoints of the invariant master readouts produce compact tensor sources and their gauge pairing with $\Lie_\xi\Sch$ vanishes identically. Composing a profile with a finite differential operator does not enlarge its support. Angular smearing uses a full real tensor harmonic on the compact spheres. It is not a pointwise angular detector.
+
+A marked diffeomorphism-invariant realization is as follows. Take a past marked spacelike shell and its finite normal geodesic development, prior to caustics in a fixed neighborhood of the experiment, with a fixed reference relabeling to the Schwarzschild chart. Transport the shell marks under coordinate changes and evaluate the original metric on this embedding. Its linearization differs from $h$ by a Lie derivative, killed by the Ward source or master functional. There is no additional differentiated drive or detector on the past shell. In regular subcharts the pointwise differential inverse of ten marked spacelike area types \cite{P46} realizes these same metric readouts with compact profiles by adjunction. A finite angular chart decomposition suffices if the full sphere is used. We use common physical marks rather than claiming that Schwarzschild itself supplies four independent intrinsic local curvature coordinates.
+\end{proof}
+
+Interpreted as a controlled small-coupling expansion, \eqref{eq:readout} states $\mathcal A_\varphi/\mathcal D_\varphi=\tau\eta+O(\tau^2)$ for a nonzero tree denominator. The mathematical statement is coefficientwise; it does not estimate omitted higher orders of a resummed theory. If independently bounded errors are added to the two scalar readings, the usual ratio estimate is local and explicit. For a known unperturbed denominator $D\ne0$, errors $e_A,e_D$ with $|e_D|\le |D|/2$ change an exact ratio $A/D=\eta$ by at most $2(|e_A|+|\eta|\,|e_D|)/|D|$. This is not an inverse or a stability result for the exterior dynamics. The differential operators act on the prescribed smooth profiles, not as derivatives of noisy point samples.
+
+\section{The causal return threshold and a compact nonzero drive}\label{sec:shield}
+
+Let $S$ be the compact support of the differentiated drive, $R$ the detector support, and $\Gamma$ the retained/exterior interface. Assume a causal response linearized at a fixed preparation, zero-past differentiated data and no other port driven directly by the selected experiment. If the exterior can carry influences from $p\in\Gamma$ to $q\in\Gamma$, record the allowed causal support relation for this process. A dependence of the response on the exterior requires a broken route
+\[
+ S\ \longrightarrow_{\rm bulk}\ p\in\Gamma\
+   \longrightarrow_{\rm ext}\ q\in\Gamma\
+   \longrightarrow_{\rm bulk}\ R .
+\]
+If a supplied relation describes primitive rather than completed first-to-last dependencies, include concatenations of its legs and intervening bulk legs. There is no requirement that the exterior force be Markovian, instantaneous, parity preserving or stationary.
+
+For Schwarzschild a bulk causal curve obeys $|\dd x/\dd t|\le1$; angular travel only increases optical time. In particular the following bounds hold for a detector at $x$:
+\begin{align}
+ T_{\rm same}(x;S)&=\inf_{(s,y)\in S}\min_{w=a,b}\{s+|y-w|+|x-w|\},\label{eq:delay1}\\
+ T_{\rm time}(x;S)&=\inf_{(s,y)\in S}\{s+\operatorname{dist}(y,\{a,b\})
+                                 +\operatorname{dist}(x,\{a,b\})\}.\label{eq:delay2}
+\end{align}
+The first applies when the two wall laws cannot directly communicate, as for disconnected exterior components in this model. The second is safe even if opposite walls may communicate with zero delay in the specified time-causal boundary model. We require strict inequality for the whole detector support, not merely the center of the pulse and not just one leg of the route. If the exact wall transport support is known, it can improve either bound.
+
+\begin{lemma}[Coefficientwise shielding]\label{lem:shield}
+Before the allowed broken route, the compact retarded response at tree and first order is independent of the exterior. If the formal higher-order insertions and differentiations of the admissible boundary response remain local in the interior and retarded at the walls, the same assertion holds coefficientwise at each finite order.
+\end{lemma}
+
+\begin{proof}
+The initial changes are zero, so the first differing boundary trace can only react to a source-driven first impact on the interface. Interior domain-of-dependence uniqueness then confines its incoming response to the indicated concatenated routes. For a one-dimensional fixed harmonic, the tree master equation is a wave operator with a smooth potential and unit radial speed, so the same support reasoning applies directly. The coupled metric equations in an admissible wave gauge have the ordinary Einstein principal cone. At first order the interior difference of two completions solves a tree wave equation forced by a finite local differential operator applied to their tree difference, plus boundary differences. Derivatives of distributions do not enlarge support and further tree causal propagation respects the same transitivity. This proves the asserted coefficientwise extension by induction. This argument does not give the causal cone of a finite-coupling, resummed higher-derivative evolution.
+\end{proof}
+
+The same-wall bound is sharp in the stated broad parity-mixing channel class. At one wall, in common tree energy units, impose Dirichlet on $(Z+X)/\sqrt2$ and Neumann on $(Z-X)/\sqrt2$. The boundary flux vanishes separately in both channels. In the original basis the principal reflection matrix is the conjugate of $\operatorname{diag}(-1,1)$ by the $45$ degree rotation. Its off-diagonal entry has unit magnitude and reflects a polar front axially at the radial return time, already at $\eta=0$. The smooth matrix potential contributes to lower orders at the front by Duhamel's formula. This example concerns a lossless abstract wall law; it does not assert that a generally covariant, parity-preserving exterior metric can implement this particular mixing. An instantaneous inter-wall routing apparatus likewise realizes the geometric timing relevant to \eqref{eq:delay2} if such a relation is admitted, but is not a local exterior in the given metric.
+
+\begin{theorem}[A nonzero compact experiment independent of the exterior]\label{thm:early}
+Given a strictly interior tortoise radius, there exist a fixed smooth compact conserved polar metric drive and a compact later axial detector of the form \eqref{eq:detectors} with known $\mathcal D_\varphi(0)>0$, supported strictly before any allowed return to the detector. Their first-order normalized retarded response determines $\eta$ for every admitted causal exterior. For action-compatible completions the same holds for their physical Peierls pairing.
+\end{theorem}
+
+\begin{proof}
+Take the real quadrupole and choose a compact radial velocity $p(x)$ about an interior point $x_0$, with $p(x_0)=p'(x_0)=0$, $p''(x_0)=1$. Let the homogeneous Zerilli solution have $Z(0)=0$ and $\dot Z(0)=p$. Then the exact tree equation gives $\partial_t^3 Z(0)=p''-V_+p$, so at the central event
+\[
+ \mathcal B Z(0,x_0)=U_3(r(x_0))\ne0 .
+\]
+This computation never substitutes a pointwise value of the axial field for its forcing. Take a compact radial support radius $d$ with $d<\min(x_0-a,b-x_0)/20$. The vacuum polar metric $h_+=\mathcal R_+Z$ has finite radial support on the finite trial slab since its reconstruction is differential. Switch it on from zero to one with a smooth $\chi$ whose derivatives are supported in $(-2d,-d)$ and use the actual physical drive
+\begin{equation}\label{eq:source}
+ j=E_0(\chi h_+)=[E_0,\chi]h_+ .
+\end{equation}
+It is smooth, Ward by the linearized Noether identity, and compact: it has radial support within $3d$ of $x_0$ in the switch slab, and is defined by extending the displayed commutator source by zero. No later switch is imposed on the field. Compatible harmonic gauge of its retarded representative is obtained by solving the ghost wave equation with retarded support, and its physical tree master in the later patch is $Z$. Alternatively apply metric uniqueness and the conserved-source gauge identity there. The advanced response from this drive has zero support in the later patch. This preparation requires no independent assertion that arbitrary compact metric components satisfy the Einstein constraints.
+
+Choose a nonnegative smooth cutoff $\chi_o$ positive near $(0,x_0)$ and supported within $|t|,|x-x_0|<d/2$ where the forcing is nonzero. Choose the fixed detector profile $\varphi=\chi_o\mathcal B Z$. Equation \eqref{eq:detectors} then has
+\[
+ \mathcal D_\varphi(0)=\int\chi_o|\mathcal B Z|^2\dd t\,\dd x>0 .
+\]
+The drive and detector are separated in time. Their largest time difference is less than $5d/2$, while even the independent-wall sum of their minimum radial wall distances exceeds $2\min(x_0-a,b-x_0)-7d/2>5d/2$. Thus Lemma~\ref{lem:shield} applies in the strong comparison class of \eqref{eq:delay2}. Formula \eqref{eq:readout} gives the strictly normalized coefficient. Any axial contribution generated by the order-one insertion on the switched source itself, before reaching the vacuum detector, obeys a homogeneous tree equation there and is killed by $L_-^*\varphi$. The strict time separation also excludes a source--detector contact term. In an action-compatible causal problem the retarded coefficient equals this compact Peierls coefficient, since the detector is later and the advanced inverse does not contribute \cite{P27,Khavkine}. A general dissipative boundary need not carry its own Peierls bracket and is compared only by retarded response.
+\end{proof}
+
+\section{Field variables and the two-collar direct front}\label{sec:front}
+
+A perturbative change of variables on solutions can shift the apparent forcing while leaving the physical measurement invariant. For example $X'=X+\tau\eta A Z$ with finite local $A$ changes the first-order insertion in the new axial equation by $L_- A$. But the same original metric detector is now
+\[
+ \int L_-^*\varphi\,X'-\tau\eta\int L_-^*\varphi\, A Z .
+\]
+Its additional term cancels that change, with no boundary term by compactness. In the full variational system, if $T=1+\tau D$ is the finite-jet derivative from the auxiliary chart to the physical metric, the on-shell Hessian changes as $P\mapsto T^*PT$ through this order, and the measured metric sources/readouts as $j,b\mapsto T^*j,T^*b$. The retarded inverse is $T^{-1}G^{\rm ret}(T^*)^{-1}$ with the correspondingly transformed boundary conditions. In particular fixing bare auxiliary traces instead of the physical probe is a different experiment. This is also why the physical statement does not put an artificial field-redefinition ambiguity into the coupling estimate.
+
+For comparison with the finite-collar invariant of \cite{P27}, consider a direct outgoing characteristic front before any exterior return. In $u=t-x$, $v=t+x$, the two tree operators start with $-4\partial_u\partial_v$. The leading polar conormal component along $u=u_0$ has coefficient $p_0$ in front of $\delta(u-u_0)$, constant in $v$ by the principal transport. The part of the order-one axial front forced by the polar wave has leading $A(v)\delta''(u-u_0)$. Matching its $\delta'''$ equation using \eqref{eq:insertion} gives
+\begin{equation}\label{eq:front}
+ -4\partial_v A=\eta p_0 U_3,
+ \qquad
+ \frac{A(v_2)-A(v_1)}{p_0}=-\frac\eta 2\int_{x_1}^{x_2}U_3(x)\dd x
+       =18\eta M(r_1^{-4}-r_2^{-4}) .
+\end{equation}
+The remaining insertion terms have lower conormal order, as do the smooth potential times this front amplitude. A homogeneous axial contribution of the same leading order adds a constant between the collars and cancels in the difference. Independent stronger singular axial input should be excluded or separately calibrated. This calculation can equivalently be read as the principal off-diagonal direct symbol and uses the same calibrated original metric at both collars. It does not identify the collar integral with any one smooth gate, with an infinite-frequency physical pulse, or with an asymptotic scattering coefficient. The compact protocol of Theorem~\ref{thm:early} requires no geometric-optics limit.
+
+\section{An exact ambiguity of boundary-only measurements}\label{sec:port}
+
+Removing all internal measurements changes the inverse problem. For a precise counterexample suppose one drives only a prescribed interface history $q$ and observes its total force $j$ of the form
+\begin{equation}\label{eq:admittance}
+ j=(K_\eta+B)q .
+\end{equation}
+Here $K_\eta$ is the candidate retained causal Dirichlet-to-Neumann map and $B$ is an otherwise unconstrained causal exterior admittance, with both force signs fixed as in this equation. This is a one-port model; individual forces on the two sides are not measured.
+
+\begin{proposition}\label{prop:port}
+For any two admitted retained maps $K_0,K_1$, if the exterior class contains both $K_1+B_*$ and $K_0+B_*$ for some common causal $B_*$, the boundary-only data do not identify which retained model is present, even with all drives.
+\end{proposition}
+\begin{proof}
+Use $B_0=K_1+B_*$ in the first model and $B_1=K_0+B_*$ in the second. Both observed operators are exactly $K_0+K_1+B_*$. In a passive subclass the same construction is a parallel realization only if the constituent maps themselves have admitted passive realizations; the proposition does not assume positivity or passivity of an arbitrary finite-coupling higher-derivative EFT boundary map.
+\end{proof}
+
+The ambiguity is stronger than matching one scattering coefficient or an isolated echo. It does not apply to a specified local exterior family that forbids these operators, to a measurement of separately calibrated forces, or to the internal filtered observations. Unknown additional local EFT insertions could also confound \eqref{eq:readout}; for example a parity-even term acts on a nonzero axial tree field and would require separate calibration after a mixed return. Other failures are a vanishing polar forcing, unmatched detector gains or orientation, or a boundary driver with direct prior access to the stimulus. These are explicit changes to the inverse problem, not effects hidden in the proof.
+
+\section{Conclusion}
+
+The internal axial defect and the internal polar forcing distinguish a local parity-odd operator from homogeneous radiation returned by an unknown environment. Causal shielding is needed to design a uniformly nonzero experiment without knowing that environment, not for the local equation identity after a return. The comparison is through first order on a fixed Einstein branch, for fixed physical metric source and detector calibrations. No inference about finite higher-derivative hyperbolicity, exact simultaneous compact and band-limited drives, nonlinear quantum dynamics or an ultraviolet causal theory is made.
+
+\begin{thebibliography}{9}
+\bibitem{P27} \emph{Parity-odd Weyl-cubic gravity with fixed physical multipliers: Canonical reduction and a finite-collar invariant}, manuscript 27B, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/27b-weyl-cubic-finite-collar}{archived source}.
+\bibitem{P33} \emph{Determining an evolving Lorentzian geometry with uniform mass control}, manuscript 33B, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/33b-active-evolving-lorentzian-geometry}{archived source}.
+\bibitem{P44} \emph{The causal memory of gravitational radiation from compact area measurements}, manuscript 44+47, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/44-47-gravitational-radiation-memory}{archived source}.
+\bibitem{P46} \emph{Common Einstein cones and complete relational area probes for multifield matter}, manuscript 46+47, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/46-47-common-cones-and-area-probes}{archived source}.
+\bibitem{Cano} P. A. Cano, K. Fransen, T. Hertog and S. Maenaut, \emph{Gravitational ringing of rotating black holes in higher-derivative gravity}, Phys. Rev. D \textbf{105}, 024064 (2022), \href{https://arxiv.org/abs/2110.11378}{arXiv:2110.11378}.
+\bibitem{MartelPoisson} K. Martel and E. Poisson, \emph{Gravitational perturbations of the Schwarzschild spacetime: A practical covariant and gauge-invariant formalism}, Phys. Rev. D \textbf{71}, 104003 (2005), \href{https://arxiv.org/abs/gr-qc/0502028}{arXiv:gr-qc/0502028}.
+\bibitem{Moncrief} V. Moncrief, \emph{Gravitational perturbations of spherically symmetric systems. I. The exterior problem}, Ann. Phys. \textbf{88}, 323--342 (1974), \href{https://doi.org/10.1016/0003-4916(74)90173-0}{doi:10.1016/0003-4916(74)90173-0}.
+\bibitem{Khavkine} I. Khavkine, \emph{Covariant phase space, constraints, gauge and the Peierls formula}, Int. J. Mod. Phys. A \textbf{29}, 1430009 (2014), \href{https://arxiv.org/abs/1402.1282}{arXiv:1402.1282}.
+\end{thebibliography}
+\end{document}

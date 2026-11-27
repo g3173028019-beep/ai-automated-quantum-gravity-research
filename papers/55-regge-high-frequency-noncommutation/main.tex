@@ -1,0 +1,685 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks,pdftitle={Regge Refinement and the Vacuum High-Frequency Limit Do Not Commute}]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\tr}{tr}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Rcal}{\mathcal R}
+\newcommand{\Ecal}{\mathcal E}
+\newcommand{\Hdual}{(H^2_0)^*}
+
+\title{Regge Refinement and the\\Vacuum High-Frequency Limit Do Not Commute}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A single family of admissible tilted Lorentzian simplex meshes gives
+different limits of the full signed weak Einstein density of
+interpolated exact vacuum plane waves. Refining the affine
+tangential-moment Regge interpolants first yields zero. Sending the
+wavelength to zero first yields the nonzero null-dust Einstein
+density of the smooth limiting Rosen metric. We track the background
+derivative dependence of the signed bulk, face and joint variations
+to prove the same alternatives on simultaneous resolved and
+underresolved diagonals. At one comparable-scale resonance of a
+rationally tilted mesh, all affine moments of the leading cosine
+quadrature vanish; the sine quadrature does not disappear. Two
+explicit exact circularly polarized waves with opposite continuum
+helicities then become indistinguishable to bounded quadratic
+broken-gradient readouts on that diagonal, and their signed weak Einstein
+functionals differ by only \(O(h)\). The results concern the
+variational residual of degree-one interpolated metrics, not the
+convergence of solutions of a discrete field equation.
+\end{abstract}
+
+\section{Two independent limits}
+
+In general, a uniform limit of exact vacuum metrics need not satisfy
+the vacuum equation. Burnett's weak-limit formulation identifies a
+quadratic derivative defect, and the work of Green and Wald gives
+explicit continuum examples and restrictions on the resulting
+effective stress \cite{Burnett,GreenWald}. More recently Huneau and
+Luk prove a massless-Vlasov description for the stated class of
+generalized-wave-coordinate limits \cite{HuneauLuk}. None of those
+continuum statements compares a wave family with a particular
+signed Lorentzian Regge interpolation at finite mesh size.
+Conversely a fixed-background Regge consistency estimate may have
+a constant that grows with the derivative norms of the metric.
+
+We make the comparison on a single common family of meshes. In a
+bounded coordinate domain \(\Omega\) in four dimensions, define
+the smooth Einstein-density functional, for covariant
+symmetric test tensors, by
+\begin{equation}
+ \Ecal(g)(\sigma)=\int_\Omega G(g)^{ab}\sigma_{ab}
+                            \sqrt{|\det g|}\,\dd^4x .
+ \label{eq:smooth}
+\end{equation}
+The indices on \(G=\Ric-\tfrac12 Rg\) are raised using \(g\).
+The norm \(H^{-2}\) below means the dual of
+\(H^2_0(\Omega;\operatorname{Sym}^2)\) for a fixed auxiliary Euclidean
+coordinate norm, not a Lorentzian spacetime Sobolev norm.
+
+We use the signed real Lorentzian action derivative of
+\cite{SignedRegge}, abbreviated \(\Rcal_h(m)\), with the same
+curvature, reference-subtraction and face orientation conventions.
+More explicitly, on an admissible piecewise smooth Regge metric \(m\),
+\begin{align}
+ \Rcal_h(m)(\sigma)
+ ={}&\sum_K\int_K G(m)^{ab}\sigma_{ab}\,\dd\mu_m \notag\\
+ &-\sum_F \epsilon_F\int_F
+      \langle[K_F]-[H_F]m_F,\sigma_F\rangle_{m_F}\,\dd\mu_F
+   -\sum_J\int_J k_J\tr_{m_J}(\sigma_J)\,\dd\mu_J .
+ \label{eq:regge}
+\end{align}
+Here \(F,J\) denote interior faces and hinges, \(\epsilon_F\)
+is the squared length of the unit cooriented normal, \(K_F,H_F\)
+are the second fundamental form and its trace, and brackets are jumps
+in that coorientation. The real angle deficit \(k_J\) is on the
+regular branch continued from the smooth zero-deficit fan; its
+turning reference has already been subtracted. Face and hinge
+test contractions use the induced forms, and all the measures
+are the actual absolute induced measures. For smooth \(m\) the
+interior correction terms vanish. The convention for real
+non-null joints and angle branches is consistent with
+\cite{Hayward,Sorkin,Asante}.
+
+On each simplex let \(I_h\) be the degree-one tangential-moment
+interpolant of \cite{SignedRegge}, specified by degree-zero and
+degree-one edge moments and the constant tangential tensor moments
+on each triangular face. In particular \(I_h\) is not the
+edge-length-only interpolation in four dimensions. A useful
+Riemannian precursor for variational Einstein tensors is
+\cite{GawlikNeunteufel}; the present comparison uses the signed
+Lorentzian form of \eqref{eq:regge}.
+
+\begin{theorem}[Two noncommuting limits]\label{thm:limits}
+There exist a smooth exact vacuum family \(g_\varepsilon\) converging
+uniformly to a smooth metric \(g_0\), and a single regular, non-null,
+shape-regular quasi-uniform family of tilted affine four-simplex
+meshes admissible for all the comparisons, such that in \(H^{-2}\)
+\begin{equation}
+ \lim_{\varepsilon\downarrow0}\lim_{h\downarrow0}
+       \Rcal_h(I_hg_\varepsilon)=0,\qquad
+ \lim_{h\downarrow0}\lim_{\varepsilon\downarrow0}
+       \Rcal_h(I_hg_\varepsilon)=\Ecal(g_0)\ne0 .
+ \label{eq:noncommute}
+\end{equation}
+There is a common constant \(C\) and a fixed
+\(\varepsilon_0>0\) for which
+\begin{align}
+ \|\Rcal_h(I_hg_\varepsilon)\|_{H^{-2}}
+   &\le C(h/\varepsilon)^2 ,
+               && 0<h\le\varepsilon\le\varepsilon_0,\label{eq:res}\\
+ \|\Rcal_h(I_hg_\varepsilon)-\Ecal(g_0)\|_{H^{-2}}
+   &\le C\bigl[h^2+(\varepsilon/h)^2\bigr].
+               &&\label{eq:under}
+\end{align}
+In particular the corresponding simultaneous limits are zero
+for \(h=o(\varepsilon)\) and nonzero for \(\varepsilon=o(h)\).
+The nonzero density can have any sufficiently small smooth
+square envelope along the chosen Rosen null coordinate.
+\end{theorem}
+
+Sections \ref{sec:waves}--\ref{sec:bounds} prove this theorem.
+Sections \ref{sec:alias} and \ref{sec:helicity} then analyze a single
+fixed comparable-scale resonance, without asserting a universal
+intermediate scaling law.
+
+\section{Exact vacuum waves and their limit}\label{sec:waves}
+
+On a bounded Rosen chart let
+\begin{equation}
+ g_\varepsilon=-2\,\dd u\,\dd v
+     +a_\varepsilon(u)^2
+       \left(e^{2w_\varepsilon(u)}\dd x^2
+                      +e^{-2w_\varepsilon(u)}\dd y^2\right),\qquad
+ w_\varepsilon(u)=\varepsilon A(u)
+                           \sin(\phi(u)/\varepsilon).
+ \label{eq:wave}
+\end{equation}
+The smooth phase \(\phi\) has \(\phi'>0\) bounded away from zero
+on a fixed larger chart. Scale a fixed smooth nonzero envelope
+\(A\) small enough that its amplitude and derivatives are small
+on this chart. Put \(B=A\phi'\). At a fixed \(u_*\) impose
+\(a_\varepsilon=1,\ a_\varepsilon'=0\) and solve
+\begin{equation}
+        a_\varepsilon''+(w_\varepsilon')^2a_\varepsilon=0.
+ \label{eq:vac}
+\end{equation}
+The ODE gives uniform positivity of \(a_\varepsilon\) on the
+bounded chart for sufficiently small amplitude. For transverse
+factors \(p=a_\varepsilon e^{w_\varepsilon}\) and
+\(q=a_\varepsilon e^{-w_\varepsilon}\), the Rosen Ricci formula
+has only possible nonzero component
+\[
+       \Ric_{uu}=-p''/p-q''/q
+                   =-2\big(a_\varepsilon''/a_\varepsilon
+                                    +(w_\varepsilon')^2\big).
+\]
+Thus \eqref{eq:wave} is exactly vacuum, not a truncated perturbation.
+
+The identity
+\[
+ (w_\varepsilon')^2
+    =\tfrac12 B^2(1+\cos(2\phi/\varepsilon))+O(\varepsilon)
+\]
+gives a uniform bound on its coefficient and an \(O(\varepsilon)\)
+primitive for its difference from \(B^2/2\): integrate the cosine
+once by parts using \(\phi'\ne0\). Let \(a_0\) solve
+\(a_0''+\frac12B^2a_0=0\) with the same initial data.
+The difference equation in Volterra form has an
+\(O(\varepsilon)\) integrated forcing, also when its first
+derivative is taken. Indeed apply the same integration by
+parts with the uniformly \(C^1\)-bounded factor \(a_\varepsilon\)
+from \eqref{eq:vac}. Gronwall yields
+\(\|a_\varepsilon-a_0\|_{C^1}\lesssim\varepsilon\). Consequently
+\begin{align}
+ g_0&=-2\,\dd u\,\dd v+a_0^2(\dd x^2+\dd y^2),&
+ \|g_\varepsilon-g_0\|_\infty&\lesssim\varepsilon,\notag\\
+ \|Dg_\varepsilon\|_\infty&\lesssim1,&
+ \|D^2 g_\varepsilon\|_\infty&\lesssim\varepsilon^{-1}.
+ \label{eq:jets}
+\end{align}
+The metric \(g_0\) has \(\Ric_{uu}=B^2\) and scalar curvature zero.
+With the raised-index convention in \eqref{eq:smooth}, its
+nonzero density is
+\begin{equation}
+  \Ecal(g_0)(\sigma)=\int_\Omega
+            B(u)^2a_0(u)^2\,\sigma_{vv}\,\dd u\,\dd v\,\dd x\,\dd y.
+ \label{eq:dust}
+\end{equation}
+Thus a compactly supported nonnegative \(\sigma_{vv}\) tests the
+defect strictly on any open set where \(B\ne0\). Choosing \(\phi=u\)
+and prescribing small \(A=B\) gives the stated square envelope.
+For \(A=\kappa_0>0\), \(\phi=u\) and \(u_*=0\), one has
+\(a_0=\cos(\kappa_0 u/\sqrt2)\).
+
+The normalization can also be checked from the rapidly varying
+shear. In the fixed limiting transverse frame
+\[
+ \partial_u(g_\varepsilon-g_0)_{AB}
+       =2a_0^2 B\cos(\phi/\varepsilon)
+                   \operatorname{diag}(1,-1)_{AB}+O(\varepsilon).
+\]
+The derivative converges weakly to zero, whereas one quarter of
+its transverse squared norm (using \(g_0\) to contract the screen)
+converges weakly to \(B^2\). This computes the radiative defect
+directly on the explicit family. It uses no generalized-wave
+coordinate condition for the interpolants. The effective physical
+stress is \(B^2\dd u\otimes\dd u/(8\pi G_N)\) if the Einstein
+normalization is restored.
+
+\section{A common non-null tilted mesh}\label{sec:mesh}
+
+Use a reference Minkowski chart related rationally to the null
+chart by \(u=t+z,\ v=(t-z)/2\). A finite affine subdivision of a
+periodic box template has finitely many reference face and hinge
+tangent subspaces. Choose a fixed arbitrarily small generic linear
+tilt \(L\). Vanishing of any normalized face or hinge tangent
+Gram determinant is a proper polynomial condition in \(L\):
+one can send that fixed subspace to a nondegenerate plane by
+a linear isomorphism. We also exclude the finitely many linear
+conditions \(\dd u(L e)=0\) on template edge directions, needed
+only for the resonance argument below. A rational tilt exists
+outside this finite union. Some template faces and hinges can
+be chosen strictly spacelike and others strictly timelike before
+tilting; a small tilt preserves these strict signs. For example,
+one may use a rectangular triangulation with the temporal axis
+shorter than the spatial axes. A fixed tilted parallelepiped or
+union of boxes is exactly filled by uniform subdivisions of the
+same template. We call its lattice parameter \(h\), uniformly
+equivalent to the maximum simplex diameter, and restrict tests
+to the fixed bounded interior chart.
+
+All normalized reference Gram margins and all incidence and
+shape constants are uniform in \(h\). For the moment scheme
+\(I_h\), reference-simplex unisolvence and affine scaling give
+local \(L^\infty\) stability, reproduction of affine tensors,
+and the affine inverse estimate
+\begin{equation}
+ \|I_hs\|_{\infty,K}\le C_I\|s\|_{\infty,K},\qquad
+ \|D I_hs\|_{\infty,K}\le C_Ih^{-1}\|s\|_{\infty,K}.
+ \label{eq:interp}
+\end{equation}
+For precision, edge restrictions of an affine tensor are fixed
+by its two moments. On an affine four-simplex the ten
+\(d\lambda_i\odot d\lambda_j\), \(i<j\), form a tensor basis
+adapted to these restrictions. Once edge moments vanish, the
+coefficient of each basis tensor is a linear combination of
+barycentric coordinates of the other vertices. Each triangular
+tangential test fixes its corresponding remaining coefficients
+by integration of a single complementary barycentric coordinate.
+This gives local unisolvence and identical tangential face
+restrictions on adjoining cells with shared moments
+\cite{SignedRegge}. No positive-definiteness of the input tensor
+is needed for this linear calculation.
+
+The exact metrics above, their limits and the later examples
+can all be made sufficiently close to the same constant
+\(\eta\). By \eqref{eq:interp} and \(I_h\eta=\eta\),
+their interpolants remain uniformly close to \(\eta\) too.
+Choose the amplitudes and the chart so that a common admissible
+\(C^0\) ball contains both original metrics and all piecewise
+straight comparison paths. Every point on such a path has
+a common strict timelike covector, nondegenerate tangential
+forms and bounded inverse metric. This step requires no
+uniform higher-derivative assumption.
+
+At a reference spacelike hinge the Lorentzian normal plane
+has a genuine cyclic fan with precisely four null rays and
+no null bounding rays. A bounding ray's signed squared
+length is a Schur complement of the hinge block in the
+induced face form. It keeps its causal type within the
+chosen ball; that type is the same on both sides of a
+shared boundary by tangential continuity. The orientation
+and the light-ray count in each sector cannot change without
+a degenerate sector or a null bounding ray. Thus all paths
+lie on the real reference branch of \eqref{eq:regge}, with
+uniform margins for its angle coefficients and their metric
+derivatives up to any fixed order needed below. These statements
+are local to this admissible template, not a claim about
+arbitrary causality assignments on Lorentzian Regge meshes.
+
+\section{A two-scale bound for the full weak residual}\label{sec:bounds}
+
+Let \(g\) be smooth and \(m=g+e\) be tangentially continuous and
+affine on the common mesh, with the straight comparison path
+in the fixed admissible ball. Let \(A_j=\|D^j e\|_{\infty,h}\),
+\(j=0,1,2\), in broken norms with one-sided traces, and
+\(B_2=\|D^2g\|_\infty\); \(\|Dg\|_\infty\) is uniformly bounded
+for the backgrounds below. The estimate useful here is
+\begin{align}
+ \|\Rcal_h(g+e)-\Ecal(g)\|_{H^{-2}}\le C\{&
+ A_0(1+B_2)+(1+B_2)A_0^2+A_0A_1+A_1^2+A_0A_2
+ \notag\\[-2pt]
+ &+h^{-1}(A_0^2+A_0A_1)+h^{-2}A_0^2\},
+ \label{eq:uniform}
+\end{align}
+with \(C\) depending on the common margins, shape family,
+domain and first background jet bound only.
+
+To obtain the linear term, commute mixed variations of the
+signed action and vary the test on the smooth metric side,
+as in \cite{SignedRegge}. At a smooth metric the face and hinge
+terms cancel, so for a compact smooth test
+\begin{equation}
+ D\Rcal_h(g)[e](\sigma)
+   =\int_\Omega e_{ab}\,
+        D\!\left(\sqrt{|\det g|}\,G(g)^{ab}\right)[\sigma]\,\dd^4x .
+ \label{eq:hess}
+\end{equation}
+External boundary terms may be included, or \(e\) cut off away
+from the support of \(\sigma\). This identity transfers
+the complete first-order sum, not its separate singular
+pieces. The smooth differential operator on \(\sigma\) is
+of order at most two. Its coefficients use only bounded
+functions of \(g,g^{-1}\), first jets up to degree two
+and the background second jet linearly. Thus the linear
+bound is \(CA_0(1+B_2)\|\sigma\|_{H^2}\).
+
+For the nonlinear remainder, each bulk density is linear
+in the second metric jet and quadratic in the first metric
+jet, with uniformly smooth coefficients in the metric values.
+Taylor expansion after removing the linear term gives
+\[
+ C\big((1+B_2)A_0^2+A_0A_1+A_1^2+A_0A_2\big)|\sigma|.
+\]
+In particular no term \(A_2^2\) can arise. On an affine face
+the traction, including the density and test contractions, is
+linear in the first one-sided metric jets; its remainder is
+\(C(A_0^2+A_0A_1)|\sigma_F|\) per unit auxiliary face area.
+The hinge bracket depends only on metric values within its
+fixed branch, giving \(CA_0^2|\sigma_J|\) per unit auxiliary
+hinge area. In these expressions the actual signs, densities
+and inverse contractions are in the smooth coefficients.
+The scaled trace bounds on the auxiliary affine simplexes
+give
+\[
+ \sum_F\|\sigma\|_{L^2(F)}^2\lesssim h^{-1}\|\sigma\|_{H^2}^2,
+ \qquad
+ \sum_J\|\sigma\|_{L^2(J)}^2\lesssim h^{-2}\|\sigma\|_{H^2}^2 .
+\]
+Indeed the codimension-two trace is controlled by \(H^2\) on
+the fixed reference simplex and then scaled, and each cell
+contributes boundedly many strata. Total face and hinge areas
+are \(O(h^{-1})\) and \(O(h^{-2})\). Cauchy--Schwarz gives the
+corresponding sum factors in \eqref{eq:uniform}. Combining
+with \eqref{eq:hess} proves \eqref{eq:uniform} and extends it
+to \(H^2_0\) by density.
+
+\begin{proof}[Proof of Theorem~\ref{thm:limits}]
+For the resolved comparison use \(g=g_\varepsilon\). Subtracting
+the linear Taylor polynomial on each cell in \eqref{eq:interp}
+and using \eqref{eq:jets}, we have
+\(A_0\lesssim h^2/\varepsilon\), \(A_1\lesssim h/\varepsilon\),
+\(A_2,B_2\lesssim\varepsilon^{-1}\).
+When \(h\le\varepsilon\le1\), every term of
+\eqref{eq:uniform} is \(O(h^2/\varepsilon^2)\), including
+\(B_2A_0^2=O(h^4/\varepsilon^3)\).
+Since \(\Ecal(g_\varepsilon)=0\), this is \eqref{eq:res}.
+
+For the underresolved comparison use \(g=g_0\) and
+\[
+       e=(I_hg_0-g_0)+I_h(g_\varepsilon-g_0).
+\]
+By \eqref{eq:interp} and \eqref{eq:jets},
+\(A_0\lesssim h^2+\varepsilon\), \(A_1\lesssim h+\varepsilon/h\),
+and \(A_2\lesssim1\) because \(I_hg_\varepsilon\) is exactly
+affine. Here \(B_2\) is fixed. Equation \eqref{eq:uniform}
+gives \(C(h^2+\varepsilon+(\varepsilon/h)^2)\), implying
+\eqref{eq:under} by \(2\varepsilon\le h^2+(\varepsilon/h)^2\).
+This avoids inserting the large second jet of \(g_\varepsilon\)
+in the underresolved comparison.
+
+At fixed \(h\), finite-dimensional interpolation and
+\(g_\varepsilon\to g_0\) uniformly imply convergence of all
+broken affine coefficients and first derivatives.
+On the fixed admissible branch, the finitely many bulk,
+face and hinge coefficients of \eqref{eq:regge} then converge
+in the \(H^{-2}\) test norm. The inner limit exists and equals
+\(\Rcal_h(I_hg_0)\). Refining that interpolant gives
+\(\Ecal(g_0)\) by \eqref{eq:uniform}. At fixed \(\varepsilon\),
+\eqref{eq:res} gives zero as \(h\downarrow0\). Thus the two
+iterated assertions follow as well as both simultaneous regimes.
+\end{proof}
+
+\section{A comparable-scale quadrature resonance}\label{sec:alias}
+
+The rational tilt and its fixed origin permit exact cancellation
+of the leading interpolated cosine, not just a small-wavelength
+estimate. Write
+\(\dd u\,L(\mathbb Z^4)\subset q\mathbb Z\) for a fixed positive
+lattice spacing \(q\). On the common tilted family, take
+\begin{equation}
+                        \varepsilon=\frac{q h}{2\pi}.
+ \label{eq:critical}
+\end{equation}
+Then \(u/\varepsilon\) is an integer multiple of \(2\pi\)
+at every mesh vertex. In particular the initial phase is fixed
+at the mesh origin, rather than chosen independently from cell
+to cell. By the tilt choice, endpoints of every template edge
+have distinct \(u\); the same is true of all pairs of vertices
+on a triangle.
+
+Use the constant-envelope family with either
+\(w_\varepsilon=\kappa_0\varepsilon\cos(u/\varepsilon)\) or
+\(w_\varepsilon=\kappa_0\varepsilon\sin(u/\varepsilon)\), and
+the initial data of \eqref{eq:vac} at zero. Both limits have
+\(a_0=\cos(\kappa_0 u/\sqrt2)\). In fact
+\(a_\varepsilon-a_0=O(\varepsilon^2)\) in \(C^0\).
+The constant-oscillator formula has the kernel and forcing
+\[
+    Q(u-s)=\frac{\sin(\kappa_0(u-s)/\sqrt2)}{\kappa_0/\sqrt2},
+    \qquad
+    \pm(\kappa_0^2/2)\cos(2s/\varepsilon)a_\varepsilon(s).
+\]
+The first integration by parts gives zero endpoints since
+\(\sin(2s/\varepsilon)\) vanishes at \(s=0\) and \(Q(0)=0\)
+at the other endpoint; a second gives the asserted
+\(O(\varepsilon^2)\) using bounded \(C^2\) norms of
+\(a_\varepsilon\). This is valid on either side of \(u=0\).
+The leading cosine perturbation is therefore
+\[
+     2\kappa_0\varepsilon a_0(u)^2\cos(u/\varepsilon)S_1,
+     \qquad S_1=\dd x^2-\dd y^2 ,
+\]
+with uniform \(O(\varepsilon^2)\) error in metric values.
+
+Freeze the smooth coefficient \(a_0^2\) per simplex. Each edge
+sees a nonzero integer phase increment \(2\pi m\), so both
+\(\int_0^1\cos(2\pi m t)\dd t\) and
+\(\int_0^1t\cos(2\pi m t)\dd t\) vanish. On a reference triangle
+the constant complex moment is
+\[
+ \int_0^1\int_0^{1-s}e^{i(ps+q' t)}\,\dd t\,\dd s
+    =\frac{1}{i q'}\left[
+       e^{i q'}\int_0^1 e^{i(p-q')s}\,\dd s
+          -\int_0^1e^{ips}\,\dd s\right]=0,
+\]
+where \(p,q',p-q'\) are nonzero integer multiples of \(2\pi\).
+A constant tangential tensor contraction just multiplies this
+integral by a constant. Therefore the frozen cosine perturbation
+has zero for \emph{all} interpolation moments, not only the
+first moments of a particular component. The freezing error
+is \(O(h\varepsilon)\), and \eqref{eq:interp} gives
+\[
+ \|I_h(g_\varepsilon^{\cos}-g_0)\|_{\infty,h}=O(h^2),
+ \qquad
+ \|D_h I_h(g_\varepsilon^{\cos}-g_0)\|_{\infty,h}=O(h).
+\]
+Inserting in \eqref{eq:uniform} about \(g_0\) proves
+\(\Rcal_h(I_hg_\varepsilon^{\cos})=\Ecal(g_0)+O(h^2)\)
+in \(H^{-2}\), even though \(\varepsilon/h\) is a fixed positive
+constant. Its centered broken derivative tends strongly to zero.
+
+For the sine on the very same mesh and ratio, a repeating
+near-\(x\) edge can be kept with \(S_1(v_e,v_e)\ne0\) for
+its auxiliary unit tangent \(v_e\). A nonzero phase increment
+integer \(m_e\) gives zero mean but nonzero first moment
+\(\int_0^1 t\sin(2\pi m_e t)\dd t=-1/(2\pi m_e)\).
+On an affine edge restriction the centered first moment equals
+one twelfth of its slope in the parameter \(t\). Its directional
+gradient in the coordinates is therefore bounded away from
+zero after the leading \(\varepsilon\) amplitude is divided
+by the physical edge length comparable to \(h\); the
+\(O(h^2)\) metric errors contribute only \(O(h)\).
+A positive periodic fraction of cells contains this edge
+direction. Since their affine derivative tensor is constant,
+the \(L^2\) norm of the sine's centered broken gradient has
+positive liminf on any meshed compact interior box of
+positive volume. This last statement is about retained
+derivative signal, not a claim that the sine Einstein residual
+has a different limit.
+
+\section{A circular-polarization collision}\label{sec:helicity}
+
+Let \(S_1=\operatorname{diag}(1,-1)\) and
+\(S_2=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)\)
+on the marked transverse screen, and \(\theta=u/\varepsilon\).
+Define two transverse Rosen matrices by
+\begin{align}
+ \gamma_{\varepsilon,\pm}
+   &=a_\varepsilon^2 C_{\varepsilon,\pm},&
+ C_{\varepsilon,\pm}
+   &=\exp\!\left(
+       2\kappa_0\varepsilon(\cos\theta\,S_1\pm\sin\theta\,S_2)
+              \right),\notag\\
+ a_\varepsilon
+   &=\cos\!\left(
+       \frac{\sinh(2\kappa_0\varepsilon)}{2\varepsilon}u
+          \right).
+ \label{eq:circular}
+\end{align}
+The Lorentzian metric has the same \(-2\,\dd u\,\dd v\) block.
+For \(P_\pm=\cos\theta\,S_1\pm\sin\theta\,S_2\),
+\(P_\pm^2=I\), \(P_\pm\dot P_\pm=-\dot P_\pm P_\pm\), and
+\(\dot P_\pm^2=I\), where dots are \(\theta\)-derivatives.
+Writing \(C_{\varepsilon,\pm}=c_\varepsilon I+s_\varepsilon P_\pm\)
+with hyperbolic cosine and sine, one obtains
+\[
+       (C_{\varepsilon,\pm}^{-1}C_{\varepsilon,\pm}')^2
+               =\frac{s_\varepsilon^2}{\varepsilon^2}I .
+\]
+For \(\det C=1\) the Rosen Ricci formula is
+\(\Ric_{uu}=-2a''/a-\tr[(C^{-1}C')^2]/4\), directly from the
+transverse Christoffel contraction. This proves that both waves
+in \eqref{eq:circular} are exactly vacuum. They have the same
+limit \(\bar a=\cos(\kappa_0 u)\) and
+\(\bar G_{uu}=2\kappa_0^2\). Also
+\(a_\varepsilon-\bar a=O(\varepsilon^2)\) in \(C^1\), and the
+bounds \eqref{eq:jets} and the admissible ball still apply
+for small \(\kappa_0\).
+
+In the common normalized screen the continuum derivative
+has coefficients
+\[
+       2\kappa_0(-\sin\theta,\ \pm\cos\theta)
+       \qquad\text{in the basis }(S_1,S_2).
+\]
+At positive \(u\)-frequency this gives, up to the same
+positive weight, the Hermitian outer product of
+\((i,\pm1)\). The two matrices are orthogonal rank-one
+helicity polarizations with equal trace and opposite
+circular off-diagonal part. The negative frequency has the
+conjugate matrix. This is a comparison in the same marked
+orientation, not the assertion that a bare coordinate
+component without its frame is invariant. Vacuum examples already show why
+polarization matters even at fixed scalar trace~\cite{VacuumPolarization}.
+
+In the resolved regime the broken metric gradient of each
+interpolant differs in \(L^2\) from its signed continuum gradient
+by \(O(h/\varepsilon)\), so fixed bounded quadratic microlocal
+tests retain these distinct screen tensors. In the underresolved
+regime both gradients converge strongly to the smooth limiting
+gradient by \eqref{eq:interp} and \eqref{eq:jets}, even though
+\eqref{eq:under} retains the scalar dust.
+
+\begin{theorem}[Critical alias collision]\label{thm:circular}
+Along the particular critical diagonal \eqref{eq:critical},
+the bounded quadratic broken-gradient tests of the two centered
+interpolated metrics \eqref{eq:circular} have vanishing difference.
+This includes order-zero microlocal tests in a fixed marked
+screen. The corresponding signed Einstein functionals satisfy
+\[
+ \|\Rcal_h(I_hg_{\varepsilon,+})
+          -\Rcal_h(I_hg_{\varepsilon,-})\|_{H^{-2}}=O(h).
+\]
+This equality of leading outputs does not require assigning
+a limiting Einstein density to either critical wave separately.
+\end{theorem}
+
+\begin{proof}
+The common cosine quadrature is erased by exactly the
+same moment calculation as in Section~\ref{sec:alias}. Let
+\[
+       I_hg_{\varepsilon,\pm}=\bar g+\delta_h\pm d_h,
+ \qquad \bar g=-2\,\dd u\,\dd v+\bar a^2(\dd x^2+\dd y^2).
+\]
+Here \(\delta_h\) includes \(I_h\bar g-\bar g\). The common
+cosine error after freezing is \(O(h\varepsilon)\), and the
+even terms \(a_\varepsilon-\bar a\) and
+\(c_\varepsilon-1\) cost \(O(\varepsilon^2)\). The odd
+sine perturbation has size \(O(\varepsilon)\). Thus the
+affine estimate gives
+\begin{align*}
+ \|\delta_h\|_{\infty,h}&=O(h^2),&
+ \|D_h\delta_h\|_{\infty,h}&=O(h),&
+ D_h^2\delta_h&=-D^2\bar g=O(1),\\
+ \|d_h\|_{\infty,h}&=O(h),&
+ \|D_h d_h\|_{\infty,h}&=O(1),&
+ D_h^2 d_h&=0 .
+\end{align*}
+The two centered gradients are therefore negatives of each
+other modulo \(O(h)\) in \(L^2\). If the centering subtracts
+their corresponding weak subsequential limits instead, the
+limits themselves are opposite, and the same statement
+persists. Pairing a bounded \(L^2\) quadratic operator with
+these two gradients, Cauchy--Schwarz shows that the difference
+is \(O(h)\).
+
+For the signed Einstein terms, expand around \(\bar g\)
+through quadratic order using the same branch and polynomial
+jet structure as in \eqref{eq:uniform}. The linear contribution
+is \(O(h)\) for the difference, by the transferred smooth
+Hessian \eqref{eq:hess} evaluated on \(2d_h\). The pure
+quadratic squares of \(d_h\) cancel between \(+\) and \(-\).
+Mixed quadratic terms pairing \(d_h\) with \(\delta_h\)
+are \(O(h)\) in the bulk, \(O(h^2)\) per face area and
+\(O(h^3)\) per hinge area. In particular the bulk
+\(d_h D_h^2\delta_h\) term is still \(O(h)\), although that
+second jet is only bounded. The leading cubic remainders have
+size \(O(h)\) in the bulk (each term with two first jets
+contains an \(O(h)\) metric factor), \(O(h^2)\) per face,
+and \(O(h^3)\) per hinge. This is a Taylor estimate of the
+smooth coefficient functions, not a claim that the first
+jet error itself is small at critical scale. The same trace
+sums \(h^{-1},h^{-2}\) give the claimed \(H^{-2}\) bound.
+\end{proof}
+
+\section{What the noncommutation establishes}
+
+For the exact waves the smooth vacuum Einstein density is zero
+at every wavelength. The coarse effective stress is instead the
+Einstein density of the uniform limiting metric. The two
+limits are realized by the \emph{same} signed Lorentzian
+Regge interpolation on a uniform non-null branch. The contrast
+does not require singular causal angles or a different
+triangulation tuned separately to every smooth metric.
+The critical examples also show why scalar effective stress and
+a nominal finite resolution do not by themselves determine
+which radiative polarization data an interpolant retains:
+the actual affine moment response can annihilate one quadrature.
+
+The statements concern this degree-one metric interpolation and
+the complete weak variational Einstein tensor. They do not assert
+discrete solution existence or convergence, convergence under
+edge-length-only sampling, behavior near null hinges, a limiting
+quantum amplitude, or a universal law at every finite scale ratio
+\(h/\varepsilon\). The alias collision concerns quadratic
+readouts of the broken gradients and the weak Einstein residual;
+the raw finite-mesh coefficients need not be identical.
+
+\paragraph{Working provenance.} This manuscript was prepared with AI assistance and internally cross-checked. No external peer review is asserted.
+
+\begin{thebibliography}{9}
+\bibitem{SignedRegge}
+\emph{A signed Lorentzian Regge approximation theorem for the
+Einstein tensor}, paper 28, AI-Automated Quantum Gravity Research,
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/28-lorentzian-regge-einstein-tensor}
+{source and manuscript}.
+
+\bibitem{Burnett}
+G.~A.~Burnett, \emph{The high-frequency limit in general relativity},
+J.~Math.~Phys.~\textbf{30} (1989), 90--96,
+\href{https://doi.org/10.1063/1.528594}{doi:10.1063/1.528594}.
+
+\bibitem{GreenWald}
+S.~R.~Green and R.~M.~Wald,
+\emph{Examples of backreaction of small-scale inhomogeneities
+in cosmology}, Phys.~Rev.~D \textbf{87} (2013), 124037,
+\href{https://arxiv.org/abs/1304.2318}{arXiv:1304.2318}.
+
+\bibitem{HuneauLuk}
+C.~Huneau and J.~Luk,
+\emph{Burnett's conjecture in generalized wave coordinates},
+\href{https://arxiv.org/abs/2403.03470}{arXiv:2403.03470}.
+
+\bibitem{Hayward}
+G.~Hayward, \emph{Gravitational action for spacetimes with
+nonsmooth boundaries}, Phys.~Rev.~D \textbf{47} (1993), 3275--3280,
+\href{https://doi.org/10.1103/PhysRevD.47.3275}
+{doi:10.1103/PhysRevD.47.3275}.
+
+\bibitem{Sorkin}
+R.~D.~Sorkin, \emph{Lorentzian angles and trigonometry including
+lightlike vectors}, \href{https://arxiv.org/abs/1908.10022}
+{arXiv:1908.10022}.
+
+\bibitem{Asante}
+S.~K.~Asante, B.~Dittrich and J.~Padua-Arg\"uelles,
+\emph{Complex actions and causality violations: Applications to
+Lorentzian quantum cosmology},
+\href{https://arxiv.org/abs/2112.15387}{arXiv:2112.15387}.
+
+\bibitem{GawlikNeunteufel}
+E.~S.~Gawlik and M.~Neunteufel,
+\emph{Finite element approximation of the Einstein tensor},
+\href{https://arxiv.org/abs/2310.18802}{arXiv:2310.18802}.
+
+\bibitem{VacuumPolarization}
+\emph{Physical polarization in the high-frequency limit of vacuum
+gravity}, paper 29B, AI-Automated Quantum Gravity Research,
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/29b-high-frequency-graviton-polarization}
+{source and manuscript}.
+\end{thebibliography}
+
+\end{document}

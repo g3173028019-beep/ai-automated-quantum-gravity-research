@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 62 items: 20 original research packets, six later analytical Markdown manuscripts and thirty-six typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 71 items: 20 original research packets, six later analytical Markdown manuscripts and forty-five typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–51 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–60 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -689,3 +689,75 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** Two Chern–Simons actions, smooth joint fibre-trace marks and the stated dormant Wilson routes. The leading comparison and selected transition laws do not assign higher angular coefficients to every individual stratum. Papers 48, 49, 49B and 48+49 are retained.
 
 [Paper notes](../papers/51-singular-wrt-semiclassical-sewing/README.md) · [PDF](../papers/51-singular-wrt-semiclassical-sewing/manuscript.pdf) · [TeX](../papers/51-singular-wrt-semiclassical-sewing/main.tex) · [Verification](../papers/51-singular-wrt-semiclassical-sewing/VERIFICATION.md)
+
+## 52. Relational area commutators distinguish matter couplings on the same Einstein light cone
+
+**Result.** Identical compact relational area probes on the same metric and light cone determine the magnitude of a stress-free four-form coupling. A canonical Cauchy bridge constructs positive physical Hadamard states.
+
+**Scope.** Exact six-field Einstein–matter backgrounds and physical linearized observables; sign reflection preserves every marked area bracket. Related to 09+21 and 46+47.
+
+[Paper notes](../papers/52-relational-area-commutators/README.md) · [PDF](../papers/52-relational-area-commutators/manuscript.pdf) · [TeX](../papers/52-relational-area-commutators/main.tex) · [Verification](../papers/52-relational-area-commutators/VERIFICATION.md)
+
+## 53. Coherent sewing of a physical gravitational shear
+
+**Result.** Physical shear admits exact shared-field Weyl sewing. A compact gravitational port revives after an exact one-step reset would erase its signal, and full commuting slab conditioning leaves infinite-rank cross covariance.
+
+**Scope.** Calibrated linear gravitational sectors and specified Hadamard representations; no local tensor-factor or nonlinear gravity claim. Related to 18, 25, 44 and 47.
+
+[Paper notes](../papers/53-coherent-quantum-shear-sewing/README.md) · [PDF](../papers/53-coherent-quantum-shear-sewing/manuscript.pdf) · [TeX](../papers/53-coherent-quantum-shear-sewing/main.tex) · [Verification](../papers/53-coherent-quantum-shear-sewing/VERIFICATION.md)
+
+## 54. Semiclassical saturation of the Virasoro vacuum Whittaker ray
+
+**Result.** The normalized energy converges to the classical vacuum-orbit Mathieu threshold, with normalized stress concentration for every fixed positive scaled Whittaker parameter.
+
+**Scope.** The actual chiral Virasoro vacuum quotient, at arbitrary real large central charge; the fixed-copy trace-norm result uses integer charge. Extends 34.
+
+[Paper notes](../papers/54-virasoro-whittaker-semiclassical-limit/README.md) · [PDF](../papers/54-virasoro-whittaker-semiclassical-limit/manuscript.pdf) · [TeX](../papers/54-virasoro-whittaker-semiclassical-limit/main.tex) · [Verification](../papers/54-virasoro-whittaker-semiclassical-limit/VERIFICATION.md)
+
+## 55. Regge refinement and the vacuum high-frequency limit do not commute
+
+**Result.** Two weak Einstein limits differ on one admissible Lorentzian mesh family, and a critical alias makes opposite circular waves agree in quadratic broken-gradient readouts.
+
+**Scope.** Classical variational residuals of affine interpolated metrics, not convergence of discrete field-equation solutions. Extends 28 and complements 29B.
+
+[Paper notes](../papers/55-regge-high-frequency-noncommutation/README.md) · [PDF](../papers/55-regge-high-frequency-noncommutation/manuscript.pdf) · [TeX](../papers/55-regge-high-frequency-noncommutation/main.tex) · [Verification](../papers/55-regge-high-frequency-noncommutation/VERIFICATION.md)
+
+## 56. Distinguishing a parity-odd gravity coupling from unknown Schwarzschild boundary returns
+
+**Result.** Compact calibrated polar and axial measurements distinguish the local Weyl-cubic coefficient from a causal exterior response, with a separate port-only ambiguity.
+
+**Scope.** Schwarzschild, known local master calibration and formal first order on the Einstein branch. Extends the finite-collar benchmark in 27B.
+
+[Paper notes](../papers/56-causal-parity-odd-gravity-coupling/README.md) · [PDF](../papers/56-causal-parity-odd-gravity-coupling/manuscript.pdf) · [TeX](../papers/56-causal-parity-odd-gravity-coupling/main.tex) · [Verification](../papers/56-causal-parity-odd-gravity-coupling/VERIFICATION.md)
+
+## 57. Identical emission counts, different quantum coherence in a charged throat
+
+**Result.** Normal quantum completions with the same full marked emission law have different recovery and energy-preserving two-emission interference, including a finite scalar-bath realization.
+
+**Scope.** Paper 36's secular kernel and a specified finite weak-coupling model; the actual continuum black-hole channel remains unspecified.
+
+[Paper notes](../papers/57-throat-counts-and-quantum-coherence/README.md) · [PDF](../papers/57-throat-counts-and-quantum-coherence/manuscript.pdf) · [TeX](../papers/57-throat-counts-and-quantum-coherence/main.tex) · [Verification](../papers/57-throat-counts-and-quantum-coherence/VERIFICATION.md)
+
+## 58. Vacuum stress spectroscopy with double pulses and two-scale thresholds
+
+**Result.** Fixed-window double-pulse delay scans invert positive stress spectra and resolve timelike spin sectors. Two-scale asymptotics and a soft-pole instability bound what the scans identify.
+
+**Scope.** Four-dimensional Poincaré-invariant vacuum for a specified conserved stress tensor, with ideal exact delay data for inversion. Extends 45.
+
+[Paper notes](../papers/58-vacuum-stress-spectral-thresholds/README.md) · [PDF](../papers/58-vacuum-stress-spectral-thresholds/manuscript.pdf) · [TeX](../papers/58-vacuum-stress-spectral-thresholds/main.tex) · [Verification](../papers/58-vacuum-stress-spectral-thresholds/VERIFICATION.md)
+
+## 59. Wilson recovery of sign holonomy in paired-cap graph manifolds
+
+**Result.** Marked Wilson experiments recover signed gluing classes in a non-self-dual pointed category. A closed one-defect example gives two binary readouts where all unmarked values agree.
+
+**Scope.** Calibrated pointed modular operations and signed paired-cap sewings; the optimality lower bound counts classical binary outputs. Extends 50B.
+
+[Paper notes](../papers/59-wilson-recovery-sign-holonomy/README.md) · [PDF](../papers/59-wilson-recovery-sign-holonomy/manuscript.pdf) · [TeX](../papers/59-wilson-recovery-sign-holonomy/main.tex) · [Verification](../papers/59-wilson-recovery-sign-holonomy/VERIFICATION.md)
+
+## 60. Gravitons distinguish non-Abelian transport at fixed local curvature
+
+**Result.** Two exact Einstein–Yang–Mills backgrounds have identical metric and local covariant curvature data, yet show different purely gravitational transfer through ordered relative color holonomy.
+
+**Scope.** Constrained linear geometric optics on exact smooth backgrounds, before caustics; neither a nonlinear high-frequency limit nor a finite-wavelength result. Related to 29B and 43.
+
+[Paper notes](../papers/60-graviton-nonabelian-holonomy/README.md) · [PDF](../papers/60-graviton-nonabelian-holonomy/manuscript.pdf) · [TeX](../papers/60-graviton-nonabelian-holonomy/main.tex) · [Verification](../papers/60-graviton-nonabelian-holonomy/VERIFICATION.md)

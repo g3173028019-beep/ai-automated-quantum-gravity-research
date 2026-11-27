@@ -1,0 +1,219 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Relational area commutators distinguish matter couplings on the same Einstein light cone},
+  pdfsubject={Physical linearized Einstein--scalar theory},pdfauthor={}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\vol}{\operatorname{dvol}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Lie}{\mathcal L}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Id}{\operatorname{Id}}
+\setlength{\emergencystretch}{1.5em}
+\title{Relational area commutators distinguish matter couplings\\on the same Einstein light cone}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a family of exact six-scalar Einstein backgrounds with the same metric, material labels, stress, and characteristic cones, but with different physical commutators of compact relational areas. The varying coupling is a pullback four-form. It contributes no direct metric stress and changes the linearized equations only through an antisymmetric first-order interaction of two normal fields. A common metric-only readout of one normal field yields a separated retarded-response coefficient proportional to the square of the coupling. The same effect changes the leading null-front amplitude. The family of matched area brackets determines the magnitude of the coupling exactly; its sign is invisible by a normal-field reflection. A second pair of area observables has zero bracket in the uncoupled model and nonzero bracket in the coupled model. Finally, a common canonical past supplies positive physical Hadamard states for the switched theories and, by restriction and Cauchy extension, for the constant-coupling theories. The comparison is between marked observables in the physical linearized theories.
+\end{abstract}
+
+\section{Introduction}
+
+The metric and its characteristic cone specify the propagation of wavefronts in a minimally coupled Einstein--scalar system, but need not determine the physical commutator. A comparison of coordinate Green functions alone does not settle this point: the sources and the output observables must survive diffeomorphism reduction, and their calibration must agree in the two models. We give a same-background example in which invariant area histories, with identical test profiles, detect an interaction that is invisible both to the cone and to direct metric stress. The readout uses finite differential operations on compactly smeared areas; it is not a measurement of two coincident point operators.
+
+The matter branch and local area inversion come from the six-field example of \cite{P46}; the gauge-reduced state question starts from the canonical multiplet theorem of \cite{P09}. A nonclosed target four-form is outside the direct hypothesis of that theorem. We use a common canonical Cauchy neighborhood and give an explicit Ward-source time-slice proof for the extension. The Peierls and gauge framework is standard \cite{HackSchenkel,Khavkine}; the claim here is a particular exact dynamical distinction on a fixed backreacting background. In particular we do not identify arbitrary Hadamard states or their modular generators from the background geometry.
+
+\section{An exact common Einstein background}\label{sec:family}
+
+Use signature $(-+++)$ and an oriented spacetime with a positive material chart $X=(T,X^1,X^2,X^3)$. Take the action
+\begin{equation}\label{eq:action}
+ S_\beta=\frac1{2\kappa}\int R\,\vol_g-
+ \int\left(\frac12g^{ab}G_{IJ}(\Phi)\partial_a\Phi^I\partial_b\Phi^J+U(\Phi)\right)\vol_g
+ +\int\Phi^* A_\beta ,\qquad \kappa>0.
+\end{equation}
+The target coordinates are $\Phi=(T,X^1,X^2,X^3,Y^1,Y^2)$. For positive constants $p,\ell$ and smooth functions $b(T),\beta(T)$, choose
+\begin{align}
+ G&=(1+2b(T)Y^1)(\dd T)^2+\sum_i(\dd X^i)^2+\sum_A(\dd Y^A)^2,
+ & U&=\tfrac12\left(\mu_1^2(Y^1)^2+\mu_2^2(Y^2)^2\right),\nonumber\\
+ A_\beta&=\gamma(T)Y^1\,\dd T\wedge\dd^3X
+ +\frac{\beta(T)}2(Y^1\dd Y^2-Y^2\dd Y^1)\wedge\dd^3X,
+ &\gamma(T)&=-b(T)p/\ell^3.                                    \label{eq:target}
+\end{align}
+Here $\dd^3X=\dd X^1\wedge\dd X^2\wedge\dd X^3$; choose a target tube where $G$ is positive. The masses may be positive; the second readout in Section~\ref{sec:null} will use $\mu_2^2>0$.
+
+On a spatially flat expanding FLRW slab $I\times\mathbb R^3$ set
+\begin{align}
+ \bar g&=-\dd t^2+a(t)^2\dd\mathbf x^2, & \dot T&=pa^{-3},
+ &X^i&=\ell x^i,&Y^A&=0,\nonumber\\[-1mm]
+ \rho&=\tfrac{p^2}{2a^6}+\tfrac{3\ell^2}{2a^2},&
+ \frac{\dot a}{a}&=\sqrt{\kappa\rho/3}.                                  \label{eq:background}
+\end{align}
+Fix $a(0)=1$ on the reference solution and take a slab with $a>0$. This is a globally hyperbolic slab, as is seen in conformal time. The first four scalars are harmonic: the time equation is $(a^3\dot T)'=0$, and the linear spatial functions have zero spatial Laplacian. Their conserved stress gives the displayed Friedmann equation and its evolution equation. The time and rod labels both carry stress. In material coordinates,
+\begin{equation}\label{eq:metric-labels}
+\begin{gathered}
+ \bar g_{TT}=-a^6/p^2,\qquad \bar g_{ij}=a^2\delta_{ij}/\ell^2,\\
+ \bar j=(\sqrt{-\det\bar g_{\rm lab}})^{-1}=p\ell^3/a^6,
+ \qquad \sqrt{-\det\bar g_{\rm lab}}\,\bar g^{TT}=-p/\ell^3.
+\end{gathered}
+\end{equation}
+The tangential scalar equations remain the canonical equations on this branch, because $Y=\dd Y=0$. The only potential uncanceled normal force is $-b(T)\bar g^{TT}+\gamma(T)\bar j$; it vanishes by \eqref{eq:target} and \eqref{eq:metric-labels}. In particular derivatives of $\gamma$ do not contribute to the target exterior derivative of its term in $A_\beta$. The term proportional to $\beta$ has zero first variation on the background and no direct stress at any field. Thus \eqref{eq:background} solves every displayed action, even when $b$ and $\beta$ are switched in time by fixed functions of the material clock. These are natural target functions, not coordinate forces imposed on the equations. On the observation slab below $b=b_*\ne0$ and $\beta$ are constants. Different constant values of $\beta$ use precisely the same background and clock.
+
+\section{Gauge reduction and matched area profiles}\label{sec:areas}
+
+Let $u=(h,\psi)$ be a metric and scalar variation. On the background use the integrated action pairing with metric part $(4\kappa)^{-1}h:Ih'$ and scalar part $G(\psi,\psi')$, where $Ih=h-\frac12\bar g\tr_{\bar g}h$. Write $J_\beta$ for the action Hessian identified by this pairing, $K\xi=(\Lie_\xi\bar g,\dd\bar\Phi\,\xi)$ for the infinitesimal diffeomorphism, and
+\[
+ F=-2\kappa K^\dagger,
+ \qquad F_a(u)=\bar\nabla^bh_{ba}-\tfrac12\bar\nabla_a\tr h
+                          -2\kappa G(\psi,\partial_a\bar\Phi).
+\]
+Here the ghost pairing is the ordinary Lorentzian one and $\dagger$ is the formal action adjoint. The trace-reversed Einstein component is $-2$ times the linearization of $\operatorname{Ric}-\kappa(G_{IJ}\dd\Phi^I\dd\Phi^J+Ug)$; trace reversal has been moved into the pairing at a solution. Noether gives $J_\beta K=0$, $J_\beta^\dagger=J_\beta$, and $FJ_\beta=0$. The two wave operators
+\begin{equation}\label{eq:wave}
+ D_{2,\beta}=J_\beta+KF,\qquad D_1=FK
+\end{equation}
+are normally hyperbolic and formally self-adjoint in the respective pairings. For the metric row the principal derivatives of the linearized Ricci tensor outside $\bar\Box h$ cancel with $KF$. The scalar target metric is positive, and Cartan's formula gives $\delta\int\Phi^* A=\int\Phi^*(\iota_\psi\dd A)$ for compact variations. Thus the four-form can only add first-order terms to its Jacobi operator. The two operators in \eqref{eq:wave} intertwine through $K,F$; the standard normally hyperbolic Green identities give, with $E_i=G_i^{\rm ret}-G_i^{\rm adv}$,
+\begin{equation}\label{eq:green}
+ E_2K=KE_1,\qquad FE_2=E_1F,\qquad E_2J_\beta=-KE_1F.
+\end{equation}
+In particular $D_1$ is independent of $\beta$. A compact Ward functional is represented by a source $j$ with $Fj=0$. Its causal wave $E_2j$ satisfies $F E_2j=J_\beta E_2j=0$. We use the Peierls convention $\sigma_\beta(j,k)=\langle j,E_2k\rangle$. By \eqref{eq:green}, the bracket descends through $J_\beta\Gamma_c$ and the resulting presymplectic radical; a nonzero tested pairing cannot be lost in this quotient.
+
+At fixed material labels the metric variation is
+\[
+ \widehat h=h-\Lie_{(\dd\bar X)^{-1}\delta X}\bar g,
+ \qquad \pi_A=\delta Y^A .
+\]
+Both are gauge invariant: $X'[K\xi]=\dd\bar X\,\xi$ and $\dd\bar Y=0$. The same fixed-label metric and inverse are used in all parameter values. We recall why compact metric differential readouts can be made from a fixed finite family of marked area histories. Write the metric components on a regular label chart as a spatial positive matrix $q$, a shift row $s$, and the time component $v$. A spatial plane with bivector dual $n\in\mathbb R^3$ has squared area $n^{\mathsf T}(\det q)q^{-1}n$. The six types $n=e_i,e_i+e_j$ determine the cofactor matrix and then $q$. For cyclic pairs $(i,j)=(1,2),(2,3),(3,1)$, a fixed small tilt of the first vector gives the squared areas
+\[
+ L_i^\pm=L_i^0\pm2\alpha(q_{jj}s_i-q_{ij}s_j)+\alpha^2(q_{jj}v-s_j^2).
+\]
+Keep $L_1^\pm,L_2^+,L_3^+$. The two-sided pair supplies $q_{22}v-s_2^2$, and solving the remaining three equations for $s$ is locally possible: at small $\alpha$ after dividing by $\alpha$ the determinant is $q_{11}q_{22}q_{33}-q_{12}q_{23}q_{31}+O(\alpha)>0$. All planes stay spacelike on a shrunk common chart. Differentiating this pointwise inversion gives a zero-order left inverse of the ten area variations. Hence the adjoint of any finite-order compactly smeared operation on $\widehat h$ yields ten compact area profiles with no support increase. The integrals of the area functions over label space are genuine marked histories, not ten instantaneous numbers. The construction can absorb the fixed background density in the profiles.
+
+On the observation plateau denote the linearized residuals in fixed labels by $e,r_1,r_2$. In the present action their exact linear expressions are
+\begin{align}
+ e&=\kappa^{-1}\delta R_{TT}[\widehat h]-2b_*\pi_1,\nonumber\\
+ r_1&=(\bar\Box-\mu_1^2)\pi_1+L_g[\widehat h]+\beta\bar j\partial_T\pi_2,
+ &r_2&=(\bar\Box-\mu_2^2)\pi_2-\beta\bar j\partial_T\pi_1,                \label{eq:linearized}\\
+ L_g[\widehat h]&=b_*\bar g^{T\mu}\bar g^{T\nu}\widehat h_{\mu\nu}
+                 -\tfrac12\gamma\bar j\tr\widehat h .\nonumber
+\end{align}
+Here $e$ is the $TT$ trace-reversed Einstein residual per $\kappa$, and $r_A$ are scalar residuals with the kinetic normalization of \eqref{eq:action}. The metric terms in $L_g$ are respectively from varying $g^{TT}$ and the material inverse density. The quadratic pullback term is $\beta(\pi_1\partial_T\pi_2-\pi_2\partial_T\pi_1)\dd^4X/2$; varying it yields the displayed signs. This also shows that the $\beta$-dependent difference of the full wave operators is confined to the two normal rows. No gauge condition couples to those fields because their background gradients vanish. If $\beta$ varies, the full difference is instead $\bar j(\beta\partial_T+\beta'/2)\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)$ in that block; this is used in the switched theory but not omitted from the gauge complex.
+
+\section{The magnitude from separated commutators}\label{sec:cubic}
+
+\begin{samepage}
+\begin{theorem}\label{thm:main}
+In the constant observation plateau of the family \eqref{eq:action}--\eqref{eq:background}, equality of all matched compact area brackets implies $|\beta|=|\widetilde\beta|$. If the magnitudes differ, a pair of area tests with strictly separated temporal supports has different brackets. For the everywhere-constant theories, or for switched theories with the same fixed shape and signed amplitudes, $|\beta|=|\widetilde\beta|$ conversely gives equality. The early-time normalization of one common retarded impulse gives the exact quadratic variation in \eqref{eq:ratio}.
+\end{theorem}
+\end{samepage}
+
+\begin{proof}
+Use $c[\widehat h]=(2b_*\kappa)^{-1}\delta R_{TT}[\widehat h]$. For any common compact smooth test $f$, the marked area functional $B_f=\int f c[\widehat h]\,\vol_{\bar g}$ and the normal functional $N_f=\int f\pi_1\,\vol_{\bar g}$ are Ward. Their difference is the compact Euler residual pairing $\int fe\,\vol_{\bar g}/(2b_*)$. It follows from \eqref{eq:green} that $B_f=N_f$ in the physical equation quotient in each model, with the \emph{same} area profiles. In particular the resulting commutator does not use a parameter-dependent normal reconstruction.
+
+Put $\mathcal L_A=\partial_t^2+3(\dot a/a)\partial_t-a^{-2}\Delta_x+\mu_A^2$ and $\alpha_\beta(t)=\beta\ell^3 a^{-3}(t)$. In proper time the normal homogeneous equations are
+\[
+ \mathcal L_1\pi_1=L_g[\widehat h]+\alpha_\beta\partial_t\pi_2,
+ \qquad \mathcal L_2\pi_2=-\alpha_\beta\partial_t\pi_1,
+\]
+using $\bar j\partial_T=\ell^3a^{-3}\partial_t$. Take a nonzero real compact spatial bump $v(x)$. Start the normalized retarded impulse at $s$ with zero value data and zero velocity data for every component except $\partial_t\pi_1(s)=v$. A source $N_{\delta_s v}$ in the action convention gives minus this impulse, since its normal Hessian has time principal coefficient $-1$. We absorb this common sign by defining the normalized retarded readout as minus the retarded Peierls pairing. The source is Ward, so retarded uniqueness of the ghost wave equation ensures the gauge constraint. Equivalently the construction is the usual Duhamel integral of homogeneous solutions with this prescribed velocity for smooth time profiles.
+
+All value and first jets coincide in the two models. At the cut all second time jets coincide except $\pi_2''(s)=-\alpha_\beta(s)v$; in particular $\pi_1''(s)=-3(\dot a/a)(s)v$. The spatial derivatives of the equal data coincide as functions. The term $L_g$ is algebraic in $\widehat h$ and hence first order at most in the original metric-label variables. Its first time derivative agrees at the cut. On differentiating the first normal equation, all common feedback cancels and the only surviving difference is $\alpha_\beta\pi_2''-\alpha_{\widetilde\beta}\widetilde\pi_2''$. Thus
+\[
+ \partial_t^3(\pi_{1,\beta}-\pi_{1,\widetilde\beta})(s^+)
+       =-(\beta^2-\widetilde\beta^2)\ell^6 a(s)^{-6}v.
+\]
+The normalized retarded kernel for this spatial drive and detector is
+\[ K_\beta(t,s)=\int v\pi_{1,\beta}(t) a(t)^3\dd^3x,\qquad t>s. \]
+ Hyperbolic evolution is smooth in these cut times for smooth compact Cauchy data. Common lower jets also make all terms from differentiating $a^3$ cancel in the difference. The nonzero first derivative is $a(s)^3\int v^2\dd^3x$, giving
+\begin{equation}\label{eq:ratio}
+ \frac{\partial_t^3(K_\beta-K_{\widetilde\beta})(s^+,s)}{\partial_t K_\beta(s^+,s)}
+       =-(\beta^2-\widetilde\beta^2)\ell^6 a(s)^{-6} .
+\end{equation}
+This is a short-time expansion at arbitrary fixed couplings, not a weak-coupling expansion. For differing magnitudes Taylor's formula gives a strict sign for the kernel difference at $s+\epsilon,s$ for sufficiently small positive $\epsilon$. Shrink two disjoint ordered intervals about these times on which the same sign holds. Nonnegative smooth time bumps in those intervals, times the same spatial $v$, yield a nonzero double integral of the difference. The advanced response is absent in the detector window. Both individual pairings can also be made nonzero, by the common positive first right derivative. In particular the difference is supported off the coincidence set and does not reduce to a contact term or a radical artifact. Shrink the causal experiment inside the common chart.
+
+Finally, reflection $Y^2\mapsto-Y^2$ sends $\beta\mapsto-\beta$ in the full action, fixes its other terms, the material labels and all areas, and intertwines the two physical Green maps. This proves the sign ambiguity exactly within the stated matched families.
+\end{proof}
+
+\subsection{The first null signal also changes}
+
+For clarity one can identify the direct term, independent of the impulse proof. On a common convex causal neighborhood write the normal principal system as $\bar\Box\Id+L_\beta^a\partial_a+Q_\beta$. In the common bundle trivialization its wave connection changes by $\tfrac12\bar g_{ab}(L_\beta^b-L_0^b)$. Along a future affine null geodesic $x(\lambda)$ of tangent $k$, this is $\beta j_X\bar g(k,\partial_T)J/2$, where $J$ is the skew operator that exchanges the two normal slots and $J^2=-1$ on them. At zero coupling the transport preserves the second normal line and the complementary slots separately. In the zero-coupling parallel frame one insertion of $J$ has zero visible $11$ entry, as does any odd number. The leading two-insertion ordered integral yields
+\[
+ (U_\beta-U_{\widetilde\beta})_{11}
+  =-\frac{\lambda^2}{8}(\beta^2-\widetilde\beta^2)
+       j_X^2\bar g(k,\partial_T)^2\big|_{x(0)}+O(\lambda^3).
+\]
+The timelike vector $\partial_T$ pairs nontrivially with a nonzero null tangent. By the local Hadamard construction \cite{BGP}, the wave parallel transport multiplied by the common van Vleck factor is the coefficient of the direct null delta in four dimensions. Lower conormal terms cannot cancel this change at noncoincident null-separated points. The exact quotient identity for $B_f$ makes this a statement about the compact marked area response as well as the normal Green entry. It does not change the null support locus.
+
+\section{An area control that is null only in the uncoupled model}\label{sec:null}
+
+The preceding comparison uses a nonzero response in both theories. There is also an explicit pair for which one of the two brackets vanishes exactly. Use a fixed comparison value $\beta_*\ne0$, take $\mu_2^2>0$, and compare $0$ with $\beta_*$. Define common marked differential expressions
+\[
+ L=(\bar\Box-\mu_1^2)c+L_g,\qquad
+ d=-L/(\beta_*\bar j),\qquad q=\beta_*\bar j\partial_Tc .
+\]
+Here $c=c[\widehat h]$ and $L_g=L_g[\widehat h]$. Put $B=a^2/\ell^2$ and $C=p^2/(a^4\ell^2)$; no ambiguity with $B_f$ is intended. Define a further metric expression
+\begin{equation}\label{eq:m}
+ \mathcal M=\frac{-\partial_T(C\partial_Td)+\Delta_Xd-
+                         \mu_2^2 B d-\partial_T(Bq)}{\mu_2^2\partial_TB} .
+\end{equation}
+The denominator is positive on the expanding branch. The material time is harmonic; consequently $\bar\Box=-p^2a^{-6}\partial_T^2+\ell^2a^{-2}\Delta_X$. When $\beta=\beta_*$, the equations give $d=\partial_T\pi_2$ and $q=(\bar\Box-\mu_2^2)\pi_2$. After multiplying the latter by $B$ and differentiating in $T$, it gives exactly $\mathcal M=\pi_2$ on shell. At $\beta=0$, $L=0$ on the physical solution space; \eqref{eq:m} still defines the same metric functional. These statements can be used directly on constrained causal solutions and require no inversion of an evolution operator.
+
+\begin{corollary}\label{cor:zero}
+There are identical compact area profiles, with disjoint ordered time supports, such that their physical bracket is zero at $\beta=0$ and nonzero at $\beta=\beta_*$. The first of their two physical sources is in the presymplectic radical of the zero-coupling theory.
+\end{corollary}
+
+\begin{proof}
+By the compact adjoint construction of Section~\ref{sec:areas}, smear $L$ and $\mathcal M$ with real compact tests $f,g$. The sources are exact Ward tests for both theories. The first annihilates every physical solution at zero coupling; the bracket vanishes there. At $\beta_*$, $L=-\beta_*\bar j\partial_T\pi_2$ on shell, and $\mathcal M=\pi_2$. Both normal readouts are Ward. The pairing is
+\[
+ -\beta_*\int f\bar j\partial_T (E_{2,\beta_*})_{Y^2Y^2}g\,\vol_{\bar g}.
+\]
+It is nonzero for some smooth strictly separated tests. For a cut $T_0$ and nonzero compact spatial $v$, the intervening causal solution for $g=\delta(T-T_0)v$ is the homogeneous full-system solution with zero value and initial velocity $(\bar g^{TT})^{-1}v$ in the second normal slot, and zero velocity elsewhere. The Green jump holds because all value data vanish and only the second time derivative contributes to the delta. Thus the indicated normal derivative is nonzero in a neighborhood immediately to the future. Select $f$ there and smooth the cut impulse in time strictly before $f$; smooth dependence of the homogeneous solution on its cut preserves a nonzero pairing. This also gives normalized finite smooth compact measurements. It does not interpret the singular cut as an observable in its own right.
+\end{proof}
+
+\section{Positive physical Hadamard states}\label{sec:states}
+
+\begin{theorem}\label{thm:states}
+The two models compared above admit regular positive quasifree physical Hadamard states with the displayed exact commutators and signed wave-gauge Hadamard lifts. They can be chosen to descend through the presymplectic radical. On the switched family the two states can be obtained from one common early canonical state. Existence also holds for each original constant-coupling model on its FLRW slab.
+\end{theorem}
+
+\begin{proof}
+First switch $b$ and $\beta$ smoothly from zero near a complete early Cauchy surface to the required constants. Use the same $b$ and, for a family of signed amplitudes, a common cutoff shape for $\beta$ in the two models. By Section~\ref{sec:family} this never switches the solution itself. On an early causally convex Cauchy neighborhood $U_e$ the theory is exactly canonical with a quadratic potential. The rescaling $\Phi\mapsto\sqrt\kappa\Phi$ and its corresponding action-pairing normalization put it into the form of the positive physical state theorem of \cite{P09}. Choose there positive signed wave-gauge Hadamard lifts and a regular quasifree state, reduced by the radical if desired. We need not invoke that theorem on the noncanonical active plateau.
+
+We show that every compact Ward source $j$ on the full slab can be represented in $U_e$ by another Ward source producing the \emph{same} full causal wave. Choose a temporal switch $\chi$ increasing from zero to one in $U_e$ and put
+\[
+ w=\chi G_2^{\rm adv}j+(1-\chi)G_2^{\rm ret}j,\qquad j'=j-J_\beta w.
+\]
+This $w$ is compact: its causal shadow of the compact source is restricted to a bounded time band. For a Ward source $J_\beta G_2^\pm j=j$ by the ghost identity, so $j'$ is Ward and supported in $U_e$. Formula \eqref{eq:green} gives $E_2(j-j')=-K E_1 Fw$. By the ordinary normally hyperbolic time-slice for the ghost wave equation, choose a compact $s$ in $U_e$ with $E_1s=E_1Fw$. This time-slice statement follows by the same switch with $D_1$ in place of $J_\beta$. The rank-four material labels imply that $\psi\mapsto G(\psi,\dd\bar\Phi)$ is pointwise onto. A smooth right inverse yields a scalar-only compact $\eta$ supported in $U_e$ satisfying $F\eta=s$. Hence
+\[
+ j''=j'+J_\beta\eta\quad\text{is an early Ward source and}\quad E_2j''=E_2j.
+\]
+Inclusion of early sources is symplectic by causal convexity and onto after quotient, and its kernel on radical reduction is zero by preservation of the pairing. Equality at the level of the wave is useful because redundant lifts need not annihilate arbitrary gauge sources.
+
+Extend the early signed lifts as bisolutions of each full $D_{2,\beta}$ by their distributional Cauchy data on the early cut, in both variables. The restriction of data, including normal derivatives, is allowed since the Cauchy conormal is timelike and the allowed wavefront covectors are null. The normally hyperbolic Cauchy propagator transports the signed microlocal relation along the bicharacteristics in each variable \cite{BGP,GOW}. It maps nonzero cut covectors to nonzero null covectors, and maps smooth cut data to smooth solutions, so taking both Cauchy propagations does not introduce single-sided singularities. This is the usual propagation for a scalar-principal-symbol wave system. For compact Ward $j,k$ the extended lifts evaluate exactly as on $j'',k''$: the difference of sources has zero $E_2$ image and hence lies in $D_2\Gamma_c$. The last exactness follows immediately by comparing the compact common value of the retarded and advanced inverses. A full wave bisolution annihilates that difference. Positivity and the exact commutator on physical tests consequently come from the same early covariance, and regularity and radical descent transfer. No positivity on all redundant tests is asserted.
+
+For existence on an original constant-coupling slab, choose a Cauchy cut in it and an auxiliary switched extension that agrees with the constant model on a causally convex Cauchy neighborhood of this cut. The homogeneous FLRW branch and its ODE can be restricted or continued to an early canonical neighborhood because $a>0$ on an open interval. Restrict the auxiliary lifts to their common neighborhood, then apply the Ward copying and two-variable Cauchy argument again to the constant theory. This construction gives existence without claiming that the two different everywhere-active actions have a common earlier canonical algebra.
+\end{proof}
+
+The unequal marked Peierls forms fix unequal antisymmetric parts of the corresponding two-point functions in any quasifree representation. Corollary~\ref{cor:zero} also gives a state-dependent witness after a state is chosen: displacing by the first area control has no effect in the zero theory after radical reduction, while the second readout sees a nonzero mean shift $d$ in the coupled theory. It has finite positive variance $v$ there by regularity and the nonzero commutator. The measured Gaussian relative entropy is $d^2/(2v)>0$, a lower bound by data processing for the algebra supporting the readout. This does not establish full quantum relative entropy finiteness or choose a canonical modular Hamiltonian.
+
+\clearpage
+\section{Discussion}
+
+A stress-free first-order interaction can be invisible to the background geometry and the characteristic equation but visible to a gravitationally marked local algebra. The mechanism has three distinct levels: the exact background retains the same stress, the strongest leading signal retains the same cone, and its amplitude and causal response change. The compact common metric readout makes the third statement physical. The normal reflection identifies the precise sign ambiguity in this one-parameter family. The Hadamard construction fixes the meaning of the quantum commutator without selecting a preferred state. None of these facts identifies arbitrary matter Lagrangians from area data or treats nonlinear quantum gravity.
+
+The source normalization matters for a quantitative coupling. The common first derivative in \eqref{eq:ratio} normalizes the launch independently of $\beta$; the clock and rod units and the target kinetic normalization still belong to the specified physical family. In contrast, the compact distinction and the exact vanishing of Corollary~\ref{cor:zero} require no independent amplitude convention beyond matching the actual area preparations. The sign ambiguity is not an uncertainty of the short-time expansion, but an exact field reflection fixing every measured area. A measurement calibrated to the orientation of the second normal field would be a different experiment.
+
+\begin{thebibliography}{9}
+\bibitem{P46} \emph{Common Einstein cones and complete relational area probes for multifield matter}, manuscript 46+47, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/46-47-common-cones-and-area-probes}{archived source}.
+\bibitem{P09} \emph{Local curvature information and modular dynamics in coupled Einstein--scalar theory}, manuscript 09+21, Edition 2, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/09-21-coupled-modular-kernel}{archived source}.
+\bibitem{HackSchenkel} T.-P. Hack and A. Schenkel, \emph{Linear bosonic and fermionic quantum gauge theories on curved spacetimes}, Gen. Relativ. Gravit. \textbf{45}, 877--910 (2013), \href{https://arxiv.org/abs/1205.3484}{arXiv:1205.3484}.
+\bibitem{Khavkine} I. Khavkine, \emph{Covariant phase space, constraints, gauge and the Peierls formula}, Int. J. Mod. Phys. A \textbf{29}, 1430009 (2014), \href{https://arxiv.org/abs/1402.1282}{arXiv:1402.1282}.
+\bibitem{BGP} C. B\"ar, N. Ginoux and F. Pf\"affle, \emph{Wave Equations on Lorentzian Manifolds and Quantization}, EMS (2007), \href{https://arxiv.org/abs/0806.1036}{arXiv:0806.1036}.
+\bibitem{GOW} C. G\'erard, O. Oulghazi and M. Wrochna, \emph{Hadamard states for the Klein--Gordon equation on Lorentzian manifolds of bounded geometry}, Commun. Math. Phys. \textbf{352}, 519--583 (2017), \href{https://arxiv.org/abs/1602.00930}{arXiv:1602.00930}.
+\end{thebibliography}
+\end{document}

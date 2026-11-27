@@ -116,3 +116,15 @@ The historical umbrella synthesis is routed into these dedicated questions, not 
 ## Paper 51: singular semiclassical WRT sewing
 
 [Paper 51](papers/51-singular-wrt-semiclassical-sewing/README.md) is a separate synthesis and extension of 48, 49, 49B and 48+49. For fixed untwisted SU(2) paired-cap trees with at least two vertices, a two-action all-orders radial expansion is combined with absolute leading torsion normalization and a joint leading Wilson law on the specified Hall charts. Earlier portfolio entries and manuscripts are retained.
+
+## Cross-cluster Papers 52–60
+
+- [52 · Relational area commutators distinguish matter couplings on the same Einstein light cone](papers/52-relational-area-commutators/README.md): Exact six-field Einstein–matter backgrounds and physical linearized observables; sign reflection preserves every marked area bracket. Related to 09+21 and 46+47.
+- [53 · Coherent sewing of a physical gravitational shear](papers/53-coherent-quantum-shear-sewing/README.md): Calibrated linear gravitational sectors and specified Hadamard representations; no local tensor-factor or nonlinear gravity claim. Related to 18, 25, 44 and 47.
+- [54 · Semiclassical saturation of the Virasoro vacuum Whittaker ray](papers/54-virasoro-whittaker-semiclassical-limit/README.md): The actual chiral Virasoro vacuum quotient, at arbitrary real large central charge; the fixed-copy trace-norm result uses integer charge. Extends 34.
+- [55 · Regge refinement and the vacuum high-frequency limit do not commute](papers/55-regge-high-frequency-noncommutation/README.md): Classical variational residuals of affine interpolated metrics, not convergence of discrete field-equation solutions. Extends 28 and complements 29B.
+- [56 · Distinguishing a parity-odd gravity coupling from unknown Schwarzschild boundary returns](papers/56-causal-parity-odd-gravity-coupling/README.md): Schwarzschild, known local master calibration and formal first order on the Einstein branch. Extends the finite-collar benchmark in 27B.
+- [57 · Identical emission counts, different quantum coherence in a charged throat](papers/57-throat-counts-and-quantum-coherence/README.md): Paper 36's secular kernel and a specified finite weak-coupling model; the actual continuum black-hole channel remains unspecified.
+- [58 · Vacuum stress spectroscopy with double pulses and two-scale thresholds](papers/58-vacuum-stress-spectral-thresholds/README.md): Four-dimensional Poincaré-invariant vacuum for a specified conserved stress tensor, with ideal exact delay data for inversion. Extends 45.
+- [59 · Wilson recovery of sign holonomy in paired-cap graph manifolds](papers/59-wilson-recovery-sign-holonomy/README.md): Calibrated pointed modular operations and signed paired-cap sewings; the optimality lower bound counts classical binary outputs. Extends 50B.
+- [60 · Gravitons distinguish non-Abelian transport at fixed local curvature](papers/60-graviton-nonabelian-holonomy/README.md): Constrained linear geometric optics on exact smooth backgrounds, before caustics; neither a nonlinear high-frequency limit nor a finite-wavelength result. Related to 29B and 43.

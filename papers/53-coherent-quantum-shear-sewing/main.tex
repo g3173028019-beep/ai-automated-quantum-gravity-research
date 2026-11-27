@@ -1,0 +1,249 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\CCR}{\mathrm{CCR}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\T}{\mathsf T}
+\newcommand{\Sp}{\mathcal S}
+\title{Coherent Sewing of a Physical Gravitational Shear\\
+\large Common cut observables, a compact revival, and infinite residual covariance}
+\author{}
+\date{}
+\hypersetup{pdftitle={Coherent Sewing of a Physical Gravitational Shear},pdfauthor={}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give three exact tests of quantum sewing in calibrated sectors of four-dimensional linearized gravity. A nonzero transverse harmonic of gravitational shear yields a common positive-frequency Weyl representation on timelike and smeared null cuts. Its spatial transfer preserves the actual joint symplectic form and covariance, which differ from the spatial Wronskian alone. For compact transverse-traceless Minkowski data we construct a finite canonical port whose reduced channel is an exact replacer after one interval but has an invertible returning signal after two intervals unless the physical environment is reset. Finally, on a single Cauchy slice of the parallel-cut model, conditioning on the entire commuting shear field in an intervening slab leaves strictly positive outer cross covariance and an infinite-rank reflected residual. Controlled Weyl couplings turn this statement into an explicit difference of completely positive ancilla channels. All constructions retain the physical field or a specified finite symplectic port; no factorization of adjoining gravitational regions is assumed.
+\end{abstract}
+
+\section{Sewing data and the distinction between states and channels}
+
+A common physical state supplies joint fluctuations of observables at different cuts. A reduced channel also specifies which input can be prepared independently of which environment. We exhibit differences between those two kinds of data even in free gravity. The first test uses a fixed nonzero tangential mode of the planar physical shear of \cite{sewing}. The second uses genuinely compact transverse-traceless (TT) data in Minkowski space. The third uses the same shear mode as the first, but with \emph{commuting} observations on one Cauchy surface. These are separate protocols with the same physical distinction, not transfers between timelike and Cauchy canonical variables. Free constraint reduction and covariant invariant local observables are treated in \cite{fewsterhunt,hack}; our exact representation below makes their physical role explicit.
+
+Use the real Weyl law \(W(z)W(w)=e^{-i\sigma(z,w)/2}W(z+w)\) on the physical symplectic quotient \((\Sp,\sigma)\). At Cauchy cut \(i\), let \(X_i\) be a finite nondegenerate symplectic port and \(E_i=X_i^{\perp_\sigma}\). This is a direct sum of test-solution spaces, not a spatial tensor factor. Write the symplectic Heisenberg pullback on successive intervals as
+\[
+ S_i=\begin{pmatrix}A_i&C_i\\ B_i&D_i\end{pmatrix}
+ : X_i\oplus E_i\longrightarrow X_{i-1}\oplus E_{i-1}.
+\]
+For a centered regular quasifree initial environment of covariance \(V_0\), independent of the input on \(X_0\), retaining that environment across both intervals gives
+\begin{align}
+ X_{\rm sh}&=A_1A_2+C_1B_2,&
+ L_{\rm sh}&=B_1A_2+D_1B_2,\label{eq:shared}\\
+ \Phi_{\rm sh}(W_2(z))
+ &=W_0(X_{\rm sh}z)\exp[-Y_{\rm sh}(z,z)/2],&
+ Y_{\rm sh}&=L_{\rm sh}^*V_0L_{\rm sh}.\nonumber
+\end{align}
+In fact, compose \(S_1S_2\), embed its output into the commuting input and environment Weyl factors, and evaluate the environment state. This is completely positive. The usual Gaussian-channel inequality \cite{caruso} here is the physical identity
+\[
+ Y_{\rm sh}+\frac i2(\sigma_{X_2}-X_{\rm sh}^*\sigma_{X_0}X_{\rm sh})
+     =L_{\rm sh}^*(V_0+i\sigma_{E_0}/2)L_{\rm sh}\ \ge0.
+\]
+The environment carries precisely the reduced port's commutator deficit. Associativity follows from composition on the enlarged common space, also with intervening system operations lifted by the identity on the environment.
+
+By contrast, replacing the environment at the middle by a fresh centered state \(V_1\) gives
+\[
+ X_{\rm re}=A_1A_2,\qquad
+ Y_{\rm re}=(B_1A_2)^*V_0(B_1A_2)+B_2^*V_1B_2 .
+\]
+The channels agree exactly when \(C_1B_2=0\) and \(Y_{\rm sh}=Y_{\rm re}\). Distinct Weyl displacements can be distinguished by varying all coherent input means; once matched, the scalar Gaussian multipliers must agree. This is an equality criterion for the stated two processes, not a definition of quantum Markov order \cite{pollock}.
+
+\begin{proposition}[Independent input is an actual preparation]
+\label{thm:preparation}
+A common positive Hadamard reference need not define a map of its port and environment marginals. Its finite-port product preparation can nevertheless be made within the same physical CCR theory while preserving both reference marginal covariances.
+\end{proposition}
+\begin{proof}
+For a common Gaussian covariance with cross block \(D_{XE}\), the output on a pullback \((Xz,Lz)\) has variance
+\[
+ V_X(Xz,Xz)+V_E(Lz,Lz)+2D_{XE}(Xz,Lz).
+\]
+Suppose both pieces of this pullback are nonzero. Choose real smooth physical displacements \(u_X\in X,u_E\in E\) with nonzero pairings against those pieces, using the nondegeneracy of the symplectic forms. Add coherent displacements of a common centered Hadamard reference with a real Gaussian distribution whose variances are \(v\) and cross covariance is \(+\rho\) or \(-\rho\), \(0<|\rho|<v\). The two resulting positive states have identical marginals since each displacement's commutator functional vanishes on the other summand. Their output variances differ by
+\(4\rho\,\sigma(u_X,Xz)\sigma(u_E,Lz)\). Each change of two-point function is a smooth finite-rank bisolution, hence retains the physical Hadamard wavefront condition.
+
+For an actual product preparation with a finite compactly represented port, let \(P\) be the symplectic projection onto it and set
+\[
+ V_{\rm dec}(z,w)= V_H(Pz,Pw)+V_H((1-P)z,(1-P)w).
+\]
+The uncertainty relation holds term by term by symplectic orthogonality. The difference from \(V_H\) consists of smooth finite-rank kernels: \(P\) uses finitely many smooth causal solutions and compactly smeared commutator coefficients, and smearing a Hadamard two-point kernel in one variable by a compact smooth test leaves a smooth function in the other. Indeed its wavefront set has no nonzero element with a zero first covector. In the regular representation the finite-port Weyl von Neumann algebra is a type-I oscillator factor by Stone--von Neumann. Replacing the state of that factor by its reference marginal is a normal channel with Kraus operators in that factor (choose matrix units and the spectral decomposition of the replacement density matrix). It fixes the commuting complement and its product expectations give the covariance above. For a compactly represented port this is an operation localized in a bounded collar algebra, not replacement of an entire spatial region; compare the specified local operations in \cite{fv}.
+\end{proof}
+
+\section{Physical shear in a common representation on parallel cuts}
+
+In flat \(\mathbb R_t\times\mathbb R_z\times T^2_{x,y}\), keep \(y\)-independent perturbations odd under \(y\mapsto-y\) and one real nonzero \(x\)-harmonic with \(\mu=|k|>0\). One includes the corresponding sine partner for quantities with an \(x\) derivative. The reduced field \(A_a=h_{ay}\), \(a=t,x,z\), transforms by \(A\mapsto A+\dd\xi_y\). Substituting a one-fibre metric in the quadratic Einstein action yields the Maxwell term \(-C F_{ab}F^{ab}/4\), \(C>0\) including the transverse normalization \cite{sewing}. Source-free dualization \(F=\pm *_3\dd\psi\), with the boundary Legendre term in the quadratic action, gives
+\[
+ S_\psi=\frac C2\int[(\partial_t\psi)^2-(\partial_z\psi)^2-\mu^2\psi^2]\,\dd t\,\dd z .
+\]
+There is no additional scalar polarization: on the nonzero transverse harmonic, \(\dd\iota_{\partial_x}+\iota_{\partial_x}\dd=\partial_x\) is invertible on its real sine/cosine pair. It trivializes closed-form ambiguities both in recovering a potential from \(F\) and identifying gauge-equivalent potentials. The normalized harmonic of the gauge-invariant curvature \(C^{(1)}_{tzxy}\) is \(\pm k^2\psi/2\), as follows by differentiating \(F_{tz}\) in \(x\) and using the dual equation. Thus \(\psi\) and \(\Pi=C\partial_t\psi\), after smearing, are physical curvature observables and derivatives. The formal adjoints of these linearized curvature operations give compact conserved metric tests. With the fixed labels and admissible source family of \cite{area}, such tests can also be expressed using combinations of area windows; no intrinsic coordinate construction is required.
+
+Let \(\omega_p=\sqrt{p^2+\mu^2}\) and use longitudinal measure \(\dd p/(2\pi)\). On a Cauchy slice the test of \(\psi(f)+\Pi(h)\) has positive-frequency vector
+\[
+ K(f,h)(p)=\frac{\widehat f(p)+iC\omega_p\widehat h(p)}{\sqrt{2C\omega_p}},
+ \qquad \widehat f(p)=\int e^{-ipz}f(z)\,\dd z .
+\]
+The actual real commutator is \(2\operatorname{Im}\langle K(f,h),K(f',h')\rangle
+=\int(fh'-hf')\,\dd z\); the covariance is the real part. Regular vacuum expectations are \(\omega(W(F))=\exp(-\|KF\|^2/2)\). Thin smooth time gates (differentiated for \(\Pi\)) converge in the one-particle norm by Schwartz decay in \(p\), and hence strongly on Weyl operators. This fixes the restriction of a common physical positive-frequency state. If needed for a whole flat-product Hadamard representation, one modifies only the infrared zero-transverse modes by a regular positive initial covariance, agreeing with their ordinary high-frequency covariance above a positive cutoff. This changes no nonzero harmonic of interest or local Hadamard singularity.
+
+\subsection{Timelike cuts and their true joint symplectic form}
+
+On \(z=a\) take the port \(\mathcal U_a=(\psi,C\partial_z\psi)\) with common \(+z\) conormal. An outward orientation uses the appropriate change of sign. For real compact time tests \(F_a=(g_a,h_a)\), the one-particle vector for any finite collection is
+\[
+ K_{\rm cut}(F)(p)=\frac{\sum_a e^{-ipa}[\widetilde g_a(\omega_p)-iCp\,\widetilde h_a(\omega_p)]}
+                       {\sqrt{2C\omega_p}},
+ \qquad \widetilde g(\omega)=\int e^{i\omega t}g(t)\,\dd t .
+\]
+This is the ordinary restriction and normal derivative in the same solution representation. The spatial conormal is spacelike and the time tests give rapid decay, so smooth thin spatial gating also converges in the one-particle norm. We always use the test quotient by the actual embedding kernel. At a single timelike cut with complete time histories its image is real-dense: for \(\omega>\mu\), the combinations of trace and conormal prescribe independently the two complex traveling amplitudes at \(\pm p\), \(p=\sqrt{\omega^2-\mu^2}\) away from zero. Choose smooth positive-frequency profiles in compact bands, extend by conjugation to the negative bands for reality, and approximate the resulting real Schwartz time tests by compact truncations. This gives density in the weighted one-particle norm. We make no such assertion for a prescribed finite time aperture.
+
+For \(\omega>\mu\), the classical spatial transfer through thickness \(\ell\) and the one-cut vacuum spectral matrix (relative to \(\dd\omega/(2\pi)\)) are
+\[
+ M_\ell=\begin{pmatrix}
+ \cos(p\ell)&\sin(p\ell)/(Cp)\\
+ -Cp\sin(p\ell)&\cos(p\ell)
+ \end{pmatrix},\qquad D=\begin{pmatrix}(Cp)^{-1}&0\\0&Cp\end{pmatrix}.
+\]
+The first expression solves the longitudinal ODE \(\psi''+p^2\psi=0\). The spectral matrix follows by adding the two longitudinal directions with equal weight and using \(\dd p/\omega=\dd\omega/p\). The paired block between \(a,b\) is \(D M_{b-a}^{\T}\), directly also from the displayed \(K_{\rm cut}\). The real covariance and the symplectic form (imaginary part times two) are taken from the joint sesquilinear form
+\[
+   \sum_{a,b}\int_\mu^\infty
+       \widetilde F_a(\omega)^* D M_{b-a}^{\T}\widetilde G_b(\omega)
+       \,\frac{\dd\omega}{2\pi}.
+\]
+Indeed each pullback to a common reference cut is by \(M^{\T}\), and \(M_\ell D M_\ell^{\T}=D\), \(M_{\ell+\ell'}=M_{\ell'}M_\ell\). This proves exact physical CCR and covariance sewing on the embedded domain. The spatial Wronskian is separately preserved by \(\det M_\ell=1\); it is \emph{not} the same-cut quantum pairing. In particular trace and conormal on the same wall commute in this homogeneous sector, because the two signs of \(p\) cancel, while two time samples of the trace need not commute. This differs from the Cauchy pair involving \(\partial_t\psi\). For retarded classical transfer the same \(\sin(p\ell)/p\) is analytic at threshold and continues to the evanescent range. That range carries no traveling vacuum spectrum here, and no bounded lateral Cauchy evolution is required.
+
+If one predicts only the outer trace from an intermediate trace at wall \(b\), the linear spectral covariance residual for \(a<b<c\) is
+\[
+ (D_{ac})_{11}-(D_{ab})_{11}(D_{bb})_{11}^{-1}(D_{bc})_{11}
+   =-\frac{\sin[p(b-a)]\sin[p(c-b)]}{Cp}.
+\]
+With both quadratures it is exactly zero by the transfer factorization. This is a covariance prediction statement for noncommuting time histories, not a joint measurement of classical data on timelike regions.
+
+\subsection{Characteristic currents}
+
+Put \(u=t-z\), \(v=t+z\), \(J=\partial_v\psi\), and \(\lambda=(\omega_p-p)/2>0\). Then \((\omega_p+p)/2=\mu^2/(4\lambda)\) and \(\dd p/\omega_p\) becomes \(\dd\lambda/\lambda\) with reversed integration orientation. On \(u=a\) the positive-frequency vector in \(\dd\lambda/(2\pi)\) is
+\[
+ K_{\rm null}(a,g)(\lambda)=
+       i\sqrt{\lambda/(2C)}\ e^{i\mu^2 a/(4\lambda)}\widetilde g(\lambda).
+\]
+A thin \(u\)-gate inserts a uniformly bounded multiplier tending pointwise to one; \(\lambda|\widetilde g|^2\) is integrable. This proves actual one-particle and strong Weyl convergence of the smeared curvature current. No pullback of the unsmeared potential on the characteristic surface is assumed. On one cut the distributional commutator is \(i\delta'(v-v')/(2C)\) in these coordinates, by the positive-frequency integral. Between cuts the unitary multiplier \(e^{i\mu^2\Delta u/(4\lambda)}\) gives the exact same-field joint pairing and composes. This example supplies continuum radiative cut data rather than claiming completeness of a general characteristic endpoint interface \cite{characteristic}.
+
+\section{A compact gravitational port with exact two-interval revival}
+
+An exact attenuation and revival in a gravitationally coupled oscillator model already appears in Beyer, Kim and Pikovski \cite{bkp}. The distinct construction here uses a compact transverse-traceless port of the propagating free gravitational field; the shared-representation sewing and the infinite-rank slab correlation result below are independent of the oscillator mechanism.
+
+In Minkowski space normalize the physical TT sector by \(h^{\rm TT}=2\sqrt\kappa\,q\), \(\kappa=8\pi G\), with Cauchy momentum \(p\). On real TT solutions \(\sigma((q,p),(q',p'))=\int(q:p'-p:q')\,\dd^3x\). For compact real TT \(f\) with \(\|f\|_2=1\) use the same port
+\(\operatorname{span}\{(f,0),(0,f)\}\) at \(0,\tau,2\tau\). The free pullback, up to a common reversal of its time sign, compresses to
+\begin{align}
+ A_t&=\begin{pmatrix}c(t)&s_-(t)\\-s_+(t)&c(t)\end{pmatrix},\label{eq:comp}\\
+ c(t)&=\int|\widehat f(k)|^2\cos(t|k|)\,\dd^3k,\quad
+ s_\pm(t)=\int|\widehat f(k)|^2 |k|^{\pm 1}\sin(t|k|)\,\dd^3k.\nonumber
+\end{align}
+The spatial Fourier transform here is unitary. Formula \eqref{eq:comp} follows from the free wave equation and the actual symplectic projection, which takes the \(L^2\) coefficient of \(f\) in both slots.
+
+\begin{theorem}[Compact revival after an exact replacer]
+For each \(\tau>0\) there is a compact smooth port above with \(A_\tau=0\) and \(A_{2\tau}\) invertible. With the independent finite-port preparation of Proposition \ref{thm:preparation}, its one-interval reduced channel is an exact replacer. Its two-interval shared-field channel transmits the original input; composing independent channels with a reset at the middle erases it. With a suitable family of compact ports the actual two-interval channel can be made arbitrarily close to the identity pointwise on Weyl observables in the strong topology of a fixed regular representation of the marked port.
+\end{theorem}
+\begin{proof}
+Work in units \(\tau=1\). Take five narrow disjoint smooth radial bands about the radii \[2\pi,\qquad \pi,\qquad \pi/2,\qquad 5\pi/2,\qquad 3\pi/2,\] using normalized real TT Fourier bumps. They exist by using a nonzero smooth TT projection of a real tensor on a pair of opposite angular cones. The moment vectors for the three constraints \(c(1)=s_+(1)=s_-(1)=0\) at the band centers are
+\((\cos r,r\sin r,\sin r/r)\). The first two cancel with equal weights; the last three cancel with respective positive weights \(2/9,5/9,1\). The three columns consisting of the first and the two positive sine directions are independent. In the limit of narrow bands, adjusting the corresponding three weights restores all three exact zeros, with every weight positive by continuity. At time 2 the band-center sines are all zero and the cosines have signs \(+,+,-,-,-\). If the two cosine weights are 2 each, the normalized cosine is \(5/13\), leaving an invertible matrix at time 2 for narrow enough bands.
+
+For spatial compactness put \(P_{ij}(k)=|k|^2\delta_{ij}-k_ik_j\) and use the local fourth-order TT differential operator with symbol
+\[
+ \mathcal L_{ij,ab}=
+ \tfrac12(P_{ia}P_{jb}+P_{ib}P_{ja})-\tfrac12P_{ij}P_{ab}.
+\]
+On a TT seed it acts by \(|k|^4\). For each frequency-band seed \(f_j\), apply this operator to a smooth expanding spatial cutoff of the Schwartz inverse potential with Fourier transform \(\widehat f_j/|k|^4\). The resulting compact \(f_{j,R}\) tend to each \(f_j\) in Schwartz norms. The unnormalized moments of \(\sum_j\sqrt{w_j}f_{j,R}\) are smooth in positive weights and have moment matrices approaching the disjoint-band values. The nonsingular three-weight Jacobian and the finite-dimensional implicit function theorem, with the moment-matrix entries as parameters, restore all three zeros at finite large \(R\), now allowing mixed terms. Normalize at the end; the zeros and invertibility persist. To make the two-interval map close to identity, increase both cosine weights equally, then narrow the bands and choose the finite cutoff accordingly. In the vacuum norm with weight \(|k|\) for position and \(|k|^{-1}\) for momentum, the full two-interval output on each fixed port vector approaches the vector itself; on the cosine bands the multipliers tend to identity and the other bands have vanishing relative weights. The projections are bounded on these sequences by the corresponding dual weighted norms of the same compact \(f\); these norms stay bounded in the band construction and its Schwartz approximations. Thus the remaining environment Weyl noise tends to zero also in \eqref{eq:shared}, proving the stated finite-probe approximation.
+
+To realize an actual local port, let \(u\) be the free TT solution of either compact datum and take a smooth time switch \(\chi\) with compact derivative supported in a cut collar. The wave-operator source \(P_{\rm wave}(\chi u)\) is compact by finite speed, has only spatial TT components and is conserved as a spacetime test. Its causal solution is \(u\) up to the common retarded-minus-advanced sign, by uniqueness. The two tests have physical \(\sigma=1\), so neither is a gauge or equation radical. This gives bounded-collar physical Weyl representatives with the exact test normalization.
+
+At one step \(A_\tau=0\), so the output law with product preparation does not depend on the input at all. At two steps \(A_{2\tau}=C_1B_2\ne0\) by \eqref{eq:shared}; distinct suitably chosen coherent means are distinguished by some output Weyl observable. Resetting removes this term exactly. This uses one common physical Minkowski vacuum for the initial environment marginals and free gravitational propagation throughout. The construction does not assert an exact compact vacuum recurrence.
+\end{proof}
+
+For the same port at a sufficiently short nonzero \(t\), one can also attain the mixed-covariance counterexample of Proposition \ref{thm:preparation}. A compact nonzero \(f\) cannot be an eigenfunction of the flat Laplacian (its Fourier transform would have sphere support). For input \((f,0)\) the environmental momentum starts at
+\(-t[(-\Delta)f-\langle f,(-\Delta)f\rangle f]\), so both pieces are present, since the port piece is near its input.
+
+\section{An entire commuting middle slab leaves infinite-rank memory}
+
+Return to the nonzero harmonically reduced shear of Section 2. On one Cauchy slice take \(M=(0,\ell)\), \(L=(-\infty,0)\), \(R=(\ell,\infty)\), \(\ell>0\). The commuting \(\psi(f)\) form a standing real Gaussian field with covariance \(B=A^{-1}\), where \(A=2C\sqrt{-\partial_z^2+\mu^2}\). The following conditioning is on all compactly smeared \(\psi(m)\) in \(M\), without measuring any conjugate momentum. No pointwise field value is needed.
+
+\begin{theorem}[Conditional exterior covariance]
+The resulting residual covariance between any two nonzero nonnegative outer smears \(f\in C_c^\infty(L),g\in C_c^\infty(R)\) is strictly positive. After reflection of \(R\) about \(\ell/2\) onto \(L\), its cross operator has a strictly positive quadratic form and infinite rank. No additional fixed finite jointly Gaussian linear register can remove every cross block.
+\end{theorem}
+\begin{proof}
+Represent the field in a Gaussian first chaos as \(W(A^{-1/2}f)\), with real isonormal \(W\) on \(L^2\). Subtracting the conditional mean projects orthogonally off the closed span of all \(A^{-1/2}m\) for \(m\) in the middle. Under \(A^{1/2}:H^{1/2}\to L^2\) this complement corresponds exactly to
+\[
+ \mathcal D_0=\{u\in H^{1/2}(\mathbb R):u=0\ \hbox{a.e. on }M\}.
+\]
+The residual covariance is \(\int fu_g\), with \(u_g\in\mathcal D_0\) solving
+\(a(u_g,v)=\int gv\) for all \(v\in\mathcal D_0\), where \(a(u,v)=\langle A^{1/2}u,A^{1/2}v\rangle\). This follows from orthogonal projection and uses only the closed form domain, not prescribed traces at the critical Sobolev index. This form is coercive since \(\mu>0\).
+
+Heat-kernel subordination of the square root gives
+\[
+ \frac{a(u,v)}{2C}=\mu\langle u,v\rangle+
+  \frac12\iint(u(z)-u(z'))(v(z)-v(z'))j_\mu(z-z')\,\dd z\,\dd z',
+\]
+where for \(x\ne0\)
+\[
+ j_\mu(x)=\frac{\mu}{\pi |x|}K_1(\mu|x|)
+    =\frac1\pi\int_\mu^\infty e^{-\lambda |x|}
+                           \sqrt{\lambda^2-\mu^2}\,\dd\lambda>0.
+\]
+For example integrate the heat-kernel formula
+\[\sqrt{\mu^2+p^2}-\mu=\frac{1}{2\sqrt\pi}\int_0^\infty e^{-\mu^2s}(1-e^{-sp^2})s^{-3/2}\,\dd s\]
+to obtain the kernel. If \(g\ge0\), the negative part of \(u_g\) is an allowed form test and its cross with the positive part is nonpositive, so \(u_g\ge0\). There is positive mass of \(u_g\) on the right: otherwise \(a(u_g,u_g)=\int gu_g=0\) but the functional from \(g\) is nonzero. If \(\int fu_g=0\) for a nonnegative nonzero left \(f\), then \(u_g\) vanishes on an interval where \(f>0\). A nonnegative nonzero test supported inside that interval has strictly negative bilinear form against \(u_g\), using its jump coupling to the right, whereas its pairing with \(g\) vanishes. This contradiction gives strict cross positivity.
+
+For the rank assertion, multiplication by a smooth separator of the two outside regions is bounded on \(H^{1/2}\) since the gap is positive. Thus the form domain splits into its exterior form spaces. Reflect the right side onto the left. The form is a matrix with two identical diagonals \(A_0\) and off-diagonal \(-J\), with
+\[
+ \langle u,Ju\rangle
+ =\frac{2C}{\pi}\int_\mu^\infty e^{-\ell\lambda}
+     \sqrt{\lambda^2-\mu^2}
+   \left|\int_0^\infty u(-s)e^{-\lambda s}\,\dd s\right|^2\dd\lambda .
+\]
+It is strictly positive for nonzero \(u\) by Laplace uniqueness (exponential tilting gives an integrable \(L^2\) function and analytic continuation). After whitening by \(A_0^{-1/2}\) let \(T=A_0^{-1/2}JA_0^{-1/2}\). The bounded split of the form norms and coercivity in each reflected symmetry sector give \(I\pm T\ge cI\) for some \(c>0\). The reflected cross block of the inverse is
+\[
+ \tfrac12[(A_0-J)^{-1}-(A_0+J)^{-1}]
+          =A_0^{-1/2}T(1-T^2)^{-1}A_0^{-1/2}.
+\]
+It is strictly positive on every nonzero exterior test. Hence for any \(m\) independent tests in a left window and their mirrored right tests the exact \(m\)-by-\(m\) residual matrix is positive definite. A further \(d\)-coordinate jointly Gaussian linear record changes the cross covariance by rank at most \(d\), after first residualizing the additional record against the middle Gaussian algebra. Taking \(m>d\) proves that it cannot remove the original cross block; the smallest eigenvalue on those \(m\) chosen tests is a strictly positive lower bound for its matrix operator-norm error.
+\end{proof}
+
+This is an infinite-rank statement about the actual commuting observable and linear Gaussian registers, rather than a claim about conditioning on the complete noncommutative algebra of the middle region. It agrees with the nonlocal precision of this covariance and the general classical relation between locality and Gaussian Markov structure \cite{rozanov}.
+
+\subsection{A completely positive ancilla experiment}
+
+Prepare two independent ancillas and couple them to the same field by the bounded controlled Weyl operators
+\(U_i=\exp[i\gamma_i\sigma_z^{(i)}\psi(f_i)]\), \(i=L,R\).
+For a spin-basis density matrix element \(s,s'\), tracing the field gives its characteristic function at \(d_i=\gamma_i(s_i-s_i')\). Conditioned on the full commuting middle record, its mean-dependent phase can be undone on the ancillas, and the remaining multiplier is
+\[
+ \exp[-(d_L^2 B_{LL}^{\rm res}+2d_Ld_R B_{LR}^{\rm res}
+                           +d_R^2 B_{RR}^{\rm res})/2].
+\]
+Since the covariance theorem gives \(B_{LR}^{\rm res}>0\) for suitable actual smears, this channel differs from a product of resets having exactly the same conditioned marginal covariances. The experiment requires neither a simultaneous conjugate measurement nor a spatial factorization. One can define the commuting conditional record through its Gaussian sigma algebra, or as the limit of finite spectral records.
+
+More generally, finitely many ordered controlled physical Weyls have exact influence functional
+\[
+ \omega\!\left[\prod_i W(v_i)\right]
+ =\exp\!\left[-\frac i2\sum_{i<j}\sigma(v_i,v_j)
+                    -\frac12\left\|\sum_i Kv_i\right\|^2\right].
+\]
+The complex span of those finitely many actual \(Kv_i\) in the common representation gives an exact finite positive implementation, and refinements use larger subspaces of the same field. For arbitrarily many outside windows the conditioned cross rank is unbounded. Thus a shared physical representation can sew finite experiments exactly, without implying a region reset or any bounded Gaussian register valid for all experiments. This supplies a continuum physical benchmark for the distinction from scalar positivity in \cite{positive}.
+
+\section*{Scope}
+The above results concern the fixed linearized Einstein theory, the declared gauges and calibrated tests, and a specified common physical Hadamard state. The compact echo is on successive Cauchy cuts; lateral transfer is a same-field comparison; slab conditioning is a commuting Gaussian experiment. No statement about nonlinear gravity, about a full local type-III quantum Markov property, or about a sharp characteristic field without the stated smearing follows from them.
+
+\begin{thebibliography}{99}
+\bibitem{bkp} K.~Beyer, M.~S.~Kim and I.~Pikovski, \emph{One-sided Witnesses for the Quantumness of Gravitational Dynamics}, \href{https://arxiv.org/abs/2507.15588}{arXiv:2507.15588}.
+\bibitem{fewsterhunt} C.~J.~Fewster and D.~S.~Hunt, \emph{Quantization of linearized gravity in cosmological vacuum spacetimes}, \href{https://arxiv.org/abs/1203.0261}{arXiv:1203.0261}.
+\bibitem{hack} T.-P.~Hack, \emph{Quantization of the linearised Einstein--Klein--Gordon system on arbitrary backgrounds and the special case of perturbations in inflation}, \href{https://arxiv.org/abs/1403.3957}{arXiv:1403.3957}.
+\bibitem{caruso} F.~Caruso, J.~Eisert, V.~Giovannetti and A.~S.~Holevo, \emph{Multi-mode bosonic Gaussian channels}, \href{https://arxiv.org/abs/0804.0511}{arXiv:0804.0511}.
+\bibitem{pollock} F.~A.~Pollock, C.~Rodr\'iguez-Rosario, T.~Frauenheim, M.~Paternostro and K.~Modi, \emph{Operational Markov condition for quantum processes}, \href{https://arxiv.org/abs/1801.09811}{arXiv:1801.09811}.
+\bibitem{fv} C.~J.~Fewster and R.~Verch, \emph{Quantum fields and local measurements}, \href{https://arxiv.org/abs/1810.06512}{arXiv:1810.06512}.
+\bibitem{rozanov} Yu.~A.~Rozanov, \emph{Markov random fields and stochastic partial differential equations}, Mat. Sb. \textbf{103} (1977) 590--613, \href{https://www.mathnet.ru/eng/sm2931}{Math-Net}.
+\bibitem{positive} \emph{Positive boundary systems and completely positive sewing}, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/18-positive-boundary-sewing}{Paper 18}.
+\bibitem{characteristic} \emph{Characteristic data and radiative symplectic rank}, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/25-characteristic-data-symplectic-rank}{Paper 25}.
+\bibitem{sewing} \emph{Gravitational region sewing}, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/44-gravitational-region-sewing}{Paper 44}.
+\bibitem{area} \emph{Spacelike area tomography}, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/47-spacelike-area-tomography}{Paper 47}.
+\end{thebibliography}
+\end{document}
