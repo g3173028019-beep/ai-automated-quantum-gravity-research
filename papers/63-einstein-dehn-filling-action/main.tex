@@ -1,0 +1,308 @@
+\documentclass[11pt]{article}
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.04in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\hypersetup{pdftitle={Action asymptotics for Einstein--Dehn fillings at a compact hyperbolic mirror},pdfauthor={},pdfsubject={Four-dimensional Einstein--Dehn fillings and Euclidean action}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Vol}{\operatorname{Vol}}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\HH}{\mathbb H}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\OO}{\mathrm O}
+\title{Action asymptotics for Einstein--Dehn fillings\texorpdfstring{\\}{} at a compact hyperbolic mirror}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let an orientable four-dimensional hyperbolic manifold of finite volume have one compact totally geodesic boundary and toral cusps. Fill the cusps along long primitive slopes and impose the boundary reflection on the Einstein metric of the double. If a slope has length \(L_j\) on a flat horotorus of volume \(v_j\), then the volume deficit of the \emph{half} at sectional-curvature normalization \(-1\) is
+\(\frac{32\pi^3}{81}\sum_j v_j/L_j^3+O(L_{\min}^{-6})\).
+The coefficient comes from the Weyl energy of the physical quotient caps. The first variation of the cosmological curvature integral on the closed double bounds the error of its transfer to the exact Einstein metric. At cosmological constant \(\Lambda=-3/a^2\), the Euclidean action deficit is
+\(\frac{4\pi^2a^2}{27G}\sum_j v_j/L_j^3+O(L_{\min}^{-6})\).
+An explicit congruence construction gives a seed with a compact mirror disjoint from all cusps and a sequence of pairwise nonhomeomorphic Einstein halves. The induced boundary metrics converge smoothly to the limiting hyperbolic metric.
+\end{abstract}
+
+\section{Setting and result}
+
+A \emph{mirror} here is the fixed hypersurface of the involution on the ordinary double of a manifold with one totally geodesic boundary. It is compact and separates the double. All metrics in the geometric proof are Riemannian; the normalization of a four-dimensional Einstein metric is \(\Ric(g)=-3g\). For a fixed connected orientable finite-volume hyperbolic seed \((N,g_{-1})\) with compact connected geodesic boundary \(S\), suppose the nonempty set of cusps is toral and disjoint from a collar of \(S\). Fix a flat horotorus \(T_j\) in every cusp, and let \(v_j=\Vol(T_j)\). A slope is a primitive unoriented lattice line in \(T_j\), represented by a simple closed flat geodesic of length \(L_j\). Mark the mirrored tori in the double by reflection and write \(\ell=\min_j L_j\).
+
+\begin{theorem}[Deficit on one half]\label{thm:law}
+For all sufficiently large \(\ell\), the mirrored fillings on the double of \(N\) carry a smooth reflection-invariant Einstein metric. One half is a compact Einstein manifold \(N_{\boldsymbol\sigma}\) with one totally geodesic boundary, identified with \(S\), whose induced metric tends smoothly to \(g_{-1}|_S\) as \(\ell\to\infty\). Its volume satisfies
+\begin{equation}\label{eq:volume}
+\Vol(N)-\Vol(N_{\boldsymbol\sigma})
+=\frac{32\pi^3}{81}\sum_j\frac{v_j}{L_j^3}
++O_N(\ell^{-6}).
+\end{equation}
+Changing a fixed horotorus rescales \(v_j\) and \(L_j^3\) by the same factor. The error is uniform in the long slope choices for a fixed seed and fixed horotori, without a bound on the ratio of their lengths. With the Euclidean Einstein--Hilbert and Gibbons--Hawking convention in \eqref{eq:action}, at \(\Lambda=-3/a^2\),
+\begin{equation}\label{eq:actionlaw}
+I_a(N)-I_a(N_{\boldsymbol\sigma})
+=\frac{4\pi^2a^2}{27G}\sum_j\frac{v_j}{L_j^3}
++O_{N,a,G}(\ell^{-6}).
+\end{equation}
+\end{theorem}
+
+\begin{proposition}[An explicit seed]\label{prop:seed}
+There exists a seed satisfying the hypotheses of Theorem~\ref{thm:law}. It can be constructed from the integral forms
+\[
+ f=\diag(-7,1,1,1),\qquad F=f\oplus\langle1\rangle
+\]
+using level-three and level-79 congruences. For this seed, a sequence of paired primitive fillings has a subsequence with pairwise nonhomeomorphic compact halves.
+\end{proposition}
+
+\paragraph{Relation to earlier work.}
+Anderson developed the higher-dimensional Einstein filling construction and the qualitative volume deficit via Chern--Gauss--Bonnet \cite[Theorem~1.1 and \S4]{anderson}. Bamler's weighted inverse supplies uniform control of the compact perturbation \cite[\S\S3--5]{bamler}. Anderson, Carlip, Ratcliffe, Surya, and Tschantz already used reflected Einstein fillings to obtain families of half-fill saddles with accumulating boundary geometries and actions \cite[\S\S4--5]{acr}. Their displayed seed construction begins with a cusped mirror and first fills the ends that meet it. Geodesic embedding and cut-and-fold are also established methods; see Kolpakov, Riolo, and Slavich \cite[Theorem~2.2 and \S3.1]{krs}. The form used below already appears in an arithmetic embedding example of Kolpakov, Reid, and Slavich \cite[\S5]{krl}; geometrically bounding cusped examples with compact boundary also arise in Ferrari, Kolpakov, and Reid \cite[Theorem~B]{fkr}. Our geometric input is the particular simultaneous congruence realization of an oriented seed with a compact mirror and toral ends away from it. Our asymptotic input is the coefficient and absolute remainder in \eqref{eq:volume}, with the corresponding action in \eqref{eq:actionlaw}.
+
+\section{Constructing the compact mirror}\label{sec:arithmetic}
+
+For a real form \(q\) of signature \((d,1)\), let \(\OO^+(q,\ZZ)\) be the integral group preserving a chosen sheet of the unit timelike hyperboloid. Write \(\mathrm{SO}^+(q,\ZZ)\) for its determinant-one subgroup. The arithmetic lattice theorem and its compactness criterion \cite{bhc} apply to these groups: the finite-covolume hyperbolic quotient is compact exactly when \(q\) is anisotropic over \(\QQ\). Here \(f\) is anisotropic. Indeed, in an integral solution of
+\(7x_0^2=x_1^2+x_2^2+x_3^2\), an even \(x_0\) forces all \(x_i\) to be even by reduction modulo four. After division by powers of two, an odd \(x_0\) would require a sum of three squares congruent to seven modulo eight, which is impossible. For \(x_0=0\) all coordinates vanish. In contrast, \(F\) is isotropic on \((1,2,1,1,1)\).
+
+\subsection{A free orientation-reversing involution}
+
+Let \(B\) act on the time and first spatial coordinates by
+\[
+ B_0=\begin{pmatrix}8&3\\21&8\end{pmatrix}
+\]
+and fix the other two coordinates. This integral, determinant-one matrix preserves \(f\) and the chosen sheet. Let \(R_0=\diag(1,1,1,-1)\), and set \(b=B^{10}R_0\). The two matrices commute. Modulo three, \(B_0=-I_2\), so \(b\equiv R_0\). The only nontrivial \(B^{10}\) block modulo 79 is
+\[
+ \begin{pmatrix}0&60\\25&0\end{pmatrix};
+ \qquad
+ \begin{pmatrix}0&60\\25&0\end{pmatrix}^{\!2}=-I_2\pmod {79}.
+\]
+Thus \(b\bmod79\) has order four, and its odd powers have determinant minus one and order four. Define a finite-index subgroup
+\begin{equation}\label{eq:gamma}
+ \Gamma=\{A\in\OO^+(f,\ZZ):\ A\bmod3\in\{I,R_0\},\ 
+                      A\bmod79\in\langle b\bmod79\rangle\}.
+\end{equation}
+Its determinant-one subgroup \(\Gamma^+\) is principal modulo three within \(\Gamma\) and has image contained in \(\langle b^2\bmod79\rangle\).
+
+The kernel of reduction modulo three in \(\mathrm{GL}_d(\ZZ)\) is torsion-free. To see this, a nontrivial finite-order matrix in the kernel has a nontrivial power of prime order \(p\). Write that power \(I+3^s C\) with \(s\ge1\) and \(C\not\equiv0\pmod3\). The leading nonzero binomial term of its \(p\)-th power is \(p3^s C\) modulo \(3^{s+1}\) for \(p\ne3\), or \(3^{s+1}C\) modulo \(3^{s+2}\) for \(p=3\). Both contradict the asserted order. Thus \(\Gamma^+\) is torsion-free. Any reversing torsion element of \(\Gamma\) would square to the identity; its reduction modulo 79 rules this out. The quotient
+\[
+ S=\HH^3/\Gamma^+
+\]
+is a closed oriented hyperbolic three-manifold. The action of \(b\) induces an orientation-reversing involution \(\iota\) of \(S\), since \(b^2\in\Gamma^+\). If it had a fixed point, an element of the reversing coset would fix a point of \(\HH^3\). A discrete subgroup of the compact point stabilizer is finite, contradicting the torsion-freeness of \(\Gamma\). Hence \(\iota\) is free.
+
+\subsection{An embedding with toral ends}
+
+In dimension four use the ambient lattice
+\begin{equation}\label{eq:lattice}
+ \mathcal L=\{A\in\mathrm{SO}^+(F,\ZZ):\ A\equiv I\pmod3,\ 
+       A\bmod79\in\langle\diag(b^2,1)\bmod79\rangle\}.
+\end{equation}
+It has finite index and is torsion-free; \(X=\HH^4/\mathcal L\) is oriented, noncompact, and of finite volume. Let \(H\subset\HH^4\) be the geodesic hyperplane orthogonal to the last coordinate vector \(e_5\), of \(F\)-norm one. A stabilizing element sends \(e_5\) to \(\pm e_5\); its level-three condition fixes the sign to plus. The other block lies in \(\Gamma^+\), and conversely every element of \(\Gamma^+\) extends as such a stabilizer. If \(H\) met a distinct translate \(AH\) in hyperbolic space, its unit normals \(e_5\) and \(Ae_5\) would be nonparallel vectors in the positive-definite orthogonal complement of a timelike vector. This gives \(|\langle e_5,Ae_5\rangle_F|<1\), impossible because this inner product is an integer congruent to one modulo three. Consequently \(S\) embeds as a compact two-sided geodesic hypersurface in \(X\).
+
+A cusp stabilizer of this arithmetic quotient fixes a primitive future integral isotropic vector \(u\): stabilizing its ray must fix the primitive generator. It acts integrally on the positive-definite rank-three quotient lattice \(u^\perp_{\ZZ}/\ZZ u\). The action is identity modulo three, since for \(z\perp u\) the integral vector \((Az-z)/3\) also lies in \(u^\perp\). A finite positive-definite lattice orthogonal group has no nontrivial such element, by the same congruence argument. Therefore cusp holonomy is trivial. A horospherical action with trivial linear part and fixed \(u\) is by translations, and the cusp torus has a full translation lattice because its cross-section has finite Euclidean volume. All ends are thus toral. They can be truncated away from \(S\) because \(S\) is compact.
+
+\subsection{Producing one boundary}
+
+Cut \(X\) along \(S\). If the hypersurface separates, choose a component with a cusp. Its only boundary is \(S\). If the cut complement is connected, identify one of its two boundary copies by \(\iota\). A neighborhood of that folded copy is
+\[
+\big((-\delta,\delta)\times S,\ \dd t^2+\cosh^2(t)g_S\big)
+  /\big((t,x)\sim(-t,\iota(x))\big).
+\]
+The action is free, isometric, and orientation-preserving, so this chart is smooth and the folded locus is interior. The other copy is the only boundary. Both cases give an oriented finite-volume hyperbolic \(N\) with at least one toral cusp and one compact geodesic boundary. Doubling exchanges interiors, fixes precisely \(S\), and pairs all cusps freely. This proves the seed part of Proposition~\ref{prop:seed}. It does not require the arithmetic embedding to separate before cutting and folding.
+
+\section{The cap and its Weyl energy}\label{sec:cap}
+
+First consider one cusp and omit its subscript. The toral cap on \(D^2\times\RR^2\) has local metric
+\begin{equation}\label{eq:cap}
+  g_{\mathrm{cap}}
+    =V(r)^{-1}\dd r^2+V(r)\dd\theta^2+r^2|\dd z|^2,
+   \qquad V(r)=r^2-r^{-1},\quad r\ge1.
+\end{equation}
+This is Anderson's choice of unit core radius; Bamler's convention \(\widehat r=2^{1/3}r\), \(\widehat\theta=2^{-1/3}\theta\), \(\widehat z=2^{-1/3}z\) gives the same metric. Its contractible coordinate \(\theta\) has period \(\beta=4\pi/3\), making the polar disk smooth at \(r=1\); the surface gravity in these coordinates is \(V'(1)/2=3/2\). The matching radius \(R\) is determined by
+\begin{equation}\label{eq:match}
+ L=\beta\sqrt{V(R)},\qquad v=L R^2 A,
+\end{equation}
+where \(A\) is the Euclidean area of the rank-two lattice projected to the \(z\)-plane. Indeed, completion of the primitive slope to a flat torus lattice basis gives a meridian of coordinate period \(\beta\) and two other generators \((\theta_i,z_i)\). The \(z_i\) form a basis of the projected lattice. Their translations with rotations in the \(\theta\)-circle extend to free screw motions of the disk product. The determinant of the three generators at \(r=R\) is \(L R^2|\det(z_1,z_2)|\), irrespective of the rotations. Thus the actual quotient radial density is \(\beta A r^2\dd r\). There is no finite-cover multiplicity in this density. It also follows that the quotient is diffeomorphic to \(D^2\times T^2\): the two constant disk rotations can be removed from the deck action by a smooth disk rotation linear in \(z\).
+
+Use the full tensor contraction \(|W|^2=W_{abcd}W^{abcd}\), not the squared norm of the Weyl endomorphism on \(\Lambda^2\). In the radial orthonormal frame and the circle and flat spatial directions, the curvature operator is diagonal. The sectional curvatures of the radial--circle, flat--flat, and four remaining mixed planes are respectively
+\[
+ -\tfrac12 V''(r)=-1+r^{-3},\qquad
+ -V(r)/r^2=-1+r^{-3},\qquad
+ -V'(r)/(2r)=-1-\tfrac12 r^{-3}.
+\]
+For example, these formulas follow from the arclength variable \(\dd s=V^{-1/2}\dd r\) and the warp factors \(\sqrt V\) and \(r\). The sum of the deviations through each basis direction vanishes, giving \(\Ric(g_{\mathrm{cap}})=-3g_{\mathrm{cap}}\). The six deviations are the diagonal Weyl curvature coefficients. Including the four equal-magnitude tensor entries for each unordered index pair gives
+\begin{equation}\label{eq:weylmodel}
+ |W(g_{\mathrm{cap}})|^2=12r^{-6},\qquad
+ \int_{r\le R}|W(g_{\mathrm{cap}})|^2\dd v
+       =4\beta A(1-R^{-3}).
+\end{equation}
+By \eqref{eq:match}, \(R\asymp L\) and the last expression is exactly
+\[
+ 4\beta^3\frac{v}{L^3}(1-R^{-3})^2
+       =4\beta^3\frac{v}{L^3}+O(vL^{-6}).
+\]
+This calculation uses the normalization of one cap on one half.
+
+\section{Exact reflection and a uniform remainder}\label{sec:estimates}
+
+\subsection{A globally reflection-invariant perturbation}
+
+Cut off each toral cusp of the double on matched horotori and smooth the join with its cap in a fixed radial collar, as in \cite[(3.4), (3.8)--(3.11)]{anderson} and \cite[\S3]{bamler}. Horotori for the analytic construction can be chosen at the fixed small injectivity radius used in the latter reference. The preceding matching formula and the final law apply to any fixed horotori by scaling. In the same screw-lattice coordinates used in \eqref{eq:match}, the exact hyperbolic collar is
+\begin{equation}\label{eq:collar}
+ r^{-2}\dd r^2 +(1-R^{-3})r^2\dd\theta^2+r^2|\dd z|^2 .
+\end{equation}
+The factor \(1-R^{-3}\) compares the \(\theta\)-circle at matching radius in the same coordinate of period \(\beta\). The cap and \eqref{eq:collar} differ by \(O(R^{-3})\) in local lifted \(C^{m,\alpha}\) norms on any fixed-width collar at \(r\asymp R\). To check this, use \(s=\log(r/R)\) and tangential variables \(R\theta,Rz\) locally. The two metrics have radial coefficients \((1-r^{-3})^{-1}\) and \(1\), and their tangential coefficients differ by \(e^{2s}(R^{-3}-r^{-3})\) in the first slot. All finitely many derivatives in the lifted collar are \(O(R^{-3})\).
+
+The cutoff can be chosen as a fixed function of \(\log(r/R)\), equal to zero on the inner cap and to one before the top of the cap collar, and transported by reflection to its partner. This is the bounded-width interpolation of Bamler's \S3, in coordinates matching the intrinsic flat torus exactly. The smooth approximate metric \(\widetilde g\) is exactly hyperbolic near the mirror. The Bianchi-gauged Einstein operator \(\Phi_{\widetilde g}\) has residual
+\(f_0=\Phi_{\widetilde g}(\widetilde g)\) supported on the collars, and its lifted \(C^{m-2,\alpha}\) norm is \(O(\ell^{-3})\). All derivatives here are on fixed-radius local charts, including in collapsing regions.
+
+We use the quantitative part of Bamler's compact filling argument, not merely existence. For \(m\ge 3\) and a fixed \(\alpha\in(0,1)\), let \(\|\cdot\|_*\) and \(\|\cdot\|_{**}\) be its source and perturbation Hölder norms of orders \(m-2\) and \(m\). The source norm weights local Hölder norms by the inverse of
+\[
+ w(r)=(r/R)^{1/10}+r^{-1/10}
+\]
+on a cap and by one outside. On the support of \(f_0\), and at points whose fixed-radius lifted charts meet this support, \(r/R\) is bounded below by a positive constant. Hence \(\|f_0\|_*\le C\ell^{-3}\). With its fixed factor of two absorbed in the constant, Proposition~5.1 of \cite{bamler} gives the uniform inverse bound \(\|L^{-1}f\|_{**}\le C\|f\|_*\), where \(L=D\Phi_{\widetilde g}|_{\widetilde g}\) with the same normalization as the fixed-point map. Its \S5 establishes a contraction with constant \(1/2\) on a ball of fixed radius for long slopes. If \(h\) is the fixed point of \(h\mapsto h-L^{-1}\Phi_{\widetilde g}(\widetilde g+h)\), then
+\[
+ \|h\|_{**}\le
+ \tfrac12\|h\|_{**}+\|L^{-1}f_0\|_{**},
+ \qquad
+ \|h\|_{\widetilde C^{2,\alpha}}\le C\|h\|_{**}\le C'\ell^{-3}.
+\]
+The second inequality follows from the definition of the perturbation norm: the weight is bounded above, and the cutoff trivial deformations have uniformly controlled local Hölder norms. In particular the bound is uniform in \(R_{\max}\). The compact restricted-source inverse of Anderson \cite[Proposition~3.7 and (3.37)--(3.44)]{anderson} gives the same estimate along the source segment from \(f_0\) to zero. The unrestricted inverse estimate with a logarithm is not used here.
+
+Let \(\rho\) be the involution on the filled double obtained by exchanging paired caps. All local data for \(\widetilde g\), and the cutoff functions and model deformation norms defining \(\|\cdot\|_{**}\), can be chosen in exchanged pairs. The norms are then \(\rho\)-invariant. Naturality of the gauge operator with its background and uniqueness of the linear inverse imply that the fixed-point map commutes with \(\rho^*\). Starting the contraction at zero gives a fixed solution invariant under the \emph{specified} involution \(\rho\). By elliptic regularity \(g=\widetilde g+h\) is smooth. Its Ricci curvature is negative by the lifted smallness estimate, so Lemma~2.4 of \cite{bamler} identifies the gauged zero as an Einstein metric. Locally along the fixed hypersurface \(S\) the involution acts by normal reflection, so the second fundamental form vanishes exactly. The smallness estimate on a fixed collar and elliptic interior regularity in the same gauge give smooth convergence there. Restricting to one component gives the claimed half and the convergence of its induced boundary metric.
+
+\subsection{Comparing squared Weyl integrals}
+
+The approximate metric has uniformly bounded physical volume. Each interior cap through its matching radius has volume at most \(\beta A R^3/3=O(v)\), each transition collar has bounded volume, and the complement is a fixed hyperbolic core. On the transition collar \(|W(\widetilde g)|=O(R^{-3})\), by the lifted \(C^2\) comparison with \eqref{eq:collar}. Removing the corresponding outer part of the full model cap costs \(O(R^{-6})\) in its Weyl integral: the removed region is at \(r\asymp R\), has bounded physical volume, and has Weyl square \(O(R^{-6})\) by \eqref{eq:weylmodel}. Outside the collars and caps the Weyl tensor vanishes. Thus on one physical half,
+\begin{equation}\label{eq:approx}
+ \int |W(\widetilde g)|_{\widetilde g}^2\dd v_{\widetilde g}
+   =4\beta^3\sum_j \frac{v_j}{L_j^3}+O_N(\ell^{-6}),
+ \qquad
+ \|W(\widetilde g)\|_{L^2(\widetilde g)}=O_N(\ell^{-3/2}).
+\end{equation}
+
+A stronger comparison than direct Cauchy--Schwarz is available on the closed double. For a Riemannian metric \(q\) there write \(S_q=\mathrm{Scal}(q)\) and \(E_q=\Ric(q)-\tfrac14 S_q q\), and define
+\[
+ \mathcal F(q)=\int (S_q+6)\dd v_q.
+\]
+The four-dimensional Euler density is \(|W(q)|^2-2|E_q|^2+S_q^2/6\) in our contraction convention. Since \(S_q^2/6=-4(S_q+6)+(S_q+12)^2/6\), Chern--Gauss--Bonnet gives the exact identity
+\begin{equation}\label{eq:identity}
+ \int |W(q)|^2\dd v_q
+ =32\pi^2\chi+4\mathcal F(q)+2\int |E_q|^2\dd v_q
+           -\frac16\int (S_q+12)^2\dd v_q.
+\end{equation}
+Here \(\chi\) and all integrals refer to the same closed filled double. For the exact metric \(g\) the two defect squares vanish. For \(\widetilde g\) they are \(O_N(\ell^{-6})\) since the Einstein residual is pointwise \(O_N(\ell^{-3})\) and the physical volumes are uniformly bounded.
+
+To estimate the remaining term, use the path \(q_t=\widetilde g+t h\), \(0\le t\le1\), which is positive definite for long slopes. The lifted \(C^2\) estimate directly implies downstairs that \(\Ric(q_t)+3q_t=O_N(\ell^{-3})\) and that the volumes are uniformly bounded, for all \(t\). The first variation on the closed manifold, with the metric tensor as the variable, is
+\[
+ \frac{\dd}{\dd t}\mathcal F(q_t)
+ =\int \left\langle -\big(\Ric(q_t)+3q_t\big)
+                   +\tfrac12(S_{q_t}+12)q_t,\ h\right\rangle_{q_t}
+          \dd v_{q_t}.
+\]
+There is no boundary term. The tensor in angle brackets before \(h\) is \(O_N(\ell^{-3})\); since \(h=O_N(\ell^{-3})\) pointwise, this derivative is \(O_N(\ell^{-6})\). Therefore \(\mathcal F(g)-\mathcal F(\widetilde g)=O_N(\ell^{-6})\). Subtract \eqref{eq:identity} for the two metrics and divide by two, using reflection invariance of both metrics. This upgrades \eqref{eq:approx} to
+\begin{equation}\label{eq:exact}
+ \int_{N_{\boldsymbol\sigma}} |W(g)|_{g}^2\dd v_g
+   =4\beta^3\sum_j\frac{v_j}{L_j^3}+O_N(\ell^{-6}).
+\end{equation}
+The gain comes from stationarity to first order at the Einstein equation. It is not obtained by assigning a leading coefficient to the approximate volume difference.
+
+\section{Volume, action, and the sequence of topologies}\label{sec:action}
+
+Truncating the cusp ends does not change Euler characteristic. Each gluing torus and each disk--torus cap has Euler characteristic zero. Thus \(\chi(N_{\boldsymbol\sigma})=\chi(N)\). For an Einstein four-metric at this normalization, the full-contraction Euler density is
+\[
+ |\mathrm{Rm}|^2-4|\Ric|^2+\mathrm{Scal}^2=|W|^2+24.
+\]
+For the exact double the Chern--Gauss--Bonnet formula has no boundary term. Since the volume, Weyl integral, and Euler characteristic each double (\(\chi(S)=0\)), a single half satisfies
+\[
+ 32\pi^2\chi(N_{\boldsymbol\sigma})
+   =\int_{N_{\boldsymbol\sigma}} (|W(g)|^2+24)\dd v_g .
+\]
+For the hyperbolic seed, double and truncate its ends. The boundary curvature correction tends to zero, since each shrinking horotorus has vanishing area and uniformly bounded curvature and second fundamental form. The identity for one half of the seed is \(32\pi^2\chi(N)=24\Vol(N)\). Subtraction gives the exact relation
+\[
+ \Vol(N)-\Vol(N_{\boldsymbol\sigma})
+ =\frac1{24}\int_{N_{\boldsymbol\sigma}}|W(g)|^2\dd v_g.
+\]
+Inserting \eqref{eq:exact} gives \eqref{eq:volume} because \(\beta^3/6=32\pi^3/81\). In particular the deficit is positive for sufficiently long slopes, and the ratio of the deficit to its leading term tends to one: a shortest slope alone contributes at least \((\min_j v_j)\ell^{-3}\).
+
+\begin{corollary}[Closed case]
+For a fixed complete orientable finite-volume hyperbolic four-manifold without boundary and with toral cusps, filling all its cusps along sufficiently long primitive slopes gives closed Einstein metrics for which \eqref{eq:volume} holds with the sum over those cusps. No reflection is necessary in the closed case.
+\end{corollary}
+\begin{proof}
+Apply the cap computation and the same uniform compact inverse to the filled manifold itself. In \eqref{eq:identity}, integrate on that manifold, with no division by two. Euler characteristic is preserved by the same toral excisions and attachments. The exact volume identity and \eqref{eq:volume} follow as above.
+\end{proof}
+
+Restore the physical radius by \(g_a=a^2g\), so that \(\Ric(g_a)=\Lambda g_a\) and \(\mathrm{Scal}(g_a)=4\Lambda\) with \(\Lambda=-3/a^2\). Let \(H\) be the trace of the second fundamental form with respect to the outward normal. The convention is
+\begin{equation}\label{eq:action}
+ I_a(Y)=-\frac1{16\pi G}\int_Y(\mathrm{Scal}(g_a)-2\Lambda)\dd v_{g_a}
+        -\frac1{8\pi G}\int_{\partial Y}H\dd A_{g_a}.
+\end{equation}
+Here \(H=0\) at the mirror. For the cusped seed, using truncations adds terms that vanish as the end areas shrink. Thus the action on a half is \(\frac{3a^2}{8\pi G}\) times the unit-normalized volume, proving \eqref{eq:actionlaw}. In physical units the horotorus volume and cubed slope length both gain the factor \(a^3\).
+
+There is also an intrinsic normalization in terms of the areas of the \emph{marked} cap cores \(C_j=\{r=1\}\). In the approximate metric each has unit-normalized area \(A_j\). In the exact physical metric its area is \(a^2 A_j(1+O_N(\ell^{-3}))\) by pointwise metric comparison on the marked torus. Since \(A_j=O_N(L_j^{-3})\), \eqref{eq:match} and \eqref{eq:actionlaw} give
+\begin{equation}\label{eq:core}
+ I_a(N)-I_a(N_{\boldsymbol\sigma})
+   =\frac1{12G}\sum_j \operatorname{Area}_{g_a}(C_j)
+      +O_{N,a,G}(\ell^{-6}).
+\end{equation}
+This refers to the displayed embedded tori in the smooth filling, without asserting minimality or uniqueness of their representatives.
+
+For the arithmetic example, choose a fixed lattice basis \((w_{j1},w_{j2},w_{j3})\) on each cusp and use
+\[
+ \sigma_j(n)=n w_{j1}+w_{j2}.
+\]
+These slopes are primitive and \(L_j(n)=n|w_{j1}|+O(1)\). The collections on the double are distinct as \(n\) grows. Anderson's finite ambiguity theorem for sufficiently long fillings in dimensions at least four \cite[Proposition~3.9]{anderson} implies that an infinite subsequence gives pairwise nonhomeomorphic doubles. A homeomorphism between compact halves necessarily preserves their boundaries, and doubling it would give a homeomorphism of the doubles. This proves the last part of Proposition~\ref{prop:seed}. Along this particular parametrized sequence the action is eventually strictly increasing. Indeed, extending \(n\) to a real variable \(t\), \(L_j(t)=|t w_{j1}+w_{j2}|\) gives
+\[
+ L_j(n)^{-3}-L_j(n+1)^{-3}
+ =3|w_{j1}|^{-3}n^{-4}+O(n^{-5}).
+\]
+The \(O(n^{-6})\) errors in \eqref{eq:actionlaw} cannot reverse this sign for large \(n\). This monotonicity uses the explicit sequence, not arbitrary changes of primitive slopes.
+
+The limit in \eqref{eq:actionlaw} is a family of on-shell Euclidean actions evaluated at convergent boundary metrics. It does not require them to be identical at finite slope, does not give their relative one-loop determinants, and does not decide the sum of saddles for an exactly fixed boundary metric.
+
+\begin{thebibliography}{9}
+\bibitem{anderson}
+M.~T. Anderson,
+\emph{Dehn filling and Einstein metrics in higher dimensions},
+J. Differential Geom. \textbf{73} (2006), 219--261.
+\href{https://arxiv.org/abs/math/0303260}{arXiv:math/0303260}.
+
+\bibitem{bamler}
+R.~H. Bamler,
+\emph{Construction of Einstein metrics by generalized Dehn filling},
+J. Eur. Math. Soc. \textbf{14} (2012), 887--909.
+\href{https://doi.org/10.4171/JEMS/321}{doi:10.4171/JEMS/321}.
+
+\bibitem{acr}
+M.~Anderson, S.~Carlip, J.~G. Ratcliffe, S.~Surya, and S.~T. Tschantz,
+\emph{Peaks in the Hartle--Hawking wave function from sums over topologies},
+Class. Quantum Grav. \textbf{21} (2004), 729--742.
+\href{https://arxiv.org/abs/gr-qc/0310002}{arXiv:gr-qc/0310002}.
+
+\bibitem{krs}
+A.~Kolpakov, S.~Riolo, and L.~Slavich,
+\emph{Embedding non-arithmetic hyperbolic manifolds},
+Math. Res. Lett. \textbf{29} (2022), 247--274.
+\href{https://arxiv.org/abs/2003.01707}{arXiv:2003.01707}.
+
+\bibitem{krl}
+A.~Kolpakov, A.~W. Reid, and L.~Slavich,
+\emph{Embedding arithmetic hyperbolic manifolds},
+Math. Res. Lett. \textbf{25} (2018), 1305--1328.
+\href{https://arxiv.org/abs/1703.10561}{arXiv:1703.10561}.
+
+\bibitem{fkr}
+L.~Ferrari, A.~Kolpakov, and A.~W. Reid,
+\emph{Infinitely many arithmetic hyperbolic rational homology 3-spheres that bound geometrically},
+Trans. Amer. Math. Soc. \textbf{376} (2023), 1979--1997.\newline\href{https://doi.org/10.1090/tran/8816}{doi:10.1090/tran/8816}.
+
+\bibitem{bhc}
+A.~Borel and Harish-Chandra,
+\emph{Arithmetic subgroups of algebraic groups},
+Ann. of Math. \textbf{75} (1962), 485--535.
+\href{https://doi.org/10.2307/1970210}{doi:10.2307/1970210}.
+\end{thebibliography}
+\end{document}

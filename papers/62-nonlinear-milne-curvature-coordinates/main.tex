@@ -1,0 +1,269 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Nonlinear Vacuum Curvature Coordinates at a Compact Milne Cut}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\Curl}{\operatorname{curl}}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\divg}{\operatorname{div}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Mink}{\mathbb R^{3,1}}
+\newcommand{\SO}{\mathrm{SO}_0(3,1)}
+\newcommand{\ISO}{\mathrm{ISO}^{+}(3,1)}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Lie}{\mathcal L}
+\newcommand{\C}{\mathcal C}
+\newcommand{\F}{\mathcal F}
+\title{Nonlinear Vacuum Curvature Coordinates at a Compact Milne Cut\\
+\large The locally flat fiber and its affine Cartan periods}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+Vanishing local curvature need not determine a spatially compact Milne deformation. We construct a local chart for exact four-dimensional vacuum initial data with constant mean curvature near a marked compact hyperbolic Milne cut, without a rigidity hypothesis on the hyperbolic manifold. Two infinite-dimensional coordinates are projections of the physical electric and magnetic Weyl tensors. The remaining finite coordinates are obtained by simultaneous affine-frame reduction of actual Cartan transports along marked paths. Their differential detects exactly the trace-free Codazzi kernel of the tidal map. Inverting the combined map shows that the zero projected-curvature fiber consists precisely of genuinely flat CMC developments and that projected tides bound the distance to the unique flat datum with the same measured periods. The finite block is attained and nontrivial on doubles of suitable compact hyperbolic manifolds with geodesic boundary. This is a local constraint and reconstruction result, not a prescription of arbitrary raw Weyl data or a global stability theorem.
+\end{abstract}
+
+\section{Background and result}\label{sec:intro}
+
+Let \((\Sigma,\gamma)\) be a marked closed oriented hyperbolic three-manifold, with sectional curvature \(-1\). The reference spacetime is the compact Milne quotient with metric \(-\dd t^2+t^2\gamma\), \(t>0\). With future normal \(n\) use \(K=-\tfrac12\Lie_n g\) and the fixed CMC value \(\tau=\tr_g K=-3\); the reference datum is \((g,K)=(\gamma,-\gamma)\) at \(t=1\). Write \(S=K+g\). Sobolev orders are \(g\in H^s\), \(S\in H^{s-1}\), \(s\) any integer at least \(5\), throughout relative to \(\gamma\). A marking fixes the identification with the reference manifold up to diffeomorphisms isotopic to the identity. The spatial gauge is harmonicity of \(\id:(\Sigma,g)\to(\Sigma,\gamma)\), and uses no additional matter fields.
+
+Write \(H^r_{\TT}\) for the \(\gamma\)-trace-free, \(\gamma\)-divergence-free symmetric tensors of Sobolev class \(H^r\), and \(\Pi_{\TT}\) for the fixed \(L^2(\gamma)\)-orthogonal projection onto that subspace. Let
+\[
+ \C=\{D\in H^r_{\TT}: \nabla_iD_{jk}=\nabla_jD_{ik}\},
+ \qquad
+ \Pi_{\perp}=(1-\Pi_{\C})\Pi_{\TT}.
+\]
+Here the dimension and the tensors in \(\C\) are independent of \(r\) by elliptic regularity below, and \(\Pi_\C\) is the \(L^2(\gamma)\)-projection. Let \(E,B\) denote the electric and magnetic vacuum Weyl tensors relative to the cut normal, with a fixed orientation for \(B\). The measured channels are
+\[
+  e=\Pi_{\TT}E,\qquad b=\Pi_{\perp}B .
+\]
+In particular \(e,b\) are not the raw Weyl fields prescribed independently. One obtains \(p\in\C\) by finite smooth functions of marked affine Cartan transports; the definition includes frame and origin independence, but the paths must be fixed even when curvature is present.
+
+\begin{theorem}\label{thm:main}
+For each \(s\geq5\), near the marked Milne datum the exact vacuum CMC data in harmonic gauge form a smooth Banach manifold. There exists a finite Cartan coordinate \(p\) so that
+\[
+ \F(g,S)=(e,b,p)\ :\ 
+ \mathcal U\longrightarrow
+ \mathcal V\ \subset\
+ H^{s-2}_{\TT}\ \oplus\
+ (H^{s-2}_{\TT}\cap\C^\perp)\ \oplus\ \C
+ \tag{1}\label{eq:chart}
+\]
+is a smooth diffeomorphism to an open product neighborhood of zero. The gauge represents the local marked spatial quotient. The finite coordinate uses only one affine Cartan transport per marked generator of \(\pi_1\Sigma\), before quotienting by the common affine frame.
+
+The slice \(e=b=0\) consists exactly of data with flat vacuum development in this neighborhood. Write \((g_{\rm f}(p),S_{\rm f}(p))=\F^{-1}(0,0,p)\) for their unique local representatives. On a smaller neighborhood,
+\begin{align}
+ \|g-g_{\rm f}(p)\|_{H^s}+\|S-S_{\rm f}(p)\|_{H^{s-1}}
+     &\asymp \|e\|_{H^{s-2}}+\|b\|_{H^{s-2}},\label{eq:metric-est}\\
+ \|E\|_{H^{s-2}}+\|B\|_{H^{s-2}}
+     &\asymp \|e\|_{H^{s-2}}+\|b\|_{H^{s-2}} .\label{eq:weyl-est}
+\end{align}
+The constants may depend on \(\gamma\), on the marked paths and calibration, and on the neighborhood.
+\end{theorem}
+
+\begin{proposition}\label{prop:attainment}
+The finite block is naturally identified at the reference with
+\(H^1(\pi_1\Sigma;\Mink_\rho)\), where \(\rho\) is the marked hyperbolic holonomy on the Lorentz vector representation. On the local flat family the full transport tuple is the affine deck holonomy up to common conjugation. There exist \(\Sigma\) with a nonzero finite block; one may take the oriented double of a compact connected-boundary hyperbolic three-manifold with totally geodesic boundary.
+\end{proposition}
+
+\paragraph{Relation to existing results.}
+Andersson and Moncrief used the CMC spatially harmonic formulation, identified the flat infinitesimal directions in terms of trace-free Codazzi tensors, and assumed rigidity to exclude them in their curvature-energy global stability theorem \cite[Lemma~2.5, Definition~2.6 and Appendix~A]{AMfuture}. Valiente Kroon and Williams identified the Codazzi kernel and cokernel in their extended constraint system and constructed nonlinear compact CMC data with prescribed curvature components under a conformal rigidity hypothesis for the relevant construction \cite[Sections~3.4 and~4]{VKW}. Bonsante constructs and classifies the global flat affine deformation stock \cite{Bonsante}. Here we use the ordinary vacuum constraints and project the tidal map on a fixed reference. The added conclusion is an open nonlinear product chart on the full local constraint manifold, including nonrigid backgrounds, together with recovery of the actual flat fiber and quantitative comparison. Neither the Codazzi kernel itself nor the classification of flat spacetimes is claimed as new.
+
+\section{The exact constraint manifold and marked gauge}\label{sec:gauge}
+
+With the chosen \(\tau\), the ordinary constraints and gauge become
+\begin{align}
+ R(g)+6-|S|_g^2=0,\qquad
+ H_\gamma(g)^i=g^{jk}\bigl(\Gamma(g)^i_{jk}-\Gamma(\gamma)^i_{jk}\bigr)=0,
+ \nonumber\\
+ \tr_gS=0,\qquad \divg_gS=0 .
+ \label{eq:constraints}
+\end{align}
+Indeed \(|K|^2=|S|^2+3\) when \(\tr_gS=0\), and the constant trace removes the momentum trace derivative. The four-output map in \eqref{eq:constraints} is smooth from the indicated open metric Sobolev cone times \(H^{s-1}\) into \(H^{s-2}\), \(H^{s-1}(T\Sigma)\), \(H^{s-1}\), and \(H^{s-2}(T^*\Sigma)\), respectively. The connection differences use one metric derivative, scalar curvature two, and the momentum constraint one shear derivative. The Sobolev multiplication bound in three dimensions at these orders and smooth positive matrix inversion justify these mappings.
+
+Put \(\Delta=\nabla^i\nabla_i\) for the nonpositive scalar or rough Laplacian, and \(\beta h=\divg_\gamma h-\tfrac12\dd\tr_\gamma h\). We lower the harmonic output by \(\gamma\) at the reference. The linearized blocks there are
+\[
+ (h,\sigma)\longmapsto
+ \left(\divg_\gamma\divg_\gamma h-\Delta\tr_\gamma h
+                    +2\tr_\gamma h,\ \beta h,\ 
+        \tr_\gamma\sigma,\ \divg_\gamma\sigma\right).
+\]
+For target \((a,b)\) in the first block, solve
+\[
+ (-2\Delta+6)f=a,\qquad
+ (\Delta-2)X=b-\beta(f\gamma),\qquad h=f\gamma+\Lie_X\gamma .
+\]
+The scalar derivative on \(\Lie_X\gamma\) vanishes since \(R(\gamma)\) is constant, and \(\beta(\Lie_X\gamma)=(\Delta-2)X\) since \(\Ric(\gamma)=-2\gamma\). The elliptic inverses give \(f\in H^s\), \(X\in H^{s+1}\). If this block vanishes, the trace solves \((-\tfrac12\Delta+2)\tr_\gamma h=0\), so \(h\) is TT. To hit shear targets \((c,d)\), put
+\[
+ \sigma=\tfrac{c}{3}\gamma+\Lie_Y\gamma
+               -\tfrac23(\divg_\gamma Y)\gamma,\qquad
+ (\Delta-2)Y+\tfrac13\dd\divg_\gamma Y=d-\tfrac13\dd c .
+\]
+The negative of the one-form operator has quadratic form
+\(\|\nabla Y\|_2^2+2\|Y\|_2^2+\tfrac13\|\divg_\gamma Y\|_2^2\). It is elliptic and invertible; \(Y\) belongs to \(H^s\). The shear kernel is TT by definition. These split right inverses prove by submersion that the zero set of \eqref{eq:constraints} is a genuine Banach submanifold with tangent
+\(H^s_{\TT}\oplus H^{s-1}_{\TT}\). The same trace-free symmetrized-gradient operator gives the York decomposition and boundedness of \(\Pi_{\TT}\) at the orders used below.
+
+For a nearby metric \(g\), solve for the harmonic map
+\(U:(\Sigma,g)\to(\Sigma,\gamma)\) close to the identity. The tension equation as a map of \((g,U)\) has target \(H^{s-1}\), trivialized along \(U\) in a fixed near-identity chart. Its derivative in \(U\) at the reference is the Jacobi operator \(\Delta-2\); the explicit dependence on \(g\) and its first derivatives is smooth at these orders. Thus \(U\) is \(H^{s+1}\) and close to the identity, hence a degree-one diffeomorphism. The simultaneous pullbacks by \(U^{-1}\) satisfy \eqref{eq:constraints}. Any two harmonic maps in the same homotopy class into \((\Sigma,\gamma)\) give the same map when one is a diffeomorphism: join equivariant lifts by pointwise geodesics. Along this homotopy, the energy second variation is the integral of the nonnegative sum of the squared covariant derivative of the variation and the negative-curvature term, the latter being a sum of squared wedges of the variation with images of tangent vectors. Both endpoint first variations vanish. Convexity forces the second variation to vanish, and the full-rank endpoint forces the variation to be zero. Thus a marked diffeomorphism between harmonic-gauge representatives is the identity. The comparison uses continuity of Sobolev pullback, not differentiability of a same-order Sobolev group action. Smooth constructions below are on the directly defined submanifold.
+
+We fix the temporal gauge locally at \(\tau=-3\). The linearized mean curvature under normal graph displacement is \(-\Delta_g+|K|_g^2\) on a vacuum CMC cut, positive since \(|K|^2\geq 3\). This gives uniqueness of the nearby CMC graph with the same mean curvature in a fixed development, in the regular local graph class. For a Killing initial datum on such a cut the same equation annihilates its lapse (the shift term is the derivative of the constant trace), hence lapse zero. The shift must then be Killing for \(g\), impossible by the Bochner integral since \(\Ric(g)\) is negative in the small neighborhood. Classical vacuum local well-posedness and constraint propagation in CMC spatially harmonic gauge are as in \cite{AMelliptic}; no global assertion about CMC foliation is used.
+
+\section{The tidal map and its finite defect}\label{sec:tidal}
+
+Use the curvature convention \(R^\rho{}_{\sigma\mu\nu}
+=\partial_\mu\Gamma^\rho_{\nu\sigma}-\partial_\nu\Gamma^\rho_{\mu\sigma}+\cdots\).
+The Gauss and Codazzi equations give on the vacuum data
+\[
+ E=\Ric(g)+\tau K-K\circ_g K
+   =\Ric(g)+2g-S-S\circ_g S,\qquad
+ B_{ij}=(\Curl_gS)_{ij}=\epsilon_i{}^{kl}(g)\nabla^g_kS_{lj}.
+ \tag{2}\label{eq:EB}
+\]
+We choose the sign of the dual Weyl tensor accordingly. The trace of \(E\) vanishes by the Hamiltonian constraint; the trace and antisymmetric part of \(B\) vanish by the trace and momentum constraints. Both maps are smooth into \(H^{s-2}\); they are not assumed to take values in \(H^{s-2}_{\TT}\) prior to projection.
+
+For a \(\gamma\)-TT tensor \(z\), \(\Curl_\gamma z\) is TT. Trace zero follows by skew-symmetry of the volume tensor paired with the symmetric indices of \(z\); the dual of its skew part is proportional to \(\divg_\gamma z-\dd\tr_\gamma z\). The divergence reduces to a curvature commutator under the alternating contraction, which at constant sectional curvature vanishes on a symmetric \(z\). On the closed manifold the operator is formally self-adjoint by integration by parts. In an orthonormal frame contraction of the two volume forms gives
+\[
+ (\Curl_\gamma^2 z)_{ij}=\nabla^k\nabla_i z_{kj}-\Delta z_{ij}.
+\]
+To evaluate the first term, commute derivatives through \(\nabla^k z_{kj}=0\). The Ricci term is \(-2z_{ij}\); the remaining constant-curvature contraction is \(-z_{ij}+\gamma_{ij}\tr_\gamma z=-z_{ij}\). Hence
+\begin{equation}
+ \Curl_\gamma^2=\nabla^*\nabla-3 \quad\hbox{on TT},\qquad
+ A:=\tfrac12(\nabla^*\nabla-2)=\tfrac12(1+\Curl_\gamma^2).
+ \label{eq:curl}
+\end{equation}
+The same commutator in the variation of \(\Ric\) gives
+\(D\Ric(h)=\tfrac12(\nabla^*\nabla-6)h\) for TT \(h\). Equation~\eqref{eq:EB} then yields
+\[
+ D(e,b)(h,\sigma)=(Ah-\sigma,\ \Curl_\gamma\sigma).
+ \tag{3}\label{eq:linear}
+\]
+The second component is already orthogonal to \(\C=\ker\Curl_\gamma\). The description of the kernel as Codazzi follows by contracting the exterior derivative in the first two tensor indices with \(\epsilon\), an isomorphism in dimension three.
+
+The compact elliptic square in \eqref{eq:curl} gives finite smooth kernel, a discrete spectrum on the reducing TT subspace and bounded elliptic inverses. In particular \(A:H^s_{\TT}\to H^{s-2}_{\TT}\) is invertible, with the spectral lower bound \(A\geq \tfrac12\); \(\Curl_\gamma\) is invertible from \(H^{s-1}_{\TT}\cap\C^\perp\) to \(H^{s-2}_{\TT}\cap\C^\perp\), using \(\Curl_\gamma(\Curl_\gamma^2)^{-1}\) there. One can use smooth TT domains initially, which are dense by the York projection; elliptic estimates for the Laplacian and self-adjointness give the indicated completed maps. Therefore \eqref{eq:linear} is onto, and its kernel is precisely
+\[
+        (h,\sigma)=(2D,D),\qquad D\in\C.
+ \tag{4}\label{eq:kernel}
+\]
+For such \(D\), \(AD=D/2\). In particular the purely tidal map has a finite defect even though the ordinary constrained/harmonic submanifold is regular.
+
+\section{Finite affine transport with frame-independent calibration}\label{sec:cartan}
+
+Let \(\mathcal E=\mathbb R\oplus T\Sigma\) have Lorentz metric \(-f^2+g(Y,Y)\) on a vector \((f,Y)\). The Gauss--Weingarten connection and solder along the cut in our signs are
+\begin{align}
+ {\cal D}_X(f,Y)&=\bigl(Xf-K(X,Y),\,\nabla^g_XY-fK^\sharp X\bigr),\\
+ \vartheta(X)&=(0,X).
+ \label{eq:GW}
+\end{align}
+These formulas preserve the Lorentz pairing and are the restrictions of spacetime parallel transport and the physical infinitesimal displacement in any development. Fix a basepoint \(o\) and piecewise smooth based paths \(c_j\), \(1\leq j\leq m\), representing a generating set. For each path, if \(P_t:\mathcal E_o\to\mathcal E_{c_j(t)}\) is parallel transport from the starting point, record the affine element
+\[
+ L_j=P_1^{-1},\qquad
+ d_j=\int_0^1 P_t^{-1}\vartheta(\dot c_j(t))\,\dd t .
+ \tag{5}\label{eq:transport}
+\]
+On flat data this convention agrees with forward deck holonomy after using the affine frame whose origin is the developed starting point. Indeed in a flat parallel frame the integral is the difference of developed endpoints; the final tangent frame is related to the initial one by the deck linear part. The use of \(P_1^{-1}\) then gives that linear part. The pair records ordinary affine transport for all nearby curved data; for curved data an actual representative path is part of the measurement and the tuple does not in general define a representation of \(\pi_1\Sigma\). Via the positive \(g\)-relative-to-\(\gamma\) square root and one reference frame at \(o\), \eqref{eq:transport} is a smooth finite-dimensional function of our Sobolev data. This follows from the compact-interval linear ODE for \(P_t\), whose coefficients along the fixed paths involve at most first derivatives of \(g\) and zero derivatives of \(K\). Shrinking the chart gives the required uniform regularity for their continuous evaluation.
+
+In a calibrated affine frame the reference tuple is \((\rho_j,0)\), where \(\rho_j=\rho([c_j])\). A change of affine frame or origin acts by simultaneous conjugation by \(\ISO=\SO\ltimes\Mink\). We now justify an honest local quotient by this action; no representative-dependent coordinate is needed. The reference tuple has trivial centralizer. A Lorentz transformation commuting with the cocompact lattice fixes the attracting rays of all its loxodromic elements, a dense set of future null rays, hence all such rays and then is the identity. For a translation in the centralizer the translation vector is fixed by all \(\rho_j\). It is orthogonal to every attracting null eigenvector (by invariance and the nonunit eigenvalue), so must be zero. The infinitesimal orbit map is thus injective. Choose a smooth finite-dimensional transverse slice to the orbit and apply the ordinary inverse function theorem to the map \((u,z)\mapsto\exp(u)z\exp(-u)\). It parametrizes a local neighborhood as orbit direction times slice.
+
+This transverse map also identifies tuples conjugate by a frame not assumed nearby. Choose four fixed words in the generators whose attracting null rays at the reference give a basis of \(\Mink\); the cocompact lattice has dense attracting endpoints (e.g. \cite{Ratcliffe}), so this is possible. In nearby tuples these loxodromic words persist and their attracting representatives \(n_i\) vary continuously with the normalization of unit time component. If nearby tuples are conjugate with Lorentz part \(\Lambda\), then \(\Lambda n_i=\lambda_i n_i'\), \(\lambda_i>0\). Distinct future null rays pair nontrivially; their pairings bound every \(\lambda_i\lambda_j\) above and away from zero uniformly. For three pairwise distinct indices, taking the ratio of two products to the third bounds each first scale and then all four. Uniform nondegeneracy of the bases bounds both \(\Lambda\) and \(\Lambda^{-1}\). The translation part \(a\) is bounded by
+\[
+    d'_j-\Lambda d_j=(I-L'_j)a ,
+\]
+since the joint operator in \(a\) is injective and uniformly bounded below near the reference. If there were arbitrary conjugators outside the local product chart between pairs converging to the reference, a subsequence would converge to its centralizer, contradicting triviality. Thus after shrinking, every conjugacy between nearby tuples is in the near-identity product neighborhood and produces the same sliced tuple. A different original choice of reference frame describes the conjugate chart. The residual physical marking of paths is not removed.
+
+The translation components of the reference orbit tangent are exactly the generator coboundary vectors \(((I-\rho_j)a)_j\); the infinitesimal Lorentz orbit tangent only changes the linear parts. Therefore any linear functional (vector-valued is allowed) on the tuple tangent that kills these orbit directions arises as differential of a smooth function on the quotient slice. We choose the needed one after identifying the flat family and its exact periods.
+
+\section{Codazzi, affine periods and actual flat CMC data}\label{sec:flat}
+
+On the universal hyperboloid, let \(v:\mathbb H^3\to\Mink\) be its standard unit future position vector and write \(\eta\) for the Minkowski metric. For tangent vectors \(X,Y\) the ambient derivative has
+\[
+   \partial_X v=\dd v(X),\qquad
+   \partial_X\dd v(Y)=\dd v(\nabla^\gamma_XY)+\gamma(X,Y)v .
+\]
+A trace-free Codazzi tensor \(D\) is viewed as a symmetric endomorphism using \(\gamma\). The one-form \(\dd v(D\,\cdot\,)\) with values in \(\Mink\) is closed: the tangential exterior derivative is the Codazzi equation and the normal part is the antisymmetric part of \(D\). Let \(f_D\) be its primitive on \(\mathbb H^3\), normalized at a lifted marked basepoint. It can be chosen linearly in \(D\). Equivariance of its derivative implies
+\[
+ f_D(\delta x)=\rho(\delta)f_D(x)+c_D(\delta),\qquad
+ c_D(\delta_1\delta_2)=c_D(\delta_1)+\rho(\delta_1)c_D(\delta_2).
+ \tag{6}\label{eq:cocycle}
+\]
+Changing its origin adds a coboundary, so \(D\mapsto[c_D]\) is defined on \(\C\).
+
+For injectivity, if \(c_D\) is a coboundary, change the constant in \(f_D\) to make it equivariant. Decompose \(f_D=\dd v(Y)+a v\), with \(a,Y\) descending to \(\Sigma\). The zero normal part of its derivative yields \(Y=-\nabla a\), while the tangent part gives \(D=aI-\nabla^2 a\) with \(\nabla^2 a\) viewed as an endomorphism. Trace-freeness gives \((3-\Delta)a=0\); hence \(D=0\). Conversely, for any cocycle \(c\), the associated flat affine bundle has a smooth section, using affine combinations of local sections with a partition of unity. This gives a quasi-equivariant smooth map \(F\) on \(\mathbb H^3\). Define \(a=-\eta(F,v)\). For any constant ambient vector \(b\), \(a_b=-\eta(b,v)\) has
+\[
+ b=\dd v(-\nabla a_b)+a_bv,\qquad \nabla^2a_b=a_b I .
+\]
+Thus \(F'=\dd v(-\nabla a)+a v\) has the same affine equivariance law as \(F\). Its derivative is \(\dd v((aI-\nabla^2 a)\,\cdot\,)\), so \(aI-\nabla^2 a\) is symmetric, invariant and Codazzi. Its trace descends. Subtract from \(a\) the invariant smooth solution \(u\) of
+\((3-\Delta)u=\tr(aI-\nabla^2a)\); this changes \(F'\) only by an equivariant term. It represents \(c\) by a trace-free Codazzi tensor. This proves the identification in Proposition~\ref{prop:attainment}, without calling a curved path tuple a cohomology class.
+
+Now consider the map
+\[
+ F_D(t,x)=t\,v(x)+f_D(x),\qquad
+ F_D^*\eta=-\dd t^2+\gamma\bigl((tI+D)\,\cdot\,,(tI+D)\,\cdot\,\bigr).
+ \tag{7}\label{eq:flatfamily}
+\]
+For \(D\) small and \(t\) close to \(1\), \(tI+D\) is positive and the developing map is a local diffeomorphism. The metric descends by \eqref{eq:cocycle} to a spatially compact slab and is flat. No global injectivity of \(F_D\) is required. The \(t\)-slices are Cauchy in a smaller product globally hyperbolic slab: \(t\) is temporal and compactness plus uniform positive spatial metrics bound spatial speed relative to \(t\) on each smaller closed strip. A causal curve cannot end at an interior \(t\) endpoint without extension. On a constant \(t\) slice the second fundamental form and mean curvature are
+\[
+ K=-\gamma((tI+D)\,\cdot\,,\cdot),\qquad
+ \tau=-\tr((tI+D)^{-1}).
+\]
+Use the graph \(t=1+u_D(x)\) to restore the exact \(\tau=-3\) cut. The graph equation is smooth at \((u,D)=(0,0)\) in sufficiently high Sobolev spaces, with derivative \(-\Delta+3\) in \(u\). Its first \(D\)-derivative is \(\tr D=0\), so the implicit-function theorem gives \(u_D=O(\|D\|^2)\) and the tangent \((\delta g,\delta S)=(2D,D)\). The harmonic regauging has zero first derivative on this tangent since \(\beta(2D)=0\). All data in this finite-parameter family can be prepared at higher Sobolev orders before the final pullback so it is smooth also in the stated ambient norm. More explicitly it is possible to work at orders \(s+k\) for each fixed number \(k\) of parameter derivatives; elliptic regularity and uniqueness give the same family. The full Cartan tuple of each flat graph is simultaneous affine conjugate to the generator values of \((\rho,c_D)\); re-marking by the harmonic diffeomorphism does not alter this flat holonomy class.
+
+Evaluation on the finite generators embeds the linear image \(D\mapsto[c_D]\) into the quotient of \((\Mink)^m\) by translation coboundaries. Choose any linear left inverse from that image to \(\C\), extend it on the finite quotient, and ignore the Lorentz parts. Its pullback to the affine tuple tangent annihilates all reference orbit directions; use the transverse slice of Section~\ref{sec:cartan} to obtain a smooth coordinate function with this differential. Subtract its reference value. The resulting \(p(g,S)\) has \(Dp(2D,D)=D\). Full tuple data are finite, but the number of retained scalar coordinates is only \(\dim\C\), exactly the dimension missing from \eqref{eq:linear}. This dimension is minimal for a differentiable local reconstruction with the two fixed tidal coordinates.
+
+\paragraph{An attained nonzero period.}
+Let \(N\) be a compact orientable hyperbolic three-manifold with one connected totally geodesic boundary. Such examples with genus-two boundary exist \cite{FMP}; one may also use the analytic compact examples in \cite{KM}. Form the oriented double \(\Sigma\) and write its group as the product of the two half-groups amalgamated along the boundary group, by the incompressible geodesic boundary and van Kampen. Fix the constant unit spacelike normal \(w\) of a lifted boundary plane. The boundary group, a cocompact Fuchsian lattice in that plane, fixes \(w\) and has no other invariant direction in the ambient Lorentz representation. Set the cocycle equal to \(0\) on the first half and \((I-\rho)w\) on the second half. These agree on the boundary group, hence define a cocycle on the amalgam. Neither half-group fixes a nonzero vector. Indeed such a vector must be proportional to \(w\); if the half-group fixed \(w\), every lift of the connected boundary would be the same plane, forcing its convex universal domain to be a half-space. The normal distance would descend and be unbounded on a compact manifold, impossible. Thus any global coboundary equal to zero on the first half has zero coboundary vector and cannot equal the assigned nonzero cocycle on the second. This proves attainability of a nonzero class. In particular the family \eqref{eq:flatfamily} gives distinct marked flat deformations that necessarily have \(e=b=0\), demonstrating why the finite part of \eqref{eq:chart} is sometimes essential.
+
+\section{Nonlinear inverse and exact identification of the flat fiber}\label{sec:inverse}
+
+The map \(\F\) of \eqref{eq:chart} is smooth on the genuine constraint submanifold. Its derivative is bijective with bounded inverse. Given \((e_0,b_0,p_0)\), first solve
+\[
+ \sigma_\perp=\Curl_\gamma^{-1}b_0,\qquad
+ h_0=A^{-1}(e_0+\sigma_\perp).
+\]
+Then add \((2D,D)\) with \(D=p_0-Dp(h_0,\sigma_\perp)\). Section~\ref{sec:tidal} guarantees the required two different Sobolev orders and uniqueness. The Banach inverse function theorem gives a local diffeomorphism. Choose the target to be a smaller product of balls, preserving injectivity.
+
+The exact flat graph family has \(E=B=0\) and its finite map has derivative the identity. It therefore fills all \(p\) in the small target slice after shrinking once more. A nearby datum with \(e=b=0\) has the same chart coordinates as one of these flat graphs, so local injectivity identifies it with that graph in harmonic gauge. Conversely flat data have no Weyl tensor. This argument treats the \emph{projected} zero set without assuming a nonlinear divergence-free property of \(E\) or \(B\) relative to \(\gamma\). In fact \(\dim\C\) is minimal even for a continuous Euclidean supplement that is injective along the flat fiber: a continuous injection from an open subset of \(\mathbb R^{\dim\C}\) into \(\mathbb R^k\) with \(k<\dim\C\), followed by the linear inclusion, would violate invariance of domain. This is not a lower bound on the number of transport paths.
+
+Finally the inverse has bounded derivative in the ambient Sobolev norms on a sufficiently small convex product target, by continuity at zero. Integrate it along the segment from \((0,0,p)\) to \((e,b,p)\) to get the upper bound in \eqref{eq:metric-est}. Both raw tidal maps in \eqref{eq:EB} are smooth on an ambient metric/shear ball with metrics uniformly positive and vanish for the comparison datum. Their Lipschitz bound on a smaller ambient convex ball bounds the full raw Weyl norm by the left-hand side of \eqref{eq:metric-est}. Boundedness of the reference projections gives the other inequalities, proving \eqref{eq:metric-est}--\eqref{eq:weyl-est}.
+
+\section{Scope}
+
+The construction separates the local radiative coordinates from global flat identifications in a true nonlinear neighborhood of exact vacuum data. A finite-frame quotient and actual flat family, rather than a freely added finite variable in the linearized equations, are what make the separation physical. Nonzero projected curvature means departure from the matching locally flat datum, and no change of that flat period alone can absorb it. The result is explicitly local in the solution topology and at fixed CMC. It neither addresses globally evolved stability when rigidity fails nor prescribes arbitrary electric and magnetic Weyl tensors, metric-free unmarked path data, or a quantum observable algebra.
+
+\begin{thebibliography}{9}
+\bibitem{AMelliptic} L.~Andersson and V.~Moncrief,
+Elliptic-hyperbolic systems and the Einstein equations,
+\emph{Annales Henri Poincar\'e} \textbf{4} (2003), 1--34,
+\href{https://arxiv.org/abs/gr-qc/0110111}{arXiv:gr-qc/0110111}.
+\bibitem{AMfuture} L.~Andersson and V.~Moncrief,
+Future complete vacuum spacetimes,
+in \emph{The Einstein Equations and the Large Scale Behavior of Gravitational Fields},
+Birkh\"auser (2004), 299--330,
+\href{https://arxiv.org/abs/gr-qc/0303045}{arXiv:gr-qc/0303045}.
+\bibitem{VKW} J.~A.~Valiente Kroon and J.~L.~Williams,
+A perturbative approach to the construction of initial data on compact manifolds,
+\href{https://arxiv.org/abs/1801.07289}{arXiv:1801.07289}.
+\bibitem{Bonsante} F.~Bonsante,
+Flat spacetimes with compact hyperbolic Cauchy surfaces,
+\emph{J. Differential Geom.} \textbf{69} (2005), 441--521,
+\href{https://arxiv.org/abs/math/0311019}{arXiv:math/0311019}.
+\bibitem{FMP} R.~Frigerio, B.~Martelli and C.~Petronio,
+Small hyperbolic \(3\)-manifolds with geodesic boundary,
+\emph{Experiment. Math.} \textbf{13} (2004), 177--190,
+\href{https://arxiv.org/abs/math/0211425}{arXiv:math/0211425}.
+\bibitem{KM} S.~Kojima and Y.~Miyamoto,
+The smallest hyperbolic \(3\)-manifolds with totally geodesic boundary,
+\emph{J. Differential Geom.} \textbf{34} (1991), 175--192.
+\bibitem{Ratcliffe} J.~G.~Ratcliffe,
+\emph{Foundations of Hyperbolic Manifolds}, 3rd ed., Springer (2019).
+\end{thebibliography}
+\end{document}
+

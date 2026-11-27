@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**73 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 47 typeset analytical articles**
+**76 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 50 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 73 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 76 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -18,7 +18,7 @@ Positive physical states for coupled fields, quantitative geometry–matter info
 | **What remains stable when discrete geometry is changed?** | [17 · Cartan–Regge closure](papers/17-cartan-regge-closure/) treats the finite first-order reduction; [11 · Causal Regge transfer](papers/11-causal-regge-transfer/) isolates a finite Lorentzian channel; [22 · Lorentzian Regge Airy asymptotics](papers/22-lorentzian-regge-airy/manuscript.md) resolves the behavior of a specific saddle merger. |
 | **Which radiative quantities can be transported or measured?** | [23 · Gravitational memory and boosts](papers/23-gravitational-memory-boost/manuscript.md) treats its stated memory sector; [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md) studies a separate finite-aperture record in a specified graviton vacuum. |
 
-These routes connect the 20 original packets with the fifty-three later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
+These routes connect the 20 original packets with the fifty-six later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
 
 ## New TeX and PDF manuscripts
 
@@ -26,6 +26,9 @@ These routes connect the 20 original packets with the fifty-three later analytic
 
 | Paper | Result | Files |
 |---|---|---|
+| [61 · A nonzero scalar shift charge in perturbative de Sitter gravity](papers/61-de-sitter-scalar-shift-charge/README.md) | A positive physical state with nonzero scalar shift charge survives all ten quadratic constraints. | [PDF](papers/61-de-sitter-scalar-shift-charge/manuscript.pdf) · [TeX](papers/61-de-sitter-scalar-shift-charge/main.tex) · [Verification](papers/61-de-sitter-scalar-shift-charge/VERIFICATION.md) |
+| [62 · Nonlinear vacuum curvature coordinates at a compact Milne cut](papers/62-nonlinear-milne-curvature-coordinates/README.md) | Projected electric and magnetic Weyl tensors and measured affine Cartan periods give exact nonlinear CMC vacuum coordinates. The zero projected-curvature fiber is the attained flat family. | [PDF](papers/62-nonlinear-milne-curvature-coordinates/manuscript.pdf) · [TeX](papers/62-nonlinear-milne-curvature-coordinates/main.tex) · [Verification](papers/62-nonlinear-milne-curvature-coordinates/VERIFICATION.md) |
+| [63 · Action asymptotics for Einstein–Dehn fillings at a compact hyperbolic mirror](papers/63-einstein-dehn-filling-action/README.md) | The reflected half-fill action has an explicit leading coefficient and a uniform sixth-order inverse-length remainder; an arithmetic sequence gives distinct Einstein halves. | [PDF](papers/63-einstein-dehn-filling-action/manuscript.pdf) · [TeX](papers/63-einstein-dehn-filling-action/main.tex) · [Verification](papers/63-einstein-dehn-filling-action/VERIFICATION.md) |
 | [51B · An Ungated Centered Wilson Law for Paired-Cap WRT Sewing](papers/51b-wrt-ungated-wilson/README.md) | The first surviving ungated logarithmic coefficient for a fixed integer-spin terminal ribbon on the four-vertex path; a separate ratio-resolved law on matched trees. | [PDF](papers/51b-wrt-ungated-wilson/manuscript.pdf) · [TeX](papers/51b-wrt-ungated-wilson/main.tex) · [Verification](papers/51b-wrt-ungated-wilson/VERIFICATION.md) |
 | [51+50B · Cycle Logarithms and Gauge Discrimination in Paired-Cap Sewing](papers/51-50b-wrt-cycle-gauge-discrimination/README.md) | The leading logarithm for each fixed even paired-cap cycle at either level parity; a signed graph-manifold pair separated by an order-21 gauge group, including all twists. | [PDF](papers/51-50b-wrt-cycle-gauge-discrimination/manuscript.pdf) · [TeX](papers/51-50b-wrt-cycle-gauge-discrimination/main.tex) · [Verification](papers/51-50b-wrt-cycle-gauge-discrimination/VERIFICATION.md) |
 | [52 · Relational area commutators distinguish matter couplings on the same Einstein light cone](papers/52-relational-area-commutators/README.md) | Identical compact relational area probes on the same metric and light cone determine the magnitude of a stress-free four-form coupling. A canonical Cauchy bridge constructs positive physical Hadamard states. | [PDF](papers/52-relational-area-commutators/manuscript.pdf) · [TeX](papers/52-relational-area-commutators/main.tex) · [Verification](papers/52-relational-area-commutators/VERIFICATION.md) |
@@ -156,7 +159,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All 73 manuscripts, with results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 76 manuscripts, with results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |

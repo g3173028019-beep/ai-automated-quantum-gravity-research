@@ -1,0 +1,524 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={A nonzero scalar shift charge in perturbative de Sitter gravity}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\DD}{\mathcal D}
+\newcommand{\FF}{\mathcal F}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\vac}{\Omega_{\rm vac}}
+\numberwithin{equation}{section}
+\title{A nonzero scalar shift charge in perturbative de Sitter gravity}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We retain the homogeneous Schr\"odinger mode of a massless minimally
+coupled scalar when imposing the quadratic linearization-stability
+constraints of Einstein--scalar gravity on global \(\mathrm{dS}_4\).
+The connected de Sitter group acts on the full scalar Weyl algebra:
+boosts displace the radiation by an amount proportional to the shift
+charge, and antipodal symmetry makes the displacement cocycle isotropic.
+On each compact charge interval away from zero, a sector with eight
+physical transverse-traceless gravitons has a dense invariant seed
+domain on which Haar averaging is absolutely convergent and positive
+semidefinite. We prove positivity by splitting the graviton tensor
+factors into two groups of four and writing the averaged form as a
+trace pairing of positive matrix convolution operators. An explicit
+normalizable seed has strictly positive averaged norm and physical
+shift-charge spectrum supported away from zero. The construction
+imposes all ten connected de Sitter generators at quadratic
+constraint order, without using a sharp charge eigenstate.
+\end{abstract}
+
+\section{Setting and result}
+
+Consider Einstein gravity with cosmological constant \(3/R^2>0\)
+and a real minimally coupled scalar with no potential, on the exact
+constant-scalar global de Sitter background
+\[
+ \bar g=R^2(-\mathrm dt^2+\cosh^2t\,\mathrm d\Omega_3^2),
+ \qquad \bar\phi=0 .
+\]
+The time \(t\) is dimensionless; the scalar kinetic term is
+\(-\tfrac12\int |d\phi|_g^2\dd{\rm vol}_g\). We set \(\hbar=1\).
+Let \(G=\SO_0(4,1)\) act on solutions by inverse pullback and
+\(K=\SO(4)\) be its maximal compact subgroup. After ordinary local
+gauge reduction, the linear phase space is the direct sum of the
+scalar solutions and physical spin-two solutions. Compact Cauchy
+surfaces also enforce ten integrated quadratic constraints, one for
+each Killing generator. They require the simultaneous scalar and
+graviton action, not either action separately
+\cite{higuchi,higuchiii,mmfree,my}.
+
+The group-averaging form is
+\begin{equation}
+ {\cal G}(\psi,\chi)=\int_G
+             \langle\psi,U(g)\chi\rangle\,\dd g .
+ \label{eq:ga}
+\end{equation}
+The inner product is conjugate linear in its first argument and
+\(\dd g\) is a fixed positive Haar normalization. The averaged objects
+are functionals on a test domain, not normalizable invariant vectors
+in the kinematic Hilbert space. Absolute convergence alone does not
+imply positivity. Marolf and Yu establish positivity for a broad class
+of ordinary de Sitter Fock states, explicitly setting aside the
+non-Fock homogeneous massless scalar mode in dimension greater than
+two \cite[Sec.~6]{my}. A positive averaging result retaining the
+scalar zero mode is known in \(\mathrm{dS}_2\) \cite{mm2}.
+The coupling between the scalar zero mode and radiation under de
+Sitter boosts is itself known, including in the compact axion
+quantization \cite[Secs.~2.3--2.6]{axion} and in the noncompact
+mode analysis of \cite[Sec.~II, Eqs.~(31)--(40)]{gh}. Here the new question is the positive
+\emph{gravitational} constraint projection at nonzero charge.
+
+\begin{theorem}[A charged positive sector]\label{thm:main}
+Let \(J=[p_-,p_+]\) with \(0<p_-<p_+<\infty\).
+The connected de Sitter action on the full scalar Weyl algebra is
+unitarily implemented in the regular representation
+\(L^2(\mathbb R,\dd p;\FF_{\rm rad})\), where \(p\) is conserved.
+Let \(\HH_{\rm TT}\) be the positive one-particle Hilbert space
+of the physical graviton and set
+\[
+ \HH_{J,8}
+ =L^2(J,\dd p;\FF_{\rm rad})\otimes \Sym^8\HH_{\rm TT}.
+\]
+There is a dense invariant linear domain \(\Phi\subset\HH_{J,8}\)
+on which \eqref{eq:ga} converges absolutely for every pair and is
+positive semidefinite. Its positive quotient and completion carry a
+self-adjoint shift charge with spectral values in \(J\). An explicit
+normalizable seed has strictly positive averaged norm and charge law
+supported in \(J^\circ\). Its averaged functionals satisfy the ten
+connected quantum quadratic constraints on a dense smooth test core.
+\end{theorem}
+
+Eight gravitons are sufficient, not claimed minimal.
+The fixed-\(J\) sector is \(G\)-invariant, but does not carry
+the translations conjugate to \(p\); the full scalar Weyl
+representation is constructed before this restriction.
+
+\section{The full scalar Weyl representation}
+\subsection{The homogeneous mode and the radiative quotient}
+
+Let \(v_3\) be the volume of the unit \(S^3\). For smooth real scalar
+solutions define the conserved forms
+\begin{align}
+ p(u)&=R^2\cosh^3t\int_{S^3}\partial_tu\,\dd\Omega,\\
+ \Omega(u,w)&=R^2\cosh^3t
+       \int_{S^3}(u\partial_tw-w\partial_tu)\,\dd\Omega .
+ \label{eq:symp}
+\end{align}
+For \(e=1\) and \(m(t)=(R^2v_3)^{-1}\int_0^t\cosh^{-3}s\,\dd s\),
+we have \(p(m)=\Omega(e,m)=1\). Each solution is uniquely
+\(u=q e+p m+v\), where \(q\) is its mean at \(t=0\), \(p=p(u)\),
+and \(v\) has both initial means zero. Let \(V\) be the corresponding
+radiative solution space. It is symplectically orthogonal to
+\(\operatorname{span}(e,m)\) and carries \(\Omega_V\).
+The homogeneous sector is a canonical plane, not an oscillator.
+The formal invariant \(p=0\) vacuum of the standard zero-mode
+discussion \cite[Sec.~IV]{kg} is not a normalizable seed here.
+
+The positive one-particle structure on \(\ker p/\mathbb R e\cong V\)
+comes from the nonconstant Euclidean modes. For instance, in
+conformal time \(\tan\eta=\sinh t\), degree \(j\ge1\), and \(k=j+1\),
+an orthonormal real sphere harmonic has positive mode
+\[
+ u_j(\eta)=
+ \frac{(k\cos\eta+i\sin\eta)e^{-ik\eta}}
+ {\sqrt{2R^2 k(k^2-1)}} .
+\]
+Indeed the scalar mode equation is
+\(u_j''+2\tan\eta\,u_j'+j(j+2)u_j=0\); at the neck the value is
+\(k/\sqrt{2R^2k(k^2-1)}\) and the first derivative is
+\(-i(k^2-1)/\sqrt{2R^2k(k^2-1)}\), giving unit positive
+Klein--Gordon norm. Continuation to \(\eta=-is\) for
+\(s\to+\infty\) decays as \(e^{-js}\), the regular Euclidean mode.
+Its real solution norm at the neck is equivalent to the sum of
+\(k\) times squared configuration amplitudes and \(k^{-1}\) times
+squared velocity amplitudes; smooth \(V\)-data have finite norm.
+
+The massless limit of the scalar boost recurrence
+\cite[Eqs.~(16)--(21), Sec.~2.2]{mmfree} preserves the positive
+nonconstant modes modulo \(\mathbb R e\). Specifically, at fixed
+\(j\ge1\) the normalization factors
+\(\Gamma(j-\sigma)\Gamma(j+\sigma+3)\) are finite at \(\sigma=0\).
+The only possible transition to the homogeneous mode is \(j=1\)
+to \(j=0\). Its coefficient is \(O(\sqrt{-\sigma})\), and the
+divergent leading piece of the normalized homogeneous mode is
+\(O((-\sigma)^{-1/2})\) times the constant solution; the product
+is zero in the quotient. The remaining boost coefficients
+preserve positive frequency and are \(O(j+1)\).
+On finite-mode vectors, the \(n\)-fold boost derivative has bound
+\(C^n(j+n)!/j!\), with a polynomial factor if any fixed number
+of additional Sobolev weights is used. This proves local
+convergence of the series in the one-particle norm and the smooth
+solution norms. Uniqueness of evolution by the boost differential
+equation identifies the series with the solution pullback modulo
+constants. Iteration and rotations give the full action \(T_g\),
+unitary by the conserved symplectic form and positive structure.
+Let \(\|\cdot\|_\mu\) be its real norm in the convention in which
+the radiation vacuum Weyl amplitude is
+\(\exp(-\|v\|_\mu^2/4)\).
+
+\subsection{An isotropic boost cocycle}
+
+Because \(p(u)=\Omega(e,u)\) and \(e\) is fixed, \(p\) is invariant.
+The de Sitter antipode \(\mathcal A\) in embedding coordinates
+commutes with \(G\) and is anti-symplectic. It preserves \(V\).
+The solution \(m\) is antipodally odd, so \(gm-m\) is odd, has
+charge zero and has zero mean at the neck. Thus
+\begin{equation}
+ gm=m+c_g,\qquad gv=T_gv+\ell_g(v)e,\qquad c_g\in V.
+ \label{eq:split}
+\end{equation}
+The odd subspace of an anti-symplectic involution is isotropic.
+Since the induced antipode commutes with \(T_g\), the group law
+and invariance of \(\Omega\) give
+\begin{equation}
+ c_{gh}=c_g+T_gc_h,\qquad
+ \Omega_V(c_g,T_gc_h)=0,\qquad
+ \ell_g(v)=\Omega_V(c_g,T_gv).
+ \label{eq:cocycle}
+\end{equation}
+The last identity is \(\Omega(gm,gv)=0\). Each \(c_g\) is smooth
+and depends continuously on finite \(g\) in the radiation norm.
+The cocycle is nonzero: an axial boost of \(m\) differentiated
+at the neck gives the \(j=1\) spatial configuration profile
+\(\pm(R^2v_3)^{-1}\cos\vartheta\), where \(\vartheta\) is the
+polar angle of the boost axis. This follows directly from the
+normal component of the boost at the neck and \(m'(0)\).
+
+\subsection{Weyl covariance including the charge translations}
+
+Use \(W_V(v)W_V(w)=e^{-i\Omega_V(v,w)/2}W_V(v+w)\).
+In \(\HH_\phi=L^2(\mathbb R,\dd p;\FF_{\rm rad})\), let
+\(\widehat p=p\) and \(\widehat q=i\partial_p\) on the standard
+domains. The full Weyl representation is
+\begin{equation}
+ (\mathcal W(a,b,v)\Psi)(p)
+       =e^{ia(p+b/2)}W_V(v)\Psi(p+b).
+ \label{eq:fullWeyl}
+\end{equation}
+This implements the symplectic form
+\(a b'-b a'+\Omega_V(v,v')\).
+Define the strongly continuous unitary action
+\begin{equation}
+ (U_\phi(g)\Psi)(p)=W_V(-pc_g)\Gamma(T_g)\Psi(p).
+ \label{eq:u}
+\end{equation}
+The Weyl multiplier in the composition vanishes by
+\eqref{eq:cocycle}, so this is not merely a projective action.
+Strong continuity follows on each fiber, then by dominated
+convergence in \(p\). Conjugating \eqref{eq:fullWeyl} gives
+\[
+ U_\phi(g)\mathcal W(a,b,v)U_\phi(g)^*
+   =\mathcal W(a+\ell_g(v),b,T_gv+b c_g).
+\]
+Indeed \(W_V(-pc_g)W_V(T_gv)W_V((p+b)c_g)\) has phase
+\(e^{i(p+b/2)\ell_g(v)}\). This proves covariance for the
+original full scalar algebra, not just an externally prescribed
+charge fiber. A scalar radiation-vacuum charge packet \(f\) has
+\begin{equation}
+ \langle f\vac,U_\phi(g)f\vac\rangle
+    =\int_{\mathbb R}|f(p)|^2
+      e^{-p^2\|c_g\|_\mu^2/4}\dd p .
+ \label{eq:scalar-vac}
+\end{equation}
+For a nonzero packet it is strictly positive for all finite
+\(g\); the charged scalar vector itself is not invariant.
+
+\section{The averaging domain}
+
+We use the usual positive two-helicity graviton modes and their
+action on the physical temporal transverse-traceless quotient
+\cite[Secs.~3.3--3.4]{mmfree}. Let \(\DD_{\rm TT}\) be the
+space of finite sums of the spherical harmonic multiplets.
+In the Cartan decomposition \(g=k_1a_\lambda k_2\),
+\(k_i\in K\), the finite-mode matrix elements obey
+\begin{equation}
+ |\langle v,U_{\rm TT}(g)w\rangle|
+             \le C(v,w)e^{-\lambda},\qquad v,w\in\DD_{\rm TT}.
+ \label{eq:bound}
+\end{equation}
+For a fixed pair of harmonics this follows from the explicit
+boost coefficients of \cite[Eqs.~(36)--(42), (125)]{mmfree}.
+Their two large-rapidity exponents are \(\sigma-k\) and
+\(-3-\sigma-k\). The tensor list has \(\sigma\in\{-2,-1,0\}\)
+and \(k\ge2\), bounding both exponents by \(-2\), whether
+or not a particular listed family occurs in four dimensions.
+The weaker \eqref{eq:bound} absorbs fixed polynomial prefactors
+and applies at all \(\lambda\ge0\). Rotations preserve the finite multiplets,
+so the constant can be taken uniform in both rotations.
+The Cartan Haar density for \(\SO_0(4,1)\) is proportional to
+\((\sinh\lambda)^3\dd\lambda\).
+
+Let
+\(\Phi_0=L^2(J,\dd p;\FF_{\rm rad})\odot\Sym^8\DD_{\rm TT}\),
+where \(\odot\) denotes algebraic tensor span. Embed symmetric
+powers isometrically into ordinary tensor powers.
+With \(U=U_\phi\otimes U_{\rm TT}^{\otimes8}\) restricted to the
+symmetric subspace, define
+\(\Phi=\operatorname{span}\{U(g)\psi:\psi\in\Phi_0,\ g\in G\}\).
+It is dense and invariant. For \(\psi,\chi\in\Phi_0\), finite tensor
+expansion and \eqref{eq:bound} give
+\[
+ |\langle\psi,U(g)\chi\rangle|\le C_{\psi,\chi}
+                                     e^{-8\lambda(g)}.
+\]
+The scalar contributes only the product of its two norms, regardless
+of how many radiation quanta a boost produces.
+The same estimate holds on each charge fiber before integrating
+the products of the scalar fiber norms. Translated seeds preserve
+the exponential rate, with changed constants, by
+\(\lambda(h^{-1}gk)\ge\lambda(g)-\lambda(h)-\lambda(k)\)
+on \(G/K\). This proves absolute convergence on \(\Phi\)
+and permits integration over charge by Fubini. Unimodular Haar
+invariance also gives
+\({\cal G}(U(h)\psi,U(k)\chi)={\cal G}(\psi,\chi)\)
+independently for each argument.
+
+\section{Positivity from two convolution operators}
+
+Consider a unimodular group with fixed Haar measure. Let
+\(R_g\xi(x)=\xi(xg)\) be the right regular action. For a finite
+family \(x_i\) in a unitary representation \(L\), write
+\(F_{ij}(g)=\langle x_i,L(g)x_j\rangle\).
+If the entries are in \(L^1(G)\), define the bounded operator
+\(R(F)=\int F(g)\otimes R_g\dd g\). Its kernel at \(x,y\)
+has entries \(F_{ij}(x^{-1}y)\), which are the Gram kernel of
+the vectors \(L(x)x_i\). It follows that \(R(F)\ge0\), first
+on compactly supported vector tests and then everywhere.
+Entrywise conjugation preserves positive type.
+
+For the right group von Neumann algebra use the canonical
+Plancherel trace \(\tau\). The unimodular group Hilbert-algebra
+identity is
+\[
+ \tau(R(f)^*R(g))=\int_G\overline{f(x)}g(x)\dd x,
+                       \qquad f,g\in L^1\cap L^2.
+\]
+Inversion interchanges the right and left conventions
+\cite{plancherel}. The right involution is
+\(f^*(g)=\overline{f(g^{-1})}\). In finite matrix entries we use
+\(\Tr_N\otimes\tau\).
+
+\begin{lemma}[Tensor product positivity on a decaying core]
+\label{lem:convolution}
+Let \(\psi=\sum_{i=1}^{N}x_i\otimes y_i\) and let \(L,M\) be
+unitary representations. Suppose both
+\(F_{ij}(g)=\langle x_i,L(g)x_j\rangle\) and
+\(H_{ij}(g)=\langle y_i,M(g)y_j\rangle\) belong entrywise to
+\(L^1(G)\cap L^2(G)\). Then
+\(\int_G\langle\psi,(L(g)\otimes M(g))\psi\rangle\dd g\)
+converges absolutely and is nonnegative.
+\end{lemma}
+
+\begin{proof}
+Absolute convergence follows entrywise by Cauchy--Schwarz.
+The positive operators \(A=R(F)\), \(B=R(\overline H)\) are in
+trace-\(L^2\) for the matrix Plancherel trace. Their square roots
+are trace-\(L^4\), whence \(B^{1/2}A^{1/2}\) is trace-\(L^2\)
+and the trace of \(AB\) is the squared trace-\(L^2\) norm of
+that operator. In detail, the Plancherel identity and
+\(H_{ji}(g^{-1})=\overline{H_{ij}(g)}\) give
+\begin{align*}
+ (\Tr_N\otimes\tau)(AB)
+   &=\sum_{i,j}\int_G F_{ij}(g)
+                              \overline{H_{ji}(g^{-1})}\dd g\\
+   &=\sum_{i,j}\int_G F_{ij}(g)H_{ij}(g)\dd g\\
+   &=\int_G\langle\psi,(L(g)\otimes M(g))\psi\rangle\dd g .
+\end{align*}
+No convolution distribution is evaluated at one point.
+\end{proof}
+
+Group the eight graviton factors of the ambient tensor power
+into four plus four, putting the scalar space in the first group.
+This is an isometric estimate on the actual symmetric tensors,
+not a new particle labelling in the physical model.
+Every seed in \(\Phi_0\) is a finite sum across these two groups.
+The two coefficient arrays decay as \(e^{-4\lambda}\) and hence
+lie in \(L^1\cap L^2\), including when the scalar seed is entangled
+with graviton factors. Lemma~\ref{lem:convolution} proves positivity
+on \(\Phi_0\). Independent translate invariance of \eqref{eq:ga}
+reduces the positive form on a finite sum of translates to the
+form on the unshifted sum. Thus \(\cal G\) is positive
+semidefinite throughout \(\Phi\).
+
+\section{The physical charge and the constraints}
+
+\subsection{A strictly positive charged seed}
+
+On positive-frequency gravitons set
+\(\mathcal J h=\overline{\mathcal A^*h}\).
+The antipode reverses time orientation, so both factors in
+\(\mathcal J\) reverse the sign of the complex Klein--Gordon
+form. Their product is an antiunitary involution.
+It preserves the physical positive modes: for a real tensor
+harmonic the Euclidean normalized time mode has a real value
+and purely imaginary normal derivative at the neck, up to a
+common phase, by reflection and conjugation of the regular
+mode of \cite[Eq.~(121)]{mmfree}. The spatial antipode is a
+real orthogonal involution on the tensor multiplet.
+Pure gauge fields map to pure gauge fields; \(\mathcal J\)
+commutes with \(G\) on the quotient. Choose a unit real
+antipodal harmonic with the Euclidean positive time mode and
+phase it by \(1\) or \(i\) to get \(v\in\DD_{\rm TT}\) with
+\(\mathcal Jv=v\).
+Thus \(a(g)=\langle v,U_{\rm TT}(g)v\rangle\) is real and
+\(a(1)=1\).
+
+For a unit \(f\in C_c^\infty(J^\circ)\), the normalizable seed
+\(\psi=f\vac\otimes v^{\otimes8}\) gives
+\begin{equation}
+ {\cal G}(\psi,\psi)=\int_J |f(p)|^2\rho(p)\dd p,\qquad
+ \rho(p)=\int_G a(g)^8
+                    e^{-p^2\|c_g\|_\mu^2/4}\dd g .
+ \label{eq:density}
+\end{equation}
+The integrand is nonnegative and strictly positive near the identity.
+The bound \eqref{eq:bound} and dominated convergence give a
+finite continuous \(\rho\). Restricting the integral to a compactly
+contained identity neighborhood also proves a strictly positive
+lower bound uniform on \(J\).
+The nonzero state uses neither a formal \(\delta(p-p_0)\) nor a
+presumed invariant charged scalar vacuum.
+
+\subsection{The descended spectral charge}
+
+Multiplication by \(b\in L^\infty(J)\) preserves \(\Phi\),
+commutes with \(U\), and has \({\cal G}\)-adjoint multiplication
+by \(\bar b\). For \(b\) the indicator of a Borel set, it and
+its complement give two orthogonal nonnegative parts of the
+quadratic form. They descend to bounded orthogonal projections
+on the positive quotient and completion. Countable additivity
+holds strongly on the core by dominated convergence in the joint
+charge and Haar integrals, using the fiber version of the
+matrix-element bound of Sec.~3. It extends to the completion by
+the projection norm bounds. This defines the PVM of the bounded
+self-adjoint charge on this sector. The vector of \eqref{eq:density}
+has normalized charge distribution
+\[
+ \frac{|f(p)|^2\rho(p)\dd p}
+      {\int_J|f(p')|^2\rho(p')\dd p'} .
+\]
+This is supported away from zero. The conjugate \(\widehat q\)
+need not be an invariant observable on the quotient.
+
+\subsection{All ten integrated constraints}
+
+On a compact slice the constraint Hamiltonian \(C_X\) smeared
+with the lapse and shift of a background Killing field \(X\) has
+a vanishing Hamiltonian vector at the background and no
+boundary generator. In a local canonical chart,
+differentiate \(dC_X(w)=\Omega(w,X_{C_X})\) at the background:
+its Hessian on the linear physical solutions is
+\(\Omega(w,B_Xu)\), where \(B_X\) is the infinitesimal Killing
+action, up to the common sign for inverse pullback.
+The integrated quadratic Taub constraint is consequently the
+moment map \(\tfrac12\Omega(u,B_X u)\) for the linear
+symplectic action, summed over scalar and graviton
+\cite{higuchi,mmfree,my}. This prescription does not omit the
+zero-mode part of the scalar generator.
+Explicitly, if \(C_X^{\rm rad}=\partial_s c_{\exp(sX)}|_{s=0}\)
+and \(B_X^{\rm rad}\) generates \(T_{\exp(sX)}\), then the scalar
+moment map on \(u=qe+pm+v\) is
+\[
+ \tfrac12\Omega_V(v,B_X^{\rm rad}v)
+                          -p\,\Omega_V(C_X^{\rm rad},v).
+\]
+Indeed the constant component of \(B_Xu\) is
+\(\Omega_V(C_X^{\rm rad},v)e\) and its \(V\)-component is
+\(p C_X^{\rm rad}+B_X^{\rm rad}v\).
+The mixed term is nontrivial for boosts; the Weyl displacement in
+\eqref{eq:u} implements it. The unitary representation has no
+extra central term.
+
+Let the smooth core consist of finite \(G\)-translates of finite sums
+with smooth compact charge profiles, finite-particle radiation in
+finite harmonic multiplets, and finite graviton multiplets.
+It is dense in \(\HH_{J,8}\).
+Its Lie derivatives are again in this class: one radiation or
+graviton generator moves finitely many angular degrees, and the
+derivative of the displacement uses the \(j=1\) finite radiation
+mode and bounded \(p\) on each seed, or vanishes for rotations.
+On a translated seed use the adjoint action on the generator.
+The absolute convergence bound applies also with such a derivative
+and with a short bounded group translation of either argument.
+Differentiating Haar invariance under the integral therefore gives
+\[
+ {\cal G}(\psi,dU(X)\chi)=0
+\]
+on this core for every \(X\in\mathfrak{so}(4,1)\), and likewise in
+the first slot. This is the weak constraint equation on the averaged
+functionals. It neither presumes that the invariant vectors are
+normalizable in \(\HH_{J,8}\) nor that the nonlinear constraints
+have been constructed. This completes the proof of
+Theorem~\ref{thm:main}.
+
+\section{Scope}
+
+The result is a positive constraint quotient for a specified
+non-Fock matter sector in perturbative gravity. The tensor split
+proves positivity; it is not a factorization of spatial regions.
+The charge survives all ten connected linearization-stability
+constraints at quadratic order. The construction neither selects
+a nonperturbative vacuum, nor determines the minimal graviton
+number, a general chart of other charge sectors, or higher-order
+constraint dynamics.
+
+\begin{thebibliography}{9}
+\bibitem{higuchi}
+A.~Higuchi, Quantum linearization instabilities of de Sitter
+space-time. I, \emph{Class. Quantum Grav.}\ \textbf{8},
+1961--1981 (1991).
+
+\bibitem{higuchiii}
+A.~Higuchi, Quantum linearization instabilities of de Sitter
+space-time. II, \emph{Class. Quantum Grav.}\ \textbf{8},
+1983--2004 (1991),
+\href{https://doi.org/10.1088/0264-9381/8/11/010}{doi:10.1088/0264-9381/8/11/010}.
+
+\bibitem{mmfree}
+D.~Marolf and I.~A. Morrison, Group averaging for de Sitter free
+fields, \emph{Class. Quantum Grav.}\ \textbf{26}, 235003 (2009),
+\href{https://arxiv.org/abs/0810.5163}{arXiv:0810.5163}.
+
+\bibitem{my}
+D.~Marolf and X.~Yu, On the positivity of de Sitter group
+averaging (2026), \href{https://arxiv.org/abs/2610.24073}{arXiv:2610.24073}.
+
+\bibitem{mm2}
+D.~Marolf and I.~A. Morrison, Group averaging of massless scalar
+fields in \(1+1\) de Sitter (2008),
+\href{https://arxiv.org/abs/0808.2174}{arXiv:0808.2174}.
+
+\bibitem{kg}
+K.~Kirsten and J.~Garriga, Massless minimally coupled fields in
+de Sitter space: \(O(4)\)-symmetric states versus de Sitter invariant
+vacuum, \emph{Phys. Rev. D}\ \textbf{48}, 567--577 (1993),
+\href{https://arxiv.org/abs/gr-qc/9305013}{arXiv:gr-qc/9305013}.
+
+\bibitem{gh}
+J.~Gibbons and A.~Higuchi, Removing the Faddeev--Popov zero modes
+from Yang--Mills theory in spacetimes with compact spatial sections,
+\emph{Phys. Rev. D}\ \textbf{91}, 024006 (2015),
+\href{https://arxiv.org/abs/1410.7830}{arXiv:1410.7830}.
+
+\bibitem{axion}
+V.~A. Letsios and S.~Vitouladitis, Axions on de Sitter space
+(2026), \href{https://arxiv.org/abs/2606.28858}{arXiv:2606.28858}.
+
+\bibitem{plancherel}
+J.~Dixmier, \emph{Von Neumann Algebras}, North-Holland (1981),
+sections on the Hilbert algebra of a locally compact unimodular group.
+\end{thebibliography}
+\end{document}

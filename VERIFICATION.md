@@ -160,3 +160,11 @@ These releases received an internal technical scope and source review, three-pas
 ## Paired-cap sewing companions
 
 See [51B](papers/51b-wrt-ungated-wilson/VERIFICATION.md), [51+50B](papers/51-50b-wrt-cycle-gauge-discrimination/VERIFICATION.md) and the [derivation supplement](papers/51-50b-wrt-cycle-gauge-discrimination/supplement/wrt_extensions.pdf) for proof scope and exact replays.
+
+## Constrained states and geometry (61–63)
+
+All three analytical proofs received internal cross-review. Their paper notes link complete LaTeX sources, compiled PDFs, and the verification methods and limits.
+
+- [Paper 61 verification](papers/61-de-sitter-scalar-shift-charge/VERIFICATION.md)
+- [Paper 62 verification](papers/62-nonlinear-milne-curvature-coordinates/VERIFICATION.md)
+- [Paper 63 verification](papers/63-einstein-dehn-filling-action/VERIFICATION.md)

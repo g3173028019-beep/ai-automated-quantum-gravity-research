@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 73 items: 20 original research packets, six later analytical Markdown manuscripts and forty-seven typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 76 items: 20 original research packets, six later analytical Markdown manuscripts and fifty typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–60 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–63 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -773,3 +773,27 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** Constrained linear geometric optics on exact smooth backgrounds, before caustics; neither a nonlinear high-frequency limit nor a finite-wavelength result. Related to 29B and 43.
 
 [Paper notes](../papers/60-graviton-nonabelian-holonomy/README.md) · [PDF](../papers/60-graviton-nonabelian-holonomy/manuscript.pdf) · [TeX](../papers/60-graviton-nonabelian-holonomy/main.tex) · [Verification](../papers/60-graviton-nonabelian-holonomy/VERIFICATION.md)
+
+## 61. A nonzero scalar shift charge in perturbative de Sitter gravity
+
+**Result.** A positive physical state with nonzero scalar shift charge survives all ten quadratic constraints.
+
+**Scope.** Global dS₄ Einstein–scalar in the fixed eight-graviton TT sector, with a compact charge band away from zero.
+
+[Paper notes](../papers/61-de-sitter-scalar-shift-charge/README.md) · [PDF](../papers/61-de-sitter-scalar-shift-charge/manuscript.pdf) · [TeX](../papers/61-de-sitter-scalar-shift-charge/main.tex) · [Verification](../papers/61-de-sitter-scalar-shift-charge/VERIFICATION.md)
+
+## 62. Nonlinear vacuum curvature coordinates at a compact Milne cut
+
+**Result.** Projected electric and magnetic Weyl tensors and measured affine Cartan periods give exact nonlinear CMC vacuum coordinates. The zero projected-curvature fiber is the attained flat family.
+
+**Scope.** A marked neighborhood of a compact hyperbolic Milne CMC slice in four-dimensional vacuum gravity.
+
+[Paper notes](../papers/62-nonlinear-milne-curvature-coordinates/README.md) · [PDF](../papers/62-nonlinear-milne-curvature-coordinates/manuscript.pdf) · [TeX](../papers/62-nonlinear-milne-curvature-coordinates/main.tex) · [Verification](../papers/62-nonlinear-milne-curvature-coordinates/VERIFICATION.md)
+
+## 63. Action asymptotics for Einstein–Dehn fillings at a compact hyperbolic mirror
+
+**Result.** The reflected half-fill action has an explicit leading coefficient and a uniform sixth-order inverse-length remainder; an arithmetic sequence gives distinct Einstein halves.
+
+**Scope.** Orientable hyperbolic four-manifold with toral cusps and compact connected geodesic boundary; long primitive fillings and converging induced boundary metrics.
+
+[Paper notes](../papers/63-einstein-dehn-filling-action/README.md) · [PDF](../papers/63-einstein-dehn-filling-action/manuscript.pdf) · [TeX](../papers/63-einstein-dehn-filling-action/main.tex) · [Verification](../papers/63-einstein-dehn-filling-action/VERIFICATION.md)

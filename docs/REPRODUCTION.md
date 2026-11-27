@@ -206,3 +206,11 @@ Run `./build.sh` from each paper directory in a standard pdfLaTeX installation. 
 ## Building 51B and 51+50B
 
 Run `./build.sh` in [51B](../papers/51b-wrt-ungated-wilson/README.md) or [51+50B](../papers/51-50b-wrt-cycle-gauge-discrimination/README.md). The paper notes link the exact replays and the [earlier derivation source](../papers/51-50b-wrt-cycle-gauge-discrimination/supplement/README.txt).
+
+## Building Papers 61–63
+
+Run `./build.sh` in each paper directory with pdfLaTeX. Paper 63 also includes an exact arithmetic replay.
+
+- [61 · A nonzero scalar shift charge in perturbative de Sitter gravity](../papers/61-de-sitter-scalar-shift-charge/README.md)
+- [62 · Nonlinear vacuum curvature coordinates at a compact Milne cut](../papers/62-nonlinear-milne-curvature-coordinates/README.md)
+- [63 · Action asymptotics for Einstein–Dehn fillings at a compact hyperbolic mirror](../papers/63-einstein-dehn-filling-action/README.md)
