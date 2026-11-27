@@ -1,0 +1,59 @@
+\section{An exact constrained stock and its fast parameter jets}\label{sec:stock}
+
+\subsection{Constraints with the material preparation held fixed}
+
+Use the polytropic and Makino variables of \cite[Eqs.~(8)--(9), (29), (73)--(84)]{Oliynyk}; in particular a smooth compact Makino density allowed there produces smooth \(\rho,p\), and vacuum is an allowed value of the regularized fluid evolution. We need no physical-vacuum boundary theorem. Fix a nonzero radial \(\alpha_0\) in that class supported in \(r<a_0\) and fix \(w^I=0\) initially. Work with \(-1<\delta<-1/2\) and sufficiently high weighted Sobolev order \(k\); parameter seeds are smooth and compact, so the order can be chosen as high as required for finitely many trace derivatives.
+
+The freely specified gravitational entries of the initial densitized inverse-metric variable \(U\) are \(z^{IJ}=\bar{\mathfrak u}^{IJ}\) and \(z_4^{IJ}=\partial_s\bar{\mathfrak u}^{IJ}\). Choose them from a small open finite-dimensional TT family, keeping the fluid entries fixed. The analytic constraint maps of \cite[Prop.~4.1]{Oliynyk} solve the Einstein, harmonic and four-velocity normalization constraints for the remaining entries. In their notation the leading \(44\) and mixed entries solve
+\[
+      \Delta\phi_0=\rho+\partial_I\partial_J z^{IJ},
+      \qquad
+      \Delta w^I_0=-\partial_J z_4^{JI}.
+\]
+Here \(w_0^I\) labels the mixed \emph{metric density} entry, not a change of the specified fluid velocity. Both extra terms vanish for our TT seeds. Thus \(\phi_0=\Delta^{-1}\rho\) is seed-independent and the decaying mixed entry is zero; the remaining initial \(\partial_s\) entries vanish at leading order by the harmonic constraints. These are genuine constrained data, not a linear wave added to an exact fluid metric without re-solving.
+
+Write \(g_\eps(\lambda)\) for the physical metric in the fast coordinates, denoting ordinary spatial components by \(I,J\). Its reconstruction from \(U\), in the conventions with \(\eta=\operatorname{diag}(1,1,1,-1)\) and \(s\) last, begins with
+\[
+ g_{\eps,ij}=\eta_{ij}
+  +2\eps^2\left(\eta_{k\ell}U^{k\ell}\eta_{ij}
+                     -2\eta_{ik}U^{k\ell}\eta_{\ell j}\right)
+  +O(\eps^4)
+\]
+when \(U\) is bounded. The \(O(\eps)\) errors in the solution's \(U\) turn into \(O(\eps^3)\) here. Thus if \(u,v\) are any fixed amplitude directions at zero wave and \(H_u\) has compact TT initial seeds \(-4D_u(z,z_4)\), then at \(s=0\),
+\begin{align}
+   D_u g_\eps&=\eps^2 H_u+O(\eps^3),&
+   D_u \partial_s g_\eps&=\eps^2\dot H_u+O(\eps^3),\label{eq:initfirst}\\
+   D_uD_v g_\eps&=O(\eps^3),&
+   D_uD_v\partial_s g_\eps&=O(\eps^3).\label{eq:initsecond}
+\end{align}
+The leading tensors have only spatial components. The estimates hold in \(H^k_\delta,H^{k-1}_{\delta-1}\) for the first and time-derivative entries as appropriate, and after equivalent spatial differentiation. The initial shift is \(O(\eps^3)\) with two amplitude derivatives. For the linear coordinates at zero wave used in the theorem, this is a joint Taylor statement from the analytic dependence on the initial seed entries, since the \(\eps^2\) metric coefficient is affine in those entries. It is not a derivative of \cite[Thm.~1.1]{Oliynyk}'s value-level slow-limit estimate. For the delay family used later the constraints are evaluated on a smooth translated seed path; the composition is smooth, not generally analytic in the delays.
+
+\subsection{Fast evolution and simultaneous parameter estimates}
+
+Use the original \emph{local} reduced Einstein--Euler equation \cite[Eq.~(64)]{Oliynyk}, which the exact solution satisfies while the compact fluid remains inside the limiting support bound. With \(s=t/\eps\), write its variables schematically as
+\(V_\eps=(U_4,U_I,\eps(U-U(0)),\alpha,w)\), with \(U_4=\partial_s U\), \(U_I=\partial_I U\). Multiplying the original equation by \(\eps\) gives the symmetric form
+\begin{equation}
+\begin{aligned}
+ b^0(\eps V_\eps,\eps^2U_\eps(0))\partial_s V_\eps
+ &=c^I\partial_I V_\eps+\mathcal G(V_\eps)
+     +\eps\,b^I_\eps(V_\eps,U_\eps)\partial_I V_\eps
+     +\eps\mathcal F_\eps(V_\eps,U_\eps),\\
+ U_\eps(s)&=U_\eps(0)+\int_0^s U_{4,\eps}(s')\,\dd s' .
+\end{aligned}
+ \label{eq:fasteq}
+\end{equation}
+In the \(b^0\) argument \(U_\eps(0)\) occupies the initial-density slot of Oliynyk's block vector: together with \(\eps V_\eps\) it reconstructs \(\eps^2U_\eps(s)\), without counting the increment twice. The temporal \(b^0\) is uniformly positive on a fixed neighborhood of bounded fast data and tends to the identity in these variables. The \(c^I\) are the constant symmetric principal wave matrices on the \(U_4,U_I\) block, with zero entries in the frozen blocks. The only order-one source \(\mathcal G\) has the component \(-\rho(\alpha)\) in the \(44\) temporal wave row; it depends on no amplitude except through \(\alpha\). The schematic \(b^I_\eps,\mathcal F_\eps\) collect all remaining regular arguments using the same reconstruction. They are regular including across \(\alpha=0\), with \(\eps\)-weighted lower terms as in \cite[Eqs.~(65)--(72)]{Oliynyk}. In particular the \(\eps=0\) fluid block is frozen. The unscaled metric variable must be reconstructed by the second formula of \eqref{eq:fasteq}; one cannot read its variation from the frozen scaled increment alone.
+
+At \(\eps=0\) the fixed source and its fixed initial \(\phi_0\) give a stationary \(44\) block because \(\Delta\phi_0=\rho\). The first \(\lambda\)-derivative of the fluid block is zero, so all first amplitude derivatives of the metric density are free tensor waves with the given initial data. Their divergence, trace and time components stay zero by the flat wave equation and the TT initial conditions. In the linear seed coordinates all second amplitude derivatives of the limiting system are zero. This is the same fast branch, now linearized in the independent seed variables.
+
+For clarity the parameter comparison can be shown directly by fixed-slab energies. Choose any fixed compact fast slab \(0\leq s\leq S\) and a ball containing the eventual extraction tube and the domains of dependence of its collars, with a fixed margin for the bounded characteristic speed. Smooth data permit standard commuted energies on this enlarged region (or energies with a moving outer domain of dependence). In a neighborhood of the bounded \(\eps=0\) solution, \eqref{eq:fasteq} has a uniform symmetrizer and finite coefficient bounds; the density reconstruction is controlled by its displayed time integral. At one lower Sobolev order the difference between the \(\eps\)-solution and the \(\eps=0\) solution has initial \(O(\eps)\) norm and \(O(\eps)\) inhomogeneity from the coefficient changes applied to the smooth limiting solution. Sobolev multiplication and Gr\"onwall on the fixed interval then give \(O(\eps)\) differences and provide continuation in that neighborhood. The exact existence interval in slow time is available from \cite[Prop.~4.3, Thm.~1.1]{Oliynyk}, hence contains the fast slab for sufficiently small \(\eps\).
+
+Differentiating \eqref{eq:fasteq} in a seed coordinate gives a linear symmetric hyperbolic principal part, with lower terms involving the smooth unvaried solution and the reconstructing time integral. The second seed derivative has the same principal part and a source bilinear in first derivatives and their first spatial derivatives. The ordinary difference-quotient argument and commuted energy bound give these derivatives in successively lower Sobolev orders. Subtract their \(\eps=0\) equations: initial differences are \(O(\eps)\) by the joint constraint Taylor expansion, and the forces are \(O(\eps)\) at the next lower order by the already bounded lower jets and regular coefficient differences. Taking sufficiently many initial derivatives before these finitely many losses, Sobolev embedding and \eqref{eq:fasteq} for the time jets give on the chosen fixed tube and caps
+\begin{equation}
+             D_u g_\eps=\eps^2 H_u+O_{C^2}(\eps^3).
+             \label{eq:fasttangent}
+\end{equation}
+The estimates are joint on compact small seed sets and uniform on bounded amplitude directions. They do not run an energy estimate to \(s\) of order \(\eps^{-1}\). The Makino equation is transport of \(\alpha\) along the fluid, with a source proportional to \(\alpha\) itself. In fast coordinates its support velocity is \(\eps w^I/(1+\eps w^4)=O(\eps)\), so the density is supported inside \(a_0+O(\eps)\) on the fixed interval. This is the support step of \cite[Prop.~4.3]{Oliynyk}. The auxiliary spatial cutoffs in that construction may be chosen equal to one throughout the fixed observation region and its domain of dependence. Thus a fixed extraction cylinder separated from the original material is actually vacuum, with a common open collar for all sufficiently small seed parameters.
+
+The slow Poisson--Euler limit with these initial variables is the same for every seed by the fluid convergence and uniqueness in \cite[Thm.~1.1]{Oliynyk}. The fast comparison just proved uses that exact family but yields a different observation: the normalized first tensor derivative on the fast tube is nonzero despite the common material limit.
+

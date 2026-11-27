@@ -1,0 +1,73 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[margin=0.98in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Radiative Data Lost by the Newtonian Projection}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\Lie}{\mathcal L}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Om}{\Omega}
+\newcommand{\M}{m_{\mathrm{ADM}}}
+\newcommand{\ME}{m_{\mathrm{esc}}}
+\newcommand{\F}{\mathcal F}
+\title{Radiative Data Lost by the Newtonian Projection\\
+\large A finite-radius symplectic and ADM identity in Einstein--Euler}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+The fast Newtonian limit of Einstein--Euler allows freely chosen initial gravitational waves at fixed limiting fluid data. We exhibit an exact constrained family with outgoing leading tangents in which the Newtonian projection forgets a rank-four radiative symplectic block and a positive mass Hessian. At a fixed vacuum extraction sphere, joint wave-amplitude derivatives of the actual metric converge in fast time after division by \(\varepsilon^2\), with \(\varepsilon=v_*/c\). The correspondingly normalized Einstein--Hilbert symplectic flux gives two nondegenerate canonical pairs; its time-translation energy pairing equals the leading wave-amplitude Hessian of the ADM mass of the same constraint solutions. The equality is at finite radius and uses no radiation-zone approximation or average. A delay-amplitude manifold gives an exact finite canonical sector of the resolved leading wave flow. The result is local in fast time and identifies a seed-dependent coefficient, not an exact nonlinear energy loss on a nonstationary tube, an asymptotic Bondi theorem for the fluid solutions, or a generic product splitting of the full theory.
+\end{abstract}
+
+\section{Setting and main result}
+
+We use the asymptotically flat Einstein--Euler families in the regularized polytropic formulation of Oliynyk \cite{Oliynyk}. The material initial datum is one fixed smooth nonzero radial compact Makino density, with coordinate-rest velocity, supported inside \(r<a_0\). The term \emph{fixed material datum} refers to these coordinate Makino variables and the equation of state, not to a comparison at fixed proper baryon mass. All wave data below are smooth compact transverse trace-free (TT) tensor Cauchy data initially outside this matter, in a common shell \(a<r<b\) with \(a>a_0\). The exact metric and lapse/shift corrections from the relativistic constraints are not held fixed. The spatial coordinates and the fast coordinate \(s=t/\eps\) are those of the normalized harmonic construction; after the fixed unit change \(s\) is light-travel length and the limiting wave speed is one. \(\lambda\) denotes independent small real wave-amplitude coordinates, unrelated to \(\eps\).
+
+We write formulas first in geometric normalization, with action coefficient \(1/(16\pi)\), so a mass has units of length. To recover physical mass multiply by \(c^2/G\), energy by \(c^4/G\), and a geometric symplectic form by \(c^3/G\). Spatial lengths are measured in a fixed physical unit; factors of that unit are understood in the integrals. Dots on \(H\) denote derivatives in fast time, not amplitude variation.
+
+\begin{theorem}\label{thm:main}
+There is a four-parameter local exact Einstein--Euler constraint and evolution family with the same slow Poisson--Euler limit and vacuum in one common marked finite extraction cylinder. At the zero-wave stock, for each parameter vector \(u\) the normalized first metric variation \(\eps^{-2}D_u g_\eps|_0\) tends in \(C^2\) on the fixed fast cylinder to a spatial TT outgoing solution \(H_u\), with error \(O(\eps)\). For the full outgoing aperture at a sufficiently large \emph{fixed} radius \(R\), the geometric Einstein--Hilbert symplectic flux on the exact tangents, divided by \(\eps^4\), tends to
+\[
+  \Omega(H_u,H_v)=\frac1{32\pi}\int_{\R^3}
+                           (H_u:\dot H_v-H_v:\dot H_u)\,\dd^3x .
+\]
+The pullback on the four real tangents has rank four. The induced canonical-time energy pairing at the tube, normalized in the same way, is
+\[
+ m_{\mathrm{wave}}(H_u,H_v)=\frac1{64\pi}\int_{\R^3}
+              (\nabla H_u:\nabla H_v+\dot H_u:\dot H_v)\,\dd^3x .
+\]
+It also equals
+\(\lim_{\eps\to0}(2\eps^4)^{-1}D^2_\lambda\M|_0[u,v]\),
+where \(\M\) is the geometric invariant ADM mass of the actual initial data. Both limits have error \(O(\eps)\) on fixed compact tangent sets. The equality is between these leading coefficients, not exact nonlinear conservation of a time-translation energy by the vacuum tube at finite \(\eps\).
+\end{theorem}
+
+\begin{proposition}\label{prop:delay}
+At the resolved leading order there is a locally flow-invariant four-dimensional manifold of two independent nonzero real pulse amplitudes and center delays. Its symplectic form and positive wave Hamiltonian are
+\[
+      \Omega=\sum_{\sigma=+,\times}\dd(A_\sigma^2 m_\sigma)\wedge\dd\tau_\sigma,
+           \qquad H_{\rm wave}=\sum_{\sigma=+,\times} A_\sigma^2m_\sigma,
+\]
+where \(m_\sigma>0\) is the wave mass of the corresponding unit pulse. This is a canonical completion of the projection at the fixed material preparation, not a claim of an exact nonlinear finite-dimensional truncation.
+\end{proposition}
+
+\paragraph{Position.}
+Oliynyk already proves the fast Newtonian limit for a broad exact family and identifies its fast tensor radiation \cite[Prop.~4.1, Thm.~1.1]{Oliynyk}. We use that family, not a new derivation of the limit or an assertion that Newtonian source motion generates the outgoing pulse in this experiment. The new comparison is the nonzero \emph{bilinear} canonical data and ADM Hessian of an explicit outgoing seed family, obtained with simultaneous amplitude differentiation and an exact leading finite-radius flux identity. It differs from both a slow post-Newtonian binding-energy coefficient and the weak backreaction of a fixed-\(c\), small-wavelength metric family. Its news limit is taken only after extracting the coefficient at each finite radius.
+
+\input{stock}
+\input{radiation}
+\input{adm}
+\input{references}
+\end{document}
+

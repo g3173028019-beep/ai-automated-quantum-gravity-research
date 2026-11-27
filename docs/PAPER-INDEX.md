@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 82 items: 20 original research packets, six later analytical Markdown manuscripts and 53 typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 85 items: 20 original research packets, six later analytical Markdown manuscripts and 53 typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–69 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–72 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -845,3 +845,27 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** Lorentzian principal-series fixed-colour foams; the rank comparison is for the designated resolved sector.
 
 [69 · Controlled noncompact sewing and fixed-colour rank in Lorentzian EPRL](../papers/69-lorentzian-eprl-noncompact-sewing/README.md) · [PDF](../papers/69-lorentzian-eprl-noncompact-sewing/manuscript.pdf) · [TeX](../papers/69-lorentzian-eprl-noncompact-sewing/main.tex) · [Verification](../papers/69-lorentzian-eprl-noncompact-sewing/VERIFICATION.md)
+
+## 70. Finite scalar tests of matched tensor dynamics
+
+**Result.** A six-scalar measurement distinguishes two prescriptions with the same Gaussian tensor influence, using the Einstein transverse-traceless cubic. A separate tagged protocol cancels a prescribed finite list of mixed contact templates exactly.
+
+**Scope.** Finite tensor packets and matched causal prescriptions; the exact mixed null uses three species and nominated fixed templates.
+
+[70 · Finite scalar tests of matched tensor dynamics](../papers/70-tt-six-scalar-phase-test/README.md) · [PDF](../papers/70-tt-six-scalar-phase-test/manuscript.pdf) · [TeX](../papers/70-tt-six-scalar-phase-test/main.tex) · [Verification](../papers/70-tt-six-scalar-phase-test/VERIFICATION.md)
+
+## 71. Positive Hadamard states for linearized Einstein wave maps
+
+**Result.** Positive physical Hadamard covariances with exact Green CCR for curved targets; a separate massive asymptotically flat construction realizes them on a fixed weighted base.
+
+**Scope.** Closed Cauchy surfaces and, separately, the controlled one-ended massive branch with scalar decay p>3.
+
+[71 · Positive Hadamard states for linearized Einstein wave maps](../papers/71-hadamard-states-einstein-wave-maps/README.md) · [PDF](../papers/71-hadamard-states-einstein-wave-maps/manuscript.pdf) · [TeX](../papers/71-hadamard-states-einstein-wave-maps/main.tex) · [Verification](../papers/71-hadamard-states-einstein-wave-maps/VERIFICATION.md)
+
+## 72. Radiative data lost by the Newtonian projection
+
+**Result.** On attainable Einstein–Euler initial data the fast outgoing graviton pairs are absent in the Newtonian projection. The positive finite-radius escape coefficient equals the normalized mixed ADM mass Hessian.
+
+**Scope.** Fixed-radius coefficient extraction on the specified initial family; the radiation limit is taken afterward.
+
+[72 · Radiative data lost by the Newtonian projection](../papers/72-radiative-data-newtonian-projection/README.md) · [PDF](../papers/72-radiative-data-newtonian-projection/manuscript.pdf) · [TeX](../papers/72-radiative-data-newtonian-projection/main.tex) · [Verification](../papers/72-radiative-data-newtonian-projection/VERIFICATION.md)

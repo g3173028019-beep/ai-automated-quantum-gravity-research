@@ -230,3 +230,11 @@ Run ./build.sh in each selected paper directory with pdfLaTeX.
 - [67 · Gravitational phase beyond occupation counts on a half-turn vacuum branch](../papers/67-half-turn-taub-curvature-phase/README.md)
 - [68 · What a retained-mode observer can recover in quantum Einstein–Rosen dynamics](../papers/68-einstein-rosen-spectral-memory/README.md)
 - [69 · Controlled noncompact sewing and fixed-colour rank in Lorentzian EPRL](../papers/69-lorentzian-eprl-noncompact-sewing/README.md)
+
+## Building Papers 70–72
+
+Run ./build.sh in each selected paper directory with pdfLaTeX.
+
+- [70 · Finite scalar tests of matched tensor dynamics](../papers/70-tt-six-scalar-phase-test/README.md)
+- [71 · Positive Hadamard states for linearized Einstein wave maps](../papers/71-hadamard-states-einstein-wave-maps/README.md)
+- [72 · Radiative data lost by the Newtonian projection](../papers/72-radiative-data-newtonian-projection/README.md)

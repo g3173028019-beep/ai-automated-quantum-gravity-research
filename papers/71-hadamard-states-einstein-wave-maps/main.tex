@@ -1,0 +1,361 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Positive Hadamard States for Linearized Einstein Wave Maps}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\WF}{\operatorname{WF}}
+\newcommand{\id}{\mathbf 1}
+\newcommand{\Lie}{\mathcal L}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\HH}{\mathcal H}
+\newcommand{\VV}{\mathcal V}
+\newcommand{\GG}{\mathcal G}
+\newcommand{\CC}{\mathcal C}
+\newcommand{\Reg}{\mathcal J}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\Ad}{\operatorname{adv}}
+\newcommand{\Rt}{\operatorname{ret}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\title{Positive Hadamard States for Linearized Einstein Wave Maps\\
+\large Curved targets and controlled massive asymptotically flat ends}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+A wave map with a curved Riemannian target contributes a bundle connection and a target-curvature endomorphism to the physical Einstein--matter Jacobi equation. We construct positive quasifree Hadamard covariances for the genuine coupled linearization on any smooth on-shell background with compact Cauchy surface, allowing nontrivial target pullback bundles and coupled Killing fields. We also give a bounded Cauchy realization on one-ended, small, strongly conormal asymptotically flat data with strictly positive asymptotic matter mass and nonconstant algebraic tails of order \(r^{-p}\), \(p>3\). The latter separates the gravitational cylindrical scale from the massive matter scale, uses a true weighted gauge complement and preserves local smoothness through a bounded spectral positivity correction. It requires no uniform massive wave evolution in the mixed spaces. Both constructions preserve the exact physical Green commutator. Exact constraint data illustrate the active bundle curvature on a compact slice and a genuinely nonvacuum algebraic tail on the asymptotically flat slice.
+\end{abstract}
+
+\section{Statement and comparison}\label{sec:setup}
+
+All backgrounds below are smooth exact solutions of the minimally coupled Einstein--wave-map equations in four spacetime dimensions, and the covariances refer to their \emph{linearization}. The matter target \((N,G)\) is a finite-dimensional smooth Riemannian manifold with a smooth real potential \(V\). Neither a flat target nor a target frame along the background map \(\Phi\) is assumed. The physical test space is
+\[
+   \mathfrak E=\ker_{\Gamma_c}F\,/\,P\Gamma_c,
+\]
+where \(P\) is the on-shell Hessian and \(F\) the adjoint diffeomorphism constraint in the conventions of Section~\ref{sec:jacobi}. The Green form of the reduced wave operator specifies the physical commutator on \(\mathfrak E\). By Hadamard we mean that the physical covariances admit gauge-fixed bisolution representatives with the corresponding two-leg wavefront inclusion. Positivity is asserted on physical tests, not on all tensor, gauge, or ghost components.
+
+\begin{theorem}[Compact Cauchy surface]\label{thm:compact}
+Let \((M,g,\Phi)\) be time-oriented and globally hyperbolic with a smooth closed Cauchy surface. Its linearized Einstein--wave-map compact physical test algebra has positive quasifree Hadamard covariances with the exact physical Green CCR. The reduced charge on \(\mathfrak E\) is nondegenerate. There is also a compatible ambient bisolution representative with the full gauge-fixed Green CCR, without ambient positivity. There is no criticality assumption on \(V\), rank condition on \(\dd\Phi\), or exclusion of a coupled Killing kernel.
+\end{theorem}
+
+\begin{theorem}[Controlled massive end]\label{thm:af}
+Let \(\Sigma=\mathbb R^3\) with one fixed asymptotically Euclidean chart and \(r=\langle x\rangle=(1+|x|^2)^{1/2}\). Fix \(0<\beta<1\), \(-1<d<-1/2\), and a finite \(p>3\). Assume exact initial constraint data \((\gamma,K_\Sigma,\Phi,\Pi_\Phi)\), where \(K_\Sigma=\tfrac12\Lie_n\gamma\) and \(\Pi_\Phi=\dd\Phi(n)\). Assume the initial map lies in a fixed normal coordinate ball about \(\Phi_\infty\), and write it as \(\varphi\) in those coordinates. Assume
+\begin{align}
+ V'(\Phi_\infty)&=0, \qquad W(\Phi_\infty)=0,\nonumber\\
+ \operatorname{Hess}^N V(\Phi_\infty)&>0, \qquad W=\Lambda+V,\nonumber\\
+ \partial^j(\gamma-e)&=O(r^{-\beta-j}),&
+ \partial^j K_\Sigma&=O(r^{-1-\beta-j}),\nonumber\\
+ \partial^j\varphi&=O(r^{-p-j}),&
+ \partial^j\Pi_\Phi&=O(r^{-p-1-j}) \qquad(j\geq0).
+ \label{eq:end}
+\end{align}
+Here \(e\) is the Euclidean metric, the corresponding finitely many global weighted seminorms (including the compact core) are sufficiently small. Higher seminorms need only be finite. The threshold may depend on the fixed target, potential, chart, core and \(d\). In particular the strictly positive asymptotic Hessian is fixed, not a small-mass limit.
+
+On the smooth maximal globally hyperbolic development of these data the compact physical presymplectic algebra admits positive quasifree Hadamard covariances with its exact Green CCR. They have a realization on the fixed mixed Cauchy Hilbert base in \eqref{eq:bases}, by bounded operators and a correction smoothing after any two compact localizations. This does not require a vacuum-scalar exterior or a uniform bound on time evolution in those mixed spaces. It neither identifies the possible physical charge radical nor constructs a state on additional asymptotic charge variables.
+\end{theorem}
+
+The wider canonical flat-target state theorem in the Einstein--scalar modular-kernel manuscript \cite[\S\S2--3]{FlatCompanion} already treats arbitrary Cauchy topology and ends at the level of a compact-source algebra. Thus noncompactness by itself is not new here. Our statements concern the genuine curved target, including its connection and curvature in the reduced wave system, and in Theorem~\ref{thm:af} a specific weighted \emph{bounded realization} on the full Cauchy slice. This latter result uses a true gauge inverse at one weight and a controlled spectral operation, not only local existence of a covariant distribution. We do not claim that \(p>3\) is necessary for Hadamard states or that the same Hilbert construction works for unrestricted ends.
+
+Hack \cite{Hack} provides the canonical Einstein--Klein--Gordon gauge complex; covariant target perturbations and their curvature terms are standard in wave maps and multifield gravity \cite{Tao,GongTanaka}. The microlocal input is the smooth wave sign calculus and its use for constrained systems \cite{GOW,Gerard,GW}; we do not claim those general techniques as new. Vacuum asymptotically flat linearized gravity has distinct positivity and infrared analyses \cite{GMW}. The proof derives the coupled complex and the all-mode positivity in the stated curved-target settings.
+
+\section{The genuine coupled wave complex}\label{sec:jacobi}
+
+Use signature \((-+++)\) and the common normalization
+\[
+ S=\frac12\int_M\bigl(R_g-2\Lambda-|\dd\Phi|_{g,G}^2-2V(\Phi)\bigr)\,\dd\mu_g .
+\]
+Let \(E=\Phi^*TN\) have the pullback metric and connection \(D\). Put \(a=\dd\Phi\), \(\HH_{ab}=(\nabla D\Phi)_{ab}\), \(S^\Phi_{ab}=G(a_a,a_b)\), and \(V'=\operatorname{grad}_G V\). The symbol \(\nabla D\Phi\) denotes the tensor-product covariant derivative of \(a\), including its spacetime index. The field equations are
+\[
+  \Ric_g-S^\Phi-Wg=0,\qquad g^{ab}\HH_{ab}-V'=0 .
+\]
+For \(h=\delta g\) and \(\psi=\delta\Phi\in\Gamma(E)\), torsionlessness gives \(D_s\dd\Phi_s=D\partial_s\Phi_s\), and
+\([D_s,D_a]Y=R^N(\partial_s\Phi_s,a_a)Y\) on parameter families. Here \(R^N(U,V)Y=[D_U,D_V]Y-D_{[U,V]}Y\), so the unit sphere has \(R^N(U,V)Y=G(V,Y)U-G(U,Y)V\). With \(B(h)_a=\nabla^b h_{ba}-\tfrac12\nabla_a\tr_g h\), variation gives
+\begin{align}
+ \delta S^\Phi_{ab}&=G(D_a\psi,a_b)+G(a_a,D_b\psi),\nonumber\\
+ \delta_{\rm cov}(g^{ab}\HH_{ab}-V')
+  &=\square_D\psi+\mathfrak R_\Phi\psi-\operatorname{Hess}^N V\,\psi
+       -h^{ab}\HH_{ab}-B(h)^a a_a,\nonumber\\
+ \mathfrak R_\Phi\psi&=g^{ab}R^N(\psi,a_a)a_b .
+ \label{eq:variation}
+\end{align}
+Here \(g^{ab}\delta\Gamma^c_{ab}=B(h)^c\). The curvature symmetries imply that \(\mathfrak R_\Phi\) is fiber self-adjoint; its sign is not assumed.
+
+Write \(Ih=h-\tfrac12 g\,\tr_g h\), the involutive trace reversal in four dimensions. The true pairings, antilinear in the first slot, are \(b_1=g\) on vector fields and
+\[
+ b_2\bigl((h,\psi),(\widehat h,\widehat\psi)\bigr)
+     =\tfrac14\overline h:I\widehat h+G(\overline\psi,\widehat\psi).
+\]
+The infinitesimal diffeomorphism and its associated constraint are
+\[
+ KX=(\Lie_Xg,a(X)),\qquad
+ F(h,\psi)=\bigl(B(h)-2a^\top\psi\bigr)^\sharp,\qquad
+ (a^\top\psi)_a=G(a_a,\psi).
+\]
+The raise is by \(g\). Integration by parts gives \(K^\dagger=-F/2\) in these pairings. There is no independent target gauge; \(\psi\) is intrinsically a section of \(E\).
+
+In these pairings the true on-shell Hessian is
+\[
+ P=\bigl(-2\,\delta(\Ric_g-S^\Phi-Wg),\
+          \delta_{\rm cov}(g^{ab}\HH_{ab}-V')\bigr).
+\]
+The inverse trace reversal converts the first background expression into the Einstein Euler derivative, with the displayed normalization. Variations of this conversion multiply the vanishing background Euler expression, so the Hessian is formally self-adjoint. The same observation applies to covariant differentiation of the matter Euler expression. Naturality implies \(PK=0\) and adjointness \(FP=0\). Set
+\begin{align}
+  D_2&=P+KF,\qquad D_1=FK=\square_\nabla+\Ric_g-2S^\Phi,\nonumber\\
+  D_2K&=KD_1,\qquad FD_2=D_1F .
+  \label{eq:wavecomplex}
+\end{align}
+Indeed \(B(\Lie_Xg)=(\square_\nabla+\Ric_g)X\), with index positions identified by \(g\).
+
+The tensor derivative mixing cancels: \(+2\,\delta S^\Phi\) in \(P\) cancels the derivatives of \(\psi\) in \(-2\Lie_{(a^\top\psi)^\sharp}g\), since \(\nabla_a(a^\top\psi)_b=G(D_a\psi,a_b)+G(\psi,\HH_{ab})\). The matter derivative mixing from \(B(h)\) in \eqref{eq:variation} cancels with \(a(F(h,0))\). In the convention \(g^{cd}R_{acbd}=\Ric_{ab}\), the explicit system is
+\begin{equation}
+ D_2\binom{h}{\psi}=
+ \binom{\square_\nabla h_{ab}+2R_{acbd}h^{cd}
+       -2 S^\Phi_{(a}{}^c h_{b)c}
+       -4G(\HH_{ab},\psi)+2G(V',\psi)g_{ab}}
+ {\square_D\psi+\mathfrak R_\Phi\psi-\operatorname{Hess}^N V\,\psi
+      -2\mathfrak A_\Phi\psi-h^{ab}\HH_{ab}},
+ \label{eq:system}
+\end{equation}
+where \(\mathfrak A_\Phi\psi=g^{ab}a_a G(a_b,\psi)\).
+The \(2G(V',\psi)g_{ab}\) term is fixed by the Hessian. In fact trace reversal of the mixed tensor block is \(-4G(\HH_{ab},\psi)\) because \(\tr_g\HH=V'\). Thus the mixed blocks are adjoints under \(b_2\). In general \(D_2\) does \emph{not} commute with \(I\oplus\id\); we use the full conserved charge. Both \(D_j\) have normally hyperbolic principal parts in pairing-preserving connections.
+
+\subsection{Cauchy maps and exact charge}\label{sec:charge}
+
+Choose a geometric Cauchy surface. Its physical normal data are position and covariant normal velocity \((u,\nabla_n^{(j)}u)\), with \(\nabla^{(2)}=\nabla\oplus D\). Normal transport identifies each bundle in a collar with the pullback of its restriction to the slice. This is not tangential flattening and introduces no requirement of triviality of \(E\). Let \(U_j\) denote wave propagation from data and \(\rho_j\) the data trace. On compact data let
+\[
+ \Omega_j(u,v)=\int_\Sigma
+ \bigl(b_j(u_0,v_1)-b_j(u_1,v_0)\bigr)\,\dd\mu_\gamma,\qquad
+ q_j=i\Omega_j .
+\]
+The order-zero couplings cancel from the Green divergence by formal adjointness. Define \(k,c\) on data by the exact maps induced by \(K,F\). From \eqref{eq:wavecomplex}, \(FKX=0\) for a \(D_1\) solution, so \(ck=0\). With \(E_j=E_{j,\Ad}-E_{j,\Rt}\) the wave causal propagator, the Green identity and the spacetime adjoint give
+\begin{equation}
+ q_2(ku,v)=-\tfrac12 q_1(u,cv),\qquad
+ E_2K=KE_1,\qquad FE_2=E_1F .
+ \label{eq:wd}
+\end{equation}
+For example use a compact cutoff source for the second wave in the charge, move \(K\) to its spacetime adjoint, and use \(FE_2=E_1F\). Compact data are enough for this step. On the end, the right side will be the paired ghost--constraint realization of the same unscaled vector charge.
+
+\section{Wave signs, gauge representatives and positivity}\label{sec:scheme}
+
+We give the common local argument and its compact realization first. On the asymptotically flat slice Section~\ref{sec:af} supplies the fixed bases and the error class used in this argument. On a compact slice all errors denoted by \(\Reg\) are smoothing; on the end they have the one-leg estimates of \eqref{eq:leg}. In the balanced Cauchy orders, field position and velocity have orders \(1/2,-1/2\); the gauge source is one order higher, and the constraint output one order lower. A real positive auxiliary connection Bessel operator \(\epsilon=(1+\nabla_{\rm aux}^*\nabla_{\rm aux})^{1/2}\) implements the corresponding Sobolev balances, independently of the physical charge. On the compact slice the exact charge in balanced field coordinates has a bounded invertible order-zero Hermitian representative \(Q_2\): its off-diagonal blocks are conjugations of the invertible fiber pairing by \(\epsilon^{1/2}\), with inverses given by the inverse pairing and reverse conjugations. Throughout, bars denote real conjugation, so \(q_j(\overline u,\overline v)=-\overline{q_j(u,v)}\).
+
+\subsection{Local wave projectors}
+
+Use the two-sheet Cauchy projectors for normally hyperbolic operators with scalar principal part and bundle lower orders \cite[\S\S5--6]{GOW}. In a Gaussian collar the balanced first-order generator has separated principal roots \(\pm|\xi|_\gamma\) for \(\xi\ne0\). The graph eigenbundles over the positions give the leading diagonalization. At each subsequent order eliminate the off-diagonal symbol by division by the root difference, and sum the symbols locally. This gives the complete wave signs and the Poisson operators on their respective null sheets. The local complete symbols agree on overlaps in the same geometric data: the difference of the plus Poisson factors is on the plus sheet, and by complementary sum the same difference is also the negative of the difference on the minus sheet. This forces smoothing, including with respect to both Cauchy legs by the local Poisson relation, and taking the data trace gives equality of complete symbols. Reality and the sum are exact after \(C^+\mapsto(C^++1-\overline{C^+})/2\) and \(C^-=1-C^+\); idempotence is modulo \(\Reg\).
+
+Write the signs as \(C_G^\pm,C_V^\pm,C_C^\pm\) on gauge, field and constraint data, using the vector wave in the two respective shifts for gauge and constraint. The exact equations \eqref{eq:wavecomplex} imply
+\begin{equation}
+ C_V^\pm k-k C_G^\pm\in\Reg,\qquad
+ C_C^\pm c-c C_V^\pm\in\Reg,\qquad
+ (C_V^\pm)^*Q_2-Q_2C_V^\pm\in\Reg .
+ \label{eq:signs}
+\end{equation}
+In the last relation use the local unweighted charge representative (on the end, proper representatives before weighting). For example an opposite-sheet gauge or constraint block obeys the homogeneous intertwiner equation between two first-order evolutions. Its first potentially nonzero symbol is multiplied by the separated root difference at one order higher than its time derivative, so it vanishes. Induction kills all coefficients. The same opposite-sheet argument applied to \((C^-_V)^*Q_2C^+_V\), using the evolution equation of the full conserved charge, gives the last relation. Local construction uses the exact coupled waves; choosing bounded global spatial representatives of these symbols will not change the wave equations.
+
+\subsection{Exact gauge and symbolic constraint projections}\label{sec:gauge}
+
+On either sheet the principal gauge symbol at the nonzero null covector \(\zeta\) is \((i(\zeta_a X_b+\zeta_b X_a),0)\), which is injective. The matter gauge term \(a(X)\) is one order lower. The constraint principal map is, up to \(i\) and index raise, \(\zeta^a(Ih)_{ab}\) and is surjective: if \(\ell(\zeta^\sharp)=1\), contraction of the trace-reversed tensor \(\ell\otimes f+f\otimes\ell-f(\zeta^\sharp)\ell\otimes\ell\) gives \(f\). The scalar constraint term is lower order. The two branch data splittings show that the compact \(k\) is left elliptic as a Cauchy map. In unshifted balanced \(L^2\) coordinates \(k\) has order one. Its positive-Hilbert adjoint gives the elliptic inverse
+\[
+ L_0=(k^*k+\Pi)^{-1}k^*,\qquad L_0k=1-\Pi ,
+\]
+where \(\Pi\) is the real smooth finite-dimensional kernel projection of \(k\) on gauge data. The \(L_0\) here is order \(-1\), raising the Sobolev index by one. The kernel consists exactly of coupled symmetries \(KX=0\), by uniqueness of the wave for \(KX\) with zero data. It is allowed to be nonzero.
+
+On the end \(L_0\) is a true weighted left inverse with \(\Pi=0\), proved in Section~\ref{sec:adm}. In either case define
+\begin{equation}
+ L_{\rm s}=\sum_{\sigma=\pm}C_G^\sigma L_0 C_V^\sigma,\qquad
+ L=L_{\rm s}+(1-\Pi-L_{\rm s}k)L_0,\qquad T=1-kL.
+ \label{eq:left}
+\end{equation}
+The sign relations imply \(L_{\rm s}k=1-\Pi\bmod\Reg\), and the correcting parenthesis annihilates \(\Pi\) exactly. Thus \(Lk=1-\Pi\), \(Tk=0\), \(T^2=T\), \(cT=c\) exactly and \([T,C_V^\pm]\in\Reg\). Reality follows from the conjugate sign pair and the real \(L_0\). This step uses exact inversion of a simpler gauge operator rather than inversion of the sign-adapted condition. By \eqref{eq:wd}, \(T\) preserves the charge on constrained pairs.
+
+There is an order-\(-1\) right \emph{parametrix} \(R_0\) for \(c\), using the surjective principal map to solve its successive symbol errors. Put
+\begin{equation}
+ R=T\sum_{\sigma=\pm} C_V^\sigma R_0 C_C^\sigma,\qquad H=1-Rc .
+ \label{eq:right}
+\end{equation}
+Then \(cR=1\bmod\Reg\), \(TR=R\), \(TH=HT=T-Rc\), and \(H=1\) exactly on \(\ker c\). Also \(H^2=H\bmod\Reg\), and \(H\) commutes with the signs modulo that ideal. The off-shell map \(H\) is only for symbol factorization; there is no assertion of an exact constraint inverse on every mode.
+
+\subsection{Positive squares and an exact common correction}\label{sec:square}
+
+On a principal null branch a gauge change sets \(h_{n\mu}=0\), since \(\zeta(n)\ne0\). The normal constraint then forces the trace to vanish and the spatial condition forces transversality. The remaining tensor is spatial \(\TT\) and the matter fiber is all of \(E\). The signed charge is a positive normalization times \(\tfrac14|h_{\TT}|^2+|\psi|_G^2\); indeed \(i\Omega\) on the flat positive-frequency data \((u,-i|\xi|u)\) is positive with the positive fiber metric. A gauge change does not affect the constrained principal charge by \eqref{eq:wd}. A principal vector in the range of \(C_V^\pm TH\) is the \(T\)-image of its \(\TT\)-plus-target representative. Since \(T\) is bounded in the principal norms, this compares the signed charge to the norm of the actual representative. On the compact cosphere the coercivity is uniform. On the end the same argument applies separately in the two native scales at the principal level.
+
+Define the exactly Hermitian raw forms
+\begin{equation}
+ G_\pm(u,v)=\pm\tfrac12
+ \bigl(q_2(Tu,C_V^\pm Tv)+q_2(C_V^\pm Tu,Tv)\bigr).
+ \label{eq:raw}
+\end{equation}
+Their difference is \(q_2(Tu,Tv)\); they are real conjugate under exchange of signs. Extend the forms for the factorization by using \(HT\) instead of \(T\) in both arguments of \eqref{eq:raw}. The extended forms are unchanged on \(\ker c\). With \(e_\pm=C_V^\pm TH\), the extended form is \(e_\pm^*(\pm Q_2)e_\pm\bmod\Reg\) by the sign relations, and \(e_\pm\) is idempotent modulo \(\Reg\). The auxiliary symbol
+\begin{equation}
+ A_\pm=e_\pm^*(\pm Q_2)e_\pm+(1-e_\pm)^*(1-e_\pm)
+ \label{eq:fullsquare}
+\end{equation}
+has strictly positive principal part; its quadratic form bounds a positive constant times
+\(\|e_\pm u\|^2+\|(1-e_\pm)u\|^2\geq\|u\|^2/2\), even for an oblique projection. The positive principal square root extends symbolically: each higher term solves \(B_0X+XB_0=Y\), with \(B_0>0\) the principal square root, so the Sylvester map is invertible. Realize the symbol and multiply on the right by \(e_\pm\). Sandwiching \eqref{eq:fullsquare} by \(e_\pm^*,e_\pm\) removes its auxiliary second term modulo \(\Reg\). The exact extended forms are therefore \(B_\pm^*B_\pm+J_\pm\) with \(J_\pm=J_\pm^*\in\Reg\). On compact slices this uses ordinary bundle symbol summation. On the end the factorization is first made in unweighted proper representatives and pulled back to the weighted space, as detailed in Section~\ref{sec:factorend}.
+
+The bounded spectral identity \(\lvert J_\pm\rvert=J_\pm\sgn(J_\pm)\) preserves the required gains. On compact slices it immediately gives \(L^2\to H^N\) for every \(N\); self-adjointness and interpolation give smooth kernels. Define the common real correction and final forms by
+\begin{equation}
+ S_{\rm sm}=|J_+|+|J_-|+\overline{|J_+|+|J_-|},\qquad
+ \lambda^\pm(u,v)=G_\pm(u,v)+(Tu,S_{\rm sm}Tv)_{\rm ref}.
+ \label{eq:repair}
+\end{equation}
+It dominates \(-J_\pm\) separately. For a constrained \(v\), \(Tv\) is also constrained and the raw form on \(Tv\) is its extended positive square plus \(J_\pm\) there. This proves \(\lambda^\pm(v,v)\geq 0\) on the entire constrained space. Both forms vanish on pure gauge inputs by \(Tk=0\), have exact conjugacy, and have difference \(q_2\) on constrained arguments. No positivity of the unconstrained Jacobi energy or exclusion of curvature-induced low modes is used.
+
+\input{fixed-base}
+
+\section{Physical test algebra and propagation}\label{sec:lift}
+
+Let \(S_2=\rho_2 E_2\) in the corresponding normalized data and set
+\begin{equation}
+ \Lambda^\pm(f,g)=\lambda^\pm(S_2 f,S_2g),\qquad f,g\in\Gamma_c .
+ \label{eq:lift}
+\end{equation}
+For compact spacetime supports the Cauchy footprints are compact by global hyperbolicity. The continuity of \(S_2\) there gives distributions, and \(E_2D_2=0\) gives bisolutions. From \(FE_2=E_1F\),
+\[
+ Ff=0\ \Longrightarrow\ c S_2 f=0,\qquad
+ S_2Pu=-k\rho_1 E_1Fu,\qquad S_2Kb=k\rho_1 E_1b
+ \quad(u,b\ \text{compact}).
+\]
+Thus the forms descend to \(\mathfrak E\), are positive there, and annihilate compact pure gauge tests in the representative \eqref{eq:lift}. Their exact difference on conserved tests is
+\begin{equation}
+ \Lambda^+(f,g)-\Lambda^-(f,g)=q_2(S_2 f,S_2 g)
+       =-i(f,E_2g)_{b_2}.
+ \label{eq:ccr}
+\end{equation}
+The sign uses the advanced-minus-retarded convention in Section~\ref{sec:charge}; it follows by the Green relation \(\Omega_2(u,S_2 f)=(U_2u,f)_{b_2}\) and antisymmetry of the real causal propagator. Positivity together with exact conjugacy and \eqref{eq:ccr} defines a quasifree state of the stated physical CCR algebra. In the noncompact case this is allowed to be presymplectic. We do not assume that the state descends further through its whole radical.
+
+To see the wavefront property on either slice, use \eqref{eq:signs} and the \(T\)-commutator in Section~\ref{sec:gauge}. Modulo smoothing after compact localization, \eqref{eq:raw} has a same-sign projector on each exterior Cauchy leg and a pseudodifferential diagonal middle operator, with \(T^*Q_2T\) between the projected legs. The correction in \eqref{eq:repair} is locally smoothing in both legs by the established ideal property. The Green relation converts the Cauchy signs on the source legs into the corresponding one-sheet wave Poisson factors. Each propagates its nonzero covectors along the exact null bicharacteristic of the scalar principal symbol, with two legs connected by the intervening Cauchy diagonal. This gives
+\[
+ \WF'(\Lambda^\pm)\subset
+ \{(x,\xi;y,\eta): (x,\xi)\sim(y,\eta)
+       \text{ on the chosen }\pm\text{ sheet}\}.
+\]
+A primed wavefront changes the sign of the second covector; the relation \(\sim\) requires both covectors nonzero and joined by the same null Hamilton flow. The plus sheet corresponds to \(e^{-i|\xi|t}\) in the flat check. Parallel transport can act nontrivially in the tensor and target bundles without changing this relation. For arbitrary compact observation sets one first localizes both Cauchy footprints, and then uses the wave Cauchy problem and local propagation through compact chains of flowouts. No global boundedness of the wave propagation on \eqref{eq:bases} is needed. This proves the end statement and the compact positive Hadamard assertion.
+
+\subsection{Compact nondegeneracy and full-commutator representative}
+
+For a compact slice, the map of \(\mathfrak E\) onto the smooth data quotient \(\ker c/\ran k\) is an isomorphism. Given a constrained wave choose a compact source \(f\) with \(E_2 f\) equal to that wave, by applying \(D_2\) to a time-truncated solution. Then \(E_1Ff=0\), so \(Ff=D_1 a\) for compact \(a\) by the wave Green exact sequence. Subtract \(Ka\) from \(f\) to impose \(Ff=0\) without changing the data class. Conversely, if \(Ff=0\) and \(E_2 f=KX\) for a \(D_1\)-solution, take a compact \(b\) with \(E_1b=X\) by the same construction. Then \(f=Kb+D_2u\) for compact \(u\), whence \(D_1(b+Fu)=0\). A compactly supported homogeneous wave vanishes, so \(f=Pu\).
+
+The range of \(k\) at the compact balanced Hilbert order is closed by \(L_0k=1-\Pi\). Equation \eqref{eq:wd} and nondegeneracy of the vector charge identify its \(Q_2\)-orthogonal complement with \(\ker c\). Smooth constrained vectors are dense there: \(Q_2^{-1}(1-kL_0)^*Q_2\) is a projection onto the orthogonal complement in this indefinite pairing and preserves smooth data. The double annihilator gives precisely \(\ran k\) as the radical restricted to the constrained space. For smooth vectors in \(\ran k\) the representative \(L_0 v\) is smooth. Hence the smooth reduced charge is nondegenerate without removing a putative physical zero mode.
+
+For an ambient representative on the compact slice, use \(C_{G,0}^\pm=(1-\Pi)C_G^\pm(1-\Pi)+\Pi/2\). Add the following mixed terms to \(\lambda^\pm(u,v)\) before pulling back by \(S_2\):
+\begin{equation}
+ \pm\left\{q_2(k C_{G,0}^\pm L u,Tv)
+          +q_2(Tu,k C_{G,0}^\pm L v)\right\}.
+ \label{eq:ambient}
+\end{equation}
+They vanish on constrained pairs by \eqref{eq:wd}, so the physical state is unchanged. Their difference completes the two mixed quadrants in \(u=Tu+kLu\), since gauge--gauge charge is zero. The full difference is now \(q_2\), giving the full reduced wave Green CCR before the test restriction. For a gauge input the remaining output pairs an exact gauge wave against the other input; \(k C_{G,0}^\pm\Pi=0\). Modulo smoothing, sign adaptation and \eqref{eq:signs} identify the completed form with \(\pm q_2(\cdot,C_V^\pm\cdot)\), so its same-sheet wavefront inclusion follows by the same argument. This is a compatible ambient bisolution, not a claim of bundle-wide positivity or a separate ghost state.
+
+\section{Exact backgrounds with active target curvature}\label{sec:examples}
+
+\subsection{Compact pullback with no global real frame}
+
+Let \(\Sigma=S^1_z\times S^2_\omega\), take the target to be the unit round \(S^2\) with metric \(\Omega\), and set \(\Phi_0(z,\omega)=\omega\). For a smooth nonconstant \(u:S^2\to\mathbb R\) and a nonzero constant \(H_*\), take
+\[
+ \gamma=\dd z^2+e^{2u(\omega)}\Omega,\qquad
+ K_\Sigma=H_*\gamma,\qquad \Pi_\Phi=0,\qquad
+ V(y)=3H_*^2-\Lambda-e^{-2u(y)}\Delta_\Omega u(y).
+\]
+The Laplacian convention here is \(\Delta=\operatorname{div}\operatorname{grad}\). The Hamiltonian constraint holds exactly: \(R_\gamma=2e^{-2u}(1-\Delta_\Omega u)\), \(|\dd_\Sigma\Phi_0|_{\gamma,G}^2=2e^{-2u}\), and \((\tr K_\Sigma)^2-|K_\Sigma|^2=6H_*^2\), so
+\[
+ R_\gamma+(\tr K_\Sigma)^2-|K_\Sigma|^2
+       =|\Pi_\Phi|^2+|\dd_\Sigma\Phi_0|^2+2(\Lambda+V).
+\]
+The momentum constraint holds because \(H_*\) is constant and \(\Pi_\Phi=0\). For instance \(u(y)=\varepsilon y^3\), \(0<|\varepsilon|<1/2\), gives \(V=3H_*^2-\Lambda+2u e^{-2u}\) and \(V'\ne0\) off the poles.
+
+These exact data have a smooth local Einstein--wave-map development. One can see the target chart issue directly using the unit sphere embedded in \(\mathbb R^3\): extend \(V\) radially on an annulus and solve the ordinary harmonic-reduced Einstein equations with
+\(\square_g q=-|\dd q|_g^2 q+\operatorname{grad}V_{\rm ext}(q)\).
+The initial compact data permit a smaller common slab inside the annulus. There \(|q|^2-1\) satisfies a homogeneous wave equation with potential \(2|\dd q|_g^2\) and zero initial data, so the map stays on the sphere. Its stress tensor is conserved by the intrinsic equation. The contracted Bianchi identity then propagates the initially satisfied harmonic conditions. This is the usual quasilinear Cauchy construction \cite{CB}, not free evolution of a scalar on a fixed metric.
+
+On \(\{z\}\times S^2\) the pullback bundle is \(TS^2\) with Euler number \(2\). Thus it has no global real frame. On the slice \(\mathfrak R_\Phi=e^{-2u}\id_E\) by the sphere curvature formula, and \(\mathfrak A_\Phi=e^{-2u}\id_E\). Moreover \(\HH_{ni}=-H_*a_i\) is nonzero, so metric--matter coupling is genuine independently of the potential term. The map's spatial tension vanishes because the identity of the conformally rescaled two-sphere with the round sphere is harmonic; hence \(D_n\Pi_\Phi=-V'\), not a frozen map on the noncritical patch. Translation in \(z\) preserves the exact data and extends by uniqueness, realizing a nontrivial coupled gauge kernel as allowed in Theorem~\ref{thm:compact}.
+
+\subsection{A genuinely nonconstant algebraic massive end}
+
+For the end theorem use the same round target, \(\Lambda=0\), \(V(q)=\mu^2(1-q^3)\) with fixed \(\mu>0\), and the north pole as \(\Phi_\infty\). Its Hessian there is \(\mu^2G\). Fix \(p>3\), a tangent unit vector \(e_1\) at the pole and a smooth compactly supported tangent-valued profile \(u_{\rm c}\). Choose
+\[
+ \Phi(x)=\exp_{\Phi_\infty}\!\bigl(\varepsilon r^{-p}e_1+\varepsilon u_{\rm c}(x)\bigr),
+ \qquad K_\Sigma=\Pi_\Phi=0,\qquad \gamma=w^4 e .
+\]
+The profile may have two independent target-gradient directions on a core patch. At small nonzero \(\varepsilon\) the map stays in a fixed normal target ball, is noncritical on the end, and is not Schwartz or eventually constant. The momentum constraint is automatic. The exact Hamiltonian constraint becomes
+\[
+ -8\Delta_e w=|\dd\Phi|_{e,G}^2 w+2W(\Phi)w^5 .
+\]
+The two coefficients are small \(L^1\cap L^\infty\), with conormal orders \(-2p-2\) and \(-2p\), respectively. The Newton map
+\[
+ w\longmapsto 1+\frac1{32\pi}\int_{\mathbb R^3}
+     \frac{|\dd\Phi(y)|_{e,G}^2 w(y)+2W(\Phi(y))w(y)^5}{|x-y|}\,\dd^3y
+\]
+is a contraction on a bounded closed ball about \(1\) contained in \(w>1/2\): split the kernel into \(|x-y|\leq1\) and its complement and use the small \(L^\infty\) and \(L^1\) norms. The resulting constraint solution is smooth by elliptic regularity. Splitting the Newton integral at a radius comparable to \(|x|\), with the decaying source bounded on the far shells, shows \(w=1+O(r^{-1})\). On each fixed rescaled annulus the same equation and conormal coefficients give by elliptic interior estimates
+\(\partial_x^j(w-1)=O(r^{-1-j})\) for every \(j\). At each fixed required finite order the constants tend to zero with \(\varepsilon\), by those estimates and the contraction bound. Thus these data meet \eqref{eq:end}. The construction is a truly backreacting massive end with algebraic matter, not an approximation by a vacuum exterior or a state of matter alone on a fixed geometry.
+
+\section{Scope}
+
+The positive physical linear state is furnished in both cases without a distinguished vacuum, purity, a positive classical Jacobi Hamiltonian, or uniform global-in-time estimates. The compact result handles arbitrary positive curved target geometry. The noncompact result fixes a particularly controlled one-ended initial class to realize the full bounded construction and to preserve local regularity through a global spectral correction. It neither identifies the compact-test radical on that end, nor includes nondecaying gauge generators, ADM or BMS charge variables, nonlinear quantization, stability, or scattering.
+
+\begin{thebibliography}{10}
+\bibitem{FlatCompanion}
+\emph{Local curvature information and modular dynamics in coupled Einstein--scalar theory},
+public companion manuscript,
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/09-21-coupled-modular-kernel}{Paper 09+21}.
+
+\bibitem{Hack}
+T.-P. Hack,
+\emph{Quantization of the linearised Einstein--Klein--Gordon system on arbitrary backgrounds and the special case of perturbations in inflation},
+Class. Quantum Grav. \textbf{31}, 215004 (2014),
+\href{https://arxiv.org/abs/1403.3957}{arXiv:1403.3957}.
+
+\bibitem{Tao}
+T. Tao,
+\emph{Global regularity of wave maps VII. Control of delocalised or dispersed solutions},
+\href{https://arxiv.org/abs/0908.0776}{arXiv:0908.0776} (2009).
+
+\bibitem{GongTanaka}
+J.-O. Gong and T. Tanaka,
+\emph{A covariant approach to general field space metric in multi-field inflation},
+JCAP \textbf{03}, 015 (2011),
+\href{https://arxiv.org/abs/1101.4809}{arXiv:1101.4809}.
+
+\bibitem{GOW}
+C. G\'erard, O. Oulghazi and M. Wrochna,
+\emph{Hadamard states for the Klein--Gordon equation on Lorentzian manifolds of bounded geometry},
+Commun. Math. Phys. \textbf{352}, 519--583 (2017),
+\href{https://arxiv.org/abs/1602.00930}{arXiv:1602.00930}.
+
+\bibitem{Gerard}
+C. G\'erard,
+\emph{Hadamard states for linearized gravity on spacetimes with compact Cauchy surfaces},
+\href{https://arxiv.org/abs/2311.11043}{arXiv:2311.11043} (2023).
+
+\bibitem{GW}
+C. G\'erard and M. Wrochna,
+\emph{Hadamard states for the linearized Yang--Mills equation on curved spacetime},
+\href{https://arxiv.org/abs/1403.7153}{arXiv:1403.7153} (2014).
+
+\bibitem{GMW}
+C. G\'erard, M. Molodyk and M. Wrochna,
+\emph{Hadamard states for linearized gravity on asymptotically flat spacetimes},
+\href{https://arxiv.org/abs/2610.31214}{arXiv:2610.31214} (2026).
+
+\bibitem{Bartnik}
+R. Bartnik,
+\emph{The mass of an asymptotically flat manifold},
+Commun. Pure Appl. Math. \textbf{39}, 661--693 (1986),
+\href{https://doi.org/10.1002/cpa.3160390505}{doi:10.1002/cpa.3160390505}.
+
+\bibitem{CB}
+Y. Choquet-Bruhat,
+\emph{Th\'eor\`eme d'existence pour certains syst\`emes d'\'equations aux d\'eriv\'ees partielles non lin\'eaires},
+Acta Math. \textbf{88}, 141--225 (1952).
+\end{thebibliography}
+\end{document}

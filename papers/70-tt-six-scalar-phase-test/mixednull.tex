@@ -1,0 +1,68 @@
+\section{Distinguishing the bulk term from local mixed omissions}\label{sec:null}
+
+This section uses three distinguishable scalar probes. Keep all propagating modes and entire apparatus, initial and endpoint sectors common. At the same tree order allow a specified set of additional omitted time-local two-tensor/two-scalar contour contacts of the form \(h_a h_a Q_a\), including a finite number of derivatives. This includes the missing mixed term in the spatial contact of Section~\ref{sec:cubic}. We do not claim a contact parametrization of the entire discrepancy for an arbitrary deterministic nonlinear metric.
+
+\subsection{Local contact functions and bulk branches}
+At this order, a connected difference from such a vertex has precisely one mixed insertion and two linear current insertions. The three species with two external fields each fix the possible attachments. Contracting the two tensor difference fields with the two other species gives advanced response legs, possibly differentiated at the vertex. The species whose fields occur inside \(Q_a\) instead gives an unpropagated local free scalar-pair factor. These properties follow from the \(aa\) contraction being zero. Derivatives can first be taken as one-sided interior time jets, with all boundary terms from integrations by parts retained and matched separately. We do not differentiate an unmatched hard switching distribution.
+
+For each species use the routing of \eqref{eq:inplanesplit}, now with its own \(p_b>q/2\) and \(r_b=\sqrt{p_b^2-q^2/4}\). Keep \(q\), the three nonzero transfer vectors and their chosen planar polarizations fixed, and vary the three pair energies independently in open finite test bands. A local pair factor at \(v<T\) falls in a finite real span \(\mathcal V_b(v)\) of functions
+\begin{equation}
+ F_{b,\alpha}(p_b;v)
+ =A_{b,\alpha}(p_b;v)\sin[2p_b(T-v)]
+  +B_{b,\alpha}(p_b;v)\cos[2p_b(T-v)] ,
+ \label{eq:contact}
+\end{equation}
+where \(A,B\) are algebraic in \(p_b\) at each fixed \(v\) on the admitted branch. Both factors from external free conformal scalar lines carry phases at the same vertex time; each local derivative multiplies a line by its energy or spatial momentum, apart from time-dependent background coefficients. Instantaneous rational spatial symbols in the derivative truncation are allowed if regular on the bands. They can depend on the scalar pair's individual spatial momenta and the other two \emph{fixed} tensor transfer vectors, not on the other two pair energies except through the already contracted advanced tensor legs. This split is an assumption on the contact family and licenses the independent controls. It would fail for an unmatched history-dependent detector or a genuinely dynamic exchanged reference field. Arbitrary spatial pseudodifferential symbols with no specified analytic dispersion are not implied.
+
+The corresponding propagated bulk factor in \eqref{eq:three}, ignoring the common \(g\) and fixed polarization, is
+\begin{equation}
+ D_b(p_b;v)=(p_b^2-q^2/4)\int_v^T\dd\eta\,
+          G_R(q;\eta,v)\frac{\sin[2p_b(T-\eta)]}{2p_b^2}.
+ \label{eq:db}
+\end{equation}
+The notation \(D_b(p_b;v)\) here is a scalar form factor, not the wave operator \(D_q\).
+\begin{proposition}[Local--bulk separation]
+\label{prop:nonspan}
+If \(G_R(q;T,v)\ne0\), the function \eqref{eq:db} is not in \(\mathcal V_b(v)\) on any nonempty regular open test band.
+\end{proposition}
+\begin{proof}
+For the finite-derivative and rational spatial symbols above, fix the regular branch and continue along the positive real \(p_b\) end, across isolated poles by analytic continuation away from them if necessary. More generally restrict algebraic symbols to those admitting such continuation; after going round any intermediate singularities, each branch on the real end has a unique Puiseux asymptotic. The left side \eqref{eq:db} itself is analytic in \(p_b>q/2\). Twice integrating by parts with respect to \(\eta\), and using \(G_R(q;v,v)=0\), gives
+\begin{equation}
+ D_b(p_b;v)=\frac{G_R(q;T,v)}{4p_b}+O(p_b^{-2}).
+ \label{eq:continuation}
+\end{equation}
+The upper endpoint contributes the first displayed term; the once differentiated sine boundary and the remaining integral are bounded after the second integration. If the alleged identity with \eqref{eq:contact} held on the band, it would hold throughout the end on those continued branches. On two sequences with \(\sin[2p_b(T-v)]=0\) and cosine \(+1\) and \(-1\), respectively, \(p_bB(p_b)\) would then approach the two distinct constants \(G_R(q;T,v)/4\) and \(-G_R(q;T,v)/4\). A single algebraic branch cannot do this. For flat \(a=1\) an elementary convolution gives the exact check
+\[
+ D_b(p_b;v)=\frac{(2p_b/q)\sin[q(T-v)]-\sin[2p_b(T-v)]}{8p_b^2}.
+\]
+The large-\(p_b\) step proves independence of finite-band kernels; it is not an extrapolation of a physical effective theory to measured large energy.
+\end{proof}
+
+\subsection{Start-time subtraction and finite tests}
+Fix a lower slice \(v\) with the nonzero short-window coefficient above. For each \(b\), pick a basis of \(\mathcal V_b(v)\), append \(D_b(\cdot;v)\), and take as many evaluations as functions on its regular open band so that the evaluation matrix is nonsingular. Such evaluation points exist: otherwise the evaluation vectors fail to span, giving a linear identity. The real weights solving the associated linear system give
+\begin{equation}
+ \sum_m w_{b,m}F_{b,\alpha}(p_{b,m};v)=0\quad\text{for all }\alpha,
+ \qquad
+ \sum_m w_{b,m}D_b(p_{b,m};v)\ne0 .
+ \label{eq:weights}
+\end{equation}
+The same weights are used across preparations. A pair energy refers to a choice of finite test aperture, not a change of free state or of the tensor spatial routing.
+
+For a start slice \(s\) in an open neighborhood of \(v\) use the restrictions of the same free tensor Gaussian state and the same free conformal state. At this order each unmatched interior vertex has a single integral from \(s\) to \(T\). The advanced legs start at their vertex, not at \(s\), and the scalar contractions and common boundary prescription are independent of this variation. Thus the derivative in \(s\) sets the unmatched vertex time to \(s\), with a minus sign. Use the product weights \(\prod_b w_{b,m_b}\) across the finitely many triples of pair centers. At \(s=v\) every contact derivative contains one of the annihilated factors \eqref{eq:weights}, while the bulk derivative is
+\begin{equation}
+ \tfrac{63}{32}\,g^4 q^2 a(v)^2
+   \prod_{b=1}^3\left[\sum_m w_{b,m}D_b(p_{b,m};v)\right]\ne0 .
+ \label{eq:nullsignal}
+\end{equation}
+The signs follow from differentiating the lower limit in \eqref{eq:three}. The weak-ruler version uses an additional known multiplicative \(1-4\beta^2g^2/(7q^2)\ne0\) and the common modified Green function. This derivative statement is exact for the given allowed finite jet structures with arbitrary smooth coefficients, as long as the same coefficient profiles and state restrictions are used at all starts.
+
+For every \emph{fixed} such smooth nuisance prescription, the two-run finite difference at \(v\) and \(v+\epsilon\) divided by \(\epsilon\) approaches the same nonzero result as \(\epsilon\to0\) for the ideal modes. After choosing a sufficiently small positive \(\epsilon\), choose the finitely many smooth apertures sufficiently narrow to preserve the nonzero difference. The narrow-aperture limit can first be calibrated by normalizing to the known positive common delta weight at each center tuple. A product of complex-mode profiles is a finite linear combination of real-mode data as in Section~\ref{sec:packets}; real and imaginary parts are real linear sums of actual measurements. This yields a finite nonzero combination, not a uniform finite tolerance over arbitrarily large or rapid contact coefficients, and its imperfect finite null on generic nuisance profiles is not called exact.
+
+\begin{theorem}[An exact finite null for a finite list of templates]\label{thm:actualnull}
+Fix a finite list of complete allowed mixed terms, including their time and background profiles, with arbitrary real amplitudes constant across the controls. Among the real connected six-point measurements with finite apertures and start slices in an open admissible interval there is a finite weighted combination that annihilates every term in the list exactly, but has nonzero pure bulk output. It need not use just two distinct start slices.
+\end{theorem}
+\begin{proof}
+View the pure response \(P\) and each template response \(M_i\) as real functions on actual settings: six finite real spatial profiles, a real common final time as above, and the starting slice. Include the choice of running at either of two slices against a fixed common baseline if only differences are desired. If \(P\) were a real linear combination of the \(M_i\) on all settings, multilinearity would extend the identity to complex profiles. For each fixed nonzero-transfer center tuple, concentrate admissible smooth momentum profiles about it and divide by the common positive conservation-delta weight. The continuous primed kernels would satisfy the identical linear combination at those centers for all start slices. Differentiating that identity in the start slice at \(v\) gives zero on the mixed side under \eqref{eq:weights}, but gives \eqref{eq:nullsignal} on the pure side. This contradiction proves \(P\) independent of the finite span on the actual settings. Choosing an evaluation matrix for a basis of that span together with \(P\) now gives finite real weights on the actual settings (at most one more than the span dimension) with the stated exact outcome. If exactly compact spatial profiles rather than momentum-supported profiles are taken as admissible, the same implication uses their approximation in the common tempered calculation as in Section~\ref{sec:packets} before the momentum concentration. It does not require that a compact profile have a sharp spectral cutoff.
+\end{proof}
+
+The theorem does not posit fixed coefficients for arbitrary unknown time profiles. Prescribing the entire templates makes their global span finite; changing any coefficient as a function of the control would instead change the problem. Nor does the theorem isolate a bulk response from unmatched nonlocal mixed channels or a changed boundary functional.

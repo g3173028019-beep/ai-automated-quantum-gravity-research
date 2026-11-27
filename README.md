@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**82 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 56 typeset analytical articles**
+**85 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 59 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 82 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 85 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -26,6 +26,9 @@ These routes connect the 20 original packets with the later analytical manuscrip
 
 | Paper | Result | Files |
 |---|---|---|
+| [70 · Finite scalar tests of matched tensor dynamics](papers/70-tt-six-scalar-phase-test/README.md) | A six-scalar measurement distinguishes two prescriptions with the same Gaussian tensor influence, using the Einstein transverse-traceless cubic. A separate tagged protocol cancels a prescribed finite list of mixed contact templates exactly. | [PDF](papers/70-tt-six-scalar-phase-test/manuscript.pdf) · [TeX](papers/70-tt-six-scalar-phase-test/main.tex) · [Verification](papers/70-tt-six-scalar-phase-test/VERIFICATION.md) |
+| [71 · Positive Hadamard states for linearized Einstein wave maps](papers/71-hadamard-states-einstein-wave-maps/README.md) | Positive physical Hadamard covariances with exact Green CCR for curved targets; a separate massive asymptotically flat construction realizes them on a fixed weighted base. | [PDF](papers/71-hadamard-states-einstein-wave-maps/manuscript.pdf) · [TeX](papers/71-hadamard-states-einstein-wave-maps/main.tex) · [Verification](papers/71-hadamard-states-einstein-wave-maps/VERIFICATION.md) |
+| [72 · Radiative data lost by the Newtonian projection](papers/72-radiative-data-newtonian-projection/README.md) | On attainable Einstein–Euler initial data the fast outgoing graviton pairs are absent in the Newtonian projection. The positive finite-radius escape coefficient equals the normalized mixed ADM mass Hessian. | [PDF](papers/72-radiative-data-newtonian-projection/manuscript.pdf) · [TeX](papers/72-radiative-data-newtonian-projection/main.tex) · [Verification](papers/72-radiative-data-newtonian-projection/VERIFICATION.md) |
 | [67 · Gravitational phase beyond occupation counts on a half-turn vacuum branch](papers/67-half-turn-taub-curvature-phase/README.md) | Exact compact vacuum CMC lifts realize two Taub constraints. In the corresponding quadratic constrained theory, phase partners with identical occupation and trace laws give different marked curvature responses. | [PDF](papers/67-half-turn-taub-curvature-phase/manuscript.pdf) · [TeX](papers/67-half-turn-taub-curvature-phase/main.tex) · [Verification](papers/67-half-turn-taub-curvature-phase/VERIFICATION.md) |
 | [68 · What a retained-mode observer can recover in quantum Einstein–Rosen dynamics](papers/68-einstein-rosen-spectral-memory/README.md) | A positive operator-valued spectral measure exactly characterizes retained histories. A finite-width Ramsey protocol recovers it; every normal preparation with population outside the discarded-sector vacuum requires unbounded exact cut memory. | [PDF](papers/68-einstein-rosen-spectral-memory/manuscript.pdf) · [TeX](papers/68-einstein-rosen-spectral-memory/main.tex) · [Verification](papers/68-einstein-rosen-spectral-memory/VERIFICATION.md) |
 | [69 · Controlled noncompact sewing and fixed-colour rank in Lorentzian EPRL](papers/69-lorentzian-eprl-noncompact-sewing/README.md) | A joint Galerkin, radial, and quadrature limit controls fixed-colour finite foams. The same external sector has ranks 16 versus at most 2 and 81 versus at most 3 across the specified move. | [PDF](papers/69-lorentzian-eprl-noncompact-sewing/manuscript.pdf) · [TeX](papers/69-lorentzian-eprl-noncompact-sewing/main.tex) · [Verification](papers/69-lorentzian-eprl-noncompact-sewing/VERIFICATION.md) |
@@ -165,7 +168,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All 82 manuscripts, with results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 85 manuscripts, with results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |

@@ -1,0 +1,99 @@
+\section{Nonzero finite scalar six-point records}\label{sec:six}
+
+\subsection{Contraction and its finite three-species value}
+Use \(\chi(\boldsymbol x)=\int \dd^3p\,\chi_{\bp}e^{\ii\bp\cdot\boldsymbol x}/(2\pi)^3\), and initially write the kernels for a late pair \(O_b=\chi_{b,\bp_b}(T)\chi_{b,\bp'_b}(T)\). Below \(p_b=|\bp_b|\) and \(p_b'=|\bp_b'|\). For \(\bq_b=\bp_b+\bp_b'\), the free scalar response is
+\begin{align}
+ B_b^{ij}(\eta,\boldsymbol x)
+ &=\ii\av{[O_b,J_b^{ij}(\eta,\boldsymbol x)]}_0 \notag\\
+ &=-g(p_b^ip_b'^j+p_b'^ip_b^j)\,
+   \frac{\sin[(p_b+p_b')(T-\eta)]}{2p_bp_b'}e^{-\ii\bq_b\cdot\boldsymbol x}.
+ \label{eq:scalarresponse}
+\end{align}
+Indeed the two connected Wick products of \(O_b J_b\) supply the negative spatial derivative factors and a time phase \(e^{-\ii(p_b+p_b')(T-\eta)}\); in the reverse order the phase is conjugated, and multiplying the difference by \(\ii\) gives \eqref{eq:scalarresponse}.
+
+Let \(V(f_1,f_2,f_3)=[u_1u_2u_3]S_3[\sum_bu_bf_b]\), so \(S_3[h]=V(h,h,h)/6\), and \(L_b=G_A\Lambda B_b\). The connected six-field coefficient from \eqref{eq:pure} is exactly
+\begin{equation}
+ \Delta \av{O_1O_2O_3}_{\mathrm{conn},3\TT}
+ =-\tfrac14 V(L_1,L_2,L_3).
+ \label{eq:trivar}
+\end{equation}
+Each distinct species must attach both its external fields to one current, and the six assignments to the cubic are already in \(V\). The late pair contracts with the difference current as \(-\ii B_b\); the coefficient is \((\ii/4)(-\ii)^3=-1/4\). Disconnected Wick products cannot contribute to this six-field cumulant. The perturbation order is \(g^4\), since the cubic contributes one factor of \(g\) and the three linear current attachments supply the others. This is an isolated tree coefficient; lower-point quantum loop contributions are not compared here.
+
+Choose three equal-length noncollinear equilateral transfers \(\bq_b=q\hat q_b\), with \(\sum_b\bq_b=0\), in a plane normal to \(\hat z\). Let \(n_b=\hat z\times\hat q_b\) and pick each scalar pair
+\begin{equation}
+ \bp_b=\tfrac12\bq_b+r n_b,\qquad \bp'_b=\tfrac12\bq_b-r n_b,
+ \qquad p=\sqrt{q^2/4+r^2},\quad r>0 .
+ \label{eq:inplanesplit}
+\end{equation}
+TT projection of the momentum tensor in \eqref{eq:scalarresponse} gives \(-r^2 M_b\) where \(M_b=n_bn_b^t-\hat z\hat z^t\). Then
+\begin{align}
+ L_b(v,\boldsymbol x)&=g r^2 M_b e^{-\ii\bq_b\cdot\boldsymbol x} I(q,p;v),
+ &
+ I(q,p;v)&=\int_v^T\dd\eta\,G_R(q;\eta,v)
+                    \frac{\sin[2p(T-\eta)]}{2p^2}.
+ \label{eq:leg}
+\end{align}
+For any permutation \((b,c,d)\), the spatial vertex in the parentheses of \eqref{eq:EH3}, differentiated on the \(d\) leg, gives
+\begin{align}
+ -(M_b\bq_d)\cdot M_d(M_c\bq_d)&=\tfrac{3}{16}q^2,
+ &
+ \tfrac12\tr(M_bM_d)\,\bq_d\cdot M_c\bq_d&=\tfrac{15}{32}q^2 .
+ \label{eq:angular}
+\end{align}
+To verify the numbers, \(n_b\cdot n_d=n_c\cdot n_d=-1/2\), \(n_b\cdot\bq_d\) and \(n_c\cdot\bq_d\) have opposite signs and magnitudes \(\sqrt3q/2\), and \(\tr(M_bM_d)=5/4\). Thus the fully symmetrized coefficient of the spatial parentheses is \(63q^2/16\). Removing the common \((2\pi)^3\delta^{(3)}(\sum_b\bq_b)\), we obtain
+\begin{equation}
+ \boxed{\displaystyle
+ \Delta\av{O_1O_2O_3}'_{\mathrm{conn},3\TT}
+ =-\tfrac{63}{32}g^4q^2r^6
+       \int_s^T\dd v\,a(v)^2\, I(q,p;v)^3 .}
+ \label{eq:three}
+\end{equation}
+This is an exact expression at the specified order. On a sufficiently short nonzero interval,
+\(G_R(q;\eta,v)=(\eta-v)/a(v)^2+O((\eta-v)^2)\) uniformly and \(2p(T-\eta)<\pi\). Thus \(I>0\) for \(v<T\). In particular for \(L=T-s\) and fixed \(q,r,a\),
+\begin{align}
+ I(q,p;v)&=\frac{(T-v)^3}{6p\,a(v)^2}+O((T-v)^4),\\
+ \Delta\av{O_1O_2O_3}'_{\mathrm{conn},3\TT}
+ &=-\frac{7}{7680}\frac{g^4 q^2r^6}{p^3a(T)^4}L^{10}
+   +O(L^{11}).
+ \label{eq:shortthree}
+\end{align}
+No late-time, squeezed, or pole limit is imposed on \eqref{eq:three}.
+
+\subsection{One scalar species without omitting exchange pairings}
+For six labeled readings \(X_1,\ldots,X_6\) of one conformal scalar, set
+\(\mathcal R_{\ell m}=G_A\Lambda\,\ii\av{[X_\ell X_m,J]}_0\).
+The corresponding exact expression is
+\begin{equation}
+ \Delta C_{6,\mathrm{conn},3\TT}
+ =-\tfrac14\sum_{\{(\ell m),(nr),(st)\}}
+ V(\mathcal R_{\ell m},\mathcal R_{nr},\mathcal R_{st}).
+ \label{eq:allpairs}
+\end{equation}
+The sum is over all fifteen unordered perfect matchings; the scalar pair contractions and the three tensor-current assignments exhaust the connected tree. In particular, changing from distinct species changes the observable contraction rather than merely its statistics.
+
+For a specific noncancellation, still use the equilateral \(\bq_i\), now with six centers \(\boldsymbol k_{i,\pm}=\bq_i/2\pm b\hat z\), \(0<q\ll b\), of common modulus \(p=\sqrt{b^2+q^2/4}\). For an opposite-sign pair the transfer \(\boldsymbol Q=(\bq_i+\bq_j)/2\) is planar. Its response polarization at size \(b^2\) is \(E(\boldsymbol Q)=\hat z\hat z^t-n(\boldsymbol Q)n(\boldsymbol Q)^t\), with relative correction \(O(q/b)\). In fact the two transverse momenta are \(\pm(b\hat z+u)\) for a planar \(u\perp\boldsymbol Q\) with \(|u|=O(q)\). Their bilinear has an \(O(bq)\) mixed term and a diagonal correction \(O(q^2)\) before TT projection, which proves the bound.
+
+The six opposite-sign pairings are permutations of three minus labels relative to the plus labels. The identity gives the equilateral triad of length \(q\); the two 3-cycles give reversed equilateral triads of length \(q/2\), since \((\bq_i+\bq_j)/2=-\bq_k/2\) for \(i\ne j\). The three transpositions give collinear nonzero transfers, whose spatial contractions vanish exactly by TT transversality. The other three have the sign opposite to \eqref{eq:angular}, because their leading \(E=-M\). Adding the six leading symmetrized coefficients from the parentheses of \eqref{eq:EH3} gives
+\begin{equation}
+ -\frac{63}{16}\left(q^2+2(q/2)^2\right)=-\frac{189}{32}q^2.
+ \label{eq:anglesingle}
+\end{equation}
+Each of the nine remaining matchings contains one \(++\) and one \(--\) pair. Relative to its own large transfer, each of these two pairs has transverse momentum only \(O(q)\), by subtracting half the pair transfer. Therefore the two TT stresses are \(O(q^2)\) rather than \(O(b^2)\). The two derivatives at the cubic cost at most \(O(b^2)\) rather than \(O(q^2)\), leaving a relative \(O((q/b)^2)\) bound on their summed contribution. All transfers are nonzero.
+
+Write \(a_*=a(T)\), take \(bL\ll1\) and make the relative variation of \(a\) across the slab small. On these finite ranges the standard Volterra equation for \(G_R\) yields its short-time term \((\eta-v)/a(v)^2\) with uniform relative error controlled by \(L\sup|a'/a|\) and \(\max|\boldsymbol Q|^2L^2\). The leading opposite-sign legs are \(g b^2 E(T-v)^3/(6p\,a_*^2)\). Using \eqref{eq:allpairs} and \eqref{eq:anglesingle} gives
+\begin{equation}
+ \boxed{\displaystyle
+ \Delta C_{6,\mathrm{conn},3\TT}'=
+ +\frac{7}{5120}\frac{g^4q^2b^6}{p^3a_*^4}L^{10}\,[1+o(1)].}
+ \label{eq:onespecies}
+\end{equation}
+Here \(o(1)\to0\) as \(q/b\), \(bL\) and the relative scale-factor variation go to zero; the sign holds at small nonzero finite ratios. The factor is \((1/4)(2)(189/32)/(10\cdot6^3)\). The different signs in \eqref{eq:three} and \eqref{eq:onespecies} arise from polarization, not a switch of comparison convention. The matching of complete mixed sectors remains required for this same-species test; the contact isolation below uses distinguishable species.
+
+\subsection{Real apertures and weak material calibration}\label{sec:packets}
+The momentum-conserving kernels are continuous near both examples. For the second example this applies to every pairing because no transfer is zero. Smooth nonnegative momentum profiles concentrated about the six selected nonzero centers therefore integrate the signed primed kernel against a positive common momentum-conservation measure and preserve nonzero output. The unprimed result is the smeared version of the delta-normalized expressions, not a point evaluation of a plane-wave distribution. Each complex profile is the sum of a real aperture and \(\ii\) times a real aperture in physical position space. By multilinearity of the connected coefficient, at least one finite product of real records is nonzero. On the regular material-clock gauge slice these are configuration-field observables at one equal-clock time; the coordinates can be fixed by configuration-only gauge conditions, leaving their equal-slice configuration brackets unchanged. This is not a claim of general spacelike commutativity of nonlinear relational observables.
+
+Smooth compact momentum profiles have rapidly decreasing spatial profiles. If actual compact spatial support is wanted, smooth spatial truncation converges to them in Schwartz seminorms and preserves a nonzero result, provided the same tempered regulated calculation is used for the truncations. Exact simultaneous compact support in momentum and position is neither used nor possible. A strict test band is imposed by momentum smearing; a strictly compact spatial detector has tails in momentum. One may make the packet hierarchy in a subcurvature effective theory, for example \(\Lambda_{\rm EFT}^{-1}\ll a_*L\ll a_*/b\), \(q\ll b\), \(a_*/q\ll R_{\mathrm{ap}}\ll H^{-1}\), choosing \(q\gg a_* H\) and a sufficiently weakly expanding patch. These are finite scale choices, not a claim the displayed effect is large. Products defining connected moments can be read on one equal-clock slice; finite narrow time gates approximate the smeared coefficients by continuity when taken as separate regulated correlation readouts.
+
+The exact material-ruler pure TT action is
+\(-\frac12\beta^2\int a^2\tr e^{-2gh}\).
+Its quadratic term adds \(2\beta^2g^2 a^2\) to \(D_q\); its cubic is \((2/3)\beta^2g^3\int a^2\tr h^3\). The homogeneous clock contributes no pure tensor term through the determinant. There is no linear mixing of TT and minimally coupled reference perturbations: the one spatial gradient term pairs with the divergence of \(h\). For each equilateral \(M_b\) permutation \(\tr(M_bM_cM_d)=-9/8\), since the planar triple trace is \(-1/8\) and the normal triple trace is \(-1\). Thus the coefficient in \eqref{eq:three} multiplies by \(1-4\beta^2g^2/(7q^2)\), with the common modified retarded inverse throughout, if this additional pure TT cubic is truncated in the same way. The sign and the other finite pure-cubic witness persist for sufficiently weak nonzero ruler stress by continuity; one may instead compare the separated Einstein contribution holding the material one fixed. No material or graviton fluctuations are made new calibrated degrees of freedom to fit either arm.

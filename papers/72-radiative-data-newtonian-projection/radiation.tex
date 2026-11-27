@@ -1,0 +1,81 @@
+\section{Outgoing waves and the finite extraction identity}\label{sec:radiation}
+
+\subsection{Compact outgoing TT waves in both polarizations}
+
+Choose any nonzero \(f\in C^\infty_c((a,b))\). For \(s\geq0\) set
+\(\phi(s,x)=f(r-s)/r\) for \(r=|x|>0\), extended by zero near the origin. It is an exact smooth solution of the scalar flat wave equation since its numerator obeys the one-dimensional radial wave equation and its support stays away from \(r=0\). Let
+\[
+ P_{IJ}=\delta_{IJ}\Delta-\partial_I\partial_J,\qquad
+ (T_A)_{IJ}=\left(P_{IK}P_{JL}-\tfrac12 P_{IJ}P_{KL}\right)A_{KL}
+\]
+for a constant symmetric matrix \(A\). For \(H_A=T_A\phi\) the divergence vanishes by \(\partial_I P_{IJ}=0\), and the trace by \(P^2=\Delta P\), \(\tr P=2\Delta\). It solves the flat tensor wave equation because the operators are constant coefficient. Its exact support is contained in \(a+s<r<b+s\). In particular the pure outgoing property here is not an assumption based on large radius or on a high-frequency expansion.
+
+Use \(A_+=\operatorname{diag}(1,-1,0)\) and \(A_\times\) with \(xy=yx=1\) and all other entries zero. In the radiation field at direction \(e_z\), their limiting screen amplitudes \(rH_A(r+u,rn)\) are \(f^{(4)}(-u)A_+\) and \(f^{(4)}(-u)A_\times\): each leading radial derivative is accompanied by the corresponding direction cosine, and \(P\) projects into the transverse plane. The fourth derivative is not identically zero. Thus these supply two distinct real polarizations, whose complex combinations also give the circular helicities. Write \(H_\sigma=H_{A_\sigma}\). For each \(\sigma\) use the two seed waves \(H_\sigma,\dot H_\sigma\) in the four real parameter stock. Both are compact TT with their time derivatives initially compact. By \eqref{eq:initfirst} their exact families are obtained by the corresponding \(-1/4\) rescalings of the densitized seeds. These are actual independently varied real wave data, not one solution with four choices of normalization.
+
+The entire family is invariant under spatial inversion as a tensor field: \(H_\sigma(-x)=H_\sigma(x)\) in its spatial rank-two components, and the time derivatives have the same evenness. The matter preparation and \(\lambda\)-family constraint equations share this symmetry. The analytic constraint solution is the local unique branch, so the exact initial metric and extrinsic curvature have tensorial inversion symmetry (an initial mixed spatial/temporal component changes sign). Consequently the exact total ADM spatial momentum is zero at all sufficiently small \(\lambda\); the ADM energy in geometric normalization equals the positive invariant mass. No leading calculation of the ADM momentum is used to impose this conclusion.
+
+\subsection{Einstein--Hilbert normalization on a finite vacuum tube}
+
+Fix \(R>b\) with a positive margin, and a common fast-time aperture containing the crossing times \([R-b,R-a]\) with margins. Its early and late sections can be chosen at positive times before and after the crossing. At the early section the complete leading waves lie inside the sphere, at the late section they lie outside, and a time neighborhood of each end has no leading wave on the aperture. Use the full sphere rather than one angular patch. The exact background at \(\lambda=0\) is \(C^2\)-close to Minkowski by \(O(\eps^2)\) on this fixed cylinder. The radius of the marked coordinate sphere can be adjusted by \(O(\eps^2)\) on that background to have area \(4\pi R^2\); the area derivative at the flat sphere is \(8\pi R\), and the regular fast derivatives make the induced worldtube and conormal change of this same order. We evaluate on this marked worldtube, using the exact tangent fields pulled back to it. This calibration, or a fixed coordinate sphere with the same limit, changes none of the leading current coefficients. The whole tube is vacuum by Section~\ref{sec:stock}.
+
+For completeness the quadratic Einstein--Hilbert TT action at Minkowski, in the geometric convention, is
+\begin{equation}
+ \frac1{64\pi}\int\bigl(|\dot H|^2-|\nabla H|^2\bigr)\,\dd s\,\dd^3x .
+ \label{eq:ttaction}
+\end{equation}
+Indeed the linearized Einstein tensor on spatial TT is \(-\Box H/2\), and the second action coefficient before integration by parts is \(-\int H:G^{(1)}(H)/(32\pi)\), where \(\Box=-\partial_s^2+\Delta\). Thus the symplectic current from \eqref{eq:ttaction} is the restriction of the Einstein--Hilbert current, up to the usual exact divergence from the variational potential. We choose its sign so its Cauchy pullback is \(\int\delta H\wedge\delta(\dot H/(32\pi))\), and write outward flux with this convention. In a smooth potential representative such as the Einstein--Hilbert variational potential of \cite{IyerWald}, a representative change integrates to a boundary term on this tube. Its leading term vanishes at the two caps since the leading wave fields and their derivatives have support away from them, and there are no angular edges. This justifies using the simple TT expression even though the extraction radius is finite.
+
+The resulting flat currents give
+\begin{align}
+ \Omega(H_1,H_2)
+   &= \frac1{32\pi}\int_{\R^3}
+        (H_1:\dot H_2-H_2:\dot H_1)\,\dd^3x, \label{eq:Omega}\\
+ \F_{\Omega,R}(H_1,H_2)
+   &= -\frac1{32\pi}\int_{\rm aperture}R^2
+        (H_1:\partial_r H_2-H_2:\partial_r H_1)\,\dd s\,\dd\Omega, \label{eq:symout}\\
+ \ME(H_1,H_2)
+   &=\frac1{64\pi}\int_{\R^3}
+      (\dot H_1:\dot H_2+\nabla H_1:\nabla H_2)\,\dd^3x .
+       \label{eq:masswave}
+\end{align}
+Here \(\dd\Omega\) is the unit sphere measure and the spatial integrals may be taken on any fixed fast slice. The time component and spatial flux density of the symplectic current satisfy continuity by the wave equation. Thus on the outgoing wave stock \(\F_{\Omega,R}=\Omega\): the interior spatial form changes from the full value to zero as the pulse crosses. For the energy the local flat continuity equation has outward density
+\(-(\dot H_1:\partial_rH_2+\dot H_2:\partial_rH_1)/(64\pi)\).
+It follows, again by the two cap supports, that
+\begin{equation}
+ \ME(H_1,H_2)
+  =-\frac1{64\pi}\int_{\rm aperture} R^2
+       (\dot H_1:\partial_r H_2+\dot H_2:\partial_r H_1)
+                      \,\dd s\,\dd\Omega .
+ \label{eq:energyout}
+\end{equation}
+The sign is outward and positive on the fully escaped wave when \(H_1=H_2\). This identity uses the exact finite-radius fields, including their radial derivative, not the far-zone replacement \(\partial_r=-\partial_s\).
+
+To state the comparison at finite \(\eps\) without inventing a conserved nonlinear energy, let \(h_{\eps,u}=D_u g_\eps|_0\) and let \(\F^\eps_{\rm EH}\) be the full signed geometric Einstein--Hilbert symplectic current integrated over the above vacuum worldtube at the zero-wave solution. For wave parameters define the canonical-time energy diagnostic
+\[
+ \mathcal E_\eps(u,v)
+  =-\tfrac14\left[
+    \F^\eps_{\rm EH}(h_{\eps,u},\Lie_{\partial_s}h_{\eps,v})
+   +\F^\eps_{\rm EH}(h_{\eps,v},\Lie_{\partial_s}h_{\eps,u})\right] .
+\]
+The Lie derivative in this expression is just the chosen time reading; at finite \(\eps\) the background need not be stationary and the second argument need not be a linearized solution. This is a well-defined local bilinear current diagnostic, not a claim of nonlinear balance under a missing Killing field. The smooth current is first order in its arguments and bilinear. Equation~\eqref{eq:fasttangent}, with the \(C^2\) error for time-translation arguments, gives
+\begin{align}
+ \F^\eps_{\rm EH}(h_{\eps,u},h_{\eps,v})
+      &=\eps^4\Omega(H_u,H_v)+O(\eps^5),\label{eq:EHlimit}\\
+ \mathcal E_\eps(u,v)&=\eps^4\ME(H_u,H_v)+O(\eps^5).
+      \label{eq:Elimit}
+\end{align}
+For the second line one integrates \eqref{eq:symout} by parts in \(s\), with no leading cap term; \(-\tfrac14\) times its two time-translation pairings is precisely \eqref{eq:energyout}. Perturbations of the background coefficients and tube geometry are higher order. This uses an actual quadratic diagnostic of the \emph{same} exact Einstein--Euler solutions, not an identification of the unscaled gravitational energy with a fluid observable.
+
+The symplectic block is nondegenerate: reflection \(y\mapsto -y\) fixes \(H_+\) and negates \(H_\times\) as tensors, so all cross-polarization energy and symplectic pairings vanish (also at different fixed delays). For either \(\sigma\) the wave equation gives
+\[
+      \Omega(H_\sigma,\dot H_\sigma)
+       =-\frac1{32\pi}\int_{\R^3}
+                  (|\nabla H_\sigma|^2+|\dot H_\sigma|^2)\,\dd^3x
+       =-2m_\sigma,\qquad m_\sigma=\ME(H_\sigma,H_\sigma)>0 .
+\]
+The two real quadrature pairs thus give rank four. The flat linearized curvature component is \(C^{(1)}_{sIsJ}=-\partial_s^2H_{IJ}/2\), which is gauge invariant on the flat background. If it vanished on the full aperture for a nonzero tangent, the initial zero margin would give \(\partial_sH=0\) there throughout. This contradicts the strictly positive outgoing energy \eqref{eq:energyout}. Thus the retained directions are not pure gauge even on the finite extraction tube.
+
+\subsection{A finite canonical amplitude--delay manifold}
+
+The fixed linear four-dimensional tangent span need not stay invariant under the whole fast evolution. Instead take \(H(s)=\sum_{\sigma}A_\sigma H_\sigma(s-\tau_\sigma)\) with the delays restricted to a small interval and \(A_\sigma\ne0\). The original scalar pulses extend smoothly to this small backward interval because their support still stays away from the origin; enlarge the initial shell and extraction window by a fixed small margin. These are admissible smooth seed paths of the same exact Einstein--Euler constraint map. Reflection eliminates mixed-polarization pairings for all delays. Since \(\partial_{\tau_\sigma}H=-A_\sigma\dot H_\sigma\) and \(\partial_{A_\sigma}H=H_\sigma\), the symplectic form is \(2A_\sigma m_\sigma\,\dd A_\sigma\wedge\dd\tau_\sigma\) on each pair. The energy is \(A_\sigma^2m_\sigma\). Thus on every nonzero-amplitude chamber this form is nondegenerate and the Hamiltonian vector field translates \(\tau_\sigma\) to \(\tau_\sigma-s\) when \(\iota_X\Omega=\dd H_{\rm wave}\). It is exactly the local leading wave evolution on this four-dimensional manifold. At a zero pulse there is no delay coordinate; the previous two linear quadratures per polarization give the nondegenerate tangent result through zero. This proves Proposition~\ref{prop:delay}.
+

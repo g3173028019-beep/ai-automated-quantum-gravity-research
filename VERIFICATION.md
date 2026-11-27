@@ -184,3 +184,11 @@ The associated proof and scope checks are recorded in the paper verification pag
 - [Paper 67 verification](papers/67-half-turn-taub-curvature-phase/VERIFICATION.md)
 - [Paper 68 verification](papers/68-einstein-rosen-spectral-memory/VERIFICATION.md)
 - [Paper 69 verification](papers/69-lorentzian-eprl-noncompact-sewing/VERIFICATION.md)
+
+## Physical scalar tests, curved-target states, and fast radiation (70–72)
+
+The associated proof and scope checks are recorded in the paper verification pages.
+
+- [Paper 70 verification](papers/70-tt-six-scalar-phase-test/VERIFICATION.md)
+- [Paper 71 verification](papers/71-hadamard-states-einstein-wave-maps/VERIFICATION.md)
+- [Paper 72 verification](papers/72-radiative-data-newtonian-projection/VERIFICATION.md)

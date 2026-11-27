@@ -1,0 +1,166 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={Finite scalar tests of matched tensor dynamics}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\bq}{\boldsymbol q}
+\newcommand{\bp}{\boldsymbol p}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\av}[1]{\left\langle #1\right\rangle}
+\newcommand{\D}{\mathcal D}
+\newcommand{\I}{\mathcal I}
+\newcommand{\R}{\mathcal R}
+
+\title{Finite scalar tests of matched tensor dynamics:\\
+Gaussian exchange and an Einstein six-point contrast}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+A linearly driven Gaussian tensor and a real initial-data representation with the same canonical Gaussian covariance and causal response induce exactly the same closed-time-path influence on quantum scalar probes. Thus a nonzero scalar exchange trispectrum alone does not distinguish these two prescriptions, even at finite time and for arbitrary profiles. At the first pure tensor cubic order they differ by a three-response term of the Einstein action. We compute an explicit nonzero connected six-point coefficient on a finite interval, exhibit its realization by finite real scalar readouts, and prove noncancellation for one scalar species after all fifteen Wick pairings. In a distinct three-species protocol, varying the start time and pair energies separates the bulk tensor contribution from a specified family of time-local finite-derivative mixed omissions. For a finite list of fixed mixed templates the cancellation can be exact on finitely many finite-aperture runs. Propagating non-tensor, apparatus, and initial-boundary sectors are matched, not eliminated. The result is a test of particular response prescriptions in perturbative gravity, not a test against all classical models.
+\end{abstract}
+
+\section{Setup and scope}
+On the finite conformal-time slab \([s,T]\) take a smooth spatially flat expanding background with \(a>0\). Work in reduced physical variables, with \(\gamma_{ij}=2g h_{ij}\), \(g=M_{\mathrm P}^{-1}\), in the spatial exponential metric \(a^2 e^\gamma\). Set \(\hbar=1\). Spatial indices use the Euclidean metric. For \(\bq\ne0\) let
+\[
+ P_{ij}=\delta_{ij}-\hat q_i\hat q_j,\qquad
+ \Lambda_{ij,kl}=\tfrac12(P_{ik}P_{jl}+P_{il}P_{jk}-P_{ij}P_{kl}).
+\]
+This is the unit orthogonal projector on symmetric transverse-traceless tensors; there is no extra sum or normalization of polarizations in its use below. In the zero-reference-density tensor limit
+\begin{align}
+ S_2[h]&=\tfrac12\int \dd\eta\,\dd^3x\,a^2\big[(h_{ij}')^2-(\partial_k h_{ij})^2\big],
+ &
+ D_q&=\partial_\eta (a^2\partial_\eta)+a^2q^2 .
+ \label{eq:S2}
+\end{align}
+The scalar multiplier of the retarded tensor inverse is \(G_R(q;\eta,v)\), with \(G_R(q;v,v)=0\) and \(a(v)^2\partial_\eta G_R(q;v^+,v)=1\). \(G_A=G_R^t\) in the coordinate pairing. The free probes are real massless conformal scalars; \(\chi_b=a\phi_b\) are in the common conformal Gaussian vacuum with modes \(e^{-\ii p\eta}/\sqrt{2p}\). Its linear TT coupling is
+\begin{equation}
+ S_{\phi,1}=\int h_{ij}J^{ij},\qquad
+ J^{ij}=g\sum_b \partial_i\chi_b\,\partial_j\chi_b .
+ \label{eq:scalar}
+\end{equation}
+At linear TT order the variation of the conformal improvement has \(\delta R=0\) (the background spatial Ricci tensor is isotropic and the TT variation is traceless and divergence-free). This does not discard its second-order mixed terms.
+
+The experiment is defined with common product preparation of the free scalar and physical tensor sectors at \(s\), not an interacting vacuum condition in the past. Every nontested propagating sector, scalar self-coupling, apparatus response, and initial and endpoint calibration is the same between the prescriptions. Section~\ref{sec:null} permits a specified exception for time-local mixed contacts. We use the same declared tensor coordinate and scalar readouts in both prescriptions. The quantum scalar current algebra is never replaced by a classical mean stress. Unless explicitly stated, the expansion is the indicated connected tree coefficient, not a nonperturbatively defined interacting measure. One can use common infrared regulation or states and apertures on which the free covariances exist; all displayed nonzero tests use nonzero transfer momenta.
+
+For a material coordinate calibration, use a weak time label \(X^0\), with \(a^2(X^0)'=\text{constant}\ne0\), and shift-symmetric spatial labels \(X^i=\beta x^i\) with \(\beta\ne0\). The three spatial gradients contribute homogeneous isotropic stress, so they can be included in the background source. Here and below, an expansion support and any other background matter may be part of the common setup. For free minimal reference scalars the linear perturbation of \(\Box_g X^A\) from a TT mode vanishes: \(\delta \sqrt{-g}=0\), \(\delta g^{0\mu}=0\), and \(\partial_i h_{ij}=0\). Hence the scalar readout at common material clock and fixed labels has no linear TT coordinate shift. Higher readout terms and propagating reference modes remain common. This matches coordinate labels, not a state-dependent refitting of geodesic rulers. Nonzero reference stress can be kept weak in the example, cf.\ Section~\ref{sec:packets}.
+
+\section{All-profile Gaussian control}
+For two real c-number currents use \(J_r=(J_++J_-)/2\), \(J_a=J_+-J_-\), and make the same change for \(h\). Tensor indices and TT projections are implicit in the pairings. For the centered common Gaussian tensor state let
+\[
+ N=\tfrac12\av{\{h,h\}},\qquad
+ G_R(\eta,\eta')=\ii\theta(\eta-\eta')\av{[h(\eta),h(\eta')]} .
+\]
+The commutator convention agrees with the retarded inverse above for the source \(+hJ\) in the action. Nonzero common means simply contribute the same linear phase.
+
+\begin{theorem}[Gaussian influence equality]\label{thm:gaussian}
+For every pair of admitted source profiles on the finite slab, the quantum tensor trace equals the real Gaussian initial-data average with the same full canonical initial covariance, propagated homogeneously to \(\xi\) and shifted by the retarded drive \(G_R J_r\):
+\begin{equation}
+ \I_{\rm Q,G}[J_r,J_a]
+ =\exp\big(\ii J_aG_RJ_r-\tfrac12 J_aNJ_a\big)
+ =\mathbb E\exp\big(\ii J_a[\xi+G_RJ_r]\big).
+ \label{eq:gauss}
+\end{equation}
+In particular the scalar closed-time-path functional built only from these linear tensor exchanges agrees, including the order-\(g^2\) connected exchange four-point function.
+\end{theorem}
+
+\begin{proof}
+The Wick expansion of the centered tensor trace has only a quadratic cumulant. The \(aa\) tensor covariance vanishes by the forward/backward identities of the two contour branches, the mixed cumulant is the commutator with retarded support, and the \(rr\) covariance is \(N\); this gives the exponent in \eqref{eq:gauss}. Equivalently the bulk quadratic action difference is \(-\int h_a D h_r\) and the source is \(h_aJ_r+h_rJ_a\), with the free state fixing the homogeneous covariance and the final contour trace. A free Gauss\-ian state's symmetrized canonical covariance (including field--momentum cross terms and momentum block) is positive on the real initial test phase space. Its real Gaussian characteristic functional propagated by the same linear dynamics therefore has homogeneous covariance \(N\). The driven solution adds \(G_R J_r\), and evaluating its characteristic functional proves the second equality. These statements can first be made for finitely many Gaussian initial modes and every finite set of admitted linear observables, then extended by consistency of their Gaussian characteristic functions. Substituting the branch currents of the same quantum scalar contour in the common functional proves the scalar claim. Neither a random homogeneous field alone nor a response sourced by an expectation of the scalar current yields this result.
+\end{proof}
+
+This is the finite-slab version of the linear influence identity \cite{FeynmanVernon}; it does not construct an autonomous positive hybrid dynamics for arbitrary coupled quantum-classical experiments. The matched retarded term acts on doubled histories of a quantum current. Gaussian initial noises here refer to both canonical blocks, not just a sampled tensor power spectrum.
+
+\section{The pure cubic mismatch}\label{sec:cubic}
+The Einstein pure-TT cubic in this tensor coordinate is \cite[Eq.~(37)]{Gao}
+\begin{equation}
+ S_3[h]=2g\int\dd\eta\,\dd^3x\,a^2
+ \left(h_{ik}h_{jl}-\tfrac12h_{ij}h_{kl}\right)\partial_k\partial_l h_{ij}.
+ \label{eq:EH3}
+\end{equation}
+In the exponential coordinate the pure kinetic cubic trace is a trace of a commutator. The linear lapse and shift perturbations sourced by the TT sector vanish; their second-order solutions multiply the vanishing linear constraints and do not enter this pure cubic. This is a statement of pure-sector reduction, not an assumption that the mixed constraints vanish. Any extra pure tensor self-vertex from the background matter is absent or held common except for the optional weak material-ruler term in Section~\ref{sec:packets}.
+
+Compare the full quantum \(S_3\) branch difference with solving \(D h=J_r+S_3'[h]\) perturbatively with the same Gaussian initial draw and averaging \(\exp(\ii J_a h)\) as in \eqref{eq:gauss}. For the comparison in this section keep the complete mixed contour functional the same. The polynomial identity
+\[
+ S_3[h_r+\tfrac12 h_a]-S_3[h_r-\tfrac12 h_a]
+ = S_3'[h_r]\cdot h_a+\tfrac14 S_3[h_a]
+\]
+implies
+\begin{equation}
+ \Delta \log \I[J_r,J_a]=\tfrac{\ii}{4} S_3[G_AJ_a]
+ \qquad\text{to first order in this pure cubic.}
+ \label{eq:pure}
+\end{equation}
+Here \(\Delta\) is quantum minus the specified trajectory self-dynamics response. To check it directly, the first variation of the averaged trajectory is
+\(\ii\mathbb E[e^{\ii J_a h_0}J_aG_R S_3'[h_0]]\),
+where \(h_0=\xi+G_RJ_r\). On the Gaussian contour, insertion of \(h_a\) has mean \(G_AJ_a\), and cross contractions between \(h_a\) and \(h_r\) at that same local vertex vanish by \(G_R(v,v)=0\), also with spatial derivatives. The remaining \(h_r\) average is exactly the tilted Gaussian trajectory average. This matches the first term. \(h_a\) has no self-contraction, so the second term gives \eqref{eq:pure} with no \(N\) or tadpole. The argument also applies to the optional weak-reference term below, which has no derivative of \(h\). Common endpoint terms are not varied in this comparison. The absence of multiple-response vertices from a deterministic trajectory truncation is standard \cite{Polkovnikov}. A related triple-retarded mismatch for the inflationary \emph{scalar} cubic was derived by Ballesteros et al.\ \cite[Eq.~(10)]{Ballesteros}; here the three-response tensor vertex is measured through six external scalar fields.
+
+For example the minimal spatial contact \(-g^2\int Q:(h^2)\), \(Q_{ij}=\sum_b\partial_i\chi_b\partial_j\chi_b\), has branch difference
+\[
+ -g^2\int
+ \left[Q_a:(h_r^2+\tfrac14 h_a^2)
+       +Q_r:(h_rh_a+h_ah_r)\right].
+\]
+Matching one-branch coefficients does not match this entire contour contact. The \(Q_a:h_a^2/4\) term is not silently discarded in \eqref{eq:pure}. A comparator that also omits it can differ at the same connected six-point order. Other contour contacts may be present, including conformal-improvement and instantaneous constraint terms.
+
+For the nonlinear expansion one may regulate the real initial trajectories before multiplying fields; there is no assumption that an unsmeared continuum Gaussian sample admits a nonlinear classical solution. Only the displayed finite tree coefficient is compared.
+
+A change only to the initial third tensor cumulant cannot reproduce \eqref{eq:pure} on all c-number currents. Each initial correction leg propagates homogeneously, and tests \(J_{a,b}=D f_b\) with \(f_b\) compactly supported in the slab annihilate all such legs by integration by parts. Yet \(G_A D f_b=f_b\), and the cubic polarization on such triples need not vanish: spatially compact TT tests are obtained by applying the polynomial differential operator with symbol \(q^4\Lambda(\bq)\) to truncations of noncollinear spatial packets chosen in Section~\ref{sec:six}. An expanding common spatial envelope on those packets gives a nonzero leading volume term per volume for the same triple, since derivatives on the envelope are lower order. This argument does not rule out time-dependent non-Gaussian noise, or infer arbitrary-current coverage from a single scalar detector.
+
+\input{sixpoint}
+\input{mixednull}
+
+\section{Relation to previous results and limitations}
+A nonzero tensor-exchange scalar trispectrum in inflation is established \cite{SeerySlothVernizzi}; exchange wavefunctions and their contact ambiguities also have independent constructions \cite{JPS}. Equation~\eqref{eq:gauss} compares entire finite-time Gaussian influences with canonical covariance and response held fixed, not just one exchange limit. Ballesteros, Gamb\'in Egea and P\'erez Rodr\'iguez \cite{Ballesteros} analyze differences between quantum and classical evolution from a finite inflationary initial time, including scalar bispectrum and tensor power examples; a flattened pole is not needed. Hauser and Laine \cite{HauserLaine} keep a quantum scalar source in a classical retarded calculation and compare second-order and one-loop tensor power. In stochastic semiclassical gravity, Hu, Roura and Verdaguer \cite{HuRouraVerdaguer} relate an Einstein--Langevin equation to symmetrized quantum metric correlations at leading large \(N\), rather than to the complete doubled scalar response used here. The separated nonlinear signal in this paper concerns the tensor self-cubic and an external connected scalar six-point coefficient. Its nonzero realization and finite mixed-response test, not the general existence of quantum response vertices, are the additional statements.
+
+The result neither establishes an autonomous completely positive classical comparator nor rules out engineered non-Gaussian tensor noise, uncontrolled time-nonlocal interactions, other propagating modes, or different detector calibrations. It does not identify an unprocessed primordial sky observable, an entanglement witness, or the first quantum correction to every correlator. No higher-loop or ultraviolet completion is used.
+
+\begin{thebibliography}{9}
+\bibitem{FeynmanVernon}
+R.~P. Feynman and F.~L. Vernon, Jr.,
+The theory of a general quantum system interacting with a linear dissipative system,
+\emph{Ann. Phys.} \textbf{24}, 118--173 (1963),
+\href{https://doi.org/10.1016/0003-4916(63)90068-X}{doi:10.1016/0003-4916(63)90068-X}.
+\bibitem{Gao}
+X. Gao et al.,
+Full bispectra from primordial scalar and tensor perturbations in the most general single-field inflation model,
+\emph{PTEP} \textbf{2013}, 053E03 (2013),
+\href{https://doi.org/10.1093/ptep/ptt031}{doi:10.1093/ptep/ptt031}.
+\bibitem{Polkovnikov}
+A. Polkovnikov, Phase space representation of quantum dynamics,
+\emph{Ann. Phys.} \textbf{325}, 1790--1852 (2010),
+\href{https://arxiv.org/abs/0905.3384}{arXiv:0905.3384}.
+\bibitem{SeerySlothVernizzi}
+D. Seery, M.~S. Sloth and F. Vernizzi, Inflationary trispectrum from graviton exchange,
+\emph{JCAP} \textbf{03} (2009) 018,
+\href{https://arxiv.org/abs/0811.3934}{arXiv:0811.3934}.
+\bibitem{JPS}
+S. Jazayeri, E. Pajer and D. Stefanyszyn, From locality and unitarity to cosmological correlators,
+\emph{JHEP} \textbf{10} (2021) 065,
+\href{https://arxiv.org/abs/2103.08649}{arXiv:2103.08649}.
+\bibitem{Ballesteros}
+G. Ballesteros, J. Gamb\'in Egea and A. P\'erez Rodr\'iguez,
+Classical and quantum evolution of inflationary fluctuations,
+\href{https://doi.org/10.1103/w7y3-gxbr}{doi:10.1103/w7y3-gxbr},
+\href{https://arxiv.org/abs/2604.18416}{arXiv:2604.18416}.
+\bibitem{HauserLaine}
+A. Hauser and M. Laine,
+Matching second-order classical and 1-loop quantum tensor power spectra in de Sitter spacetime,
+\emph{JHEP} \textbf{11} (2026) 167,
+\href{https://doi.org/10.1007/JHEP11(2026)167}{doi:10.1007/JHEP11(2026)167}.
+\bibitem{HuRouraVerdaguer}
+B.~L. Hu, A. Roura and E. Verdaguer,
+Induced quantum metric fluctuations and the validity of semiclassical gravity,
+\emph{Phys. Rev. D} \textbf{70}, 044002 (2004),
+\href{https://arxiv.org/abs/gr-qc/0402029}{arXiv:gr-qc/0402029}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,108 @@
+\section{A fixed mixed base for the algebraic massive tail}\label{sec:af}
+
+Assume the data in Theorem~\ref{thm:af}. The proof on this slice needs two different spatial comparison scales. It does not assume a uniform conic spacetime collar for the massive wave. It only uses the true local smooth development near each Cauchy point to find the complete microlocal signs.
+
+\subsection{Three normalized Cauchy maps and their bounds}\label{sec:maps}
+
+Use the cylinder reference metric \(g_b=r^{-2}\gamma\) on the gravitational/vector end, with smoothly completed positive bundle metrics and real auxiliary connections. The scalar reference metric is Euclidean bounded geometry, denoted by the subscript \(e\). The small conormal metric bounds ensure equivalence to these reference geometries; all derivatives needed at the finite comparison orders are bounded. On tensor, gauge and constraint bundles normalize the physical Cauchy pairs as
+\[
+  (r^a u,r^{a+1}\nabla_n u),\qquad
+  a=1,\ 0,\ 2 \quad\text{respectively}.
+\]
+The scalar pair \((\psi,p_\psi)\), \(p_\psi=D_n\psi\), is unscaled. Define
+\begin{align}
+ \VV_d^0&=r^d(H_b^{1/2}\oplus H_b^{-1/2})_T
+          \oplus (H_e^{1/2}\oplus H_e^{-1/2})_S,\nonumber\\
+ \GG_d^1&=r^d(H_b^{3/2}\oplus H_b^{1/2})_G,\qquad
+ \CC_d^{-1}=r^d(H_b^{-1/2}\oplus H_b^{-3/2})_C .
+ \label{eq:bases}
+\end{align}
+A radial weight denotes the image under multiplication by \(r^d\). The unweighted versions are used for proper symbol factorization. The actual inverse below is only used at \(d\).
+
+The exact \(k:\GG_d^1\to\VV_d^0\) and \(c:\VV_d^0\to\CC_d^{-1}\) have their usual cylinder tensor/vector differential grades. For clarity, their scalar blocks before the radial factors are
+\begin{align}
+ k_S(X,\dot X)&=(a(X),\ \HH_n(X)+a(\dot X)),\nonumber\\
+ c_S(\psi,p_\psi)&=(-2a^\top\psi,\ 2\HH_n^\top\psi-2a^\top p_\psi)
+ \quad\text{in the covector convention for }F .
+ \label{eq:mixedblocks}
+\end{align}
+Here \(\dot X=\nabla_nX\). The second component of \(c_S\) is \emph{not} obtained by differentiating only the explicit \(-2a^\top\psi\). In a geodesic normal frame with tensor Cauchy data zero the tensor accelerations are
+\(\ddot h_{ab}=-4G(\HH_{ab},\psi)+2G(V',\psi)g_{ab}\) by \eqref{eq:system}. In \(\partial_n B(h)_i\) this contributes \(-\ddot h_{ni}=4G(\HH_{ni},\psi)\); in \(\partial_n B(h)_n\) it contributes \(-(\ddot h_{nn}+\sum_i\ddot h_{ii})/2=4G(\HH_{nn},\psi)\), using \(-\HH_{nn}+\sum_i\HH_{ii}=V'\). Adding the explicit scalar derivative gives \eqref{eq:mixedblocks}. The relevant initial derivatives are
+\begin{equation}
+ \HH_{ij}=D_i^\Sigma a_j-K_{\Sigma,ij}\Pi_\Phi,\quad
+ \HH_{ni}=D_i^\Sigma\Pi_\Phi-K_{\Sigma,i}{}^j a_j,\quad
+ \HH_{nn}=\gamma^{ij}\HH_{ij}-V'.
+ \label{eq:hess-end}
+\end{equation}
+Thus the worst coefficient \(\HH_{nn}\) is \(O(r^{-p})\), not \(O(r^{-p-2})\); the massive acceleration is retained.
+
+On a dyadic shell \(r\simeq R\), put \(x=Ry\) and use enlarged fixed rescaled cutoffs. The physical volume is equivalent to \(R^3\) times the cylinder volume, including uniformly controlled smooth factors. The orders \(\langle\eta/R\rangle^s\) and \(\langle\eta\rangle^s\) in these shell coordinates give the estimates
+\begin{equation}
+ \|u\|_{H_e^{1/2}}\lesssim R^{3/2}\|u\|_{H_b^{3/2}},\qquad
+ \|u\|_{H_b^{-3/2}}\lesssim R^{-3/2}\|u\|_{H_e^{-1/2}} .
+ \label{eq:transfer}
+\end{equation}
+The latter follows directly by duality with converted volume, rather than by bounding a negative-order physical velocity in \(L^2\). Also \(H_b^{1/2}\to H_e^{-1/2}\) costs at most \(R^{3/2}\), and \(H_e^{1/2}\to H_b^{-1/2}\) or \(H_b^{-3/2}\) at most \(R^{-3/2}\), by \(L^2\). Conormal multiplication bounds at these orders follow by interpolation of the finite differentiated multiplier estimates and negative-order duality. Uniform finite-overlap partitions give squared-sum shell norm estimates, first at integer orders, then by interpolation and duality.
+
+The worst net shell factor in \(k_S\) is \(R^{3/2+d-p}\); the physical \(\dot X\) in its second component carries an additional \(R^{-1}\). In \(c_S\) the worst factor is \(R^{3/2-d-p}\), including the \(r^3\) in the constraint velocity. These exponents are negative for the stated \(p,d\), and also for \(d=0\). Thus the mixed blocks are bounded at the specified indices, not necessarily on all weighted shifted orders. The remaining tensor/vector blocks have the native graded bounds: spatial derivatives are normalized by \(r\), and in the tensor velocity equation the normalized curvature on the slice is bounded by Gauss--Codazzi and the Ricci equation. In particular, normal-normal Riemann components are determined by the spatial curvature/extrinsic terms and the exact spacetime Ricci tensor. High conic time derivatives need not be bounded. The reference end and core bounds give the required finite global map norms.
+
+The tensor Green charge in these variables has the density \(r^{-3}\dd\mu_\gamma\), as does the paired gauge--constraint vector charge on the right of \eqref{eq:wd}. The latter pairs data of orders \(3/2,1/2\) against \(-1/2,-3/2\), in crossed slots, rather than identifying the two normalized vector spaces by an unbounded radial similarity. The scalar charge uses \(\dd\mu_\gamma\). In the cylinder pairings insertion of \(r^{2d}\) is bounded; the unscaled scalar pairing is ordinary Sobolev duality with the smooth positive target metric. Therefore \eqref{eq:wd} and \(ck=0\) extend to the fixed bases by compact ambient density. This uses no assumption of compact density \emph{inside} the constrained kernel and asserts no boundary flux identity for nondecaying gauge transformations.
+
+\subsection{A true weighted left inverse at the chosen weight}\label{sec:adm}
+
+Write \(\vartheta=\tr_\gamma K_\Sigma\) and let \(B_\gamma\) be the spatial version of \(B\). From metric Cauchy data take the linear ADM quantities \((\delta\vartheta,B_\gamma(h_{\rm spatial}))\) and \(h_{n\mu}\). On a gauge field with initial normal/tangential decomposition \((N,Y)\), the spatial metric change is \(2NK_\Sigma+\Lie_Y\gamma\). The geometric variation of mean curvature under the same deformation gives the upper block
+\begin{equation}
+ Q_{\rm ADM}(N,Y)=
+ \binom{\Delta_\gamma N-(|K_\Sigma|^2+\Ric_g(n,n))N+Y(\vartheta)}
+       {(\Delta_\gamma+\Ric_\gamma)Y^\flat+2B_\gamma(NK_\Sigma)} .
+ \label{eq:adm}
+\end{equation}
+For the normal term use the normal Ricci equation for the variation of the trace, or differentiate \(K_\Sigma=\tfrac12\Lie_n\gamma\) while varying the inverse spatial metric as well. This yields the indicated \(-|K_\Sigma|^2-\Ric_g(n,n)\); the derivative of a variable normal deformation supplies \(\Delta_\gamma N\). Terms involving derivatives of the lapse/shift perturbations cancel in the induced extrinsic curvature. The Einstein equation gives \(\Ric_g(n,n)=|\Pi_\Phi|_G^2-W(\Phi)\); hence \(r^2\Ric_g(n,n)\) is small at the required orders, including the nonzero algebraic tail since \(W=O(r^{-2p})\). All perturbations of the normalized block \(r^2\Delta_e\) in \eqref{eq:adm} have small coefficients at the fixed elliptic orders by the strict finite seminorm bounds.
+
+The central-weight Euclidean Laplacian is an isomorphism on \(H_d^{2}\to H_{d-2}^{0}\), \(-1<d<0\), in the weighted spaces equivalent to these cylindrical orders \cite[Thm.~1.7]{Bartnik}. Apply it in Cartesian components and use a Neumann inverse for the small difference in the normalized order-two map. The fractional level \(r^d H_b^{3/2}\to r^d H_b^{-1/2}\) of \(r^2Q_{\rm ADM}\) follows from the same inverse. In detail, the uniformly proper elliptic parametrix \(B_Q\) satisfies \(A_QB_Q=1+R_1\), \(B_QA_Q=1+R_2\), \(A_Q=r^2Q_{\rm ADM}\), with both remainders regularizing to all orders at \(d\). On a lower-order input \(f\), define the inverse by \(B_Qf-A_Q^{-1}R_1f\), using the already established integer inverse on the second term. A kernel element bootstraps to the integer order by the other parametrix identity. The same identities raise the inverse to higher orders and prove that its difference from \(B_Q\) is all-order regularizing at \(d\). This parametrix is only in the cylinder geometry of the tensor/vector gauge block. No true inverse is used at \(d=0\), at \(-d\), or at an indicial root.
+
+After solving \eqref{eq:adm}, the four \(h_{n\mu}\) equations recover \(\nabla_n X\) algebraically (coefficients \(2\) in the normal-normal term, \(1\) in each mixed term, with the corresponding raised or lowered component convention). The known spatial derivatives of \(X\) in this recovery cost one normalized derivative. This defines a real \(L_0:\VV_d^0\to\GG_d^1\) from tensor inputs alone, with \(L_0k=1\) exactly. The source terms \(\delta\vartheta,B_\gamma\) cost one normalized Cauchy order in their inputs and the normalized upper block gains two. The recovery has the corresponding bounded map on the velocity output. Replacing the true inverse by its proper symbol parametrix yields a proper representative \(L_{0,\rm prop}\) bounded at both fixed levels \(d,0\); the difference from \(L_0\) at \(d\) has the native all-order smoothing bounds on both sides. In particular the low-frequency inverse is an actual elliptic inverse supplied by the small initial data and central weight, not a deduction from the wave signs.
+
+\subsection{The required regularization is local in one leg}\label{sec:leg}
+
+At the fixed Hilbert bases, an error \(A:X\to Y\) belongs to \(\Reg(X,Y)\) if it is bounded and for every compact cutoff \(\chi\) and every \(m\)
+\begin{equation}
+ \chi A:X\longrightarrow H_{\mathrm{loc}}^m(Y),
+ \qquad
+ \chi A^*:Y\longrightarrow H_{\mathrm{loc}}^m(X)
+ \quad\text{are bounded}.
+ \label{eq:leg}
+\end{equation}
+Here \(A^*\) is the true positive-reference Hilbert adjoint. Locally one may use ordinary Sobolev norms in the balanced coordinates. This is stronger than just a smooth kernel after two compact cutoffs, since the opposite leg in \eqref{eq:leg} is an unrestricted base vector.
+
+Properly supported bounded local pseudodifferential factors preserve this error class. For example localize the input of \(\chi P\) to its larger compact support footprint before using the finite local-order estimate in \(\chi PA\); for \(\chi AP\) use boundedness of \(P\) at the base. The companion statements apply to the adjoints. A proper base-bounded symbol-zero operator belongs to the class since both localized support footprints are compact and its kernel is smooth there. Finite sums and compositions of the errors preserve the class.
+
+These statements apply to the true Bessel Hilbert structures, not an assumed proper Sobolev adjoint. In each native block impose the weights by local multiplication \emph{before} balancing. A resulting raw proper operator between the fixed Sobolev bases has proper formal unweighted \(L^2\) adjoint between the crossed dual bases. In \(B_Y P B_X^{-1}\) and its true adjoint \((B_X^{-1})^*P^{*_{L^2}}B_Y^*\), replace the unweighted native Bessel balances and inverses by proper representatives plus globally regularizing native remainders. These decompositions follow by the native bounded-geometry elliptic functional calculus \cite[Thm.~5.12]{GOW}; one can also choose the positive reference Bessels on a product cylinder and Euclidean end with a smooth compact core. Every term containing a Bessel remainder has \eqref{eq:leg}: for an exterior proper factor restrict successively to its compact support footprints and use its local Sobolev estimate; on the far leg use only the fixed base bound. Terms with remainders at both ends already have both gains. This uses the crossed dual bounds for \(P^{*_{L^2}}\) and never moves an unbounded weight across a Bessel tail. Similarly the native true inverse remainder in \(L_0\) belongs to \(\Reg\) at \(d\). Thus products of the fixed-base operators below are proper local operators modulo \(\Reg\).
+
+For self-adjoint \(J\in\Reg(X,X)\) its spectral absolute value has the same one-leg bounds:
+\[
+ \chi|J|=\chi J\sgn(J),\qquad \|\sgn(J)\|\leq 1.
+\]
+Self-adjointness gives the estimate on the other leg. A double compact localization is therefore smoothing: localize both ends and interpolate the estimates \(L^2\to H^{2m}\) and \(H^{-2m}\to L^2\) to obtain \(H^{-m}\to H^m\) for every \(m\). This bound is also stable under the proper-plus-\(\Reg\) factors above. In particular there is no need for a spectral gap at zero or a uniformly bounded mixed operator at arbitrarily high global orders.
+
+\subsection{Realizing all local symbols at one base}\label{sec:factorend}
+
+We use the following construction, which avoids a uniform high-frequency threshold at infinity.
+\begin{lemma}[Fixed-base realization]\label{lem:real}
+Suppose a compatible complete local symbol of graded order \(m\) has a leading properly supported representative bounded between the specified source and target bases. Then the complete symbol has a global properly supported representative bounded at those bases. The same choice can be made on any finite list of fixed bases on which the leading representative is bounded.
+\end{lemma}
+\begin{proof}
+Subtract the leading representative so that the desired correction has order \(m-1\). On enlarged compact shell patches, including finitely many core pieces, take local all-order symbol representatives \(A_i\) of the correction. Take a locally finite left partition of unity \(\chi_i\) and a larger right cutoff \(\chi'_i=1\) on a neighborhood of each \(\supp \chi_i\). In fixed local coordinates insert a high pass \(1-\eta(D/N_i)\), where \(\eta=1\) near zero frequency. It changes no complete local symbol. On the fixed local source order it maps to one order weaker with norm \(O(N_i^{-1})\); \(A_i\) exactly has the spare derivative needed from that weaker norm. For each patch all chart, density, weight and localization constants at the prescribed finite orders are finite. Choose \(N_i\) so large that
+\[
+  \left\|\chi_i A_i (1-\eta(D/N_i))\chi'_i\right\|\leq 2^{-i}
+\]
+for every prescribed base map. Sum these pieces. The cutoff pairs are locally finite with compact footprints, so the sum is proper. Since the right cutoffs are one on a neighborhood of their left supports and \(\sum_i\chi_i=1\), the local symbol is unchanged to every order. In contrast, symmetric cutoff multiplication alone need not preserve the lower symbol orders. No estimate uniform in \(i\) on those lower symbols or the thresholds was assumed.
+\end{proof}
+
+Apply this lemma to the exact local wave signs of Section~\ref{sec:scheme} on the true development. The leading ratio of velocity to position on the signed Cauchy graph has modulus \(r|\xi|_\gamma=|\xi|_{g_b}\) in the normalized cylinder data; for the scalar it is the unscaled \(|\xi|_\gamma\). This is a normalization of the initial graph, not a change to the physical clock. Neither the mass nor the mixing enters those leading symbols. The leading tensor, scalar and vector signs therefore have bounded diagonal native representatives. The scalar legs of \(k,c\) are lower order locally even when their nonzero coefficients extend all the way to infinity. The remaining sign terms are realized at the finite list of bases \(d,0\) by Lemma~\ref{lem:real}. This yields exact complementary sum and reality after the same symmetrization as on a compact slice. At each geometric Cauchy point these symbols are the signs of the \emph{full} wave equations, not of an artificially cut-off matter background.
+
+For the right parametrix \(R_0\), use the surjective tensor symbol of \(c\); its leading representative has a tensor block only, with the required cylinder bounds, and then use the same lemma for lower orders. All zero-complete-symbol differences in \eqref{eq:signs}, the right parametrix identity and the subsequent algebra are proper smoothing modulo \(\Reg\) and bounded at the bases of \eqref{eq:bases}. The support and adjoint arguments above put them in \(\Reg\). This proves the exact identities in \eqref{eq:left}--\eqref{eq:right} on the end. The construction uses one-slice Ward identities from genuine local wave solutions and involves no time cutoff through \eqref{eq:wavecomplex}.
+
+For the signed square, first use the unweighted, properly supported versions of \(L_0,T,H\) and the signs, at \(d=0\). In these versions the projection and sign identities are only symbolic, which suffices for \eqref{eq:fullsquare}. The principal constrained charge is uniformly positive on each physical sign in its own native geometry. The tensor gauge resolution to \(\TT\) divides by the nonzero normal root, uniformly bounded away from zero on the cylindrical unit cosphere, and the matter block uses its positive target metric and physical balance. The principal rooted square in \eqref{eq:fullsquare} thus has bounded native diagonal realization; all lower coefficients from the local Sylvester equations are realized by Lemma~\ref{lem:real}. The unweighted extended forms are positive squares modulo bounded one-leg errors.
+
+To return to the true weight put \(M_d=\operatorname{diag}(r^d,1)\) on raw tensor and scalar data and let \(B\) be their unweighted direct-sum Bessel balance. The embedding of weighted balanced coordinates into unweighted ones is \(B M_d B^{-1}\). It is bounded, proper-local modulo native regularization; no bounded inverse is required. Since the proper raw representatives are the same at the two bases, pulling back the unweighted positive factors uses this embedding on both slots. Restoring the exact weighted \(L_0,T,H\) after this pullback adds only terms with one regularizing factor in the true fixed bases and therefore with \eqref{eq:leg}. It follows that the true extended forms are exactly \(B_\pm^*B_\pm+J_\pm\), with \(J_\pm=J_\pm^*\in\Reg\). Formula \eqref{eq:repair} and the absolute-value argument now give genuine bounded positive physical covariances on the constrained data, with exact charge difference. Only the specified one-order gauge/constraint maps and the single field base enter the argument.

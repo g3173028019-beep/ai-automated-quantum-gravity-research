@@ -1,0 +1,74 @@
+\section{The ADM Hessian of the actual initial family}\label{sec:adm}
+
+\subsection{The fixed-source terms do not enter this Hessian}
+
+Use \(\gamma_{IJ}=\delta_{IJ}+h_{IJ}\) for the exact initial spatial metric, and \(K\) for its extrinsic curvature. With the unit normal \(n\) and lapse tending to one at infinity, the exact Hamiltonian constraint in geometric normalization is
+\begin{equation}
+          R(\gamma)+(\tr_\gamma K)^2-K:_{\gamma} K=16\pi\mu_{\rm geom}.
+          \label{eq:HC}
+\end{equation}
+The source \(\mu_{\rm geom}\) here is normal energy, not the coordinate component of the four-velocity. In the dimensionless normalization \(G^{ij}=2\eps^4 T^{ij}\) of \cite[Eq.~(1)]{Oliynyk}, put \(u=\eps v\) for the unit fluid four-velocity after the fast coordinate change. At \(s=0\) the coordinate-rest condition makes \(u\) proportional to \(\partial_s=Nn+\beta\), so
+\[
+        W^2=(u\cdot n)^2=\frac{1}{1-|\beta|_\gamma^2/N^2},\qquad
+        \mu_{\rm geom}
+          =\frac{\eps^2}{4\pi}
+                \bigl[\rho+(\rho+\eps^2p)(W^2-1)\bigr].
+\]
+The second formula follows by \(16\pi\mu_{\rm geom}=4\eps^4 T_{nn}\) and the velocity normalization in the stress tensor. On the fixed compact material support, \(\beta=O(\eps^3)\) with two \(\lambda\)-derivatives, from the exact joint initial construction; \(N=1+O(\eps^2)\). Thus
+\begin{equation}
+           \mu_{\rm geom}=\frac{\eps^2\rho}{4\pi}+O(\eps^8)
+           \label{eq:sourceexp}
+\end{equation}
+jointly with up to two amplitude derivatives of the remainder. The leading \(\rho,p\) in these coordinates are prescribed exactly. Equation~\eqref{eq:sourceexp} does not assume the fluid is exactly normal after the relativistic shift is solved. It is also not a statement at fixed proper fluid volume or proper baryon number, either of which can vary through the exact \(\gamma\).
+
+\subsection{Differentiation by an integrated constraint identity}
+
+Let \(Lh=\partial_I\partial_Jh_{IJ}-\Delta\tr h\), with Euclidean contractions. The standard ADM mass in the inversion-symmetric family is
+\[
+ \M=\frac1{16\pi}\lim_{\ell\to\infty}
+        \int_{S_\ell}(\partial_J h_{IJ}-\partial_I\tr h)n^I\,\dd S .
+\]
+Use \eqref{eq:HC} to evaluate \(\int Lh\) and then differentiate on the parameter family. For the curvature write
+\[
+       R(\delta+h)=Lh+A(h)\partial^2h+B(h)(\partial h)^2
+\]
+schematically, with tensor contractions and smooth analytic coefficients and \(A(0)=0\). After integration by parts in the second term, the nonlinear curvature integral \(Q(h)=\int(R-Lh)\,\dd^3x\) has only products of first derivatives with smooth metric coefficients. More precisely the exterior products \(h\partial h\) on \(S_\ell\) vanish as \(\ell\to\infty\), since the weighted Sobolev estimates yield \(h=O(r^\delta)\), \(\partial h=O(r^{\delta-1})\) and \(2\delta+1<0\). Both \(\partial h\) and \(K\) are in \(L^2(\dd^3x)\) in these weighted orders. Thus the integrated quadratic and higher terms exist, and the limit of the integrated linear curvature is fixed by the exact scalar constraint. We do not require \(Lh\) to be \(L^1\) for arbitrary metrics in the weighted space. In particular for the exact family,
+\begin{equation}
+ 16\pi\M
+    =\int_{\R^3}\bigl(16\pi\mu_{\rm geom}
+                 +K:_{\gamma}K-(\tr_\gamma K)^2\bigr)\,\dd^3x-Q(h).
+ \label{eq:intadm}
+\end{equation}
+The Euclidean volume in this formula is intentional, as required by the flat ADM divergence. The right side has smooth joint amplitude derivatives by the compact source support and the weighted product estimates for the integrated terms. This avoids assuming continuity of the ADM surface expression on any larger arbitrary weak topology.
+
+For a compact TT \(H\), the quadratic part of \(Q\) is
+\begin{equation}
+          Q_2(H)=-\tfrac14\int_{\R^3}|\nabla H|^2\,\dd^3x .
+          \label{eq:Q2}
+\end{equation}
+Indeed \(\int\sqrt{\gamma}R\) on a covariant metric variation has quadratic coefficient \(-\tfrac12\int H:G^{(1)}(H)\), where \(G^{(1)}=-\Delta H/2\) in spatial TT gauge. Integrating by parts yields \eqref{eq:Q2}. The determinant correction at quadratic order pairs with the linear scalar term; this term vanishes on TT. Thus it is the same coefficient for \(Q\) with Euclidean measure. Its mixed version follows by polarization.
+
+On the exact family \(h,K=O(\eps^2)\) initially. With the extrinsic curvature sign \(K=-\tfrac12\Lie_n\gamma\), the expansions \eqref{eq:initfirst}--\eqref{eq:initsecond} and initial shift estimate imply
+\[
+       D_u K=-\tfrac12\eps^2\dot H_u(0)+O(\eps^3),\qquad
+       D_uD_vK=O(\eps^3).
+\]
+Only the absolute coefficient matters below. The leading trace of the first variation is zero. Every term in the Hessian of the curvature and extrinsic nonlinearities with one background factor and one second amplitude derivative is \(O(\eps^5)\). Terms from a higher derivative order in the metric amplitude or index-raising corrections are also higher order. This follows directly from the joint data estimates and the integrable two-first-derivative representation of \(Q\). Differentiating \eqref{eq:intadm}, dividing the Hessian by two, and using \eqref{eq:sourceexp} and \eqref{eq:Q2} gives
+\begin{equation}
+ \frac12D^2_\lambda\M|_0[u,v]
+   =\frac{\eps^4}{64\pi}\int_{\R^3}
+       (\nabla H_u(0):\nabla H_v(0)+\dot H_u(0):\dot H_v(0))\,\dd^3x
+       +O(\eps^5).
+ \label{eq:ADMhess}
+\end{equation}
+It equals the leading outgoing finite-tube coefficient in \eqref{eq:Elimit}. Every retained term came from the actual exact constraints; \eqref{eq:ADMhess} does not follow by differentiating the published \(O(\eps^2)\) estimate for the slow-unit ADM mass. It isolates the coefficient quadratic in freely set wave data, not the entire binding, pressure, or other correction of the slow theory. This completes the proof of Theorem~\ref{thm:main}.
+
+\section{Units, the news check, and limitations}
+
+For a single real amplitude \(\lambda\), the escaped mass coefficient \([\lambda^2]\) is
+\((c^2/G)\eps^4\ME(H,H)\) at the retained order, and the energy coefficient is \((c^4/G)\eps^4\ME(H,H)\). The symplectic normalization is \((c^3/G)\eps^4\). At fixed characteristic fluid speed \(v_*\), \(c=v_*/\eps\); the unscaled geometric coefficient vanishes, physical mass is order \(\eps^2\), and physical symplectic form is order \(\eps\). The physical energy coefficient can be order one; it is still invisible to the Poisson--Euler projection of the same fixed material data. Combining it consistently with the symplectic action factor uses physical time \(s/c\), not the same numerical normalizing factor for the two physical flows.
+
+The standard news check can be obtained after the finite-radius coefficient extraction. For fixed \(u=s-r\) let \(C(u,n)=\lim_{r\to\infty}rH(r+u,rn)\); it is the transverse trace-free radiation field of our explicit compact outgoing profile. Put \(N=\partial_u C\). Then \(\partial_sH=r^{-1}N+O(r^{-2})\) and \(\partial_rH|_s=-r^{-1}N+O(r^{-2})\) in the supported outgoing region. Hence the diagonal \eqref{eq:energyout} tends to \((32\pi)^{-1}\int N:N\,\dd u\,\dd\Omega\), the positive escape convention, the negative of the final-minus-initial Bondi mass change in that normalization \cite{Bondi}. This is an iterated limit of the extracted flat coefficient. No estimate uniform in \(R\) as \(\eps\to0\), asymptotic completeness of the fluid solutions, or nonlinear Bondi statement for them is used.
+
+The wave amplitudes are independent initial radiation, not the far-zone quadrupole of the slow matter. Rigorous weak-field/slow-motion radiation with matter-sourced asymptotics, for example \cite{FutamaseSchutz}, addresses a different preparation and scale. Here the exact finite sphere sees a rank-four form and an ADM Hessian lost by the fixed-material Newtonian projection. The construction neither supplies a global nonlinear slow/fast symplectic splitting with variable fluids nor claims the existence of an instantaneous Newtonian observable reproducing the outgoing waveform.
+
