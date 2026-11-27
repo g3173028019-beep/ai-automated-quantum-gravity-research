@@ -1,0 +1,3 @@
+Legendre retarded-layer chain-rule identities passed.
+Inverse-square ladder n=0..10: exact transform, shift, inverse poles, residues passed.
+Power-law Einstein, weighted clock and target shear equations passed.

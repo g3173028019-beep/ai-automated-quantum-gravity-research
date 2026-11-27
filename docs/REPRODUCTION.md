@@ -179,3 +179,8 @@ The paper pages give the LaTeX entry point, build command and independent verifi
 - [49B · Exact Chern–Simons normal forms](../papers/49b-cs-normal-forms/README.md)
 - [48+49 · Adjoint torsion and coupled WRT cutoffs](../papers/48-49-wrt-torsion-bridge/README.md)
 - [50B · All-level WRT collisions](../papers/50b-wrt-topological-blindness/README.md)
+
+## Building the relational-area follow-ups
+
+- [46+47 · Common Einstein cones and relational area probes](../papers/46-47-common-cones-and-area-probes/README.md): see its LaTeX entry point, deterministic build and verification.
+- [44+47 · Causal memory of gravitational radiation](../papers/44-47-gravitational-radiation-memory/README.md): see its LaTeX entry point, deterministic build and verification.

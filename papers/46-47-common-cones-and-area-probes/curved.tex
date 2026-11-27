@@ -1,0 +1,44 @@
+\section{A curved constraint and a conformally transported scalar}\label{sec:curved}
+This section is a separate illustration of the source criterion, not an extension of the minimal classification to nonminimal theories or a curved version of the flat spectral result in \cite{P45}.
+
+For a reconstructed marked metric write \(q_{ij}=\gm_{ij}\), \(\beta^i=q^{ij}\gm_{0j}\), \(N=(q^{ij}\gm_{0i}\gm_{0j}-\gm_{00})^{1/2}\), and \(K_{ij}=(\partial_tq_{ij}-(\Lie_\beta q)_{ij})/(2N)\). The time label may be fixed by a material recalibration to agree with background proper time; it is not then replaced by an external coordinate choice in perturbed solutions. Gauss--Codazzi gives the local geometric normal constraint
+\begin{equation}\label{eq:hc}
+ {\cal C}_g=\kappa^{-1}G_g(n,n)
+   =\frac{{}^{(3)}R[q]+K^2-K_{ij}K^{ij}}{2\kappa}.
+\end{equation}
+The full material chart also fixes the true normal sigma energy
+\[
+ \rho_\phi=\tfrac12G_{IJ}\bigl(\Pi^I\Pi^J+q^{ij}\partial_i\phi^I\partial_j\phi^J\bigr)
+                 +U,\qquad
+ \Pi^I=N^{-1}(\partial_t\phi^I-\beta^i\partial_i\phi^I),
+\]
+and the four-form contributes no term. Compact variations of these local quantities and of their difference are area-history tests by support-preserving adjoints. Their difference vanishes in the constrained theory. Instantaneous areas alone need not give the off-shell geometric functional: on the flat-slice FLRW reference with \(H=\dot a/a\ne0\) take \(h_{ij}=2a^2f(t)\delta_{ij},h_{0\mu}=0\), \(f(t_0)=0\), \(\dot f(t_0)\ne0\). Instantaneous areas at \(t_0\) do not vary, but \(\delta K=3\dot f(t_0)\) and \(\delta G(n,n)=2H\,\delta K\ne0\). This is not an obstruction to instantaneous constrained energy readout.
+
+For a different model take an Einstein-frame metric \(\widetilde g\), the canonical quartet of \eqref{eq:FLRW}, and an additional scalar \(\sigma\) with Lagrangian
+\(-\tfrac12(\widetilde g^{-1}(\dd\sigma,\dd\sigma)+\tfrac16\widetilde R\,\sigma^2)\).
+The exact branch has \(\sigma=0\), so the conformal scalar stress has no linear part there. Measure instead the Jordan metric \(g_J=e^{\kappa f\sigma}\widetilde g\), \(f\ne0\). The same four rods are transported with the action under this change of variables; they are not independently chosen to be Jordan-minimal. Use fixed material labels and \(O=f\,\delta\sigma\). Then \(\widehat h_E=\widehat h_J-\kappa O g_0\), where \(g_0\) is the common background metric. Let \(J_E\) be the linearization of \(G-\kappa T^\phi\) at fixed rods. The covariant massless rod stress at fixed rods is unchanged under this Weyl variation; \(g_{ab}g^{cd}\sum_I\partial_c\phi^I\partial_d\phi^I\) is unchanged. Thus
+\[
+ J_E(\widehat h_J)=J_E(\widehat h_E)
+                     +\kappa(g_0\Box-\nabla\nabla)O.
+\]
+On shell \(J_E(\widehat h_E)=0\) and \((\Box-\mathcal R/6)O=0\), with \(\mathcal R=R[g_0]\). Put
+\[
+ \begin{split}
+ W_{\mu\nu}&=J_E(\widehat h_J)_{\mu\nu},\qquad
+ \tau=2\tr_{g_0} W/\kappa,\\
+ B_\mu&=-\kappa^{-1}g_{0,\mu\lambda}(R^{-1})^{\lambda\nu}
+                                      \nabla^\alpha W_{\alpha\nu}.
+ \end{split}
+\]
+On the active quartet solution \(R_{\mu\nu}=\kappa\sum_I\partial_\mu\phi^I\partial_\nu\phi^I\) is a positive-definite covariant form and therefore invertible, even where its Lorentzian trace vanishes. Covariant differentiation yields \(\nabla^\mu W_{\mu\nu}=-\kappa R_{\nu\lambda}\nabla^\lambda O\) on shell, and the trace gives \(\tau=\mathcal R O\). Thus \(B=\dd O\), \(\dd\tau-\mathcal RB=O\dd\mathcal R\). For a smooth positive contravariant form \(b\) and fixed positive length scale \(L_0\), locally reconstruct
+\begin{equation}\label{eq:curv}
+ O=\frac{\mathcal R\,\tau+
+      L_0^2 b(\dd\mathcal R,\dd\tau-\mathcal RB)}
+          {\mathcal R^2+L_0^2 b(\dd\mathcal R,\dd\mathcal R)} .
+\end{equation}
+The denominator need not exclude curvature zeros: on \eqref{eq:FLRW} one has
+\(\mathcal R=\kappa(3\ell^2/a^2-P^2/a^6)\);
+at a zero its derivative in background proper time is \(12\kappa H\ell^2/a^2\ne0\). Off shell the difference \(\tau-\mathcal R O\) is
+\(2\tr_{g_0}J_E(\widehat h_E)/\kappa+6(\Box-\mathcal R/6)O\), and \(B-\dd O\) is the inverse-Ricci contraction displayed above with \(W\) replaced by \(J_E(\widehat h_E)\). Inserting these in \eqref{eq:curv} shows explicitly that the error is a local coupled Jacobi combination. Theorem~\ref{thm:source} therefore applies to the fifth scalar as well, on shell, through the simple curvature crossing.
+
+On the scalar mode \(\widehat h_E=0\), the Jordan geometric readout in \eqref{eq:hc} is \(\delta{\cal C}_J=3H\dot O-a^{-2}\Delta O-3H^2O\); the last term is from normalizing the Jordan unit normal. The Einstein-frame geometric readout on this mode is zero, as is the full constrained linear combination. This case distinguishes a nonzero bare geometric response from a complete constraint. It is local, in a specified transported frame, and is not an assertion about a Poincar\'e vacuum atom, a charge at infinity, or an arbitrary scalar-flat region.

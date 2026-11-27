@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 59 items: 20 original research packets, six later analytical Markdown manuscripts and thirty-three typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 61 items: 20 original research packets, six later analytical Markdown manuscripts and thirty-five typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
 Numbering follows delivery order: 01–20 retain their original packet numbers; 21–50 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
@@ -659,3 +659,23 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** The exact collisions concern uncolored SU(2) invariants. The odd cyclic diagnostic is classical and is applied to these families. The simultaneous theorem uses a sufficient exponential-level condition.
 
 [Paper notes](../papers/50b-wrt-topological-blindness/README.md) · [PDF](../papers/50b-wrt-topological-blindness/manuscript.pdf) · [TeX](../papers/50b-wrt-topological-blindness/manuscript.tex) · [Verification](../papers/50b-wrt-topological-blindness/VERIFICATION.md)
+
+## 46+47. Common Einstein cones and complete relational area probes for multifield matter
+
+**Question.** Which scalar matter shares the Einstein cone, and when do relational areas recover its compact linear observables?
+
+**Result.** An attained common-cone classification identifies the stress-free four-form exception on rank-four branches. Ten marked area types represent all compact coupled linear probes under local recovery of hidden matter; exact models give a cyclic criterion and a four-form visibility mechanism.
+
+**Scope.** First-derivative matter on regular local branches of four-dimensional Einstein gravity. Attained rank hypotheses, orientation domains, linearized equation equivalence and the scoped curved example are stated separately.
+
+[Paper notes](../papers/46-47-common-cones-and-area-probes/README.md) · [PDF](../papers/46-47-common-cones-and-area-probes/manuscript.pdf) · [TeX](../papers/46-47-common-cones-and-area-probes/main.tex) · [Verification](../papers/46-47-common-cones-and-area-probes/VERIFICATION.md)
+
+## 44+47. The causal memory of gravitational radiation from compact area measurements
+
+**Question.** How much boundary radiation memory can a single compact interior area profile identify in finite time?
+
+**Result.** With compact gates in a finite interval, a fixed area profile recovers the calibrated shear load within the two-way delay. Exact Einstein–scalar models realize every finite memory rank and exhibit a discrete finite-versus-infinite rank classification for inverse-square shear.
+
+**Scope.** A calibrated isolated shear channel, known retained temporal potential and exact indexed temporal gates. The ranks concern a causal force law; global spectral type, noisy inverse stability and lossless Hamiltonian realizations are separate.
+
+[Paper notes](../papers/44-47-gravitational-radiation-memory/README.md) · [PDF](../papers/44-47-gravitational-radiation-memory/manuscript.pdf) · [TeX](../papers/44-47-gravitational-radiation-memory/manuscript.tex) · [Verification](../papers/44-47-gravitational-radiation-memory/VERIFICATION.md)

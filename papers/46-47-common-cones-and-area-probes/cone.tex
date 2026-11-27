@@ -1,0 +1,51 @@
+\section{Classification on the physical Gram stratum}\label{sec:cone}
+
+We use signature \((-+++)\) and \(\kappa=8\pi G_N\). Let \(V_a^I=\partial_a\phi^I\), \(Q^{IJ}=-\tfrac12g^{ab}V_a^IV_b^J\). Consider a smooth first-derivative minimally coupled scalar density \(\sqrt{-g}L(\phi,V)\) with no curvature, extra spacetime tensor, or derivative-dependent change of frame. The parity-even class is \(L=P(\phi,Q)\); the oriented class may also use the volume form. The metric in these expressions is the metric of the Einstein term. Put \(q=\min(N,4)\). At the jets of interest \(V\) has rank \(q\). For \(N\le3\) assume independent gradient rows and a relatively open attained Gram image (the proof allows a degenerate induced Gram when its realizable neighborhood is among those tested). For \(N\ge4\) require an open attained family in the rank-four stratum of symmetric matrices with inertia \((1,3,N-4)\). Include \(\phi\) in these open families. In the oriented case use the corresponding oriented lift. On the tested family assume a positive normal scalar kinetic form, a strongly hyperbolic \(2N\)-companion for a metric-timelike normal, and precisely the Einstein metric cone as the real characteristic set.
+
+\begin{theorem}[Common Einstein cone]\label{thm:cone}
+Locally on the tested gradient-jet family, with a fixed orientation lift if needed, the matter density is
+\begin{equation}\label{eq:form}
+ \sqrt{-g}\bigl(G_{IJ}(\phi)Q^{IJ}-U(\phi)\bigr)\dd^4x+\phi^*A ,
+ \qquad G=G^{\mathsf T}>0 ,
+\end{equation}
+where \(A\) is a target four-form. Conversely this form has the stated positive common principal cone. For \(N\le3\) the remainder is absent; for \(N=4\) it has no local bulk Euler contribution. For \(N>4\) the bulk force is governed by \(dA\), and it is Euler-null on an open full-rank family exactly when \(dA=0\) on the tested target patch. The direct stress of \(\phi^*A\) is zero in all cases.
+\end{theorem}
+
+\paragraph{From Gram data to an open calculation.}
+At full row rank for \(N\le3\), equality of Gram makes the ordered rows define an isometry of their spans, including a possibly degenerate span. The finite-dimensional Witt extension theorem extends it to a Lorentz isometry on the ambient nondegenerate four-dimensional space. The Gram differential is onto all symmetric \(N\)-by-\(N\) matrices there: choose a right inverse of \(V g^{-1}\), then vary one factor in the symmetrized differential. At rank four choose an invertible four-row block \(V_B\). The same conclusion about the fibre follows by matching the Lorentz transform on \(V_B\); the remaining rows are fixed linear combinations with coefficients \(Q_{:B}Q_{BB}^{-1}\). Thus passing from relatively open invariant data to their corresponding tested jets gives open \(V\) boxes, using covariance; one restricts to the stated oriented lift where relevant. For \(N\le3\) it suffices also to work on the nondegenerate row spans and extend to any tested degenerate Gram by smoothness. We never differentiate \(P\) in fictitious normal directions to the deficient-rank stratum.
+
+\begin{proof}[Proof of Theorem~\ref{thm:cone}]
+Fix an orthonormal spacetime frame and \(\phi\), and write \(L_{Ia,Jb}\) for the gradient Hessian. The scalar principal pencil is \(-L_{Ia,Jb}k_a k_b\), with the sign such that \(GQ\) yields \(Gg^{ab}k_ak_b\). In harmonic gauge the Einstein block has the ordinary wave principal part; mixed metric--scalar variations here carry at most one differentiated variation and do not constrain the scalar polarizations at that order.
+
+Normalize the timelike covector. For a unit spatial direction the only eigenvalues of the scalar companion are \(+1,-1\). Their multiplicities are constant on the connected sphere and are exchanged by reversing the spatial direction. They therefore both equal \(N\). Strong hyperbolicity implies semisimplicity, so each eigenspace has dimension \(N\); it is the kernel of the \(N\)-by-\(N\) pencil at the respective root. Hence the whole matrix vanishes there. By homogeneity it vanishes on the null cone. A real quadratic vanishing at \(k_0=\pm|\mathbf k|\) is proportional to the metric quadratic: subtraction kills the time-space cross terms, and addition fixes the Euclidean spatial block. Applying this entrywise gives
+\begin{equation}\label{eq:hessian}
+ \tfrac12\bigl(L_{Ia,Jb}+L_{Ib,Ja}\bigr)
+       =-M_{IJ}(\phi,V)\eta^{ab},\qquad M>0.
+\end{equation}
+A repeated characteristic determinant alone would not give this matrix identity.
+
+Let \(\epsilon_a=\eta^{aa}\) with no sum. The same-column Hessian is \(-\epsilon_a M_{IJ}\); the crossed spacetime indices of the off-diagonal Hessian in \eqref{eq:hessian} are antisymmetric. For any \(c\) choose \(a\ne c\). Commutation of third derivatives yields
+\[
+ \partial_{Kc}L_{Ia,Ja}
+   =\partial_{Ia} L_{Kc,Ja}
+   =-\partial_{Ia}L_{Ka,Jc}
+   =-\partial_{Jc}L_{Ka,Ia}.
+\]
+Thus \(T_{IJK}=\partial_{Kc}M_{IJ}\) is symmetric in its first two and antisymmetric in its last two indices, which forces \(T=0\). This holds for every \(c\), so \(M=G(\phi)\).
+
+Subtract \(GQ\). The remainder has zero same-column Hessians. It is separately affine in each gradient column on a local product box, hence a finite multiaffine polynomial. The crossed Hessian identities make the target coefficient antisymmetric in each pair of its selected column slots: compare coefficients of the other independent columns. Equivalently, every nonconstant coefficient multiplies a minor. At fixed target value, infinitesimal Lorentz invariance is a polynomial identity on this open box, hence an identity of polynomials. On spacetime exterior powers there are no Lorentz-invariant tensors in degrees one, two or three: spatial rotations already remove degree two, and boosts remove the time line and spatial volume left in degrees one and three. The degree-four invariant is the oriented volume form. The sole nonconstant remainder has the form \(A(\phi)(V_0,V_1,V_2,V_3)\); uniqueness under target-coordinate changes identifies \(A\) as a four-form. The constant is \(-U(\phi)\). Restoring the spacetime density gives \eqref{eq:form}.
+
+The four-form has zero metric variation. Cartan's formula for a field variation \(W\) gives a bulk term \(\phi^*(\iota_WdA)\) and the exact boundary term \(\dd\phi^*(\iota_WA)\). The bulk term contains only first derivatives of the map, and it vanishes against a tangent variation \(W=V_a\) by antisymmetry. A five-form that evaluates to zero against all \(W\) and an open set of four independent columns is zero: the contraction is polynomial in those columns. For \(N=4\) the target five-form is identically zero, though boundary and global data may remain. Finally the sigma principal matrix is \(Gg^{-1}(k,k)\); positive \(G\) gives the usual independent scalar wave symmetrizer. The Einstein and gauge subsidiary principal parts are unchanged. This proves sufficiency without a nonlinear energy claim.
+\end{proof}
+
+\paragraph{Parity on rank four.}
+On a rank-four block chart write \(M_{\mathrm{gr}}=Q_{:B}Q_{BB}^{-1}\). If \(A=\sum_{|S|=4}a_S(\phi)\dd\phi^S\) in increasing row sets, a local parity-even representative on that chart is
+\begin{equation}\label{eq:gram}
+ P=G_{IJ}Q^{IJ}-U+
+ 4\sqrt{-\det Q_{BB}}\sum_{|S|=4}a_S(\phi)\det(M_{\mathrm{gr},S}).
+\end{equation}
+Indeed \(V=M_{\mathrm{gr}}V_B\), and
+\(\sqrt{-g}\sqrt{-\det Q_{BB}}=|\det V_B|/4\).
+Thus \eqref{eq:gram} produces the pullback form or its negative on the two fixed sign lifts. In particular a locally parity-even Gram theory can have a nonclosed four-form force on a sign branch. Agreement of any two extensions from the physical Gram stratum gives identical pulled-back derivatives on the tested first jets; neither the principal operator nor the stress probes such an extension.
+
+This branch statement differs from a reflection-reconnecting parity-even domain. At a fixed target value the polynomial coefficients just proved are unique on overlapping open boxes, so they propagate throughout a connected full-rank lift. If that lift also contains a \(V\) and its Lorentz reflection, the constant-coefficient four-form changes sign while \(Q\) and \(P\) do not. Equality for nearby pairs forces \(A=0\) on that component by the same open-set polynomial argument. The entire full-column-rank space is connected for \(N>4\) (deform to orthonormal columns and rotate one column using an unused target direction). It has two sign components for \(N=4\). This global obstruction does not prohibit the local representative \eqref{eq:gram}, and does not describe evolution through a lower-rank point.

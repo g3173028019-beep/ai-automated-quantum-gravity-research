@@ -1,0 +1,82 @@
+\section{Exact memory ranks for an inverse-square shear}
+\label{sec:ladder}
+
+\begin{theorem}[Inverse-square classification]\label{thm:ladder}
+Let \(M(t)=-\gamma/t^2\) for \(t>0\) and real \(\gamma\), and take the actual outgoing half-line with initially zero histories supported away from \(0\). On every separated pair of nonempty positive-time windows its calibrated load has rank exactly \(n\) if \(\gamma=n(n+1)\) for \(n\in\{0,1,\ldots\}\). At every other real \(\gamma\) it has infinite rank. At the finite-rank values there is an explicit minimal \(n\)-coordinate linear realization after retaining the local time derivative contact. Every \(\gamma\) in this statement is attained by an exact positive-kinetic four-scalar Einstein background with the marked area probe.
+\end{theorem}
+
+\subsection{The retarded layer and its logarithmic-time transfer}
+For \(\nu(\nu+1)=\gamma\), the whole-line retarded solution from \((s,0)\) has kernel
+\begin{equation}
+ G(t,r;s)=\tfrac12{\boldsymbol1}_{t-s\ge|r|}
+          P_\nu\!\left(\frac{t^2+s^2-r^2}{2ts}\right).
+ \label{eq:LegGreen}
+\end{equation}
+The Legendre branch is analytic at \(1\), with \(P_\nu(1)=1\). This is the classical Riemann function for the inverse-square potential \cite{Legendre}. To check the normalization, write \(\xi=(t^2+s^2-r^2)/(2ts)\). It obeys \(\xi_t^2-\xi_r^2=(\xi^2-1)/t^2\) and \(\xi_{tt}-\xi_{rr}=2\xi/t^2\); hence the Legendre equation gives the interior wave equation. On each characteristic edge \(\xi=1\). The tangential derivative terms from the retarded step functions vanish there, and the surviving corner delta equals that of the free \(1+1\) retarded kernel. The two roots \(\nu\) give the same real analytic normalized function by its equation and regular branch.
+
+Take the single layer \(u(t,r)=\int G(t,r;s)f(s)\,\dd s\) for \(r>0\). The normal derivative at \(0^+\) is \(-f(t)/2\): differentiating the upper time \(t-r\) gives that value, while the derivative of the smooth interior factor tends to zero on positive-time compact slabs. With wall value \(g\) and outgoing \(S_\gamma g=-\partial_r u|_0\) this gives
+\[
+          g(t)=\int_0^t P_\nu(\cosh(\log(t/s)))\,S_\gamma g(s)\,\dd s .
+\]
+The time integral is effectively over \(s>0\) bounded away from zero for each zero-past input. Differentiating this Volterra equation with unit diagonal gives the unique causal density, so the layer constructs the outgoing solution for the prescribed trace. Only finite-time uniqueness is required.
+
+Set \(\tau=\log t,\ \widetilde g(\tau)=g(e^\tau),\ Y(\tau)=e^\tau S_\gamma g(e^\tau)\), and \(L(v)=P_\nu(\cosh v)\). Then \(\widetilde g=({\boldsymbol1}_{v\ge0}L)*Y\), with Laplace transfer \(1/\widehat L(p)\) from \(\widetilde g\) to \(Y\).
+The analytic tail \(h_\gamma\) of this inverse is defined by
+\begin{equation}
+ \mathcal L^{-1}\bigl(1/\widehat L\bigr)
+       =\delta'+{\boldsymbol1}_{v>0}h_\gamma(v),\qquad
+ S_\gamma g(t)=g'(t)+\int_0^t\frac{h_\gamma(\log(t/s))}{ts}\,g(s)\,\dd s .
+ \label{eq:physicaltail}
+\end{equation}
+Here \(\widehat L(p)=\int_0^\infty e^{-pv}L(v)\,\dd v\). To justify the analyticity and transforms, the derivative of the causal kernel is \(\delta+{\boldsymbol1}_{v>0}L'\), since \(L(0)=1\). Its Volterra inverse is \(\delta+{\boldsymbol1}_{v>0}R\), where \(R(0)=-L'(0)=0\). Its Neumann series, formed with the holomorphic continuation of \(L'\) on a small convex neighborhood of any real compact delay interval \([0,L_0]\), converges uniformly on compact subneighborhoods: the \(j\)-fold ordered integrals have bound \(C^j |v|^{j-1}/(j-1)!\). Thus \(h_\gamma=R'\) is analytic on positive delays with no additional delta. \(L,L',L''\) grow at most exponentially by \(L''+\coth v\,L'-\gamma L=0\) where \(v\ge1\); the Volterra series and its differentiated equation likewise bound \(R,R'\) exponentially. All Laplace identities hold on a common right half-plane. In physical time the derivative contact is \(g'(t)\), and the factors \(1/(ts)\) follow from changing both the output and integration clock. The diagonal value in \eqref{eq:physicaltail} is \(-\gamma/(2t^2)\), also agreeing with \eqref{eq:diagTail}.
+
+\subsection{Integer couplings and the converse}
+For \(\gamma=n(n+1)\), the generating function
+\[
+ (1-2u\cosh v+u^2)^{-1/2}
+       =(1-u e^v)^{-1/2}(1-u e^{-v})^{-1/2}
+\]
+gives \(L(v)=\sum_{j=0}^n c_j e^{(n-2j)v}\) with \(c_j>0\), \(\sum_j c_j=1\), and \(c_j=c_{n-j}\). The \(n+1\) simple poles of \(\widehat L\) have positive residues. Between every two consecutive poles the transform is strictly decreasing from \(+\infty\) to \(-\infty\); its degree-\(n\) numerator has exactly \(n\) simple interlacing zeros. Their positions are explicit. The Legendre ODE, multiplied by \(2\sinh v\) and Laplace transformed with \(L(0)=1,L'(0)=0\), gives
+\[
+ (p^2-p-\gamma)\widehat L(p-1)=(p^2+p-\gamma)\widehat L(p+1).
+\]
+For integer \(n\), the rational function
+\begin{equation}
+ \widehat L(p)=
+   \frac{\displaystyle\prod_{j=0}^{n-1}[p-(n-1-2j)]}
+        {\displaystyle\prod_{j=0}^n[p-(n-2j)]}
+ \label{eq:rational}
+\end{equation}
+satisfies this identity by cancellation and behaves as \(1/p\). Any two such rational solutions have a rational periodic quotient (period two), hence that quotient is constant, fixed by the normalization. Write \(\mu_j=n-1-2j\) and \(r_j=1/\widehat L'(\mu_j)<0\) for \(0\le j<n\). Then the inverse has Laplace multiplier \(p+\sum_j r_j/(p-\mu_j)\), with no constant contact. The real load tail is
+\begin{equation}
+       CS_\gamma(t,s)\big|_{t>s}=C\sum_{j=0}^{n-1}r_j\,t^{\mu_j-1}s^{-\mu_j-1}.
+ \label{eq:laddertail}
+\end{equation}
+These powers are independent on each of the separated intervals because distinct exponentials are independent in logarithmic time. Evaluation minors can be realized with compact smooth gates as in Section~\ref{sec:rank}. The rank is exactly \(n\), including the zero-tail case \(n=0\). The minimal realization in logarithmic time is \(\dot X_j=\mu_j X_j+\widetilde g,\ Y=\partial_\tau\widetilde g+\sum_j r_j X_j\), with zero past. The \(\mu_j\) are transfer exponents, not graviton energy poles.
+
+For the converse, finite rank of the kernel on any separated rectangle is unchanged by the invertible clocks and weights in \eqref{eq:physicaltail}. The translates \(h_\gamma(\tau-\sigma)\) with \(\sigma\) in the early interval must span a finite-dimensional space on the late interval. Otherwise evaluation minors, and then nearby smooth gate minors, would witness unbounded rank. Differentiating the translations at an interior \(\sigma_0\) stays in this finite-dimensional space, by closure under limits on a compact late subinterval. Hence a constant-coefficient differential equation holds for \(h_\gamma\) on one open delay interval and, by real analyticity, on all positive delays. Thus \(h_\gamma\) is an exponential polynomial. Its rational Laplace transform makes \(1/\widehat L\), and hence \(\widehat L\), rational. The latter is strictly proper because \(L(0)=1\). Partial fractions and Laplace uniqueness then make \(L\) an exponential polynomial as well.
+
+Suppose \(L=\sum_\lambda a_\lambda(v)e^{\lambda v}\) with nonzero polynomials \(a_\lambda\) and distinct complex exponents. The ODE becomes
+\[
+ e^v(D^2+D-\gamma)L-e^{-v}(D^2-D-\gamma)L=0 .
+\]
+Group exponents by differences in \(2\mathbb Z\), the only possible cross-term cancellations after the shifts. In a nonempty class, the top exponent satisfies \(\lambda_{\max}^2+\lambda_{\max}-\gamma=0\) by its unmatched top term and the leading coefficient of its polynomial. Similarly the bottom satisfies \(\lambda_{\min}^2-\lambda_{\min}-\gamma=0\). Their difference must be an even nonnegative integer. The respective roots are \(\{\nu,-\nu-1\}\) and \(\{-\nu,\nu+1\}\), giving differences \(2\nu,-1,-1,-2\nu-2\). Therefore \(\nu=n\) or \(-n-1\) for an integer \(n\ge0\); the repeated-root and complex-root cases require no exceptions. This proves the analytic rank classification.
+
+\subsection{Attainment by matter}
+In \eqref{eq:L} take FLRW proper time \(T_{\rm p}>0\), \(a=T_{\rm p}^{\,q_0}\) with \(1/2<q_0<1\), and unit winding slopes \(\lambda=\lambda_z=1\). Write \(M_{\rm Pl}^2=1/\kappa\). For a constant \(\sigma>0\) set
+\begin{align*}
+ q&=k\log T_{\rm p},& k^2&=2M_{\rm Pl}^2q_0-\sigma,\\
+ Z(q(T_{\rm p}))&=\sigma\,a^2/T_{\rm p}^2,&
+ \mathcal V(q(T_{\rm p}))&=[M_{\rm Pl}^2(3q_0^2-q_0)-\sigma]/T_{\rm p}^2 .
+\end{align*}
+A constant reference unit in the logarithm or scale factor is absorbed in these definitions. Choose \(0<\sigma<M_{\rm Pl}^2 q_0(3q_0-1)\) and \(k>0\). This bound gives positive potential and a positive kinetic target metric and is stricter than \(k^2>0\). The energy density is \(3M_{\rm Pl}^2q_0^2/T_{\rm p}^2\) and \(\rho+p=2M_{\rm Pl}^2q_0/T_{\rm p}^2\), exactly solving the Friedmann and acceleration equations. The weighted rods \(\nabla_\mu(Z\nabla^\mu\psi^i)=0\) are harmonic by spatial homogeneity. Their conservation and nonzero clock derivative give the clock equation, or one substitutes into
+\(\ddot q+3(q_0/T_{\rm p})\dot q+3Z_{,q}/(2a^2)+\mathcal V_{,q}=0\), with proper-time derivatives here. Scalar curvature is \(6q_0(2q_0-1)/T_{\rm p}^2>0\).
+
+The calibrated conformal time is \(t=T_{\rm p}^{\,1-q_0}/(1-q_0)>0\). In \eqref{eq:wave}, \(M=2\kappa Z-a''/a=-\gamma/t^2\) with
+\[
+ \gamma=p_0(p_0-1)-2\kappa\sigma/(1-q_0)^2,\qquad p_0=q_0/(1-q_0).
+\]
+Every real \(\gamma\) is realized by taking \(q_0\) sufficiently close to one and choosing
+\(\kappa\sigma=[q_0(2q_0-1)-\gamma(1-q_0)^2]/2\), which tends to \(1/2\) while the upper bound tends to \(2\). The matter potentials may differ across models. Positive \(\gamma\) gives a negative lower-order canonical wave coefficient, not a kinetic ghost; no positive conserved energy of the evolving shear is asserted. This is a separate isotropic realization from the nonzero-Weyl Darboux examples, and no condition at the singular origin is used.
+
+For a measurement interval in any finite positive-time slab, Theorem~\ref{thm:recover} recovers the load on its two-way shortened time square. The travel delays are in calibrated conformal time, not logarithmic time. The rank classification consequently applies to every separated pair inside that square. Earlier work on inverse-square couplings and integer Darboux potentials treats Huygens propagation in other space dimensions \cite{BL}. The claimed result here is the separated retarded load rank in the isolated plane channel, not Huygens propagation in the full spacetime.

@@ -1,0 +1,92 @@
+\section{Exact backreacting matter and hidden-field reconstruction}\label{sec:examples}
+
+\subsection{A material FLRW branch with an active four-form}
+For the canonical massless quartet, the exact expanding flat FLRW solution satisfies
+\begin{equation}\label{eq:FLRW}
+ \begin{gathered}
+ \dd s^2=-\dd t^2+a(t)^2\dd\mathbf x^2,\qquad
+ \dot T=P a^{-3},\qquad X^i=\ell x^i,\qquad P,\ell>0,\\
+ \rho=P^2/(2a^6)+3\ell^2/(2a^2),\qquad
+ \dot a/a=\sqrt{\kappa\rho/3},\qquad a(0)=1.
+ \end{gathered}
+\end{equation}
+The four waves and stress conservation imply the remaining Einstein equation. The matter density is nonzero and \(X=(T,X^i)\) is a regular material chart. For example in the uncoupled quartet varying \(P\) at \(a(0)=1,T(0)=0\) changes the marked inverse time component \(-P^2\) at the same labelled event. This gives an observable metric change in exact solutions, rather than a passive recalibration of the clock. For the fixed actions below we use a chosen solution \eqref{eq:FLRW}.
+
+Add \(m\ge1\) extra scalars \(Y^A\), with metric, potential and oriented four-form
+\begin{align}
+ G&=(1+2bY^1)(\dd T)^2+\sum_{i=1}^3(\dd X^i)^2
+                         +\sum_A(\dd Y^A)^2,\quad b\ne0,\qquad
+ U=\tfrac12 Y^{\mathsf T}M Y, \label{eq:target}\\
+ A_0&=\gamma Y^1\,\dd T\wedge\dd X^1\wedge\dd X^2\wedge\dd X^3,\qquad
+ \gamma=-bP/\ell^3 . \label{eq:WZ}
+\end{align}
+Here \(M\) is constant real symmetric, which may be taken positive, and \(G>0\) on a small target tube. The coordinate labels themselves are dynamical scalars. The oriented form has the local sign-fixed Gram description \eqref{eq:gram}. In material coordinates on \eqref{eq:FLRW},
+\[
+ \bar g=-(a^6/P^2)(\dd T)^2+(a^2/\ell^2)\sum_i(\dd X^i)^2,\qquad
+ \sqrt{-\bar g}\,\bar g^{00}=-P/\ell^3 .
+\]
+Writing \(j_X=\det(\partial X)/\sqrt{-g}\) in a positively oriented coordinate chart, the first normal equation is
+\[
+ E_1=\Box_gY^1-(MY)_1-b\,g^{-1}(\dd T,\dd T)+\gamma j_X=0 .
+\]
+The last two terms cancel on the chosen \(Y=0\) FLRW branch by \eqref{eq:WZ}. All other normal equations hold there. The tangential scalar variations of the added terms vanish there since \(Y=\dd Y=0\). The stress is exactly the canonical quartet's. Thus \eqref{eq:FLRW} with \(Y=0\) is an exact coupled solution for \eqref{eq:target}--\eqref{eq:WZ}, not a fixed-background solution with omitted normal equations. Here \(dA_0\ne0\), and the full gradient rank is four. The characteristic cone is the Einstein one, by Theorem~\ref{thm:cone} or directly by the positive sigma principal form.
+
+\subsection{Arbitrarily many scalars: a necessary and sufficient criterion}
+On this solution use fixed labels and write the metric and normal perturbations as \(h,\pi\). Let \(e=\delta{\cal E}_{00}\) be the indicated trace-reversed Einstein residual of \eqref{eq:direct}, and let \(r=\delta E\) be the vector of normal residuals. At \(Y=0\) the fixed-label operator is exactly
+\begin{align}
+ e&=\kappa^{-1}\delta R_{00}[h]-2b\pi_1,\qquad
+ r=(\bar\Box\Id-M)\pi+e_1 F[h], \label{eq:resclass}\\
+ F[h]&=b\bar g^{0\mu}\bar g^{0\nu}h_{\mu\nu}
+                   -\tfrac12\gamma\bar j\,\tr_{\bar g}h,\qquad
+ \bar j=1/\sqrt{-\bar g}. \nonumber
+\end{align}
+The first unit column \(e_1\) refers to the normal target; \(e\) denotes the residual. There is no metric variation of \(\Box_gY\) on the constant \(Y\) background. The \(F\) term comes from \(\delta g^{00}=-\bar g^{0\mu}\bar g^{0\nu}h_{\mu\nu}\) and \(\delta j_X=-\bar j\tr_{\bar g}h/2\); the potential has no first-order metric stress variation. Only \(\pi_1\) is directly read by the metric.
+
+\begin{theorem}[Cyclic completeness and its obstruction]\label{thm:cyclic}
+For \eqref{eq:target}--\eqref{eq:resclass}, the ten area histories represent all compact coupled linear source classes if and only if \(e_1\) is cyclic for \(M\), i.e. \(\operatorname{span}\{M^je_1:j\ge0\}=\RR^m\). This occurs for choices of positive \(M\) at every finite \(m\). More generally the cyclic normal subspace is reconstructible, and its orthogonal complement supports invisible Jacobi waves.
+\end{theorem}
+\begin{proof}
+Put \(c_j=e_1^{\mathsf T}M^j\pi\). Once \(c_0=\pi_1\) is read from \(e,h\), \eqref{eq:resclass} gives
+\[
+ c_{j+1}=\bar\Box c_j-e_1^{\mathsf T}M^j r
+                             +(e_1^{\mathsf T}M^je_1)F[h].
+\]
+Here \(M\) is constant so commutes with the common wave operator. Invert the finite row matrix on the cyclic subspace using its first \(\dim\) independent rows. This is exactly a support-local differential formula of the type \eqref{eq:identity}, with no inverse wave operator and order at most twice the cyclic dimension in \(h\). A positive symmetric tridiagonal matrix with every adjacent off-diagonal nonzero and a sufficiently large diagonal realizes full cyclicity: \(M^je_1\) has no components later than \(j+1\), where its entry is the product of the \(j\) adjacent off-diagonals.
+
+Conversely, the symmetry of \(M\) makes the orthogonal complement invariant. Let \(w\ne0\) be an eigenvector there, \(Mw=\lambda_w w\), and choose a nonzero smooth local solution \(f\) of \((\bar\Box-\lambda_w)f=0\). The perturbation \(h=\delta X=0,\ \pi=wf\) satisfies the full coupled Jacobi equations. Indeed \(w_1=0\), so the metric and tangential variations are unforced, including the variation of \eqref{eq:WZ}, which is through the first normal and its gradient. The normal residual vanishes by \eqref{eq:resclass}. Since \(dY=0\) on the background this mode is not diffeomorphism gauge. A compact normal test along \(w\) is Ward closed and can pair nontrivially, whereas every marked area history vanishes on this mode. It therefore cannot be represented by an area profile even modulo the Jacobi equations. In the causal construction, take \(f\) to be the Klein--Gordon causal propagator applied to a compact scalar test with nonzero image. The invisible eigendirection is a decoupled scalar wave sector, so a second compact Ward test detects that image by a nonzero physical Peierls pairing. The obstruction is not removed by quotienting the presymplectic radical.
+\end{proof}
+
+For clarity the single-output assumption has a constant-matrix extension within the same exact FLRW construction. Replace the tangential target block by \(\delta_{\mu\nu}+2\sum_A Y^A B_{A\mu\nu}\) with constant symmetric \(B_A\); take the coefficient of \(Y^A\dd^4X\) in \eqref{eq:WZ} to be
+\(\gamma_A(T)=\sqrt{-\bar g(T)}B_{A\mu\nu}\bar g^{\mu\nu}(T)\).
+These are fixed target functions of the dynamical clock, not external tensors; shrink the tube so \(G>0\). The same FLRW quartet then solves the normal balance, and the direct linear readout is \(C\pi=2\sum_A B_A\pi^A\). Successive local observables \(CM^j\pi\) replace \(c_j\), so the criterion is \(\operatorname{span}_j M^j\operatorname{im}C^{\mathsf T}=\RR^m\) by the same proof. A hidden eigenvector annihilating \(C\) also annihilates \(\gamma_A(T)\) in its combination for every \(T\), so it supplies the same invisible witness. This realizes the direct-injective regime for \(m\le10\) and lower-rank but dynamically complete regimes for larger \(m\). It does not generalize the criterion to arbitrary field-dependent or noncommuting operators.
+
+\subsection{The derivative four-form alone can enable completeness}
+A separate six-field construction (\(m=2\)) makes the observation mechanism depend on the direct-stress-free term itself. Use diagonal masses \(M=\operatorname{diag}(\mu_1^2,\mu_2^2)\) with \(\mu_2^2>0\), and add to \eqref{eq:WZ}
+\begin{equation}\label{eq:gyroscopic}
+ A_1=\frac{\beta}{2}(Y^1\dd Y^2-Y^2\dd Y^1)\wedge
+                      \dd X^1\wedge\dd X^2\wedge\dd X^3 .
+\end{equation}
+The background force of \(dA_1\) vanishes because it needs a normal gradient; the first-order tangential force also vanishes there. The exact background, direct metric stress response, and principal cones are identical for all \(\beta\). With fixed labels the change in the linear normal equations is
+\[
+ \begin{split}
+ r_1&=(\bar\Box-\mu_1^2)\pi_1+F[h]+\beta\bar j\,\partial_T\pi_2,\\
+ r_2&=(\bar\Box-\mu_2^2)\pi_2-\beta\bar j\,\partial_T\pi_1 ,
+ \end{split}
+\]
+as follows by varying the oriented density
+\(\tfrac\beta2(Y^1\partial_TY^2-Y^2\partial_TY^1)\).
+At \(\beta=0\) the second normal field is invisible by Theorem~\ref{thm:cyclic}. At \(\beta\ne0\), resolve from these equations and the Einstein readout the two local expressions
+\[
+ d=\frac{r_1-(\bar\Box-\mu_1^2)\pi_1-F[h]}{\beta\bar j}
+       =\partial_T\pi_2,\qquad
+ q=r_2+\beta\bar j\,\partial_T\pi_1=(\bar\Box-\mu_2^2)\pi_2 .
+\]
+The clock \(T\) is harmonic, so
+\(\bar\Box=-P^2 a^{-6}\partial_T^2+\ell^2a^{-2}\Delta_X\)
+has no time first derivative. Put \(B=a^2/\ell^2\), \(C=P^2/(a^4\ell^2)\). Then \(Bq=-C\partial_T d+\Delta_X\pi_2-\mu_2^2 B\pi_2\). Differentiating once in \(T\) eliminates the unknown spatial Laplacian because \(\partial_T\pi_2=d\):
+\begin{equation}\label{eq:derive}
+ \pi_2=\frac{-\partial_T(C\,\partial_Td)+\Delta_Xd
+                   -\mu_2^2Bd-\partial_T(Bq)}
+                 {\mu_2^2\partial_TB}.
+\end{equation}
+The denominator is nonzero on the expanding branch of \eqref{eq:FLRW}. Equation \eqref{eq:derive} is an identity modulo local residuals of the form \eqref{eq:identity}; no initial condition, boundary inversion or time integration enters it. This proves completeness for \(\beta\ne0\) with the stated mass and branch. In contrast if \(\mu_2=0\), a constant pure second normal variation is still invisible even at \(\beta\ne0\). In this example it is the combination of the derivative four-form, mass and expansion that enables the readout, rather than a generic property of metric-insensitive couplings.

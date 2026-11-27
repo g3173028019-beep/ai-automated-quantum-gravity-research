@@ -1,0 +1,61 @@
+\section{Compact source completeness from marked area histories}\label{sec:area}
+Take a regular material chart \(X\) on a solution, supplied by natural local functions of the fields, and let \(\gm=(X^{-1})^*g\) on a chosen inverse branch. Its three spatial coordinate directions are assumed spacelike with a positive margin on a shrunk measurement patch. For constant labelled tangents \(v,w\) define
+\[
+ a(v,w)=\sqrt{\gm(v,v)\gm(w,w)-\gm(v,w)^2},\qquad
+ A_I(f)=\int f(X)a_I(X)\,\dd^4X .
+\]
+Only spacelike pairs are used. This is a compactly smeared observable along a family of parallel labelled two-surfaces, with no unsmeared surface operator involved.
+
+\begin{lemma}[Ten plane types]\label{lem:area}
+The following ten area types have a smooth pointwise inverse for \(\gm\) sufficiently locally, with a fixed small nonzero tilt on the reference patch. Their differential has a zero-order left inverse on symmetric metric perturbations.
+\end{lemma}
+\begin{proof}
+In the three spatial labels let \(q=(\gm_{ij})>0\). Under the coordinate alternating-symbol map from bivectors to three components \(n\), the squared area is \(n^{\mathsf T}C n\), \(C=(\det q)q^{-1}\). The six \(n=e_i,\ e_i+e_j\) determine \(C\) by polarization, hence \(q=\sqrt{\det C}C^{-1}\). Write \(s_i=\gm_{0i}\), \(v=\gm_{00}\). For cyclic \((i,j)=(1,2),(2,3),(3,1)\) tilt the plane to \((e_i\pm\alpha e_0,e_j)\). Its squared area is
+\[
+ L_i^\pm=L_i^0\pm2\alpha(q_{jj}s_i-q_{ij}s_j)
+              +\alpha^2(q_{jj}v-s_j^2),\quad L_i^0=q_{ii}q_{jj}-q_{ij}^2.
+\]
+Keep only \(L_1^\pm,L_2^+,L_3^+\). The pair gives \(d_1=q_{22}v-s_2^2\), so \(v=(d_1+s_2^2)/q_{22}\), as well as the first signed shift equation. Divide the other two one-sided differences by \(2\alpha\). The Jacobian in the \(s\)'s is the cyclic linear matrix \((q_{jj}s_i-q_{ij}s_j)_{i=1}^3\), plus \(O(\alpha)\) on the branch. Its determinant is \(q_{11}q_{22}q_{33}-q_{12}q_{23}q_{31}>0\), by the positive two-dimensional principal minors. The implicit function theorem solves the exact shifted equations for fixed small \(\alpha\ne0\). Spacelikeness holds by the strict margin and continuity. Differentiating the exact inverse gives the claimed zero-order inverse; this is the ten-plane specialization of \cite{P47}.
+\end{proof}
+
+Let \(u=(h,\pi)\) be a coupled perturbation and \(D\xi=(\Lie_\xi g,d\phi\,\xi)\). The variation at fixed material labels is
+\begin{equation}\label{eq:projection}
+ \widehat u=u-DZ,\qquad Z=(dX)^{-1}X'[u].
+\end{equation}
+Naturality gives \(X'[D\xi]=dX\,\xi\), so \eqref{eq:projection} is a gauge-invariant projection, expressed on the reference chart. A compact coupled source \(t=(t_g,t_\phi)\) is invariant precisely in the linear Ward sense \(D^*t=0\). All adjoints below include the appropriate density relative to the fixed-label pairing.
+
+\begin{theorem}[Off-shell and on-shell source conversion]\label{thm:source}
+On a regular chart as above:
+\begin{enumerate}
+\item If all material fields can be read as \(\phi=F(X)\) on nearby fields for a fixed function \(F\), every compact Ward source has exactly the same \emph{off-shell} pairing as compact profiles of the ten area types.
+\item Let \(J\) be the coupled Jacobi operator. More generally, if the extra fixed-label variations obey
+\begin{equation}\label{eq:identity}
+ \widehat\pi=\mathcal K\widehat h+\mathcal L J u
+\end{equation}
+as a local differential identity, then the same ten types give every compact coupled source class \emph{modulo the linearized equations}. The profiles do not enlarge support.
+\end{enumerate}
+These statements pass to the local physical linear algebra under the standard causal, hyperbolic-gauge and quotient hypotheses on a causally convex patch or a stipulated ambient problem.
+\end{theorem}
+\begin{proof}
+One has \(\langle t,u\rangle=\langle t,\widehat u\rangle\) by \(D^*t=0\); a compact cutoff on \(Z\) near \(\operatorname{supp}t\) suffices to justify the pairing. In (1) differentiate the off-shell material identity at fixed labels to get \(\widehat\pi=0\). In (2) instead obtain
+\[
+ \langle t,u\rangle
+ =\langle t_g+\mathcal K^*t_\phi,\widehat h\rangle
+     +\langle\mathcal L^*t_\phi,Ju\rangle ,
+\]
+where the already-fixed label fields have no variations in this expression. Formal adjoints of local operators preserve compact support. If \(M_{\rm area}\) is the map from \(\widehat h\) to the ten direct area variations and \(L_{\rm area}M_{\rm area}=1\) is the differential inverse from Lemma~\ref{lem:area}, use
+\(f=L_{\rm area}^*(t_g+\mathcal K^*t_\phi)\) on the label patch, with the Jacobian density from the change of coordinates. This gives the stated pairings. Conversely any compact area profile is Ward closed by \eqref{eq:projection}, and the second term pairs trivially in the equation quotient. Equivalence of the gauge-fixed wave formulation is used to define the causal algebra, not inferred from this material projection.
+\end{proof}
+
+For \(X=\phi\) a regular quartet, with background volume density understood, the Ward identity is
+\(-2\nabla_\mu t_g{}^\mu{}_\nu+t_I\partial_\nu\phi^I=0\).
+Its scalar component is determined by the arbitrary compact \(t_g\) since \(d\phi\) is invertible. This is the kinematic meaning of (1); it does not delete the scalar contribution to the field equations.
+
+There is a useful direct criterion for (2). In Gaussian-normal target coordinates around an embedded material background \(Y=0\), use its tangential coordinates as the actual four labels. Let \(K_{A\mu\nu}\) be the target second fundamental tensor, with \(\partial_A G_{\mu\nu}=-2K_{A\mu\nu}\) on the surface. At fixed labels the trace-reversed Einstein residual linearizes to
+\begin{equation}\label{eq:direct}
+ \delta{\cal E}_{\mu\nu}
+   =\kappa^{-1}\delta R_{\mu\nu}[\widehat h]
+     -U(X,0)\widehat h_{\mu\nu}-C_{A\mu\nu}\pi^A,\qquad
+ C_{A\mu\nu}=-2K_{A\mu\nu}+(\partial_AU)g_{\mu\nu}.
+\end{equation}
+Here \(G_{\mu A}(X,0)=0\) and the background normal gradients vanish. The four-form has no direct stress term. An injective \(C\) on the patch supplies (2) by a smooth algebraic left inverse, without inverting a wave operator. At most ten normal fields can be recovered this way directly; there is no such bound for the dynamical reconstruction below.

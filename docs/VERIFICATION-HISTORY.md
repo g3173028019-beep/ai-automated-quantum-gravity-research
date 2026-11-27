@@ -92,3 +92,10 @@ Each article has an independent mathematical cross-review, a clean deterministic
 - [Paper 49B verification](../papers/49b-cs-normal-forms/VERIFICATION.md)
 - [Paper 48+49 verification](../papers/48-49-wrt-torsion-bridge/VERIFICATION.md)
 - [Paper 50B verification](../papers/50b-wrt-topological-blindness/VERIFICATION.md)
+
+## Relational-area follow-ups: analytical release
+
+Two independent technical reviews checked the mathematical claims, and both manuscripts passed reproducible builds and final PDF inspection. The gravitational-memory paper additionally includes an exact symbolic replay.
+
+- [Paper 46+47 verification](../papers/46-47-common-cones-and-area-probes/VERIFICATION.md)
+- [Paper 44+47 verification](../papers/44-47-gravitational-radiation-memory/VERIFICATION.md)

@@ -1,0 +1,87 @@
+\section{Finite versus infinite causal memory on attained backgrounds}
+\label{sec:rank}
+For separated open subwindows \(J_-<J_+\), the rank of a load means the rank of its bilinear form on compact early drives and compact late tests. A system with \(m\) real linear internal coordinates and smooth time-varying local evolution has rank at most \(m\): the response to any early drive factors through the internal state at an intermediate time \cite{TVrank}. This argument includes locally available derivatives of the wall drive in the state equation. Differential contact terms contribute nothing between separated windows. A nonzero finite minor of the load certifies a lower bound on the necessary number of coordinates, and Theorem~\ref{thm:recover} makes this a test of the retained-side area data when both windows lie in \(J\).
+
+\subsection{A constant positive calibrated mass}
+For \(M(t)=m^2>0\), the actual outgoing half-line has \(S_{m^2}\) with Laplace multiplier \(\sqrt{p^2+m^2}\), and
+\[
+ S_{m^2}(t,s)=\partial_t\delta(t-s)
+       +{\boldsymbol1}_{s<t}\,b_m(t-s),
+       \qquad b_m(v)=mJ_1(mv)/v .
+\]
+The Laplace identity follows by differentiating the transform of \(mJ_1(mv)/v\) in \(p\), using \(\mathcal L[J_0(mv)]=(p^2+m^2)^{-1/2}\), and fixing the constant at \(+\infty\). Its analytic continuation as an entire function of \(v\) has
+\begin{equation}
+            b_m(v)=\frac1\pi\int_{-m}^m e^{i\omega v}
+                              \sqrt{m^2-\omega^2}\,\dd\omega .
+ \label{eq:besselFourier}
+\end{equation}
+At any distinct early times \(s_j\), a dependence among \(b_m(t-s_j)\) on the late interval continues by analyticity and would give \(\sum_j c_j e^{-i\omega s_j}=0\) for all \(\omega\) in an interval, by Fourier uniqueness and the positive weight. This exponential polynomial can vanish there only when all \(c_j=0\). Given finitely many independent translates, there are evaluation points in the late interval with a nonsingular matrix; otherwise all evaluation vectors lie in a common proper subspace. Compact smooth approximations to all the point gates preserve that minor. Therefore the outgoing rank is infinite on every separated time pair. Equation \eqref{eq:besselFourier} concerns the analytic tail, and is not the force spectral density.
+
+\subsection{Exact nonstationary examples: the rank-one boundary}
+Let \(B>0,\ 0\le\alpha\le B/4\), and let \(M_0\) be either \(0\) or \(B^2\). In \eqref{eq:metric} use \(Z=1,\ \lambda_z=\lambda,\ c=b=a\) and set
+\[
+ \kappa\lambda^2=\Lambda=\frac{B^2+M_0}{2},\quad
+ w=\alpha\tanh(\alpha t),\quad
+ a=e^{Bt}(B-w)/B,\quad \mathcal H=a'/a .
+\]
+The Darboux operator \(\mathcal A=\partial_t-w\) has \(w'+w^2=\alpha^2\), sends \(e^{Bt}\) to \(Ba\), and yields \(a''/a=B^2-2w'\). Define the homogeneous clock and its potential by the actual Einstein equations
+\begin{equation}
+ \kappa q'^2=2(\mathcal H^2-\mathcal H')-\Lambda,\qquad
+ \kappa a^2\mathcal V(q)=\mathcal H'+2\mathcal H^2-\Lambda .
+ \label{eq:FLRWsource}
+\end{equation}
+Indeed the Friedmann equation is \(3\mathcal H^2=\kappa(q'^2/2+3\lambda^2/2+a^2\mathcal V)\), and the spatial Ricci equation is the second equation in \eqref{eq:FLRWsource}. The rods are harmonic. With \(q'>0\), stress conservation gives the clock equation. The estimates
+\[
+ |\mathcal H-B|\le B/12,\qquad |\mathcal H'|\le 7B^2/144
+\]
+follow from \(\mathcal H=B-w'/(B-w)\), \(|w|\le\alpha\), \(0\le w'\le\alpha^2\), and \(|w''|\le2\alpha^3\). Since \(\Lambda\le B^2\), both \(q'^2\) and \(a^2\mathcal V\) have strictly positive lower bounds. The clock is globally increasing onto \(\RR\) and defines a smooth positive single-valued potential; the scalar curvature \(6(B^2-2w')/a^2\) is nonzero. These statements require no geodesic completeness or common potential for different parameters. At \(\alpha=0,\ M_0=B^2\) this is the coasting solution \(a=BT\) in proper time, with \(q=\kappa^{-1/2}\log T\) and \(\mathcal V=1/(\kappa T^2)\) after fixing a clock offset. For \(\alpha>0\) the expansion is noncoasting, and the calibrated shear potential from \eqref{eq:wave} is
+\begin{equation}
+                          M(t)=M_0+2w'(t).
+ \label{eq:Dmass}
+\end{equation}
+
+On zero-past distributions the differential \(\mathcal A\) has the two-sided causal inverse
+\[
+ (\mathcal A^{-1}f)(t)=\cosh(\alpha t)
+                 \int_{-\infty}^t \sech(\alpha s)f(s)\,\dd s.
+\]
+The homogeneous integration constant is ruled out by the zero past. The Darboux identity \(P_{M_0+2w'}\mathcal A=\mathcal A P_{M_0}\) follows from \(-w''-2ww'=0\), and commutation with spatial differentiation gives the exact outgoing load \(CS_M=C\mathcal A S_{M_0}\mathcal A^{-1}\). Applying this causal map does not identify quantum states or act as a pointwise change of units. This use of the classical Darboux factorization \cite{PT} evaluates the physical force law, while Section~\ref{sec:recover} does not require such a special potential.
+
+For \(M_0=B^2\), the map \(f\mapsto S_{M_0}f|_{J_+}\) has infinite-dimensional image for early compact drives. The new early drives \(\mathcal A f\) are again compact there and produce \(\mathcal A S_{M_0}f\) on \(J_+\). The kernel of \(\mathcal A\) on a connected late interval has dimension one, so the new image is infinite dimensional. The actual kernel is nonstationary for \(\alpha>0\) already by its tail diagonal \eqref{eq:diagTail}.
+
+For \(M_0=0,\ \alpha>0\), use \(S_{M_0}=\partial_t\) and \([\mathcal A,\partial_t]=w'\). One obtains instead
+\begin{equation}
+ CS_M(t,s)=C\partial_t\delta(t-s)
+ +C\alpha^2\,{\boldsymbol1}_{s<t}\sech(\alpha t)\sech(\alpha s).
+ \label{eq:rankOne}
+\end{equation}
+It has rank exactly one on every separated pair; a state with
+\(X'=\sech(\alpha t)\,g(t)\) and memory output \(C\alpha^2\sech(\alpha t)X(t)\) realizes its full smooth tail. Its positive, genuinely time-dependent wave potential and unbounded radiative half-line are compatible with finite linear causal memory in this channel. A finite tail plus derivative contact does not exhibit a finite closed lossless model of the entire exterior.
+
+\subsection{Anisotropic examples with nonzero Weyl curvature}
+The two Darboux potentials are also attained without conformal flatness on any prescribed finite time slab. Use \(Z=1\) in \eqref{eq:metric}, \(H=b'/b,\ \rho=c/b,\ \ell=\rho'/\rho\), and prescribe the target \(M(t)\) in \eqref{eq:Dmass}. Integrate
+\begin{align}
+  H'&=2\kappa\lambda^2\rho^2-M-H^2,& b'&=Hb,\notag\\
+  \rho'&=\rho\ell,&
+  \ell'&=-2H\ell-\kappa(\lambda^2\rho^2-\lambda_z^2),
+  \label{eq:bianchi}
+\end{align}
+and set
+\begin{align}
+ \kappa c^2\mathcal V(q)&=H'+2H^2-\kappa\lambda^2\rho^2,\notag\\
+ \kappa q'^2&=2(H^2-H')+4H\ell-\kappa\lambda_z^2.
+ \label{eq:bianchimatter}
+\end{align}
+The exact spatial Riccis in the orthonormal frame are \(c^2R_{\hat x\hat x}=H'+2H^2\) and \(c^2R_{\hat z\hat z}=(H+\ell)'+2H(H+\ell)\). Their difference is the anisotropy equation in \eqref{eq:bianchi}. The Hamiltonian constraint is \(c^2G_{\hat0\hat0}=3H^2+2H\ell\); substituting the spatial Einstein equation gives the second line of \eqref{eq:bianchimatter}. The first line gives the matter potential, the harmonic rods remain exact, and Bianchi supplies the homogeneous clock equation. Equation \eqref{eq:bianchi} for \(H'\) fixes precisely the desired shear mass. These equations therefore prescribe a self-consistent gravity--matter solution, not an externally imposed anisotropic stress.
+
+Choose \(\lambda_z=\lambda\), and at one interior time match \(b,H\) to the FLRW solution with \(\rho=1\), but take a nonzero sufficiently small \(\ell\). The FLRW reference has strict lower bounds for clock and potential on a slightly larger compact interval. ODE continuous dependence preserves the bounds and the positive scales for the perturbed exact solution on the slab. The resulting potential can be positively extended beyond the realized clock range; no common matter potential across the family or global anisotropic stability is asserted. In the curvature convention of \eqref{eq:FLRWsource},
+\[
+ C_{\hat0\hat x\hat0\hat x}-C_{\hat0\hat z\hat0\hat z}
+        =\ell'/(2c^2).
+\]
+Indeed the Riemann difference times \(c^2\) is \(\ell'+H\ell\), and the Ricci subtraction is \(-(\ell'+2H\ell)/2\). At the chosen time \(\ell'=-2H\ell\ne0\). This is an intrinsically nonconformally-flat example, with the same isolated shear action, force calibration and compact area experiment from Section~\ref{sec:material}. The existence on finite slabs is sufficient for the causal test; past continuation of this perturbed background is not used.
+
+\subsection{Generic infinite rank in the time-only class}
+The exceptional finite-rank examples do not persist on any open set of smooth temporal potentials. Fix a separated pair and a positive constant reference. For each integer \(N\), pick compact gates with a nonzero \(N\)-minor at the reference. The same minor for \(M_z=(1-z)M+zM_{\rm ref}\) is an entire function of \(z\): the Goursat and Volterra series on the fixed slab, and the first kernel derivatives in \eqref{eq:diagTail}, converge locally uniformly in this parameter. In particular \((k_t+k_s)=\partial_u k\) in the characteristic coordinates of the Goursat problem, so uniform control of \(M\) suffices for continuity of a fixed minor. The entire function is nonzero at \(z=1\), and hence its real zeros are isolated. The nonvanishing condition is open and dense. Intersecting these conditions for each \(N\) and for a countable rational basis of separated interval pairs gives a residual set of real smooth \(M\) with infinite rank on every such pair. This genericity is a statement in the calibrated temporal operator class, not across all Einstein solutions in a single fixed matter theory. A finite witness is stable against small changes of that finite load minor, which is different from a uniform noisy raw-data inverse.
+
+A neighborhood of such temporal potentials is also physically attained if the clock potential is allowed to vary. In the isotropic model fix \(Z=1,\ 2\kappa\lambda^2=B^2\) and solve \(\mathcal H'=B^2-M-\mathcal H^2\), starting at \(\mathcal H=B\) at an interior time, with \(a'/a=\mathcal H\). At \(M=0\) the positive clock and potential margins in \eqref{eq:FLRWsource} are strict. For any sufficiently small smooth temporal \(M\) on a fixed slightly enlarged slab, ODE continuity preserves these margins. Equation \eqref{eq:FLRWsource} then gives an exact background and a positive potential on the realized clock range. The genericity statement restricts to this open attainable set of potentials; the action is not held fixed across it.

@@ -1,0 +1,35 @@
+\section{Attaining an open invariant set in the coupled equations}\label{sec:attain}
+The classification concerns a tested open family, not merely an algebraic extension away from one solution. Here is a local constrained construction that attains the stated rank. It also gives a solution on which the extra term in Theorem~\ref{thm:cone} has a genuine bulk force.
+
+Take \(G_{IJ}=\delta_{IJ}\), zero potential and cosmological constant. For \(N\ge5\) permit the oriented term
+\begin{equation}\label{eq:attainA}
+ A=\gamma\phi^5\dd\phi^1\wedge\dd\phi^2\wedge\dd\phi^3\wedge\dd\phi^4,
+ \qquad \gamma\ne0 ;
+\end{equation}
+for \(N\le4\) the canonical model suffices. Thus the direct stress is exactly canonical. On a bounded spatial ball choose \(\chi=1\) near its centre and smooth with compact support in the ball, and prescribe
+\[
+ \phi^I=\phi_0^I+\epsilon\chi A_i^I x^i,\qquad
+ \widetilde\Pi^I=\epsilon\chi u^I .
+\]
+Use conformally flat maximal data
+\(\gamma_{ij}=\psi^4\delta_{ij}\),
+\(K^{ij}=\psi^{-10}(\mathbb LW)^{ij}\),
+\(\Pi^I=\psi^{-6}\widetilde\Pi^I\), where \(\mathbb L\) is the flat conformal Killing operator. With the convention for \(K\) in which the scalar flux enters with the displayed sign, the constraints are
+\begin{align*}
+ \partial_j(\mathbb LW)^{ij}
+   &=\kappa\sum_I\widetilde\Pi^I\partial^i\phi^I,\\
+ -8\Delta\psi
+   &=\psi^{-7}\Bigl(|\mathbb LW|^2+\kappa\sum_I(\widetilde\Pi^I)^2\Bigr)
+       +\kappa\psi\sum_I|\partial\phi^I|^2 .
+\end{align*}
+These are the standard conformal constraint weights \cite{CBIP}; the four-form contributes no constraint source. Impose \(W=0,\psi=1\) on the outer sphere as an auxiliary elliptic step. The vector Dirichlet operator has coercive energy on the ball, hence \(W=O(\epsilon^2)\). The scalar Dirichlet linearization at zero datum is \(-8\Delta\), and the implicit function theorem gives \(\psi=1+O(\epsilon^2)>0\), also in derivatives with respect to the finite parameters in a fixed bounded neighborhood. Interior evolution in harmonic gauge is the usual coupled quasilinear wave system with a smooth lower-order extra force. Its stress identity is consistent with the harmonic constraints since the extra force annihilates the target gradients. The auxiliary outer Dirichlet data do not prescribe timelike evolution boundary conditions; only a smaller interior domain is used.
+
+At the centre put \(D=(u,A_i)\). In initial normal/spatial directions the realized metric Gram values are
+\[
+ \epsilon^{-2}Q=-\frac12D\,
+       \operatorname{diag}(-\psi^{-12},\psi^{-4},\psi^{-4},\psi^{-4})D^{\mathsf T}.
+\]
+For \(N\ge4\), choose \(D\) near a frame with an invertible four-row block and sign fixed, for instance \(D=(I_4,0)^{\mathsf T}\). The stratum coordinates are the ten components of \(Q_{BB}\) and the \(4(N-4)\) components of \(Q_{\perp B}Q_{BB}^{-1}\). At \(\epsilon=0\) in the rescaled map, variations of the chosen invertible block span the symmetric entries, and independent variations of the other rows span its ratio coordinates. For \(N\le3\), the analogous full-row-rank frame has onto Gram differential by the argument of Section~\ref{sec:cone}. These submersions persist for fixed sufficiently small nonzero \(\epsilon\) by the parameter derivative estimate. The target values \(\phi_0^I\) can vary independently. This gives actual open attained data, on the physical rank manifold rather than in an ambient symmetric-matrix space.
+
+In the five-field example take \(\phi^5=\Pi^5=0\) initially near the centre, with four independent remaining gradients and positive determinant choice. Normal second acceleration there is \(\gamma\det V_B/\sqrt{-g}\ne0\), since
+\(\Box_g\phi^5+\gamma\det V_B/\sqrt{-g}=0\) in this orientation and its initial gradient vanishes. The nonclosed four-form therefore changes the solution even though its direct stress and principal symbol vanish. In a sign-fixed interior region the same result has the parity-even local description \eqref{eq:gram}. This is an attainment benchmark for explicit actions, not a claim that every allowed action attains all invariant data.

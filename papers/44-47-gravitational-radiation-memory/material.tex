@@ -1,0 +1,44 @@
+\section{A material area probe of the physical plane shear}
+\label{sec:material}
+
+Use Einstein gravity, with \(\kappa=8\pi G>0\), and a positive sigma model with potential,
+\begin{equation}
+ \mathcal L=\frac{R}{2\kappa}
+ -\frac12(\nabla q)^2-\frac12 Z(q)\sum_{i=1}^3(\nabla\psi^i)^2
+ -\mathcal V(q),\qquad Z>0 .
+ \label{eq:L}
+\end{equation}
+The transverse directions \(x,y\) are periodic with coordinate lengths \(L_x,L_y\), while \(z\in\RR\). Take the metric and material fields to be
+\begin{equation}
+ g=c(t)^2(-\dd t^2+\dd z^2)+b(t)^2(\dd x^2+\dd y^2),\qquad
+ q=q(t),\quad
+ (\psi^1,\psi^2,\psi^3)=(\lambda x,\lambda y,\lambda_z z),
+ \label{eq:metric}
+\end{equation}
+with \(q'(t)\ne0\). Thus each circle-valued material rod winds into a circle of the matching target period; no multivalued real scalar is used. By material labels we mean the fixed functions \(q_{\mathrm{bg}}^{-1}(q),\,\psi^1/\lambda,\,\psi^2/\lambda,\,\psi^3/\lambda_z\), with \(q_{\mathrm{bg}}^{-1}\) held fixed when varying the fields. We work in these labels. In the isotropic case \(c=b=a\), the parameter \(t\) is the calibrated conformal time, not FLRW proper time.
+
+Torus averaging selects zero transverse momentum. Reflections of \(x\) and \(y\), each combined with reflection of its own material target angle, leave the background and action invariant. In this averaged sector the unique metric component odd under both is \(h_{xy}=h_{yx}=b^2\gamma_{xy}(t,z)\); all scalar fields and all other metric components transform with other characters. This makes the odd--odd linear equation closed, with no gauge or scalar modes discarded by hand. The potential has no mixed component in the trace-reversed equation \(R^\mu{}_\nu=\kappa(\partial^\mu q\,\partial_\nu q+Z\sum_i\partial^\mu\psi^i\,\partial_\nu\psi^i+\mathcal V\delta^\mu{}_\nu)\). The rods give the term \(-\kappa Z\lambda^2\gamma_{xy}/b^2\) there.
+
+To see the geometric side explicitly, let \(Q=b^2(I+\gamma_{xy}\sigma_x)\) be the transverse metric block, where \(\sigma_x\) interchanges its two coordinates, and put \(B_\mu=Q^{-1}\partial_\mu Q\) for the two base directions. For a transverse block independent of \(x,y\) one has
+\[
+ R^a{}_b=-\tfrac12\nabla^\mu_{\rm base}(B_\mu)^a{}_b
+         -\tfrac14\operatorname{tr}(B_\mu)(B^\mu)^a{}_b .
+\]
+Then \(B_t=2H I+\gamma_{xy}'\sigma_x\), \(B_z=(\partial_z\gamma_{xy})\sigma_x\), \(H=b'/b\), to first order. Since the two-dimensional base is conformally flat, this gives
+\(\delta R^x{}_y=(\gamma_{xy}''+2H\gamma_{xy}'-\partial_z^2\gamma_{xy})/(2c^2)\).
+Thus \(u=b\gamma_{xy}\) satisfies the actual calibrated wave equation and quadratic action
+\begin{align}
+ C(\partial_t^2-\partial_z^2+M(t))u&=j,
+ & M(t)&=2\kappa Z(q)\lambda^2c^2/b^2-b''/b,\label{eq:wave}\\
+ I^{(2)}[u]&=\frac C2\int (u_t^2-u_z^2-M(t)u^2)\,\dd t\,\dd z,
+ & C&=L_xL_y/(2\kappa).\label{eq:act}
+\end{align}
+The kinetic measure before rescaling is \(b^2\,\dd t\,\dd z\); the Einstein tensor kinetic term counts the two entries \(xy,yx\) of the one symmetric mode. This fixes the absolute normalization \(C\) in the normal force. Changing the action by the time boundary term used in rescaling does not change the spatial wall force. No approximation by a fixed-background test scalar has entered the reduction.
+
+The source \(j\) and the readings are relational area observables. At fixed labels let \(Q_{\rm sp}\) be the three-dimensional spatial metric and \(D=(\det Q_{\rm sp})Q_{\rm sp}^{-1}\) its cofactor. The areas \(a_\pm=\sqrt{v_\pm^{\mathsf T}D v_\pm}\) with coordinate normals \(v_\pm=e_x\pm e_y\) refer to spacelike marked planes. At the background \(a_\pm=\sqrt2\,bc\), and \(\delta D_{xy}=-c^2\delta(Q_{\rm sp})_{xy}\). Hence
+\begin{equation}
+ \delta(a_+-a_-)=-\sqrt2(c/b)\,\delta(Q_{\rm sp})_{xy}
+     =-\sqrt2\,c\,u
+ \label{eq:area}
+\end{equation}
+after normalized torus averaging. Off shell at first variation, the marker correction to the unmarked \(xy\) metric perturbation is \(b^2(\partial_x Z^y_{\rm mark}+\partial_y Z^x_{\rm mark})\), up to the sign convention for the displacement field. It integrates to zero on the torus, before any field equation. Thus multiplying the averaged area difference by the known fixed \(-1/(\sqrt2 c)\) defines the linear invariant probe. The variational drive with the same calibration has the same vertex. Any real product weight \(f(t)\varphi(r)\) is therefore a compact marked area source or reading for \(u\), with \(r=|z|\) on the chosen half-line. The cut is at the material label \(z=0\); the wave speed in \((t,r)\) is one. Measurements throughout concern the linearized sector with fixed calibration.

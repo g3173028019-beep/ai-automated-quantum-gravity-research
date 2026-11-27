@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**59 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 33 typeset analytical articles**
+**61 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 35 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 59 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 61 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -36,6 +36,8 @@ These routes connect the 20 original packets with the thirty-six later analytica
 | [45 · Vacuum stress and its massless pole](papers/45-vacuum-stress-massless-pole/README.md) | The large-window vacuum variance is an explicit positive functional times the massless-shell atom. Only a helicity-zero stress tensor structure survives on that shell. A separate scalar–tensor model distinguishes Ricci focusing and the bare source from the complete linear gravitational charge. | [PDF](papers/45-vacuum-stress-massless-pole/manuscript.pdf) · [TeX](papers/45-vacuum-stress-massless-pole/main.tex) · [Verification](papers/45-vacuum-stress-massless-pole/VERIFICATION.md) |
 | [46 · The common Einstein light cone](papers/46-einstein-scalar-common-cone/README.md) | For positive strongly hyperbolic scalar modes with independent gradients on an open attained family, equality of the scalar and Einstein characteristic sets forces a positive nonlinear sigma model with a potential. Two exact constrained data families distinguish this property from hyperbolicity alone. | [PDF](papers/46-einstein-scalar-common-cone/manuscript.pdf) · [TeX](papers/46-einstein-scalar-common-cone/main.tex) · [Verification](papers/46-einstein-scalar-common-cone/VERIFICATION.md) |
 | [47 · Spacelike area tomography](papers/47-spacelike-area-tomography/README.md) | Twelve spacelike area types recover the marked metric with two independent consistency checks; ten are locally sufficient and minimal among continuous pointwise scalar readings. On a regular intrinsic patch, the differential of the inverse gives area profiles for every compact conserved linearized Einstein test. | [PDF](papers/47-spacelike-area-tomography/manuscript.pdf) · [TeX](papers/47-spacelike-area-tomography/main.tex) · [Verification](papers/47-spacelike-area-tomography/VERIFICATION.md) |
+| [46+47 · Common Einstein cones and relational area probes](papers/46-47-common-cones-and-area-probes/README.md) | An attained common-cone classification identifies the stress-free four-form exception on rank-four branches. Ten marked area types represent all compact coupled linear probes under local recovery of hidden matter; exact models give a cyclic criterion and a four-form visibility mechanism. | [PDF](papers/46-47-common-cones-and-area-probes/manuscript.pdf) · [TeX](papers/46-47-common-cones-and-area-probes/main.tex) · [Verification](papers/46-47-common-cones-and-area-probes/VERIFICATION.md) |
+| [44+47 · Causal memory of gravitational radiation](papers/44-47-gravitational-radiation-memory/README.md) | With compact gates in a finite interval, a fixed area profile recovers the calibrated shear load within the two-way delay. Exact Einstein–scalar models realize every finite memory rank and exhibit a discrete finite-versus-infinite rank classification for inverse-square shear. | [PDF](papers/44-47-gravitational-radiation-memory/manuscript.pdf) · [TeX](papers/44-47-gravitational-radiation-memory/manuscript.tex) · [Verification](papers/44-47-gravitational-radiation-memory/VERIFICATION.md) |
 | [43 · Gravitational readouts of a localized non-Abelian null-beam collision](papers/43-localized-nonabelian-null-collision/README.md) | For smooth characteristic Einstein–Yang–Mills data in the stated localized collision, a normal Ricci term detects the commutator norm, while an independent signed shape term changes the optical readout. | [PDF](papers/43-localized-nonabelian-null-collision/manuscript.pdf) · [TeX](papers/43-localized-nonabelian-null-collision/manuscript.tex) |
 | [42B · Wilson Phase and Rational Sewing in Turaev–Viro Theory](papers/42b-wilson-phase-rational-tv-sewing/README.md) | A fixed geometric cap yields the same limiting fixed-color Wilson laws along distinct level subsequences, while actual simple-current Wilson-cylinder sewing distinguishes their phases. | [PDF](papers/42b-wilson-phase-rational-tv-sewing/manuscript.pdf) · [TeX](papers/42b-wilson-phase-rational-tv-sewing/main.tex) |
 | [33B · Determining an Evolving Lorentzian Geometry with Uniform Mass Control](papers/33b-active-evolving-lorentzian-geometry/README.md) | Exact calibrated retarded aperture responses and synchronized spatially uniform mass variations recover an evolving Lorentzian geometry in the stated setting; the twisted-cap extension uses an independent calibration. | [PDF](papers/33b-active-evolving-lorentzian-geometry/manuscript.pdf) · [TeX](papers/33b-active-evolving-lorentzian-geometry/main.tex) |
@@ -142,7 +144,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All 59 manuscripts, with results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 61 manuscripts, with results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |

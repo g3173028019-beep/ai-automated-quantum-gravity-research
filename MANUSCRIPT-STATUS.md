@@ -107,3 +107,8 @@ The historical umbrella synthesis is routed into these dedicated questions, not 
 - [49B · Exact Chern–Simons normal forms](papers/49b-cs-normal-forms/README.md): Local irreducible branches of the specified paired-cap tree plumbings. The general singular-spine critical scheme is distinguished from the exact off-shell normal forms in the proved classes; the local reference amplitude is not a normalized quantum integration measure.
 - [48+49 · Adjoint torsion and coupled WRT cutoffs](papers/48-49-wrt-torsion-bridge/README.md): Untwisted paired-cap trees on their regular irreducible minimum-cover charts, with a marked singular comparison for the four-vertex path. The absolute quantum normalization and the global sector assembly remain open.
 - [50B · All-level WRT collisions](papers/50b-wrt-topological-blindness/README.md): The exact collisions concern uncolored SU(2) invariants. The odd cyclic diagnostic is classical and is applied to these families. The simultaneous theorem uses a sufficient exponential-level condition.
+
+## Relational-area follow-up manuscripts
+
+- [46+47 · Common Einstein cones and relational area probes](papers/46-47-common-cones-and-area-probes/README.md): First-derivative matter on regular local branches of four-dimensional Einstein gravity. Attained rank hypotheses, orientation domains, linearized equation equivalence and the scoped curved example are stated separately.
+- [44+47 · Causal memory of gravitational radiation](papers/44-47-gravitational-radiation-memory/README.md): A calibrated isolated shear channel, known retained temporal potential and exact indexed temporal gates. The ranks concern a causal force law; global spectral type, noisy inverse stability and lossless Hamiltonian realizations are separate.

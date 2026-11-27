@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage{xcolor,hyperref}
+\hypersetup{colorlinks,linkcolor=blue!50!black,citecolor=blue!50!black,
+  urlcolor=blue!50!black,pdfauthor={},
+  pdftitle={The causal memory of gravitational radiation from compact area measurements}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\numberwithin{equation}{section}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\TT}{\mathbb T}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\diag}{diag}
+\setlength{\emergencystretch}{1em}
+\title{The causal memory of gravitational radiation\\from compact area measurements}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We recover an outgoing gravitational load from a fixed compact spatial area profile on the retained side of a cut. The calibrated plane shear may have any smooth time-dependent potential, and the competing loads may also depend on time. All compact temporal drive and readout pairings on a window determine precisely the causal load on the window shortened at each end by the one-way travel time. A retarded Volterra transformation reduces the inverse problem to two convolution support tests. Exact Einstein--scalar backgrounds with winding rods, including anisotropic examples with nonzero Weyl curvature, realize the measured shear. Its outgoing load can have finite or infinite cross-window rank. For the inverse-square potential \(-\gamma/t^2\), that rank is exactly \(n\) when \(\gamma=n(n+1)\) and infinite for every other real \(\gamma\). The rank tests linear causal memory, rather than global spectral type or a Hamiltonian realization.
+\end{abstract}
+
+\section{Introduction}
+Eliminating a propagating exterior replaces it by a causal boundary force law. This law need not be local in time. We call its dependence on the prior wall trace causal memory, distinct from asymptotic displacement memory, soft charges, or the corner data required by gravitational gauge symmetry \cite{P44}. For a laboratory confined to one side of the cut, two questions arise. Can it identify the exterior force law without sampling the wall? If so, can its data distinguish a finite linear state from an exterior with unbounded linear memory?
+
+We give an exact answer for a calibrated, isolated gravitational shear. A fixed spatial profile, supported a positive distance from the cut, serves for both source and readout. Each source and readout is a difference of two spacelike area histories specified by material clocks and rods. The temporal tests range over all compact smooth gates in one finite window; no stationarity of the force law is assumed. The retained wave potential can vary arbitrarily in calibrated time. Causal transmutation and a support theorem identify the load on exactly the time square available after the two one-way flights.
+
+The inverse theorem does not determine the memory rank in advance. The actual outgoing load can have rank one on a nonstationary material background, whereas another attained family has infinite rank. An inverse-square family gives a complete classification: the allowed finite ranks are all nonnegative integers, each at one specified coupling, with an exact realization of the nonlocal tail. The distinction can be read in every separated pair of windows within the recovered time square.
+
+This combines the normal-force convention of \cite{P44} with a specific compact invariant area probe of the type studied in \cite{P47,Khavkine}. General volume-to-boundary transfer, time-dependent hyperbolic Dirichlet-to-Neumann inverse problems and material tensor stress already have established treatments \cite{BLOS,Kian,ENW}. Our result concerns one fixed positive-distance spatial profile, a sharp two-way temporal restriction, and an attained interacting Einstein--matter graviton channel. It assumes the retained calibration and does not reconstruct a general metric or all polarizations.
+
+\input{material}
+\input{recovery}
+\input{rank}
+\input{inverse-square}
+
+\section{What the finite window decides}
+A load recovered by Theorem~\ref{thm:recover} is a physical linear response in the specified channel. Its finite minors can exclude any proposed bound on real linear state dimension. The exact output on an open observation window depends only on the recovered load square, and on the known retained bulk. An exterior change with sufficient additional propagation delay is invisible. This restriction remains even for exact data.
+
+For a sharp spectral example, take the calibrated constant positive potential \(m^2\). A half-line and a finite exterior of length \(\ell\) with a perfect Dirichlet reflector agree on all local area measurements whenever \(2\ell>T-2d\). Relative to a time window of length \(T\), the two loads differ only after a wall-to-reflector round trip. Their Laplace factors are respectively \(C p_m\) and \(C p_m\coth(\ell p_m)\), \(p_m=\sqrt{p^2+m^2}\) with positive real part on the appropriate half-plane. The half-line has continuous normal wavenumber; the finite interval has Dirichlet normal wavenumbers \(j\pi/\ell\). Thus exact finite-window retarded data can agree for an absolutely continuous and a discrete exterior force spectrum. The compact support of the auxiliary Fourier weight in \eqref{eq:besselFourier} is a property of an entire continuation of a tail; it is not the force spectrum.
+
+For the nonstationary models we make no vacuum or stationary spectral assignment. A finite realization of a causal tail includes local derivative contact terms in the force law; it is not a construction of a closed lossless finite-dimensional Hamiltonian for the whole exterior or of its quantum state. Conversely, an infinite rank excludes every finite linear state realization under the stated comparison assumptions, but not approximation, nonlinear quantum descriptions, or a finite device with independent access to an uncounted propagating reservoir.
+
+\begin{thebibliography}{15}
+\raggedright
+\bibitem{P44} AI Automated Quantum Gravity Research, \emph{Gravitational Region Sewing: Minimal Corner Registers and Continuous Radiative Loads}, Paper 44 (2026). \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/be3fc29a45b88b98fe5963888ed731a44d47ae59/papers/44-gravitational-region-sewing}{Source and PDF}.
+\bibitem{P47} AI Automated Quantum Gravity Research, \emph{Spacelike area tomography and compact linear gravitational probes}, Paper 47 (2026). \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/be3fc29a45b88b98fe5963888ed731a44d47ae59/papers/47-spacelike-area-tomography}{Source and PDF}.
+\bibitem{Khavkine} I. Khavkine, Local and gauge invariant observables in gravity, \emph{Class. Quantum Grav.} \textbf{32} (2015), 185019. \href{https://arxiv.org/abs/1503.03754}{arXiv:1503.03754}.
+\bibitem{BLOS} L. Busch, M. Lassas, L. Oksanen and M. Salo, \emph{On Exponential Instability of an Inverse Problem for the Wave Equation}, \href{https://arxiv.org/abs/2506.23559}{arXiv:2506.23559}.
+\bibitem{Kian} A. Feizmohammadi, J. Ilmavirta, Y. Kian and L. Oksanen, \emph{Recovery of time dependent coefficients from boundary data for hyperbolic equations}, \href{https://arxiv.org/abs/1901.04211}{arXiv:1901.04211}.
+\bibitem{ENW} S. Endlich, A. Nicolis and J. Wang, Solid inflation, \emph{J. Cosmol. Astropart. Phys.} (2013) 10, 011. \href{https://arxiv.org/abs/1210.0569}{arXiv:1210.0569}.
+\bibitem{KMT} V.~V. Kravchenko, S. Morelos and S.~M. Torba, Liouville transformation, analytic approximation of transmutation operators and solution of spectral problems, \emph{Appl. Math. Comput.} \textbf{273} (2016), 321--336. \href{https://arxiv.org/abs/1412.5237}{arXiv:1412.5237}.
+\bibitem{Lions} J.-L. Lions, Supports de produits de composition. I, \emph{C. R. Acad. Sci. Paris} \textbf{232} (1951), 1530--1532; see also L. H\"ormander, Supports and singular supports of convolutions, \href{https://doi.org/10.1007/BF02391861}{\emph{Acta Math.} 110 (1963), 279--302}.
+\bibitem{TVrank} A.-J. van der Veen and P.~M. Dewilde, On low-complexity approximation of matrices, \emph{Linear Algebra Appl.} \textbf{205--206} (1994), 1145--1201. Time-varying state-space rank.
+\bibitem{PT} P. Gaillard and V.~B. Matveev, Wronskian addition formula and Darboux--P\"oschl--Teller potentials, \href{https://doi.org/10.1155/2013/645752}{Journal of Mathematics (2013), 645752}.
+\bibitem{Legendre} P.~J. Zeitsch, On the Riemann function, \emph{Mathematics} \textbf{6} (2018), 316, Eq.~(24). \href{https://doi.org/10.3390/math6120316}{doi:10.3390/math6120316}.
+\bibitem{BL} Y. Berest and I. Loutsenko, Huygens' principle in Minkowski spaces and soliton solutions of the Korteweg--de Vries equation, \emph{Comm. Math. Phys.} \textbf{190} (1997), 113--132. \href{https://arxiv.org/abs/solv-int/9704012}{arXiv:solv-int/9704012}.
+\end{thebibliography}
+\end{document}

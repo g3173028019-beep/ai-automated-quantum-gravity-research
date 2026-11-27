@@ -1,0 +1,57 @@
+\documentclass[11pt]{article}
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=.88in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!55!black]{hyperref}
+\hypersetup{pdftitle={Common Einstein cones and complete relational area probes for multifield matter},pdfsubject={Einstein--scalar matter, local characteristic cones and compact relational observables}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Lie}{\mathcal L}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Id}{\mathrm{Id}}
+\newcommand{\gm}{\mathfrak g}
+\title{Common Einstein cones and complete relational\\area probes for multifield matter}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We classify smooth minimally coupled first-derivative scalar actions in four-dimensional Einstein gravity for which every physical scalar polarization propagates on the Einstein light cone on an attained open set. Strong hyperbolicity turns equality of characteristic sets into a matrix condition. Its gradient Hessian integrability forces a positive sigma model plus potential and, at rank four, at most a pullback target four-form. This applies to arbitrarily many scalar fields on the physical rank-four Gram manifold. A nonclosed four-form is invisible to the principal cone and direct stress, but can alter the field dynamics. We then show when ten types of marked spacelike area histories represent every compact coupled linear observable. Four complete material labels give an off-shell representative; additional scalars require reconstruction modulo the linearized equations. In an exact backreacting family with arbitrarily many scalars, this holds precisely when the normal-field mass matrix is cyclic from the metric readout. In a separate six-field model a stress-free derivative coupling makes an otherwise invisible scalar observable, without changing the background metric, direct stress response or principal cones.
+\end{abstract}
+
+\section{Introduction}
+A shared characteristic cone is a restriction on the differential equations, not a guarantee that one can observe every physical field through a metric measurement. The distinction matters in Einstein gravity: an interaction can change scalar evolution without contributing either a principal symbol or a direct metric stress. We determine the most general such surplus term in a class of minimally coupled first-derivative actions, then give concrete tests for whether it helps or hinders a set of relational observables.
+
+The earlier two-field cone theorem \cite{P46} isolates the Einstein metric cone, as opposed to a common effective scalar cone on a prescribed background. Examples of the latter appear in multifield DBI perturbation theory \cite{Langlois}. We use the Hessian in gradient variables to treat the full physical rank-four stratum, including \(N>4\) where the Gram variables lie on a proper rank manifold. Minors in first-order variational problems, and local Wess--Zumino forms, have established antecedents \cite{BCO,OS,DG}; the new restriction is that the open-data common-cone condition leaves precisely the specified four-form remainder. The result is local and does not require a choice of extension in the normal directions to the Gram manifold.
+
+The observable part starts from a finite pointwise inverse for marked areas \cite{P47}, with actual material scalars defining the labels. This makes the linear observables relational in the sense of field-dependent coordinates \cite{Khavkine,BFR}. We prove completeness as a statement about compact coupled tests, not just a count of area types or a mode-separation argument. We use the term \emph{area history} for the whole set of compact test profiles of a fixed plane type over a spacetime label patch. Ten types do not mean ten numbers at a single time. The arbitrary-field cyclic mechanism has the usual linear-control algebraic structure; the derivative-only case uses the evolving geometry and an exact differential elimination, not a boundary observation inequality \cite{GKM}.
+
+The genuinely curved data used to test the cone converse are given separately from the homogeneous examples used to test observability. All field equations below are classical, with area completeness at the linearized source or Peierls level on a regular patch. No global Hamiltonian stability, preferred quantum state, or nonlinear quantum reconstruction is asserted.
+
+\input{cone}
+\input{attainment}
+\input{area}
+\input{examples}
+\input{curved}
+
+\begin{thebibliography}{15}\setlength{\itemsep}{2pt}
+\bibitem{P45} \emph{A massless stress pole from the variance of a spatially scaled vacuum energy}, research manuscript 45, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/45-vacuum-stress-massless-pole}{source and manuscript}.
+\bibitem{P46} \emph{When Two Scalar Modes Share the Einstein Light Cone}, research manuscript 46, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/46-einstein-scalar-common-cone}{source and manuscript}.
+\bibitem{P47} \emph{Spacelike area tomography and compact linear gravitational probes}, research manuscript 47, \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/47-spacelike-area-tomography}{source and manuscript}.
+\bibitem{Langlois} D.~Langlois, S.~Renaux-Petel, D.~A.~Steer and T.~Tanaka, \emph{Primordial perturbations and non-Gaussianities in DBI and general multi-field inflation}, Phys. Rev. D \textbf{78} (2008), 063523, \href{https://arxiv.org/abs/0806.0336}{arXiv:0806.0336}.
+\bibitem{BCO} J.~M.~Ball, J.~C.~Currie and P.~J.~Olver, \emph{Null Lagrangians, weak continuity, and variational problems of arbitrary order}, J. Funct. Anal. \textbf{41} (1981), 135--174, \href{https://doi.org/10.1016/0022-1236(81)90085-9}{publisher}.
+\bibitem{OS} P.~J.~Olver and J.~Sivaloganathan, \emph{The structure of null Lagrangians}, Nonlinearity \textbf{1} (1988), 389--398.
+\bibitem{DG} J.~Davighi and B.~Gripaios, \emph{Homological classification of topological terms in sigma models on homogeneous spaces}, JHEP \textbf{09} (2018), 155, \href{https://arxiv.org/abs/1803.07585}{arXiv:1803.07585}.
+\bibitem{CBIP} Y.~Choquet-Bruhat, J.~Isenberg and D.~Pollack, \emph{The Einstein--scalar field constraints on asymptotically Euclidean manifolds}, Chin. Ann. Math. Ser. B \textbf{27} (2006), 31--52, \href{https://arxiv.org/abs/gr-qc/0506101}{arXiv:gr-qc/0506101}.
+\bibitem{Khavkine} I.~Khavkine, \emph{Local and gauge invariant observables in gravity}, Class. Quantum Grav. \textbf{32} (2015), 185019, \href{https://arxiv.org/abs/1503.03754}{arXiv:1503.03754}.
+\bibitem{BFR} R.~Brunetti, K.~Fredenhagen and K.~Rejzner, \emph{Quantum gravity from the point of view of locally covariant quantum field theory}, Commun. Math. Phys. \textbf{345} (2016), 741--779, \href{https://arxiv.org/abs/1306.1058}{arXiv:1306.1058}.
+\bibitem{GKM} S.~Gerbi, C.~Kassem, A.~Mortada and A.~Wehbe, \emph{Exact controllability and stabilization of locally coupled wave equations: theoretical results}, \href{https://arxiv.org/abs/2003.14001}{arXiv:2003.14001}.
+\end{thebibliography}
+\end{document}

@@ -1,4 +1,4 @@
-AI-led research in quantum gravity, quantum information and mathematical physics: 59 English manuscripts with editable sources and reproducible calculations.
+AI-led research in quantum gravity, quantum information and mathematical physics: 61 English manuscripts with editable sources and reproducible calculations.
 
 Suggested repository topics:
 quantum-gravity

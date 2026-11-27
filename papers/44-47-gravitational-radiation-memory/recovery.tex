@@ -1,0 +1,82 @@
+\section{The exact finite-window inverse}
+\label{sec:recover}
+
+Let \(I=(t_0,t_0+T)\) be a laboratory window contained in a slightly larger finite slab. On the retained side \(r=-z>0\), the calibrated potential \(M(t)\) is known and smooth and depends only on time. Write \(P_M=\partial_t^2-\partial_r^2+M(t)\). The constant \(C>0\), time, cut and normal coordinate are fixed. Choose one real nonzero \(\varphi\in C_c^\infty((0,\infty))\) and let \(d=\inf\supp\varphi>0\). The entire measured data for a load \(K\) are
+\[
+  \mathcal B_K(f,h)=\int h(t)\varphi(r)u_f(t,r)\,\dd t\,\dd r,
+  \quad f,h\in C_c^\infty(I),\quad j(t,r)=f(t)\varphi(r).
+\]
+Here \(C\partial_r u(t,0)=K[u(\cdot,0)](t)\). Work with zero response before the drive and causal distributional kernels, with all indicated causal products defined. Specifically, if \(S_M\) is the retained Poisson map from trace to \(-\partial_r u|_0\), require that \(CS_M+K\) have a two-sided causal inverse \(D_K\) on the chosen zero-past domain. These assumptions hold for the outgoing extensions used below. Competitors need not be homogeneous, stationary, or described by a finite state; they are compared as effective scalar force laws for the same controlled sector, without an additional independently accessible drive port.
+
+\begin{theorem}[One-profile recovery]\label{thm:recover}
+If \(T>2d\), two such loads produce identical data on \(I\) if and only if their kernels agree on \(J\times J\), where
+\[
+                     J=(t_0+d,t_0+T-d).
+\]
+If \(T\le2d\), all such loads produce identical data on the open window. Contact terms of the load are included in the recoverable kernel. Time lengths refer to the calibrated unit-speed coordinate.
+\end{theorem}
+
+\subsection{Causal transmutation of the known retained propagation}
+Fix a time \(a<t_0\) in the slab and require each history to be supported above some \(a'>a\). On this domain construct
+\[
+ (\mathcal T f)(t)=f(t)+\int_a^t k(t,s)f(s)\,\dd s,
+\]
+where \(k\) on \(a\le s\le t\) is the restriction of the Goursat problem
+\begin{equation}
+ k_{tt}-k_{ss}+M(t)k=0,\qquad
+ k(t,t)=-\tfrac12\int_a^t M(\sigma)\,\dd\sigma,\qquad
+ k(t,2a-t)=0 .
+ \label{eq:goursat}
+\end{equation}
+Only the given \(M(t)\) for \(t\ge a\) is used. Extend the auxiliary kernel to \(2a-t\le s\le t\) for this construction, not the physical history. With \(u=(t+s)/2-a,\ v=(t-s)/2\) one solves
+\[
+ k(u,v)=g(u)-\int_0^u\int_0^v
+      M(a+u'+v')k(u',v')\,\dd v'\,\dd u',
+ \qquad g(u)=-\tfrac12\int_a^{a+u}M(\sigma)\,\dd\sigma .
+\]
+Here \(k(u,v)\) denotes the same kernel in characteristic coordinates. Picard terms are bounded by \(\|g\|_\infty(\|M\|_\infty uv)^j/(j!)^2\), and the integral equation gives smoothness by differentiation. The second-kind Volterra inverse of \(\mathcal T\) has an analogous smooth causal kernel: ordered integrals give factorial convergence on the slab. Both operators act on the indicated distributions by duality, with an irrelevant smooth cutoff below the lower support when a transpose is not compact near \(a\). Twice integrating by parts on smooth histories gives
+\begin{equation}
+  (\partial_t^2+M(t))\mathcal T=\mathcal T\partial_t^2 ,
+  \qquad (\partial_t^2-\partial_r^2+M(t))\mathcal T
+         =\mathcal T(\partial_t^2-\partial_r^2).
+ \label{eq:transmute}
+\end{equation}
+Indeed the diagonal term in the difference is \(M(t)+2(k_t+k_s)(t,t)\), and the integral term is the interior expression in \eqref{eq:goursat}. The lower endpoint terms vanish by zero past; integration by parts extends the identity to the domain. This is an initial-value version of a classical transmutation construction \cite{KMT}. It is an exact causal map for retarded solutions and need not preserve a symplectic form or a quantum state.
+
+In the massless reference a prescribed wall history \(g\) extends as \(g(t-r)\), so \(S_0=\partial_t\). Its readout against \(\varphi\) is \(W_0 g=\varphi*g\). For the zero-trace driven solution, the reflected retarded Green function similarly gives the inward wall force \(C\partial_r u_D|_0=\varphi*f\): normal differentiation gives the first arrival \(\delta(t-r')\) from a source at \(r'\). Since \(\mathcal T\) acts only in time, commutes with the spatial profile and boundary traces, and preserves causal solution uniqueness, both transferred operators for the chosen profile are
+\begin{equation}
+ S_M=\mathcal T\partial_t\mathcal T^{-1},\qquad
+ W_M=\mathcal T W_0\mathcal T^{-1}.
+ \label{eq:transfer}
+\end{equation}
+The two profile transfers coincide in this time-only class, by their common free reference. No general retarded reciprocity for time-varying spatial media is assumed. Conjugation enters the natural causal domain with a two-sided inverse and preserves the defined operator products by transport of that domain.
+
+\subsection{Two support tests and the sharp window}
+Split \(u_f\) into the known zero-trace response and the Poisson extension of the unknown wall trace. The zero-trace solution has inward force \(W_M f\); the Poisson extension contributes \(-CS_M\) times its trace, and the readout of that extension is \(W_M\) of its trace. Consequently, for the temporal source-to-readout operator,
+\begin{equation}
+       \mathcal R_K-\mathcal R_D=W_M D_K W_M,\qquad
+       D_K=(CS_M+K)^{-1}.
+ \label{eq:fac}
+\end{equation}
+Only the response \(\mathcal R_K\) is measured. The calibrated \(\mathcal R_D\) is known by solving the retained zero-trace problem.
+
+Suppose two measurements agree. Conjugate \eqref{eq:fac} by \(\mathcal T^{-1}\) and set \(\widetilde K_i=\mathcal T^{-1}K_i\mathcal T\). Compact reference tests remain available even though \(\mathcal T\) need not preserve future compactness. For \(f\) compact in \(I\), test with a smooth cutoff of \(\mathcal T f\) which is equal to \(\mathcal T f\) up to any chosen \(T_1<t_0+T\) and dies inside \(I\). This is possible since \(\mathcal T f\) vanishes up to the starting time of \(f\). Causality permits removing the cutoff on that prefix and applying \(\mathcal T^{-1}\) to the output difference, which vanishes there and before the input. Letting the end of the prefix vary gives
+\[
+        W_0 \Delta W_0=0\text{ on }I^2,\qquad
+   \Delta=(C\partial_t+\widetilde K_1)^{-1}-
+                 (C\partial_t+\widetilde K_2)^{-1}.
+\]
+Write the following support argument after translating \(t_0\) to zero. For fixed test \(f\), the intermediate output \(\Delta W_0 f\) is supported above \(d+\inf\supp f>0\), and its convolution with \(\varphi\) vanishes until \(T\). The lower support identity of Titchmarsh--Lions \cite{Lions} gives \(\Delta W_0 f=0\) on \((0,T-d)\). Now fix \(h\in C_c^\infty((0,T-d))\). The tested remaining input distribution \(q(s)=\langle h(t),\Delta(t,s)\rangle\) is supported below \(\sup\supp h\) by causality. The reflected convolution \(\varphi(-\cdot)*q\) vanishes on \((0,T)\), and already has upper support below \(T\). The upper support identity yields \(\sup\supp q\le d\). These one-sided distributional support identities are local on the slab: one cuts off unused remote times before invoking the compact-support version. Varying product tests gives \(\Delta=0\) on \(J^2\).
+
+The two-sided inverse identity \(L_1\Delta L_2=L_2-L_1\), \(L_i=C\partial_t+\widetilde K_i\), now gives equality of \(\widetilde K_i\) there. Causal products restricted to \(J^2\) use only intermediate times between source and observation, so depend only on their factors restricted there. This applies including boundary contact terms, and conjugating back gives equality of \(K_i\) on \(J^2\).
+
+Conversely, equality of \(K_i\) on \(J^2\) gives equality of \(D_{K_i}\) there by the inverse identity in the opposite direction. The support of either transfer has delay at least \(d\), by \eqref{eq:transfer} and causal convolution. In fact whenever it lies in the slab, the first arrival of the single-pass map is exactly \(d\) after the input: the two causal inverses preserve the infimum of temporal support, and \(\varphi*\) adds \(d\) by the support identity, even when \(\varphi\) is flat at its support boundary. Hence both wall times in \eqref{eq:fac} necessarily lie strictly in \(J\); when \(T\le2d\), none are available. This proves Theorem~\ref{thm:recover}. It is exact uniqueness for all compact temporal gates, not a uniform stable inverse from noisy data.
+
+\subsection{An outgoing local signature}
+For a genuinely homogeneous temporal outgoing half-line, \(K_*=CS_M\), using the exterior \(M\) when it differs from that of the calibrated retained half-line. To extract its diagonal tail, let \(V=\mathcal T-I\). Integration by parts shows that \([V,\partial_t]\) is a smooth Volterra kernel with off-diagonal value \(-(k_t+k_s)(t,s)\), since the two coincidence terms cancel. Since \(S_M=\partial_t+[V,\partial_t]\mathcal T^{-1}\) and the product of two smooth Volterra kernels vanishes on the diagonal, 
+\begin{equation}
+ S_M(t,s)=\partial_t\delta(t-s)+{\boldsymbol1}_{s<t}H_M(t,s),
+      \qquad H_M(t,t)=\tfrac12 M(t).
+ \label{eq:diagTail}
+\end{equation}
+The diagonal value means the one-sided limit of the smooth tail after removing the contact term. Thus the recovered load reads out the exterior temporal potential in this class on the shorter window. It does not reconstruct a general unknown inhomogeneous exterior.
