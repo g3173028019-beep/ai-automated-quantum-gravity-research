@@ -157,7 +157,7 @@ The closed WRT and Chern–Simons calculations are complementary to the marked o
 
 The [paper index](PAPER-INDEX.md) links all manuscripts and distinguishes the original PDF/source packets, later analytical Markdown manuscripts and typeset analytical articles. Use packet notes for commands and dependencies, and the [verification overview](../VERIFICATION.md) for the distinction between proof, exact finite checks, numerical diagnostics and retained inputs. No additional scientific rerun is implied by this navigation layer.
 
-The 56 archive items are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.
+The archive items are selected entry points into a wider corpus. Related source drafts are consolidated where they answer the same question; independent scoped questions remain distinct. Human authors and affiliations remain blank, and human expert review has not occurred. Neither a completed packet nor its private source date certifies global novelty, public priority, journal acceptance or full quantum gravity.
 
 ## Cross-cluster analytical studies (52–60)
 
