@@ -246,3 +246,12 @@ Run ./build.sh in each selected paper directory with pdfLaTeX.
 - [22B · An open-boundary Lorentzian Regge saddle crossing with a curvature insertion](../papers/22b-regge-airy-open-boundary/README.md)
 - [29C · A polarization symplectic form at fixed two-stream null-dust limit](../papers/29c-high-frequency-polarization-symplectic-form/README.md)
 - [73 · Crossed dispersion from real-transfer graviton data in five dimensions](../papers/73-d5-gauss-bonnet-dispersive-reconstruction/README.md)
+
+## Building Papers 74–77
+
+Run `./build.sh` from each selected paper directory with pdfLaTeX. Scope and verification records are linked from each paper page.
+
+- [74 · The Canonical Polarization Phase Space of Gravitational and Yang–Mills Wave Packets](../papers/74-eym-optical-polarization-phase-space/README.md) · [PDF](../papers/74-eym-optical-polarization-phase-space/manuscript.pdf) · [TeX](../papers/74-eym-optical-polarization-phase-space/main.tex) · [Verification](../papers/74-eym-optical-polarization-phase-space/VERIFICATION.md)
+- [75 · Same Linear Source, Different Nonlinear Response in Einstein–Wave-Map Theory](../papers/75-curved-target-source-timing/README.md) · [PDF](../papers/75-curved-target-source-timing/manuscript.pdf) · [TeX](../papers/75-curved-target-source-timing/main.tex) · [Verification](../papers/75-curved-target-source-timing/VERIFICATION.md)
+- [76 · Sharp Finite-Memory Laws for Quantum Einstein–Rosen Waves](../papers/76-einstein-rosen-finite-memory/README.md) · [PDF](../papers/76-einstein-rosen-finite-memory/manuscript.pdf) · [TeX](../papers/76-einstein-rosen-finite-memory/main.tex) · [Verification](../papers/76-einstein-rosen-finite-memory/VERIFICATION.md)
+- [77 · Absolute Interior-Spin Convergence on Lorentzian EPRL Edge Stars](../papers/77-lorentzian-eprl-edge-star-convergence/README.md) · [PDF](../papers/77-lorentzian-eprl-edge-star-convergence/manuscript.pdf) · [TeX](../papers/77-lorentzian-eprl-edge-star-convergence/main.tex) · [Verification](../papers/77-lorentzian-eprl-edge-star-convergence/VERIFICATION.md)

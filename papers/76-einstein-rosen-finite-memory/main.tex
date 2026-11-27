@@ -1,0 +1,622 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\setlength{\emergencystretch}{1em}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Sharp finite-memory laws for quantum Einstein--Rosen waves},pdfauthor={}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Id}{\mathrm{id}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\bra}[1]{\langle #1\rvert}
+\newcommand{\proj}[1]{\lvert #1\rangle\!\langle #1\rvert}
+\title{Sharp finite-memory laws for quantum Einstein--Rosen waves}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+The exact Hamiltonian for polarized Einstein--Rosen waves couples the
+retained radial Fock modes to a conserved continuous spectral variable
+of the discarded modes. What finite memory reproduces their entire
+adaptive process, rather than just a one-time channel? For physical
+interrogation time at most \(T\), retained spectral gap \(g_L\), high
+spectral interval of width \(W\), and small operational error
+\(\varepsilon\), we show that the optimal persistent memory dimension
+is \(\Theta(1+A g_L T W/\sqrt{\varepsilon})\), where \(A\) is the
+Hamiltonian scale. One positive classical grid attains this rate,
+including for correlated initial states. The converse applies to
+arbitrary quantum memories when the simulator is fixed across
+preparations: a coherent retained-mode probe converts compression to
+unitary programming, and a recycling decoder distinguishes a Fourier
+code of preparation labels. Separately, one fixed smooth pure high
+state forces dimension linear in interrogation time at fixed accuracy.
+That lower bound uses two one-particle interrogations separated by an
+actual retained-state replacement, without a tester quantum ancilla or
+feedback. The split concerns radial modes, not spatial regions.
+\end{abstract}
+
+\section{Exact process and resource model}\label{sec:model}
+
+In the Ashtekar--Pierri Fock quantization of polarized cylindrical
+vacuum gravity \cite{AP}, the auxiliary Hamiltonian is the
+second quantization of multiplication by radial momentum \(k>0\).
+Split the one-particle modes at a fixed \(\Lambda>0\); their Fock
+spaces are \(\mathcal H_L,\mathcal H_H\), with corresponding auxiliary
+Hamiltonians \(H_{0,L},H_{0,H}\). In units \(\hbar=1\) write the exact
+physical Hamiltonian and the low unitary at high spectral value \(r\) as
+\begin{equation}\label{eq:ham}
+ H=A(1-q\otimes R),\qquad
+ q=e^{-bH_{0,L}},\quad R=e^{-bH_{0,H}},\qquad
+ u_r(t)=e^{iAtrq},\qquad A,b>0 .
+\end{equation}
+The common scalar phase \(e^{-iAt}\) is dropped. All times here refer
+to the asymptotic physical time, not the auxiliary free evolution
+parameter. The apparent interaction in \eqref{eq:ham} comes from the
+nonlinear relation between the boundary Hamiltonian and the auxiliary
+energy. Nonlinear time correlations for this quantization were
+studied in \cite{BGV}. A conserved inaccessible observable can
+generate classical multi-time memory \cite{GRS}; here its continuous
+spectrum and physically selectable normal preparations are essential.
+
+For a normal initial joint state \(\rho\), let \(P_B=\mathbf1_B(R)\).
+Its positive trace-class operator measure on the retained system is
+\begin{equation}\label{eq:measure}
+ M_\rho(B)=
+ \tr_H\!\left[(1\otimes P_B)\rho(1\otimes P_B)\right].
+\end{equation}
+A tester's inert reference can be included in \(L\) in this partial
+trace. For every retained instrument history with final event \(F\),
+let \(F_r\) be its backward effect at the start, computed with
+\(u_r\) in the free intervals. Then
+\begin{equation}\label{eq:law}
+ \Pr_\rho(F)=\int\tr\!\left[F_r\,M_\rho(\dd r)\right].
+\end{equation}
+Indeed every retained operation acts trivially on \(H\), and the
+total unitary is diagonal in the spectral representation of \(R\).
+For a step approximation of \(R\) the effect at the input is an
+orthogonal spectral sum of the retained effects; taking a uniform
+mesh limit gives \eqref{eq:law}. The sum in \eqref{eq:measure} is
+countably additive in trace norm (orthogonality removes cross terms
+after tracing \(H\)). The derivation uses positive instruments and
+does not assume a density of \(M_\rho\), a sharp \(r\)-eigenvector,
+or an actual measurement of the high sector. In the archive,
+Paper~68 \cite{P68} gives the spectral process, causal-break memory
+and exact unbounded Hankel rank. Papers~18 and 53 \cite{P18,P53}
+concern positive and coherent sewing, respectively, in other
+settings. Our resource question is approximation of the whole
+continuous spectral process.
+
+\paragraph{Preparations and controls.}
+Fix a closed interval \(I=[r_-,r_+]\) of width \(W>0\) in the
+non-vacuum continuous spectrum \(0<r<e^{-b\Lambda}\).
+Allow every normal joint preparation with high support in \(I\).
+A strict low cap \(0\le H_{0,L}\le E_L\) is optional; if imposed it
+must hold at preparation and be preserved by each instrument outcome.
+Set
+\[
+ g_L=\operatorname{diam}\operatorname{spec}(q|_L)
+     =
+ \begin{cases}
+  1-e^{-bE_L},&\text{strict low cap},\\
+  1,&\text{no low cap}.
+ \end{cases}
+\]
+A tester has finitely many interrogation steps, arbitrary normal
+retained instruments, an independent finite quantum reference, and
+a branchwise total physical waiting time at most \(T\). These are
+ideal mode operations; we do not charge apparatus complexity,
+spectral resolution, or the duration of controls. Quantum
+controlled operations at fixed clock times are allowed, but the total
+free physical clock is common. The free waiting-time sum after a
+classical outcome may depend on that outcome.
+
+\paragraph{Simulation and persistent memory.}
+A \emph{universal} simulator uses one fixed causal engine for all
+these preparations and testers, with one CP initialization on the
+joint state and no later access to that state except what it has
+retained. Error is the supremum of total variation of the tester
+outcome distributions. Equivalently one can optimize one final
+event; for a one-output channel with a fresh arbitrary reference
+this convention is half the diamond norm. A reset replaces the
+accessible retained state by a fixed state and disposes of its old
+state. We count in \(d\) all registers of the simulator carrying
+information through a reset, including persistent classical
+records and correlations in joint registers even if a marginal is
+fixed. A hybrid memory's dimension is the sum over its classical
+sectors. Independent, fixed resources prepared after the reset may
+be absorbed into a common continuation; there is no other hidden
+communication or selection of the engine based on the preparation.
+A tester can withhold its recorded first outcome, and can insert
+fresh data only after the reset.
+
+\begin{theorem}[Universal finite-budget minimax law]\label{thm:univ}
+For \(T>0\), \(g_L>0\), and sufficiently small absolute
+\(0<\varepsilon\), there are universal constants \(c,C>0\) such that
+the minimal persistent dimension in this model satisfies
+\begin{equation}\label{eq:minimax}
+ c\left(1+\frac{A g_LTW}{\sqrt{\varepsilon}}\right)
+ \le d_{\mathrm{opt}}
+ \le C\left(1+\frac{A g_LTW}{\sqrt{\varepsilon}}\right).
+\end{equation}
+The upper bound is attained in order by a fixed classical register
+with a CP initialization. The lower bound permits arbitrary
+mixed programs on a quantum memory and arbitrary fixed quantum
+processing. An additional high-vacuum sector requires at most
+one additional exact upper-bound label. At \(T=0\) or \(g_L=0\) no
+hidden temporal memory is needed.
+\end{theorem}
+
+For a strict high total auxiliary-energy support cap \(E_H>\Lambda\),
+the continuous width is \(e^{-b\Lambda}-e^{-bE_H}\). The same scaling
+uses the full cap interval in the upper bound and any fixed interior
+fraction in the lower bound. When the vacuum is admitted it is
+separately represented. A known exact point law, if present as a
+genuine spectral sector, also needs no varying program. The precision
+exponent in \eqref{eq:minimax} does not concern a processor designed
+for just one high preparation. Section~\ref{sec:fixed} gives a
+separate fixed-preparation lower bound.
+
+\section{Positive simulator for all adaptive histories}\label{sec:upper}
+
+Choose a uniform grid \(r_j=r_-+jh\) in \(I\), with adjacent affine
+weights \(w_j(r)\). For \(r\) between two grid points only their two
+weights are nonzero, and
+\[
+ w_j(r)\ge0,\qquad
+ \sum_j w_j(r)=1,\qquad
+ \sum_j r_jw_j(r)=r.
+\]
+Initialize the retained space and a classical register by the
+trace-preserving CP map
+\begin{equation}\label{eq:init}
+ \rho\longmapsto
+ \sum_j\tr_H\!\left[(1\otimes \sqrt{w_j(R)})\rho
+                      (1\otimes \sqrt{w_j(R)})\right]\otimes\proj j
+   =\sum_j\left(\int w_j\,\dd M_\rho\right)\otimes\proj j.
+\end{equation}
+The retained marginal is unchanged. Apply \(u_{r_j}\) in the
+\(j\)-sector during each dwell. There is one random label for the
+entire run: choosing new labels at each cut need not preserve its
+correlations. If included, the high vacuum is split off before
+interpolation and represented at \(r=1\) exactly.
+
+\begin{lemma}\label{lem:derivs}
+For any tester in the model the backward effect satisfies
+\[
+ \norm{\partial_r F_r}\le A g_L T,\qquad
+ \norm{\partial_r^2 F_r}\le (A g_L T)^2 .
+\]
+\end{lemma}
+\begin{proof}
+For a node with remaining time budget \(\tau\), dwell \(t\), and
+outcome maps \(\mathcal I_o\), its effect is
+\[
+ \Ad(u_r(t))^*\left(\sum_o \mathcal I_o^*F_{o,r}\right).
+\]
+The flagged adjoint \((Y_o)\mapsto\sum_o\mathcal I_o^*Y_o\) is
+unital and positive, so it contracts the supremum norm on
+self-adjoint fields. Subtracting the spectral midpoint of \(q\)
+changes no conjugation, and makes its operator norm at most \(g_L/2\).
+One derivative of the conjugation costs at most \(A g_L t\) and two
+at most \((A g_L t)^2\). Begin at an \(r\)-independent terminal event.
+All child budgets are at most \(\tau-t\). The product rule then gives
+\(A g_L[t+(\tau-t)]\) and
+\((A g_L)^2[t^2+2t(\tau-t)+(\tau-t)^2]\), respectively. The same
+binomial induction bounds the third derivative, giving uniform
+Taylor remainders even for normal classical outcome kernels at
+finite depth and measurable outcome-dependent dwells. The sum is
+then the normal flagged integral and the adjoint contraction is
+unchanged. An inert reference tensors the generator with identity.
+\end{proof}
+
+A norm-valued Taylor expansion at \(r\) annihilates the first-order
+term in \(\sum_j w_j(r)F_{r_j}\). The second-order bound is
+\((A g_LT)^2(r-r_j)(r_{j+1}-r)/2\) between successive grid points.
+Pairing with the positive measure of total mass one in
+\eqref{eq:law} gives
+\begin{equation}\label{eq:errupper}
+ \sup_{\mathrm{testers}}\TV(P_{\mathrm{true}},P_{\mathrm{grid}})
+ \le \frac{(A g_L T h)^2}{8}.
+\end{equation}
+A uniform partition into
+\(\max(1,\lceil A g_L T W/\sqrt{8\varepsilon}\rceil)\) intervals
+therefore proves the upper bound. The second-order cancellation is
+in the whole tested process, uniformly in its depth; first-order
+cancellation by unitary mixing for single gates is not a new
+principle \cite{Campbell}. Equation~\eqref{eq:errupper} handles an
+operator-valued initial law without approximating or recovering a
+density.
+
+\section{Converse for a universal quantum simulator}\label{sec:lower}
+
+\subsection{One physical dwell ladder realizes a gate family}
+
+Pick a retained auxiliary energy \(E_*=E_L/2>0\) under the cap,
+or finite \(E_*\) with \(1-e^{-bE_*}\ge 1/2\) without it. There is a
+smooth normalized Fock packet \(v\) narrowly supported around that
+total energy. For instance, symmetrize a product of sufficiently
+many identical one-particle packets near \(E_*/n<\Lambda\).
+Write \(a_*=1-e^{-bE_*}\) and \(\Omega=Aa_*\); in either case
+\(\Omega\ge A g_L/2\). Let \(X\) swap \(v\) and the retained
+vacuum and act trivially on their orthogonal complement.
+
+After a fixed reset to the vacuum, introduce fresh data
+\(S=\mathbb C^{K+1}\) with basis \(\ket j\).
+Apply \(X\) coherently on every \(j>0\) branch at time zero, and
+undo it on branch \(j>0\) at time \(t_j=jT/K\). At every time,
+the clocks are common; only the retained control depends coherently
+on \(j\). On ideal monochromatic packets, after discarding the
+scratch retained mode, the gate is
+\begin{equation}\label{eq:gate}
+ V_r\ket j=e^{-i\alpha rj}\ket j,\qquad \alpha=\Omega T/K.
+\end{equation}
+This expression removes the common vacuum phase for the entire
+time \(T\). If \(a(E)=1-e^{-bE}\) differs from \(a_*\) by at most
+\(h_a\) across the actual support of \(v\), the operator norm error
+of the data-output isometry is at most \(AT h_a\): on each
+orthogonal control branch this bounds the vector error of the
+uncomputed packet. The induced trace-norm channel error, with any
+passive reference, is at most \(2AT h_a\). All steps preserve the
+strict support cap when present, and no outcomes are postselected.
+
+We use a finite calibration family of high one-particle packets.
+At each designated \(r\), choose a smooth normalized packet around
+energy \(-b^{-1}\log r>\Lambda\), with \(R\)-support of width as small
+as needed. One-sided approximations at the endpoints of \(I\)
+suffice. Its additional diamond error relative to \eqref{eq:gate}
+is at most \(2\Omega T\sup |r'-r|\) over its actual support.
+Choose the combined physical packet error at most \(2\varepsilon\);
+the same low packet works for all calibrations and data.
+
+Only a state \(\sigma_r\) of the counted \(d\)-dimensional memory
+depends on the preparation after the reset. The low state and
+fresh data are product with this memory, and the same fixed controls
+are used in the continuation. Tracing all but the data output yields
+a single CPTP processor \(\mathcal P\) on \(S\otimes\mathbb C^d\).
+Since the tester permits arbitrary fresh data, an independent
+reference and final joint effects, the uniform simulation guarantee
+implies
+\begin{equation}\label{eq:programm}
+ \norm{\mathcal P(\,\cdot\,\otimes\sigma_r)-\Ad(V_r)}_\diamond
+ \le\delta,\qquad \delta=4\varepsilon ,
+\end{equation}
+at all the finitely chosen calibration points. A simulator with a
+fresh state-dependent continuation instead of one engine would not
+imply \eqref{eq:programm}.
+
+\subsection{Recycling one mixed program}\label{sec:recycle}
+
+Exact no-programming already forbids storing arbitrarily many exact
+unrelated gates in one fixed finite register \cite{NC}. Approximate
+unitary programming and its connection to metrology are developed
+in \cite{YRC}; qubit phase programming is an earlier example
+\cite{VMC,ZB}. Here the needed statement concerns a finite interval
+of phase rates and a gate ladder whose size grows with \(T\).
+We give the recycling argument, including the mixed-program
+and fixed-decoder details.
+
+Let \(W_0:S\otimes\mathbb C^d\longrightarrow S\otimes E\) be a
+fixed Stinespring isometry of \(\mathcal P\), with \(E\) enlarged
+by a fixed unused sector if needed. Purify \(\sigma_r\) on a
+register \(Q\) not used by the decoder, writing \(\ket{\psi_r}\).
+Dimension-independent Stinespring continuity \cite{KSW}
+in a common enlarged environment yields a unit vector
+\(\ket{\phi_r}\in E\otimes Q\) such that
+\begin{equation}\label{eq:ksw}
+ \norm{(W_0\otimes I_Q)(\,\cdot\,\otimes\ket{\psi_r})
+                 -V_r\,\cdot\,\otimes\ket{\phi_r}}_{\mathrm{op}}
+ \le c_0\sqrt{\delta},
+\end{equation}
+with, for example, \(c_0=2\). The isometry bound implies distance in
+full trace norm at most \(2c_0\sqrt\delta\) including a reference.
+
+For a fixed state \(\tau\) on \(S\otimes\mathbb C^d\) define the
+CPTP left inverse on the range of \(W_0\) by
+\begin{equation}\label{eq:inverse}
+ {\cal L}(Y)=W_0^*YW_0+
+   \tr[(I-W_0W_0^*)Y]\,\tau.
+\end{equation}
+After the forward use of \(W_0\), retain the data output and apply
+\({\cal L}\) to \(E\) and a \emph{fresh fixed dummy} data state
+\(\eta\), not to the data output just obtained. On the ideal
+environment \(\phi_r\), use \eqref{eq:ksw} evaluated on
+\(V_r^*\eta V_r\) and contractivity of \({\cal L}\otimes\Id_Q\).
+The recovered state is within \(2c_0\sqrt\delta\) in full trace norm
+of \((V_r^*\eta V_r)\otimes\proj{\psi_r}\). Discard the dummy.
+Including the original forward error, one use therefore applies
+the gate and restores the program purification to within
+\(4c_0\sqrt\delta\), also with previously retained data. The use
+of \(V_r^*\) is exclusively in this error proof, not in the decoder.
+
+Iterate the fixed decoder
+\(m=\lfloor 1/(16c_0\sqrt\delta)\rfloor\) times on fresh data
+registers, possibly entangled with each other. Telescoping makes
+the total trace-norm error at most \(1/4\). For instance
+\(0<\varepsilon\le2^{-16}\) gives
+\(m\ge 1/(32c_0\sqrt\delta)\). As \(Q\) was never used, this is
+a fixed CPTP decoder from the \emph{single mixed program} to the
+data registers. The decoder is an information bound on the counted
+memory, not a physical experiment that runs past time \(T\).
+
+\subsection{Orthogonal packing resolves both time and error scales}
+
+Take \(K=\max(1,\lceil\Omega T W/\pi\rceil)\); then
+\(\alpha W\le\pi\). On \(S^{\otimes m}\) the attainable integer
+weights of \eqref{eq:gate} are all \(s\) from \(0\) to \(mK\).
+Pick one product basis vector \(\ket s\) for each weight and feed
+their uniform superposition to the recycling decoder.
+With \(L=mK+1\), its ideal output is
+\[
+ \ket{\eta_r}=L^{-1/2}\sum_{s=0}^{L-1}e^{-i\alpha rs}\ket s .
+\]
+Take \(r_j=r_-+2\pi j/(\alpha L)\) for
+\(j=0,\ldots,N-1\), where
+\begin{equation}\label{eq:N}
+ N=1+\left\lfloor \frac{\alpha WL}{2\pi}\right\rfloor.
+\end{equation}
+The points are in \(I\), \(N\le L\), and the outputs are orthogonal
+by the finite Fourier sum. These are exactly the finite
+calibration points used in \eqref{eq:programm}. A fixed
+measurement therefore distinguishes them with average probability
+at least \(7/8\) after decoding. Pulling the measurement back gives
+a POVM \(E_j\) on only one \(d\)-dimensional program. The bound
+\[
+ \frac1N\sum_j\tr(E_j\sigma_{r_j})
+      \le \frac1N\sum_j\tr E_j=\frac dN
+\]
+uses \(0\le\sigma_{r_j}\le I\) and remains valid for arbitrary
+mixed program states and fixed ancillary resources. Since
+\(N\ge\max(1,m\Omega TW/(2\pi))\), this proves the lower bound in
+Theorem~\ref{thm:univ}. In physical terms, the single dwell ladder
+provides a frequency band of width \(\Omega T\); the extra factor
+\(1/\sqrt\varepsilon\) enters through the information required to
+program that band, not through additional physical evolution.
+
+\section{Linear memory growth for one fixed smooth state}\label{sec:fixed}
+
+The preceding converse varies high preparations. We next keep one
+normal pure high state fixed for every \(T\). Neither a tester
+quantum ancilla nor a state-dependent controller is needed.
+
+Choose a fixed subinterval \(J\) with closure in \(I^\circ\) and
+a period \(W_0< |J|\) that is a fixed fraction of \(W\), for example
+\(W_0=W/2\) and \(|J|=3W/4\). Choose a real smooth bump
+\(w\in C_c^\infty(J)\) positive on a subinterval of length greater
+than \(W_0\). Set
+\begin{equation}\label{eq:wrapped}
+ B(r)=\sum_{n\in\mathbb Z}w(r+nW_0)^2,\qquad
+ \xi(r)=\frac{w(r)}{\sqrt{W_0B(r)}},\qquad
+ v_H(k)=\sqrt{be^{-bk}}\,\xi(e^{-bk}).
+\end{equation}
+The periodic denominator is smooth and strictly positive.
+The high one-particle vector \(v_H\) is normalized and smooth with
+compact support inside the allowed band. Its law
+\(\mu(\dd r)=|\xi(r)|^2\dd r\) is exactly uniform after reduction
+modulo \(W_0\), since \(\sum_n|\xi(r+nW_0)|^2=1/W_0\).
+
+\begin{theorem}[One fixed preparation, two no-feedback windows]\label{thm:fixed}
+For the single initial state \(\ket{0_L}\otimes v_H\) in
+\eqref{eq:wrapped}, there is, for every \(N\ge2\) and \(\eta>0\),
+a two-window retained experiment with no tester quantum ancilla,
+total free time \(4\pi(N-1)/(AQW_0)\), and a genuine retained
+reset between the windows, for which any simulator
+accurate within \(\varepsilon\) in total variation satisfies
+\begin{equation}\label{eq:fixed}
+ \frac dN\ge \frac{2N^2+1}{3N^2}-3\eta^2-2\varepsilon .
+\end{equation}
+Here \(Q>0\) is the width of any fixed inner one-particle
+\(q\)-band, independent of \(N\).
+There is also a fixed finite-particle implementation with
+\(Q=g_L/2\) and the same bound. Thus at fixed sufficiently small
+accuracy this one preparation already requires
+\(d=\Omega(1+A g_LTW)\) to simulate all allowed histories.
+\end{theorem}
+
+\begin{proof}
+Let \(q_\ell=q_0+Q\ell/(N-1)\), \(0\le\ell<N\), in the chosen
+inner band. For a normalized smooth bump \(\varphi_\Delta\) supported
+in \((-\Delta,\Delta)\), use the normalized retained one-particle
+vectors
+\[
+ v_\ell(k)=\sqrt{be^{-bk}}\,
+                 \varphi_\Delta(e^{-bk}-q_\ell).
+\]
+Choose \(\Delta>0\) so the supports are disjoint and inside the
+allowed band. Prepare \(v=N^{-1/2}\sum_\ell v_\ell\) and wait
+\(T_N=2\pi(N-1)/(AQW_0)\). For fixed \(a\), define
+\[
+ r_j^{\,0}=a+j W_0/N,\qquad
+ \psi_j=N^{-1/2}\sum_{\ell=0}^{N-1}
+                    e^{iAT_Nr_j^{\,0}q_\ell}v_\ell ,
+ \qquad j=0,\ldots,N-1 .
+\]
+The \(\psi_j\) form an orthonormal basis of the packet span
+by the finite Fourier sum. Use the \emph{complete} POVM
+\[
+ E_j=\proj{\psi_j}+
+        N^{-1}\left(I-\sum_{m=0}^{N-1}\proj{\psi_m}\right).
+\]
+The component outside the packet span is assigned uniformly, not
+discarded. Because the packet profiles are identical translates in
+\(q\), projection of \(u_r(T_N)v\) to that span has a common amplitude
+\(\phi(AT_Nr)\), where
+\(\phi(s)=\int|\varphi_\Delta(x)|^2 e^{isx}\dd x\).
+The conditional probability is
+\[
+ p_j(r)=|\phi(AT_Nr)|^2\,p_j^0(r)
+           +(1-|\phi(AT_Nr)|^2)/N,\qquad
+ p_j^0(r)=\frac1{N^2}\left|\sum_{\ell=0}^{N-1}
+   e^{2\pi i\ell((r-a)/W_0-j/N)}\right|^2 .
+\]
+For independent \(X,X'\) with density \(|\varphi_\Delta|^2\),
+\(1-|\phi(s)|^2\le s^2\operatorname{Var}X\le s^2\Delta^2\),
+by averaging \(1-\cos(s(X-X'))\). Taking
+\(\Delta\le\eta/(AT_Nr_+)\) gives uniform variation at most
+\(\eta^2\) from the ideal probability vector. No singular
+spectral input is used.
+
+Measure the first window and replace the low system by \(v\).
+Concretely its terminal instrument can be
+\(\rho_L\mapsto\tr(E_j\rho_L)\proj v\) on outcome \(j\).
+Record that outcome, but give no feedback to the second window;
+the second uses the same dwell and POVM. By \eqref{eq:law},
+the exact joint probability is the mixture of \(p_x(r)p_y(r)\)
+against the \emph{same} \(\mu\). The ideal first marginal is
+uniform by \eqref{eq:wrapped}. Its ideal agreement probability is
+\[
+ a_N^{\,0}=\frac1{N^3}\sum_{|k|< N}(N-|k|)^2
+          =\frac{2N^2+1}{3N^2}.
+\]
+To see the first equality, the Fourier coefficients of the modulus
+squared of \(\sum_{\ell=0}^{N-1}e^{i\ell\theta}\) are \(N-|k|\).
+Apply Parseval, the exact wrapped law and the sum over the \(N\)
+equal-probability shifts. The true first marginal differs by at
+most \(\eta^2\) in variation, and the true agreement by at most
+\(2\eta^2\) by the product variation bound for each \(r\).
+
+For the simulator, condition the normalized cut memory state
+\(\sigma_j\) on its first label, with law \(\pi_j\).
+Because the reset is fixed and the continuation receives no
+first-label feedback outside memory, the second measurement is
+one fixed POVM \(D_j\) on that memory. Its agreement satisfies
+\[
+ a_{\rm sim}=\sum_j\pi_j\tr(\sigma_jD_j)
+       \le d/N+\TV(\pi,\mathrm{unif}),
+\]
+using \(\sigma_j\le I\) for the uniform weights and bounding the
+change of weights by variation. Approximating the true joint law
+bounds \(\TV(\pi,\mathrm{unif})\) by \(\varepsilon+\eta^2\)
+and \(a_{\rm sim}\) below by \(a_N^0-2\eta^2-\varepsilon\).
+This proves \eqref{eq:fixed}.
+
+To obtain \(Q=g_L/2\) with a finite number of retained particles,
+choose a compact \(q\)-band of that width in the full low spectral
+interval. On its corresponding positive total-energy interval,
+use \(k_i=E x_i\) with \(\sum_i x_i=1\), and a fixed
+normalized symmetric simplex profile near \(x_i=1/n\). Take
+\(n\) so large that every \(E x_i<\Lambda\) on its support. In
+\(L^2(\prod_i\dd k_i)\) the factor \(E^{-(n-1)/2}\) cancels the
+Jacobian of \((E,x)\), and \(\sqrt{be^{-bE}}\) changes the total
+energy coordinate to \(q\). The resulting isometry from the
+\(q\)-band intertwines \(q\) with multiplication and realizes the
+same exact translated profiles with a fixed particle count.
+Without a low cap an inner band of width \(1/2\) still corresponds
+to finite total energy. Taking the largest admissible \(N\), and
+using \(d\ge1\) at short times, proves the last claim.
+\end{proof}
+
+This converse is a two-window state-discrimination bound, not
+an exact Hankel-rank test. In particular the bound is linear in
+\(N\), not the square-root dimension bound from factoring a
+classical correlation matrix through \(d^2\) operator entries.
+At any fixed small \(\varepsilon>0\),
+Theorem~\ref{thm:univ} supplies the matching time dependence
+for this preparation, but not a matching precision law as
+\(\varepsilon\downarrow0\) for a simulator tailored to it.
+
+\section{Relation to prior results and scope}
+
+Hashimoto, Yoshida and Murao \cite{HYM} already use unbiased
+barycentric rounding for finite-dimensional smooth unitary
+families (their Theorem~1 and Sec.~S3) and use mixed-program
+recycling for the leading precision exponent (Sec.~S7). Both
+mechanisms have antecedents in \cite{Campbell,YRC}. We do not
+claim a new generic programming exponent. Here the upper bound
+handles a correlated, operator-valued initial law and the full
+infinite-dimensional adaptive process with constants uniform in
+the number of cuts. Normal finite-energy Einstein--Rosen probes
+realize the programming problem; exact Fourier discrimination
+then gives uniform joint \(T,W,g_L,\varepsilon\) scaling in
+dimension with no logarithmic loss. The fixed smooth preparation
+converse is a different operational result, not inferred from
+programming a varying family.
+
+The persistent dimension quantifies simulation of a particular
+physical family of mode histories. A reduced one-time channel can
+agree with an effective noise model that uses fresh noise, while
+such a model can miss the shared spectral record revealed by
+the reset test. The underlying reason is conservation of the high
+spectral variable, not exchange of high and low radial energy
+during a free dwell. The bounds neither define spatial gravitational
+subsystems nor include bandwidth restrictions or costs for physical
+apparatus beyond the stated energy support and interrogation time.
+
+\begin{thebibliography}{99}
+\bibitem{AP}
+A. Ashtekar and M. Pierri,
+\emph{Probing Quantum Gravity Through Exactly Soluble Midi-Superspaces I},
+J. Math. Phys. \textbf{37}, 6250--6270 (1996),
+\href{https://arxiv.org/abs/gr-qc/9606085}{arXiv:gr-qc/9606085}.
+\bibitem{BGV}
+J. F. Barbero G., I. Garay and E. J. S. Villase\~nor,
+\emph{Quantum Einstein--Rosen waves: Coherent states and \(n\)-point functions},
+Class. Quantum Grav. \textbf{25}, 205013 (2008),
+\href{https://arxiv.org/abs/0808.2561}{arXiv:0808.2561}.
+\bibitem{GRS}
+K. Goswami, A. K. Roy, V. Srivastava, B. Perez, C. Giarmatzi,
+A. Gilchrist and F. Costa,
+\emph{Hamiltonian characterisation of multi-time processes with classical memory},
+New J. Phys. \textbf{27}, 114515 (2025),
+\href{https://arxiv.org/abs/2412.01998}{arXiv:2412.01998}.
+\bibitem{P68}
+Quantum Gravity Research Archive,
+\emph{Paper 68: What a Retained-Mode Observer Can Recover in Quantum Einstein--Rosen Dynamics},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/68-einstein-rosen-spectral-memory}{source and manuscript}.
+\bibitem{P18}
+Quantum Gravity Research Archive,
+\emph{Paper 18: Positive boundary sewing},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/18-positive-boundary-sewing}{source and manuscript}.
+\bibitem{P53}
+Quantum Gravity Research Archive,
+\emph{Paper 53: Coherent quantum shear sewing},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/53-coherent-quantum-shear-sewing}{source and manuscript}.
+\bibitem{Campbell}
+E. Campbell,
+\emph{Shorter gate sequences for quantum computing by mixing unitaries},
+Phys. Rev. A \textbf{95}, 042306 (2017),
+\href{https://arxiv.org/abs/1612.02689}{arXiv:1612.02689}.
+\bibitem{NC}
+M. A. Nielsen and I. L. Chuang,
+\emph{Programmable Quantum Gate Arrays},
+Phys. Rev. Lett. \textbf{79}, 321--324 (1997),
+\href{https://arxiv.org/abs/quant-ph/9703032}{arXiv:quant-ph/9703032}.
+\bibitem{KSW}
+D. Kretschmann, D. Schlingemann and R. F. Werner,
+\emph{The Information-Disturbance Tradeoff and the Continuity of
+Stinespring's Representation},
+IEEE Trans. Inf. Theory \textbf{54}, 1708--1717 (2008),
+\href{https://arxiv.org/abs/quant-ph/0605009}{arXiv:quant-ph/0605009}.
+\bibitem{YRC}
+Y. Yang, R. Renner and G. Chiribella,
+\emph{Optimal Universal Programming of Unitary Gates},
+Phys. Rev. Lett. \textbf{125}, 210501 (2020),
+\href{https://arxiv.org/abs/2007.10363}{arXiv:2007.10363}.
+\bibitem{VMC}
+G. Vidal, L. Masanes and J. I. Cirac,
+\emph{Storing Quantum Dynamics in Quantum States: A Stochastic
+Programmable Gate},
+Phys. Rev. Lett. \textbf{88}, 047905 (2002),
+\href{https://arxiv.org/abs/quant-ph/0102037}{arXiv:quant-ph/0102037}.
+\bibitem{ZB}
+M. Ziman and V. Bu\v{z}ek,
+\emph{Universality and optimality of programmable quantum processors},
+Acta Phys. Hung. B \textbf{26}, 277--291 (2006),
+\href{https://arxiv.org/abs/quant-ph/0612218}{arXiv:quant-ph/0612218}.
+\bibitem{HYM}
+Y. Hashimoto, S. Yoshida and M. Murao,
+\emph{Barycentric programming: Classical realization of programs for
+universal quantum processors},
+\href{https://arxiv.org/abs/2611.02441}{arXiv:2611.02441} (2026).
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,735 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[hidelinks,pdftitle={The canonical polarization phase space of gravitational and Yang--Mills wave packets}]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\Div}{\operatorname{div}}
+\newcommand{\TF}{\mathrm{TF}}
+\newcommand{\TT}{\mathrm{TT}}
+\title{The canonical polarization phase space of gravitational and Yang--Mills wave packets}
+\author{}
+\date{Paper 74}
+\begin{document}
+\maketitle
+\begin{abstract}
+We derive a high-frequency limit of the Einstein--Yang--Mills
+symplectic form on exact constrained linear wave packets. The
+limit is the imaginary part of the Hermitian ray flux of the
+joint graviton and color polarization bundle. It gives a
+projective two-form at fixed intensity and a matrix Poisson
+bracket on the unrestricted packet amplitudes. On two exact
+non-Abelian sandwiches a common circular graviton launch gives
+the same gravitational polarization covariance at each cut
+after integration over a fixed radial aperture. The backgrounds
+nevertheless give opposite nonzero canonical responses between
+two gravitational polarimeters. A compact pure-gravity
+quadrature packet at the first cut reads that response in the
+late tidal signal. A separate phase-coherent comparison also
+distinguishes the histories. The background metric and all
+local gauge-curvature jets agree exactly; the wave comparison
+is on exact linearized solutions in their controlled optical
+limit.
+\end{abstract}
+
+\section{Main statements}
+Paper 29B \cite{p29b} constructs oriented polarization measures
+for high-frequency vacuum gravity. Paper 29C \cite{p29c}
+obtains a rescaled Einstein symplectic pairing on marked cuts of
+exact two-stream vacuum families. Paper 60 \cite{p60} proves
+physical graviton--color transport and shows that relative
+color transport is visible in certain outgoing gravitational
+amplitudes and powers. We ask what the coupled propagation does
+to the canonical data, and what can be distinguished when all
+single-cut gravitational polarization matrices of a specified
+aperture are unchanged.
+
+Use signature \((-+++)\), curvature \(F=\dd A+A\wedge A\), and
+the action
+\[
+ S[g,A]=\frac1{2\kappa}\int R\,\dd\mathrm{vol}_g
+        -\frac14\int\langle F_{ab},F^{ab}\rangle\,\dd\mathrm{vol}_g,
+ \qquad \kappa=8\pi G_N.
+\]
+The color metric is positive invariant. We linearize only the
+wave perturbations on the smooth exact backgrounds in
+Section~\ref{sec:bg}. Let \(\phi\) be a fixed oriented eikonal
+with \(k=(\dd\phi)^\sharp\) future null, and \(\eps\) its
+reduced wavelength (inverse angular frequency in this phase
+convention). In the real wave convention
+\(\eps\re(e^{i\phi/\eps}(h,a))\) write
+\[
+ v=(H,a_\mathcal S), \qquad
+ H=h_\mathcal S^\TF/(2\sqrt\kappa),\quad
+ \mathcal S=k^\perp/\mathbb R k,\quad
+ \mathcal V=\mathrm{Sym}^2_0\mathcal S^*
+        \oplus(\mathcal S^*\otimes\operatorname{ad}P).
+\]
+The complex structure records two real optical quadratures. For
+\(\mathrm{SU}(2)\) there are eight complex physical channels.
+
+\begin{theorem}[Canonical optical limit]\label{thm:can}
+For arbitrary smooth compact mixed profiles \(v_0,w_0\) in a
+flat incoming aperture there are real-linear preparations
+\(T_\eps\) by exact constrained linear Einstein--Yang--Mills
+solutions on a common buffered laboratory. Let \(v,w\) be their
+physical leading amplitudes on a pre-caustic Cauchy section
+\(\Sigma\) with the packets inside its buffer. With \(n\) the
+future normal and the coordinate--momentum convention for
+the action symplectic form,
+\begin{equation}\label{eq:can}
+ \lim_{\eps\downarrow0}\eps^{-1}\Omega_{\mathrm{EYM},\Sigma}
+      (T_\eps v_0,T_\eps w_0)
+ =\im\int_\Sigma v^\dagger w\,\dd\mu_\Sigma,
+ \qquad \dd\mu_\Sigma=-(n\cdot k)\,\dd\Sigma.
+\end{equation}
+The limit is preserved by the full coupled transport. At fixed
+intensity \(I=v^\dagger v>0\), quotienting the common phase gives
+\(\tfrac I2\dd\im(z^\dagger\dd z)\), \(z=v/\sqrt I\), per
+unit ray flux. For a smooth bounded Hermitian ray matrix \(B\)
+write \(F_B(v)=\tfrac12\int v^\dagger Bv\,\dd\mu\). On a common
+reference cut the quadratic brackets are
+\begin{equation}\label{eq:poisson}
+ \{F_B,F_C\}=\frac1{2i}\int\tr(vv^\dagger[B,C])\,\dd\mu.
+\end{equation}
+Their exact finite-dimensional packet implementation is
+specified in Section~\ref{sec:bracket}. No unrestricted
+field-theoretic inverse limit is asserted.
+\end{theorem}
+
+\begin{theorem}[Same single-cut covariance, different history]\label{thm:benchmark}
+Two exact SU(2) sandwiches have the same metric and Yang--Mills
+curvature, including all local covariant curvature derivatives.
+Their gap transports come from reordering the same three color
+pulses. For a common circular graviton-only launch and a
+sufficiently small fixed radial aperture, the entire optical
+\(2\times2\) gravitational polarization covariance integrated
+on each cut agrees. Nevertheless the signed linear
+gravity-polarization power on two separated cuts has a
+canonical bracket of equal magnitude and opposite nonzero
+signs. This is the bracket on the full physical packet space
+evaluated at the graviton-only launch. A compact pure-gravity
+quadrature packet at the first cut produces the corresponding
+late tidal response. A separate passive comparison of the
+imaginary same-ray mutual coherence between both cuts also
+has opposite nonzero signs.
+\end{theorem}
+
+The equal single-cut matrices involve integration over
+transverse ray labels, not coherent interference across
+different labels, and hold at leading optical order. Equality
+of the full resolved field, color state, or arbitrary
+finite-wavelength measurements is not claimed.
+
+\section{Transport and exact incident packets}\label{sec:prep}
+A compensated infinitesimal gauge is
+\(K(\zeta,\chi)=(\mathcal L_\zeta g,D\chi+\iota_\zeta F)\).
+The on-shell Hessian obeys \(PK=0=K^\dagger P\).
+Action-adjoint de Donder and Lorenz gauges give scalar wave
+principal parts in the field and subsidiary gauge-violation
+equations, with the kinetic row normalizations
+\cite{hack,p60}. Thus zero gauge data and the linearized
+constraints yield exact physical solutions. At null \(k\)
+the de Donder and Lorenz symbols are
+\(k^a(h_{ab}-g_{ab}\tr h/2)=0\) and \(k^a a_a=0\).
+Metric and color principal gauge additions do not affect their
+screen readings. The compensated term \(\iota_\zeta F\) is
+one order lower for a gauge producing a wave-scale metric
+perturbation.
+
+In a parallel screen frame put \(f_A=F(k,e_A)\), and write
+\(C_f a=(\langle f_{(A},a_{B)}\rangle)^\TF\) and
+\((C_f^*H)_A=H_{AB}f_B\). Paper 60 gives
+\begin{equation}\label{eq:transport}
+  (\nabla_k^{\mathcal V}+\tfrac12\Div k)v
+   =\mathcal A_fv,\qquad
+  \mathcal A_f=\sqrt\kappa
+       \begin{pmatrix}0&-C_f\\ C_f^*&0\end{pmatrix}.
+\end{equation}
+The factors follow from the stress variation \(2iC_fa\)
+at the fast derivative and the derivative of the Yang--Mills
+density. In the latter, the metric trace term and the first
+raised-index variation cancel by the de Donder symbol;
+the remaining screen insertion is \(-i C_f^*h^\TF\).
+The resulting unscaled source terms are
+\(-2\kappa C_fa\) and \(\tfrac12 C_f^*h^\TF\).
+This yields the displayed skew-adjoint mixing.
+The color slot uses the actual adjoint connection.
+An action-current limit additionally needs the configuration
+errors to be smaller than the wave amplitude.
+
+\subsection{Local exact constraints}
+Use a larger spacelike slice with only a flat incoming
+subpatch required to contain the perturbation support.
+All data vanish on the rest of the slice, including its
+curved part. Choose the laboratory and its time and spatial
+buffers so that the past domains needed by the receiver
+patches lie inside this larger slice. A slice confined
+entirely to the flat support subpatch would not suffice.
+In flat coordinates define
+\[
+ Q_{ij}=-\Delta\delta_{ij}+\partial_i\partial_j,\qquad
+ \mathbb T_{ij}[b]=Q_i{}^kQ_j{}^\ell b_{k\ell}
+                   -\tfrac12 Q_{ij}Q^{k\ell}b_{k\ell}.
+\]
+The first operator is identically divergence-free. The
+second is both divergence-free and tracefree by
+\(Q^2=(-\Delta)Q\) and \(\tr Q=-2\Delta\).
+For a unit constant spatial phase covector apply
+\(\eps^3 Q\) to the compact connection carrier seed \(a_0\)
+and \(\eps^2Q\) to its \(-ia_0\) velocity seed. Apply
+\(\eps^5\mathbb T,\eps^4\mathbb T\) to the metric seeds
+\(h_0=2\sqrt\kappa H_0,-ih_0\), respectively.
+Take real parts. Their leading symbols on the desired
+transverse seeds give the exact requested optical amplitudes.
+For a nonconstant nonzero spatial phase gradient on a flat
+subpatch, place \(|\dd_\Sigma\phi|^{-2}\) or
+\(|\dd_\Sigma\phi|^{-4}\) in the respective seed and include
+the known local normal angular frequency in the velocity
+seed. All exact corrections retain compact support.
+The temporal components and their gauge velocities vanish
+in this flat chart. Here \(A=F=0\), so the linearized
+stress does not spoil the vacuum TT constraints, and
+Gauss is ordinary transverse electric data. Zero extension
+within the larger slice preserves these exact constraints.
+The subsidiary equation gives exact constrained evolution.
+
+\subsection{Energy estimate at the required scale}
+An \(O(\eps)\) wave-energy error alone would not give the
+symplectic limit, since the packet configuration is itself
+\(O(\eps)\). The compact differential preparations have
+finite expansions with smooth coefficients. Continue their
+initial phase through the two branches \(\phi_+,\phi_-\)
+with opposite initial normal derivatives, \(\phi_+=\phi\).
+In the flat coordinates \(t=(u+v)/\sqrt2\),
+\(z=(v-u)/\sqrt2\) at \(t=0\), the phases can start with
+\(-v\) and \(u\) (up to a common scale). The second phase
+extends exactly as a null phase. For a later flat preparation
+with a smoothly varying gradient, a common pre-caustic
+laboratory for both branches is available by taking weak
+focusing and a sufficiently short fixed geometry.
+The intervening color rotations do not affect the eikonals.
+Use the complex approximate solution
+\[
+ U_{\rm app}=\eps e^{i\phi_+/\eps}U_0^+
+            +\eps^2 e^{i\phi_+/\eps}U_1^+
+            +\eps^2 e^{i\phi_-/\eps}U_1^- .
+\]
+Solve full leading transport for \(U_0^+\), including its
+longitudinal representatives. Solve a sourced transport
+for \(U_1^+\) to cancel the order-\(\eps\) residual, and a
+homogeneous one for \(U_1^-\). Their initial sum matches
+the order-\(\eps^2\) configuration. Their weighted
+difference with opposite normal frequencies, after the
+known slow derivative of \(U_0^+\) is subtracted, matches
+the order-\(\eps\) velocity. This two-by-two system is
+invertible. The residual is \(O(\eps^2)\) in \(L^2\) and
+remains so after one \(\eps\)-weighted derivative.
+The initial mismatch is \(O(\eps^3)\) in configuration
+before differentiation, \(O(\eps^2)\) in velocity.
+Local hyperbolic energy estimates on the fixed buffered
+region give \(O(\eps^2)\) errors in \(H^1\times L^2\)
+against \(U_{\rm app}\). The weighted higher estimate
+gives \(\eps\nabla^2(U-U_{\rm app})=O_{L^2}(\eps^2)\)
+on the chosen cuts: apply the one-higher wave energy
+estimate with weight \(\eps\) and smooth background
+coefficient bounds. All relevant initial weighted
+derivatives of the mismatched polynomial data are of
+the same order. Hence in particular
+\begin{align}
+ U&=\eps\re(e^{i\phi/\eps}U_0^+)+O_{L^2}(\eps^2),\notag\\
+ \nabla U&=\re(ie^{i\phi/\eps}\dd\phi\otimes U_0^+)
+                         +O_{L^2}(\eps).\label{eq:errors}
+\end{align}
+Higher weighted control gives the flat tidal-field reading
+used below. Bounds are uniform on fixed finite-dimensional
+input spaces, by linearity. This is not a differentiated
+estimate for a family of exact nonlinear backgrounds.
+
+\section{Normalizing the action current}
+The action current \cite{leewald} on a spacelike cut is
+the gravitation and Yang--Mills configuration--momentum
+wedge, modulo a spatial boundary divergence. The compact
+buffer removes that divergence. Take
+\(\Omega_{\mathrm{EYM}}=-\dd_{\rm fields}\Theta\), with
+\(\Theta=\int(\pi^{ij}\delta q_{ij}+\langle E^i,\delta A_i\rangle)\).
+An exact compactly supported linear gauge change removes
+the \emph{leading} temporal components near a cut: its
+oscillatory parameters are of size \(\eps^2\), and inversion
+of the principal temporal gauge map uses \(n\cdot k\ne0\).
+The background compensation in the color slot is then
+subleading. This change has zero edge symplectic charge.
+In this representative the leading gauge conditions imply
+spatial TT metric and transverse color.
+
+For \(K=\tfrac12\mathcal L_nq\), the momenta are
+\(\pi^{ij}=\sqrt{\det q}(K^{ij}-\tr K\,q^{ij})/(2\kappa)\)
+and \(E^i=\sqrt{\det q}\,q^{ij}F_{nj}\).
+Their leading fast variations are
+\[
+ \delta\pi^{ij}
+   =\frac{\sqrt{\det q}}{4\kappa}\partial_n h_{\rm act}^{ij,\TT}
+                  +O_{L^2}(\eps),\qquad
+ \delta E^i
+   =\sqrt{\det q}\,q^{ij}D_n a_{j,\rm act}
+                  +O_{L^2}(\eps),
+\]
+where the subscript indicates actual perturbations,
+including their factor of \(\eps\). Background-density,
+lapse and shift terms at this order are lower, and
+the YM kinetic momentum has no fast metric derivative.
+The tensor coefficient becomes exactly the color
+coefficient after \(h^\TT/(2\sqrt\kappa)\).
+Configuration errors in \eqref{eq:errors} pair with a
+derivative of order one, and derivative errors pair with a
+configuration of order \(\eps\), giving only \(O(\eps^2)\).
+At order \(\eps\), use the pointwise real-part identity
+\[
+ (\re(e^{i\vartheta}v),\re(ie^{i\vartheta}w))_{\mathbb R}
+ -(\re(e^{i\vartheta}w),\re(ie^{i\vartheta}v))_{\mathbb R}
+ =-\im(v^\dagger w).
+\]
+The double carrier cancels before integration.
+Multiplication by \(\eps\,n\cdot k\) proves \eqref{eq:can}.
+Equation~\eqref{eq:transport} gives
+\(k(v^\dagger w)+(\Div k)v^\dagger w=0\), so the entire
+Hermitian flux is preserved. In common ray labels after
+division by real optical spreading the transfer is unitary.
+The separate gravity and color symplectic fluxes need
+not be conserved.
+
+For \(\Omega(v,w)=\im\int v^\dagger w\,\dd\mu\), the
+convention \(\iota_{X_B}\Omega=\dd F_B\) gives
+\(X_B=-iBv\) and \(\{F_B,F_C\}=\Omega(X_B,X_C)\)
+as in \eqref{eq:poisson}. At fixed intensity, writing
+\(v=\sqrt I\,z\) makes the common amplitude phase radical,
+and \( \dd\im(z^\dagger\dd z)(\delta z,\delta' z)
+=2\im(\delta z^\dagger\delta' z)\).
+The quotient is the usual projective form \cite{ashtekar}.
+It gives a \(\mathbb{CP}^7\) joint fiber; the gravity
+\(\mathbb{CP}^1\) subfiber at flat entry is not generally
+preserved by the slabs. This phase quotient is not
+a finite-wavelength gauge symmetry. On the gravity-only
+one-carrier restriction \(v=Fz/(2\sqrt\kappa)\) for strain
+amplitude \(F\), its coefficient is
+\(F^2/(8\kappa)=F^2/(64\pi G_N)\) against the incident
+affine area measure, the same positive normalization
+as the marked incoming cut of \cite{p29c}. This does
+not import that paper's nonlinear vacuum limiting
+argument into mixed EYM. Paper 29B's rank-one
+oriented covariance fixes the projective ray; its trace
+does not fix polarization.
+
+\section{Two orderings with the same optical marginals}\label{sec:bg}
+
+Take orthonormal adjoint generators \(T_a\) with
+\([T_a,T_b]=\epsilon_{abc}T_c\), two positive smooth
+disjoint active pulses \(f_1,f_2\), and \(f=f_1+f_2\).
+Consider the Brinkmann sandwiches
+\begin{align}
+ g&=-2\dd u\,\dd v+(\dd x^1)^2+(\dd x^2)^2
+                     -\kappa f(u)^2|x|^2(\dd u)^2,\notag\\
+ A_\pm&=\big[C_\pm(u)-f(u)(x^1T_1+x^2T_2)\big]\,\dd u,
+ \label{eq:background}
+\end{align}
+with \(C_\pm\) smooth and supported strictly inside the
+gap between the active pulses. This is an exact
+Coleman--G\"uven family \cite{coleman,guven,gst,p60}.
+In the displayed gauge \(F_{uA}=fT_A\) are the only
+independent curvature entries. The Yang--Mills equation
+follows directly because only \(F^{vA}\) and its
+antisymmetric partners are nonzero, \(\det g=-1\),
+and the field is independent of \(v\) with \(A_v=A_A=0\).
+The only stress entry is \(T_{uu}=2f^2\), and
+\(\operatorname{Ric}_{uu}=2\kappa f^2\), by the transverse
+Laplacian of the profile. Thus they solve the full coupled
+background equations. Where \(C_+\ne C_-\), the curvature
+vanishes on a neighborhood; elsewhere the background
+connections coincide where needed. Their curvature tensors
+and all local covariant curvature derivatives agree in
+the indicated gauge.
+
+Use the adjoint color rotations \(R_a(\alpha)\) about
+\(T_a\). Choose \(C_\pm\) in three disjoint intervals so
+that its actual parallel action in the gap is
+\begin{equation}\label{eq:word}
+ W_\pm=
+   R_1(\pm\pi/2)R_2(\theta)R_1(\mp\pi/2)=R_3(\pm\theta),
+      \qquad 0<\theta<\pi .
+\end{equation}
+The products are operators, with the rightmost rotation
+first in time. Both use the same three signed rotation
+pulses, changing their order. A bump along a fixed generator
+has adjoint rotation given by its integral with the sign
+from the parallel equation. The ordered noncommuting active
+pair \(fT_1,fT_2\) fixes the adjoint endpoint frames.
+A gauge transformation intertwining the displayed identical
+curvatures on both active slabs must act trivially in their
+adjoint frames; it cannot turn one relative transporter into
+the other. A gap-only potential has no absolute gauge
+meaning. In particular it is possible to gauge away an
+unmarked \(u\)-only term at the cost of rotating the later
+curvature data \cite[Secs.~II and IV]{gst}; that does not
+preserve the two marked endpoint frames of this comparison.
+
+Use the counterpropagating planar incident congruence with
+\(k^u=1\) as its affine scale. A common constant
+rescaling of its optical covector can be absorbed in
+\(\eps\) and the flux normalization. The two transverse
+ray labels \(x_0\) at flat entry obey
+\[
+ x(u)=Y(u)x_0,\qquad Y''+\kappa f(u)^2Y=0,\qquad
+ Y=1,\quad Y'=0\quad\text{at entry}.
+\]
+The small active pulses and bounded interval can be chosen
+so \(Y>0\) everywhere: e.g., if the largest Volterra
+integral of \((u-s)\kappa f(s)^2\) is \(\delta<1/2\),
+then \(\|Y-1\|_\infty\le\delta/(1-\delta)<1\).
+The parallel screen frame can be represented by
+\(e_A^u=0,e_A^i=\delta_A^i\), with \(e_A^v\) set by
+\(g(e_A,k)=0\). In particular the screen colors are \(fT_A\)
+even at noncentral rays. The active adjoint connection
+along a ray is \(-fY(u)x_0^AT_A\); it need not vanish
+off-axis and is retained throughout. Smooth amplitudes
+below are in common ray coordinates with the real
+geometrical spreading factored out. The longitudinal
+packet factor and its ray-label measure are compact and
+common; they do not affect the rotational comparison.
+
+For \(O\in O(2)\), simultaneous transverse reflection or
+rotation \(O\), screen transformation \(O\), and color
+rotation \(\widehat O=\operatorname{diag}(O,\det O)\)
+are exact symmetries of the active propagation, including
+the off-axis connection. On either entire gap the gravity
+propagates freely, and the color action is the same
+\(W_\pm\) for every label, on each screen slot. Completed
+gap transport \(W_\pm=R_3(\pm\theta)\) commutes with every
+proper \(\widehat O\) and is exchanged between the two
+backgrounds by
+\(\widehat O_*=\operatorname{diag}(1,-1,-1)\),
+where \(O_*=\operatorname{diag}(1,-1)\).
+Thus the transfer of the gravity amplitude to \emph{each}
+common optical cut has proper-rotation covariance and a
+reflection that exchanges the two experiments. At cuts
+inside the gap this requires only gravity's free transport.
+No such symmetry of each partial gap \emph{color} history
+is assumed. The same argument works for rotation-invariant
+spacelike sections of the tube. Take the early cut \(E\)
+and the late cut \(L\) in inertial flat spacelike sections
+strictly after slab 1 but before any gap pulses, and
+strictly after slab 2, respectively, on the receiver
+supports. Their cuts and apertures can be chosen in these
+open common flat buffers.
+
+\subsection{What the aperture forgets}
+
+In the screen choose
+\(H_+=\operatorname{diag}(1,-1)/\sqrt2\) and
+\(H_\times=(\begin{smallmatrix}0&1\\1&0\end{smallmatrix})/\sqrt2\).
+Let \(z_\circ=(1,i)^t/\sqrt2\) in this pair, and launch
+the same \(b(|x_0|)z_\circ\) with zero incoming color,
+for \(b\) smooth real, compact and positive around the
+central ray. Let \(H_\pm(s,x_0)\) be the gravitational
+amplitudes on a matched cut, and \(d\mu\) the common
+positive ray-label measure including a smooth compact
+radial aperture weight. For a proper screen rotation
+the induced real spin-two matrix \(D(O)\) fixes the
+circular input up to one overall phase. Proper-rotation
+covariance implies
+\[
+ \mathcal D_\pm(s)
+   =\int H_\pm(s,x_0)H_\pm(s,x_0)^\dagger\,\dd\mu
+                 \in\operatorname{span}_{\mathbb R}(I,\sigma_y),
+ \qquad \sigma_y=\begin{pmatrix}0&-i\\i&0\end{pmatrix}.
+\]
+Indeed the integrated matrix commutes with the real
+spin-two rotations, and its Hermitian part of that
+commutant is precisely the displayed span. The
+\(O_*\) reflection acts on the gravitational pair
+by \(P=\operatorname{diag}(1,-1)\), and
+\(P\overline{z_\circ}=z_\circ\). Its composition with
+complex conjugation of the \emph{amplitudes}, without
+reversing the eikonal, intertwines the two real physical
+transports in the optical calculation. Therefore
+\(H_-(s,O_*x_0)=P\overline{H_+(s,x_0)}\).
+It follows that
+\(\mathcal D_-(s)=P\overline{\mathcal D_+(s)}P^t
+=\mathcal D_+(s)\), since \(P\sigma_yP^t=-\sigma_y\).
+This is equality of all four entries of the matrix
+on every such cut, not just of its trace or of a
+particular linear analyzer. It is not a pointwise
+off-axis equality of all polarization components.
+
+\section{Canonical history and its measured response}\label{sec:bracket}
+
+Write
+\[
+ \Theta_i=\sqrt\kappa\int f_i(u)\,\dd u,\quad
+ c_i=\cos\Theta_i,\quad s_i=\sin\Theta_i,\qquad
+ K_0=\begin{pmatrix}0&-1\\1&0\end{pmatrix}.
+\]
+Use small nonzero \(\Theta_i\), so all relevant \(c_i,s_i\)
+are positive. At the central ray the color injection
+\(J=C^*_{(T_1,T_2)}\) is an isometry with columns
+\((T_1,-T_2)/\sqrt2,(T_2,T_1)/\sqrt2\).
+As \(A(k)=0\) on this ray in each active slab,
+\eqref{eq:transport} reduces there to a rotation
+by \(\Theta_i\) mixing \(H\) and \(JH\), acting
+trivially on the orthogonal color complement.
+An incident unit \(z_\circ\) gives
+\(v_E=(c_1z_\circ,s_1Jz_\circ)\) at the early cut.
+The map from all eight early channels to late
+gravity is
+\[
+ L_\pm=\big(c_2 I,\ -s_2J^\dagger(W_\pm\oplus W_\pm)\big)
+\]
+on the central ray. Because
+\(J^\dagger(W_\pm\oplus W_\pm)J
+      =\cos\theta\,I\pm\sin\theta\,K_0\) and
+\(K_0z_\circ=-iz_\circ\), the late central gravity is
+\begin{equation}\label{eq:late}
+ H_{L,\pm}=(c_1c_2-s_1s_2\cos\theta
+                       \ \pm i s_1s_2\sin\theta)\,z_\circ.
+\end{equation}
+In particular \emph{even the central output ray} agrees.
+The finite-aperture proof above is needed for all of the
+equal marginal measurements.
+
+Use the same real signed linear polarimeter
+\(Z=\operatorname{diag}(1,-1)\) at \(E\) and \(L\).
+It reads \(F_Z\), half the difference of the two linear
+polarization powers, calibrated in physical units of
+\(H\). On the common early full packet space the two
+effects are \(B_E=\operatorname{diag}(Z,0)\) and
+\(B_{L,\pm}=L_\pm^\dagger Z L_\pm\); away from the axis
+use the actual smooth physical transport followed by
+the same gravitational compression. The symbols can
+include smooth matched aperture weights. At the axis
+the gravity part of \(L_\pm^\dagger\) is \(c_2I\);
+since \(Z^2=I\),
+\[
+ v_E^\dagger B_E B_{L,\pm} v_E
+        =c_1c_2\, z_\circ^\dagger H_{L,\pm}.
+\]
+It follows from \eqref{eq:poisson} that their brackets are
+\begin{equation}\label{eq:witness}
+ \{F_{Z,E},F_{Z,L}\}_{\pm}
+       =\ \pm c_1c_2s_1s_2\sin\theta
+\end{equation}
+per unit incident intensity on the central ray. This is
+the full bracket, not an inverse on a gravity-only
+subspace. A reflection-symmetric finite aperture retains
+the strict signs by continuity on a small disk.
+Moreover the reflecting conjugation of the \emph{full}
+early-to-late transfer is antiunitary on marked rays,
+so it reverses \eqref{eq:can}; it preserves both real
+\(Z\) effects under the choice of matched weights.
+Hence the integrated brackets have exactly equal magnitude
+and opposite signs. Pointwise equality of two passive
+values of \(F_Z\) at a chosen input would not determine
+these derivatives on the incident canonical directions.
+
+\subsection{Exact finite-dimensional bracket limit}
+
+For any finite set of compact optical modes spanning a
+complex space \(M\), the exact prepared solution maps
+pull \(\Omega_{\rm EYM}/\eps\) back to matrices converging
+to the nondegenerate restriction of \eqref{eq:can}.
+Their inverses converge in this fixed dimension.
+One can choose \(M\) at the benchmark to contain the
+input and both optical Hamiltonian directions (pulling
+them back to the flat launch labels), for both backgrounds.
+The restricted limiting brackets at that point are the
+full optical ones; the vectors \(-iB_E v\) and
+\(-iB_Lv\) already lie in the chosen space.
+
+In the common flat receiver regions the linearized
+tidal Weyl tensor is diffeomorphism gauge invariant.
+For the scaled field \(\eps\,\delta W(n,e_A,n,e_B)^\TF\),
+the real wave factor at leading order is
+\((n\cdot k)^2h^\TF/2\), up to a fixed Riemann-sign
+convention. Divide by this known factor between \(h^\TF\)
+and \(H\), and by geometrical spreading where applicable.
+The signed integrated square of these calibrated
+\emph{real} tidal components converges to \(F_Z\):
+each square gives \(1/2\) by averaging, and the spatial
+covector of a nonzero null phase on a spacelike cut
+never vanishes, so the \(2\phi/\eps\) terms vanish
+against smooth compact cut weights. The weighted
+second-derivative estimate of Section~\ref{sec:prep}
+controls the errors. By linearity on \(M\), these
+quadratic readouts converge coefficientwise and in \(C^1\)
+on bounded sets. Their brackets with the exact pulled-back
+normalized symplectic matrices converge to the indicated
+optical brackets. Equivalently one multiplies the
+brackets computed with the \emph{unscaled} symplectic
+form by \(\eps\). This is a finite-mode result, not a
+limit of arbitrary localized Peierls brackets.
+
+\subsection{A purely gravitational quadrature drive}
+
+There is a direct response experiment distinct from
+taking an inverse of a large set of data. On the early
+inertial spacelike section in the common flat buffer,
+superpose an independently prepared small optical
+packet with leading variation
+\[
+ X_{F_{Z,E}}(v_E)=-i(\chi_E ZH_E,0),
+\]
+where \(\chi_E\) is the compact early aperture. Its
+polarization support lies within the shared \(F=A=0\)
+subpatch. The exact local TT differential construction
+of Section~\ref{sec:prep}, now including the
+\(|\dd_\Sigma\phi|^{-4}\) symbol factor and the known
+normal angular frequency, implements this compact
+quadrature direction with zero color data. Its larger
+intermediate Cauchy slice covers the late support.
+Linearity allows addition of this exact constrained
+solution to the baseline after the early cut. The same
+drive works in the two comparisons because the
+pre-gap \(H_E\) is common. The late calibrated
+tidal intensity derivative is
+\[
+ \left.\partial_\eta
+       F_{Z,L}(v_E+\eta X_{F_{Z,E}}(v_E))\right|_{\eta=0}
+       =-\{F_{Z,E},F_{Z,L}\}(v_E)
+\]
+in the stated convention. Its optical limit is realized
+by the exact packet and detector estimates.
+This drive is a new independent preparation at \(E\);
+one does not abruptly change a source-free solution's
+past. If a compact time-dependent linear source is
+desired, evolve the auxiliary TT data a short time
+into the early flat buffer and multiply its free
+solution by a smooth time ramp from zero to one.
+The linear forced Einstein tensor in that buffer is
+then supported in the ramp and is proportional to
+the combination of its TT field and first time
+derivative with the ramp's first two derivatives.
+Its temporal components are zero and its spatial
+divergence vanishes identically, so the compact
+source is conserved and produces the same
+retarded auxiliary packet. This is an externally
+prescribed linear source, not a nonlinear matter
+apparatus or an assertion of positive energy for
+the prescribed source.
+
+\subsection{An independent passive comparison}
+
+A synchronized tidal measurement can instead compare
+the complex same-label coherence
+\[
+ \mathcal C_\pm(E,L)=\int
+   \left\langle \mathcal P_{L\leftarrow E}H_\pm(E,x_0),
+                         H_\pm(L,x_0)\right\rangle\,\dd\mu .
+\]
+Here \(\mathcal P\) is the common geometric parallel
+identification of screen frames along each ray.
+Reflection and conjugation give
+\(\mathcal C_-=\overline{\mathcal C_+}\).
+By \eqref{eq:late} the imaginary central densities
+are \(\pm |b(0)|^2c_1s_1s_2\sin\theta\), so they
+give opposite nonzero signs on a small fixed aperture.
+With two flat tidal receivers, demodulate
+\(2e^{-i\phi/\eps}\) times the scaled real Weyl signal
+and remove the conjugate branch using a local
+frequency filter: its phase \(-2\phi/\eps\) is
+separated by the nonzero spatial wave covector.
+The error estimates give convergence of these complex
+readings in \(L^2\); their bounded aperture product
+then converges to the displayed coherence.
+A common raywise rephasing cancels, and a change
+of either screen frame also changes its parallel
+identification, leaving the result fixed. Independent
+rephasings at the two cuts are not allowed in this
+common-reference comparison. This passive
+measurement is not the definition of the canonical
+bracket. It uses two coherent readings instead of the
+calibrated drive and late signed intensity alone.
+
+\section{Relation to earlier optical and symplectic results}
+
+The covariant action phase space, projective two-form
+and quadratic moment-map bracket are established
+structures \cite{leewald,ashtekar}. Weak short-wave
+gravitational--electromagnetic conversion and conserved
+sum currents were studied before \cite{tokuoka};
+graviton and gauge tensor oscillations in a locked
+Yang--Mills background are not new \cite{cdm}.
+The Berry-type effective ray corrections of
+\cite{anderson} concern subleading propagation for
+linearized gravity and are not the profile Poisson
+limit here. The exact plane-wave stock and earlier
+gauge-curvature ambiguity \cite{coleman,guven,gst}
+are distinct from this gravity-only history comparison.
+Papers 29B, 29C and 60 supply oriented polarization,
+a separate vacuum symplectic limit, and a coupled
+linear transport law, respectively. The new steps
+are the mixed canonical action normalization on exact
+constrained packets and the all-marginals-equal
+canonical and coherent history test. We do not
+construct a nonlinear EYM high-frequency limit,
+a quantum state or a quantization.
+
+\paragraph{Provenance.}
+This analytical manuscript was prepared with AI assistance
+and independently checked within the project. It has not
+undergone external expert peer review.
+
+\small
+\begin{thebibliography}{12}
+\setlength{\itemsep}{2pt}
+\bibitem{leewald}
+J.~Lee and R.~M.~Wald, \emph{Local symmetries and constraints},
+J.\ Math.\ Phys.\ \textbf{31}, 725--743 (1990),
+\href{https://doi.org/10.1063/1.528801}{doi:10.1063/1.528801}.
+\bibitem{hack}
+T.-P.~Hack and A.~Schenkel, \emph{Linear bosonic and fermionic quantum gauge theories on curved spacetimes},
+\href{https://arxiv.org/abs/1205.3484}{arXiv:1205.3484}.
+\bibitem{ashtekar}
+A.~Ashtekar and T.~A.~Schilling, \emph{Geometrical formulation of quantum mechanics},
+\href{https://arxiv.org/abs/gr-qc/9706069}{arXiv:gr-qc/9706069}.
+\bibitem{tokuoka}
+T.~Tokuoka, \emph{Interaction of electromagnetic and gravitational waves in the weak and short wave limit},
+Prog.\ Theor.\ Phys.\ \textbf{54}, 1309--1317 (1975),
+\href{https://doi.org/10.1143/PTP.54.1309}{doi:10.1143/PTP.54.1309}.
+\bibitem{cdm}
+R.~R.~Caldwell, C.~Devulder and N.~A.~Maksimova,
+\emph{Gravitational wave--gauge field oscillations},
+\href{https://arxiv.org/abs/1604.08939}{arXiv:1604.08939}.
+\bibitem{anderson}
+L.~Andersson, J.~Joudioux, M.~A.~Oancea and A.~Raj,
+\emph{Propagation of polarized gravitational waves},
+\href{https://arxiv.org/abs/2012.08363}{arXiv:2012.08363}.
+\bibitem{coleman}
+S.~Coleman, \emph{Non-Abelian plane waves}, Phys.\ Lett.\ B
+\textbf{70}, 59--60 (1977),
+\href{https://doi.org/10.1016/0370-2693(77)90344-6}{doi}.
+\bibitem{guven}
+R.~G\"uven, \emph{Solution for gravity coupled to non-Abelian plane waves},
+Phys.\ Rev.\ D \textbf{19}, 471 (1979),
+\href{https://doi.org/10.1103/PhysRevD.19.471}{doi}.
+\bibitem{gst}
+M.~G\"urses, T.~\c{C}.~\c{S}i\c{s}man and B.~Tekin,
+\emph{Einstein--Yang--Mills plane waves: uniqueness and an exact curvature double copy},
+\href{https://arxiv.org/abs/2611.12204}{arXiv:2611.12204}.
+\bibitem{p29b}
+Research archive, \emph{Physical polarization of high-frequency vacuum gravity},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/29b-high-frequency-graviton-polarization}{Paper 29B}.
+\bibitem{p29c}
+Research archive, \emph{A polarization symplectic form at a fixed two-stream null-dust limit},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/29c-high-frequency-polarization-symplectic-form}{Paper 29C}.
+\bibitem{p60}
+Research archive, \emph{Gravitons distinguish non-Abelian transport at fixed local curvature},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/60-graviton-nonabelian-holonomy}{Paper 60}.
+\end{thebibliography}
+\end{document}

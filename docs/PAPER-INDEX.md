@@ -2,9 +2,9 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 88 items: 20 original research packets, six later analytical Markdown manuscripts and 53 typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 92 items: 20 original research packets, six later analytical Markdown manuscripts and 66 typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
-Numbering follows delivery order: 01–20 retain their original packet numbers; 21–73 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
+Numbering follows delivery order: 01–20 retain their original packet numbers; 21–77 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
 ## 01. Real projection recovery
 
@@ -895,3 +895,43 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** Weak/tree order under the stated ordinary low-energy contour, Ward locality and positive partial-wave inputs.
 
 [73 · Crossed dispersion from real-transfer graviton data in five dimensions](../papers/73-d5-gauss-bonnet-dispersive-reconstruction/README.md) · [PDF](../papers/73-d5-gauss-bonnet-dispersive-reconstruction/manuscript.pdf) · [TeX](../papers/73-d5-gauss-bonnet-dispersive-reconstruction/main.tex) · [Verification](../papers/73-d5-gauss-bonnet-dispersive-reconstruction/VERIFICATION.md)
+
+## 74. The Canonical Polarization Phase Space of Gravitational and Yang–Mills Wave Packets
+
+**Result.** Exact constrained linear probes on a fixed Einstein–Yang–Mills background give a normalized wavelength-rescaled physical symplectic form. Two connection-pulse orderings have the same single-cut aperture polarization matrices at leading order but opposite cross-cut coherence and calibrated optical Poisson brackets.
+
+**Scope.** Smooth pre-caustic marked laboratories; leading linear optics and a finite-mode canonical calibration, without a coupled nonlinear weak limit or quantum commutator.
+
+**Related:** 29B, 29C, 60.
+
+[74 · The Canonical Polarization Phase Space of Gravitational and Yang–Mills Wave Packets](../papers/74-eym-optical-polarization-phase-space/README.md) · [PDF](../papers/74-eym-optical-polarization-phase-space/manuscript.pdf) · [TeX](../papers/74-eym-optical-polarization-phase-space/main.tex) · [Verification](../papers/74-eym-optical-polarization-phase-space/VERIFICATION.md)
+
+## 75. Same Linear Source, Different Nonlinear Response in Einstein–Wave-Map Theory
+
+**Result.** In one fixed Einstein–wave-map theory, sources with the same free physical CCR label produce different graviton-assisted tree responses. A finite-width delay scan uniquely recovers an oriented target curvature-gradient profile; field and conjugate momentum are both needed at the intermediate cut.
+
+**Scope.** Connected retarded tree jets on an exact compact active-matter stock with one positive linear Hadamard reference; ideal exact timing data, with no recovery stability or finite-coupling positivity claim.
+
+**Related:** 09+21, 64, 65, 71.
+
+[75 · Same Linear Source, Different Nonlinear Response in Einstein–Wave-Map Theory](../papers/75-curved-target-source-timing/README.md) · [PDF](../papers/75-curved-target-source-timing/manuscript.pdf) · [TeX](../papers/75-curved-target-source-timing/main.tex) · [Verification](../papers/75-curved-target-source-timing/VERIFICATION.md)
+
+## 76. Sharp Finite-Memory Laws for Quantum Einstein–Rosen Waves
+
+**Result.** A completely positive classical simulator attains the sharp universal total memory scaling in time and precision, with a matching lower bound allowing quantum memory. One fixed smooth physical state already requires memory dimension growing linearly in time at fixed small error.
+
+**Scope.** Retained radial-mode histories with stipulated controls, physical time and counted persistent records; universal precision theorem and fixed-state time theorem are distinct.
+
+**Related:** 18, 53, 68.
+
+[76 · Sharp Finite-Memory Laws for Quantum Einstein–Rosen Waves](../papers/76-einstein-rosen-finite-memory/README.md) · [PDF](../papers/76-einstein-rosen-finite-memory/manuscript.pdf) · [TeX](../papers/76-einstein-rosen-finite-memory/main.tex) · [Verification](../papers/76-einstein-rosen-finite-memory/VERIFICATION.md)
+
+## 77. Absolute Interior-Spin Convergence on Lorentzian EPRL Edge Stars
+
+**Result.** At fixed exterior colours the standard Lorentzian EPRL internal spin sum for a single edge star converges absolutely. Undamped all-colour rank separation survives generic nearby face weights; a symmetry-selected scalar isolates a possible standard-weight witness.
+
+**Scope.** One fixed single-edge star with a closed link, including the four-to-two move. Standard-weight fine-side rank and uniform mesh refinement are open.
+
+**Related:** 38, 69.
+
+[77 · Absolute Interior-Spin Convergence on Lorentzian EPRL Edge Stars](../papers/77-lorentzian-eprl-edge-star-convergence/README.md) · [PDF](../papers/77-lorentzian-eprl-edge-star-convergence/manuscript.pdf) · [TeX](../papers/77-lorentzian-eprl-edge-star-convergence/main.tex) · [Verification](../papers/77-lorentzian-eprl-edge-star-convergence/VERIFICATION.md)

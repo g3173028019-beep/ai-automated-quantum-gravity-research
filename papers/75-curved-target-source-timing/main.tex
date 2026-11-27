@@ -1,0 +1,351 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Same Linear Source, Different Nonlinear Response in Einstein--Wave-Map Theory}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Ric}{\operatorname{Ric}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\Lie}{\mathcal L}
+\newcommand{\Rret}{G_{\rm ret}}
+\newcommand{\Radv}{G_{\rm adv}}
+\DeclareMathOperator{\tr}{tr}
+\numberwithin{equation}{section}
+\title{Same Linear Source, Different Nonlinear Response\\in Einstein--Wave-Map Theory}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give smooth source histories with identical labels in the free physical canonical commutation relation algebra, but different connected retarded responses in one fixed Einstein--wave-map theory. The background is an exact four-dimensional compact hyperbolic cosmology sourced by a rolling map into a curved target. Two matter preparations excite a transverse mode at an early target-curvature-gradient vertex. A later genuine tensor perturbation couples that mode to a marked detector through the Einstein--matter stress vertex. The nonzero cross-cut coefficient is exactly a symplectic pairing on a movable intermediate slice. The two canonical components of the transmitted mode are independently attainable, so its field value alone is not sufficient. Moving one fixed-width preparation across the early vertex leaves its free physical label and normalization unchanged; the resulting ideal timing curve determines the oriented target-curvature gradient on its specified compact support. Both vertices and all source and detector derivatives come from one marked action. The statements concern a classical response and its connected tree coefficient in one positive physical Hadamard reference, not a renormalized interacting state.
+\end{abstract}
+
+\section{Question and results}
+
+A compact physical source in a linear gauge theory is specified up to the action of its Euler operator on a compact variation. Two such representatives generate the same physical free wave and the same Weyl displacement. Their time histories can nevertheless differ before they settle to this common wave. We ask if a \emph{fixed} gravitational matter interaction, followed by one tensor probe, can distinguish such histories, and what cut data are sufficient for that measurement.
+
+We use signature $(-+++)$ and $8\pi G=1$. A mode is called transverse below when it is normal to the rolling trajectory \emph{in the matter target}; a tensor perturbation is spatially transverse and traceless, denoted TT. The readout is a real finite-width invariant source functional. Its measured response is the coefficient with one derivative in each of two independent matter drive amplitudes and one tensor drive amplitude. The experiment uses the same action throughout, with an adjustable \emph{source timing}, not an adjustable target coupling.
+
+\begin{theorem}[Fixed-theory response and physical relay]\label{thm:main}
+There is an exact compact Cauchy slab of four-dimensional Einstein--wave-map theory with a nonzero rolling matter gradient, a curved Riemannian target and a fixed oriented target-curvature-gradient profile in an early time band. One can choose two smooth, real, time-compact marked transverse preparations, a later marked tensor preparation and a marked transverse detector such that:
+\begin{enumerate}
+\item The mixed third drive derivative of the detector is nonzero. It is exactly a two-vertex retarded response with one early target-curvature-gradient vertex, one late Einstein--matter stress vertex, and a single physical transverse Green leg between them. Both external matter and tensor preparations have nonzero classes in the same free physical algebra.
+\item For any Cauchy cut in the open gap, this response is the conserved transverse symplectic pairing of the retarded early response and the advanced late response. The same coefficient at other cuts is the sum of its two same-side terms and the one causal cross term. Varying one actual marked early preparation spans the two canonical cut data of the transmitted mode. Two preparations agree on the entire transmitted field value on the cut and differ in conjugate velocity; a common later tensor and detector distinguish them.
+\item One positive quasifree physical Hadamard reference is sufficient to normalize every port. The result is the smooth, connected tree coefficient with that free causal normalization.
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Timing reconstruction at fixed free label]\label{thm:inverse}
+On the calibrated stock of Theorem~\ref{thm:main}, fix the first matter source, the tensor source, the detector and a single smooth preparation ramp of positive width. Translating the second matter preparation over a finite interval leaves its free physical CCR label and variance exactly unchanged. In one fixed nonzero-gradient theory two such timings give zero and nonzero responses. More generally, when the oriented target curvature gradient is unknown on a specified compact interval, the exact delay curve determines that gradient there. The procedure uses no vanishing-width limit and gives uniqueness, not a finite-sampling or stability result.
+\end{theorem}
+
+These statements are finite-order. In particular a coefficientwise expansion, rather than finite-source-amplitude well-posedness for the geometric marked sources, is used below.
+
+\section{Exact coupled stock and physical modes}\label{sec:stock}
+
+Let $(\Sigma,\gamma)$ be a closed orientable hyperbolic three-manifold of sectional curvature $-1$. The action is
+\begin{equation}
+ S[g,X]=\frac12\int\big(R_g-g^{ab}G_X(\partial_aX,\partial_bX)\big)\,\dd\mu_g .
+ \label{eq:action}
+\end{equation}
+Use target coordinates $(q,y)$ on $\mathbb R^2$ and the metric
+\begin{equation}
+ G=\dd y^2+A(q,y)^2\dd q^2,\qquad
+ A^2=1+\chi(y)\big(-\kappa y^2+\beta(q)y^3\big).
+ \label{eq:target}
+\end{equation}
+Here $\kappa>0$, $\chi$ is an even smooth compact bump equal to one near zero, and $\beta$ is a smooth compact profile. It is chosen nonnegative and nonzero for the first experiment, but may have either sign for the inverse theorem. With sufficiently small transverse support of $\chi$, one has $1/2\leq A^2\leq3/2$; the target is then smooth, positive and complete. The longitudinal coordinate is arclength on the unit-speed geodesic $y=0$. The transverse unit normal is $\partial_y$ there. Since the sectional curvature of \eqref{eq:target} is $K_N=-A_{yy}/A$, along this geodesic
+\begin{equation}
+ K_N(q,0)=\kappa,\qquad
+ (\nabla_{\partial_y}K_N)(q,0)=-3\beta(q).
+ \label{eq:grad}
+\end{equation}
+The normal orientation is fixed as part of the source calibration.
+
+For a positive constant $c$ take the expanding branch
+\begin{equation}
+ \bar g=-\dd t^2+b(t)^2\gamma,\qquad
+ \bar X=(q(t),0),\qquad
+ \dot b^2=1+\frac{c^2}{6b^4},\qquad b^3\dot q=c.
+ \label{eq:stock}
+\end{equation}
+It is an exact solution on any sufficiently short regular slab. In fact $\ddot b=-c^2/(3b^5)$, so
+$\Ric_{tt}=-3\ddot b/b=\dot q^2$ and
+$\Ric_{ij}=(b\ddot b+2(\dot b^2-1))\gamma_{ij}=0$.
+The map motion on the target geodesic satisfies $\ddot q+3(\dot b/b)\dot q=0$. In particular the matter gradient and its gravitational backreaction are nonzero, even before the experiments. The full linearization is coupled: the Hessian of $\bar X$ along its longitudinal direction is nonzero, and its contraction with a general metric perturbation appears in the linearized wave-map equation. Only the two indicated linear sectors decouple. The compact spatial slices remain Cauchy on the tested strip.
+
+Write $H=S''$, $C=S'''$ and $D=S''''$ at the stock, in additive metric and target-coordinate variations $Y=(g,q,y)$, and let $K\xi=\Lie_\xi\bar Y$ be the gauge derivative. We use $H$ as the symmetric Euler Hessian with a density-valued output. Relative action derivatives are taken where the relevant retarded and advanced legs overlap in a compact time slab. In particular the transverse component of the true quadratic action is
+\begin{equation}
+ \frac12\int b^3\left((\partial_t y)^2-b^{-2}|\nabla_\gamma y|^2
+                                -\kappa \dot q^2 y^2\right)\dd t\,\dd\mu_\gamma .
+ \label{eq:quad}
+\end{equation}
+It has no linearized gauge displacement, since $\bar y=0$. For a real eigenfunction $\phi$ with $-\Delta_\gamma\phi=\lambda_\phi\phi$, its homogeneous time factor solves
+\begin{equation}
+ \ddot v+3(\dot b/b)\dot v+
+          (b^{-2}\lambda_\phi+\kappa\dot q^2)v=0.
+ \label{eq:mode}
+\end{equation}
+For $\lambda_\phi=0$, in the rolling clock $q$ this is $v_{qq}+\kappa v=0$. Denote the retarded oscillator kernel in \eqref{eq:mode} by $g_\phi(t,s)$, with $\partial_t g_\phi(s+,s)=1$. For each fixed finite mode on a sufficiently short regular interval it is strictly positive for $t>s$: its smooth one-sided extension has
+$g_\phi(t,s)=(t-s)+O((t-s)^2)$ uniformly there. The Euler operator from \eqref{eq:quad} is the \emph{negative} of the oscillator operator multiplied by $b^3$, with the reference spatial density. This explains the subsequent sign of the driven solution.
+
+A synchronous metric perturbation $h_{ij}=b^2p_{ij}$ with $p$ spatial TT and with zero matter variation is another physical sector. The gauge condition in the coupled wave complex of \cite{p71} is the de Donder expression on the metric minus twice the longitudinal contraction of the matter variation. It vanishes on this TT sector (also after any temporal multiplier) and on transverse matter perturbations. The FLRW tensor equation is
+\begin{equation}
+ \ddot p+3(\dot b/b)\dot p-b^{-2}(\Delta_\gamma+2)p=0 .
+ \label{eq:tt}
+\end{equation}
+Indeed, the slice variation of $\Ric(\gamma)$ on TT tensors is $(-\Delta_\gamma-6)p/2$. The variation of the extrinsic terms in the spatial spacetime Ricci tensor is
+$2p+3b\dot b\,\dot p/2+b^2\ddot p/2$, by \eqref{eq:stock}. The mixed and normal equations vanish by the TT conditions. The wave-map equation is unchanged because the relevant extrinsic and longitudinal Hessians contract only with the trace or with a normal component. The spatial operator in \eqref{eq:tt} preserves TT on this constant-curvature slice. Thus the tensor leg is a constrained solution of the true coupled system, not a variation of an externally prescribed background.
+
+We will solve closed sourced equations in one compatible Green-hyperbolic gauge. The intertwining with the gauge and constraint waves of \cite{p71} sends a closed current to a constrained retarded or advanced solution with the stated one-sided support. We write $\Rret,\Radv$ for these solution operators (modulo gauge outside the chosen representative). There is no coupled stabilizer here: vanishing of the gauge displacement of $q$ implies $\xi^t=0$ and each remaining spatial Killing field on the compact hyperbolic slice is zero.
+
+\section{Actual marked sources and the third-order Ward identity}\label{sec:ward}
+
+Work with a single nonlinear geometric marking of nearby fields, including off-shell fields. Label the CMC cuts by the reference values $\tau(t)=-3\dot b/b$; the spatial coordinates are fixed by the near-identity harmonic map from that cut to the corresponding fixed reference slice. The target metric for this harmonic map is the induced \emph{spatial} metric at the stock cut. The reference normal variation of mean curvature has, up to its overall orientation sign, operator
+\[
+       -\Delta_{\bar\gamma_t}+3(\dot b/b)^2+\dot q^2 .
+\]
+It is invertible. The spatial harmonic-map Jacobi operator at the identity is the rough Laplacian plus the negative Ricci endomorphism, also invertible. These blocks are solved successively. The usual slice-wise elliptic implicit-function construction gives the required finite smooth jets for smooth parameter families; the cuts form an ordered family on a smaller slab. We use here the geometric CMC and spatial harmonic construction underlying \cite{am,p64}, not an assertion about a same-order Sobolev diffeomorphism-group action or global coordinate charts. Each marking jet is time-local at its specified reference slice, allowing elliptic dependence across that compact spatial slice. Finite time derivatives of variations on the slice may enter. The experiment is only spatially supported on the compact slice, not localized near an observer.
+
+Write $\Psi(Y)$ for the pullback by this marking, with $\Psi(\bar Y)=\bar Y$. Uniqueness of the geometric marking makes it invariant under near-identity diffeomorphisms trivial at the outer collars. Since the mark depends on the metric only, it also commutes with the target coordinate reflection $\iota(q,y)=(q,-y)$ as a map on fields. For any real compact temporal density $J$ with $K^*J=0$, the actual marked functional is
+\begin{equation}
+ O_J(Y)=\langle J,\Psi(Y)-\bar Y\rangle,\qquad O'_J(\bar Y)=J .
+ \label{eq:mark}
+\end{equation}
+If $Z(v)$ is the compensating vector at first order, $Z(K\xi)=\xi$ for allowed vertical variations. Write $Q_J=O_J''$ and $T_J=O_J'''$. At second order the pullback gives
+\begin{align}
+ Q_J(v,w)=\left\langle J,\,
+       -\Lie_{Z(v)}w-\Lie_{Z(w)}v
+       +\frac{\Lie_{Z(v)}\Lie_{Z(w)}+\Lie_{Z(w)}\Lie_{Z(v)}}2\bar Y
+                                      \right\rangle .
+ \label{eq:Q}
+\end{align}
+The second displacement itself multiplies $K$ and disappears by closure of $J$. This is the Taylor expansion of the actual pullback; it does not require a finite diffeomorphism to be an autonomous flow. For a transverse $v$ the metric is unchanged, so $Z(v)=0$. For a synchronous TT $v$ the variations of mean curvature and of harmonic tension both vanish, so again $Z(v)=0$. Consequently $Q_J(v,w)=0$ if both displacements vanish. There is a second useful fact: $Q_J(v,w)=0$ for \emph{arbitrary} $w$ if $J$ is metric-only and $v$ is pure transverse, because $\Lie_{Z(w)}v$ is then a pure transverse scalar variation. A metric-only $O_J$ is reflection-even; a transverse-only $O_J$ is reflection-odd, exactly at the level of the actual functionals.
+
+Use amplitudes $\mu_i$ in the same sourced action $S-\sum_{i=1}^3\mu_i O_{J_i}$. Retarded coefficients are defined at zero amplitudes with stock data in the past. Set $u_i=\Rret J_i$ and $W=\Radv J_f$; the detector is $O_{J_f}$. For distinct indices $i,j,k$ the coefficient equations are
+\begin{align}
+ Hu_i&=J_i, & HW&=J_f,\nonumber\\
+ Hu_{ij}&=-C(u_i,u_j,\cdot)+Q_i(u_j,\cdot)+Q_j(u_i,\cdot),\label{eq:second}\\
+ Hu_{123}&=-D(u_1,u_2,u_3,\cdot)-\sum_{\rm cyc}C(u_i,u_{jk},\cdot)\nonumber\\
+         &\quad+\sum_{\rm cyc}\big(Q_i(u_{jk},\cdot)+T_i(u_j,u_k,\cdot)\big).
+ \label{eq:third}
+\end{align}
+The output is the coefficient
+\begin{equation}
+ \mathcal R=\langle J_f,u_{123}\rangle+
+         \sum_{\rm cyc}Q_f(u_i,u_{jk})+T_f(u_1,u_2,u_3).
+ \label{eq:readout}
+\end{equation}
+The labels are distinct derivatives, so no multiplicity factors are implicit. The finite-order equations include, before imposing the experiment, the local fourth derivative and all source and detector contacts.
+
+For precision about closure, let $K(Y)\xi=\Lie_\xi Y$. Naturality implies the exact local sourced Noether identity
+\[
+ K(Y)^*\left[S'(Y)-\sum_i\mu_i O'_{J_i}(Y)\right]=0 .
+\]
+Upon differentiating in the drive amplitudes, each derivative hitting $K(Y)$ is multiplied by a lower Euler coefficient, zero inductively on the retarded construction. The remaining equation has closed forcing, using $K^*H=0$ at the stock. This proves iterative admissibility of the same Green prescription through \eqref{eq:third} on the relevant past-compact sources. Gauge changes transform the higher jets together; applying the invariant marked output shows independence of representative. For example, the identity at the separate cubic and Hessian levels reads
+\begin{equation}
+ \begin{split}
+ C(K\xi,v,w)&=-\langle Hv,\Lie_\xi w\rangle
+               -\langle Hw,\Lie_\xi v\rangle,\\
+ Q_J(K\xi,v)&=-\langle J,\Lie_\xi v\rangle .
+ \end{split}
+ \label{eq:ward}
+\end{equation}
+The Euler terms on actual driven legs need not vanish. No separate closure of the uncombined terms in \eqref{eq:third}, nor a quantum master identity for this model, is being assumed.
+
+\section{Isolating a nonzero two-vertex coefficient}\label{sec:nonzero}
+
+Choose positive-width time collars in this order: the first two matter source ramps, the support of $\beta(q(t))$, an open gap, the tensor source ramp, and the detector ramp. Background time is strictly monotone in $q$ and in its CMC marking. We shall later allow the second matter ramp to overlap the early vertex, but never the tensor source.
+
+Choose real solutions $u_0(t)$ of the homogeneous spatially constant transverse mode and $u_\phi(t)\phi(x)$ of a transverse eigenmode. Let $r_i=b_i^-u_i^{\rm hom}$ for $i=1,2$ be these legs multiplied by smooth nonnegative ramps from zero to one in their respective source collars. For the third leg use $h=b_T^-h^{\rm hom}$, with $h^{\rm hom}$ an actual homogeneous solution of \eqref{eq:tt}. The advanced transverse detector is $W=b_f^+u_\psi(t)\psi(x)$, with $b_f^+$ ramping from one to zero in its own collar. In the preceding notation $u_1=r_1,u_2=r_2,u_3=h$. Set
+\begin{equation}
+      J_1=Hr_1,\quad J_2=Hr_2,\quad J_3=Hh,\quad J_f=HW .
+ \label{eq:currents}
+\end{equation}
+They are smooth compact closed densities, since their legs solve the homogeneous equation off the respective ramps and $K^*H=0$. $J_3$ is metric-only. The other three are transverse. All causal labels are nonzero, since each ramp leaves a nonzero physical homogeneous wave on its free side. In particular, the tensor leg is \emph{not} of compact temporal support; its source is. It represents a genuine nonzero physical waveform after the drive.
+
+For the proof only, grade $S=S_0+\lambda B$ by a scalar $\lambda$, where $S_0$ is the reflection-even action and
+\[
+ B=-\frac12\int\chi(y)\beta(q)y^3 g^{ab}\partial_aq\,\partial_bq\,\dd\mu_g .
+\]
+The experimental action is fixed at $\lambda=1$. $B$ has zero stock jets through order two; thus $H$, the actual ports and all linear legs are independent of this grading. Its cubic is pure transverse:
+\begin{equation}
+ C_B(v,w,z)=3\int b^3\dot q^2\beta(q(t))\,v_yw_yz_y\,\dd t\,\dd\mu_\gamma .
+ \label{eq:beta}
+\end{equation}
+It is horizontal even on sourced directions, since its lower jets vanish. Its fourth derivative is local with the same temporal footprint (including derivatives of $\beta$). It vanishes on $(r_1,r_2,h,\cdot)$ because $h$ is identically zero in a neighborhood of that footprint.
+
+At $\lambda=0$, reflection reverses the two matter drives and the detector and fixes the tensor drive; hence the coefficient \eqref{eq:readout} vanishes. This uses reflection of the actual marked functionals, not just of their linear gradients. In \eqref{eq:second} the only $\lambda$-dependent part is $\lambda z$ of $u_{12}$, where
+\begin{equation}
+      F_B=-C_B(r_1,r_2,\cdot),\qquad z=\Rret F_B .
+ \label{eq:early}
+\end{equation}
+The two mixed tensor-matter legs $u_{13},u_{23}$ are independent of $\lambda$ and begin no earlier than the tensor ramp. In particular, the $Q_i(h,\cdot)$ terms on either earlier matter collar are zero because the marking is cut-local in time and $h$ is zero there. The $Q_3(r_i,\cdot)$ terms vanish by field type. In \eqref{eq:third} a $C_B$ insertion whose leg is the external tensor vanishes by field type, and one whose leg is $u_{13}$ or $u_{23}$ vanishes by support. $Q_3(z,\cdot)$ vanishes by \eqref{eq:Q}, and $Q_f(h,z)=0$ by the two zero displacements. All higher port jets are $\lambda$-independent. These statements eliminate a second $B$ insertion as well as the fourth-jet and marked-contact possibilities for this specific coefficient.
+
+Retarded--advanced adjointness now gives, exactly in the fixed theory,
+\begin{equation}
+ \mathcal R=-C_0(h,z,W)=\langle L,\Rret F_B\rangle,\qquad
+                  L=-C_0(h,W,\cdot).
+ \label{eq:isolated}
+\end{equation}
+The subscript on $C_0$ denotes the even part of the action, not removal of its gravity. The surviving cubic is precisely the stress coupling obtained by varying the transverse-gradient term of \eqref{eq:action}. For transverse $z,W$ and $h_{ij}=b^2p_{ij}$ it is
+\begin{equation}
+ C_0(h,z,W)=\int\dd t\, b(t)\int_\Sigma p^{ij}\partial_i z\,\partial_jW
+                                                  \,\dd\mu_\gamma .
+ \label{eq:stress}
+\end{equation}
+Indices of $p$ are raised with $\gamma$. Neither the volume nor the time-kinetic nor the curvature-induced quadratic mass term has a first-order synchronous TT variation. $L$ is pure transverse: reflection forces its other components to vanish. Its independent Ward closure can also be read from \eqref{eq:ward}: the two potential residuals $J_3(\Lie_\xi W)$ and $J_f(\Lie_\xi h)$ vanish by field type. Thus the early and late effective densities are closed separately in this experiment, although the terms of the general sourced Ward identity are not separately closed.
+
+To see strict nonvanishing at finite widths, take a nonzero smooth TT tensor $T$. Such tensors exist, for instance by the order-zero York projection with nonzero rank-two TT principal symbol. Among real Laplace eigenfunctions there is a pair $\phi,\psi$ with
+\begin{equation}
+        I_*=\int_\Sigma T^{ij}\,\partial_i\phi\,\partial_j\psi
+                                         \,\dd\mu_\gamma \ne 0 .
+ \label{eq:eigen}
+\end{equation}
+Otherwise the differential operator $-\nabla_i(T^{ij}\nabla_j)$ vanishes on the eigenbasis and hence on smooth functions, contradicting its nonzero principal symbol. Choose the sign of $T$ so that $I_*>0$. Set the freely specified data of \eqref{eq:tt} so that $p^{\rm hom}(t_*)=T$ at a reference time. All collars can be placed sufficiently near $t_*$ that the spatial integral against $p^{\rm hom}(t)$ stays positive, the three real transverse time factors are positive, and $g_\phi(t,s)>0$ for all relevant $t>s$. The late ramp introduces only a nonnegative factor and is one on a nonempty part of the detector's past. In this experiment \eqref{eq:early} has just the $\phi$ spatial mode, with coefficient
+\begin{equation}
+ z_\phi(t)=3\int_{s<t} g_\phi(t,s)\dot q(s)^2\beta(q(s))u_0(s)u_\phi(s)\,\dd s .
+ \label{eq:z}
+\end{equation}
+The signs follow from \eqref{eq:quad} and the minus sign in $F_B$. It is strictly positive throughout the late overlap. Equation \eqref{eq:stress} and the orientation convention give $\mathcal R<0$. All choices are finite smooth packets and bands; this is not a short-wave, point-source or zero-width limit. Strict inequalities and a finite positive gap are preserved. Thus, in particular, discarding the cross-cut diagram between the two bands would give zero instead of the actual result.
+
+\section{Canonical cut data and their necessity}\label{sec:cut}
+
+The physical transverse symplectic form on a cut at $t=s$ is
+\begin{equation}
+ \Omega_s(v,w)=\int_\Sigma b(s)^3
+        \big(v\partial_t w-(\partial_t v)w\big)\,\dd\mu_\gamma .
+ \label{eq:symp}
+\end{equation}
+For the density Hessian its variation is
+$\partial_s\Omega_s(v,w)=\langle Hv,w\rangle_{\Sigma_s}-\langle Hw,v\rangle_{\Sigma_s}$,
+by \eqref{eq:quad} and spatial integration by parts. Let $w=\Radv L$. Then $z$ and $w$ are homogeneous on an open gap cut. Integrating into the future where $w$ eventually vanishes yields
+\begin{equation}
+              \mathcal R=\Omega_s(z,w) .
+ \label{eq:relay}
+\end{equation}
+This gives exact cut independence on the gap with the same physical charge. More generally split the smooth effective densities at any cut into minus and plus parts. The characteristic split can be taken by one-sided smooth limits or by the Duhamel formula on time-integrable smooth-spatial forcing. Causality and the same Green identity give
+\begin{equation}
+ \mathcal R=\langle L_-,\Rret F_{B,-}\rangle
+     +\Omega_s(\Rret F_{B,-},\Radv L_+)
+     +\langle L_+,\Rret F_{B,+}\rangle .
+ \label{eq:split}
+\end{equation}
+There is no reversed cross term. With an overlapping smooth partition of unity both cross pieces of the algebraic expansion must be kept. These are presentations of the same external drives on a single field theory and not independent preparations on the two sides of a boundary.
+
+For more than the abstract Green identity, we show that both components of the transmitted mode can actually be varied. Fix the first source and the early nonnegative profile, and vary the two real Cauchy amplitudes of the second transverse source's homogeneous $\phi$ wave. Normalize $\phi$ in $L^2(\gamma)$. Use canonical coordinates $(x,p)=(z_\phi,b^3\dot z_\phi)$, let $U(s,t_c)$ denote the homogeneous symplectic propagator of \eqref{eq:mode}, and write $v$ for the second source's freely chosen homogeneous data at the gap cut $t_c$. Let $e_1^T$ select $x$ and $e_2$ be the unit $p$ impulse. The data of the internal response $z$ at $t_c$ are $M_cv$, where
+\begin{equation}
+ \begin{aligned}
+ M_cv&=\int k(s)U(t_c,s)e_2 e_1^TU(s,t_c)v\,\dd s,\\
+ k(s)&=3b(s)^3\dot q(s)^2\beta(q(s))u_0(s).
+ \end{aligned}
+ \label{eq:M}
+\end{equation}
+For the convention in \eqref{eq:symp},
+\begin{equation}
+ \Omega(v,M_cv)=\int k(s)\big(e_1^TU(s,t_c)v\big)^2\,\dd s>0
+                                    \quad\text{for }v\ne0 .
+ \label{eq:Gram}
+\end{equation}
+The strict inequality uses positivity of $k$ on an open interval and uniqueness for the homogeneous mode: its coordinate cannot vanish throughout an open interval unless both data vanish. Thus $M_c$ is invertible. This argument uses fixed $B$ and actual retarded source ramps of the form \eqref{eq:currents}, not altered interactions.
+
+In particular we can arrange agreement of $z$ as a field on the whole cut, with a nonzero difference only in its conjugate momentum. Just to the future that difference has a definite sign in its temporal factor. A common tensor and detector with the positive support arrangement of Section~\ref{sec:nonzero}, chosen within this short interval, distinguish the two coefficients. The comparison is in fixed drive units. Full canonical data are sufficient and the field alone insufficient for this reachable single-mode family. This is a statement about the measured internal relay, not an information-theoretic assertion about all observables of either subregion.
+
+\section{Same-label timing scan and the curvature inverse}\label{sec:inverse}
+
+Fix the first preparation, the tensor preparation and the detector. Let the support of the unknown $\beta(q(s))$ lie in a specified compact interval $[s_0,s_1]$. Use a single nondecreasing smooth function $b_{\rm p}$ equal to zero for arguments at most zero and one for arguments at least $d>0$. Its derivative $k_{\rm p}=b_{\rm p}'$ is smooth with compact support in $[0,d]$ and integral one. Translate only the second marked preparation:
+\begin{equation}
+ r_{2,\tau}(s,x)=b_{\rm p}(s-\tau)u_\phi(s)\phi(x),\qquad
+ J_{2,\tau}=Hr_{2,\tau}.
+ \label{eq:timing}
+\end{equation}
+The first source finishes before $s_0-3d$, the tensor ramp begins strictly after $s_1+3d$, and we take $\tau\in[s_0-2d,s_1+d]$. Every translated ramp finishes by $s_1+2d$; the time gap still exists. All these widths may be chosen short enough for the finite-mode sign arrangement above. For any two timings, the difference $r_{2,\tau}-r_{2,\sigma}$ is a compact smooth spacetime variation. Consequently
+\begin{equation}
+ J_{2,\tau}-J_{2,\sigma}\in H\Gamma_c,\qquad
+              [J_{2,\tau}]=[J_{2,\sigma}]\quad
+                   \text{in }\ker K^*/H\Gamma_c .
+ \label{eq:same}
+\end{equation}
+Here $\Gamma_c$ denotes compact smooth field variations. Thus every timing realizes the same free physical wave, CCR label and normalization, not just the same one-point late data. Their nonlinear $\Psi$-marked completions need not agree.
+
+The proof of \eqref{eq:isolated} still applies if the moving ramp overlaps the early vertex. All port jets remain independent of $\lambda$; $h$ is zero near every matter source collar, including the translated collars. Both $u_{i3}$ start in the strictly later tensor ramp. Hence the possible terms $C_B(r_i,u_{j3},\cdot)$ and $D_B(r_1,r_{2,\tau},h,\cdot)$ still vanish. The only $\lambda$-dependent lower leg is $z_\tau=-\Rret C_B(r_1,r_{2,\tau},\cdot)$ and its two potential marked contacts vanish as before. This shows why the same-label property of \eqref{eq:same} cannot itself justify erasing changes of the nonlinear ports.
+
+Define $I(t)=\int_\Sigma p^{ij}(t)\partial_i\phi\,\partial_j\psi\,\dd\mu_\gamma$ and let $W_\psi$ be the time factor of $W$. Combining \eqref{eq:z} with the late vertex gives the exact timing coefficient
+\begin{align}
+ \mathcal R(\tau)&=-\int K_*(s)\beta(q(s))\,b_{\rm p}(s-\tau)\,\dd s,\label{eq:scan}\\
+ K_*(s)&=3\dot q(s)^2u_0(s)u_\phi(s)
+       \int_{t>s}b(t)I(t)W_\psi(t)g_\phi(t,s)\,\dd t .
+ \label{eq:weight}
+\end{align}
+The late integrand is nonnegative and strictly positive on a nonempty time interval for every $s$ in the compact early band. Thus $K_*(s)>0$ throughout that band. The stock, Hessian and ports fix $K_*$ independently of $\beta$. With fixed nonnegative nonzero $\beta$, $\tau=s_0-2d$ gives a nonzero response and $\tau=s_1+d$ gives zero, though the two free labels in \eqref{eq:same} are identical.
+
+Finally put $f(s)=K_*(s)\beta(q(s))$. With $\check k_{\rm p}(x)=k_{\rm p}(-x)$, differentiating \eqref{eq:scan} gives
+\begin{equation}
+          \mathcal R'(\tau)=(f*\check k_{\rm p})(\tau),\qquad
+          \supp\mathcal R'\subset[s_0-d,s_1].
+ \label{eq:conv}
+\end{equation}
+The finite measurement interval contains this whole support even as it keeps all ramps away from the tensor source. For two profiles with the same delay data, taking a Fourier transform of their derivative difference gives $\widehat{f_1-f_2}=0$ on a neighborhood of the origin, because $\widehat{k_{\rm p}}(0)=1$. Compact support makes the transform entire, giving $f_1=f_2$. Division by the positive calibrated $K_*$ and monotonicity of $q$ recover $\beta(q)$ and hence \eqref{eq:grad}. No analytic assumption on the ramp or on the profile was used. The inversion uses ideal exact delay data and asserts neither numerical stability nor recovery of the full target metric.
+
+\section{Physical quantization scope and prior work}\label{sec:scope}
+
+The compact positive Hadamard theorem for linearized Einstein wave maps \cite[compact Cauchy theorem]{p71} applies at the exact stock \eqref{eq:stock} with the full coupled Hessian, not only at the decoupled mode equations. Use one centered positive quasifree reference $\omega$ on its reduced physical CCR algebra. Each real port has nonzero causal class and finite positive variance. Strict positivity follows from positivity of the covariance and nondegeneracy of the real symplectic pairing: a zero-norm label would pair trivially with every real label. In CCR units $\hbar=1$ let $N_J=\sqrt{\omega(\widehat\Phi(J)^2)}$; if the formal $\hbar$ is kept in the free CCR, this formula for $N_J^2$ uses variance divided by $\hbar$. The normalized connected response is $\mathcal R/(N_{J_1}N_{J_2}N_{J_3}N_{J_f})$ when the four probes are calibrated in these units. Those factors are independent of the cut, and in \eqref{eq:same} $N_{J_2}$ is exactly the same for all timings.
+
+The quantum interpretation is the leading connected tree symbol of the retarded response, normalized to the classical M\o ller map. In the surviving term all external factors are smooth responses of physical sources and there is just one internal retarded Green distribution, joining separated temporal bands. The coefficient requires no coincident loop contractions or product of singular kernels. Marked contact derivatives are evaluated against the displayed smooth legs; no operator for arbitrary nonlinear slice-elliptic observables is inferred. A smooth change of the common Hadamard covariance affects the choice of variance units, not the unnormalized tree pairing. The result gives neither an interacting positive state nor a renormalized matter-gravity master identity beyond the stated tree level.
+
+Retarded factorization and the Action Ward Identity are standard \cite{df}; the general gravity M\o ller and BV setting, with field-dependent coordinates, is developed in \cite{bfr}. Smooth-boundary quantum BFV terms are treated in \cite{rs}; the cut here is movable bookkeeping in the interior, not an independent physical boundary. Covariant multifield cosmology has the transverse curvature mass and the derivative-of-curvature cubic \cite[Sec.~4.2, Eqs.~(59) and (64)]{gong}; the tensor--scalar stress vertex is familiar \cite[Secs.~3--4]{mal}, as are gravitationally mediated two-cubic signals \cite{ssv}. Active higher-order measurements in Einstein--scalar and nonlinear Lorentzian wave theory are established in \cite{klou,klu}. The inverse of Section~\ref{sec:inverse} is narrower in geometry and locality. Its specific content is reconstructing an oriented target-curvature gradient with a fixed-width family of identical-free-label sources and a single calibrated tensor readout.
+
+Within the associated series, Paper 09+21 concerns physical free coupled states and modular kernels, Paper 64 a one-vertex marked Einstein--scalar response with source contacts, Paper 65 a pure Einstein sourced BRST charge and finite graviton transition, and Paper 71 the free positivity construction for genuine wave maps \cite{p0921,p64,p65,p71}. The present result keeps the physical reference of that last construction, but it measures a \emph{separated two-vertex} sourced response in a single exact curved-target theory and tests what is lost by retaining only the free source label or only one of the two canonical cut data.
+
+\begin{thebibliography}{99}
+\bibitem{am} L. Andersson and V. Moncrief,
+Elliptic-hyperbolic systems and the Einstein equations,
+\emph{Ann. Henri Poincar\'e} \textbf{4}, 1--34 (2003).
+\href{https://arxiv.org/abs/gr-qc/0110111}{arXiv:gr-qc/0110111}.
+\bibitem{df} M. D\"utsch and K. Fredenhagen,
+Causal perturbation theory in terms of retarded products, and a proof of the Action Ward Identity,
+\emph{Rev. Math. Phys.} \textbf{16}, 1291--1348 (2004).
+\href{https://arxiv.org/abs/hep-th/0403213}{arXiv:hep-th/0403213}.
+\bibitem{bfr} R. Brunetti, K. Fredenhagen and K. Rejzner,
+Quantum gravity from the point of view of locally covariant quantum field theory,
+\emph{Commun. Math. Phys.} \textbf{345}, 741--779 (2016).
+\href{https://arxiv.org/abs/1306.1058}{arXiv:1306.1058}.
+\bibitem{rs} K. Rejzner and M. Schiavina,
+Perturbative algebraic quantum field theory with smoothened boundary (2026).
+\href{https://arxiv.org/abs/2607.13765}{arXiv:2607.13765}.
+\bibitem{gong} J.-O. Gong and T. Tanaka,
+A covariant approach to general field space metric in multi-field inflation,
+\emph{JCAP} \textbf{03}, 015 (2011).
+\href{https://arxiv.org/abs/1101.4809}{arXiv:1101.4809}.
+\bibitem{mal} J. Maldacena,
+Non-Gaussian features of primordial fluctuations in single field inflationary models,
+\emph{JHEP} \textbf{05}, 013 (2003).
+\href{https://arxiv.org/abs/astro-ph/0210603}{arXiv:astro-ph/0210603}.
+\bibitem{ssv} D. Seery, M.~S. Sloth and F. Vernizzi,
+Inflationary trispectrum from graviton exchange,
+\emph{JCAP} \textbf{03}, 018 (2009).
+\href{https://arxiv.org/abs/0811.3934}{arXiv:0811.3934}.
+\bibitem{klou} Y. Kurylev, M. Lassas, L. Oksanen and G. Uhlmann,
+Inverse problem for Einstein-scalar field equations,
+\emph{Duke Math. J.} \textbf{171}, 3215--3282 (2022).
+\href{https://arxiv.org/abs/1406.4776}{arXiv:1406.4776}.
+\bibitem{klu} Y. Kurylev, M. Lassas and G. Uhlmann,
+Inverse problems for Lorentzian manifolds and non-linear hyperbolic equations,
+\emph{Invent. Math.} \textbf{212}, 781--857 (2018).
+\href{https://arxiv.org/abs/1405.3386}{arXiv:1405.3386}.
+\bibitem{p0921} Paper 09+21, \emph{AI-Automated Quantum Gravity Research},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/09-21-coupled-modular-kernel}{coupled modular-kernel dossier}.
+\bibitem{p64} Paper 64, \emph{A sourced mixed Einstein--scalar response on a compact Cauchy slab},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/64-active-einstein-scalar-mixed-response}{archive}.
+\bibitem{p65} Paper 65, \emph{A Sourced BRST Cut Charge and a Finite Graviton Transition on Compact Milne},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/65-sourced-brst-cut-graviton-transition}{archive}.
+\bibitem{p71} Paper 71, \emph{Positive Hadamard States for Linearized Einstein Wave Maps},
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/71-hadamard-states-einstein-wave-maps}{archive}.
+\end{thebibliography}
+\end{document}

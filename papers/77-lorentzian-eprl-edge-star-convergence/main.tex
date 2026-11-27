@@ -1,0 +1,255 @@
+\documentclass[11pt]{article}
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.02in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rank}{rank}
+\newcommand{\SU}{\operatorname{SU}(2)}
+\newcommand{\SL}{\operatorname{SL}(2,\mathbb C)}
+\newcommand{\Hh}{\mathbb H^3}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left|#1\right|}
+\title{Absolute Interior-Spin Convergence on\\Lorentzian EPRL Edge Stars\\[3pt]
+\large The full four-to-two amplitude and the scope of rank separation}
+\author{}
+\date{}
+\hypersetup{pdfauthor={},pdftitle={Absolute Interior-Spin Convergence on Lorentzian EPRL Edge Stars}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove absolute operator-norm convergence of the ordinary Lorentzian EPRL spin sum on a finite simplicial star of one internal edge, at arbitrary fixed exterior spins and with one factor \(2s+1\) per closed face. For the four-to-two Pachner move the tail past spin \(L\) is \(O((1+L)^{-1})\), uniformly in the real Immirzi parameter. For a connected closed simplicial link with \(v\) vertices and Euler characteristic \(\chi\), the shell at minimum spin \(n\) is \(O((1+n)^{3\chi-2v})\). The proof uses an exact uniform trace-norm bound on a lowest-type Lorentz boost and the single large-spin triangle in each four-simplex vertex; no booster, saddle or virtual-spin truncation is imposed. For the four-to-two move the full fine-side rank persists under generic dimension powers and under arbitrarily small changes to the spin-zero face weight alone. At the ordinary face weights, rank separation remains open. At exterior spin \(1/2\), symmetry isolates a single scalar whose nonvanishing would distinguish the marked fine and coarse maps even without a full rank calculation.
+\end{abstract}
+
+\section{Introduction and conventions}
+Fixed-colour Lorentzian vertex integrability and convergence of a sum over interior colours are different questions. The former can be obtained from connectivity of the local vertex graph \cite{EP,Kaminski} but gives no summable bound as its colours grow. This paper proves a uniform large-colour estimate for one explicit class of foams of the ordinary Lorentzian EPRL model \cite{EPRL,Barrett}. Its simplest member is the four-side of the four-to-two move; all noncompact variables and all internal colours on this side are included.
+
+The Lorentzian fixed-colour calculation in \cite{Archive69} controls removal of the noncompact and boost regulators along a specified joint path and gives a rank obstruction when the four internal colours of the four-to-two move are fixed to zero. The present convergence theorem supplies the missing colour tail for this family of kernels. It does not transfer that zero-colour rank to the physical unrestricted sum. The compact Euclidean rank test in \cite{Archive38} uses a different measure, corrected Euclidean edges and prescribed resolved sectors, rather than the Lorentzian principal series. Pachner calculations in the Riemannian holomorphic model \cite{Banburski,Chen} derive different amplitude and power-counting formulae using a truncation in that model. In the Lorentzian model, Don\`a's analysis of infrared scaling and its three-stranded four-vertex example \cite{Dona}, numerical two-vertex propagator corrections \cite{DonaFW}, and the self-energy study \cite{Riello} address different amplitudes or estimates. Our result is a fixed-exterior estimate on the exact EPRL vertices of an edge star, not an assertion of convergence for general Lorentzian foams.
+
+Put \(G=\SL\), \(K=\SU\), and \(o=K\in G/K=\Hh\), with sectional curvature \(-1\). Haar probability on \(K\) and one fixed Haar normalization on \(G\) are used throughout. Write \(r(g)=d(o,go)\); in \(g=k_1a_rk_2\), \(a_r=\operatorname{diag}(e^{r/2},e^{-r/2})\). For \(s\in\tfrac12\mathbb N_0\) put \(d_s=2s+1\), take the unitary principal series \(U_{(\rho,s)}\), \(\rho=\gamma s\), and denote the isometric embedding of its minimum compact type by \(Y_s\). The transfer is
+\[
+ T_s(g)=Y_s^*U_{(\rho,s)}(g)Y_s,\qquad
+ T_s(g^{-1})=T_s(g)^* .
+\]
+At a four-simplex, the \(K_5\) on tetrahedra contributes these tensors on its ten triangle links: a link with endpoints \(u,w\) contributes \(T_s(g_u^{-1}g_w)\), with the appropriate dual legs. Compact invariant tensors are inserted at the nodes and one group variable is omitted. We use the identity in each orthonormal internal compact intertwiner space, one \(d_s\) per closed face, and orthonormal exterior spin-network slots. In the convention of \cite{Archive69}, an exterior face with \(b\) open link occurrences carries \(d_s^{1-b/2}\); exterior factors are constant in the internal summation. Spin zero keeps the link: \(T_0(g)=\Xi(r(g))\), \(\Xi(r)=r/\sinh r\), a spherical principal coefficient, not the constant trivial-representation coefficient. No proper-vertex projection is used.
+
+\section{One star, one spin scale}
+Let \(A=\{a_0,a_1\}\) be a primal edge and let \(\mathcal L\) be a fixed, finite connected closed simplicial surface. Consider the join \(A*\mathcal L\). For the usual four-manifold edge star the link is \(S^2\); the same definitions on other closed links are combinatorial, with compatible oriented dual edge pairings stipulated. The internal triangles are \(A b\) for the link vertices \(b\); denote their spins by \(x_b\). The internal tetrahedra are \(A e\) for the link edges \(e\); the four-simplices are \(A\tau\) for the link triangles. Every other triangle colour is fixed. Denote the link counts by \(v,e,f\) and its Euler characteristic by \(\chi\).
+
+Fix the exterior colours \(\boldsymbol j\), and identify the boundary tensor with an operator by splitting the exterior tetrahedra into the \(a_0\)- and \(a_1\)-halves with the corresponding dualizations. Write \(K_{\boldsymbol x}\) for the full contribution of one internal colour tuple, including face factors and all internal orthonormal intertwiner sums. Let \(n=\min_b x_b\).
+
+\begin{theorem}[Absolute edge-star spin sum]\label{thm:all}
+For the model just specified and every real \(\gamma\), the kernel \(K=\sum_{\boldsymbol x}K_{\boldsymbol x}\) exists in absolute operator norm. More precisely,
+\[
+ \sum_{\min x_b=n}\norm{K_{\boldsymbol x}}_{\op}
+ \le C_{\mathcal L,\boldsymbol j}(1+n)^{\,v-3f/2}
+ =C_{\mathcal L,\boldsymbol j}(1+n)^{\,3\chi-2v}.
+\]
+The constant is uniform in real \(\gamma\). Truncating at \(\max x_b\le L\) thus gives an operator-norm tail \(O_{\mathcal L,\boldsymbol j}((1+L)^{1+3\chi-2v})\). For the tetrahedral sphere of the four-to-two move \(v=f=4\), yielding the tail \(O_{\boldsymbol j}((1+L)^{-1})\).
+\end{theorem}
+
+There are only boundedly many admissible tuples for each \(n\). In fact \(Ae\), with endpoints \(b,c\) of \(e\), has two exterior spins \(j_1,j_2\) and the internal pair \(x_b,x_c\). Admissibility requires an intermediate spin \(\ell\) common to \(j_1\otimes j_2\) and \(x_b\otimes x_c\). Thus \(\abs{x_b-x_c}\le j_1+j_2\), and the number of local choices of \(\ell\) is bounded by the fixed small pair. Along a path in the connected link graph this bounds every \(x_b-n\) by a constant depending only on that graph and the exterior colours. A bounded half-integer interval admits only finitely many offsets regardless of \(n\). If all exterior colours are \(j\), the \(4\)-to-\(2\) link is the tetrahedral graph; then \(\abs{x_b-x_c}\le2j\) and \(x_b-x_c\in\mathbb Z\) for every pair. In particular no four independent unbounded spin directions occur in that move.
+
+\section{Uniform bounds on the compressed boost}
+For fixed \(s\), compact covariance and the normalized homogeneous-spinor realization \cite[Sec.~2]{Barrett} give
+\begin{equation}\label{eq:spherical}
+ \norm{T_s(g)}_{\op}\le \min(1,d_s\Xi(r(g))).
+\end{equation}
+Indeed, on the compact sphere the pointwise sum of squared norms of an orthonormal minimal-type basis is constant \(d_s\), by compact covariance and integration. A unit minimal section is thus bounded by \(\sqrt{d_s}\). Integrating the absolute compact-picture boost multiplier then gives
+\(\tfrac12\int_{-1}^{1}(\cosh r+z\sinh r)^{-1}\dd z=\Xi(r)\).
+The product of the two section bounds is \(d_s\). Compression of a unitary supplies the independent bound by \(1\).
+
+\begin{lemma}[Uniform Schatten bounds]\label{lem:boost}
+At rapidity \(r>0\), uniformly in real \(\rho\),
+\begin{align}
+ \norm{T_s(g)}_1 &\le \min\{d_s,4/\sinh^2(r/2)\}, &&s\ge\tfrac12, \label{eq:trace}\\
+ \norm{T_s(g)}_{\mathrm{HS}}^2 &\le \min\{d_s,1/\sinh^2(r/2)\}, &&s\ge0. \label{eq:hs}
+\end{align}
+Here \(\norm{\cdot}_1\) is the trace norm, not the trace.
+\end{lemma}
+\begin{proof}
+Compact factors preserve singular values. The \(a_r\) matrix is diagonal in the usual magnetic basis, as \(a_r\) commutes with the compact diagonal torus. For \(m=-s,\ldots,s\), the squared norm of a minimal section proportional to \(z_0^{s+m}z_1^{s-m}\) has the probability density
+\[
+ p_m(u)=d_s\binom{2s}{s+m}u^{s+m}(1-u)^{s-m},\qquad
+ u=\frac{|z_0|^2}{|z_0|^2+|z_1|^2}\in(0,1).
+\]
+In \(y=\tfrac12\log(u/(1-u))\), its density is \(p_m^y(y)=C_m e^{2my}\cosh^{-2s-2}y\). The boost shifts \(y\) by \(r\), up to the inverse convention. The Jacobian square root in the compact representation turns the modulus of the integrand into the geometric mean of the original and shifted densities; the factor depending on real \(\rho\) is a phase. Translating by half this shift and using
+\(\cosh(y+r/2)\cosh(y-r/2)=\cosh^2y+\sinh^2(r/2)\) gives
+\begin{equation}\label{eq:aff}
+ |(T_s(a_r))_{mm}|
+ \le \int_0^1 p_m(u)\,[1+B u(1-u)]^{-s-1}\,\dd u,\qquad
+ B=4\sinh^2(r/2).
+\end{equation}
+This is equality at \(\rho=0\). The Bernstein binomial identity gives \(\sum_m p_m(u)=d_s\). For \(b>1\), symmetry and \(u(1-u)\ge u/2\) for \(0\le u\le1/2\) yield
+\[
+ \int_0^1[1+B u(1-u)]^{-b}\,\dd u
+ \le 2\int_0^\infty(1+B u/2)^{-b}\,\dd u
+ =\frac4{B(b-1)}.
+\]
+Summing \eqref{eq:aff} with \(b=s+1\) and using \(d_s/s\le4\) proves \eqref{eq:trace}. Squaring each expectation by Jensen before summing, with \(b=2s+2\) and \(b-1=d_s\), proves \eqref{eq:hs}. The alternative \(d_s\) bounds follow from the unitary compression.
+\end{proof}
+
+\section{The large-colour triangle and the hyperbolic integral}
+\subsection{Intertwiners and a cyclic trace}
+At an internal tetrahedron, choose the normalized compact invariant by coupling the fixed pair and the large pair through a common spin \(\ell\). For an isometric copy \(C_\ell:V_\ell\to V_x\otimes V_y^*\) of that channel, let \(X_{\ell m}:V_y\to V_x\) be the reshape of \(C_\ell|m\rangle\). The projector \(P_\ell=C_\ell C_\ell^*\) has partial traces \(d_\ell I_x/d_x\) and \(d_\ell I_y/d_y\) by equivariance, Schur's lemma and its rank \(d_\ell\). Taking the partial traces of \(\lvert C_\ell m\rangle\langle C_\ell m\rvert\le P_\ell\) gives
+\[
+ \norm{X_{\ell m}}_{\op}\;\le\;
+ \sqrt{d_\ell/\max(d_x,d_y)} .
+\]
+The normalized four-leg invariant is a sum of at most \(d_\ell\) products of small-pair and high-pair coefficients, with overall factor \(d_\ell^{-1/2}\) and unit-modulus invariant-pairing signs. Expanding the two fixed small magnetic indices and using that \(d_\ell\) is bounded gives \(O_{\boldsymbol j}((1+n)^{-1/2})\) for the high-pair matrix in each small-index term. The same bound applies after any unitary change of compact intertwiner basis, since the number of channels is bounded.
+
+At one four-simplex \(A\tau\), two tetrahedral nodes, denoted \(g,t\), are exterior and three, denoted \(h_1,h_2,h_3\), internal. Its three varying links are exactly the triangle on \(h_1,h_2,h_3\). The seven remaining links have fixed exterior colours: one \(g\)--\(t\) and six from \(g,t\) to the three \(h_i\). On fixing the finitely many low magnetic indices, the high contraction is the trace of three compressed boosts alternating with three reshaped internal tensors. Make the high links cyclic; reversing an oriented line replaces it by the appropriate dual matrix and leaves singular values unchanged. Rectangular matrices between different \(V_{x_b}\) cause no change: rotate the trace so that the selected boost is in trace norm and bound the rest in operator norm. Use \eqref{eq:trace} on any one of the three transfers and the compression bound on the other two. For \(n\ge\tfrac12\) the high contraction is thus bounded by
+\begin{equation}\label{eq:atvertex}
+ C_{\boldsymbol j}(1+n)^{-3/2}S(R),\qquad
+ R=\max_{i<j}d(h_io,h_jo),\qquad S(R)=4/\sinh^2(R/2).
+\end{equation}
+Unlike an estimate on three independent traces, this has no residual factor \(d_n\).
+
+\subsection{Integrating the majorant}
+Omit \(h_1\), set it to \(1\), and use \eqref{eq:spherical} on the seven fixed-colour links. The norm majorant is invariant in the compact variables and these integrate out. In the remaining four hyperbolic variables use \(h_1=o\), the same names for the projected points and \(r_z=d(o,z)\). It suffices to show
+\begin{equation}\label{eq:hyperint}
+ \int_{(\Hh)^4} S(R)\,\Xi(d(g,t))
+ \prod_{i=1}^3\Xi(d(g,h_i))\Xi(d(t,h_i))\,\dd g\,\dd t\,\dd h_2\,\dd h_3
+ <\infty .
+\end{equation}
+For \(R\le1\), both \(h_2,h_3\) lie in the unit ball. The singularity \(S(R)=O(R^{-2})\) is locally integrable in their six coordinates, since \(R\ge\max(r_{h_2},r_{h_3})\). Each of the three factors at \(g\) incident on an \(h_i\) is bounded by \(C(1+r_g)e^{-r_g}\), with the same bound at \(t\). Drop the bounded \(g\)--\(t\) factor. Two radial integrals with the resulting three powers of exponential decay are finite because hyperbolic volume grows as \(e^{2r}\).
+
+For \(R>1\), \(S(R)\le C e^{-R}\le C e^{-(r_{h_2}+r_{h_3})/2}\). The two \(h\) integrations are then bounded by the square of
+\[
+ I(g,t)=\int_{\Hh} e^{-r_z/2}\Xi(d(g,z))\Xi(d(t,z))\,\dd z .
+\]
+By Cauchy--Schwarz, \(I(g,t)^2\le L(g)L(t)\), where
+\(L(g)=\int e^{-r_z/2}\Xi(d(g,z))^2\,\dd z\). For a radial integrand about \(g\) and fixed \(r_z\), the hyperbolic law of cosines implies
+\begin{equation}\label{eq:angular}
+ \int_{S^2}B(d(g,z))\,\dd\Omega_z
+ =\frac{2\pi}{\sinh r_g\sinh r_z}
+   \int_{|r_g-r_z|}^{r_g+r_z} B(u)\sinh u\,\dd u .
+\end{equation}
+For \(B=\Xi^2\), the integrand on the right is bounded by \(C(1+u)^2e^{-u}\). Since radial volume is proportional to \(\sinh^2r_z\), for \(r_g\ge1\) we get
+\[
+ L(g)\le \frac{C}{\sinh r_g}
+ \int_0^\infty e^{-r_z/2}\sinh r_z\,
+ (1+|r_g-r_z|)^2e^{-|r_g-r_z|}\,\dd r_z
+ \le C'e^{-r_g/2}.
+\]
+The last bound follows by extending the integral in \(r_z-r_g\) to the real line, bounded by an integrable polynomial times \(e^{(r_z-r_g)/2-|r_z-r_g|}\). For \(r_g\le1\) the triangle inequality and \(B=\Xi^2\) give the bound directly: at large \(r_z\) the extra \(e^{-r_z/2}\) supplies the integrable decay. The remaining integral in \eqref{eq:hyperint} is therefore bounded by
+\[
+ C\int_{\Hh\times\Hh}\Xi(r_g)\Xi(r_t)\Xi(d(g,t))e^{-(r_g+r_t)/2}\,\dd g\,\dd t .
+\]
+If both radial variables exceed \(1\), apply \eqref{eq:angular} with \(B=\Xi\). Because \(\Xi(u)\sinh u=u\), its angular average is bounded by \(C(1+r_g+r_t)^2e^{-(r_g+r_t)}\). Combining it with the other two \(\Xi\)'s cancels the exponential volume growth in both variables and leaves \(e^{-(r_g+r_t)/2}\) times a polynomial. If a radial variable is bounded, the other is controlled by two \(\Xi\) decays and the displayed extra exponential. This proves \eqref{eq:hyperint}.
+
+\subsection{End of the proof of Theorem \ref{thm:all}}
+A single full noncompact vertex coefficient with unit compact intertwiners has absolute integral bounded by \(C_{\boldsymbol j}(1+n)^{-3/2}\). The finitely many \(n=0\) tuples need no trace-norm bound at \(s=0\); every colour there is bounded, so \eqref{eq:spherical} and fixed-colour \(K_5\) integrability \cite{Kaminski} apply uniformly. There are \(f\) vertices, \(v\) closed faces each with \(d_{x_b}=O(1+n)\), and a fixed finite bound on the number of internal compact labels and external matrix entries. Multiplying and summing gives the shell estimate. The Euler relation and \(3f=2e\) yield \(v-3f/2=3\chi-2v\). Any ordinary connected closed simplicial surface has \(v\ge4\) and \(\chi\le2\), so this exponent is at most \(-2\). Since \(\max x_b\) differs from \(n\) by at most a fixed constant, summing the shells gives the stated tail. The estimate holds as well with fixed internal insertions whose operator norms are uniformly bounded in the colours: they only multiply a fixed finite number of compact matrix entries per tuple.
+
+\begin{corollary}[Cutoffs and dimension powers]\label{cor:cutoff}
+The ordinary kernel is independent of the order in which an exhausting family of spin cutoffs is removed. It is also the limit of bounded heat or Abel face damping as the damping tends to zero. If each closed face factor is replaced by \(d_s^\mu\), the spin-summed kernel is holomorphic in \(\mu\) in the half-plane
+\[
+ \operatorname{Re}\mu<\frac{3f/2-1}{v}.
+\]
+\end{corollary}
+\begin{proof}
+Absolute norm convergence gives the first two claims by domination. A shell now has bound \(C(1+n)^{v\operatorname{Re}\mu-3f/2}\), uniformly on compact subsets of the stated half-plane, so the matrix-valued series is normally convergent there. The bound is sufficient, not a divergence criterion outside that half-plane.
+\end{proof}
+
+For example, suppose a fixed-colour approximation including its face factors has a uniform error \(C_{\gamma,\mathcal L}D^p(1+\log N)N^{-\beta}\) for all colour dimensions bounded above by \(D\), with \(N\) its regulator parameter and \(\beta>0\). This is the form of the joint radial, boost and quadrature estimate of \cite{Archive69}. There are only \(O(1+L)\) admissible tuples up to \(L\), so one can take \(L=N^a\) with \(0<a<\beta/(p+1)\) and converge to the exact unrestricted kernel. This is a sufficient \emph{joint} path. It does not authorize sending the radial cutoff to infinity at fixed finite boost dimension, or give uniformity over a sequence of different link triangulations.
+
+
+\section{Rank in nearby all-spin models}
+For the four-to-two move put \(B=\{b_1,b_2,b_3,b_4\}\). The four fine simplices are \(A\cup(B\setminus\{b_i\})\); the two coarse ones are \(\{a_0\}\cup B\) and \(\{a_1\}\cup B\). The common boundary has four tetrahedra in each apex half. Set all exterior spins equal to \(j>0\), and use the common boundary inner product and the fixed marked apex split. Each half is \(I_j^{\otimes4}\), with \(I_j=\Inv_K(V_j^{\otimes4})\) and \(\dim I_j=d_j\), since the intermediate spins of a \(2+2\) split range from \(0\) to \(2j\) with multiplicity one. The coarse map \(K_2\) factors through the single common tetrahedron \(B\), hence \(\rank K_2\le d_j\). There are no closed interior faces on the coarse side.
+
+\subsection{The zero-colour input}
+Write \(K_{\boldsymbol 0}\) for the fine contribution with all four internal spins zero. The fixed-colour rank theorem of \cite{Archive69} states it has rank \(D=d_j^4\) at \(j=1/2,1\) for every real \(\gamma\); for each larger fixed \(j\), the sufficient condition used there excludes at most a discrete set in real \(\gamma\). We recall the argument to clarify the role of the rank input.
+
+For a zero tuple each internal tetrahedral invariant is the normalized identity on the two \(j\) legs (the other legs are one-dimensional). At one vertex orient the direct link and the three two-link paths between its exterior nodes from one apex to the other and take the two exterior slots as Hilbert duals. The direct factor is \((U_j(g)Y_j)^*U_j(t)Y_j\) and the three compositions are \(T_j(h_i^{-1}g)^*T_j(h_i^{-1}t)\). For \(h=(1,h_2,h_3)\) define the map
+\[
+ Q_h=\int_G \big[(U_j(g)Y_j)\otimes T_j(h_1^{-1}g)\otimes
+             T_j(h_2^{-1}g)\otimes T_j(h_3^{-1}g)\big]\big|_{I_j}\,\dd g .
+\]
+For \(h\) in a compact set three fixed-colour decays in \(g\) make this norm-convergent and continuous in \(h\). At fixed \(h\) the two apex integrations give \(Q_h^*Q_h\); the remaining integral has the strictly positive weight \(\prod_{i<k}\Xi(r(h_i^{-1}h_k))\) and factor \(d_j^{-3/2}\). Absolute fixed-colour integrability justifies this grouping. Thus the local matrix \(M_j\) is positive, and is strictly positive if \(Q_{(1,1,1)}\) is injective. Project its first output to the minimum compact type and compress all four outputs to \(I_j\); this gives
+\[
+ D_j=P_{I_j}\int_G T_j(g)^{\otimes4}\,\dd g\big|_{I_j}.
+\]
+The outer compact rotations drop out. On magnetic weight-zero tuples, a compact Weyl half-turn gives \(f_{-m}=\overline{f_m}\) for \(f_m=(T_j(a_r))_{mm}\). For \(j=1/2\) or \(1\), the products of the four \(f_m\)'s are consequently nonnegative and strictly positive for small rapidities, where \(f_m(0)=1\). Thus \(D_j>0\) and continuity of \(Q_h\) gives \(M_j>0\). For general fixed \(j\), at \(\rho=0\) the coefficients \(f_m\) are strictly positive by \eqref{eq:aff}. They admit a continuation bounded by \(d_j\Xi(r)e^{|\operatorname{Im}\rho|r}\) since the logarithm in the principal phase has absolute value at most \(r\). Thus \(D_j\) is holomorphic on \(|\operatorname{Im}\rho|<1/2\) (four decays with volume growth \(e^{2r}\)), and its determinant is nonzero at \(\rho=0\). On the real line its possible zeros are isolated. Finally the four fine vertices give four copies of \(M_j\), up to a fixed nonzero scalar and the common boundary dual conventions, because the six internal edge channels are now one-dimensional. This recovers the stated \(K_{\boldsymbol 0}\) input without claiming positivity of the unrestricted sum.
+
+\clearpage
+\subsection{Two undamped weight families and endpoint control}
+\begin{theorem}[Full fine rank for generic nearby weights]\label{thm:rank}
+Fix \(j,\gamma\) for which \(K_{\boldsymbol 0}\) is invertible. With the above boundary normalization, the exact all-spin fine map has rank \(D\) in each of the following cases:
+\begin{enumerate}
+\item For real dimension powers \(d_s^\mu\), \(\mu<5/4\), outside a discrete exceptional set. The ordinary weight is \(\mu=1\); the theorem does not exclude this single value from the set.
+\item With ordinary weights at every positive spin and weight \(1+\eta\) at spin zero alone, \(\eta>-1\), outside a finite exceptional set of at most \(4D\) values. In particular this holds for every sufficiently small nonzero \(\eta\), whether or not the standard value \(\eta=0\) is exceptional.
+\end{enumerate}
+In either case the coarse map retains rank at most \(d_j\). At each nonexceptional parameter a sufficiently close operator-norm approximant has the same fine rank.
+\end{theorem}
+\begin{proof}
+Keep the exterior normalization unchanged. By Corollary~\ref{cor:cutoff}, the dimension-family determinant is holomorphic in \(\operatorname{Re}\mu<5/4\). As \(\mu\to-\infty\) along the real axis the kernel converges to \(K_{\boldsymbol 0}\) by domination by the standard absolute majorant: each tuple other than \(\boldsymbol 0\) has some \(d_s>1\). The determinant therefore cannot vanish identically. Its zeros are isolated even near \(\mu=1\), which is an interior analytic point.
+
+In the second family a tuple with \(z\) zero faces receives an extra factor \((1+\eta)^z\). Every tuple affected by \(\eta\) contains a zero and hence has all spins at most \(2j\), by the six tetrahedral pair constraints. The all-spin kernel is a polynomial in \(\eta\) of degree four: its coefficient at \(\eta^4\) is precisely the unique all-zero term \(K_{\boldsymbol 0}\). Consequently the determinant has exact degree \(4D\) with leading coefficient \(\det K_{\boldsymbol 0}\ne0\). This perturbation changes a single local face weight and does not remove or damp any positive-spin tuple. All-spin fine rank and coarse rank follow; a strictly positive least fine singular value at each nonexceptional parameter gives openness under operator-norm perturbation.
+\end{proof}
+
+For comparison the determinant with an extra heat weight \(e^{-t\sum_b x_b(x_b+1)}\) is holomorphic only for \(\operatorname{Re}t>0\) by this argument. It is nonzero for sufficiently large positive \(t\) and, on the positive axis, fails full rank at most at isolated points. The convergence as \(t\downarrow0\) is in norm, with error \(O(\sqrt t)\) from the shell estimate and the split at \(n\sim t^{-1/2}\). A linear Abel exponent gives the analogous \(O(t\log(1/t))\) estimate. Neither limit excludes cancellation at the standard point. A direct sufficient endpoint test would be \(s_{d_j+1}(K_{\le L})>C_j/(1+L)\) with a certified bound on the actual tail constant, where \(s_a\) denotes the \(a\)-th singular value. We do not establish this inequality.
+
+\section{A marked scalar test at exterior spin \texorpdfstring{\(1/2\)}{1/2}}
+Use \(j=1/2\) and the actual even-permutation action of \(A_4\) on the four \(b_i\), fixing the apices. The equivariance assertion uses the standard directed duals, reflected on the incoming half. It does not compare maps after arbitrary independent changes of the boundary marks. On the fine graph choose the orientation of each local high triangle given by the oriented face of \(\partial B\), and all seven low links along the direct and subdivided paths from the first exterior node to the second. Even permutations of \(B\) preserve this arrangement; they permute the directed dual tensors, the closed faces and the edge pairings. On the two-side simplex choose the four links meeting the common tetrahedron coherently and the remaining six links in increasing order of exterior tetrahedron index. An even permutation reverses an even number of these six arrows. With directed duals the pairing is relabelled intrinsically; with the self-dual spin-\(1/2\) bilinear convention a reversed link contributes its skew sign, and their product is \(+1\). Consequently both coarse incidence maps intertwine the apex and seam actions. The same claims follow with any consistent transport of this orientation/duality convention through the common boundary identification.
+
+\begin{proposition}[A one-dimensional endpoint diagnostic]\label{prop:A4}
+At \(j=1/2\) each apex half has exactly one \(A_4\)-invariant line, whereas the coarse seam has none. The coarse matrix element between the two invariant lines is exactly zero. In the fine spin-zero term this scalar is nonzero. For the unrestricted fine sum it is well-defined; if nonzero at the ordinary weights it would distinguish the two marked maps. No conclusion on this scalar at the ordinary weights is obtained here.
+\end{proposition}
+\begin{proof}
+The coarse seam \(\Inv(V_{1/2}^{\otimes4})\) is the Schur--Weyl \([2,2]\) representation of \(S_4\), with traces \(2,2,-1\) on identity, double transpositions and \(3\)-cycles. One can also obtain these traces from the three singlet-pair partitions with their single linear relation. Their average over \(A_4\) is zero. For apex \(a_\alpha\), the factor \(I_i\cong I_{1/2}\) belongs to the tetrahedron \(\{a_\alpha\}\cup(B\setminus\{b_i\})\). Mark one slot by the boundary triangle \(B\setminus\{b_i\}\), and its three other slots by \(b_k\) for \(k\ne i\), corresponding to \(\{a_\alpha\}\cup(B\setminus\{b_i,b_k\})\). A permutation \(p\) takes factor \(I_i\) to \(I_{p(i)}\) and marks \(b_k\) to \(b_{p(k)}\); it sends the distinguished slot to the distinguished slot. The trace of a tensor-factor permutation with return maps on a cycle is the trace of the composite around that cycle: in a product basis, summing the successive matrix elements contracts all intermediate indices. On an apex half the identity trace is \(2^4=16\); a double transposition has two length-two cycles, each with identity return and trace \(2\), so its trace is \(4\). A \(3\)-cycle contributes \(2\) on its cycled factors and trace \(-1\) at its fixed tetrahedron, because there it acts by a \(3\)-cycle on three side face slots with the fourth fixed. Thus the apex character on the indicated class types is \((16,4,-2)\), including both \(3\)-cycle conjugacy classes. Its invariant multiplicity is \((16+3\cdot4-8\cdot2)/12=1\).
+
+Let \(u_0,u_1\) be unit vectors on the two lines using matched reflected coordinates. The coarse factorization through a seam with no invariant vectors yields \(\langle u_1,K_2u_0\rangle=0\). In the reflected zero tuple the tensor product of positive local matrices gives a nonzero value, positive after a common phase convention. Theorem~\ref{thm:all} makes \(\langle u_1,K u_0\rangle\) a convergent scalar. Under the weight change of Theorem~\ref{thm:rank}, it is a degree-four polynomial whose leading coefficient is just the nonzero zero-tuple value, so at most four values of \(\eta\) can kill it. This argument does not decide the scalar at \(\eta=0\).
+\end{proof}
+
+The scalar is a sufficient witness of inequivalence of the marked equivariant maps if it is nonzero. It is neither a proof that the fine rank exceeds two nor a necessary test for a rank difference. It also cannot be reduced to a finite selection rule by admissibility alone: adding the same half-integer to every internal spin preserves all pair differences and integrality of their sums, while increasing their upper allowed intermediate spin. Thus the same compact intermediate channels can recur at arbitrarily high spin. The unresolved value is a signed all-spin matrix element.
+
+\section{Why direct positive sewing does not give endpoint rank}
+One can resolve the six normalized interior edge identities as compact Haar projectors onto invariants, with duals as dictated by the oriented legs. At coincident Lorentzian normals, the four scalar internal face weights for a fixed tuple are the four compact characters of its dual \(K_4\) triangular holonomies, times positive dimensions. Take all four internal colours to be \(1/2\), which is admissible with \(j=1/2\). In one torus give the oriented dual edges \(12,13,14\) angle zero, \(23,34\) angle \(-\pi/3\), and \(24\) angle \(+\pi/3\). The increasing cycles \(123,124,134,234\) then have angles \(-\pi/3,+\pi/3,-\pi/3,-\pi\). Their fundamental characters are \(1,1,1,-2\). This product is negative, and its real part is negative in an open neighborhood by continuity. Thus the native fixed-colour face integrand lacks the positive spherical measure of the zero tuple. This is not a statement that a final integrated matrix is indefinite.
+
+There is also an obstruction independent of fixing a single colour. Fix \(r>0\) and real \(\gamma\). There is no finite positive compact measure whose Fourier coefficients are \(T_s(a_r)\) for all \(s\) with \(\rho=\gamma s\). To see this, let \(T\subset K\) be the diagonal torus. Along even integer spins the compact coefficient \(D^s_{00}(k)=P_s(\cos\beta(k))\) tends to the indicator of \(N(T)\), where \(\beta\) is the angle through which \(k\) moves the north-pole direction. Indeed \(P_s(\pm1)=1\) for even \(s\), and the integral representation
+\[
+ P_s(\cos\beta)=\pi^{-1}\int_0^\pi
+   (\cos\beta+i\sin\beta\cos\theta)^s\,\dd\theta
+\]
+gives decay for \(0<\beta<\pi\) by dominated convergence. But the actual \((T_s)_{00}\) tends to zero, since the beta law in \eqref{eq:aff} concentrates near \(1/2\) and its integrand there decreases exponentially. The putative positive measure must give \(N(T)\), hence \(T\), zero mass. Its extremal Fourier coefficient \(D^s_{ss}(k)=k_{11}^{2s}\) would then tend to zero by domination, as \(|k_{11}|<1\) off \(T\).
+
+In the homogeneous-spinor boost the extremal coefficient is instead
+\[
+ (T_s(a_r))_{ss}
+ =\int_0^1d_s u^{2s}e^{sr}
+ (e^r u+e^{-r}(1-u))^{-s-1+i\gamma s}\,\dd u
+\]
+in a convention where reversing the principal phase conjugates this formula. With \(q=1-e^{-2r}\) and \(x=d_s(1-u)\), after removing \(e^{i\gamma sr}\) the integrand has factor
+\(e^{-r}(1-x/d_s)^{2s}(1-qx/d_s)^{-s-1+i\gamma s}\) on \(0\le x\le d_s\). Its modulus is bounded by \(e^{-r}(1-x/d_s)^{s-1}\le e^{-r}e^{-x/4}\) for large \(s\). Its integral therefore tends to \(e^{-r}/(1-q/2+i\gamma q/2)\), which is nonzero. This contradiction rules out the stated compact positive measure. The bounded matrix coefficients define a compact distribution, and a positive compact distribution is automatically a finite positive measure (test against a constant sup-norm bound), so admitting distributions does not restore this positivity. The argument rules out treating each compressed face independently as such a positive measure. It does not exclude a coupled positive representation after integrating the full seam.
+
+\section{Scope}
+The all-spin kernel on the four-side now exists at standard weights, with a controlled tail and no alteration to the ordinary local vertex. The result concerns fixed exterior blocks of finite stars of \emph{one} edge. It makes no assertion uniform in a growing boundary spin, in a sequence of link triangulations, or for overlapping stars with multiple independent unbounded spin directions. The rank statements at modified weights are exact all-spin results. The rank, noncancellation in Proposition~\ref{prop:A4}, and positivity of the integrated fine kernel at its standard weights have not been established. No Pachner invariance, continuum limit or Regge limit is inferred from the existence of this local sum.
+
+\clearpage
+\begin{thebibliography}{99}
+\bibitem{EPRL} J. Engle, E. Livine, R. Pereira and C. Rovelli, \emph{LQG vertex with finite Immirzi parameter}, Nucl. Phys. B \textbf{799}, 136--149 (2008), \href{https://arxiv.org/abs/0711.0146}{arXiv:0711.0146}.
+\bibitem{EP} J. Engle and R. Pereira, \emph{Regularization and finiteness of the Lorentzian loop quantum gravity vertices}, Phys. Rev. D \textbf{79}, 084034 (2009), \href{https://arxiv.org/abs/0805.4696}{arXiv:0805.4696}.
+\bibitem{Barrett} J. W. Barrett, R. J. Dowdall, W. J. Fairbairn, F. Hellmann and R. Pereira, \emph{Lorentzian spin foam amplitudes: graphical calculus and asymptotics}, Class. Quantum Grav. \textbf{27}, 165009 (2010), \href{https://arxiv.org/abs/0907.2440}{arXiv:0907.2440}.
+\bibitem{Kaminski} W. Kami\'nski, \emph{All 3-edge-connected relativistic BC and EPRL spin-networks are integrable}, \href{https://arxiv.org/abs/1010.5384}{arXiv:1010.5384}.
+\bibitem{Banburski} A. Banburski, L.-Q. Chen, L. Freidel and J. Hnybida, \emph{Pachner moves in a 4D Riemannian holomorphic spin foam model}, Phys. Rev. D \textbf{92}, 124014 (2015), \href{https://arxiv.org/abs/1412.8247}{arXiv:1412.8247}.
+\bibitem{Chen} L.-Q. Chen, \emph{Bulk amplitude and degree of divergence in 4d spin foams}, Phys. Rev. D \textbf{94}, 104025 (2016), \href{https://arxiv.org/abs/1602.01825}{arXiv:1602.01825}.
+\bibitem{Dona} P. Don\`a, \emph{Infrared divergences in the EPRL-FK spin foam model}, Class. Quantum Grav. \textbf{35}, 175019 (2018), \href{https://arxiv.org/abs/1803.00835}{arXiv:1803.00835}.
+\bibitem{DonaFW} P. Don\`a, P. Frisoni and E. Wilson-Ewing, \emph{Radiative corrections to the Lorentzian Engle-Pereira-Rovelli-Livine spin foam propagator}, Phys. Rev. D \textbf{106}, 066022 (2022), \href{https://arxiv.org/abs/2206.14755}{arXiv:2206.14755}.
+\bibitem{Riello} A. Riello, \emph{Self-energy of the Lorentzian Engle-Pereira-Rovelli-Livine and Freidel-Krasnov model of quantum gravity}, Phys. Rev. D \textbf{88}, 024011 (2013), \href{https://arxiv.org/abs/1302.1781}{arXiv:1302.1781}.
+\bibitem{Archive69} \emph{Controlled noncompact sewing and a fixed-colour rank obstruction in Lorentzian EPRL}, research archive, Paper 69. \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/69-lorentzian-eprl-noncompact-sewing}{Source and manuscript}.
+\bibitem{Archive38} \emph{From Euclidean tensor prices to EPRL amplitudes: A rank obstruction at the four-to-two move}, research archive, Paper 38. \href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/38-tensor-prices-eprl-boundary}{Source and manuscript}.
+\end{thebibliography}
+\end{document}
+

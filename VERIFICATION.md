@@ -200,3 +200,12 @@ The associated proof and scope checks are recorded in the paper verification pag
 - [Paper 22B verification](papers/22b-regge-airy-open-boundary/VERIFICATION.md)
 - [Paper 29C verification](papers/29c-high-frequency-polarization-symplectic-form/VERIFICATION.md)
 - [Paper 73 verification](papers/73-d5-gauss-bonnet-dispersive-reconstruction/VERIFICATION.md)
+
+## Papers 74–77: Cross-cluster release
+
+Each paper separates its derivation, internal proof checks and open extensions.
+
+- [Paper 74 verification](papers/74-eym-optical-polarization-phase-space/VERIFICATION.md)
+- [Paper 75 verification](papers/75-curved-target-source-timing/VERIFICATION.md)
+- [Paper 76 verification](papers/76-einstein-rosen-finite-memory/VERIFICATION.md)
+- [Paper 77 verification](papers/77-lorentzian-eprl-edge-star-convergence/VERIFICATION.md)
