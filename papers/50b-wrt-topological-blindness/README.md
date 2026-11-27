@@ -20,3 +20,7 @@ sha256sum -c SHA256SUMS
 ~~~
 
 The finite checks supplement, rather than replace, the analytic proof.
+
+## Companion papers
+
+[51+50B](../../papers/51-50b-wrt-cycle-gauge-discrimination/README.md) presents even-cycle and finite-gauge separation results.

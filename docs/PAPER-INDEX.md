@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Research map](RESEARCH-MAP.md) · [Reproduction](REPRODUCTION.md)
 
-The archive contains 71 items: 20 original research packets, six later analytical Markdown manuscripts and forty-five typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
+The archive contains 73 items: 20 original research packets, six later analytical Markdown manuscripts and forty-seven typeset analytical articles. The original packets contain coupled-field state-existence proofs, quantitative geometry–matter information protocols, finite algebra and geometry results, moment/reconstruction methods, boundary calibrations and a descriptive research-process study. Each entry identifies the result, the objects it concerns and the evidence supporting it.
 
 Numbering follows delivery order: 01–20 retain their original packet numbers; 21–60 continue the numbered sequence. The separately counted companions do not replace the original papers or renumber the sequence. These labels do not rank importance, enumerate the whole research corpus or imply a common model. Papers 01 and 02 are versioned revisions; merged source drafts are not additional papers. [History](../HISTORY.md) records editions, and [Declarations](../DECLARATIONS.md) records workflow and unresolved attribution.
 
@@ -689,6 +689,18 @@ The original four-field example, its one-scalar local completion, exact compact 
 **Scope.** Two Chern–Simons actions, smooth joint fibre-trace marks and the stated dormant Wilson routes. The leading comparison and selected transition laws do not assign higher angular coefficients to every individual stratum. Papers 48, 49, 49B and 48+49 are retained.
 
 [Paper notes](../papers/51-singular-wrt-semiclassical-sewing/README.md) · [PDF](../papers/51-singular-wrt-semiclassical-sewing/manuscript.pdf) · [TeX](../papers/51-singular-wrt-semiclassical-sewing/main.tex) · [Verification](../papers/51-singular-wrt-semiclassical-sewing/VERIFICATION.md)
+
+## 51B. An Ungated Centered Wilson Law for Paired-Cap WRT Sewing
+
+**Result and scope.** The first surviving ungated logarithmic coefficient for a fixed integer-spin terminal ribbon on the four-vertex path; a separate ratio-resolved law on matched trees.
+
+[Paper notes](../papers/51b-wrt-ungated-wilson/README.md) · [PDF](../papers/51b-wrt-ungated-wilson/manuscript.pdf) · [TeX](../papers/51b-wrt-ungated-wilson/main.tex) · [Verification](../papers/51b-wrt-ungated-wilson/VERIFICATION.md)
+
+## 51+50B. Cycle Logarithms and Gauge Discrimination in Paired-Cap Sewing
+
+**Result and scope.** The leading logarithm for each fixed even paired-cap cycle at either level parity; a signed graph-manifold pair separated by an order-21 gauge group, including all twists.
+
+[Paper notes](../papers/51-50b-wrt-cycle-gauge-discrimination/README.md) · [PDF](../papers/51-50b-wrt-cycle-gauge-discrimination/manuscript.pdf) · [TeX](../papers/51-50b-wrt-cycle-gauge-discrimination/main.tex) · [Verification](../papers/51-50b-wrt-cycle-gauge-discrimination/VERIFICATION.md) · [Derivation supplement](../papers/51-50b-wrt-cycle-gauge-discrimination/supplement/wrt_extensions.pdf)
 
 ## 52. Relational area commutators distinguish matter couplings on the same Einstein light cone
 

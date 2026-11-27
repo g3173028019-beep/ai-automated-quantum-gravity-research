@@ -1,0 +1,78 @@
+\section{The two-site kernel at a macroscopic anchor}\label{sec:macro}
+
+Write \(l=m_{b_1},\,k=m_{a_1},\,n=m_{b_2},\,m=m_{a_2}\). The terminal auxiliary lives in boxes 3 and 4 and their common exterior strip. Cutting either other strip leaves the tensor unit on the auxiliary legs, so the actual finite centered contraction is
+\begin{equation}\label{eq:fact}
+       \lambda_0(k,l)\lambda_0(k,n)X_{r,J}(n,m),\qquad
+ X_{r,J}=\cK^{34}_{r,W_J}-(-1)^J\lambda_0 .
+\end{equation}
+All four \(1+\cos(\theta m_v)\) weights are unchanged. Thus in the raw sum, before the common prefactor in \eqref{eq:finite}, the target scale is \(r^2\log r\). The signed prefix bounds recalled above apply to \(X_{r,J}\) by linearity.
+
+\begin{lemma}[Macroscopic contraction and its odd prefix]\label{lem:macro}
+Fix odd \(n=2j+1\). If the original macro label \(m/r=x\) is in a compact subset of \((0,1)\), then \(X_{r,J}(n,m)\) converges uniformly there to
+\begin{equation}\label{eq:macrokernel}
+ Q_{n,J}(\phi)=(-1)^j\int_{S^2}\chi_j(Hiu\cdot\sigma)
+       \big[\chi_J(Aiu\cdot\sigma)-(-1)^J\big]\,d\Pi(u),
+ \qquad \phi=\pi x,\quad H=e^{i\phi\sigma_3},
+\end{equation}
+where \(A\) is axial in the same third direction. In the direct cap convention its angle in the defining representation is \((\pi-\phi)/2\); exterior axial routing phases, if present, may be included in \(A\). Changing \(H\) to \(H^{-1}\) leaves the answer unchanged. In particular, for fixed \(0<\eta<1/2\),
+\begin{equation}\label{eq:macroprefix}
+ \sup_{\eta\le\phi/\pi\le1-\eta}
+        \left|\sum_{\substack{n\le B\\n\ {\rm odd}}}Q_{n,J}(\phi)\right|
+      \le C_{\eta,J}/(1+B).
+\end{equation}
+The same assertions apply with the macro leg at either cap of the terminal pair.
+\end{lemma}
+
+\begin{proof}
+After simple-current removal, cut the macro line and close all fixed-spin lines. The resulting endomorphism of \(V_m\) is scalar, so its normalized categorical trace may be evaluated on the highest vector. All reached macro weights are within a bounded number of steps of that vector: weight conservation at each local operation and the fixed other spins ensure this. The tensor products are untruncated for large \(r\) on a macro compact. There, large raising and lowering entries in the reached blocks are \(O(\sqrt r)\). In the fixed-light universal \(R\) matrix the \(b\)-th nilpotent coefficient is \(O(r^{-b})\), so the non-Cartan terms tend to zero. The two heavy-finite Cartan crossings combine to \(\rho_j(H)\) on the remaining finite trace. The small-small crossings become the ordinary flips.
+
+At the macro cap the scaled Casimir difference
+\(r^{-1}(\Delta C_q-[m/2]^2)\) tends to
+\(\pi^{-1}\sin\phi\, S_z\) on the same bounded-excitation spaces; here \(S_z\) is the auxiliary weight operator, and \([s]=\sin(\theta s)/\sin\theta\). The pure high raising-lowering term is \(O(r)\) before taking the difference, which introduces the \(O(r^{-1})\) finite-leg dressing; the mixed terms are \(O(\sqrt r)\). The remaining Cartan difference is the first sine-square finite difference in \(S_z\). Its finitely many limiting weight eigenvalues stay separated on a macro compact. Polynomial interpolation and \eqref{eq:cap} then give the axial action \(e^{i(\pi-\phi)S_z}\). Any fixed auxiliary crossing with this high wire has an axial Cartan limit as well. Such factors combine cyclically in the single auxiliary trace, which contains only one fixed-cap nonaxial operation. Fixed twists tend to one.
+
+At the finite cap, \eqref{eq:cap} tends on total spin \(j+s\) to \((-1)^s n/(n+2s)\). Exactly the same spectral values arise from the class average
+\[
+ (-1)^j n\int_{S^2} \rho_j(iu\cdot\sigma)\otimes
+                           \rho_J(iu\cdot\sigma)\,d\Pi(u).
+\]
+Indeed on that summand its scalar is the half-turn character
+\((-1)^{j+s}\), divided by \(n+2s\), times \((-1)^j n\).
+For the trivial auxiliary this average is the identity. Taking the fixed heavy trace divided by \(n\) and the ordinary auxiliary trace therefore gives \eqref{eq:macrokernel}, with the same vacuum normalization. These steps use the fixed terminal routing, so they do not infer a finite operation from a group word alone.
+
+Put \(t=u_3\), \(y=\arcsin(\sin\phi\,t)\), \(h=\arcsin(\sin\phi)\). If \(A=e^{ia\sigma_3}\) then
+\(\chi_J(Aiu\cdot\sigma)-(-1)^J=P_J(-\sin a\,t)\).
+The half-trace of \(Hiu\cdot\sigma\) is \(-\sin\phi\,t\), and
+\((-1)^j\chi_j(Hiu\cdot\sigma)=\cos(ny)/\cos y\).
+The apparent denominator cancels with the exact Jacobian of \(dt\), including at \(\phi=\pi/2\). Summing odd \(n\le B\) gives
+\[
+ \frac{1}{4\sin\phi}\int_{-h}^h
+ \frac{P_J(-(\sin a/\sin\phi)\sin y)}{\sin y}
+                 \sin(2(\lfloor(B-1)/2\rfloor+1)y)\,\dd y.
+\]
+The even polynomial \(P_J\) vanishes at zero to order at least two, so the quotient is uniformly \(C^1\) for \(\eta\le\phi/\pi\le1-\eta\). Integration by parts proves \eqref{eq:macroprefix}; the bound for an empty prefix is immediate.
+\end{proof}
+
+\section{Removing ordinary radial gates}\label{sec:radial}
+
+\begin{proposition}\label{prop:radial}
+Let \(g_v\) be fixed smooth ordinary radial profiles, equal to one near zero and supported in \([0,c)\) with \(c<1/2\). For every fixed integer \(J\),
+\[
+                   D_{r,J}-D_{r,J}[g]=o(r^{5/2}\log r).
+\]
+\end{proposition}
+\begin{proof}
+Expand \(1-\prod_v g_v\) into a finite sum of separable telescoping masks. The signed bound applies to every independent radial cell below. Write \(d_i=\min(m_i,r-m_i)\) using the original order \(1,2,3,4\), fix \(0<\eta<1/2\) small relative to the region where all profiles equal one, and split into folded small labels \(d_i<\eta r\) and macros \(d_i\ge\eta r\). Retain each original lower/upper branch and its parity separately.
+
+If any originally upper site has \(d_i<\eta r\), its cap weight is \(1-\cos(\pi d_i/r)\le C(d_i/r)^2\). Keep that label on the unsummed side of the bipartition. The two signed partner sums are bounded by \(Cr^2\) times the reciprocals of the two unsummed matching labels. The upper site's weighted harmonic mass is \(O(\eta^2)\), yielding raw \(O_g(\eta^2r^2\log r)\).
+
+If site 2 is a folded macro, keep 2 and 4 unsummed: the raw bound after the two prefix sums is
+\(Cr^2\sum_{d_2\ge\eta r}[d_2\max(d_2,d_4)]^{-1}
+=O_\eta(r^2)\).
+The reflected estimates handle site 3 by taking 1 and 3 unsummed; no reversal of the Wilson observable is required. If both leaves are macros, keep 1 and 3 unsummed. The conditional site-4 sum improves to \(C_\eta r/d_3^2\) once \(d_3>2/\eta\) by the signed tail; bounded \(d_3\) uses \(Cr/d_3\). The site-2 sum costs \(Cr/d_1\), again \(O_\eta(r^2)\) in total.
+
+A cell wholly on lower small branches never belongs to the radial exterior. Thus the only remaining cells have a single macro leaf, three lower small neighbors, and no upper small branch. For a fixed macro leaf, discard its adjacent label above a fixed \(B>\eta^{-1}\) using the signed prefix with threshold \(\eta B\). The macro harmonic sum costs \(O_\eta(1)\), the other anchor \(O(\log r)\), so this tail is \(O_{g,\eta}(r^2\log r/B)\).
+
+At a macro site 1 and fixed \(m_2\le B\), the \(3,4\) pair is the centered two-site invariant with extra smooth ordinary character \(\lambda_0(m_2,m_3)\) on site 3. For fixed \(m_2\), this profile tends smoothly on the lower interval to \(\sin(\pi m_2 x)/(m_2\sin(\pi x))\), with value one at zero. Hard lower truncations at \(\eta r\) only cost \(O_\eta(r)\) in the two-site sums: keep the truncated label unsummed, then use its \(O_\eta(1)\)-width harmonic band and the partner prefix \(Cr/d\). The actual two-site leading law of Paper~51 is perpendicular; its centered coefficient vanishes since \(P_J(0)=0\). Hence the \(3,4\) raw pair is \(o(r\log r)\) for each fixed \(m_2\). There are only \(O(r)\) macro labels at site 1.
+
+At a macro site 4 and fixed \(m_3\le B\), the unmarked \(1,2\) pair with its corresponding character profile on site 2 has common leading raw term \(r\log r/2\), independently of that fixed \(m_3\), by the two-site unmarked law in the normalization \eqref{eq:finite}. Other masks either vanish on this cell or coincide with one at the lower small end. Finite small cap factors tend to 2. Thus the remaining contribution is bounded, after division by \(r^2\log r\), by a constant times the uniform macro bound \eqref{eq:macroprefix}: one uses the fixed-prefix convergence of the actual kernel and bounded weights at the macro site. The bound is \(O_{g,\eta}(B^{-1})\) over the original macro compact \([\eta,1-\eta]\), including the upper branch. First take \(r\to\infty\), then \(B\to\infty\), then \(\eta\downarrow0\). The raw remainder is zero at scale \(r^2\log r\); \eqref{eq:finite} gives the assertion.
+\end{proof}

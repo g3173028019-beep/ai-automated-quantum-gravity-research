@@ -1,0 +1,144 @@
+\section{Integral seam relations and exact collisions}\label{sec:collision}
+
+\subsection{What the closed torus scalar discards}
+
+\begin{proposition}\label{prop:blind}
+For fixed positive orders \(\mathbf p\) on a bipartite backbone,
+every seam signing gives the same oriented \(\SU(2)\) RT scalar
+at every shifted level \(r\ge3\). The equality remains true after
+placing identical colored framed ribbon graphs wholly in the
+interiors of corresponding capped blocks. In both statements
+one may replace \(\SU(2)\) by a modular category with all simple
+labels self-dual, in the extended-TQFT convention of
+\S\ref{sec:sewing}.
+\end{proposition}
+\begin{proof}
+Decorated blocks, like empty blocks, give tensors in unpunctured
+torus spaces when no ribbon meets a seam. On this space \(-I\)
+acts by charge conjugation and is the identity under the stated
+hypothesis. The cap reciprocals cancel in the oriented Maslov
+calculation of \S\ref{sec:sewing} for all paired orders \(\mathbf p\),
+and the signed adjacency has zero signature by bipartiteness.
+Thus neither the bare contraction nor the anomaly factor changes.
+\end{proof}
+
+For a ribbon crossing a sewing torus the relevant torus is punctured;
+the proof gives no equality for that experiment. In particular it
+does not turn all colored observables into functions of the
+unpunctured contraction.
+
+\begin{theorem}[Integral relation matrix]\label{thm:integral}
+Let \(P=\diag(p_v)\). With the construction of \S\ref{sec:sewing}
+there is a noncanonical isomorphism
+\[
+ H_1(M_{G,\epsilon,\mathbf p};\ZZ)
+  \simeq \ZZ^{b_G}\oplus\coker_{\ZZ}(P A_\epsilon P).
+\]
+For paired order two the matrix is \(4A_\epsilon\).
+\end{theorem}
+\begin{proof}
+Before the seams let \(a_v,b_v\) denote the sections of the
+two capped ports. The integral relations at the block are
+\[
+ p_va_v+h_v=0,\qquad -p_vb_v+h_v=0,\qquad
+ a_v+b_v+\sum_{e\ni v}z_{ve}=0.
+\]
+Eliminate \(h_v\) from the first and \(b_v\) from the last, using
+unit coefficients. The second is then \(p_v\sum_e z_{ve}=0\).
+The seam relations give \(z_{ve}=-\epsilon_e p_w a_w\).
+Thus the remaining vertex/port cokernel is exactly that of
+\(P A_\epsilon P\), without dividing by \(p_v\).
+The next term in the graph-of-spaces Mayer--Vietoris sequence
+is the kernel of the ordinary vertex-edge incidence map on
+\(H_0\). This is \(\ZZ^{b_G}\), since seams induce the same
+\(H_0\) maps for either sign. The extension by this free quotient
+splits.
+\end{proof}
+
+\subsection{All odd pointed theories see only odd-order homomorphisms}
+
+\begin{theorem}\label{thm:pointed}
+For paired order-two caps on a bipartite graph, let \(B\) be the
+signed biadjacency, with \(n_A\) rows and \(n_B\) columns.
+For any finite nondegenerate odd-order metric group
+\((\mathcal A,Q)\) of order \(m_0\), its vacuum-divided pointed RT
+amplitude is
+\[
+ \mathcal P_{\mathcal A,Q}(M_{G,\epsilon})
+ =m_0^{(e+1)/2-n_B}\,|\ker(B:\mathcal A^{n_B}\to\mathcal A^{n_A})|
+ =\sqrt{|\Hom(H_1(M_{G,\epsilon};\ZZ),\mathcal A)|}.
+\]
+It is positive real and does not depend on \(Q\).
+\end{theorem}
+\begin{proof}
+Write \(\beta(x,y)=Q(x+y)/(Q(x)Q(y))\). The torus matrices are
+\(S_{xy}=m_0^{-1/2}\beta(x,y)\), up to conjugation, and
+\(\Theta_{xx}=Q(x)\). A cap coefficient is
+\(c_+(a)=m_0^{-1}\sum_x\beta(a,x)Q(x)^2\).
+The opposite cap gives its conjugate, by \(x\mapsto-x\) and
+\(Q(-x)=Q(x)\). Expanding the squared modulus with \(x=y+c\)
+leaves
+\[
+ |c_+(a)|^2=m_0^{-2}\sum_c \beta(a,c)Q(c)^2
+                                \sum_y\beta(y,c)^2=m_0^{-1}.
+\]
+Indeed the inner sum vanishes unless \(2c=0\) by nondegeneracy,
+and odd order forces \(c=0\). Every vertex then contributes
+\(m_0^{d_v/2-1}\). A seam contributes
+\(m_0^{-1/2}\beta(x_i,y_j)^{\epsilon_{ij}}\), or the simultaneous
+conjugate convention. The Maslov signature is zero. Dividing by
+\(Z(S^3)=m_0^{-1/2}\) and summing first over the row colors gives
+\[
+  \mathcal P=m_0^{(e+1)/2-n_A-n_B}
+    \sum_{x,y}\prod_{i,j}\beta(x_i,y_j)^{B_{ij}}
+  =m_0^{(e+1)/2-n_B}|\ker B|.
+\]
+All vanishing and nonvanishing in this sum are exact character
+orthogonality. Finally \(4\) is invertible on \(\mathcal A\);
+Theorem~\ref{thm:integral} gives
+\(|\Hom(H_1,\mathcal A)|=m_0^{b_G}|\ker B||\ker B^{\mathsf T}|\).
+Perfect pairings give \(|\ker B^{\mathsf T}|=
+m_0^{n_A-n_B}|\ker B|\), also if \(B\) is rectangular.
+The square root is the positive one by the preceding calculation.
+\end{proof}
+
+\subsection{A concrete pair, and a first abelian discriminator}
+
+For \(G=K_{N,N}\) use the signed biadjacency
+\[
+ B(D)=\begin{pmatrix}1&\mathbf1^{\mathsf T}\\
+            \mathbf1&\mathbf1\mathbf1^{\mathsf T}-2D\end{pmatrix},
+\]
+where \(D\) is a nonsingular binary integer matrix of size \(N-1\).
+Subtract the first row and column to put
+\(B(D)\sim_{\ZZ}\diag(1,-2D)\). A permutation puts
+\(A_\epsilon\) into \(B(D)\oplus B(D)^{\mathsf T}\), in the sense
+of integer presentation equivalence. Thus, if \(d_i\) are the
+positive Smith factors of \(D\), the group is
+\[
+ H_1(M_{B(D)};\ZZ)\simeq
+ \ZZ^{(N-1)^2}\oplus(\ZZ/4)^2\oplus
+ \bigoplus_{i=1}^{N-1}(\ZZ/(8d_i))^2 .
+\]
+
+Fix \(N=4\) and compare \(D_0=I_3\) and \(D_1=J_3-I_3\), with
+\(J_3\) the all-ones matrix. Both have a \(2\times2\) minor of
+modulus one and their determinant moduli are \(1\) and \(2\),
+so their Smith lists are \((1,1,1)\) and \((1,1,2)\). The two
+closed manifolds \(M_0,M_1\) have
+\begin{align}
+ H_1(M_0;\ZZ)&\simeq\ZZ^9\oplus(\ZZ/4)^2\oplus(\ZZ/8)^6,\notag\\
+ H_1(M_1;\ZZ)&\simeq\ZZ^9\oplus(\ZZ/4)^2\oplus(\ZZ/8)^4
+                                      \oplus(\ZZ/16)^2.\label{eq:groups}
+\end{align}
+They are not homeomorphic. Proposition~\ref{prop:blind} gives
+the all-level oriented and block-interior decorated collisions,
+and Theorem~\ref{thm:pointed} gives the common scalar
+\(|\mathcal A|^{9/2}\) for every odd pointed modular theory.
+
+As an elementary detector outside that class, for the untwisted
+cyclic theory of order \(2^a\), use its \(S^3\)-divided partition
+function \(|\Hom(H_1,\ZZ/2^a)|\). The groups in
+\eqref{eq:groups} agree for \(a=1,2,3\), and give \(2^{58},2^{60}\)
+at \(a=4\). This even-order abelian separator and the minimal
+odd-order separator below are independent statements.

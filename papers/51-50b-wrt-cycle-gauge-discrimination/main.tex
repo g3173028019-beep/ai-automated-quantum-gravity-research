@@ -1,0 +1,145 @@
+\pdfoutput=1
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage{xcolor,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!48!black,citecolor=blue!48!black,
+  urlcolor=blue!52!black,pdftitle={Cycle logarithms and gauge discrimination in paired-cap sewing},pdfauthor={}}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\sig}{sig}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\rank}{rank}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Ind}{\mathbf1}
+\title{Cycle logarithms and gauge discrimination\\in paired-cap sewing}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We characterize two different kinds of information in closed
+three-dimensional topological quantum amplitudes for a class of
+paired-cap graph manifolds. On each fixed even cycle \(C_{2m}\), an exact
+degree-two transfer converts the oriented \(\SU(2)\) invariant into a
+positive color sum. Its common logarithmic scale gives
+\(\binom{2m-2}{m-1}\pi^{-2m}r^{2m}\log r+O_m(r^{2m})\) in physical
+normalization, along both parities. On a separate signed \(K_{4,4}\)
+backbone, charge conjugation and vanishing sewing signature hide the seam
+signs at all levels, even with block-interior decorations. The two
+homologies differ only at the prime two, and no odd pointed modular
+category or twisted finite odd nilpotent gauge theory distinguishes the
+pair. Switching to the nonnilpotent odd gauge group
+\(\FF_7\rtimes_{2}C_3\) does distinguish it, with the same distinction
+for all three twists. An exact finite-field rank calculation determines
+the two values. Group order \(21\) is minimal among odd-order finite
+gauge groups for this pair.
+\end{abstract}
+
+\section{Information retained by a closed amplitude}
+
+Closed partition functions are observables of a chosen theory, not
+complete lists of the relations that define the underlying manifold.
+The same paired-cap construction separates two questions. First, can a
+closed \(\SU(2)\) scalar measure the size and shared scale of a genuine
+backbone cycle? Second, when the graph and local blocks are fixed, can
+different seam relations be invisible to that scalar and to whole
+classes of additional quantum probes? We answer the first question on
+even cycles and the second on a different, fixed complete bipartite
+backbone. There is no inference from the alternating cycle estimate to
+the asymptotics of the complete bipartite example.
+
+The cycle proof uses the exact transfer and oriented normalization of
+Papers~50 and~50B \cite{P50,P50B}. The new reduction is a single
+translation coordinate in the logarithms of alternating colors; the
+relative coordinates have an exponentially integrable closed-chain
+weight. Its convolution trace fixes both the leading numerical
+coefficient and the limiting positive folded-color law. This is a
+closed uninserted amplitude, not a Wilson-angle distribution or a
+semiclassical attribution to all Chern--Simons strata as studied on
+other stocks in Paper~51 \cite{P51}.
+
+The signed collision extends Paper~50B's odd-localized calculation to a
+full integral relation matrix. On the selected pair, all odd-order
+nilpotent representations forget the vertex groups because every
+central quotient kills their images. The semidirect product
+\(C_7\rtimes C_3\) instead retains a nontrivial transport character:
+graph letters conjugate the \(C_7\) fibre variables in opposite
+directions at the two ends of a seam. The resulting pair of twisted
+biadjacency matrices, rather than ordinary abelian homology, shifts the
+closed partition function. This is a change of gauge theory on the
+same pair of manifolds, with no new surgery insertions. Known exact
+quantum-invariant collisions (e.g. \cite{Funar}) motivate the question;
+we do not claim that all-level collision or finite-group detection
+itself is new.
+
+\input{sewing}
+\input{cycles}
+\input{collision}
+\input{separator}
+
+\section{Conclusions and scope}
+
+In this construction the two effects have different mathematical
+origins. The cycle sees an integrable distribution of relative
+logarithmic colors and one noncompact common scale. The collision is
+an exact insensitivity of the unpunctured torus contraction together
+with a zero anomaly, even though the integer seam relations changed.
+Odd pointed and nilpotent gauge probes cannot recover those relations
+on the selected pair; coprime nonnilpotent conjugation can. Neither
+example is a reconstruction of a general graph from closed invariants.
+The fixed-cycle error is not uniform in cycle length, and the
+decoration claim does not extend to graphs of ribbons crossing a
+sewing torus. No all-orders semiclassical or marked Wilson theorem is
+needed.
+
+\begin{thebibliography}{99}
+\bibitem{BHMV} C. Blanchet, N. Habegger, G. Masbaum and P. Vogel,
+\emph{Topological quantum field theories derived from the Kauffman bracket},
+Topology \textbf{34} (1995), 883--927.
+\href{https://webhomes.maths.ed.ac.uk/~v1ranick/papers/bhmv.pdf}{Primary text.}
+\bibitem{GM} P. Gilmer and G. Masbaum,
+\emph{Maslov index, Lagrangians, mapping class groups and TQFT},
+Forum Math. \textbf{25} (2013), 1067--1106.
+\href{https://arxiv.org/abs/0912.4706}{arXiv:0912.4706.}
+\bibitem{DW} R. Dijkgraaf and E. Witten,
+\emph{Topological gauge theories and group cohomology},
+Commun. Math. Phys. \textbf{129} (1990), 393--429.
+\href{https://www.ias.edu/sites/default/files/sns/\%5B126\%5DCommMathPhys129-1990.pdf}
+{Primary text.}
+\bibitem{FQ} D. S. Freed and F. Quinn,
+\emph{Chern--Simons theory with finite gauge group},
+Commun. Math. Phys. \textbf{156} (1993), 435--472.
+\href{https://arxiv.org/abs/hep-th/9111004}{arXiv:hep-th/9111004.}
+\bibitem{Funar} L. Funar, with an appendix by L. Funar and A. Rapinchuk,
+\emph{Torus bundles not distinguished by TQFT invariants},
+Geom. Topol. \textbf{17} (2013), 2289--2344.
+\href{https://arxiv.org/abs/1101.0509}{arXiv:1101.0509.}
+\bibitem{P50} AI Automated Quantum Gravity Research,
+\emph{What graph structure survives WRT sewing? Hidden connector
+motifs and the stability boundary of dense cores}, Paper~50 (2026).
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/50-wrt-graph-detection-and-stability}{Source.}
+\bibitem{P50B} AI Automated Quantum Gravity Research,
+\emph{All-level WRT collisions on fixed graph-manifold backbones},
+Paper~50B (2026).
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/50b-wrt-topological-blindness}{Source.}
+\bibitem{P51} AI Automated Quantum Gravity Research,
+\emph{Singular semiclassical sewing for paired-cap
+Witten--Reshetikhin--Turaev invariants}, Paper~51 (2026).
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/51-singular-wrt-semiclassical-sewing}{Source.}
+\end{thebibliography}
+\end{document}

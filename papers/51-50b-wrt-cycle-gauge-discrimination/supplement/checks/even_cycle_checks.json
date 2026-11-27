@@ -1,0 +1,116 @@
+{
+  "identity_max_relative_error": 1.3020677747898587e-13,
+  "identity_checks": 72,
+  "asymptotics": [
+    {
+      "r": 31,
+      "C4_ratio_to_leading": 1.4047427711597615,
+      "C4_bounded_remainder": 2.7797629945409614,
+      "C6_ratio_to_leading": 1.23363699076552,
+      "C6_bounded_remainder": 4.813838620699261,
+      "C8_ratio_to_leading": 1.0341611690469887,
+      "C8_bounded_remainder": 2.34618034795227,
+      "C10_ratio_to_leading": 0.843012487916115,
+      "C10_bounded_remainder": -37.73651754320127
+    },
+    {
+      "r": 32,
+      "C4_ratio_to_leading": 1.4042523215336875,
+      "C4_bounded_remainder": 2.8020635690588795,
+      "C6_ratio_to_leading": 1.2349252429375672,
+      "C6_bounded_remainder": 4.885133093536048,
+      "C8_ratio_to_leading": 1.0374396448786032,
+      "C8_bounded_remainder": 2.595118428876944,
+      "C10_ratio_to_leading": 0.8478008768261667,
+      "C10_bounded_remainder": -36.923737589073454
+    },
+    {
+      "r": 101,
+      "C4_ratio_to_leading": 1.3015536779680947,
+      "C4_bounded_remainder": 2.7834131322389926,
+      "C6_ratio_to_leading": 1.174473113797105,
+      "C6_bounded_remainder": 4.831286682733193,
+      "C8_ratio_to_leading": 1.025788747387268,
+      "C8_bounded_remainder": 2.3803635434123436,
+      "C10_ratio_to_leading": 0.8795071570527389,
+      "C10_bounded_remainder": -38.92622941329057
+    },
+    {
+      "r": 102,
+      "C4_ratio_to_leading": 1.3012070458981269,
+      "C4_bounded_remainder": 2.786148796897008,
+      "C6_ratio_to_leading": 1.1744114599054971,
+      "C6_bounded_remainder": 4.839889562328864,
+      "C8_ratio_to_leading": 1.0260688423996696,
+      "C8_bounded_remainder": 2.4113537474452755,
+      "C10_ratio_to_leading": 0.8800944020829248,
+      "C10_bounded_remainder": -38.819209136894756
+    },
+    {
+      "r": 301,
+      "C4_ratio_to_leading": 1.2438893944160463,
+      "C4_bounded_remainder": 2.78380733267041,
+      "C6_ratio_to_leading": 1.1411482034541591,
+      "C6_bounded_remainder": 4.8332901647045645,
+      "C8_ratio_to_leading": 1.0208897275301636,
+      "C8_bounded_remainder": 2.384399568304076,
+      "C10_ratio_to_leading": 0.9016109638720792,
+      "C10_bounded_remainder": -39.30619546170834
+    },
+    {
+      "r": 302,
+      "C4_ratio_to_leading": 1.2437801551695395,
+      "C4_bounded_remainder": 2.7841775687599526,
+      "C6_ratio_to_leading": 1.1410999241634188,
+      "C6_bounded_remainder": 4.834444914553991,
+      "C8_ratio_to_leading": 1.0209146718678277,
+      "C8_bounded_remainder": 2.388634145871464,
+      "C10_ratio_to_leading": 0.9017059393831409,
+      "C10_bounded_remainder": -39.29107415757966
+    },
+    {
+      "r": 801,
+      "C4_ratio_to_leading": 1.2081897818734724,
+      "C4_bounded_remainder": 2.7838558644130593,
+      "C6_ratio_to_leading": 1.1204917728843213,
+      "C6_bounded_remainder": 4.833547432621884,
+      "C8_ratio_to_leading": 1.0178355940500217,
+      "C8_bounded_remainder": 2.384926034536079,
+      "C10_ratio_to_leading": 0.9157502594989361,
+      "C10_bounded_remainder": -39.4297434871695
+    },
+    {
+      "r": 802,
+      "C4_ratio_to_leading": 1.2081554218614925,
+      "C4_bounded_remainder": 2.783915826608144,
+      "C6_ratio_to_leading": 1.1204739293534751,
+      "C6_bounded_remainder": 4.833733500018752,
+      "C8_ratio_to_leading": 1.0178374260000336,
+      "C8_bounded_remainder": 2.385616098940119,
+      "C10_ratio_to_leading": 0.9157713566017376,
+      "C10_bounded_remainder": -39.427226040820756
+    },
+    {
+      "r": 1601,
+      "C4_ratio_to_leading": 1.1886498817118207,
+      "C4_bounded_remainder": 2.783862429362509,
+      "C6_ratio_to_leading": 1.109183424840551,
+      "C6_bounded_remainder": 4.833583221436335,
+      "C8_ratio_to_leading": 1.0161620761602868,
+      "C8_bounded_remainder": 2.3849999901854346,
+      "C10_ratio_to_leading": 0.9235850066526354,
+      "C10_bounded_remainder": -39.46733996400627
+    },
+    {
+      "r": 1602,
+      "C4_ratio_to_leading": 1.1886350263596022,
+      "C4_bounded_remainder": 2.7838787853257667,
+      "C6_ratio_to_leading": 1.1091753288306059,
+      "C6_bounded_remainder": 4.8336338326652,
+      "C8_ratio_to_leading": 1.0161619884029056,
+      "C8_bounded_remainder": 2.3851888756734922,
+      "C10_ratio_to_leading": 0.923592822950829,
+      "C10_bounded_remainder": -39.46664263184772
+    }
+  ]
+}

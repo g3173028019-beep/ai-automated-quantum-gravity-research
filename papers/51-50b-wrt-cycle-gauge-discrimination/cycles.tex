@@ -1,0 +1,155 @@
+\section{Fixed even cycles have one logarithmic scale}\label{sec:cycles}
+
+\begin{theorem}\label{thm:cycle}
+Fix \(m\ge2\). On \(C_{2m}\) use the cap orders two and any seam
+signing. With the normalization of \S\ref{sec:weights},
+\[
+ Z_r(M_{C_{2m},\epsilon})=
+ \frac{\binom{2m-2}{m-1}}{\pi^{2m}}\, r^{2m}\log r
+     +O_m(r^{2m}).
+\]
+There is no parity restriction on \(r\). In particular the leading
+coefficient is positive and the leading logarithmic degree is one.
+\end{theorem}
+
+\begin{proof}
+The adjacency signature is zero, and \(e=2m\) makes the parity
+factor in \eqref{eq:finite} one. Label alternate defects \(a_i\)
+and the intervening ones \(b_i\), with \(a_{m+1}=a_1\).
+Put \(s_a=\min(a,r-a)\). The exact degree-two identity of
+Paper~50 \cite{P50} is
+\begin{equation}\label{eq:transfer}
+ \sum_{\substack{1\le b<r\\ b\ {\rm odd}}}
+ F_2(b/r)K(ab/r)K(cb/r)
+ =\frac{r}{4ac}\min(s_a,s_c).
+\end{equation}
+An elementary proof also fixes the upper endpoint. The left
+summand equals \(1/(4ac)\) times
+\(\sin(2a\theta)\sin(2c\theta)/\sin^2\theta\), where
+\(\theta=\pi b/(2r)\). On the odd grid \(a,c\) can be replaced
+in the two sine numerators by \(s_a,s_c\), because
+\(\sin(\pi b-2a\theta)=\sin(2a\theta)\).
+Use \(\sin(2s\theta)/\sin\theta=2\sum_{j=1}^{s}
+\cos((2j-1)\theta)\). On the full \(r\)-point midpoint grid
+\(\theta=(b\pi)/(2r)\), \(b=1,3,\ldots,2r-1\), the cosine
+modes of frequencies \(1,\ldots,r-1\) have norm squared \(r/2\)
+and are mutually orthogonal by the finite geometric series.
+Here \(2s_a-1,2s_c-1<r\). The full-grid sum of the sine product
+ratios is \(2r\min(s_a,s_c)\); reflection about \(\pi/2\)
+preserves the product, and the midpoint term, if present, is zero.
+Take half and restore \(1/(4ac)\).
+
+Each \(b_i\) can now be summed independently, leaving
+\begin{align}
+ Z_r(M_{C_{2m},\epsilon})
+   &=\frac{2^m r^{2m}}{\pi^{2m}}T_m(r),\label{eq:Treln}\\
+ T_m(r)
+   &=\sum_{\substack{1\le a_i<r\\ a_i\ {\rm odd}}}
+       \prod_{i=1}^m f_r(a_i)\min(s_{a_i},s_{a_{i+1}}),&
+ f_r(a)&=\frac{\pi^2}{4r^2\sin^2(\pi a/(2r))}.\notag
+\end{align}
+Indeed \(I_r=(r/4)^m T_m\), because each \(a_i\) appears as
+an endpoint of two transfers, so \(f_r(a)=a^{-2}F_2(a/r)\).
+The reduced sum is positive termwise.
+
+Let \(R=\lfloor r/2\rfloor\) and fold each label to \(s_a\), counting
+the midpoint only once. Its weight is
+\[
+ w_r(s)=\sum_{\substack{1\le a<r,\ a\ {\rm odd}\\s_a=s}}f_r(a)
+     =\frac{\Ind_{s\ {\rm odd}}}{s^2}+O(r^{-2}),\qquad
+ 0\le w_r(s)\le C s^{-2},\quad 1\le s\le R.
+\]
+The constants are uniform in parity: the lower preimage obeys the
+first expansion by the bounded function
+\(\csc^2 u-u^{-2}\) on \(0<u\le\pi/4\), while the upper preimage
+has denominator \(4r^2\cos^2(\pi s/(2r))\) and contributes
+\(O(r^{-2})\).
+
+For \(s_{m+1}=s_1\), use the identity
+\begin{equation}\label{eq:logkernel}
+ \prod_i\frac{\min(s_i,s_{i+1})}{s_i^2}
+  =\prod_i\frac1{s_i}
+    \exp\!\left[-\frac12\sum_i|\log s_i-\log s_{i+1}|\right].
+\end{equation}
+For any fixed \(c>0\),
+\(\sup_{a\ge1}\sum_{b\ge1}b^{-1}e^{-c|\log(b/a)|}<\infty\),
+by splitting at \(a\). Holding one \(s_i\) fixed and deleting an
+edge of the cycle, summation of the resulting path from its leaves
+applies this bound repeatedly. In the telescoping replacement of the
+\(m\) factors \(w_r(s_i)\), the erroneous site's cost relative to
+\(s_i^{-2}\) is bounded by \(C r^{-2}s_i^2\), while the other
+weights are bounded by constants times \(s_j^{-2}\). Therefore
+each error term sums to \(O_m(r^{-2}\sum_{s\le R}s)=O_m(1)\).
+This is an absolute error bound for the entire folded measure.
+
+Compare the remaining sum on odd anchors with the integral of
+the right side of \eqref{eq:logkernel} over cells
+\(\prod_i[a_i,a_i+2]\). Over such a cell the logarithm of that
+integrand changes by at most \(C_m\sum_i a_i^{-1}\).
+Its ratio to the corner value is uniformly bounded. Use the same
+path estimate for each inserted \(a_i^{-1}\) and
+\(\sum_{a_i\ge1}a_i^{-2}<\infty\) to bound the sum-integral
+error by \(O_m(1)\). With \(t_i=\log s_i\), this gives
+\[
+ T_m(r)=2^{-m}\int_{[0,L]^m}
+          e^{-\frac12\sum_i|t_i-t_{i+1}|}\,\dd^m t+O_m(1),
+ \qquad L=\log(R+O(1))=\log r+O(1).
+\]
+The factor \(2^{-m}\) is the exact leading density of the odd
+lattice, not a fixed-parity assumption about the level.
+
+Fix relative coordinates \(v_i=t_i-t_1\), \(v_1=v_{m+1}=0\).
+Write \(D(v)=\max_i v_i-\min_i v_i\). For given \(v\), \(t_1\)
+ranges on an interval of length \((L-D(v))_+\). Since the closed
+variation \(\sum_i|v_i-v_{i+1}|\) is at least \(2D(v)\), the relative
+weight has finite mass and finite first \(D\)-moment. Thus the
+integral is \(L C_m+O_m(1)\), where
+\[
+ C_m=\int_{\RR^{m-1}} e^{-\frac12\sum_i|v_i-v_{i+1}|}\,\dd^{m-1}v .
+\]
+Equivalently \(C_m=k^{*m}(0)\), \(k(x)=e^{-|x|/2}\). In the
+Fourier convention \(\widehat k(\xi)=\int e^{-i\xi x}k(x)\,\dd x\)
+the transform is \((\xi^2+1/4)^{-1}\), so the beta integral gives
+\[
+ C_m=\frac1{2\pi}\int_{\RR}(\xi^2+1/4)^{-m}\,\dd\xi
+ =\frac{2^{2m-2}\Gamma(m-\frac12)}{\sqrt\pi\,\Gamma(m)}
+ =\binom{2m-2}{m-1}.
+\]
+Substituting \(T_m=2^{-m}C_m\log r+O_m(1)\) into
+\eqref{eq:Treln} proves the assertion.
+\end{proof}
+
+\begin{corollary}[Common exponent and relative log colors]\label{cor:law}
+Normalize the folded positive weight in \(T_m(r)\) to probability.
+Then \((\log s_1/\log r,\,(\log(s_i/s_1))_{i=2}^m)\) converges
+weakly to the product of the uniform law on \([0,1]\) and the density
+\[
+ C_m^{-1}\exp\!\left[-\tfrac12\sum_i|v_i-v_{i+1}|\right]\dd^{m-1}v.
+\]
+Thus all the retained alternating labels share the same limiting
+exponent, whereas their relative logs retain a nontrivial law.
+\end{corollary}
+\begin{proof}
+The weight replacement is \(O_m(1)\) in total variation. Away from
+large relative differences, discard \(t_1\le M\) at cost \(O_m(M+1)\)
+in the unnormalized weights and compare the remaining small cells
+with the integral as before. With \(\max|v_i|\) bounded, their
+diameters in the log variables tend uniformly to zero as
+\(M\to\infty\), so this comparison also applies to bounded continuous
+tests on fixed compact relative sets. The removed part vanishes
+after division by \(\log r\) for fixed \(M\).
+In the integral, set \(u=t_1/\log r\); its allowed interval tends to
+\([0,1]\) uniformly for bounded \(v\).
+Both discrete and continuous relative tails are uniformly
+exponentially small after normalization: the factor
+\(e^{-\sum|v_i-v_{i+1}|/4}\) bounds the cost of the other half of
+the exponent whenever \(\max|v_i|\) is large, and the remaining
+half is summed by the same fixed-anchor path bound. Let the
+relative cutoff then tend to infinity.
+\end{proof}
+
+This law is a probability interpretation of the exact reduced
+uninserted scalar. It does not assume that the folded labels in the
+proof are jointly measurable Wilson angles. Even-cycle length is
+visible here through the growth exponent \(2m\); no assertion compares
+that exponent with every other type of backbone.

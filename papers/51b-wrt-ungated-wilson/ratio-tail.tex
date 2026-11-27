@@ -1,0 +1,93 @@
+\section{Removing ratio gates}\label{sec:ratio-tail}
+
+In this section keep the fixed lower profiles \(g_v\). Put
+\(p_v(u)=g_v(u/r)(1+\cos(\theta u))\)
+and denote by \(D_{r,J}[g,\chi]\) the common ratio-marked difference. Let
+\[
+ B(k)=\sum_{l\ {\rm odd}}p_{b_1}(l)\lambda_0(k,l),\qquad
+ S(k,m)=\sum_{n\ {\rm odd}}p_{b_2}(n)\lambda_0(k,n)X_{r,J}(n,m).
+\]
+By \eqref{eq:fact} the anchored raw contraction is \(B(k)S(k,m)\), with the remaining profiles at \(k,m\). The ordinary signed prefix estimates give \(|B(k)|\le Cr/k\) and \(|S(k,m)|\le Cr/\max(k,m)\). For \(k>Lm\) there are at most \(Ck/L\) possible \(m\)'s, giving raw \(O_{g,J}(r^2\log r/L)\). The small-ratio side requires quantitative centered control.
+
+\begin{lemma}[Growing-product comparison]\label{lem:grow}
+Fix \(J\) and put \(w=mn/r\). Define
+\[K_J(w)=\tfrac12\int_{-1}^1 P_J(z)e^{i\pi wz}\,\dd z.\]
+For large enough \(m,n\), with \(m+n\le c_0 r\) for a sufficiently small fixed \(c_0>0\), and \(w(m+n)/r\le1\), one has
+\begin{equation}\label{eq:grow}
+ |X_{r,J}(n,m)-K_J(w)|
+ \le C_J(1+w)(m^{-1/2}+n^{-1/2}+(m+n)/r).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Work on the ordinary magnetic norm of the untruncated coupled representations. For \(C_q=F_qE_q+[Z+1/2]^2\), symmetric coproduct comparison gives, with \(\mathbf J_m,\mathbf J_n\) the ordinary spin generators,
+\begin{equation}\label{eq:cas}
+ \Delta C_q=sI+2\mathbf J_m\cdot\mathbf J_n+
+            O(mn(m+n)/r),\qquad
+ s=[m/2]^2+[n/2]^2-[1/2]^2.
+\end{equation}
+In detail, \(E_q,F_q\) have norm \(O(m)\) on \(V_m\) and differ from the ordinary raising and lowering matrices by \(O(m(m/r)^2)\), by the sine weights. The two pure coproduct terms differ from their single-spin counterparts by \(O(m^2 n/r+n^2 m/r)\), using the dressing \(q^{\pm2Z}-1\). The mixed raising-lowering terms cost \(O(mn(m+n)/r)\) after subtracting their ordinary values. After the two pure Cartan terms are subtracted and \([1/2]^2\) restored, the Cartan part is the mixed difference of \(f(t)=[t]^2\). The identity
+\(f''(t)=2(\theta/\sin\theta)^2\cos(2\theta t)\)
+gives the ordinary mixed term \(2Z_m Z_n\) with error \(O(mn(m+n)^2/r^2)\).
+
+Invert the Casimir eigenvalue by the holomorphic power series
+\[
+        F_\theta(u)=\theta^{-2}(\arcsin(\sin\theta\sqrt u))^2 .
+\]
+It converges in operator norm for sufficiently small \(c_0\), and on a coupled simple \(V_x\) has value \(F_\theta([x/2]^2)=x^2/4\). With \(T=\Delta C_q-sI\), telescoping powers in this series gives
+\[
+ \|F_\theta(sI+T)-F_\theta(s)I-T\|
+       \le C\theta^2(m+n)^2\|T\|.
+\]
+The scalar double difference between \(F_\theta(s)\) and the two single-spin values with the common constant restored is \(O(\theta^2m^2n^2)\): apply \(F_\theta''=O(\theta^2)\) on the required range. The exact balancing phase is
+\(\exp[2i\theta(F_\theta(\Delta C_q)-m^2/4-n^2/4+1/4)]\).
+Its generator differs from \(4\theta\mathbf J_m\cdot\mathbf J_n\) by \(O(w(m+n)/r)\) using \eqref{eq:cas}. The comparison generator is self-adjoint in the ordinary norm. Passing to the interaction picture, an error of norm \(e\) changes the exponential by at most \(e e^e\). The hypothesis \(w(m+n)/r\le1\) thus gives the same linear error for the actual monodromy without assuming ordinary-norm self-adjointness of the quantum generator.
+
+With one spin fixed at \(J\), the same calculation after dividing the Casimir difference by \(m-1\) gives the cap operator generator \((\mathbf J_m/j_m)\cdot\mathbf S+O(m/r+m^{-1})\), \(j_m=(m-1)/2\). Its finitely many separated eigenvalues are \(s+O(m/r+m^{-1})\) on channel shifts \(s\). The ratios in \eqref{eq:cap} differ from \((-1)^s\) at that rate. Bounded-degree polynomial interpolation compares the actual cap operator to \(e^{i\pi(\mathbf J_m/j_m)\cdot\mathbf S}\) in norm: the undeformed generator has the same fixed number of channels and eigenvalues \(s+O(m^{-1})\). A fixed-light crossing differs from the ordinary flip by \(O(m/r)\), since the finite nilpotent expansion has terms \(O((m/r)^b)\) and the Cartan factor differs by \(O(m/r)\). The quantum trace weights differ from ordinary normalized ones by \(O((m+n)/r)\).
+
+Finally, on a normalized spin coherent state \(\xi_u\) the individual components of \(\mathbf J_m/j_m-u\) have norm \(O(m^{-1/2})\). Variation of constants on coherent inputs freezes the ordinary heavy exponential to \(e^{i\pi w u\cdot v}\) with error \(O(w(m^{-1/2}+n^{-1/2}))\), also absorbing replacement of \(4j_mj_n\) by \(mn\). The cap exponential similarly freezes to the light half turn, uniformly over the bounded-dimensional auxiliary inputs. Telescope the fixed product of operators from the right; operators already replaced preserve the heavy coherent vectors (carried with their wires) and act by scalars or on the auxiliary factors. The unresolved factors have uniformly bounded norms. The coherent-state resolution of identity and the ordinary closed auxiliary trace give the kernel with character \(U_{2J}(u\cdot v)\); apply the same bound to the vacuum and subtract. This proves \eqref{eq:grow}.
+\end{proof}
+
+\begin{proposition}[Uniform exterior ratio bound]\label{prop:ratio-tail}
+For \(0<\epsilon\le1/2\), \(L\ge2\), and a fixed hard ratio gate \(\chi=\mathbf1_{[\epsilon,L]}\),
+\[
+ \limsup_{r\to\infty}
+   \frac{|D_{r,J}[g]-D_{r,J}[g,\chi]|}{r^{5/2}\log r}
+       \le C_{g,J}(\epsilon^2+L^{-1}).
+\]
+The bound also holds with a fixed smooth \(0\le\chi\le1\) equal to one on \([\epsilon,L]\).
+\end{proposition}
+
+\begin{proof}
+The large-ratio contribution was estimated above. For \(k/m=\rho\le\epsilon\), consider first the range \(m\le\eta r\) with \(\eta\) small. Set \(d=m^{-1}+m/r\), \(a=1/10\), and retain \(d^a\le w=mn/r\le d^{-a}\) temporarily, assuming \(d\) small. The lower excluded part of \(S(k,m)\) costs \(O((r/m)d^a)\) by absolute counting. The upper excluded part costs the same by the signed prefix with \(m\) the largest neighbor. In the window, \(n^{-1},n/r\le d^{1-a}\) and \(w(m+n)/r=O(d^{1-2a})\), so \eqref{eq:grow} applies. The unmarked competitor is exactly
+\[
+ \lambda_0(k,n)=\sinc(\pi\rho w)
+   \frac{\sin\theta}{\theta}
+   \frac{\theta k}{\sin(\theta k)}
+   \frac{\theta n}{\sin(\theta n)},\qquad \sinc z=\frac{\sin z}{z}.
+\]
+Moreover \(p_{b_2}(n)=2+O((n/r)^2)\) because that fixed profile equals one near zero. Summing the pointwise approximations over the \(O(d^{-a}r/m)\) entries costs \(O((r/m)d^{(1-5a)/2})\). The odd mesh is \(2m/r\); its Riemann error relative to \(r/m\) is \(O((1+d^{-a})m/r)\), since the first derivative of the classical integrand is uniformly bounded. The weight \(2\) cancels the odd-mesh factor.
+
+The integral \(I_J(\rho)=\int_0^\infty K_J(w)\sinc(\pi\rho w)\,\dd w\) has a signed \(O_J(K^{-1})\) upper tail, uniformly for \(0\le\rho\le1/2\). Indeed, integrating the polynomial Fourier kernel twice by parts leaves a fixed multiple of \(\sin(\pi w)/w\) plus \(O_J(w^{-2})\). For this first term integrate by parts up to \(\rho w=1\), using the bounded total variation of the slowly changing sinc there. Beyond that point expand into carriers of frequencies \(1\pm\rho\), each separated from zero, with envelope \(O((\rho w^2)^{-1})\). The case \(\rho=0\) uses the first carrier alone. Its full signed integral equals the Abel integral, so
+\[
+ I_J(\rho)=\tfrac14\int_{[-1,1]^2} P_J(z)
+                          \delta(z+\rho y)\,\dd z\,\dd y =O_J(\rho^2).
+\]
+The last estimate uses the vanishing of \(P_J\) to second order; for \(J=1\), \(I_1(\rho)=2\rho^2/3\). The omitted lower interval is \(O(d^a)\). Altogether
+\begin{equation}
+ |S(k,m)|\le C_{g,J}(r/m)\bigl((k/m)^2+(m^{-1}+m/r)^a\bigr).
+ \label{eq:small}
+\end{equation}
+If \(d\) is not sufficiently small while \(m\le\eta r\), choose \(\eta\) sufficiently small so that the remaining \(m\)'s are bounded, giving only \(O(r^2)\) raw cost. Multiply \eqref{eq:small} by \(Cr/k\) and sum. Since \(\sum_{k\le\epsilon m} k^{-1}(k/m)^2\le C\epsilon^2\), the small-ratio main term is \(O(r^2\epsilon^2\log r)\). The \(m^{-a}\) term sums against \(m^{-1}\log(2m)\), and the \((m/r)^a\) term costs \(O(r^2\eta^a\log r)\).
+
+For the remaining \(m/r\in[\eta,c]\), use Lemma~\ref{lem:macro} rather than a small-\(m/r\) approximation. Truncate \(n\) first at a fixed \(B\), with omitted tail \(O_{g,\eta,J}(B^{-1})\) from the prefix with threshold \(\eta B\). On this finite prefix \(\lambda_0(k,n)\to1\) uniformly in the successive limits \(r\to\infty,\ k/r\le\zeta\downarrow0\), and \(p_{b_2}(n)\to2\). Lemma~\ref{lem:macro} then gives
+\[
+ \lim_{\zeta\downarrow0}\limsup_{r\to\infty}
+ \sup_{\substack{k/r\le\zeta,\;\eta\le m/r\le c\\ k/m\le1/2}}
+ |S(k,m)|=0 .
+\]
+Thus \(k\le\zeta r\) has zero normalized raw contribution after these limits; \(k>\zeta r\) has raw \(O_{\eta,\zeta}(r^2)\) by the ordinary prefix bounds. In total the macro interval has zero coefficient at every fixed \(\eta>0\). Send \(\eta\downarrow0\) to remove the mesoscopic error. Ratio weights are on the two unsummed anchors; the same estimates work after taking their absolute values wherever they differ from one, without differentiating their edges. Multiply by the prefactor in \eqref{eq:finite}.
+\end{proof}
+
+\paragraph{Proof of Theorem~\ref{thm:main}.}
+With fixed \(g\), first apply the compact-ratio theorem and hard-window approximation, then send \(\epsilon\downarrow0,L\uparrow\infty\) using Proposition~\ref{prop:ratio-tail}. The resulting coefficient is
+\[\frac{\sqrt2}{\pi^3}\int_0^\infty H_J(\rho)\,\frac{\dd\rho}{\rho}.\] Its computation \eqref{eq:ratio-spin-integral} gives the signed sum of odd reciprocals. In particular for \(J=1\) the two endpoint pieces are \(\frac43\int_0^1\rho\,\dd\rho=\frac23\) and \(\frac43\int_1^\infty\rho^{-2}\,\dd\rho=\frac43\), hence \(2\). Now apply Proposition~\ref{prop:radial}. Integrability of the limiting density alone was not used to remove either gate.

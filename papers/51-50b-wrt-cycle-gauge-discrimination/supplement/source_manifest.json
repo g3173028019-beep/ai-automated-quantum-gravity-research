@@ -1,0 +1,13 @@
+{
+  "retrieved_date": "2026-11-27",
+  "repository": "g3173028019-beep/ai-automated-quantum-gravity-research",
+  "blob_shas": {
+    "papers/51-singular-wrt-semiclassical-sewing/angular.tex": "6de20133aadd21afcbd70c5a759e2cd9b63d9db6",
+    "papers/51-singular-wrt-semiclassical-sewing/classic.tex": "9bd601b4a2cd0810453cababbba5579e920dccb9",
+    "papers/51-singular-wrt-semiclassical-sewing/hall.tex": "32bd75e91401d85505bdfb29e76d158a3b660e65",
+    "papers/51-singular-wrt-semiclassical-sewing/geometry.tex": "a945eccecabd8b0ba3e660aa67e03b499525a0c6",
+    "papers/50-wrt-graph-detection-and-stability/manuscript.tex": "ef60610477c3c0461c2ac6aad00c32633c978ca9",
+    "papers/50b-wrt-topological-blindness/manuscript.tex": "7491ac507620524fe0f905d376e62c7e6a3879fd"
+  },
+  "status": "New derivations from specified inputs; no external peer review or priority claim."
+}

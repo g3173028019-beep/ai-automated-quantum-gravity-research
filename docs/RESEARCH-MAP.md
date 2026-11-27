@@ -153,6 +153,9 @@ These are separate model-scoped results. No map edge identifies a finite canonic
 
 The closed WRT and Chern–Simons calculations are complementary to the marked open Turaev–Viro experiments in Papers 41, 42 and 42B. Their quantum invariants, normalizations and claims remain distinct.
 
+- [51B · An Ungated Centered Wilson Law for Paired-Cap WRT Sewing](../papers/51b-wrt-ungated-wilson/README.md): The first surviving ungated logarithmic coefficient for a fixed integer-spin terminal ribbon on the four-vertex path; a separate ratio-resolved law on matched trees.
+- [51+50B · Cycle Logarithms and Gauge Discrimination in Paired-Cap Sewing](../papers/51-50b-wrt-cycle-gauge-discrimination/README.md): The leading logarithm for each fixed even paired-cap cycle at either level parity; a signed graph-manifold pair separated by an order-21 gauge group, including all twists.
+
 ## Using the routes
 
 The [paper index](PAPER-INDEX.md) links all manuscripts and distinguishes the original PDF/source packets, later analytical Markdown manuscripts and typeset analytical articles. Use packet notes for commands and dependencies, and the [verification overview](../VERIFICATION.md) for the distinction between proof, exact finite checks, numerical diagnostics and retained inputs. No additional scientific rerun is implied by this navigation layer.

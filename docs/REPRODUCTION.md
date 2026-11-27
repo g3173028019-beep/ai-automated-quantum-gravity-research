@@ -202,3 +202,7 @@ Run `./build.sh` from each paper directory in a standard pdfLaTeX installation. 
 - [Paper 58](../papers/58-vacuum-stress-spectral-thresholds/VERIFICATION.md)
 - [Paper 59](../papers/59-wilson-recovery-sign-holonomy/VERIFICATION.md)
 - [Paper 60](../papers/60-graviton-nonabelian-holonomy/VERIFICATION.md)
+
+## Building 51B and 51+50B
+
+Run `./build.sh` in [51B](../papers/51b-wrt-ungated-wilson/README.md) or [51+50B](../papers/51-50b-wrt-cycle-gauge-discrimination/README.md). The paper notes link the exact replays and the [earlier derivation source](../papers/51-50b-wrt-cycle-gauge-discrimination/supplement/README.txt).

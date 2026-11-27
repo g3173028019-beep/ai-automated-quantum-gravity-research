@@ -1,0 +1,165 @@
+\section{A cycle extension with an explicit leading coefficient}
+\label{sec:cycles}
+This section is independent of the unproved ungated subleading Wilson
+claim. It uses only the exact finite sewing formula and degree-two
+summation identity of Paper 50. All graph sizes below are fixed as the
+level tends to infinity.
+
+\begin{theorem}[All even cycles]\label{thm:cycles}
+Let $m\geq2$, let $C_{2m}$ carry the paired order-two caps of Papers
+50--51, and give its section--fibre exchanges arbitrary signs.
+In the normalization $Z_r(S^2\times S^1)=1$,
+\[
+ Z_r(M_{C_{2m},\epsilon})=
+ \frac{\binom{2m-2}{m-1}}{\pi^{2m}}\,r^{2m}\log r
+ +O_m(r^{2m}).
+\]
+The formula holds along the full sequence of integer shifted levels
+$r\geq3$, at both parities. In particular the coefficient is positive
+and the leading logarithmic degree is exactly one.
+\end{theorem}
+
+\begin{proof}
+The signed adjacency of a bipartite graph has signature zero; moreover
+$C_{2m}$ has $2m$ edges. Thus both oriented phase factors in the exact
+formula of Paper 50B are one. Put
+\[
+ K(x)=\frac{\sin(\pi x)}{\pi x},\qquad
+ F_2(x)=\cos^2(\pi x/2)\left(\frac{\pi x}{\sin\pi x}\right)^2,
+ \qquad s_a=\min(a,r-a).
+\]
+Index the alternating vertices by $a_1,b_1,a_2,b_2,\ldots,a_m,b_m$,
+with $b_i$ adjacent to $a_i,a_{i+1}$ and $a_{m+1}=a_1$.
+The exact degree-two identity is
+\[
+ \sum_{\substack{1\leq b<r\\b\ \mathrm{odd}}}
+ F_2(b/r)K(ab/r)K(cb/r)
+ =\frac{r}{4ac}\min(s_a,s_c).
+\]
+It follows without taking a limit that
+\begin{align*}
+ I_r(C_{2m})&=(r/4)^m T_m(r),\\
+ T_m(r)&=\sum_{\substack{1\leq a_i<r\\a_i\ \mathrm{odd}}}
+ \prod_{i=1}^m f_r(a_i)\prod_{i=1}^m\min(s_{a_i},s_{a_{i+1}}),\\
+ f_r(a)&=\frac{F_2(a/r)}{a^2}
+ =\frac{\pi^2}{4r^2\sin^2(\pi a/(2r))}.
+\end{align*}
+Every term in this reduced sum is nonnegative. The prefactor of
+Paper 50B gives the exact equality
+\begin{equation}\label{eq:cycle-exact}
+ Z_r(M_{C_{2m},\epsilon})
+ =\frac{2^m r^{2m}}{\pi^{2m}}T_m(r).
+\end{equation}
+
+We next justify replacing the folded finite-level weights, including
+the upper endpoint. Set $R=\lfloor r/2\rfloor$ and
+\[
+ w_r(s)=\sum_{\substack{a\ \mathrm{odd},\ 1\leq a<r\\
+                         \min(a,r-a)=s}} f_r(a),\qquad 1\leq s\leq R.
+\]
+At the midpoint a preimage is counted once. Uniformly in $s$ and in
+the parity of $r$,
+\begin{equation}\label{eq:fold-weight}
+ w_r(s)=\frac{\mathbf1_{s\ \mathrm{odd}}}{s^2}
+             +O(r^{-2}),\qquad 0\leq w_r(s)\leq C s^{-2}.
+\end{equation}
+Indeed, the lower preimage has $f_r(s)=s^{-2}+O(r^{-2})$ on
+$0<s\leq r/2$, while the upper preimage has
+$f_r(r-s)=\pi^2/(4r^2\cos^2(\pi s/(2r)))=O(r^{-2})$.
+These statements also handle the possible midpoint.
+
+For $s_i>0$ there is an exact multiplicative identity
+\begin{equation}\label{eq:min-kernel}
+ \prod_i\frac{\min(s_i,s_{i+1})}{s_i^2}
+ =\prod_i\frac1{s_i}
+ \exp\left[-\frac12\sum_i|\log s_i-\log s_{i+1}|\right].
+\end{equation}
+The elementary uniform convolution bound
+\[
+ \sup_{a\geq1}\sum_{b\geq1}\frac1b
+    e^{-|\log(b/a)|/2}<\infty
+\]
+follows by splitting the sum at $b=a$. Holding one $s_i$ fixed,
+discarding one edge of the cycle, and summing the resulting chain
+therefore bounds the sum over all other variables by a constant
+depending only on $m$. Telescoping the product of weights in
+\eqref{eq:fold-weight}, each error term is at most
+\[
+ C_m r^{-2}\sum_{s=1}^R s=O_m(1).
+\]
+Consequently
+\begin{equation}\label{eq:odd-harmonic}
+ T_m(r)=\sum_{\substack{1\leq a_i\leq R\\a_i\ \mathrm{odd}}}
+ \prod_i\frac1{a_i}
+ \exp\left[-\frac12\sum_i|\log a_i-\log a_{i+1}|\right]+O_m(1).
+\end{equation}
+
+For completeness the error in converting this sum to an integral is
+also bounded, rather than merely $o(\log r)$. Associate each positive
+odd integer $a$ to the cell $[a,a+2]$. On a product of these cells the
+logarithm of the positive integrand in \eqref{eq:odd-harmonic} changes
+by at most $C_m\sum_i a_i^{-1}$; its ratio to the value at the corner
+is uniformly bounded. The difference between its integral over the
+cell and $2^m$ times its corner value is bounded by the corner value
+times $C_m\sum_i a_i^{-1}$. The same chain bound sums this error,
+using $\sum_{a\geq1}a^{-2}<\infty$. With
+$L=\log(R+O(1))=\log r+O(1)$, changing variables $t_i=\log x_i$
+therefore yields
+\[
+ T_m(r)=2^{-m}\int_{[0,L]^m}
+      \exp\left[-\frac12\sum_i|t_i-t_{i+1}|\right]\,d^m t+O_m(1).
+\]
+
+Write $u_i=t_i-t_1$, $u_1=u_{m+1}=0$, and
+$D(u)=\max(0,u_2,\ldots,u_m)-\min(0,u_2,\ldots,u_m)$.
+The length of the allowed interval for $t_1$ is $(L-D(u))_+$.
+Hence the last integral equals $C_mL+O_m(1)$, where
+\[
+ C_m=\int_{\mathbb R^{m-1}}
+  \exp\left[-\frac12\sum_i|u_i-u_{i+1}|\right]\,du_2\cdots du_m.
+\]
+The first moment of $D$ is finite: the total variation around this
+closed chain is at least $2D$, and also controls every $|u_i|$.
+Let $k(t)=e^{-|t|/2}$. Then $C_m=k^{*m}(0)$ and
+$\widehat{k}(\xi)=(\xi^2+1/4)^{-1}$. Fourier inversion and an elementary
+beta integral give
+\[
+ C_m=\frac1{2\pi}\int_{\mathbb R}(\xi^2+1/4)^{-m}\,d\xi
+ =\frac{2^{2m-2}\Gamma(m-1/2)}{\sqrt\pi\,\Gamma(m)}
+ =\binom{2m-2}{m-1}.
+\]
+Thus $T_m(r)=2^{-m}C_m\log r+O_m(1)$. Substitution into
+\eqref{eq:cycle-exact} proves the theorem.
+\end{proof}
+
+\begin{corollary}[Logarithmic scale and relative ratios]
+Normalize the positive folded weight defining $T_m(r)$ to a
+probability measure. Put $u=\log s_1/\log r$ and
+$v_i=\log(s_i/s_1)$ for $i=2,\ldots,m$, with $v_1=v_{m+1}=0$.
+Their joint weak limit is the product of the uniform probability
+measure on $[0,1]$ and the probability density
+\[
+ \frac{1}{\binom{2m-2}{m-1}}
+ \exp\left[-\frac12\sum_i|v_i-v_{i+1}|\right]\,d^{m-1}v.
+\]
+In particular all alternating anchors have the same limiting
+logarithmic exponent. This is a law of the exactly reduced color
+sum; no unproved identification with a Wilson angle observable is
+used.
+\end{corollary}
+\begin{proof}
+For bounded continuous tests compactly supported in $v$, repeat
+the cell comparison above and set $t_1=u\log r$. The allowable
+interval for $u$ tends to $[0,1]$, uniformly on compact $v$ sets.
+The chain exponential has integrable relative tails, uniformly in
+$r$ after normalization, and the weight-replacement errors have
+total variation $O_m(1)$ against a mass of order $\log r$.
+Truncation in $v$ proves the assertion for all bounded continuous
+tests. The limiting total mass is one by the calculation of $C_m$.
+\end{proof}
+
+\paragraph{Scope.}
+The theorem proves a vacuum leading asymptotic for a complete family
+with one backbone cycle. It does not prove a full Chern--Simons
+stratum resolution, an all-orders expansion on general graphs, or
+a Wilson law on a cyclic backbone. The number $m$ is fixed.

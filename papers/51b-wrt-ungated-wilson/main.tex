@@ -1,0 +1,70 @@
+\pdfoutput=1
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=.95in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks,pdftitle={An ungated centered Wilson law for paired-cap WRT sewing},pdfauthor={}]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\sinc}{\operatorname{sinc}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\DeclareMathOperator{\Var}{Var}
+\title{An Ungated Centered Wilson Law for Paired-Cap WRT Sewing\\[4pt]
+\large Paper 51B: A companion to singular semiclassical sewing}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+A fixed Wilson insertion can cancel the dominant Witten--Reshetikhin--Turaev coefficient without vanishing on the entire singular character space. We compute the surviving term for a literal auxiliary ribbon through the positive caps of the terminal matched edge of the four-vertex paired-cap path. Centering the spin-one character by its perpendicular value gives the ungated coefficient \(2\sqrt2/\pi^3\) at scale \((-1)^r r^{5/2}\log r\), where \(r=k+2\). We obtain a closed signed coefficient for every fixed integer auxiliary spin. The proof first resolves physical heavy-color ratios on general perfectly matched trees. On the path, an interaction-picture estimate of the finite-level quantum Casimir handles small ratios on growing product boxes; a highest-weight contraction and an exact odd-character sum eliminate one-macroscopic-color contributions. These estimates justify removing both ratio and ordinary radial gates from the original invariant, rather than assigning a model oscillatory integral to the finite ribbon diagram.
+\end{abstract}
+
+\section{The centered observable}
+
+Let \(P_4=b_1-a_1-b_2-a_2\) be the original untwisted positive-Hopf paired-cap surgery path of Paper~51 \cite{p51}. Write \(Z_r\) for its \(\mathrm{SU}(2)\) WRT invariant in the convention \(Z(S^2\times S^1)=1\), and \(Z_{r,W_J}\) for the invariant with one fixed spin-\(J\) ribbon going once through the positive cap at each of \(a_2,b_2\). The ribbon follows the stipulated exterior strip between these two vertex boxes, with no extra heavy clasp and with the same framing convention throughout. The matched reference value of its character is \(U_{2J}(0)=(-1)^J\), where \(U_\ell\) is the Chebyshev polynomial of the second kind. Set
+\[
+        D_{r,J}=Z_{r,W_J}-(-1)^J Z_r,\qquad P_J(z)=U_{2J}(z)-(-1)^J,\qquad r=k+2.
+\]
+The polynomial $P_J$ is even and vanishes to order at least two at $z=0$. Here and below an ungated invariant sums all original admissible colors. Centering subtracts the unmarked companion at the same physical level; it is not an angular insertion made diagonal by assumption.
+
+\begin{theorem}[Ungated terminal Wilson coefficient]\label{thm:main}
+For every fixed nonnegative integer \(J\), along all integer levels,
+\[
+ D_{r,J}=(-1)^r\frac{\sqrt2}{\pi^3}r^{5/2}\log r
+   \left[2(-1)^{J+1}
+             \sum_{\substack{1\le j\le J\\j\ {\rm odd}}}\frac1j
+         +o_J(1)\right].
+\]
+In particular,
+\(Z_{r,W_1}+Z_r=(-1)^r(2\sqrt2/\pi^3)r^{5/2}\log r+
+o(r^{5/2}\log r)\).
+For \(J=0\) the centered invariant vanishes identically.
+\end{theorem}
+
+Paper~51 identifies a leading perpendicular frame law for true Wilson insertions in the two-action expansion. Centering removes that law for this terminal insertion; the ratio at which its matched anchor competes with a neighboring anchor produces a lower-logarithmic term. The remaining task is finite-level: the two terms of \(D_{r,J}\) are individually of order \(r^{5/2}(\log r)^2\), so separate leading-limit estimates are insufficient. Our proof keeps the cancellation inside the same conditional terminal sum. We also give a standalone statement of the ratio-resolved limit on matched trees, which gives a concrete probe of the directed geometry of their matched graph.
+
+\input{transfer}
+\input{radial}
+\input{ratio-tail}
+\input{normal-phase}
+
+\begin{thebibliography}{9}
+\bibitem{p51}
+\emph{Singular semiclassical sewing for paired-cap Witten--Reshetikhin--Turaev invariants}, Paper 51.
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/51-singular-wrt-semiclassical-sewing}{Source archive}.
+\bibitem{rt}
+N.~Reshetikhin and V.~G.~Turaev, Ribbon graphs and their invariants derived from quantum groups,
+\emph{Commun.\ Math.\ Phys.} \textbf{127} (1990), 1--26.
+\bibitem{kir}
+A.~A.~Kirillov, Jr., On an inner product in modular tensor categories,
+\emph{J.\ Amer.\ Math.\ Soc.} \textbf{9} (1996), 1135--1169.
+\end{thebibliography}
+\end{document}

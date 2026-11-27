@@ -1,0 +1,266 @@
+% Include-ready derivation.  No claim of an ungated finite-level Wilson theorem.
+\section{A complete next-log calculation for the four-site Hall normal phase}
+\label{sec:p4-next-log-model}
+
+Write the path as $b_1-a_1-b_2-a_2$, with matching
+$\{a_1b_1,a_2b_2\}$, and put
+$t_1=u_{a_1}\cdot u_{b_1}$, $s=u_{a_1}\cdot u_{b_2}$,
+$t_2=u_{a_2}\cdot u_{b_2}$.
+The three edge dots are independent uniform variables on $[-1,1]$
+before insertion.  After the passive azimuths have been averaged,
+the exact Hall normal phase of Paper 51 has the form
+\[
+ \Phi=t_1x_1z_1+s x_1z_2+t_2x_2z_2.
+\]
+Its physical common coefficient is $c$, with $|c|=1/2$.
+Since the physical phase is $e^{2\pi i r\,CS}$,
+the parameter in $e^{iR\Phi}$ is $R=2\pi r|c|=\pi r$.
+Reflection of one radial bipartition removes
+the sign of $c$ in these model integrals.
+
+The spin-one word on the last matched pair has central symbol
+$W=4t_2^2-1$.  Thus $D=W+1=4t_2^2$ vanishes on the leading
+perpendicular-pair locus but does not vanish on the whole singular
+character space.  The following result calculates the next logarithm
+without selecting a compact interval of tied ratios.
+
+\begin{proposition}[Next-log angular distribution for the normal model]
+Let $a(y;t_1,s,t_2)$ be smooth, compactly supported in
+$y=(x_1,x_2,z_1,z_2)$, uniformly for the three edge dots in $[-1,1]$.
+Set
+\[
+ \mathcal I_R[a]=\frac18\int_{[-1,1]^3}\!dt_1\,ds\,dt_2
+       \int_{\mathbb R^4}4t_2^2 a(y;t_1,s,t_2)e^{iR\Phi}\,dy.
+\]
+Then
+\[
+ \boxed{\quad
+ \lim_{R\to\infty}\frac{R^2}{\log R}\mathcal I_R[a]
+   =4\pi^2\int_{-1}^1\!\int_{-1}^1
+          |t_2|\,a(0;0,s,t_2)\,ds\,dt_2 .\quad}
+\]
+In particular the next-log distribution is supported on $t_1=0$;
+the marked dot $t_2$ is not constrained to vanish.  This is a theorem
+about the actual quadratic Hall normal phase, with a specified normal
+observable.  It is not by itself an asymptotic theorem for the whole
+ungated finite-level Wilson invariant.
+\end{proposition}
+
+\begin{proof}
+First work with $|t_2|\geq\delta>0$.  Put
+$X=x_2+(s/t_2)x_1$, $Z=z_2$.  This linear substitution has Jacobian one
+and gives $\Phi=t_1x_1z_1+t_2XZ$.
+Two-dimensional stationary phase in $(X,Z)$ gives
+$2\pi/(R|t_2|)$ times the amplitude at $X=Z=0$, with a uniform
+$O_\delta(R^{-2})$ remainder after the other compact integrations.
+There is no signature phase: the two Hessian eigenvalues have opposite
+signs.
+
+For any smooth compact $b(t,x,z)$ the elementary cubic estimate is
+\[
+ \int_{-1}^1\!dt\int_{\mathbb R^2}b(t,x,z)e^{iRtxz}\,dx\,dz
+   =\frac{4\pi\log R}{R}b(0,0,0)+O(R^{-1}).
+\]
+Indeed $|t|<R^{-1}$ has absolute size $O(R^{-1})$.  On
+$R^{-1}\leq |t|\leq1$, stationary phase gives
+$2\pi b(t,0,0)/(R|t|)+O((R|t|)^{-2})$; both the integrated error
+and the replacement of $b(t,0,0)$ by $b(0,0,0)$ cost $O(R^{-1})$.
+Applying this estimate after the preceding quadratic integration gives
+the claimed coefficient on $|t_2|\geq\delta$.
+
+It remains to justify removal of this angular gate.  Put
+\[
+ T=\begin{pmatrix}t_1&s\\0&t_2\end{pmatrix},\qquad
+ H=\begin{pmatrix}0&T\\T^{\mathsf T}&0\end{pmatrix},\qquad
+ \Delta_R=1+R^2(t_1^2+s^2+t_2^2)+R^4t_1^2t_2^2.
+\]
+Gaussian integration, with the branch fixed at $R=0$, gives
+\[
+ \int_{\mathbb R^4}e^{-|y|^2/2+iR\Phi}\,dy
+       =\frac{(2\pi)^2}{\sqrt{\Delta_R}}.
+\]
+The same denominator bounds the integral with a general compact smooth
+amplitude, up to a finite amplitude seminorm.  To prove this, write
+$a=e^{-|y|^2/2}g$ and Fourier-expand $g$.  The integral with a Fourier
+mode $e^{i\xi\cdot y}$ is the displayed Gaussian multiplied by
+$\exp[-\xi^{\mathsf T}(I-iRH)^{-1}\xi/2]$; its modulus is at most one
+because $\operatorname{Re}(I-iRH)^{-1}=(I+R^2H^2)^{-1}\geq0$.
+The $L^1$ norm of $\widehat g$, uniformly over the dot parameters,
+is controlled by a finite number of the stated amplitude seminorms.
+
+Finally
+\[
+ \int_{-1}^1\frac{dt_1}{\sqrt{\Delta_R}}
+ =\frac{2}{R\sqrt{1+R^2t_2^2}}
+   \operatorname{arsinh}\!\left(
+    \frac{R\sqrt{1+R^2t_2^2}}{\sqrt{1+R^2(s^2+t_2^2)}}\right).
+\]
+The inverse-hyperbolic-sine factor is at most
+$\operatorname{arsinh}R$, and
+$Rt_2^2/\sqrt{1+R^2t_2^2}\leq |t_2|$.
+Consequently the portion $|t_2|<\delta$, divided by
+$R^{-2}\log R$, is bounded by $C_a\delta^2$, uniformly in $R\geq2$.
+Send $R$ to infinity and then $\delta$ to zero.  This also controls
+the middle-dot and collinear endpoints; neither was removed.
+\end{proof}
+
+\begin{corollary}[Two angular filters remove both logarithms]
+With the same hypotheses on $a$, put
+\[
+ \mathcal J_R[a]=\frac18\int_{[-1,1]^3}dt_1\,ds\,dt_2
+       \int_{\mathbb R^4}16t_1^2t_2^2a(y;t_1,s,t_2)e^{iR\Phi}dy.
+\]
+Then
+\[
+ \lim_{R\to\infty}R^2\mathcal J_R[a]
+ =8\pi^2\int_{[-1,1]^3}|t_1t_2|
+                       a(0;t_1,s,t_2)dt_1\,ds\,dt_2.
+\]
+For a Gaussian radial amplitude the coefficient is $16\pi^2$.
+Thus, at the level of this exact normal phase, the two central symbols
+$(W_1+1)(W_2+1)=16t_1^2t_2^2$ remove both logarithms.
+\end{corollary}
+
+\begin{proof}
+For $t_1t_2\ne0$ the four-dimensional quadratic Hessian is
+nondegenerate with zero signature, so stationary phase gives
+$(2\pi)^2a(0)/(R^2|t_1t_2|)$.
+The Fourier--Gaussian bound above and
+$\sqrt{\Delta_R}\geq R^2|t_1t_2|$ give, after multiplication by
+$R^2t_1^2t_2^2$, the integrable majorant $C_a|t_1t_2|$.
+Dominated convergence proves the result.  The unmarked middle dot
+has length two and each integral of $|t_i|$ on $[-1,1]$ equals one.
+\end{proof}
+
+More generally, a smooth edge-dot polynomial $P(t_1,s,t_2)$ even
+in $t_1,t_2$ and satisfying $P(0,s,0)=0$ has the next-log coefficient
+\[
+ \pi^2\int_{-1}^1\!\int_{-1}^1\frac{
+ P(0,s,t)a(0;0,s,t)+P(t,s,0)a(0;t,s,0)}{|t|}\,ds\,dt
+\]
+for the same integral without the factor $4t_2^2$ and with insertion
+$P$.  To prove this, decompose $P=t_1^2A+t_2^2B$ and apply the
+proposition and its path reversal.  Both apparent singularities at
+$t=0$ are removable as integrable $O(|t|)$ densities.  This describes
+the first two levels of an angular filtration of the model, rather
+than only one isolated numerical coefficient.
+
+\subsection{An exact Gaussian check, including the constant term}
+For $a=e^{-|y|^2/2}$ the preceding Gaussian identity gives
+\[
+ \mathcal I_R^{\mathrm G}
+ =4\pi^2\int_{-1}^1\!\int_{-1}^1
+ \frac{t^2}{R\sqrt{1+R^2t^2}}
+ \operatorname{arsinh}\!\left(
+ \frac{R\sqrt{1+R^2t^2}}{\sqrt{1+R^2(s^2+t^2)}}\right)ds\,dt.
+\]
+It follows, more precisely, that
+\[
+ \boxed{\quad
+ \mathcal I_R^{\mathrm G}
+ =\frac{8\pi^2\log R}{R^2}
+ +\frac{4\pi^2}{3R^2}(4-\pi+2\log2)+o(R^{-2}).\quad}
+\]
+For completeness, away from $t=0$ the integrand after multiplying by
+$R^2/(4\pi^2)$ tends, after subtracting $|t|\log R$, to
+\[
+ |t|\log\frac{2|t|}{\sqrt{s^2+t^2}}.
+\]
+The part $|t|<R^{-1}$ is $o(1)$ in this subtracted expression.
+On its complement the error in replacing
+$Rt^2/\sqrt{1+R^2t^2}$ by $|t|$ is bounded by
+$C/(R^2|t|)$, with integrated contribution $o(1)$ even after the
+logarithmic factor.  The error of the inverse-hyperbolic-sine
+expansion is integrable with the same conclusion.  The remaining
+logarithmic function is integrable against $|t|ds\,dt$, and
+\[
+ \int_{-1}^1\!\int_{-1}^1
+ |t|\log\frac{2|t|}{\sqrt{s^2+t^2}}\,ds\,dt
+       =\frac{4-\pi+2\log2}{3}.
+\]
+One evaluation uses symmetry and
+$\int_0^1 t^2\arctan(1/t)dt=\pi/12+(1-\log2)/6$.
+
+The corresponding uninserted Gaussian model satisfies
+\[
+ \frac18\int_{[-1,1]^3}\!dt_1\,ds\,dt_2
+   \int_{\mathbb R^4}e^{-|y|^2/2+iR\Phi}dy
+       =\frac{2\pi^2}{R^2}(\log R)^2
+          +O(R^{-2}\log R).
+\]
+For example integrate $t_1$ first using the same formula.  On
+$R^{-1}<|t_2|<1$, the terms $\log R+\log|t_2|$ have integral
+$\tfrac12(\log R)^2$ on each positive logarithmic triangle;
+the $s$-integral of $|\log(s^2+t_2^2)|$ is uniformly bounded, and
+the omitted strip contributes only $O(\log R)$ after multiplication
+by $R^2$.
+Thus the next-log coefficient for $D$ is four times the vacuum's
+leading-log-squared coefficient.  Combining this ratio with the
+already established physical normalization in Paper 51 suggests the
+number $2\sqrt2/\pi^3$ for the coefficient of
+$(-1)^r r^{5/2}\log r$ in the global finite Wilson difference.
+The suggestion is not a proof of that finite-level statement.
+
+\subsection{Exact vanishing on the one-active-endpoint leading strata}
+Use the original path labels $1-2-3-4$ and the word
+$W=\chi_1(A_3A_4)$, where $A_v^2=h_v^{-1}$.
+For any $g\in\mathrm{SU}(2)$,
+$\chi_1(g)+1=(\operatorname{Tr}_{1/2}g)^2$.
+
+If the only noncentral fibre is $h_4$, then $h_2$ is central.
+The forced neighbour $h_3$ must be $-I$: if it were $+I$, then
+$A_3=\pm I$ would force the noncentral product $h_2h_4$ to equal
+its inverse, a contradiction.  Hence $A_3=i v\cdot\sigma$ and
+the flat relation $\operatorname{Ad}_{A_3}(h_2h_4)=(h_2h_4)^{-1}$
+forces $v$ perpendicular to the axis of $h_4$.
+The root $A_4$ has that same axis, so
+$\operatorname{Tr}_{1/2}(A_3A_4)=0$ exactly, at every noncentral
+angle of $h_4$.  Therefore $D$ vanishes identically on this
+one-active-endpoint flat stratum, not merely as its angle tends to zero.
+
+If instead the only noncentral fibre is $h_1$, the leading
+all-negative dormant branch on the remaining pair $3-4$ is the
+two-site model. Its leading logarithmic
+angular law is perpendicular, so $D$ vanishes on that leading
+law.  These observations remove a specific possible source of an
+additional macro-endpoint leading logarithm.  They do not provide
+a uniform finite-level remainder estimate near the intersections
+of all active and central strata.
+
+\subsection{What still separates this result from an ungated quantum theorem}
+The joint-symbol theorem of Paper 51 gives convergence on bounded
+edge products, and the signed-prefix theorem controls each fixed
+Wilson network.  Neither, by itself, estimates the cancellation
+$Z_{r,W}+Z_r$ one logarithm below their individual leading size.
+
+For the literal positive ratio $\rho=m_{a_1}/m_{a_2}$, the resolved
+calculation has density
+\[
+ H(\rho)=\frac43
+  \begin{cases}\rho^2,&0<\rho\leq1,\\ \rho^{-1},&\rho\geq1,
+  \end{cases}
+ \qquad
+ \int_0^\infty H(\rho)\,\frac{d\rho}{\rho}=2.
+\]
+The useful sufficient next step is a finite-level estimate with
+these two integrable tails.  For example, with a fixed negative-centre
+profile $\eta_\delta$ and a ratio cutoff equal to one on
+$[\varepsilon,L]$, it would suffice to prove
+\[
+ \limsup_{r\to\infty}
+ \frac{|D_r^{\eta_\delta}-D_r^{\eta_\delta,\chi_{\varepsilon,L}}|}
+      {r^{5/2}\log r}
+ \leq C_\delta(\varepsilon^2+L^{-1}),
+\]
+and separately
+\[
+ \limsup_{r\to\infty}
+ \frac{|D_r-D_r^{\eta_\delta}|}{r^{5/2}\log r}
+      \leq\omega(\delta),\qquad \omega(\delta)\longrightarrow0.
+\]
+The compact-ratio theorem, followed by these estimates, would give
+$D_r\sim(-1)^r(2\sqrt2/\pi^3)r^{5/2}\log r$.
+The displayed estimates are explicit open obligations, not consequences
+claimed from the leading theorem.  Establishing them requires cancellation
+inside the actual finite packet network, or a marked all-order lattice
+analysis; bounding the two invariants separately loses a logarithm.

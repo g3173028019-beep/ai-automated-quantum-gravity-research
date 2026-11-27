@@ -1,0 +1,196 @@
+\section{The smallest odd-order finite-gauge separator}\label{sec:sep}
+
+Let \(K\) be finite and \(\omega\in H^3(BK;U(1))\).
+For a connected closed oriented three-manifold \(M\), our finite-gauge
+normalization is
+\begin{equation}\label{eq:dw}
+ \mathcal D_{K,\omega}(M):=\frac{Z_{K,\omega}(M)}{Z_{K,\omega}(S^3)}
+ =\sum_{\rho\in\Hom(\pi_1 M,K)}
+      \big\langle (B\rho)^*\omega,[M]\big\rangle .
+\end{equation}
+Here \(B\rho\) denotes the induced classifying map from \(M\).
+The physical sum uses weight \(1/|K|\) before vacuum division
+\cite{DW,FQ}; equivalently sum once per conjugacy orbit with
+reciprocal centralizer weight. No division by \(K\) is made in the
+right side of \eqref{eq:dw}. Every weight in the results below is one;
+in particular, the two computed physical amplitudes are positive.
+
+\subsection{Why no odd nilpotent group can detect the pair}
+
+\begin{theorem}\label{thm:nilp}
+Suppose \(p_v=2\), \(\det A_\epsilon\ne0\) and \(K\) is finite
+nilpotent of odd order, coprime to \(\det A_\epsilon\).
+Let \(\pi:\pi_1 M_{G,\epsilon}\twoheadrightarrow F_{b_G}\) be
+the natural graph quotient. Every \(K\)-representation factors
+uniquely through \(\pi\). Hence for all \(\omega\),
+\[
+ Z_{K,\omega}(M_{G,\epsilon})=|K|^{b_G-1},\qquad
+ \mathcal D_{K,\omega}(M_{G,\epsilon})=|K|^{b_G}.
+\]
+The pro-\(\ell\) completion is free pro-\(\ell\) of rank \(b_G\)
+for every odd prime \(\ell\nmid\det A_\epsilon\).
+\end{theorem}
+\begin{proof}
+Choose a maximal spanning tree and based port loops with the
+two cap loops consecutive in the boundary product. The graph
+presentation has a fibre \(h_v\) and cap sections \(a_v,b_v\)
+at each vertex, with \(a_v^2=h_v^{-1}\), \(b_v^2=h_v\).
+They are the only generators in addition to the ordinary seam
+sections and the \(b_G\) stable letters. In a finite group of odd
+exponent \(d\) squaring is bijective, with inverse the power
+\(u\) for \(2u\equiv1\bmod d\). Consequently the images of \(a_v,b_v\)
+are \(h_v^{-u},h_v^u\); they multiply to one and all the required
+commutations with \(h_v\) hold in every such image.
+The surviving vertex equation is an ordered product of its seam
+section images equal to one. Each such section is a conjugate of
+\(h_w^{\epsilon_{vw}}\), by the identity on tree seams and by a
+stable letter or its inverse otherwise.
+
+Let \(\gamma_1K=K\), \(\gamma_{j+1}K=[K,\gamma_jK]\).
+If all fibre images lie in \(\gamma_jK\), conjugations have no
+effect in \(\gamma_jK/\gamma_{j+1}K\). In this finite abelian
+quotient the vertex equations are
+\(A_\epsilon\overline{\mathbf h}=0\).
+The adjugate annihilates \(\overline{\mathbf h}\) by
+\(\det A_\epsilon\), which is invertible on the quotient by
+coprimality. Thus the fibres lie in \(\gamma_{j+1}K\). Beginning
+at \(j=1\), nilpotence forces all fibres, then all vertex groups,
+to have trivial image. The remaining representation is arbitrary
+on the free stable letters.
+
+The projecting map is realized topologically by collapsing the
+capped blocks and using intervals on the seam collars. Thus the
+classifying maps in this calculation factor through a graph,
+where degree-three cohomology vanishes. Formula \eqref{eq:dw}
+now gives the stated numbers. The same argument applies to all
+finite \(\ell\)-groups for the indicated primes, and identifies
+the corresponding pro-\(\ell\) completions by their universal
+property.
+\end{proof}
+
+For the pair \(M_0,M_1\), the determinant moduli of the signed
+adjacencies are \(2^6\) and \(2^8\). Thus all finite odd
+nilpotent theories, including all their twists, have the
+common vacuum-divided value \(|K|^9\). This conclusion concerns
+a whole finite-group class, not just abelianization.
+
+\subsection{A conjugation channel at order twenty-one}
+
+\begin{theorem}\label{thm:sep}
+Let \(K=\FF_7\rtimes C_3\), with \(C_3\) acting on the additive
+\(\FF_7\) by multiplication by \(2\). For every
+\(\omega\in H^3(BK;U(1))\),
+\[
+ \mathcal D_{K,\omega}(M_0)=2{,}405{,}357{,}452{,}449,\qquad
+ \mathcal D_{K,\omega}(M_1)=2{,}727{,}379{,}236{,}309 .
+\]
+There are three twists and each gives these same two values.
+No odd-order finite gauge group of smaller order distinguishes
+this pair, with any twist.
+\end{theorem}
+\begin{proof}
+Write the multiplication as
+\((x,e)(y,f)=(x+2^e y,e+f)\), with \(e,f\in\ZZ/3\).
+Under the projection to \(C_3\) every representation kills all
+vertex groups by Theorem~\ref{thm:nilp}; in particular all fibre
+images lie in \(\FF_7\). The argument only uses invertibility of
+the signed adjacency modulo three for this abelian quotient.
+The cap images are then uniquely determined by their fibres,
+and both the cap and seam sections lie in the abelian normal
+subgroup. A stable letter \((u,e)\) conjugates a fibre by \(2^e\),
+independently of \(u\).
+
+Index each part of \(K_{4,4}\) by \(0,1,2,3\). Use the spanning
+tree consisting of row zero and column zero. Tree exponents
+are zero; the other nine exponents \(e_{ij}\) are independently
+in \(\ZZ/3\). With \(b_{ij}=B(D)_{ij}\in\{+1,-1\}\), the fibre
+relations, written additively in \(\FF_7\), are
+\begin{equation}\label{eq:rank}
+  A^+(\mathbf e)\,h_B=0,\qquad
+  A^-(\mathbf e)^{\mathsf T} h_A=0,\quad
+  A^+_{ij}=b_{ij}2^{e_{ij}},\quad
+  A^-_{ij}=b_{ij}2^{-e_{ij}} .
+\end{equation}
+The reverse power comes from the inverse stable letter at the
+other end of the same seam. The signs are the exponents
+\(\epsilon_{ij}\) on the adjacent fibre, not new choices of
+stable letters. After specifying both fibre vectors, all vertex
+relations and every seam relation hold: the defined cap roots
+commute with their fibres and the vertex products in the normal
+subgroup are precisely the two systems in \eqref{eq:rank}.
+There are no additional stable-letter restrictions, by the
+graph-of-groups presentation. Hence the number of representations
+at fixed exponents is
+\(7^9\,7^\nu\), where
+\(\nu=8-\rank_{\FF_7} A^+-\rank_{\FF_7}A^-\).
+The factor \(7^9\) is from the independent normal components
+of the nine stable letters. These are raw based homomorphism
+counts, not counts modulo conjugation.
+
+Here is the complete finite enumeration. Both first rows and
+columns equal one, so subtracting their pivot reduces each
+rank to one plus the rank of the \(3\times3\) matrix with entries
+\(b_{ij}2^{\pm e_{ij}}-1\) for \(i,j\ge1\). For a \(3\times3\)
+matrix the rank is \(3\) if its determinant is nonzero, else
+\(2\) if a \(2\times2\) minor survives, else \(1\) if an entry
+survives, else \(0\). Enumerate all nine exponents by the Cartesian
+product of three choices, in row-major order. The following
+histogram lists all nonempty bins:
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+seam matrix & \(\nu=0\) & \(\nu=1\) & \(\nu=2\) &
+          \(\sum_{\mathbf e}7^\nu\)\\
+\midrule
+\(B(I_3)\)       & 14415 & 5070 & 198 & 59607\\
+\(B(J_3-I_3)\)   & 13687 & 5712 & 284 & 67587\\
+\bottomrule
+\end{tabular}
+\end{center}
+For explicit reproducibility the entire arithmetic in each loop
+is
+\[
+ (u^+,u^-)=(1,1),(2,4),(4,2)\quad
+ \longmapsto\quad
+ (b_{ij}u^+-1,b_{ij}u^--1)\pmod 7
+\]
+entry by entry. Start each histogram at zero; for each array of
+these nine choices increment index
+\(6-\rank(M^+)-\rank(M^-)\) once.
+The accompanying script additionally verifies every rank by
+ordinary modular elimination on the original \(4\times4\)
+matrices. Each row sums to \(3^9=19683\), and the last column is
+the respective dot product with \((1,7,49)\). Multiplication by
+\(7^9\) gives the displayed exact vacuum-divided values in the
+untwisted case. This finite enumeration is part of the calculation,
+not an asymptotic experiment.
+
+To address twists, consider \(1\to C_7\to K\to C_3\to1\).
+For \(q>0\), \(H^q(C_7;U(1))\) is \(7\)-primary, so its
+positive-degree \(C_3\) cohomology is zero by averaging.
+The \(q=3\) group is \(\ZZ/7\) and the automorphism acts as
+\(2^2=4\) (or its inverse for the opposite pullback convention).
+Indeed \(H^3(C_7;U(1))\cong H^4(C_7;\ZZ)\) is generated by
+the square of the degree-two cyclic class. There are no invariants.
+Thus in total degree three the Lyndon--Hochschild--Serre terms
+leave only the inflation from \(H^3(C_3;U(1))\cong\ZZ/3\).
+The section \(C_3\hookrightarrow K\) makes inflation injective,
+so it supplies all three twists. Each projected \(C_3\)
+character factors through the backbone; the pullback of its
+degree-three class therefore vanishes on the manifold.
+All weights in \eqref{eq:dw} are exactly one for every twist.
+
+Finally the positive odd integers below \(21\) are \(1\),
+the primes below \(21\), \(9\) and \(15\). Groups of these
+orders are nilpotent: order \(9\) is a prime power; at order
+\(15\) both Sylow subgroups are normal by their counting
+congruences, so the group is cyclic. Theorem~\ref{thm:nilp}
+therefore applies to every smaller odd gauge group for this
+pair, proving minimality.
+\end{proof}
+
+The mechanism in \eqref{eq:rank} is a fixed normal-module
+character that survives conjugation by graph letters.
+The lower central filtration of an odd nilpotent target instead
+kills it. The result is not a classification of all nonnilpotent
+groups or of detectors across other seam signings.

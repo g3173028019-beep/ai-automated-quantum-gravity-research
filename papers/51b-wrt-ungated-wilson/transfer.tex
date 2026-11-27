@@ -1,0 +1,306 @@
+\section{Exact finite transfer inputs}\label{sec:transfer}
+
+We use Paper~51's actual positive-Hopf paired-cap surgery, ribbon routing and signed angular transfer \cite[section on actual Wilson insertions]{p51}; see \cite{rt,kir} for the ribbon and punctured modular conventions. A vertex has a zero-framed backbone with caps of framings \(+2,-2\). At level \(r=k+2\), put \(\theta=\pi/r\), \(q=e^{i\theta}\), and let \(V_m\) denote the one-based color of quantum dimension \(\sin(\theta m)/\sin\theta\). The original backbone color is \(r-m_v\); the unpierced negative cap forces each \(m_v\) odd. For fixed integer auxiliary spins, exact simple-current removal supplies one factor \((-1)^r\) per tree edge. With \(N\) vertices the invariant is
+\begin{equation}\label{eq:finite}
+ Z_{r,W}=(-1)^{r(N-1)}(2/r)^{(N+1)/2}\sin(\theta)^{-(N-1)}
+       \sum_{\boldsymbol m\ {\rm odd}}
+        \prod_v(1+\cos(\theta m_v))\,\cK_{r,W}(\boldsymbol m).
+\end{equation}
+All radial or ratio marks multiply this actual summand. The heavy traces in \(\cK_{r,W}\) are normalized; the closed auxiliary trace has its usual categorical normalization. A pierced positive cap on a packet channel of stripped color \(m+2s\) contributes, relative to its unpierced value,
+\begin{equation}\label{eq:cap}
+ (-1)^s e^{-i\theta(ms+s^2)}
+       \frac{\sin(\theta m/2)}{\sin(\theta(m+2s)/2)} .
+\end{equation}
+The ordinary Hopf transfer is
+\begin{equation}\label{eq:lambda}
+ \lambda_0(m,n)=\frac{\sin\theta\,\sin(\theta mn)}
+                        {\sin(\theta m)\sin(\theta n)} .
+\end{equation}
+
+We recall precisely which results of Paper~51 are inputs. Cutting the true tree strips gives a fixed finite sum of products of one-site factors and bounded-rank punctured Hopf transfers, with uniformly bounded suprema and variation for the one-site factors on each parity branch. Fold each original label \(m\) to \(\min(m,r-m)\); reflection signs are fixed on each folded progression. If the largest folded neighbor of a summed label \(n\) is \(M\), the signed conditional sum over any interval is bounded by \(Cr/M\), and over \(Mn/r>K\ge1\) by \(Cr/(MK)\), also with inserted one-site profiles of bounded variation. This is a signed prefix estimate, not an absolute bound on the multiple-color summand.
+
+The other input is the compact-product symbol for the literal routed diagram. Let \(P_W(\boldsymbol u)\) be the product of ordinary characters of the ordered positive-cap half-turn words \(iu_v\cdot\sigma\), \(u_v\in S^2\), with Pauli matrices \(\sigma\). All representatives follow the stipulated exterior corridors with no extra heavy clasp. Then \(\cK_{r,W}\) differs by \(o(1)\) from
+\begin{equation}\label{eq:symbol}
+ \int P_W(\boldsymbol u)e^{i\pi\sum_{e=vv'}w_e u_v\cdot u_{v'}}
+               \prod_v d\Pi(u_v),\qquad w_e=m_v m_{v'}/r,
+\end{equation}
+uniformly when the \(w_e\) stay bounded, \(\min_v m_v\to\infty\), and \(\max_v m_v/r\to0\). Here \(d\Pi\) is spherical probability; the character product is even in each axis. This theorem concerns the actual normalized diagram, not a diagonal insertion of a function of abstract angles.
+
+\section{Physical ratio gates on matched trees}
+
+\subsection{The resolved angular measure}
+Let $G$ be a fixed tree with its unique perfect matching
+$M=\{a_jb_j\}_{j=1}^d$, so $N=2d$. An unmatched edge $a_i b_j$
+defines an arrow $i\to j$. Choose a subset $E'$ of these arrows,
+put $p=d-|E'|$, and contract $E'$ in the matching tree. The remaining
+arrows define the order polytope $\Omega_{E'}\subset[0,1]^p$.
+Write $\iota_{E'}(u)$ for the full logarithmic array with values
+$(u_C,1-u_C)$ at each matched pair in a contracted component $C$.
+
+We use exactly the fixed integer-spin Wilson ribbon representatives
+declared in Paper 51, Section ``Actual Wilson insertions and their
+joint angular limit'': passages through the designated positive cap
+disks, fixed exterior tree corridors, and no new heavy-heavy crossing.
+Their joint central symbol is $P_W(a,b)$, a polynomial even under
+reversal of each spherical axis. Let $d\Pi$ be spherical probability.
+For positive parameters $\rho=(\rho_e)_{e\in E'}$, set
+\[
+ A_j(a;\rho)=a_j+\sum_{(i\to j)\in E'}\rho_{ij}a_i.
+\]
+If $A\ne0$, let $d\sigma_A$ be normalized circle measure on
+$\{b\in S^2:b\cdot A=0\}$. Define
+\begin{equation}\label{eq:ratio-measure}
+ d\nu_\rho(a,b)=\prod_j d\Pi(a_j)
+       \prod_j\frac{d\sigma_{A_j(a;\rho)}(b_j)}{|A_j(a;\rho)|}.
+\end{equation}
+The zero sets of the $A_j$ have zero product-sphere measure; the
+formula denotes its integrable extension, with no additional atoms.
+
+\begin{lemma}\label{lem:ratio-finite}
+The measure $\nu_\rho$ is finite and positive, and
+$\nu_\rho(1)\le1$ for every positive $\rho$.
+\end{lemma}
+\begin{proof}
+Choose a sink $j$ of the selected arrow forest. Then $a_j$ appears
+only in $A_j$, with coefficient one. For a fixed vector $V$,
+direct polar integration gives
+\[
+ \int_{S^2}\frac{d\Pi(a)}{|a+V|}
+   =\frac1{\max(1,|V|)}\le1.
+\]
+Integrating $a_j$ and deleting its selected arrows bounds the
+remaining integral by the same expression on a smaller forest.
+Iteration proves the assertion. In particular all possible
+$A_j=0$ singularities are integrable.
+\end{proof}
+
+\subsection{The quantum transition theorem}
+At each vertex choose a fixed smooth profile $g_v(m_v/r)$ equal to
+one near zero and supported in $[0,c)$, with $c<1/2$. These ordinary
+negative-center profiles are retained. Let $F$ be a fixed smooth
+joint test of all physical logarithmic radii $\log m_v/\log r$.
+For $e=(i\to j)\in E'$, choose
+$\chi_e\in C_c^\infty((0,\infty))$ and insert the literal
+finite-level mark $\chi_e(m_{a_i}/m_{a_j})$. No product annulus or
+Abel factor is part of this marked invariant.
+
+\begin{theorem}[Physical ratio-resolved Wilson law]
+\label{thm:ratio}
+For the routes and marks just specified, put
+$c_G=\sqrt2\,\pi^{1-N}$. Then
+\begin{align}
+ Z_{r,W}[F,g,\chi]
+ &=(-1)^{r(N-1)}c_G r^{N-3/2}(\log r)^p
+ \bigg[
+ \int_{\Omega_{E'}}F(\iota_{E'}(u))\,d^pu\notag\\
+ &\qquad\times
+ \int_{(0,\infty)^{|E'|}}
+      \left(\int P_W\,d\nu_\rho\right)
+      \prod_{e\in E'}\chi_e(\rho_e)\frac{d\rho_e}{\rho_e}
+ +o(1)\bigg].\label{eq:ratio-quantum}
+\end{align}
+The statement holds along the full integer sequence $r\to\infty$,
+with $G,W$ and all profiles fixed. The profiles $\chi_e$ may be complex.
+No uniformity as their ratio supports approach zero or infinity is
+asserted.
+\end{theorem}
+
+\begin{proof}
+Apply the finite-rank transfer expansion of Paper 51 and condition on
+all $a$ labels. Sum the $b$ labels first, term by term. At $b_j$ let
+$M_j$ be the largest neighboring $a$ label. The signed prefix bound
+gives $Cr/M_j\le Cr/m_{a_j}$. Joint smooth logarithmic tests are
+handled by their anchored mixed-variation representation in rectangular
+prefixes, as in Paper 51. The ordinary profiles have uniformly bounded
+variation on the retained lower branch.
+
+The ratio marks confine all anchors in a selected component to fixed
+positive multiples of one root. Successive leaf sums, or the change
+to one root and one edge log ratio, give
+\begin{equation}\label{eq:ratio-count}
+ \sum_{\boldsymbol m_A\ {\rm odd}}
+    \prod_jm_{a_j}^{-1}
+    \prod_{(i\to j)\in E'}
+       |\chi_{ij}(m_{a_i}/m_{a_j})|
+       =O((1+\log r)^p).
+\end{equation}
+This lower logarithmic power is built into every subsequent bound.
+
+Temporarily put $w_j=m_{a_j}m_{b_j}/r$. On $w_j>K\ge1$ the prefix
+threshold is $K M_j/m_{a_j}$, so the conditional tail is bounded by
+\[
+ \frac{Crm_{a_j}}{KM_j^2}\le\frac{Cr}{Km_{a_j}}.
+\]
+Keep all other partner sums signed and use \eqref{eq:ratio-count}.
+This costs $O(K^{-1})$ after normalization at the power in
+\eqref{eq:ratio-quantum}. The estimate is uniform with arbitrary
+additional hard interval restrictions on every other matched product:
+at fixed anchors these are precisely partner-label intervals in the
+prefix lemma. The ratio parameters are integrated against the fixed
+$\chi$ in this assertion; a pointwise-in-$\rho$ finite-level estimate
+is not needed. Similarly $w_j<\kappa$ contains
+$O(\kappa r/m_{a_j})$ labels whenever nonempty. Bounded categorical
+factors, with signed sums at the other partners, give $O(\kappa)$.
+Thus all matched products may temporarily be kept in $[\kappa,K]$.
+
+An unselected order violation $m_{a_i}/m_{a_j}>r^\epsilon$ gains
+$r^{-\epsilon}$ from the $j$-th conditional bound. A width-$\epsilon$
+strip about an unselected order wall has harmonic mass
+$O(\epsilon(\log r)^p+(\log r)^{p-1})$. Restrict each selected
+component root to $[r^\delta,r^{1-\delta}]$; the discarded mass has
+the analogous bound with $\delta$. In the retained strict chambers,
+all labels tend to infinity and all $m_v/r$ tend to zero. An
+unselected product tends to zero, and a selected product is exactly
+$\rho_{ij}w_j$. Paper 51's actual joint symbol theorem consequently
+gives, uniformly on compact product boxes,
+\[
+ \mathcal K_{r,W}\longrightarrow
+ \int P_W(a,b)\exp\!\left(i\pi\sum_j
+               w_j b_j\cdot A_j(a;\rho)\right)
+                  \prod_j d\Pi(a_j)d\Pi(b_j).
+\]
+The retained profiles $g_v$ are then one and $F$ tends to
+$F(\iota_{E'}(u))$.
+
+Each odd partner mesh gives $r\,dw_j/(2m_{a_j})$. The anchor harmonic
+measure contributes the density
+\[
+  2^{-d}(\log r)^p d^pu\prod_e d\rho_e/\rho_e;
+\]
+The log-incidence Jacobian has modulus one because $E'$ is a forest.
+The $2d$ cap profiles tend to $2$ each. The exact common scalar
+prefactor of the normalized sum in Paper 51 is asymptotic to
+\[
+ (-1)^{r(N-1)}2^{d+1/2}\pi^{1-2d}r^{d-3/2}.
+\]
+Thus the coefficient before the $w$ integration is $2^d c_G$.
+This also follows from Paper 51's bounded-product overlap theorem,
+by setting its selected product $v_{ij}=\rho_{ij}w_j$ and approximating
+$\chi_{ij}(v_{ij}/w_j)$ on compact annuli by finite tensor sums.
+
+Since $P_W$ is even in each $b_j$, the exponential can be replaced
+by the product of cosines. Passing the interval-uniform bounds to
+the compact-product limit gives $O(K^{-1})$ tails on arbitrary
+rectangles, after integration against the fixed ratio profiles.
+Multivariable summation by parts, or its continuous version, therefore
+identifies the ordinary rectangular improper $w$ integral with its
+Abel limit. For the Abel integral the following calculation is
+pointwise for almost every axis configuration and ratio:
+For $A\ne0$,
+\[
+ \int_0^\infty e^{-\varepsilon w}\cos(\pi ws)\,dw
+      =\frac{\varepsilon}{\varepsilon^2+\pi^2s^2}
+      \longrightarrow\delta_0(s),\qquad
+ \delta(b\cdot A)d\Pi(b)=\frac{d\sigma_A(b)}{2|A|}.
+\]
+The spherical Abel mass is at most $(2|A|)^{-1}$. Lemma
+\ref{lem:ratio-finite} therefore supplies an integrable dominating
+function, also after integrating over the fixed compact ratio support.
+The full $w$ integral is $2^{-d}\int P_Wd\nu_\rho$. Exhaust the
+temporary product boxes and the root and order strips. Multiplication
+by $2^dc_G$ proves \eqref{eq:ratio-quantum}.
+\end{proof}
+
+\subsection{An explicit nonzero next-logarithm Wilson signal on \texorpdfstring{$P_4$}{P4}}
+Take the path $b_1-a_1-b_2-a_2$ and select its unmatched arrow
+$a_1\to b_2$. Write $\rho=m_{a_1}/m_{a_2}$ and set
+\[
+ x=a_1\cdot b_1,\qquad y=a_1\cdot b_2,\qquad z=a_2\cdot b_2.
+\]
+Under the product sphere law these tree-edge dots are independent
+and uniform on $[-1,1]$. Formula \eqref{eq:ratio-measure} is four
+times that law restricted by $\delta(x)\delta(z+\rho y)$.
+Its projection to $z$, with $a=\min(1,\rho)$, is consequently
+\begin{equation}\label{eq:ratio-p4-law}
+ x=0,\quad y=-z/\rho,\qquad
+ d(\nu_\rho)_z=\frac1{2\rho}\mathbf1_{[-a,a]}(z)\,dz,
+ \qquad \nu_\rho(1)=\frac1{\max(1,\rho)}.
+\end{equation}
+This is a full joint law with a coherent linear constraint.
+
+For the actual spin-one word through caps $a_2,b_2$, the symbol is
+$W_z=4z^2-1$. Hence
+\[
+ H(\rho):=\int(W_z+1)d\nu_\rho
+ =\frac{4\min(1,\rho)^3}{3\rho}
+ =\begin{cases}4\rho^2/3,&0<\rho\le1,\\
+                 4/(3\rho),&\rho\ge1.
+   \end{cases}
+\]
+With $F=1$ and any nonzero, nonnegative
+$\chi\in C_c^\infty((0,\infty))$, Theorem~\ref{thm:ratio} gives
+\begin{equation}\label{eq:ratio-nonzero}
+ Z_{r,W_z}[g,\chi]+Z_r[g,\chi]
+ =(-1)^r\frac{\sqrt2}{\pi^3}r^{5/2}\log r
+   \left[\int_0^\infty\chi(\rho)H(\rho)\frac{d\rho}{\rho}
+           +o(1)\right].
+\end{equation}
+The coefficient in brackets is strictly positive. Thus a literal
+marked quantum observable has a nonzero next-logarithm-order angular
+signal outside the principal perpendicular-pair support.
+
+\begin{corollary}[A fixed hard ratio window]\label{cor:ratio-window}
+Keep the declared negative-center profiles and restrict the actual
+odd labels by $1\le m_{a_1}/m_{a_2}\le2$. With the same Wilson route
+and framing in both terms, put
+$D_r=Z_{r,W_z}[g,\mathbf1_{[1,2]}]+Z_r[g,\mathbf1_{[1,2]}]$.
+Then
+\[
+ D_r=(-1)^r\frac{2\sqrt2}{3\pi^3}r^{5/2}\log r
+                  +o(r^{5/2}\log r),
+ \qquad
+ Z_r[g,\mathbf1_{[1,2]}]
+ =(-1)^r\frac{\sqrt2}{2\pi^3}r^{5/2}\log r
+                  +o(r^{5/2}\log r).
+\]
+\end{corollary}
+\begin{proof}
+Approximate the window by smooth profiles differing only within
+width $\eta$ of its endpoints. Conditional signed partner bounds
+reduce their difference, for either Wilson term or the vacuum, to
+the anchor harmonic mass of these strips. For $q=1,2$ this obeys
+\[
+ \sum_{\substack{m,n\ {\rm odd}\\|m/n-q|\le\eta}}
+      \frac1{mn}
+ \le C\sum_{n<r}\frac1n\left(\eta+\frac1n\right)
+ =O(\eta\log r+1).
+\]
+The estimate also shows that an exact rational-ratio line has
+harmonic mass $O(1)$ and therefore no atom at the logarithmically
+normalized order. Let $r\to\infty$ and then $\eta\to0$.
+Finally
+$\int_1^2H(\rho)d\rho/\rho=2/3$ and
+$\int_1^2\nu_\rho(1)d\rho/\rho=1/2$.
+\end{proof}
+
+The simultaneous spin-one tests $X=4z^2-1$ and $Y=4y^2-1$ further
+give, after normalizing $\nu_\rho$, with $b=\min(1,1/\rho)$,
+\[
+ \mathbb EX=\frac{4a^2}{3}-1,\quad
+ \mathbb EY=\frac{4b^2}{3}-1,\quad
+ \operatorname{Cov}(X,Y)=\frac{64a^2b^2}{45}>0.
+\]
+In particular $\mathbb E z^2/\mathbb E y^2=\rho^2$; separate
+independent angle marginals would lose this constraint.
+
+\subsection{Every fixed integer spin}
+The two-cap spin-$j$ character is $U_{2j}(z)$, with $U_n$ the
+Chebyshev polynomial of the second kind. Its weighted coefficient is
+\[
+ J_j(\rho)=\frac1\rho\int_0^{\min(1,\rho)}U_{2j}(z)\,dz.
+\]
+For $\rho\ge1$ this is $1/[(2j+1)\rho]$; for $\rho\le1$ it is
+an even polynomial in $\rho$. Subtract the principal perpendicular
+value by defining
+$H_j(\rho)=J_j(\rho)-(-1)^j/\max(1,\rho)$.
+Then $H_j=O(\rho^2)$ at zero and $O(\rho^{-1})$ at infinity, and
+\begin{equation}\label{eq:ratio-spin-integral}
+ \int_0^\infty H_j(\rho)\frac{d\rho}{\rho}
+ =\int_0^1\frac{U_{2j}(z)-(-1)^j}{z}\,dz
+ =2(-1)^{j+1}\sum_{\substack{1\le k\le j\\k\ {\rm odd}}}\frac1k.
+\end{equation}
+Indeed absolute convergence permits exchanging the first two
+integrals. If $I_j$ is the middle integral, the identity
+$U_{2j}+U_{2j-2}=2zU_{2j-1}$ gives
+$I_j+I_{j-1}=(1-(-1)^j)/j$, with $I_0=0$.
+

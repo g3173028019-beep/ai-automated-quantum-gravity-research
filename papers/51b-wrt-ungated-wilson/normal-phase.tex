@@ -1,0 +1,132 @@
+\appendix
+\section{An angular check in the Hall normal phase}
+\label{sec:p4-next-log-model}
+
+Write the path as $b_1-a_1-b_2-a_2$, with matching
+$\{a_1b_1,a_2b_2\}$, and put
+$t_1=u_{a_1}\cdot u_{b_1}$, $s=u_{a_1}\cdot u_{b_2}$,
+$t_2=u_{a_2}\cdot u_{b_2}$.
+The three edge dots are independent uniform variables on $[-1,1]$
+before insertion.  After the passive azimuths have been averaged,
+the exact Hall normal phase of Paper 51 has the form
+\[
+ \Phi=t_1x_1z_1+s x_1z_2+t_2x_2z_2.
+\]
+This is the Hall normal phase derived in Paper~51 \cite{p51}, with calibrated coefficient $c$ of magnitude $1/2$.
+Since the physical phase is $e^{2\pi i r\,CS}$,
+the parameter in $e^{iR\Phi}$ is $R=2\pi r|c|=\pi r$.
+Reflection of one radial bipartition removes
+the sign of $c$ in these model integrals.
+
+The spin-one word on the last matched pair has central symbol
+$W=4t_2^2-1$.  Thus $D=W+1=4t_2^2$ vanishes on the leading
+perpendicular-pair locus but does not vanish on the whole singular
+character space.  The following result calculates the next logarithm
+without selecting a compact interval of tied ratios.
+
+\begin{proposition}[Next-log angular distribution for the normal model]
+Let $a(y;t_1,s,t_2)$ be smooth, compactly supported in
+$y=(x_1,x_2,z_1,z_2)$, uniformly for the three edge dots in $[-1,1]$.
+Set
+\[
+ \mathcal I_R[a]=\frac18\int_{[-1,1]^3}\!dt_1\,ds\,dt_2
+       \int_{\mathbb R^4}4t_2^2 a(y;t_1,s,t_2)e^{iR\Phi}\,dy.
+\]
+Then
+\[
+ \boxed{\quad
+ \lim_{R\to\infty}\frac{R^2}{\log R}\mathcal I_R[a]
+   =4\pi^2\int_{-1}^1\!\int_{-1}^1
+          |t_2|\,a(0;0,s,t_2)\,ds\,dt_2 .\quad}
+\]
+In particular the next-log distribution is supported on $t_1=0$;
+the marked dot $t_2$ is not constrained to vanish.  This is a theorem
+about the actual quadratic Hall normal phase, with a specified normal
+observable.  The finite-level result in Theorem~\ref{thm:main} was obtained independently of this calculation.
+\end{proposition}
+
+\begin{proof}
+First work with $|t_2|\geq\delta>0$.  Put
+$X=x_2+(s/t_2)x_1$, $Z=z_2$.  This linear substitution has Jacobian one
+and gives $\Phi=t_1x_1z_1+t_2XZ$.
+Two-dimensional stationary phase in $(X,Z)$ gives
+$2\pi/(R|t_2|)$ times the amplitude at $X=Z=0$, with a uniform
+$O_\delta(R^{-2})$ remainder after the other compact integrations.
+There is no signature phase: the two Hessian eigenvalues have opposite
+signs.
+
+For any smooth compact $b(t,x,z)$ the elementary cubic estimate is
+\[
+ \int_{-1}^1\!dt\int_{\mathbb R^2}b(t,x,z)e^{iRtxz}\,dx\,dz
+   =\frac{4\pi\log R}{R}b(0,0,0)+O(R^{-1}).
+\]
+The first interval, $|t|<R^{-1}$, costs $O(R^{-1})$ by absolute
+volume. On $R^{-1}\leq |t|\leq1$, stationary phase gives
+$2\pi b(t,0,0)/(R|t|)+O((R|t|)^{-2})$; both the integrated error
+and the replacement of $b(t,0,0)$ by $b(0,0,0)$ cost $O(R^{-1})$.
+Applying this estimate after the preceding quadratic integration gives
+the claimed coefficient on $|t_2|\geq\delta$.
+
+It remains to justify removal of this angular gate.  Put
+\[
+ T=\begin{pmatrix}t_1&s\\0&t_2\end{pmatrix},\qquad
+ H=\begin{pmatrix}0&T\\T^{\mathsf T}&0\end{pmatrix},\qquad
+ \Delta_R=1+R^2(t_1^2+s^2+t_2^2)+R^4t_1^2t_2^2.
+\]
+Gaussian integration, with the branch fixed at $R=0$, gives
+\[
+ \int_{\mathbb R^4}e^{-|y|^2/2+iR\Phi}\,dy
+       =\frac{(2\pi)^2}{\sqrt{\Delta_R}}.
+\]
+The same denominator bounds the integral with a general compact smooth
+amplitude, up to a finite amplitude seminorm.  To prove this, write
+$a=e^{-|y|^2/2}g$ and Fourier-expand $g$.  The integral with a Fourier
+mode $e^{i\xi\cdot y}$ is the displayed Gaussian multiplied by
+$\exp[-\xi^{\mathsf T}(I-iRH)^{-1}\xi/2]$; its modulus is at most one
+because $\operatorname{Re}(I-iRH)^{-1}=(I+R^2H^2)^{-1}\geq0$.
+The $L^1$ norm of $\widehat g$, uniformly over the dot parameters,
+is controlled by a finite number of the stated amplitude seminorms.
+
+Finally
+\[
+ \int_{-1}^1\frac{dt_1}{\sqrt{\Delta_R}}
+ =\frac{2}{R\sqrt{1+R^2t_2^2}}
+   \operatorname{arsinh}\!\left(
+    \frac{R\sqrt{1+R^2t_2^2}}{\sqrt{1+R^2(s^2+t_2^2)}}\right).
+\]
+The inverse-hyperbolic-sine factor is at most
+$\operatorname{arsinh}R$, and
+$Rt_2^2/\sqrt{1+R^2t_2^2}\leq |t_2|$.
+Consequently the portion $|t_2|<\delta$, divided by
+$R^{-2}\log R$, is bounded by $C_a\delta^2$, uniformly in $R\geq2$.
+Send $R$ to infinity and then $\delta$ to zero.  This also controls
+the middle-dot and collinear endpoints; neither was removed.
+\end{proof}
+
+\begin{corollary}[Two angular filters remove both logarithms]
+With the same hypotheses on $a$, put
+\[
+ \mathcal J_R[a]=\frac18\int_{[-1,1]^3}dt_1\,ds\,dt_2
+       \int_{\mathbb R^4}16t_1^2t_2^2a(y;t_1,s,t_2)e^{iR\Phi}dy.
+\]
+Then
+\[
+ \lim_{R\to\infty}R^2\mathcal J_R[a]
+ =8\pi^2\int_{[-1,1]^3}|t_1t_2|
+                       a(0;t_1,s,t_2)dt_1\,ds\,dt_2.
+\]
+For $a=e^{-|y|^2/2}$ the same limit has coefficient $16\pi^2$; here the exact Gaussian bound applies directly.
+Thus, at the level of this exact normal phase, the two central symbols
+$(W_1+1)(W_2+1)=16t_1^2t_2^2$ remove both logarithms.
+\end{corollary}
+
+\begin{proof}
+For $t_1t_2\ne0$ the four-dimensional quadratic Hessian is
+nondegenerate with zero signature, so stationary phase gives
+$(2\pi)^2a(0)/(R^2|t_1t_2|)$.
+The Fourier--Gaussian bound above and
+$\sqrt{\Delta_R}\geq R^2|t_1t_2|$ give, after multiplication by
+$R^2t_1^2t_2^2$, the integrable majorant $C_a|t_1t_2|$.
+Dominated convergence proves the result.  The unmarked middle dot
+has length two and each integral of $|t_i|$ on $[-1,1]$ equals one.
+\end{proof}

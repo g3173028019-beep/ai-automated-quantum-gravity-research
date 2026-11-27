@@ -1,0 +1,163 @@
+\pdfoutput=1
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage{xcolor,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!55!black,
+ citecolor=blue!55!black,pdftitle={Extensions of paired-cap semiclassical sewing},
+ pdfauthor={Research derivation prepared with ChatGPT}}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\sig}{sig}
+\DeclareMathOperator{\Tr}{Tr}
+\title{Extensions of paired-cap semiclassical sewing\\[4pt]
+\large Resolved Wilson laws, even cycles, and persistent quantum blindness}
+\author{Research derivation prepared with ChatGPT\\
+\small Continuation of Papers 51 and 50B}
+\date{27 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give four concrete extensions of the paired-cap sewing calculations.
+First, for every perfectly matched tree, actual fixed-spin Wilson
+insertions with selected physical color-ratio marks admit a resolved
+angular law without matched-product cutoffs. The resulting measure
+imposes shifted perpendicularity constraints and has a positive
+integrable density. On the four-site path this gives an explicit nonzero
+$r^{5/2}\log r$ coefficient, including an exact hard-window constant.
+Second, every fixed even cycle has leading term
+$\binom{2m-2}{m-1}\pi^{-2m}r^{2m}\log r$; the proof is an exact
+positive reduction followed by a convolution trace calculation.
+Third, angular filters of the four-site Hall normal phase successively
+remove its two logarithms; a Fourier--Gaussian estimate controls the
+singular angular intersections. Finally, an integral homology formula
+strengthens the signed-sewing collision mechanism. An explicit pair
+is indistinguishable by every SU(2) level, every odd pointed theory,
+and every twisted finite odd nilpotent gauge theory, while its
+two-primary homology differs. All statements include proofs and
+specified dependencies. The fully ungated subleading finite-level
+Wilson coefficient remains an explicit open estimate.
+\end{abstract}
+
+\section*{Status update}
+The note preserves the earlier derivations and verification records.
+Paper~51B subsequently proved the ungated coefficient for the specified
+terminal ribbon on $P_4$, for fixed integer spin. Statements below about
+the open coefficient record the status of this earlier note.
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/51b-wrt-ungated-wilson}{See Paper 51B.}
+
+\section*{Status and conventions}
+This is a working research note with complete derivations of the
+statements made below, prepared in response to a request to extend
+Papers 51 and 50B. It is not a report of external peer review or a
+priority claim. The source files and exact verification scripts are
+included in the accompanying bundle.
+
+The quantum Wilson theorem uses three specific statements of
+Paper 51~\cite{p51}: the finite-rank tree reduction, the joint
+compact-product symbol theorem, and the signed whole-alcove prefix
+bound. Its proof is an extension from those inputs, rather than a
+new independent construction of the entire theory. The cycle theorem
+uses the finite sewing formula and degree-two identity of Paper
+50~\cite{p50}. The topological statements are proved directly from
+the filled-block relations; their oriented RT normalization uses
+the Maslov computation of Paper 50B~\cite{p50b}.
+
+Throughout, $r=k+2$ is the shifted SU(2) level,
+$Z_r(S^2\times S^1)=1$, $Z_r(S^3)=S_{11}$, and
+$\tau_r=Z_r/S_{11}$. Graph sizes and inserted spins are fixed as
+$r\to\infty$. The physical Chern--Simons phase is $e^{2\pi i r CS}$.
+``Next logarithm'' refers to the next power of $\log r$ at a
+specified power of $r$, not to a universal enumeration of all strata.
+
+\paragraph{How to read the results.}
+Section~\ref{sec:ratio} is an actual finite-level quantum asymptotic
+with declared ratio and ordinary radial marks.
+Section~\ref{sec:cycles} is a closed, uninserted quantum asymptotic.
+Section~\ref{sec:p4-next-log-model} concerns a specified observable
+in the exact classical normal phase; its final subsection records
+what is still needed to transfer the proposed ungated coefficient
+to the quantum invariant.
+The remaining sections give exact integral and representation-theoretic
+statements, independent of semiclassical limits.
+
+\tableofcontents
+\newpage
+\input{sections/ratio_wilson}
+\input{sections/even_cycles}
+\input{sections/p4_normal_phase}
+\input{sections/signed_homology}
+
+\section{Verification and source versions}
+The finite checks are independent diagnostics for the constants and
+integral presentations, not replacements for the proofs above.
+\begin{itemize}
+\item The even-cycle script reconstructs the caps directly from the
+SU(2) modular matrices and compares the resulting transfer trace to
+the reduced minimum kernel at $24$ levels, for cycles of lengths
+$4,6,8$: $72$ equalities, with maximum relative floating-point error
+$1.31\times10^{-13}$. The additional fixed-size samples through
+$r=1602$ are consistent with the proved $O(r^{2m})$ remainder.
+\item The homology script uses exact integer Smith forms. For both
+eight-vertex examples it compares the $24$-generator cap--fibre
+presentation with $4A_\epsilon$, and verifies the cyclic gauge
+counts, including $2^{58}$ and $2^{60}$ at group order $16$.
+\item The Gaussian script evaluates the explicit two-dimensional
+integral. At $R=10^6$, the subtracted constant is
+$29.539090460343$, compared to the analytic value
+$29.539090469029$. This check concerns the normal model only.
+\end{itemize}
+
+The inputs were fetched on 27 November 2026 from
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research}
+{the research repository}. The following are Git blob identifiers,
+not whole-repository commit identifiers:
+\begin{center}\small
+\begin{tabular}{ll}
+\toprule
+Input & Blob SHA (first 12 characters)\\\midrule
+51, angular.tex & \texttt{6de20133aadd}\\
+51, classic.tex & \texttt{9bd601b4a2cd}\\
+51, hall.tex & \texttt{32bd75e91401}\\
+51, geometry.tex & \texttt{a945eccecabd}\\
+50, manuscript.tex & \texttt{ef60610477c3}\\
+50B, manuscript.tex & \texttt{7491ac507620}\\\bottomrule
+\end{tabular}
+\end{center}
+Full identifiers are recorded in the source manifest.
+
+\begin{thebibliography}{9}
+\bibitem{p51} AI Automated Quantum Gravity Research,
+\emph{Singular semiclassical sewing for paired-cap
+Witten--Reshetikhin--Turaev invariants}, Paper 51 (2026).
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/51-singular-wrt-semiclassical-sewing}
+{Repository source.}
+\bibitem{p50} AI Automated Quantum Gravity Research,
+\emph{What graph structure survives WRT sewing? Hidden connector
+motifs and the stability boundary of dense cores}, Paper 50 (2026).
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/50-wrt-graph-detection-and-stability}
+{Repository source.}
+\bibitem{p50b} AI Automated Quantum Gravity Research,
+\emph{All-level WRT collisions on fixed graph-manifold backbones},
+Paper 50B (2026).
+\href{https://github.com/g3173028019-beep/ai-automated-quantum-gravity-research/tree/main/papers/50b-wrt-topological-blindness}
+{Repository source.}
+\bibitem{dw} R. Dijkgraaf and E. Witten,
+Topological gauge theories and group cohomology,
+\emph{Commun. Math. Phys.} \textbf{129} (1990), 393--429.
+\href{https://www.ias.edu/sites/default/files/sns/\%5B126\%5DCommMathPhys129-1990.pdf}
+{Primary text.}
+\bibitem{gm} P. Gilmer and G. Masbaum,
+Maslov index, Lagrangians, mapping class groups and TQFT,
+\emph{Forum Math.} \textbf{25} (2013), 1067--1106.
+\href{https://arxiv.org/abs/0912.4706}{arXiv:0912.4706.}
+\end{thebibliography}
+\end{document}

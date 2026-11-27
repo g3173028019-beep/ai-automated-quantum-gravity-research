@@ -1,0 +1,339 @@
+\section{Full integral homology}
+Let \(G=(V,E)\) be finite, simple and connected, with at least one edge.
+At \(v\), take \(\Sigma_{0,d_v+2}\times S^1\). Cap the two designated
+ports by the primitive meridians \(p_vz+h\) and \(-p_vz+h\), where
+\(p_v\) is a positive integer. Glue the remaining ports by
+\(z_{ve}=\epsilon_eh_w,\ h_v=\epsilon_ez_{we}\), with
+\(\epsilon_e\in\{\pm1\}\). Denote the closed oriented manifold by
+\(M_{G,\epsilon,\mathbf p}\). Let \(A_\epsilon\) be the signed
+adjacency matrix, \(P=\diag(p_v)\), and \(b_G=|E|-|V|+1\).
+
+\begin{theorem}[Integral formula]
+There is a noncanonical isomorphism
+\[
+ H_1(M_{G,\epsilon,\mathbf p};\mathbb Z)
+ \cong \mathbb Z^{b_G}\oplus\coker_{\mathbb Z}(P A_\epsilon P).
+\]
+In particular, the paired \(+2,-2\) family of Paper 50B satisfies
+\[
+ H_1(M_{G,\epsilon};\mathbb Z)
+ \cong \mathbb Z^{b_G}\oplus\coker_{\mathbb Z}(4A_\epsilon).
+\]
+\end{theorem}
+\begin{proof}
+Use generators \(a_v,b_v\) for the two cap boundary sections, \(h_v\)
+for the fiber and \(z_{ve}\) for the remaining sections. The block and
+cap relations are
+\[
+ p_va_v+h_v=0,\qquad -p_vb_v+h_v=0,\qquad
+ a_v+b_v+\sum_{e\ni v}z_{ve}=0.
+\]
+The coefficients of \(h_v\) in the first relation and of \(b_v\) in
+the last are units over \(\mathbb Z\), so eliminate
+\(h_v=-p_va_v\) and \(b_v=-a_v-\sum_ez_{ve}\) integrally.
+The remaining cap relation is exactly
+\(p_v\sum_ez_{ve}=0\). Each seam gives
+\(z_{ve}=-\epsilon_ep_wa_w\); eliminating these generators leaves
+\[
+ p_v\sum_w\epsilon_{vw}p_wa_w=0
+\]
+at every vertex. This presents \(\coker(PA_\epsilon P)\).
+The graph-of-spaces Mayer--Vietoris sequence has the remaining term
+\(\ker(\mathbb Z^E\to\mathbb Z^V)=\mathbb Z^{b_G}\), because
+seams identify point classes with degree one regardless of their sign.
+Thus there is a short exact sequence with that free quotient; it splits.
+No division by \(2\), or by any \(p_v\), occurs.
+\end{proof}
+
+\begin{corollary}[Smith form for complete bipartite backbones]
+Let \(G=K_{N,N}\), let \(D\) be a nonsingular binary
+\((N-1)\times(N-1)\) matrix, and set
+\[
+ B(D)=\begin{pmatrix}1&\mathbf1^T\\
+ \mathbf1&\mathbf1\mathbf1^T-2D\end{pmatrix}.
+\]
+If the positive Smith factors of \(D\) are \(d_1\mid\cdots\mid d_{N-1}\),
+then for the \(+2,-2\) caps
+\[
+ H_1(M_{B(D)};\mathbb Z)
+ \cong \mathbb Z^{(N-1)^2}\oplus(\mathbb Z/4)^2
+ \oplus\bigoplus_{i=1}^{N-1}(\mathbb Z/(8d_i))^2.
+\]
+\end{corollary}
+\begin{proof}
+Integral row and column subtraction gives
+\(B(D)\sim\diag(1,-2D)\), so its Smith factors are
+\(1,2d_1,\ldots,2d_{N-1}\). For a bipartite adjacency
+\(A=\left(\begin{smallmatrix}0&B\\B^T&0\end{smallmatrix}\right)\),
+a column permutation gives \(B\oplus B^T\); hence its Smith factors
+are those of \(B\) doubled. Multiplication by \(4\) multiplies
+every nonzero Smith factor by \(4\). Finally
+\(b_G=N^2-2N+1\).
+\end{proof}
+
+\section{What the torus kernel makes invisible}
+\begin{proposition}[Variable caps and local ribbon insertions]
+Fix the positive cap orders \(p_v\). If \(G\) is bipartite, then the
+oriented \(\mathrm{SU}(2)\) RT invariant is independent of every seam
+sign \(\epsilon_e\), at every admissible level. The same holds with
+arbitrary fixed colored framed ribbon graphs placed in the interiors of
+the capped blocks, provided that no ribbon intersects a sewing torus.
+More generally the assertion holds for any modular category whose simple
+objects are all self-dual, in the same extended-TQFT normalization.
+\end{proposition}
+\begin{proof}
+Each block with any such interior decoration determines a tensor in the
+tensor product of its unpunctured torus state spaces. Reversing a seam sign
+inserts the torus involution \(-I\). With the section Lagrangian and its
+zero-weight lift, this operator is charge conjugation \(C=S^2\), hence
+the identity when all simple objects are self-dual. Thus the bare tensor
+contraction is identical for all signings, regardless of the individual
+block tensors.
+
+For completeness the oriented anomaly also remains unchanged. In the
+port notation of Paper 50B, the cap/seam matrix \(T\) has cap entries
+\(p_v,-p_v\) and seam blocks
+\(\left(\begin{smallmatrix}0&-\epsilon_e\\-\epsilon_e&0\end{smallmatrix}\right)\).
+Consequently \(\sig T=0\) and
+\(UT^{-1}U^T=-A_\epsilon\), since the two reciprocal cap entries
+cancel at every vertex. The Maslov correction is therefore
+\(\sig A_\epsilon\), exactly as for cap orders two. A bipartite
+diagonal involution conjugates \(A_\epsilon\) to \(-A_\epsilon\),
+so this signature vanishes. Interior ribbon decorations do not change
+the homological Lagrangians or their Maslov index.
+\end{proof}
+\begin{remark}
+This does not concern arbitrary links crossing the sewing tori. Such a
+cut has punctured boundary state spaces, on which the preceding
+unpunctured-torus identity is not the relevant assertion. In particular,
+this proposition cannot be used to declare all possible colored
+observables blind.
+\end{remark}
+
+\section{All odd pointed theories: the phase is fixed as well}
+Return to the cap orders \(p_v=2\). Let \((\mathcal A,Q)\) be a
+nondegenerate finite metric group of odd order \(m\), and use its unitary
+pointed modular category. Write
+\[
+ \beta(x,y)=\frac{Q(x+y)}{Q(x)Q(y)},\qquad
+ S_{xy}=m^{-1/2}\beta(x,y),\qquad \Theta_{xx}=Q(x).
+\]
+Changing the convention to the complex conjugate \(S\) makes no
+difference to the result. Let \(\mathcal P_{\mathcal A,Q}\) be the
+vacuum-divided invariant, with \(\mathcal P(S^3)=1\).
+
+\begin{theorem}[Positive odd-pointed scalar]
+If \(G\) is bipartite with parts of sizes \(n_A,n_B\) and signed
+biadjacency \(B\), then
+\[
+ \mathcal P_{\mathcal A,Q}(M_{G,\epsilon})
+ =m^{(|E|+1)/2-n_B}\,
+ \left|\ker\bigl(B:\mathcal A^{n_B}\longrightarrow
+                         \mathcal A^{n_A}\bigr)\right|
+ =\sqrt{|\Hom(H_1(M_{G,\epsilon};\mathbb Z),\mathcal A)|}.
+\]
+In particular this is a positive real number and depends on the group
+\(\mathcal A\), but not on its nondegenerate quadratic form \(Q\).
+\end{theorem}
+\begin{proof}
+The positive cap amplitude at color \(a\) is
+\[
+ c_+(a)=m^{-1}\sum_{x\in\mathcal A}\beta(a,x)Q(x)^2.
+\]
+The negative cap amplitude is its complex conjugate: use
+\(Q(-x)=Q(x)\) and change \(x\) to \(-x\). Expanding the squared
+modulus and putting \(x=y+c\) gives
+\[
+ |c_+(a)|^2=m^{-2}\sum_c\beta(a,c)Q(c)^2
+                    \sum_y\beta(y,c)^2=\frac1m.
+\]
+Indeed nondegeneracy says the inner character sum vanishes unless
+\(2c=0\), and odd order then forces \(c=0\). Thus every paired cap
+has the same positive weight \(m^{-1}\).
+
+Since \(S_{0a}=m^{-1/2}\), a degree-\(d_v\) vertex contributes
+\(m^{d_v/2-1}\). A seam contributes
+\(m^{-1/2}\beta(x_v,x_w)^{\epsilon_e}\), with simultaneous duals
+if the opposite orientation convention is chosen. The oriented Maslov
+phase is one by bipartiteness. Dividing by \(Z(S^3)=m^{-1/2}\)
+therefore gives
+\[
+ \mathcal P=m^{(|E|+1)/2-|V|}
+ \sum_{x\in\mathcal A^{n_A},\,y\in\mathcal A^{n_B}}
+       \prod_{i,j}\beta(x_i,y_j)^{B_{ij}}.
+\]
+Sum first over \(x\). Character orthogonality gives \(m^{n_A}\)
+precisely for \(By=0\) and zero otherwise. This proves the first
+formula, including its phase.
+
+For the second, \(4\) acts invertibly on \(\mathcal A\), so the
+integral homology theorem gives
+\[
+ |\Hom(H_1,\mathcal A)|
+ =m^{b_G}|\ker A_\epsilon|.
+\]
+The latter kernel is \(\ker B\oplus\ker B^T\). Perfect pairings
+identify the Pontryagin dual of \(\coker B\) with \(\ker B^T\),
+and finite cardinalities give
+\(|\ker B^T|=m^{n_A-n_B}|\ker B|\).
+Substitution, using \(b_G=|E|-n_A-n_B+1\), yields the square of
+the positive first formula.
+\end{proof}
+
+\section{A concrete strengthened collision}
+\begin{corollary}[An eight-vertex pair]
+On \(K_{4,4}\), use \(D_0=I_3\) and \(D_1=J_3-I_3\), where
+\(J_s\) denotes the all-ones square matrix. The resulting two
+oriented irreducible manifolds have
+\begin{align*}
+ H_1(M_0;\mathbb Z)&\cong\mathbb Z^9\oplus(\mathbb Z/4)^2
+                                  \oplus(\mathbb Z/8)^6,\\
+ H_1(M_1;\mathbb Z)&\cong\mathbb Z^9\oplus(\mathbb Z/4)^2
+                  \oplus(\mathbb Z/8)^4\oplus(\mathbb Z/16)^2.
+\end{align*}
+They have equal oriented \(\mathrm{SU}(2)\) RT invariants at every
+level, including all block-interior colored insertions described above.
+They also have equal full complex vacuum-divided RT scalars for every
+odd-order pointed modular category:
+\[
+ \mathcal P_{\mathcal A,Q}(M_0)
+ =\mathcal P_{\mathcal A,Q}(M_1)=|\mathcal A|^{9/2}.
+\]
+\end{corollary}
+\begin{proof}
+The Smith factors of \(D_0\) are \(1,1,1\), those of \(D_1\) are
+\(1,1,2\); direct minors or subtraction proves this. The integral
+formula gives the displayed groups, hence nonhomeomorphism. Every
+torsion factor is a power of two, so a homomorphism to an odd-order
+group kills all torsion. The preceding theorems give all quantum
+equalities. Irreducibility follows by the same incompressible-Seifert-
+piece argument as in Paper 50B; all vertex degrees here are four.
+\end{proof}
+
+\paragraph{A precise detecting experiment in a different TQFT.}
+The standard untwisted finite gauge theory~\cite{dw} for a finite group \(K\)
+has connected closed-manifold partition function
+\(Z_K(M)=|\Hom(\pi_1M,K)|/|K|\); its vacuum-divided version is the
+numerator. For \(K=\mathbb Z/2^a\), write that numerator as
+\(\mathcal D_a(M)\). For the pair just constructed,
+\[
+ \mathcal D_a(M_0)=\mathcal D_a(M_1)\quad(a=1,2,3),\qquad
+ \mathcal D_4(M_0)=2^{58},\quad\mathcal D_4(M_1)=2^{60}.
+\]
+Thus the \(\mathbb Z/16\) gauge theory distinguishes them by the
+factor four; \(\mathbb Z/2,\mathbb Z/4,\mathbb Z/8\) do not.
+This uses a known finite-gauge-theory observable, not a newly claimed
+formula for such theories.
+
+\begin{corollary}[Arbitrarily deep abelian probe agreement]
+For every \(L\ge1\), one fixed complete bipartite backbone admits
+two nonhomeomorphic manifolds which have the same entire
+\(\mathrm{SU}(2)\) sequence, the same RT scalar for every odd-order
+pointed category, and the same vacuum-divided untwisted
+\(\mathbb Z/q\) gauge invariant whenever \(v_2(q)\le L+3\).
+They are first distinguished within the \(\mathbb Z/2^a\) hierarchy
+at \(a=L+4\), by a factor four.
+\end{corollary}
+\begin{proof}
+Set \(N=2^{L+1}+2\) and, with square sizes indicated, choose
+\[
+ D_0=(J_{2^L+1}-I_{2^L+1})\oplus I_{2^L},\qquad
+ D_1=J_{2^{L+1}+1}-I_{2^{L+1}+1}.
+\]
+The matrix \(J_s-I_s\) has Smith factors
+\(1,\ldots,1,s-1\). Hence both homology groups have the common
+part
+\(\mathbb Z^{(N-1)^2}\oplus(\mathbb Z/4)^2
+\oplus(\mathbb Z/8)^{2(N-2)}\); their last two cyclic factors
+are respectively \((\mathbb Z/2^{L+3})^2\) and
+\((\mathbb Z/2^{L+4})^2\). All assertions now follow from
+\(|\Hom(\mathbb Z/2^e,\mathbb Z/q)|=2^{\min(e,v_2(q))}\).
+\end{proof}
+
+\section{Nonabelian odd nilpotent probes}
+The preceding examples satisfy \(\det A_\epsilon=\pm2^s\). This
+condition forces a stronger invisibility than odd abelian homology alone.
+Let \(\pi:\pi_1(M_{G,\epsilon})\twoheadrightarrow F_{b_G}\) be the
+canonical graph quotient, which kills every vertex group in the
+graph-of-spaces presentation.
+
+\begin{theorem}[Coprime odd nilpotent representations factor through the graph]
+Suppose the cap orders are two and \(\det A_\epsilon\ne0\).
+For every finite nilpotent group \(K\) of odd order such that
+\(\gcd(|K|,\det A_\epsilon)=1\),
+precomposition with \(\pi\) gives a bijection
+\[
+ \Hom(F_{b_G},K)\xrightarrow{\ \cong\ }
+ \Hom(\pi_1(M_{G,\epsilon}),K).
+\]
+Consequently, for every \(\omega\in H^3(K;U(1))\), the untwisted or
+twisted Dijkgraaf--Witten invariant is
+\[
+ Z_{K,\omega}(M_{G,\epsilon})=|K|^{b_G-1},\qquad
+ \frac{Z_{K,\omega}(M_{G,\epsilon})}{Z_{K,\omega}(S^3)}=|K|^{b_G}.
+\]
+For every odd prime \(\ell\nmid\det A_\epsilon\), the pro-\(\ell\) completion of
+\(\pi_1(M_{G,\epsilon})\) is the free pro-\(\ell\) group of rank
+\(b_G\). In particular, if \(\det A_\epsilon=\pm2^s\), all of the
+finite-group assertions hold for every finite odd-order nilpotent
+\(K\), and the completion assertion holds for every odd prime.
+\end{theorem}
+\begin{proof}
+Let a homomorphism to \(K\) be fixed. Use lower-case symbols for its
+images. Since the exponent of \(K\) is odd, squaring is a bijection:
+if \(2u\equiv1\) modulo that exponent, the unique square root of
+\(h\) is \(h^u\). The cap relations give
+\(a_v=h_v^{-u}\), \(b_v=h_v^u\), hence \(a_vb_v=1\).
+The vertex boundary relation therefore becomes
+\[
+                  \prod_{e\ni v}z_{ve}=1.
+\]
+In a graph-of-groups presentation after choosing a maximal tree,
+each \(z_{ve}\) is a conjugate of \(h_w^{\epsilon_e}\); the
+conjugating element is either trivial or a cycle stable letter.
+
+Write \(\gamma_1K=K\) and
+\(\gamma_{j+1}K=[K,\gamma_jK]\). Suppose inductively that every
+\(h_v\) lies in \(\gamma_jK\), as is automatic for \(j=1\).
+In the finite odd abelian quotient \(\gamma_jK/\gamma_{j+1}K\),
+conjugation by every element of \(K\) is trivial. The vertex product
+relations thus reduce exactly to
+\[
+                 A_\epsilon\,\overline{\mathbf h}=0.
+\]
+Multiplication by the adjugate matrix implies
+\((\det A_\epsilon)\overline{\mathbf h}=0\). The coprimality
+assumption makes multiplication by \(\det A_\epsilon\) invertible
+on this quotient, so every \(h_v\) lies in
+\(\gamma_{j+1}K\). Nilpotence terminates this induction with
+\(h_v=1\). The cap and seam relations now kill \(a_v,b_v,z_{ve}\),
+so every vertex-group generator has trivial image. Only the
+\(b_G\) stable letters remain, with no relations among them.
+This proves the factorization and bijection, including its uniqueness.
+
+Collapsing the capped block interiors to vertices and their seam
+collars to intervals realizes the graph quotient by a continuous
+map from the manifold to the backbone graph.
+Every corresponding classifying map factors, up to homotopy, through
+\(BF_{b_G}\), a graph. Its pullback of every degree-three class
+\(\omega\) is therefore zero, and the Dijkgraaf--Witten action has
+weight one. There are \(|K|^{b_G}\) homomorphisms; the standard
+groupoid normalization divides by \(|K|\). Finally the bijection
+for all finite \(\ell\)-groups identifies the corresponding pro-
+\(\ell\) completions, proving the last assertion.
+\end{proof}
+
+Thus the eight-vertex pair, and the arbitrarily deep families above,
+also collide for every twisted finite gauge theory whose gauge group is
+odd and nilpotent, including nonabelian odd prime-power groups. This
+assertion does not extend here to all odd-order groups: removing
+nilpotence would invalidate the terminating lower-central-series step.
+
+\paragraph{Scope.}
+These are exact extensions of the same construction. They show that
+adding all odd pointed theories, or arbitrarily many block-local
+\(\mathrm{SU}(2)\) Wilson insertions, need not remove its blindness.
+They do not establish equality for every modular category, every
+cross-seam colored ribbon, arbitrary finite gauge groups, or linking
+pairings. No numerical check is used as a proof.
+

@@ -156,3 +156,7 @@ These releases received an internal technical scope and source review, three-pas
 - [Paper 58](papers/58-vacuum-stress-spectral-thresholds/VERIFICATION.md)
 - [Paper 59](papers/59-wilson-recovery-sign-holonomy/VERIFICATION.md)
 - [Paper 60](papers/60-graviton-nonabelian-holonomy/VERIFICATION.md)
+
+## Paired-cap sewing companions
+
+See [51B](papers/51b-wrt-ungated-wilson/VERIFICATION.md), [51+50B](papers/51-50b-wrt-cycle-gauge-discrimination/VERIFICATION.md) and the [derivation supplement](papers/51-50b-wrt-cycle-gauge-discrimination/supplement/wrt_extensions.pdf) for proof scope and exact replays.

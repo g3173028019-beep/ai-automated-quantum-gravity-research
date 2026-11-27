@@ -2,11 +2,11 @@
 
 ![Geometry, matter and quantum information — manuscripts, derivations and calculations](assets/research-banner.svg)
 
-**71 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 45 typeset analytical articles**
+**73 English manuscripts · 20 original research packets · 6 analytical Markdown manuscripts · 47 typeset analytical articles**
 
 Positive physical states for coupled fields, quantitative geometry–matter information protocols, exact finite constructions, and mathematical methods for reconstruction and quantum control.
 
-**[Browse all 71 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
+**[Browse all 73 manuscripts](docs/PAPER-INDEX.md) · [Explore the research map](docs/RESEARCH-MAP.md) · [Run a calculation](docs/REPRODUCTION.md) · [Workflow and credit](DECLARATIONS.md)**
 
 
 ## Start with a physics question
@@ -18,7 +18,7 @@ Positive physical states for coupled fields, quantitative geometry–matter info
 | **What remains stable when discrete geometry is changed?** | [17 · Cartan–Regge closure](papers/17-cartan-regge-closure/) treats the finite first-order reduction; [11 · Causal Regge transfer](papers/11-causal-regge-transfer/) isolates a finite Lorentzian channel; [22 · Lorentzian Regge Airy asymptotics](papers/22-lorentzian-regge-airy/manuscript.md) resolves the behavior of a specific saddle merger. |
 | **Which radiative quantities can be transported or measured?** | [23 · Gravitational memory and boosts](papers/23-gravitational-memory-boost/manuscript.md) treats its stated memory sector; [24 · Calibrated de Sitter tidal diffusion](papers/24-calibrated-tidal-diffusion/manuscript.md) studies a separate finite-aperture record in a specified graviton vacuum. |
 
-These routes connect the 20 original packets with the fifty-one later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
+These routes connect the 20 original packets with the fifty-three later analytical manuscripts. They compare methods and physical questions across different settings; they do not identify the settings or claim implications between their theorems. See the [paper index](docs/PAPER-INDEX.md) for the exact scopes and proof links.
 
 ## New TeX and PDF manuscripts
 
@@ -26,6 +26,8 @@ These routes connect the 20 original packets with the fifty-one later analytical
 
 | Paper | Result | Files |
 |---|---|---|
+| [51B · An Ungated Centered Wilson Law for Paired-Cap WRT Sewing](papers/51b-wrt-ungated-wilson/README.md) | The first surviving ungated logarithmic coefficient for a fixed integer-spin terminal ribbon on the four-vertex path; a separate ratio-resolved law on matched trees. | [PDF](papers/51b-wrt-ungated-wilson/manuscript.pdf) · [TeX](papers/51b-wrt-ungated-wilson/main.tex) · [Verification](papers/51b-wrt-ungated-wilson/VERIFICATION.md) |
+| [51+50B · Cycle Logarithms and Gauge Discrimination in Paired-Cap Sewing](papers/51-50b-wrt-cycle-gauge-discrimination/README.md) | The leading logarithm for each fixed even paired-cap cycle at either level parity; a signed graph-manifold pair separated by an order-21 gauge group, including all twists. | [PDF](papers/51-50b-wrt-cycle-gauge-discrimination/manuscript.pdf) · [TeX](papers/51-50b-wrt-cycle-gauge-discrimination/main.tex) · [Verification](papers/51-50b-wrt-cycle-gauge-discrimination/VERIFICATION.md) |
 | [52 · Relational area commutators distinguish matter couplings on the same Einstein light cone](papers/52-relational-area-commutators/README.md) | Identical compact relational area probes on the same metric and light cone determine the magnitude of a stress-free four-form coupling. A canonical Cauchy bridge constructs positive physical Hadamard states. | [PDF](papers/52-relational-area-commutators/manuscript.pdf) · [TeX](papers/52-relational-area-commutators/main.tex) · [Verification](papers/52-relational-area-commutators/VERIFICATION.md) |
 | [53 · Coherent sewing of a physical gravitational shear](papers/53-coherent-quantum-shear-sewing/README.md) | Physical shear admits exact shared-field Weyl sewing. A compact gravitational port revives after an exact one-step reset would erase its signal, and full commuting slab conditioning leaves infinite-rank cross covariance. | [PDF](papers/53-coherent-quantum-shear-sewing/manuscript.pdf) · [TeX](papers/53-coherent-quantum-shear-sewing/main.tex) · [Verification](papers/53-coherent-quantum-shear-sewing/VERIFICATION.md) |
 | [54 · Semiclassical saturation of the Virasoro vacuum Whittaker ray](papers/54-virasoro-whittaker-semiclassical-limit/README.md) | The normalized energy converges to the classical vacuum-orbit Mathieu threshold, with normalized stress concentration for every fixed positive scaled Whittaker parameter. | [PDF](papers/54-virasoro-whittaker-semiclassical-limit/manuscript.pdf) · [TeX](papers/54-virasoro-whittaker-semiclassical-limit/main.tex) · [Verification](papers/54-virasoro-whittaker-semiclassical-limit/VERIFICATION.md) |
@@ -154,7 +156,7 @@ Human author and affiliation fields remain blank. Human expert review has not ye
 
 | Location | Purpose |
 |---|---|
-| [Paper index](docs/PAPER-INDEX.md) | All 71 manuscripts, with results, scopes and artifact links |
+| [Paper index](docs/PAPER-INDEX.md) | All 73 manuscripts, with results, scopes and artifact links |
 | [Research map](docs/RESEARCH-MAP.md) | Themes, connections and reading routes |
 | [Reproduction guide](docs/REPRODUCTION.md) | Setup, exact commands, outputs and optional producers |
 | [Verification](VERIFICATION.md) | Evidence types and paper-specific records |

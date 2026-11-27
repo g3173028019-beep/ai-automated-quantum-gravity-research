@@ -1,0 +1,236 @@
+{
+  "scope": "Exact integral relation matrices and finite cyclic Hom counts; no asymptotics.",
+  "sympy_version": "1.14.0",
+  "cases": [
+    {
+      "name": "D0 = I3",
+      "B": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          -1
+        ]
+      ],
+      "det_D": 1,
+      "det_B": -8,
+      "D_smith": {
+        "all_diagonal_entries": [
+          1,
+          1,
+          1
+        ],
+        "nontrivial_torsion_factors": [],
+        "free_rank": 0
+      },
+      "full_24_by_24_smith": {
+        "all_diagonal_entries": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          4,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "nontrivial_torsion_factors": [
+          4,
+          4,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "free_rank": 0
+      },
+      "reduced_8_by_8_smith": {
+        "all_diagonal_entries": [
+          4,
+          4,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "nontrivial_torsion_factors": [
+          4,
+          4,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ],
+        "free_rank": 0
+      },
+      "graph_cycle_rank": 9,
+      "first_betti_number": 9,
+      "cyclic_Hom_counts": {
+        "2": 131072,
+        "4": 17179869184,
+        "8": 562949953421312,
+        "16": 288230376151711744,
+        "3": 19683,
+        "5": 1953125,
+        "9": 387420489
+      }
+    },
+    {
+      "name": "D1 = J3 - I3",
+      "B": [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          1,
+          -1
+        ],
+        [
+          1,
+          -1,
+          -1,
+          1
+        ]
+      ],
+      "det_D": 2,
+      "det_B": -16,
+      "D_smith": {
+        "all_diagonal_entries": [
+          1,
+          1,
+          2
+        ],
+        "nontrivial_torsion_factors": [
+          2
+        ],
+        "free_rank": 0
+      },
+      "full_24_by_24_smith": {
+        "all_diagonal_entries": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          4,
+          8,
+          8,
+          8,
+          8,
+          16,
+          16
+        ],
+        "nontrivial_torsion_factors": [
+          4,
+          4,
+          8,
+          8,
+          8,
+          8,
+          16,
+          16
+        ],
+        "free_rank": 0
+      },
+      "reduced_8_by_8_smith": {
+        "all_diagonal_entries": [
+          4,
+          4,
+          8,
+          8,
+          8,
+          8,
+          16,
+          16
+        ],
+        "nontrivial_torsion_factors": [
+          4,
+          4,
+          8,
+          8,
+          8,
+          8,
+          16,
+          16
+        ],
+        "free_rank": 0
+      },
+      "graph_cycle_rank": 9,
+      "first_betti_number": 9,
+      "cyclic_Hom_counts": {
+        "2": 131072,
+        "4": 17179869184,
+        "8": 562949953421312,
+        "16": 1152921504606846976,
+        "3": 19683,
+        "5": 1953125,
+        "9": 387420489
+      }
+    }
+  ],
+  "all_assertions_passed": true,
+  "Z16_ratio": 4
+}

@@ -1,0 +1,119 @@
+\section{Common paired-cap sewing}\label{sec:sewing}
+
+Let \(G=(V,E)\) be a finite simple connected graph with at least one
+edge and degree \(d_v\) at \(v\). The unfilled vertex block is
+\(X_v=\Sigma_{0,d_v+2}\times S^1\) with base-then-fibre orientation.
+At every port \(z\) is the oriented base section and \(h\) is the
+fibre, with \(z\cdot h=+1\). Fill two specified ports by the primitive
+slopes \(p_vz+h\) and \(-p_vz+h\), with \(p_v\in\ZZ_{>0}\).
+On the other ports, glue the two ends of edge \(e=vw\) by
+\[
+        z_{ve}\longmapsto \epsilon_e h_{we},\qquad
+        h_v\longmapsto \epsilon_e z_{we},\qquad \epsilon_e\in\{+1,-1\}.
+\]
+Both maps reverse boundary orientation. Write \(M_{G,\epsilon,\mathbf p}\)
+for this closed oriented manifold. Default cap orders are \(p_v=2\), and
+then we suppress \(\mathbf p\). Write \(A_\epsilon\) for the signed
+adjacency, \(n=|V|\), \(e=|E|\), and \(b_G=e-n+1\).
+
+\subsection{Composition phase and the sign of a seam}
+
+In the torus spaces use the section Lagrangian and the core basis
+paired against its oriented dual. The basic sewing formula is the
+Verlinde product-block contraction with the modular cap and Hopf seam
+states \cite{BHMV,P50,P50B}. For a zero-weight lift preserving the
+section Lagrangian, reversal of both torus coordinates is the
+involution \(C=S^2\), charge conjugation. On an unpunctured torus this
+can also be read by reversing the solid-torus core in the dual-paired
+basis. Thus the change of sign of a seam inserts the identity in any
+theory with self-dual simple labels. This statement is about the bare
+contractions; it does not by itself determine their framing phase.
+
+Here is the global phase check, including varying cap orders. Let
+\(q,p\) be the section and fibre coordinates on the combined port
+space, and let \(U\) take their per-vertex sums. On the block side the
+homology kernel is
+\(L_X=\{(U^{\mathsf T}a,p):Up=0\}\); on the paired cap and seam side
+it is \(L_Y=\{(Tp,p)\}\). For the latter description, \(T\) has the cap
+entries \(p_v,-p_v\) and the seam blocks
+\(\left(\begin{smallmatrix}0&-\epsilon_e\\-\epsilon_e&0\end{smallmatrix}\right)\).
+The two reciprocal cap entries cancel in the sum at each vertex.
+Thus \(T\) is invertible, \(\sig T=0\), and \(UT^{-1}U^{\mathsf T}=-A_\epsilon\).
+With the section reference \(L_0=\{(q,0)\}\), the cap/seam-to-block
+Maslov form is the restriction of \(T\) to \(\ker U\)
+\cite{GM,P50B}. This follows from writing the representative
+\((Tp,p)\) as \((0,p)+(Tp,0)\) for \(Up=0\). Its signature is
+\[
+ \sig(T|_{\ker U})=\sig T-\sig(UT^{-1}U^{\mathsf T})=\sig A_\epsilon .
+\]
+For the degenerate case, the \(T\)-orthogonal complement of \(\ker U\)
+is \(T^{-1}\operatorname{im}U^{\mathsf T}\). A joint radical of the two
+restrictions and a dual isotropic space split off as a hyperbolic
+summand of signature zero. This gives the same signature formula
+without an invertibility assumption on \(A_\epsilon\).
+On a bipartite graph \(\diag(+1,-1)\), with signs constant on the
+parts, conjugates \(A_\epsilon\) to \(-A_\epsilon\), so the signature
+and the entire composition anomaly vanish. In particular this
+argument proves equality of \emph{oriented complex} scalars, not only
+of absolute values. Interior ribbon graphs leave these boundary
+homology kernels unchanged.
+
+\subsection{Exact \texorpdfstring{\(\SU(2)\)}{SU(2)} weights for cap order two}\label{sec:weights}
+
+Use shifted level \(r=k+2\ge3\) and
+\[
+ Z_r(S^2\times S^1)=1,\qquad Z_r(S^3)=S_{11},\qquad
+ \tau_r(M)=Z_r(M)/S_{11}.
+\]
+For core labels \(\ell,j=1,\ldots,r-1\) the modular matrices and
+anomaly unit are
+\[
+ S_{\ell j}=\sqrt{\frac2r}\sin\frac{\pi\ell j}{r},\qquad
+ \Theta_{\ell\ell}=e^{\pi i(\ell^2-1)/(2r)},\qquad
+ \kappa_r=e^{3\pi i/4-3\pi i/(2r)}.
+\]
+At vertex \(v\) the paired cap has weight
+\(\big|(S\Theta^2 S)_{\ell1}\big|^2\) and the remaining local weight
+is \(S_{1\ell}^{-d_v}\). A seam contributes \(S_{\ell j}\).
+The two cap states may exchange roles according to the geometric
+framing convention without changing their product. The closed
+contraction includes a trace along a cycle, with no divide by its
+state-space dimension.
+
+For clarity, the parity in the cap weight can be checked directly.
+Let \(G_r(j)=\sum_{u\bmod 2r}e^{\pi i(u^2+ju)/r}\). The cosine
+difference formula for the sine product gives
+\((S\Theta^2 S)_{\ell1}\), up to a unit phase, as
+\([G_r(\ell-1)-G_r(\ell+1)]/(2r)\).
+Translation gives \(G_r(j+2)=e^{-\pi i(j+1)/r}G_r(j)\).
+In the squared modulus of the complete sum, Fourier orthogonality
+retains only the two differences \(0,r\). Hence
+\(\left|G_r(j)\right|^2=4r\) if \(r+j\) is even and is zero
+otherwise. With the defect label \(a=r-\ell\), the cap weight
+therefore equals \(4r^{-1}\cos^2(\pi a/(2r))\) on odd \(a\) and
+vanishes for even \(a\).
+
+Put
+\[
+ K(x)=\frac{\sin(\pi x)}{\pi x},\quad K(0)=1,\qquad
+ F_d(x)=\cos^2(\pi x/2)\left(\frac{\pi x}{\sin\pi x}\right)^d .
+\]
+Converting to odd defects gives the exact zero-insertion formula
+\begin{align}
+ Z_r(M_{G,\epsilon})
+ &=(-1)^{re}\kappa_r^{\sig A_\epsilon}
+   2^{2n-e/2}\pi^{-e}r^{3e/2-n}I_r(G),\label{eq:finite}\\
+ I_r(G)
+ &= \sum_{\substack{1\le a_v<r\\ a_v\ {\rm odd}}}
+       \prod_{v\in V}F_{d_v}(a_v/r)
+       \prod_{vw\in E}K(a_v a_w/r).\notag
+\end{align}
+In fact the two odd defects at the ends of an edge give
+\(\sin(\pi(r-a_v)(r-a_w)/r)=(-1)^r\sin(\pi a_va_w/r)\).
+The ensuing \(a_v^{d_v}\pi^{d_v}/r^{d_v}\) precisely cancels the
+corresponding factors introduced by \(F_{d_v}\).
+The remaining powers follow from \(n\) paired caps \(4/r\),
+\(e\) Hopf factors \(\sqrt{2/r}\), and \(2e\) occurrences of
+\(S_{1a}^{-1}\) in the vertex powers. The complete oriented formula
+agrees with \cite{P50,P50B}. The sign \((-1)^{re}\) appears from
+the defect coordinates, not the choice of seam signing.

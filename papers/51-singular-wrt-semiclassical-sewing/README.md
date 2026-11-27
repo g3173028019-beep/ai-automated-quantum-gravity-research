@@ -19,3 +19,7 @@ See [Verification](VERIFICATION.md). The independent finite-sum replay uses `pyt
 - `classic.tex`, `angular.tex`, `hall.tex`: normalized Chern–Simons local action, finite Wilson transfers, and absolute Hall sewing.
 
 Individual higher angular coefficients and unrestricted active-skeleton words are open.
+
+## Companion papers
+
+[51B](../../papers/51b-wrt-ungated-wilson/README.md) develops the ungated Wilson law. [51+50B](../../papers/51-50b-wrt-cycle-gauge-discrimination/README.md) presents even-cycle and finite-gauge separation results.

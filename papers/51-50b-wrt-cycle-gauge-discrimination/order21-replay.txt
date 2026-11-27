@@ -1,0 +1,4 @@
+case | nullity histogram | weighted count | vacuum-divided DW
+D0 | {0: 14415, 1: 5070, 2: 198} | 59607 | 2405357452449
+D1 | {0: 13687, 1: 5712, 2: 284} | 67587 | 2727379236309
+All 39,366 rank pairs verified by two exact methods.
