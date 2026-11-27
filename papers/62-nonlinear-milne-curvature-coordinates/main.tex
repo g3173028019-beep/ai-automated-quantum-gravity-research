@@ -50,14 +50,14 @@ In particular \(e,b\) are not the raw Weyl fields prescribed independently. One 
 
 \begin{theorem}\label{thm:main}
 For each \(s\geq5\), near the marked Milne datum the exact vacuum CMC data in harmonic gauge form a smooth Banach manifold. There exists a finite Cartan coordinate \(p\) so that
-\[
+\begin{equation}
  \F(g,S)=(e,b,p)\ :\ 
  \mathcal U\longrightarrow
  \mathcal V\ \subset\
  H^{s-2}_{\TT}\ \oplus\
  (H^{s-2}_{\TT}\cap\C^\perp)\ \oplus\ \C
- \tag{1}\label{eq:chart}
-\]
+ \label{eq:chart}
+\end{equation}
 is a smooth diffeomorphism to an open product neighborhood of zero. The gauge represents the local marked spatial quotient. The finite coordinate uses only one affine Cartan transport per marked generator of \(\pi_1\Sigma\), before quotienting by the common affine frame.
 
 The slice \(e=b=0\) consists exactly of data with flat vacuum development in this neighborhood. Write \((g_{\rm f}(p),S_{\rm f}(p))=\F^{-1}(0,0,p)\) for their unique local representatives. On a smaller neighborhood,
@@ -122,12 +122,12 @@ We fix the temporal gauge locally at \(\tau=-3\). The linearized mean curvature 
 Use the curvature convention \(R^\rho{}_{\sigma\mu\nu}
 =\partial_\mu\Gamma^\rho_{\nu\sigma}-\partial_\nu\Gamma^\rho_{\mu\sigma}+\cdots\).
 The Gauss and Codazzi equations give on the vacuum data
-\[
+\begin{equation}
  E=\Ric(g)+\tau K-K\circ_g K
    =\Ric(g)+2g-S-S\circ_g S,\qquad
  B_{ij}=(\Curl_gS)_{ij}=\epsilon_i{}^{kl}(g)\nabla^g_kS_{lj}.
- \tag{2}\label{eq:EB}
-\]
+ \label{eq:EB}
+\end{equation}
 We choose the sign of the dual Weyl tensor accordingly. The trace of \(E\) vanishes by the Hamiltonian constraint; the trace and antisymmetric part of \(B\) vanish by the trace and momentum constraints. Both maps are smooth into \(H^{s-2}\); they are not assumed to take values in \(H^{s-2}_{\TT}\) prior to projection.
 
 For a \(\gamma\)-TT tensor \(z\), \(\Curl_\gamma z\) is TT. Trace zero follows by skew-symmetry of the volume tensor paired with the symmetric indices of \(z\); the dual of its skew part is proportional to \(\divg_\gamma z-\dd\tr_\gamma z\). The divergence reduces to a curvature commutator under the alternating contraction, which at constant sectional curvature vanishes on a symmetric \(z\). On the closed manifold the operator is formally self-adjoint by integration by parts. In an orthonormal frame contraction of the two volume forms gives
@@ -142,33 +142,33 @@ To evaluate the first term, commute derivatives through \(\nabla^k z_{kj}=0\). T
 \end{equation}
 The same commutator in the variation of \(\Ric\) gives
 \(D\Ric(h)=\tfrac12(\nabla^*\nabla-6)h\) for TT \(h\). Equation~\eqref{eq:EB} then yields
-\[
+\begin{equation}
  D(e,b)(h,\sigma)=(Ah-\sigma,\ \Curl_\gamma\sigma).
- \tag{3}\label{eq:linear}
-\]
+ \label{eq:linear}
+\end{equation}
 The second component is already orthogonal to \(\C=\ker\Curl_\gamma\). The description of the kernel as Codazzi follows by contracting the exterior derivative in the first two tensor indices with \(\epsilon\), an isomorphism in dimension three.
 
 The compact elliptic square in \eqref{eq:curl} gives finite smooth kernel, a discrete spectrum on the reducing TT subspace and bounded elliptic inverses. In particular \(A:H^s_{\TT}\to H^{s-2}_{\TT}\) is invertible, with the spectral lower bound \(A\geq \tfrac12\); \(\Curl_\gamma\) is invertible from \(H^{s-1}_{\TT}\cap\C^\perp\) to \(H^{s-2}_{\TT}\cap\C^\perp\), using \(\Curl_\gamma(\Curl_\gamma^2)^{-1}\) there. One can use smooth TT domains initially, which are dense by the York projection; elliptic estimates for the Laplacian and self-adjointness give the indicated completed maps. Therefore \eqref{eq:linear} is onto, and its kernel is precisely
-\[
+\begin{equation}
         (h,\sigma)=(2D,D),\qquad D\in\C.
- \tag{4}\label{eq:kernel}
-\]
+ \label{eq:kernel}
+\end{equation}
 For such \(D\), \(AD=D/2\). In particular the purely tidal map has a finite defect even though the ordinary constrained/harmonic submanifold is regular.
 
 \section{Finite affine transport with frame-independent calibration}\label{sec:cartan}
 
 Let \(\mathcal E=\mathbb R\oplus T\Sigma\) have Lorentz metric \(-f^2+g(Y,Y)\) on a vector \((f,Y)\). The Gauss--Weingarten connection and solder along the cut in our signs are
 \begin{align}
- {\cal D}_X(f,Y)&=\bigl(Xf-K(X,Y),\,\nabla^g_XY-fK^\sharp X\bigr),\\
+ {\cal D}_X(f,Y)&=\bigl(Xf-K(X,Y),\,\nabla^g_XY-fK^\sharp X\bigr),\notag\\
  \vartheta(X)&=(0,X).
  \label{eq:GW}
 \end{align}
 These formulas preserve the Lorentz pairing and are the restrictions of spacetime parallel transport and the physical infinitesimal displacement in any development. Fix a basepoint \(o\) and piecewise smooth based paths \(c_j\), \(1\leq j\leq m\), representing a generating set. For each path, if \(P_t:\mathcal E_o\to\mathcal E_{c_j(t)}\) is parallel transport from the starting point, record the affine element
-\[
+\begin{equation}
  L_j=P_1^{-1},\qquad
  d_j=\int_0^1 P_t^{-1}\vartheta(\dot c_j(t))\,\dd t .
- \tag{5}\label{eq:transport}
-\]
+ \label{eq:transport}
+\end{equation}
 On flat data this convention agrees with forward deck holonomy after using the affine frame whose origin is the developed starting point. Indeed in a flat parallel frame the integral is the difference of developed endpoints; the final tangent frame is related to the initial one by the deck linear part. The use of \(P_1^{-1}\) then gives that linear part. The pair records ordinary affine transport for all nearby curved data; for curved data an actual representative path is part of the measurement and the tuple does not in general define a representation of \(\pi_1\Sigma\). Via the positive \(g\)-relative-to-\(\gamma\) square root and one reference frame at \(o\), \eqref{eq:transport} is a smooth finite-dimensional function of our Sobolev data. This follows from the compact-interval linear ODE for \(P_t\), whose coefficients along the fixed paths involve at most first derivatives of \(g\) and zero derivatives of \(K\). Shrinking the chart gives the required uniform regularity for their continuous evaluation.
 
 In a calibrated affine frame the reference tuple is \((\rho_j,0)\), where \(\rho_j=\rho([c_j])\). A change of affine frame or origin acts by simultaneous conjugation by \(\ISO=\SO\ltimes\Mink\). We now justify an honest local quotient by this action; no representative-dependent coordinate is needed. The reference tuple has trivial centralizer. A Lorentz transformation commuting with the cocompact lattice fixes the attracting rays of all its loxodromic elements, a dense set of future null rays, hence all such rays and then is the identity. For a translation in the centralizer the translation vector is fixed by all \(\rho_j\). It is orthogonal to every attracting null eigenvector (by invariance and the nonunit eigenvalue), so must be zero. The infinitesimal orbit map is thus injective. Choose a smooth finite-dimensional transverse slice to the orbit and apply the ordinary inverse function theorem to the map \((u,z)\mapsto\exp(u)z\exp(-u)\). It parametrizes a local neighborhood as orbit direction times slice.
@@ -189,11 +189,11 @@ On the universal hyperboloid, let \(v:\mathbb H^3\to\Mink\) be its standard unit
    \partial_X\dd v(Y)=\dd v(\nabla^\gamma_XY)+\gamma(X,Y)v .
 \]
 A trace-free Codazzi tensor \(D\) is viewed as a symmetric endomorphism using \(\gamma\). The one-form \(\dd v(D\,\cdot\,)\) with values in \(\Mink\) is closed: the tangential exterior derivative is the Codazzi equation and the normal part is the antisymmetric part of \(D\). Let \(f_D\) be its primitive on \(\mathbb H^3\), normalized at a lifted marked basepoint. It can be chosen linearly in \(D\). Equivariance of its derivative implies
-\[
+\begin{equation}
  f_D(\delta x)=\rho(\delta)f_D(x)+c_D(\delta),\qquad
  c_D(\delta_1\delta_2)=c_D(\delta_1)+\rho(\delta_1)c_D(\delta_2).
- \tag{6}\label{eq:cocycle}
-\]
+ \label{eq:cocycle}
+\end{equation}
 Changing its origin adds a coboundary, so \(D\mapsto[c_D]\) is defined on \(\C\).
 
 For injectivity, if \(c_D\) is a coboundary, change the constant in \(f_D\) to make it equivariant. Decompose \(f_D=\dd v(Y)+a v\), with \(a,Y\) descending to \(\Sigma\). The zero normal part of its derivative yields \(Y=-\nabla a\), while the tangent part gives \(D=aI-\nabla^2 a\) with \(\nabla^2 a\) viewed as an endomorphism. Trace-freeness gives \((3-\Delta)a=0\); hence \(D=0\). Conversely, for any cocycle \(c\), the associated flat affine bundle has a smooth section, using affine combinations of local sections with a partition of unity. This gives a quasi-equivariant smooth map \(F\) on \(\mathbb H^3\). Define \(a=-\eta(F,v)\). For any constant ambient vector \(b\), \(a_b=-\eta(b,v)\) has
@@ -204,11 +204,11 @@ Thus \(F'=\dd v(-\nabla a)+a v\) has the same affine equivariance law as \(F\). 
 \((3-\Delta)u=\tr(aI-\nabla^2a)\); this changes \(F'\) only by an equivariant term. It represents \(c\) by a trace-free Codazzi tensor. This proves the identification in Proposition~\ref{prop:attainment}, without calling a curved path tuple a cohomology class.
 
 Now consider the map
-\[
+\begin{equation}
  F_D(t,x)=t\,v(x)+f_D(x),\qquad
  F_D^*\eta=-\dd t^2+\gamma\bigl((tI+D)\,\cdot\,,(tI+D)\,\cdot\,\bigr).
- \tag{7}\label{eq:flatfamily}
-\]
+ \label{eq:flatfamily}
+\end{equation}
 For \(D\) small and \(t\) close to \(1\), \(tI+D\) is positive and the developing map is a local diffeomorphism. The metric descends by \eqref{eq:cocycle} to a spatially compact slab and is flat. No global injectivity of \(F_D\) is required. The \(t\)-slices are Cauchy in a smaller product globally hyperbolic slab: \(t\) is temporal and compactness plus uniform positive spatial metrics bound spatial speed relative to \(t\) on each smaller closed strip. A causal curve cannot end at an interior \(t\) endpoint without extension. On a constant \(t\) slice the second fundamental form and mean curvature are
 \[
  K=-\gamma((tI+D)\,\cdot\,,\cdot),\qquad
